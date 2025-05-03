@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useOutsideClick } from "../hooks/use-outside-click";
 
 const Header = () => {
@@ -94,30 +95,30 @@ const Header = () => {
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex justify-center flex-1">
             <div className="flex gap-9 justify-center">
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Home
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              </Link>
+              <Link href="/about" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 About us
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              </Link>
+              <Link href="/products" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Products
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              </Link>
+              <Link href="/services" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Services
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              </Link>
+              <Link href="/resources" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Resources
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-              <a href="#" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              </Link>
+              <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Contact us
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+              </Link>
             </div>
           </nav>
           
@@ -151,12 +152,12 @@ const Header = () => {
         className={`fixed top-[90px] right-0 w-[250px] h-screen bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex flex-col py-6 px-4">
-          <a href="#" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</a>
-          <a href="#" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</a>
-          <a href="#" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</a>
-          <a href="#" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Services</a>
-          <a href="#" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Resources</a>
-          <a href="#" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium">Contact us</a>
+          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</Link>
+          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</Link>
+          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</Link>
+          <Link href="/services" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Services</Link>
+          <Link href="/resources" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Resources</Link>
+          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium">Contact us</Link>
         </div>
       </div>
     </header>

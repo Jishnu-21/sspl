@@ -1,9 +1,9 @@
 'use client'
 import React from 'react';
+import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
-import { Carousel } from "../components/ui/apple-cards-carousel";
 
 const CaseStudiesSection = () => {
   // Sample case studies data
@@ -81,30 +81,62 @@ const CaseStudiesSection = () => {
   ));
 
   return (
-    <section className="py-24 bg-gray-200">
+    <section className="py-24 bg-gray-200 overflow-hidden">
       <div className="max-w-[95%] mx-auto">
         {/* Top heading */}
-        <div className="pb-4 mb-0">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="pb-4 mb-0"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-black">Case Studies</h2>
+        </motion.div>
         {/* Horizontal line that extends across the entire section */}
-        <div className="border-b border-white w-full mb-8"></div>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="border-b border-white w-full mb-8"
+          style={{ transformOrigin: 'left' }}
+        />
         <div className="flex flex-col md:flex-row">
           {/* Left side content */}
-          <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-            <p className="text-sm text-white leading-relaxed">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="md:w-1/3 mb-10 md:mb-0 pr-8 relative"
+          >
+            <p className="text-sm text-gray-800 leading-relaxed">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
             </p>
             {/* Vertical line that connects with the horizontal line */}
-            <div className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white" style={{ top: '-30px' }}></div>
-          </div>
+            <motion.div
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
+              style={{ top: '-30px', transformOrigin: 'top' }}
+            />
+          </motion.div>
           
           {/* Right side scrollable cards */}
-          <div className="md:w-2/3 overflow-hidden relative">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="md:w-2/3 overflow-hidden relative"
+          >
             <div className="relative">
               <Carousel items={cardItems} />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
