@@ -64,7 +64,7 @@ const Header = () => {
       style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
       {/* Top Bar */}
       <div 
-        className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[30px] md:h-[30px] opacity-100' : 'h-0 opacity-0'}`}
+        className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[35px] md:h-[35px] opacity-100' : 'h-0 opacity-0'}`}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 flex flex-wrap justify-center md:justify-start">
           <div className="flex items-center gap-2">
@@ -86,10 +86,10 @@ const Header = () => {
         </div>
       </div>
       {/* Main Navigation */}
-      <div className="bg-white h-[60px] border-b border-[#eee] shadow-sm">
+      <div className="bg-white h-[70px] border-b border-[#eee] shadow-sm">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
           <div className="flex items-center">
-            <Image src="/logo.svg" alt="SSPL Logo" width={140} height={48} className="py-1" />
+            <Image src="/logo.svg" alt="SSPL Logo" width={160} height={55} className="py-1" />
           </div>
           
           {/* Desktop Navigation - Hidden on mobile */}
