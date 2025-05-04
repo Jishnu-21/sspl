@@ -15,15 +15,18 @@ export default function Home() {
       <Header/>
       <main className="pt-0">
         <Banner/>
-        <ServicesSection/>
-        <WhyChooseSection/>
-        <StatsSection/>
-        <ClientMarquee/>
-        <div className="bg-white pt-25"><CaseStudiesSection/></div>
-        <RecognitionSection/>
-        <CTASection/>
+        <div className="relative bg-white mt-screen w-full">
+          <ServicesSection/>
+          <WhyChooseSection/>
+          <StatsSection/>
+          <ClientMarquee/>
+          <div className="bg-white h-30"></div>
+          <CaseStudiesSection/>
+          <RecognitionSection/>
+          <CTASection/>
+        </div>
       </main>
-      <Footer/>
+      <Footer className="relative bg-white w-full"/>
     </div>
   );
 }

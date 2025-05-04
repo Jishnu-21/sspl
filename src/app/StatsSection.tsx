@@ -17,7 +17,7 @@ const StatItem: React.FC<StatItemProps & { delay: number }> = ({ title, value, d
       className="flex flex-col text-black"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
+      transition={{ duration: 0.4, delay: delay * 0.2 }}
     >
       <div className="relative pb-2 mb-2">
         <div className="text-sm font-medium text-black">{title}</div>
@@ -73,14 +73,14 @@ const StatsSection = () => {
           clearInterval(interval);
           return prev;
         });
-      }, 800); // Show a new stat every 800ms
+      }, 200); // Show a new stat every 200ms
 
       return () => clearInterval(interval);
     }
   }, [inView]);
 
   return (
-    <section ref={ref} className="py-24 bg-white text-black">
+    <section ref={ref} className="py-24 pb-32 bg-white text-black">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
         <div className="flex flex-col md:flex-row gap-16">
           {/* Left side - Image */}
@@ -89,7 +89,7 @@ const StatsSection = () => {
               className="bg-gray-200 w-full h-full"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
             >
               <Image
                 src="/images/services/image1.png"
