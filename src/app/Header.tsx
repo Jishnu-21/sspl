@@ -15,8 +15,11 @@ const Header = () => {
   
   // Close mobile menu when clicking outside
   useEffect(() => {
-    // Only add the outside click handler when the menu is open
+    // Handle scroll locking and outside click
     if (mobileMenuOpen && mobileMenuRef.current) {
+      // Lock scroll
+      document.body.style.overflow = 'hidden';
+      
       const handleOutsideClick = (event: MouseEvent) => {
         if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
           setMobileMenuOpen(false);
@@ -25,6 +28,8 @@ const Header = () => {
       
       document.addEventListener('mousedown', handleOutsideClick);
       return () => {
+        // Unlock scroll when menu closes
+        document.body.style.overflow = '';
         document.removeEventListener('mousedown', handleOutsideClick);
       };
     }
@@ -134,11 +139,7 @@ const Header = () => {
               viewBox="0 0 24 24" 
               stroke="currentColor"
             >
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
           
@@ -149,9 +150,23 @@ const Header = () => {
       {/* Mobile Menu - Slides in from the right */}
       <div 
         ref={mobileMenuRef}
-        className={`fixed top-[90px] right-0 w-[250px] h-screen bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed top-0 right-0 w-full md:w-[300px] h-screen bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="flex flex-col py-6 px-4">
+        <div className="flex flex-col py-6 px-4 pt-20">
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="absolute top-4 right-4 p-2 text-gray-800 hover:text-black focus:outline-none"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
           <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</Link>
           <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</Link>
           <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</Link>
