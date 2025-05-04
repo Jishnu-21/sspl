@@ -2,6 +2,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import UpArrow from './components/UpArrow';
+import { motion as m, AnimatePresence } from 'framer-motion';
+
+// Define motion components with proper types
+const MotionDiv = m.div;
+const MotionButton = m.button;
+const MotionSection = m.section;
 
 interface ServiceItemProps {
   id: string;
@@ -13,8 +19,18 @@ interface ServiceItemProps {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, isActive, onClick }) => {
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
-    <div className="mb-8 relative pl-3 md:pl-5">
+    <MotionDiv 
+      className="mb-8 relative pl-3 md:pl-5"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={variants}
+      transition={{ duration: 0.5, delay: parseInt(id) * 0.1 }}>
       <div 
         className={`flex items-start cursor-pointer ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
         onClick={onClick}
@@ -45,27 +61,33 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
               </div>
               <p className="text-sm text-gray-600 mb-4">In a fast-paced demanding world, there has been a phenomenal growth seen in structured and unstructured data, data systems acquired from multiple sources which cater to the requirements of the businesses so as to derive insights faster & keep up with the momentum.</p>
               <div className="flex justify-between items-center">
-                <button className="flex items-center text-sm text-green-700 font-medium">
+                <MotionButton 
+                className="flex items-center text-sm text-green-700 font-medium"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}>
                   Learn More
                   <div className="ml-1 scale-75">
                     <UpArrow className="text-black" />
                   </div>
-                </button>
+                </MotionButton>
               </div>
             </div>
           )}
           
           {id !== '01' && (
-            <button className="flex items-center text-sm text-green-700 font-medium">
+            <MotionButton 
+              className="flex items-center text-sm text-green-700 font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}>
               Learn More
               <div className="ml-1 scale-75">
                 <UpArrow className="text-black" />
               </div>
-            </button>
+            </MotionButton>
           )}
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 
@@ -96,36 +118,6 @@ const ServicesSection = () => {
       number: '04',
       title: 'Operations & Finance Analytics',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
-    },
-    {
-      id: '05',
-      number: '05',
-      title: 'Risk Management Audit Analytics',
-      description: 'Our Risk Management Audit Analytics solutions provide comprehensive assessment and monitoring of organizational risks. We employ advanced analytical techniques to identify vulnerabilities, evaluate control effectiveness, and develop mitigation strategies.'
-    },
-    {
-      id: '06',
-      number: '06',
-      title: 'Fraud Management & Detection',
-      description: 'Our Fraud Management & Detection solutions leverage advanced analytics and machine learning to identify suspicious patterns and prevent fraudulent activities. We help organizations implement robust systems to safeguard assets and maintain operational integrity.'
-    },
-    {
-      id: '07',
-      number: '07',
-      title: 'Data Migration',
-      description: 'Our Data Migration services ensure smooth and secure transfer of data between systems, platforms, or environments. We handle complex migrations with minimal disruption, ensuring data integrity and compliance throughout the process.'
-    },
-    {
-      id: '08',
-      number: '08',
-      title: 'Algorithm Auditing',
-      description: 'We provide specialized services for auditing and validating algorithms across various applications. Our experts analyze algorithm performance, identify biases, and ensure accuracy, fairness, and compliance with industry standards and regulations.'
-    },
-    {
-      id: '09',
-      number: '09',
-      title: 'Media Analytics',
-      description: 'Our Media Analytics solutions help organizations understand audience behavior, content performance, and engagement metrics. We provide actionable insights to optimize media strategies, improve content relevance, and maximize ROI on media investments.'
     }
   ];
 
@@ -134,7 +126,12 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <MotionSection 
+      initial={{ opacity: 0 }} 
+      whileInView={{ opacity: 1 }} 
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
         <h2 className="text-3xl md:text-4xl font-comfortaa font-bold text-blue-900 mb-2">About us</h2>
         <p className="text-gray-600 mb-6 md:mb-8 max-w-3xl text-sm">
@@ -161,9 +158,16 @@ const ServicesSection = () => {
           
           {/* Right column - Images */}
           <div className="w-full md:w-1/2 order-first md:order-last mb-6 md:mb-0">
+            <AnimatePresence mode="wait">
             {services.map((service) => (
               activeService === service.id && (
-                <div key={service.id} className="relative h-full w-full">
+                <MotionDiv 
+                  key={service.id} 
+                  className="relative h-full w-full"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.3 }}>
                   <Image 
                     src="/images/services/image1.png" 
                     alt={service.title} 
@@ -172,13 +176,14 @@ const ServicesSection = () => {
                     className="w-full h-auto rounded-md shadow-md"
                     priority={activeService === '01'}
                   />
-                </div>
+                </MotionDiv>
               )
             ))}
+            </AnimatePresence>
           </div>
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

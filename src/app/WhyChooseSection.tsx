@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const contentItems = [
   {
@@ -33,10 +34,9 @@ const throttle = <T extends (...args: any[]) => any>(func: T, limit: number): T 
 
 const WhyChooseSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const scrollRef = useRef<number>(0);
 
   // Detect when the component is in the viewport
   useEffect(() => {
@@ -75,37 +75,41 @@ const WhyChooseSection = () => {
     return Math.max(0, Math.min(1, scrollProgress));
   };
 
-  // Handle scroll-based navigation only when component is in view
   useEffect(() => {
-    const handleScroll = throttle(() => {
-      if (!isInView) return;
-
-      const currentScrollY = window.scrollY;
-      const progress = calculateProgress(currentScrollY);
-
-      // Calculate which index should be shown based on scroll progress
+    const handleScroll = () => {
+      if (!isInView || !sectionRef.current) return;
+      
+      const progress = calculateProgress(window.scrollY);
       const targetIndex = Math.min(
         contentItems.length - 1,
         Math.floor(progress * contentItems.length)
       );
 
       if (targetIndex !== currentIndex) {
-        setIsAnimating(true);
         setCurrentIndex(targetIndex);
-        setTimeout(() => setIsAnimating(false), 600); // Match animation duration
       }
+    };
 
-      setLastScrollY(currentScrollY);
-    }, 200); // Reduced throttle time for smoother response
+    const onScroll = () => {
+      if (!scrollRef.current) {
+        scrollRef.current = requestAnimationFrame(() => {
+          handleScroll();
+          scrollRef.current = 0;
+        });
+      }
+    };
 
     if (isInView) {
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
     }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', onScroll);
+      if (scrollRef.current) {
+        cancelAnimationFrame(scrollRef.current);
+      }
     };
-  }, [lastScrollY, currentIndex, isAnimating, isInView]);
+  }, [currentIndex, isInView]);
 
   return (
     <div className="h-[200vh] relative">
@@ -121,41 +125,39 @@ const WhyChooseSection = () => {
               </div>
               
               <div className="w-full md:w-[40%] lg:w-[45%] px-4 md:pr-6 relative h-[280px] lg:h-[320px]">
-                {contentItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="absolute p-4 sm:p-6 lg:p-8 rounded-md shadow-lg md:h-[280px] lg:h-[320px] flex flex-col justify-center"
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    className="absolute p-4 sm:p-6 lg:p-8 rounded-md shadow-lg md:h-[280px] lg:h-[320px] flex flex-col justify-center w-full"
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 30
+                    }}
                     style={{
-                      transition: 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                      opacity: index === currentIndex ? 1 : index < currentIndex ? 0 : Math.max(0.1, 1 - (index - currentIndex) * 0.3),
-                      transform: `
-                        translate3d(0, ${index > currentIndex ? (index - currentIndex) * 15 : index < currentIndex ? -20 : 0}px, ${index > currentIndex ? (index - currentIndex) * -20 : 0}px)
-                        scale(${index > currentIndex ? Math.max(0.85, 1 - (index - currentIndex) * 0.08) : 1})
-                        rotate3d(1, 0, 0, ${index > currentIndex ? (index - currentIndex) * -2 : 0}deg)
-                      `,
-                      zIndex: contentItems.length - Math.abs(index - currentIndex),
                       background: 'rgba(255, 255, 255, 0.1)',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)',
                       border: '1px solid rgba(255, 255, 255, 0.2)',
-                      boxShadow: `0 ${index > currentIndex ? (index - currentIndex) * 4 : 0}px ${index > currentIndex ? (index - currentIndex) * 8 : 0}px rgba(0,0,0,0.1)`
+                      willChange: 'transform'
                     }}
                   >
                     <div className="text-white">
                       <div className="flex items-start">
-                        <div className="mr-2 font-medium text-lg sm:text-xl font-poppins leading-tight">{index + 1}.</div>
+                        <div className="mr-2 font-medium text-lg sm:text-xl font-poppins leading-tight">{currentIndex + 1}.</div>
                         <div className="flex-1">
                           <p className="text-base sm:text-lg lg:text-xl font-medium leading-tight mb-2 font-poppins">
-                            {item.title} –
+                            {contentItems[currentIndex].title} –
                           </p>
                           <p className="text-xs sm:text-sm lg:text-base leading-relaxed font-comfortaa">
-                            {item.description}
+                            {contentItems[currentIndex].description}
                           </p>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
               {/* Progress bar */}
