@@ -112,23 +112,25 @@ const WhyChooseSection = () => {
   }, [currentIndex, isInView]);
 
   return (
-    <div className="h-[200vh] relative">
+    <div className="h-[250vh] relative">
       <section 
         ref={sectionRef} 
-        className="sticky top-0 py-8 lg:py-12 xl:py-16 bg-white h-screen flex items-center"
+        className="sticky top-0 py-24 bg-white h-screen flex items-center"
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
-            <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 relative">
-              <div className="w-full md:w-[45%] lg:w-[40%] mb-6 md:mb-0 md:pl-0 lg:pl-4 text-center md:text-left">
-                <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-6xl font-bold text-white leading-tight">Why choose SSPL?</h2>
+            <div className="flex flex-col md:flex-row items-center justify-between p-12 lg:p-20 xl:p-24 relative min-h-[700px]">
+              {/* Background gradient for depth */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D69] to-[#152d4f] opacity-50"></div>
+              <div className="w-full md:w-[45%] lg:w-[40%] mb-8 md:mb-0 md:pl-0 lg:pl-8 text-center md:text-left relative z-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white whitespace-nowrap">Why choose SSPL?</h2>
               </div>
               
-              <div className="w-full md:w-[40%] lg:w-[45%] px-4 md:pr-6 relative h-[280px] lg:h-[320px]">
+              <div className="w-full md:w-[40%] lg:w-[45%] px-4 md:pr-8 relative h-[320px] lg:h-[400px] z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
-                    className="absolute p-4 sm:p-6 lg:p-8 rounded-md shadow-lg md:h-[280px] lg:h-[320px] flex flex-col justify-center w-full"
+                    className="absolute p-6 lg:p-10 rounded-md shadow-lg md:h-[320px] lg:h-[400px] flex flex-col justify-center w-full"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
@@ -147,10 +149,10 @@ const WhyChooseSection = () => {
                       <div className="flex items-start">
                         <div className="mr-2 font-medium text-lg sm:text-xl font-poppins leading-tight">{currentIndex + 1}.</div>
                         <div className="flex-1">
-                          <p className="text-base sm:text-lg lg:text-xl font-medium leading-tight mb-2 font-poppins">
+                          <p className="text-lg sm:text-xl lg:text-2xl font-medium leading-tight mb-4 font-poppins">
                             {contentItems[currentIndex].title} –
                           </p>
-                          <p className="text-xs sm:text-sm lg:text-base leading-relaxed font-comfortaa">
+                          <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-comfortaa">
                             {contentItems[currentIndex].description}
                           </p>
                         </div>
