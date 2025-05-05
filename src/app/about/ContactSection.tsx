@@ -26,7 +26,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-200 via-gray-100 to-white">
+    <section className="pt-20 pb-32 bg-gradient-to-b from-gray-200 via-gray-100 to-white">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-200/80 via-transparent to-transparent h-48"></div>
       <div className="container mx-auto px-4">
         <motion.h2 
@@ -51,32 +51,33 @@ const ContactSection = () => {
           </button>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto h-full relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto relative">
           {/* Left Column - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="space-y-8 h-full flex flex-col justify-between"
+            className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl md:text-3xl text-black font-medium mb-4 text-center">
-                Got a question? We would love to hear from you
+              <h3 className="text-2xl md:text-3xl text-black font-medium mb-4">
+                Got a question?<br/>
+                We would love to hear from you
               </h3>
               <button className="px-6 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300">
                 Call us +973-8889 2927
               </button>
             </div>
 
-            <div className="bg-white backdrop-blur-sm p-8 shadow-lg hover:shadow-xl transition-shadow flex-grow rounded-sm">
+            <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
               <h4 className="text-xl text-black font-medium mb-4 text-center">USA</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
                 Flat No.35, Building No.56, Street No.456, Block No.56, Manhattan Valley, California, 901203
               </p>
             </div>
 
-            <div className="bg-white backdrop-blur-sm p-8 shadow-lg hover:shadow-xl transition-shadow flex-grow rounded-sm">
+            <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
               <h4 className="text-xl text-black font-medium mb-4 text-center">India</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
                 M-95, Connaught Circus, New Delhi - 110001
@@ -91,9 +92,9 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white backdrop-blur-sm p-8 shadow-xl hover:shadow-2xl transition-shadow min-h-[600px] rounded-sm -mt-12">
+            <div className="bg-white backdrop-blur-sm p-8 shadow-xl hover:shadow-2xl transition-shadow min-h-[540px] rounded-sm -translate-y-8">
               <h3 className="text-xl text-black font-medium mb-6">Send us a message</h3>
-              <form onSubmit={handleSubmit} className="space-y-8 mt-8">
+              <form onSubmit={handleSubmit} className="space-y-6 mt-6">
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -138,7 +139,7 @@ const ContactSection = () => {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={6}
+                  rows={5}
                   className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none resize-none bg-white/80 placeholder-black"
                   required
                 />
