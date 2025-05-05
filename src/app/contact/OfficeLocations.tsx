@@ -35,22 +35,29 @@ const OfficeLocations = () => {
         <div className="flex-1 pl-[500px] pr-16 py-12">
           <div className="max-w-4xl">
             {offices.map((office, index) => (
-              <div key={index} className="border-t border-gray-100 py-8 first:border-t-0 first:pt-0">
-                <div className="flex items-start">
-                  <div className="w-16 flex items-center text-gray-400">
+              <div key={index} className="border-t border-gray-200 mb-6 first:border-t-0 first:pt-0">
+                <div className="flex items-center py-6 border-b border-gray-100 w-full">
+                  {/* Time */}
+                  <div className="flex items-center text-gray-400 w-24">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-xs ">{office.time}</span>
+                    <span className="text-xs">{office.time}</span>
                   </div>
-                  <div className="flex-1">
-                    <h2 className="text-3xl text-black font-medium mb-4">{office.country}</h2>
-                    <div className="text-sm text-gray-600 space-y-1">
+                  
+                  {/* Country */}
+                  <div className="w-64">
+                    <h2 className="text-3xl text-black font-medium">{office.country}</h2>
+                  </div>
+                  
+                  {/* Address and Contact Info */}
+                  <div className="flex-1 pl-24 text-left">
+                    <div className="text-sm text-gray-600 leading-relaxed">
                       <p>{office.address}</p>
                       <p>Mail ID - <a href={`mailto:${office.email}`} className="text-blue-600 hover:underline">{office.email}</a></p>
-                      {office.tel && <p>Tel: {office.tel} {office.mobile && `Mobile: ${office.mobile}`}</p>}
-                      {!office.tel && office.mobile && <p>Mobile: {office.mobile}</p>}
-                      {office.fax && <p>Fax: {office.fax}</p>}
+                      {office.tel && <p>Tel : {office.tel}</p>}
+                      {office.mobile && <p>Mobile: {office.mobile}</p>}
+                      {office.fax && <p>Fax : {office.fax}</p>}
                     </div>
                   </div>
                 </div>
