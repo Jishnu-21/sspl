@@ -115,24 +115,24 @@ const WhyChooseSection = () => {
     <div className="h-[250vh] relative">
       <section 
         ref={sectionRef} 
-        className="sticky top-0 py-16 sm:py-20 lg:py-24 bg-white min-h-screen flex items-center"
+        className="sticky top-0 py-16 sm:py-20 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center"
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
-            <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-12 lg:p-20 xl:p-24 relative min-h-[600px] md:min-h-[600px] lg:min-h-[700px] gap-6 md:gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-10 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[600px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-6 md:gap-4 lg:gap-6 xl:gap-8">
               {/* Background gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D69] to-[#152d4f] opacity-50"></div>
-              <div className="w-full md:w-[45%] lg:w-[40%] md:mb-0 md:pl-0 lg:pl-8 text-center md:text-left relative z-10">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white md:whitespace-nowrap inline-block pb-2 border-b-2 border-white/30 md:border-none">
+              <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[35%] md:mb-0 md:pl-0 lg:pl-6 xl:pl-8 2xl:pl-12 text-center md:text-left relative z-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white md:whitespace-nowrap inline-block pb-2 border-b-2 border-white/30 md:border-none">
                   Why choose SSPL?
                 </h2>
               </div>
               
-              <div className="w-full md:w-[40%] lg:w-[45%] px-2 sm:px-4 md:pr-8 relative h-[350px] sm:h-[320px] lg:h-[400px] z-10">
+              <div className="w-full md:w-[40%] lg:w-[45%] xl:w-[50%] px-2 sm:px-4 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 relative h-[350px] sm:h-[320px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
-                    className="absolute p-4 sm:p-6 lg:p-10 rounded-md shadow-lg h-[350px] sm:h-[320px] lg:h-[400px] flex flex-col justify-center w-full"
+                    className="absolute p-4 sm:p-5 lg:p-6 xl:p-8 2xl:p-10 rounded-md shadow-lg h-[350px] sm:h-[320px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] flex flex-col justify-center w-full"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
@@ -149,12 +149,12 @@ const WhyChooseSection = () => {
                   >
                     <div className="text-white">
                       <div className="flex items-start">
-                        <div className="mr-2 font-medium text-sm sm:text-lg lg:text-xl font-poppins leading-tight">{currentIndex + 1}.</div>
+                        <div className="mr-2 font-medium text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-poppins leading-tight">{currentIndex + 1}.</div>
                         <div className="flex-1">
-                          <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl font-medium leading-tight mb-2 sm:mb-3 font-poppins">
+                          <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight mb-2 sm:mb-2 lg:mb-3 xl:mb-4 font-poppins">
                             {contentItems[currentIndex].title} –
                           </p>
-                          <p className="text-[11px] sm:text-sm lg:text-base xl:text-lg leading-tight font-comfortaa">
+                          <p className="text-[11px] sm:text-sm lg:text-base xl:text-base 2xl:text-lg leading-tight lg:leading-snug font-comfortaa">
                             {contentItems[currentIndex].description}
                           </p>
                         </div>
@@ -165,7 +165,7 @@ const WhyChooseSection = () => {
               </div>
 
               {/* Progress bar */}
-              <div className="absolute left-0 bottom-0 w-full h-1 bg-white/20">
+              <div className="absolute left-0 bottom-0 w-full h-1 lg:h-1 xl:h-1.5 bg-white/20">
                 <div 
                   className="h-full bg-white transition-all duration-500 ease-out"
                   style={{

@@ -21,7 +21,7 @@ const RecognitionSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-black">Recognition</h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 xl:gap-8">
           {logos.map((item, index) => (
             <motion.div
               key={index}
@@ -31,7 +31,7 @@ const RecognitionSection = () => {
               whileHover={{ scale: 1.02 }}
               className="flex flex-col items-center group"
             >
-              <div className="bg-white rounded-lg p-8 lg:p-10 w-full aspect-square flex flex-col items-center justify-center relative overflow-hidden
+              <div className="bg-white rounded-lg p-6 sm:p-7 md:p-8 lg:p-5 xl:p-8 w-full aspect-square flex flex-col items-center justify-center relative overflow-hidden
                 transform transition-all duration-300 ease-in-out
                 shadow-[0_4px_12px_rgba(0,0,0,0.08)]
                 group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]
@@ -39,15 +39,17 @@ const RecognitionSection = () => {
                 before:absolute before:inset-0 before:z-0 before:bg-gradient-to-br before:from-white before:to-gray-50 before:opacity-0 before:transition-opacity before:duration-300
                 group-hover:before:opacity-100
               ">
-                <div className="relative w-full h-24 lg:h-32 mb-4 z-10 transform transition-transform duration-300 group-hover:scale-105">
+                <div className="relative w-full h-16 sm:h-20 md:h-24 lg:h-16 xl:h-20 2xl:h-24 mb-2 lg:mb-3 z-10 transform transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src={item.logo}
                     alt={item.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
                     className="object-contain"
                   />
                 </div>
-                <p className="text-base lg:text-lg text-gray-800 font-bold relative z-10 transition-colors duration-300 group-hover:text-black mt-2">{item.name}</p>
+                <p className="text-sm sm:text-base lg:text-sm xl:text-base text-gray-800 font-bold relative z-10 transition-colors duration-300 group-hover:text-black mt-1 lg:mt-2">{item.name}</p>
               </div>
             </motion.div>
           ))}

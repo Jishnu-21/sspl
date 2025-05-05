@@ -20,7 +20,7 @@ const ContactForm = () => {
             </button>
           </div>
         </div>
-        <div className="flex-1 pl-[500px] pr-16 py-12">
+        <div className="flex-1 pl-[600px] pr-16 py-12">
           <div className="max-w-4xl">
             <h1 className="text-5xl text-gray-900 font-bold mb-3">GET IN TOUCH WITH US</h1>
             <p className="text-gray-500 text-base mb-12">
