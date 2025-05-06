@@ -71,17 +71,14 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
-              <h4 className="text-xl text-black font-medium mb-4 text-center">USA</h4>
+              <h4 className="text-xl text-black font-semibold mb-4 text-center">Middle East</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
-                Flat No.35, Building No.56, Street No.456, Block No.56, Manhattan Valley, California, 901203
-              </p>
+              Flat No.33, Building No.114, Road No.383, Block No.316, Manama Centre, Manama, Bahrain</p>
             </div>
-
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
-              <h4 className="text-xl text-black font-medium mb-4 text-center">India</h4>
+              <h4 className="text-xl text-black font-semibold mb-4 text-center">India</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
-                M-95, Connaught Circus, New Delhi - 110001
-              </p>
+              M-91, Connaught Circus, New Delhi - 110001</p>
             </div>
           </motion.div>
 

@@ -18,7 +18,7 @@ const Footer = ({ className = '' }: FooterProps) => {
           {/* Column 1 - Logo and company info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src='/logo.svg'></img>
+              <img src='/logo.png'></img>
             </div>
             <p className="text-gray-500 text-sm">
               Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam

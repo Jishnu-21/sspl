@@ -55,7 +55,6 @@ export default function About() {
       <AboutBanner />
       <AboutContent />
       <TeamSection members={teamMembers} title="Meet Our Leaders" />
-      <TeamSection members={teamMembers} title="Our Team" />
       <LifeAtSSPL />
       <ContactSection />
       <Footer/>

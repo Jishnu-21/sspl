@@ -3,18 +3,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { FaTrophy, FaGlobeAmericas, FaChartLine } from 'react-icons/fa';
+
 const contentItems = [
   {
     title: 'Award-Winning Expertise',
-    description: 'Recognized as the Best Big Data Analytics Solution Company by WQPC, SSPL has a proven track record of delivering cutting-edge analytics solutions. Our expertise spans multiple industries, helping businesses transform raw data into actionable insights for smarter decision-making.'
+    description: 'Recognized as the Best Big Data Analytics Solution Company by WQPC, SSPL has a proven track record of delivering cutting-edge analytics solutions. Our expertise spans multiple industries, helping businesses transform raw data into actionable insights for smarter decision-making.',
+    icon: FaTrophy
   },
   {
     title: '24/7 Global Analytics Hub',
-    description: 'We operate a round-the-clock analytics hub, ensuring continuous support and seamless integration of Big Data, AI, and Business Intelligence solutions. No matter the time zone, we help businesses optimize performance and stay ahead of the competition.'
+    description: 'We operate a round-the-clock analytics hub, ensuring continuous support and seamless integration of Big Data, AI, and Business Intelligence solutions. No matter the time zone, we help businesses optimize performance and stay ahead of the competition.',
+    icon: FaGlobeAmericas
   },
   {
     title: 'End-to-End Data Solutions',
-    description: 'From Predictive Analytics and Digital Transformation to Robotic Process Automation (RPA), we provide customized solutions tailored to business needs. Our AI-powered insights enhance efficiency, improve risk management, and drive sustainable growth.'
+    description: 'From Predictive Analytics and Digital Transformation to Robotic Process Automation (RPA), we provide customized solutions tailored to business needs. Our AI-powered insights enhance efficiency, improve risk management, and drive sustainable growth.',
+    icon: FaChartLine
   }
 ];
 
@@ -147,17 +152,17 @@ const WhyChooseSection = () => {
                       willChange: 'transform'
                     }}
                   >
-                    <div className="text-white">
-                      <div className="flex items-start">
-                        <div className="mr-2 font-medium text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-poppins leading-tight">{currentIndex + 1}.</div>
-                        <div className="flex-1">
-                          <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight mb-2 sm:mb-2 lg:mb-3 xl:mb-4 font-poppins">
-                            {contentItems[currentIndex].title} –
-                          </p>
-                          <p className="text-[11px] sm:text-sm lg:text-base xl:text-base 2xl:text-lg leading-tight lg:leading-snug font-comfortaa">
-                            {contentItems[currentIndex].description}
-                          </p>
-                        </div>
+                    <div className="text-white text-center flex flex-col items-center justify-center h-full">
+                      <div className="mb-6 text-4xl sm:text-5xl lg:text-6xl">
+                        {React.createElement(contentItems[currentIndex].icon)}
+                      </div>
+                      <div>
+                        <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight mb-4 sm:mb-4 lg:mb-5 xl:mb-6 font-poppins">
+                          {contentItems[currentIndex].title}
+                        </p>
+                        <p className="text-[11px] sm:text-sm lg:text-base xl:text-base 2xl:text-lg leading-tight lg:leading-snug font-comfortaa max-w-md mx-auto">
+                          {contentItems[currentIndex].description}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
