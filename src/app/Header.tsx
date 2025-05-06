@@ -36,13 +36,6 @@ const Header = () => {
   }, [mobileMenuOpen]);
 
   useEffect(() => {
-    // Initialize with header hidden if page is scrolled down
-    const initialScrollPos = window.scrollY;
-    if (initialScrollPos > 100) {
-      setVisible(false);
-      setTopBarVisible(false);
-    }
-    
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       
@@ -75,7 +68,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full z-50 border-t-[3px] border-[#222] bg-white box-border font-poppins transition-transform duration-300" 
-      style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)', opacity: visible ? 1 : 0 }}>
+      style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
       {/* Top Bar */}
       <div 
         className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[35px] md:h-[35px] opacity-100' : 'h-0 opacity-0'}`}
