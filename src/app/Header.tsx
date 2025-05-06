@@ -10,8 +10,10 @@ const Header = () => {
   const [visible, setVisible] = useState(true);
   const [topBarVisible, setTopBarVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -66,6 +68,11 @@ const Header = () => {
     };
   }, [prevScrollPos, visible]);
 
+  // Close services dropdown when clicking outside
+  useOutsideClick(servicesDropdownRef, () => {
+    if (servicesDropdownOpen) setServicesDropdownOpen(false);
+  });
+
   return (
     <header className="fixed top-0 w-full z-50 border-t-[3px] border-[#222] bg-white box-border font-poppins transition-transform duration-300" 
       style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
@@ -114,10 +121,86 @@ const Header = () => {
                 Products
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
-              <Link href="/services" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
-                Services
-                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </Link>
+              
+              {/* Services with dropdown */}
+              <div 
+                className="relative group"
+                ref={servicesDropdownRef}
+              >
+                <button 
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  className="flex items-center group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                >
+                  Services
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className="h-4 w-4 ml-1" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                </button>
+                
+                {/* Services Dropdown */}
+                <div 
+                  className={`absolute left-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${servicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                >
+                  <div className="py-2">
+                    <Link 
+                      href="/services/predictive-analysis" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Predictive & Big Data Analytics
+                    </Link>
+                    <Link 
+                      href="/services/media-analytics" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Media Analytics
+                    </Link>
+                    <Link 
+                      href="/services/revenue-assurance" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Revenue Assurance
+                    </Link>
+                    <Link 
+                      href="/services/risk-management" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Risk Management Audit Analytics
+                    </Link>
+                    <Link 
+                      href="/services/operations-finance" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Operations & Finance Analytics
+                    </Link>
+                    <Link 
+                      href="/services/fraud-management" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Fraud Management & Detection
+                    </Link>
+                    <Link 
+                      href="/services/data-migration" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Data Migration
+                    </Link>
+                    <Link 
+                      href="/services/algorithm-auditing" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Algorithm Auditing
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
               <Link href="/resources" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Resources
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
@@ -172,7 +255,54 @@ const Header = () => {
           <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</Link>
           <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</Link>
           <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</Link>
-          <Link href="/services" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Services</Link>
+          
+          {/* Mobile Services Dropdown */}
+          <div className="border-b border-gray-100">
+            <button 
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
+            >
+              Services
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className={`h-4 w-4 transition-transform ${servicesDropdownOpen ? 'transform rotate-180' : ''}`}
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {/* Mobile Services Submenu */}
+            <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${servicesDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
+              <Link href="/services/predictive-analysis" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Predictive & Big Data Analytics
+              </Link>
+              <Link href="/services/media-analytics" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Media Analytics
+              </Link>
+              <Link href="/services/revenue-assurance" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Revenue Assurance
+              </Link>
+              <Link href="/services/risk-management" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Risk Management Audit Analytics
+              </Link>
+              <Link href="/services/operations-finance" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Operations & Finance Analytics
+              </Link>
+              <Link href="/services/fraud-management" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Fraud Management & Detection
+              </Link>
+              <Link href="/services/data-migration" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Data Migration
+              </Link>
+              <Link href="/services/algorithm-auditing" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Algorithm Auditing
+              </Link>
+            </div>
+          </div>
+          
           <Link href="/resources" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Resources</Link>
           <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium">Contact us</Link>
         </div>

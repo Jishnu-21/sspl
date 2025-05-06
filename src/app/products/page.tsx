@@ -14,7 +14,6 @@ const Products = () => {
       <PageBanner
         backgroundImage="/images/about/banner.png"
         title="Products"
-        subtitle="Innovative solutions designed to transform your business"
       />
       <DownloadBrochure />
       <ProductShowcase />
