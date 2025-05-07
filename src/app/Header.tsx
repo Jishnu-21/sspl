@@ -69,7 +69,7 @@ const Header = () => {
   }, [prevScrollPos, visible]);
 
   // Close services dropdown when clicking outside
-  useOutsideClick(servicesDropdownRef, () => {
+  useOutsideClick(servicesDropdownRef as React.RefObject<HTMLDivElement>, () => {
     if (servicesDropdownOpen) setServicesDropdownOpen(false);
   });
 

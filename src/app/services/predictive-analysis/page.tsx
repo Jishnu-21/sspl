@@ -4,7 +4,7 @@ import Header from '@/app/Header'
 import React from 'react'
 import Image from 'next/image'
 
-const PredictiveAnalyticsPage: React.FC = () => {
+const predictiveanalysis= () => {
   return (
     <>
       <main className="flex flex-col bg-white min-h-screen">
@@ -105,4 +105,4 @@ const PredictiveAnalyticsPage: React.FC = () => {
   )
 }
 
-export default PredictiveAnalyticsPage
+export default predictiveanalysis;
