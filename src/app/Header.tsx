@@ -11,9 +11,11 @@ const Header = () => {
   const [topBarVisible, setTopBarVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
   
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const servicesDropdownRef = useRef<HTMLDivElement>(null);
+  const eventsDropdownRef = useRef<HTMLDivElement>(null);
   
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -72,6 +74,11 @@ const Header = () => {
   useOutsideClick(servicesDropdownRef as React.RefObject<HTMLDivElement>, () => {
     if (servicesDropdownOpen) setServicesDropdownOpen(false);
   });
+  
+  // Close events dropdown when clicking outside
+  useOutsideClick(eventsDropdownRef as React.RefObject<HTMLDivElement>, () => {
+    if (eventsDropdownOpen) setEventsDropdownOpen(false);
+  });
 
   return (
     <header className="fixed top-0 w-full z-50 border-t-[3px] border-[#222] bg-white box-border font-poppins transition-transform duration-300" 
@@ -80,7 +87,7 @@ const Header = () => {
       <div 
         className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[35px] md:h-[35px] opacity-100' : 'h-0 opacity-0'}`}
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 flex flex-wrap justify-center md:justify-start">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 flex flex-wrap justify-between">
           <div className="flex items-center gap-2">
             <span className="flex items-center text-[#222]">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -103,7 +110,9 @@ const Header = () => {
       <div className="bg-white h-[70px] border-b border-[#eee] shadow-sm">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
           <div className="flex items-center">
+            <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="SSPL Logo" width={160} height={55} className="py-1" />
+            </Link>
           </div>
           
           {/* Desktop Navigation - Hidden on mobile */}
@@ -125,10 +134,10 @@ const Header = () => {
               {/* Services with dropdown */}
               <div 
                 className="relative group"
-                ref={servicesDropdownRef}
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
               >
                 <button 
-                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                   className="flex items-center group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
                   Services
@@ -201,10 +210,49 @@ const Header = () => {
                 </div>
               </div>
               
-              <Link href="/resources" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
-                Resources
-                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </Link>
+              {/* Events with dropdown */}
+              <div 
+                className="relative group"
+                onMouseEnter={() => setEventsDropdownOpen(true)}
+                onMouseLeave={() => setEventsDropdownOpen(false)}
+              >
+                <button 
+                  className="flex items-center group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                >
+                  Events
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className="h-4 w-4 ml-1" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                </button>
+                
+                {/* Events Dropdown */}
+                <div 
+                  className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${eventsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                >
+                  <div className="py-2">
+                    <Link 
+                      href="/video-gallery" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Video Gallery
+                    </Link>
+                    <Link 
+                      href="/photo-gallery" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      Image Gallery
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
               <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Contact us
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
@@ -303,7 +351,35 @@ const Header = () => {
             </div>
           </div>
           
-          <Link href="/resources" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Resources</Link>
+          {/* Mobile Events Dropdown */}
+          <div className="border-b border-gray-100">
+            <button 
+              onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
+            >
+              Events
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className={`h-4 w-4 transition-transform ${eventsDropdownOpen ? 'transform rotate-180' : ''}`}
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {/* Mobile Events Submenu */}
+            <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${eventsDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
+              <Link href="/video-gallery" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Video Gallery
+              </Link>
+              <Link href="/photo-gallery" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+                Image Gallery
+              </Link>
+            </div>
+          </div>
+          
           <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium">Contact us</Link>
         </div>
       </div>
