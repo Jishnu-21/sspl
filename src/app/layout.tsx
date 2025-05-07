@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import GoToTop from "./components/GoToTop";
 
 export const metadata: Metadata = {
   title: "SSPL - Security and Protection",
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-comfortaa antialiased">
         {children}
+        <GoToTop />
       </body>
     </html>
   );
