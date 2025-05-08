@@ -1,54 +1,31 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
-const FeaturedProjectsSection = () => {
+const CaseStudiesSection = () => {
   const controls = useAnimation();
   const sectionRef = useRef(null);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  // Adjust the inView settings to prevent reanimation and flickering
   const isInView = useInView(sectionRef, { 
-    once: false, 
-    amount: 0.2 
+    once: false, // Keep false to animate every time it enters viewport
+    amount: 0.2,
+    margin: "-100px 0px -100px 0px" // Add margin to trigger animation before fully in view
   });
   
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const isScrollingDown = currentScrollY > lastScrollY;
-      setLastScrollY(currentScrollY);
-      
-      if (isInView && isScrollingDown && !isAnimating) {
-        setIsAnimating(true);
-        controls.start('visible').then(() => {
-          setTimeout(() => {
-            setIsAnimating(false);
-          }, 500);
-        });
-      } else if (!isInView) {
-        controls.start('hidden', { duration: 0 });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    
-    // Initial check in case component is already in view on load
-    if (isInView && !isAnimating) {
-      setIsAnimating(true);
-      controls.start('visible').then(() => {
-        setTimeout(() => {
-          setIsAnimating(false);
-        }, 500);
-      });
+    if (isInView) {
+      controls.start('visible');
+    } else {
+      // Use a slight delay before hiding to prevent flickering during scroll
+      const timeout = setTimeout(() => {
+        controls.start('hidden');
+      }, 100);
+      return () => clearTimeout(timeout);
     }
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [controls, isInView, isAnimating, lastScrollY]);
+  }, [controls, isInView]);
 
   // Sample case studies data
   const caseStudies = [
@@ -124,76 +101,77 @@ const FeaturedProjectsSection = () => {
   const sectionVariants = {
     hidden: { 
       opacity: 0, 
-      y: 100,
-      scale: 0.9
+      y: 80, // More significant vertical movement
+      scale: 0.92, // More noticeable scaling effect
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        duration: 0.7, // Slightly longer to appreciate the animation
+        ease: [0.25, 0.1, 0.25, 1], // Custom cubic-bezier for smoother motion
       }
     }
   };
 
   return (
-    <motion.section 
-      ref={sectionRef}
-      initial="hidden"
-      animate={controls}
-      variants={sectionVariants}
-      className="py-24 overflow-hidden rounded-3xl my-8 shadow-xl relative"
-    >
-      {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute inset-0  z-10"></div>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/videos/case-studies.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div className="max-w-[95%] mx-auto relative z-20">
-        {/* Top heading */}
-        <div className="pb-4 mb-0">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
+    <div className="relative will-change-transform overflow-visible">
+      <motion.section 
+        ref={sectionRef}
+        initial="hidden"
+        animate={controls}
+        variants={sectionVariants}
+        className="py-24 overflow-hidden rounded-3xl my-8 shadow-xl relative"
+      >
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+          <div className="absolute inset-0  z-10"></div> {/* Added proper overlay */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/videos/case-studies.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        {/* Horizontal line that extends across the entire section */}
-        <div
-          className="border-b border-white w-full mb-8"
-          style={{ transformOrigin: 'left' }}
-        />
-        <div className="flex flex-col md:flex-row">
-          {/* Left side content */}
-          <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-            <p className="text-sm text-white leading-relaxed">
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-            </p>
-            {/* Vertical line that connects with the horizontal line */}
-            <div
-              className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
-              style={{ top: '-30px', transformOrigin: 'top' }}
-            />
+
+        <div className="max-w-[95%] mx-auto relative z-20">
+          {/* Top heading */}
+          <div className="pb-4 mb-0">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
           </div>
-          
-          {/* Right side scrollable cards */}
-          <div className="md:w-2/3 overflow-hidden relative">
-            <div className="relative">
-              <Carousel items={cardItems} />
+          {/* Horizontal line that extends across the entire section */}
+          <div
+            className="border-b border-white w-full mb-8"
+          />
+          <div className="flex flex-col md:flex-row">
+            {/* Left side content */}
+            <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
+              <p className="text-sm text-white leading-relaxed">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              {/* Vertical line that connects with the horizontal line */}
+              <div
+                className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
+                style={{ top: '-30px' }}
+              />
+            </div>
+            
+            {/* Right side scrollable cards */}
+            <div className="md:w-2/3 overflow-hidden">
+              <div className="relative">
+                <Carousel items={cardItems} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.section>
+    </div>
   );
 };
 
-export default FeaturedProjectsSection;
+export default CaseStudiesSection;
