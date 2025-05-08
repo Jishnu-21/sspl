@@ -156,6 +156,7 @@ const Header = () => {
                 {/* Services Dropdown */}
                 <div 
                   className={`absolute left-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${servicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                  ref={servicesDropdownRef}
                 >
                   <div className="py-2">
                     <Link 
@@ -235,6 +236,7 @@ const Header = () => {
                 {/* Events Dropdown */}
                 <div 
                   className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${eventsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                  ref={eventsDropdownRef}
                 >
                   <div className="py-2">
                     <Link 
@@ -307,7 +309,8 @@ const Header = () => {
           {/* Mobile Services Dropdown */}
           <div className="border-b border-gray-100">
             <button 
-              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
               className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
             >
               Services
@@ -354,7 +357,8 @@ const Header = () => {
           {/* Mobile Events Dropdown */}
           <div className="border-b border-gray-100">
             <button 
-              onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
+              onMouseEnter={() => setEventsDropdownOpen(true)}
+              onMouseLeave={() => setEventsDropdownOpen(false)}
               className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
             >
               Events

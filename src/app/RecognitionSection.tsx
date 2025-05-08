@@ -1,59 +1,215 @@
-'use client'
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+'use client';
 
-const RecognitionSection = () => {
-  // Sample logos data
-  const logos = [
-    { name: 'Audi', logo: '/images/logos/b1.png' },
-    { name: 'BMW', logo: '/images/logos/b2.png' },
-    { name: 'Ford', logo: '/images/logos/b3.png' },
-    { name: 'Mercedes Benz', logo: '/images/logos/b4.png' },
-    { name: 'Peugeot', logo: '/images/logos/b5.png' },
-    { name: 'Volkswagen', logo: '/images/logos/b6.png' },
+import React, { useState } from 'react';
+import Image from 'next/image';
+
+interface MarqueeItem {
+  logo: string;
+  hoverDetails: {
+    title: string;
+    description: string;
+    industry: string;
+    scopeOfWork: string;
+    image1: string;
+  };
+}
+
+const RecognitionSection: React.FC = () => {
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  const marqueeItems: MarqueeItem[] = [
+    {
+      logo: '/images/awards/award1.jpg',
+      hoverDetails: {
+        title: 'Excellence in Innovation',
+        description:
+          'Awarded for outstanding innovation in data analytics solutions that have transformed business operations.',
+        industry: 'Technology',
+        scopeOfWork: 'DATA ANALYTICS',
+        image1: '/images/awards/award1.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award2.jpg',
+      hoverDetails: {
+        title: 'Best Big Data Analytics Solution',
+        description:
+          'Recognized by WQPC for providing the most technically advanced Big Data Analytics solutions in the industry.',
+        industry: 'Technology',
+        scopeOfWork: 'BIG DATA',
+        image1: '/images/awards/award2.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award3.jpg',
+      hoverDetails: {
+        title: 'Technology Leadership Award',
+        description:
+          'Honored for leadership in developing cutting-edge technology solutions that drive business growth.',
+        industry: 'Technology',
+        scopeOfWork: 'LEADERSHIP',
+        image1: '/images/awards/award3.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award4.jpg',
+      hoverDetails: {
+        title: 'Customer Satisfaction Excellence',
+        description:
+          'Awarded for maintaining the highest standards of customer service and support in the industry.',
+        industry: 'Customer Service',
+        scopeOfWork: 'SUPPORT',
+        image1: '/images/awards/award4.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award5.jpg',
+      hoverDetails: {
+        title: 'Industry Impact Award',
+        description:
+          'Recognized for making significant contributions to advancing data analytics across multiple industries.',
+        industry: 'Technology',
+        scopeOfWork: 'INNOVATION',
+        image1: '/images/awards/award5.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award6.jpg',
+      hoverDetails: {
+        title: 'Digital Transformation Partner',
+        description:
+          'Awarded for helping organizations successfully navigate their digital transformation journey.',
+        industry: 'Digital Transformation',
+        scopeOfWork: 'CONSULTING',
+        image1: '/images/awards/award6.jpg',
+      },
+    },
+    {
+      logo: '/images/awards/award8.jpg',
+      hoverDetails: {
+        title: 'Best Enterprise Solution',
+        description:
+          'Recognized for providing comprehensive enterprise-level solutions that deliver measurable business value.',
+        industry: 'Enterprise Software',
+        scopeOfWork: 'SOLUTION DEVELOPMENT',
+        image1: '/images/awards/award8.jpg',
+      },
+    },
   ];
 
   return (
-    <section className="py-24 bg-white text-black">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
-        <div className="text-center mb-16">
+    <section className="py-16 mt-20 bg-white text-black">
+      <div className="container mx-auto px-4 md:px-8 mb-8">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-black">Recognition</h2>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 xl:gap-8">
-          {logos.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
-              whileHover={{ scale: 1.02 }}
-              className="flex flex-col items-center group"
-            >
-              <div className="bg-white rounded-lg p-6 sm:p-7 md:p-8 lg:p-5 xl:p-8 w-full aspect-square flex flex-col items-center justify-center relative overflow-hidden
-                transform transition-all duration-300 ease-in-out
-                shadow-[0_4px_12px_rgba(0,0,0,0.08)]
-                group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]
-                group-hover:-translate-y-1
-                before:absolute before:inset-0 before:z-0 before:bg-gradient-to-br before:from-white before:to-gray-50 before:opacity-0 before:transition-opacity before:duration-300
-                group-hover:before:opacity-100
-              ">
-                <div className="relative w-full h-16 sm:h-20 md:h-24 lg:h-16 xl:h-20 2xl:h-24 mb-2 lg:mb-3 z-10 transform transition-transform duration-300 group-hover:scale-105">
-                  <Image
-                    src={item.logo}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={index < 3}
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-sm sm:text-base lg:text-sm xl:text-base text-gray-800 font-bold relative z-10 transition-colors duration-300 group-hover:text-black mt-1 lg:mt-2">{item.name}</p>
+      </div>
+      
+      <div className="relative w-full">
+        {/* Hover Section - Appears above the marquee on hover */}
+        {hoveredItem && (
+          <div className="absolute bottom-full left-0 w-full z-20 bg-[#1B3D69] bg-opacity-95 flex items-start p-4 md:p-6 transition-opacity duration-300">
+            {marqueeItems.map(
+              (item) =>
+                item.logo === hoveredItem && (
+                  <div key={item.logo} className="flex flex-col md:flex-row w-full gap-4 md:gap-6">
+                    {/* Left Image Section */}
+                    <div className="w-full md:w-1/4 flex flex-col gap-4">
+                      <div className="relative w-full h-32 md:h-40">
+                        <Image
+                          src={item.hoverDetails.image1}
+                          alt={`${item.hoverDetails.title} Image`}
+                          fill
+                          className="object-contain rounded-lg shadow-lg"
+                        />
+                      </div>
+                    </div>
+                    {/* Right Text Section */}
+                    <div className="w-full md:w-3/4 text-white">
+                      <div className="flex items-center gap-2">
+                        <h2 className="text-xl md:text-2xl font-bold">{item.hoverDetails.title}</h2>
+                      </div>
+                      <p className="mt-2 text-xs md:text-sm leading-relaxed">{item.hoverDetails.description}</p>
+                      <div className="mt-3 md:mt-4">
+                        <p className="text-xs md:text-sm font-semibold uppercase">Industry:</p>
+                        <p className="text-xs md:text-sm">{item.hoverDetails.industry}</p>
+                      </div>
+                      <div className="mt-3 md:mt-4">
+                        <p className="text-xs md:text-sm font-semibold uppercase">Scope of Work:</p>
+                        <button className="mt-1 md:mt-2 px-3 md:px-4 py-1 bg-gray-700 text-white rounded-full text-xs md:text-sm font-semibold">
+                          {item.hoverDetails.scopeOfWork}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+            )}
+          </div>
+        )}
+
+        {/* Marquee Section */}
+        <div className="w-full overflow-hidden bg-white py-4">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {/* Logos repeated to create seamless loop */}
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-4 sm:gap-6 md:gap-8 mx-2 sm:mx-3 md:mx-4">
+                {marqueeItems.map((item) => (
+                  <div
+                    key={item.logo}
+                    className="relative flex-shrink-0 w-[150px] h-[100px] sm:w-[200px] sm:h-[130px] md:w-[220px] md:h-[150px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
+                    onMouseEnter={() => setHoveredItem(item.logo)}
+                    onMouseLeave={() => setHoveredItem(null)}
+                  >
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={item.logo}
+                        alt={item.hoverDetails.title}
+                        fill
+                        sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 220px"
+                        className="object-contain p-2"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        <style jsx>{`
+          @keyframes marquee {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-marquee {
+            animation: marquee 20s linear infinite;
+          }
+
+          .animate-marquee:hover {
+            animation-play-state: paused;
+          }
+
+          .bottom-full {
+            bottom: 100%;
+          }
+
+          @media (max-width: 768px) {
+            .animate-marquee {
+              animation: marquee 15s linear infinite;
+            }
+          }
+
+          @media (max-width: 640px) {
+            .animate-marquee {
+              animation: marquee 12s linear infinite;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );

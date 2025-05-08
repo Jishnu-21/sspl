@@ -1,11 +1,23 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 const CaseStudiesSection = () => {
+  const controls = useAnimation();
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, isInView]);
+
   // Sample case studies data
   const caseStudies = [
     {
@@ -48,14 +60,11 @@ const CaseStudiesSection = () => {
 
   // Create card items for the carousel
   const cardItems = caseStudies.map((study, index) => (
-    <motion.div 
+    <div 
       key={index}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-      className="flex-shrink-0 w-80 flex flex-col h-full"
+      className="flex-shrink-0 w-80 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className={`${study.color} h-48 overflow-hidden relative`}>
+      <div className={`${study.color} h-48 overflow-hidden relative rounded-t-xl`}>
         <Image 
           src={study.image} 
           alt={study.title}
@@ -63,7 +72,7 @@ const CaseStudiesSection = () => {
           className="object-cover opacity-70"
         />
       </div>
-      <div className="p-4 bg-white flex-1">
+      <div className="p-4 bg-white flex-1 rounded-b-xl">
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
         <p className="text-xs text-gray-600 mb-4">{study.description}</p>
         <div className="mt-auto">
@@ -77,69 +86,81 @@ const CaseStudiesSection = () => {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   ));
 
+  const sectionVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 100,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section className="py-24 bg-gray-200 overflow-hidden">
-      <div className="max-w-[95%] mx-auto">
-        {/* Top heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="pb-4 mb-0"
+    <motion.section 
+      ref={sectionRef}
+      initial="hidden"
+      animate={controls}
+      variants={sectionVariants}
+      className="py-24 overflow-hidden rounded-3xl my-8 shadow-xl relative"
+    >
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute inset-0  z-10"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black">Case Studies</h2>
-        </motion.div>
+          <source src="/videos/case-studies.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div className="max-w-[95%] mx-auto relative z-20">
+        {/* Top heading */}
+        <div className="pb-4 mb-0">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
+        </div>
         {/* Horizontal line that extends across the entire section */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+        <div
           className="border-b border-white w-full mb-8"
           style={{ transformOrigin: 'left' }}
         />
         <div className="flex flex-col md:flex-row">
           {/* Left side content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="md:w-1/3 mb-10 md:mb-0 pr-8 relative"
-          >
-            <p className="text-sm text-gray-800 leading-relaxed">
+          <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
+            <p className="text-sm text-white leading-relaxed">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
             </p>
             {/* Vertical line that connects with the horizontal line */}
-            <motion.div
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+            <div
               className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
               style={{ top: '-30px', transformOrigin: 'top' }}
             />
-          </motion.div>
+          </div>
           
           {/* Right side scrollable cards */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="md:w-2/3 overflow-hidden relative"
-          >
+          <div className="md:w-2/3 overflow-hidden relative">
             <div className="relative">
               <Carousel items={cardItems} />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
