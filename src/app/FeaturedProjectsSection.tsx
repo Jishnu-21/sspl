@@ -1,22 +1,54 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
-const CaseStudiesSection = () => {
+const FeaturedProjectsSection = () => {
   const controls = useAnimation();
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const isInView = useInView(sectionRef, { 
+    once: false, 
+    amount: 0.2 
+  });
   
   useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-    } else {
-      controls.start('hidden');
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      setLastScrollY(currentScrollY);
+      
+      if (isInView && isScrollingDown && !isAnimating) {
+        setIsAnimating(true);
+        controls.start('visible').then(() => {
+          setTimeout(() => {
+            setIsAnimating(false);
+          }, 500);
+        });
+      } else if (!isInView) {
+        controls.start('hidden', { duration: 0 });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check in case component is already in view on load
+    if (isInView && !isAnimating) {
+      setIsAnimating(true);
+      controls.start('visible').then(() => {
+        setTimeout(() => {
+          setIsAnimating(false);
+        }, 500);
+      });
     }
-  }, [controls, isInView]);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls, isInView, isAnimating, lastScrollY]);
 
   // Sample case studies data
   const caseStudies = [
@@ -164,4 +196,4 @@ const CaseStudiesSection = () => {
   );
 };
 
-export default CaseStudiesSection;
+export default FeaturedProjectsSection;
