@@ -1,19 +1,84 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import PageBanner from '../components/PageBanner';
 import Header from '../Header';
 import Footer from '../Footer';
 
-// Generate array of 32 images
-const galleryImages = Array.from({ length: 32 }, (_, i) => ({
-  src: `/images/gallery/${i + 1}.jpg`,
-  alt: `SSPL Gallery Image ${i + 1}`
-}));
+// Generate array of gallery images from the photo-gallery directory
+const galleryImages = [
+  // First row
+  { src: '/images/photo-gallery/g-2.jpg.jpeg', alt: 'SSPL Gallery Image 1' },
+  { src: '/images/photo-gallery/g-3.jpg.jpeg', alt: 'SSPL Gallery Image 2' },
+  { src: '/images/photo-gallery/g-4.jpg.jpeg', alt: 'SSPL Gallery Image 3' },
+  { src: '/images/photo-gallery/g-5.jpg.jpeg', alt: 'SSPL Gallery Image 4' },
+  { src: '/images/photo-gallery/g-7.jpg.jpeg', alt: 'SSPL Gallery Image 5' },
+  
+  // Second row
+  { src: '/images/photo-gallery/g-9.jpg.jpeg', alt: 'SSPL Gallery Image 6' },
+  { src: '/images/photo-gallery/g-11.jpg.jpeg', alt: 'SSPL Gallery Image 7' },
+  { src: '/images/photo-gallery/g-12.jpg.jpeg', alt: 'SSPL Gallery Image 8' },
+  { src: '/images/photo-gallery/g-13.jpg.jpeg', alt: 'SSPL Gallery Image 9' },
+  { src: '/images/photo-gallery/g-14.jpg.jpeg', alt: 'SSPL Gallery Image 10' },
+  
+  // Third row
+  { src: '/images/photo-gallery/g-15.jpg.jpeg', alt: 'SSPL Gallery Image 11' },
+  { src: '/images/photo-gallery/g-16.jpg.jpeg', alt: 'SSPL Gallery Image 12' },
+  { src: '/images/photo-gallery/g-17.jpg.jpeg', alt: 'SSPL Gallery Image 13' },
+  { src: '/images/photo-gallery/g-18.jpg.jpeg', alt: 'SSPL Gallery Image 14' },
+  { src: '/images/photo-gallery/g-19.jpg.jpeg', alt: 'SSPL Gallery Image 15' },
+  
+  // Fourth row
+  { src: '/images/photo-gallery/g-20.jpg.jpeg', alt: 'SSPL Gallery Image 16' },
+  { src: '/images/photo-gallery/g-21.jpg.jpeg', alt: 'SSPL Gallery Image 17' },
+  { src: '/images/photo-gallery/g-22.jpg.jpeg', alt: 'SSPL Gallery Image 18' },
+  { src: '/images/photo-gallery/g-23.jpg.jpeg', alt: 'SSPL Gallery Image 19' },
+  { src: '/images/photo-gallery/g-24.jpg.jpeg', alt: 'SSPL Gallery Image 20' },
+  
+  // Fifth row
+  { src: '/images/photo-gallery/g-25.jpg.jpeg', alt: 'SSPL Gallery Image 21' },
+  { src: '/images/photo-gallery/g-26.jpg.jpeg', alt: 'SSPL Gallery Image 22' },
+  { src: '/images/photo-gallery/g-27.jpg.jpeg', alt: 'SSPL Gallery Image 23' },
+  { src: '/images/photo-gallery/g-28.jpg.jpeg', alt: 'SSPL Gallery Image 24' },
+  { src: '/images/photo-gallery/g-29.jpg.jpeg', alt: 'SSPL Gallery Image 25' },
+  
+  // Sixth row
+  { src: '/images/photo-gallery/g-30.jpg.jpeg', alt: 'SSPL Gallery Image 26' },
+  { src: '/images/photo-gallery/g-31.jpg.jpeg', alt: 'SSPL Gallery Image 27' },
+  { src: '/images/photo-gallery/g-32.jpg.jpeg', alt: 'SSPL Gallery Image 28' },
+  { src: '/images/photo-gallery/g-33.jpg.jpeg', alt: 'SSPL Gallery Image 29' },
+  { src: '/images/photo-gallery/g-34.jpg.jpeg', alt: 'SSPL Gallery Image 30' },
+  
+  // Seventh row
+  { src: '/images/photo-gallery/g-35.jpg.jpeg', alt: 'SSPL Gallery Image 31' },
+  { src: '/images/photo-gallery/g-36.jpg.jpeg', alt: 'SSPL Gallery Image 32' },
+  { src: '/images/photo-gallery/g-37.jpg.jpeg', alt: 'SSPL Gallery Image 33' },
+  { src: '/images/photo-gallery/g-39.jpg.jpeg', alt: 'SSPL Gallery Image 34' },
+  { src: '/images/photo-gallery/g-40.jpg.jpeg', alt: 'SSPL Gallery Image 35' },
+  
+  // Eighth row
+  { src: '/images/photo-gallery/g-41.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-42.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-43.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-44.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-45.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+];
 
 const PhotoGallery = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  
+  const openImage = (image: { src: string; alt: string }) => {
+    setSelectedImage(image);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  };
+  
+  const closeImage = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+  
   return (
     <main className="flex flex-col bg-white min-h-screen">
       <Header />
@@ -32,7 +97,8 @@ const PhotoGallery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index % 10 * 0.05 }}
                 viewport={{ once: true, margin: "-100px" }}
-                className="group relative aspect-square overflow-hidden rounded-md shadow-sm"
+                className="group relative aspect-square overflow-hidden rounded-md shadow-sm cursor-pointer"
+                onClick={() => openImage(image)}
               >
                 <div className="relative h-full w-full bg-gray-100">
                   <Image
@@ -53,6 +119,49 @@ const PhotoGallery = () => {
       </section>
       
       <Footer />
+      
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 md:p-8"
+            onClick={closeImage}
+          >
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25 }}
+              className="relative max-w-5xl w-full bg-white rounded-lg overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                className="absolute top-4 right-4 z-10 bg-white/80 rounded-full p-2 hover:bg-white transition-colors"
+                onClick={closeImage}
+                aria-label="Close image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/9]">
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 90vw"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 };

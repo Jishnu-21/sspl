@@ -6,71 +6,151 @@ import Footer from '../Footer';
 import PageBanner from '../components/PageBanner';
 import Image from 'next/image';
 
+// Helper function to extract YouTube video ID from URL
+const extractYoutubeId = (url: string) => {
+  if (!url) return '';
+  
+  // Handle different YouTube URL formats
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  
+  return (match && match[2].length === 11) ? match[2] : '';
+};
+
 // Sample video data
 const videoData = [
   {
     id: 1,
-    title: 'Approach to Advance Analytics by Manish Seth',
-    description: 'This video covers the insights and case studies on using Advance Analytics for Managing Cyber Security and Compliance Challenges in the Telecom Industry.',
-    thumbnail: '/images/videos/thumbnail1.jpg',
-    youtubeId: 'example1'
+    title: 'Approach to Advance Analytics Nishith Seth',
+    youtubeId: 'https://www.youtube.com/watch?v=Wd5mTDaRe0Y'
   },
   {
     id: 2,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
-    description: 'This video shares the insights and case studies on using Cybersecurity and Continuous Audit Analytics for Managing Cyber Security and Compliance Challenges.',
-    thumbnail: '/images/videos/thumbnail2.jpg',
-    youtubeId: 'example2'
+    title: 'HR Analytics by Mr.Nishith Seth',
+    youtubeId: 'https://youtu.be/aoanfoqAXaw'
   },
   {
     id: 3,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
+    title: 'Cybersecurity and Continuous Audit Analytics Nishith Seth',
     description: 'An in-depth look at how Continuous Audit Analytics can transform your cybersecurity posture and ensure regulatory compliance.',
-    thumbnail: '/images/videos/thumbnail3.jpg',
-    youtubeId: 'example3'
+    youtubeId: 'https://youtu.be/pk1JJbMAG7g'
   },
   {
     id: 4,
-    title: 'Approach to Advance Analytics by Manish Seth',
-    description: 'This video covers the insights and case studies on using Advance Analytics for Managing Cyber Security and Compliance Challenges in the Telecom Industry.',
-    thumbnail: '/images/videos/thumbnail4.jpg',
-    youtubeId: 'example4'
+    title: 'ASSOCHAM International Conference 7 May 2021 Presentation by Mr. Nishith Seth',
+    youtubeId: 'https://youtu.be/tmKpWjcs9PM'
   },
   {
     id: 5,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
-    description: 'This video shares the insights and case studies on using Cybersecurity and Continuous Audit Analytics for Managing Cyber Security and Compliance Challenges.',
-    thumbnail: '/images/videos/thumbnail5.jpg',
-    youtubeId: 'example5'
+    title: 'Panel Discussion on moving from traditional to tech based practice by Mr. Nishith Seth',
+    description: 'This is a Panel Discussion on transformation of Traditional Practice to Technology driven, using Advance Analytics, thoughts exchanged by Mr. Nishith Seth, MD, SSPL.',
+    youtubeId: 'https://youtu.be/wcpDVJvpKeU'
   },
   {
     id: 6,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
-    description: 'An in-depth look at how Continuous Audit Analytics can transform your cybersecurity posture and ensure regulatory compliance.',
-    thumbnail: '/images/videos/thumbnail6.jpg',
-    youtubeId: 'example6'
+    title: 'Simplify Your Fuzzy Duplicates Testing',
+    description: 'Using advance analytics capabilities of Analyzer Tool of Arbutus Software, in a simplest form to manage a complex analytics issue of Fuzzy Duplicate. You shall hear and see the demo from the best in the Analytics Industry, Mr. Michael Kano.',
+    youtubeId: 'https://youtu.be/Q7xP7vE3MsY'
   },
   {
     id: 7,
-    title: 'Approach to Advance Analytics by Manish Seth',
-    description: 'This video covers the insights and case studies on using Advance Analytics for Managing Cyber Security and Compliance Challenges in the Telecom Industry.',
-    thumbnail: '/images/videos/thumbnail7.jpg',
-    youtubeId: 'example7'
+    title: 'SSPL Arabic ChatBOT Solution',
+    description: 'SSPL has developed a Arabic Language ChatBOT, its a demo of the same.',
+    youtubeId: 'https://youtu.be/plVs10a35b8'
   },
   {
     id: 8,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
-    description: 'This video shares the insights and case studies on using Cybersecurity and Continuous Audit Analytics for Managing Cyber Security and Compliance Challenges.',
-    thumbnail: '/images/videos/thumbnail8.jpg',
-    youtubeId: 'example8'
+    title: 'SSPL Document RPA Solution',
+    description: 'SSPL has launched it\'s Document RPA to generate the output with required information from the documents for the user to analyze the document much easily and going through the details is not required, its a demo of the same',
+    youtubeId: 'https://youtu.be/2kt8U339f3A'
   },
   {
     id: 9,
-    title: 'Cybersecurity and Continuous Audit Analytics by Mr. Manish Seth',
-    description: 'An in-depth look at how Continuous Audit Analytics can transform your cybersecurity posture and ensure regulatory compliance.',
-    thumbnail: '/images/videos/thumbnail9.jpg',
-    youtubeId: 'example9'
-  }
+    title: 'What SSPL Does',
+    description: 'This videos introduces to the various Industrial Sectors served by SSPL Solutions and Services.',
+    youtubeId: 'https://youtu.be/XFoWnIpHLbI'
+  },
+  {
+    id: 10,
+    title: 'Fraud Ethics & Morals, Mr P R Ramesh, Chairman, Deloitte, India',
+    description: 'Mr. P. R. Ramesh, has shared a very practical approach to the sensitive topic of Fraud and Ethics. With his vast exposure, its a worth listening presentation, which shall enrich you on the said subject matter.',
+    youtubeId: 'https://youtu.be/1sxhbXn92Q8'
+  },
+  {
+    id: 11,
+    title: 'Confused & Repetition not fit for Fraud Detection by Uday Khanna, President, BCCI',
+    description: 'Presentation by Mr. Uday Khanna, President of Bombay Chamber of Commerce & Industry, on Confused & Repetition & doesnt seem an appropriate fit for the fraud detection. His contents are from his vast experience from the Industry.',
+    youtubeId: 'https://youtu.be/e0SnUF6X-ts'
+  },
+  {
+    id: 12,
+    title: 'Soft Fraud in Life Insurance by Dr. P. Nandagopal, Managing Director, India First Life Insurance',
+    description: 'Practical issues faced by the Insurance Sector in managing Fraud. Its worth listening as it has lots of practical exposure and information.',
+    youtubeId: 'https://youtu.be/_XyWrpZQgKg'
+  },
+  {
+    id: 13,
+    title: 'SSPL: Analyzer Demo by Nishith Seth',
+    description: 'This is a Introductory Level Demo of the Analyzer Tool by Mr. Nishith Seth. It explains the most commonly used features and important capabilities of the Tool.',
+    youtubeId: 'https://youtu.be/tTYacqLVZFw'
+  },
+  {
+    id: 14,
+    title: 'Computer Forensic & Cyber Crimes by Mr. Nandkumar Saravade.',
+    youtubeId: 'https://youtu.be/UR8K1WCGMjU'
+  },
+  {
+    id: 15,
+    title: 'Introductory Demo of Analyzer Tool by Nishith Seth',
+    description: 'The video demonstrates the basic features and unique technical enhancements of Analyzer Tool by Nishith Seth.',
+    youtubeId: 'https://youtu.be/9H2nSz7492w'
+  },
+  {
+    id: 16,
+    title: 'Managing Risk & Fraud from IA Perspective by Mr. Kallol Kundu',
+    description: 'The video explains the Fraud Management from the perspective of an Internal Auditor. Its being explained with examples by Mr. Kallol Kundu, Group Internal Auditor, EIH Limited.',
+    youtubeId: 'https://youtu.be/NHOn1QRYOZo'
+  },
+  {
+    id: 17,
+    title: 'Risk & Fraud Management by Mr. Amit Bansal, Partner, Deloitte',
+    youtubeId: 'https://youtu.be/prqBqiPAtqQ'
+  },
+  {
+    id: 18,
+    title: 'Why Current Fraud Management Framework Fails by Mr. V. Swaminathan and Mr. Burzin Dubash',
+    description: 'Panel Discussion to understand the reasons why current systems, framework is failing to control and alert frauds in timely manner.',
+    youtubeId: 'https://youtu.be/dyTiiRq8vA8'
+  },
+  {
+    id: 19,
+    title: 'Panel Discussion on Predictive Analytics by Mr. V. Swaminathan.',
+    description: 'Panel Discussion on the importance of Predictive Analytics to manage, improve and govern business better.',
+    youtubeId: 'https://youtu.be/W-h1MXOjAr4'
+  },
+  {
+    id: 20,
+    title: 'Panel Discussion on Corporate Framework to Manage Frauds by Mr. Burzin Dubash.',
+    description: 'Panel Discussion on Corporate Frameworks to Manage Frauds, they trends and Corporate response.',
+    youtubeId: 'https://youtu.be/2hZpOLwHYHI'
+  },
+  {
+    id: 21,
+    title: 'Panel Discussion on Financial Cyber Crimes by Mr. V. Swaminathan.',
+    description: 'Panel Discussion on how can Technology help to manage, control and monitor prospective financial cyber crimes. Mr. Swaminathan shared his case study.',
+    youtubeId: 'https://youtu.be/ujvBBV5m3tk'
+  },
+  {
+    id: 22,
+    title: 'Panel Discussion on Cyber Criminology and Forensic by Mr. Alok Gupta',
+    description: 'Panel Discussion on the latest trends on Cyber Crime and Forensic challenges faced by the Corporate and Public at large.',
+    youtubeId: 'https://youtu.be/PpL3adU0YaM'
+  },
+  {
+    id: 23,
+    title: 'Training on Big Data Analytics by Mr. Nishith Seth.',
+    youtubeId: 'https://youtu.be/MHNC4LXcdCM'
+  },
 ];
 
 const VideoGallery = () => {
@@ -82,7 +162,8 @@ const VideoGallery = () => {
   };
   
   const openVideo = (youtubeId: string) => {
-    setSelectedVideo(youtubeId);
+    const videoId = extractYoutubeId(youtubeId);
+    setSelectedVideo(videoId);
     document.body.style.overflow = 'hidden';
   };
   
@@ -103,38 +184,46 @@ const VideoGallery = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {videoData.slice(0, visibleVideos).map((video) => (
-                <div key={video.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="relative aspect-video cursor-pointer group" onClick={() => openVideo(video.youtubeId)}>
-                    <Image 
-                      src={video.thumbnail} 
-                      alt={video.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
+              {videoData.slice(0, visibleVideos).map((video) => {
+                const videoId = extractYoutubeId(video.youtubeId);
+                return (
+                  <div key={video.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div className="relative aspect-video cursor-pointer group" onClick={() => openVideo(video.youtubeId)}>
+                      <Image 
+                        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                        alt={video.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        onError={(e) => {
+                          // Fallback to medium quality thumbnail if high quality is not available
+                          const target = e.target as HTMLImageElement;
+                          target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
                       </div>
+                      <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     </div>
-                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{video.title}</h3>
+                      <p className="text-sm text-gray-600 line-clamp-3">{video.description}</p>
+                    </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{video.title}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-3">{video.description}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             
             {visibleVideos < videoData.length && (
               <div className="flex justify-center mt-12">
                 <button 
                   onClick={loadMoreVideos}
-                  className="px-6 py-3 bg-white text-gray-800 border border-gray-300 rounded-md hover:scale-105 transition-transform duration-300 font-medium"
+                  className="px-6 py-3 bg-white cursor-pointer text-gray-800 border border-gray-300 rounded-md hover:scale-105 transition-transform duration-300 font-medium"
                 >
                   Load More
                 </button>
