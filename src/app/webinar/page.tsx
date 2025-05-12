@@ -1,0 +1,39 @@
+import React from 'react'
+import Header from '../Header'
+import Footer from '../Footer'
+import PageBanner from '../components/PageBanner'
+
+const Webinar = () => {
+  return (
+    <>
+    <main className="flex flex-col bg-white min-h-screen">
+    <Header />
+    <PageBanner
+        backgroundImage="/images/about/banner.png"
+        title="Webinar"
+        subtitle="Series of Webinars from the Industry Experts"
+      />
+
+<section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+              <div className="mb-2">
+                <div className="max-w-4xl mx-auto text-center mb-2">
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                  If you are not using data analysis technology for your business management you are still hibernating in the dark ages and may be missing out on great opportunities!
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                  SSPL has started the series of Webinars in the interest of the Professionals and Industry. This is to bring the best available information about the technology in Big Data Analytics and its usability. Webinars are FREE OF COST and you may enroll by filling the registration form.
+                  </p>
+                </div>
+                </div>
+      </section>
+
+      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
+
+
+    <Footer/>
+    </main>
+    </>
+  )
+}
+
+export default Webinar
