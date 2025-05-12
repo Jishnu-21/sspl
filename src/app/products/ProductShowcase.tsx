@@ -1,5 +1,5 @@
-'use client'
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AssureBIComponent from './AssureBIComponent';
 import ArbutusComponent from './ArbutusComponent';
@@ -113,15 +113,28 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
   // State to track the selected product
   const [selectedProduct, setSelectedProduct] = useState(products[0].id);
 
+  // Refs to store references to title/logo elements
+  const titleRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   // Get the currently selected product data
   const currentProduct = products.find(product => product.id === selectedProduct) || products[0];
-  
+
   // Notify parent component when selected product changes
   useEffect(() => {
     if (onProductChange) {
       onProductChange(selectedProduct);
     }
   }, [selectedProduct, onProductChange]);
+
+  // Ensure the indicator is positioned correctly on mount
+  useEffect(() => {
+    // Force a re-render or layout update if needed
+    const selectedIndex = products.findIndex(product => product.id === selectedProduct);
+    const titleElement = titleRefs.current[selectedIndex];
+    if (titleElement) {
+      titleElement.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+  }, []);
 
   return (
     <section className="py-8 sm:py-12 md:py-16 bg-white">
@@ -132,13 +145,14 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
             {/* Horizontal line with selection indicator */}
             <div className="relative mb-10">
               <div className="flex justify-between items-end w-full px-0">
-                {products.map((product) => (
+                {products.map((product, index) => (
                   <motion.div
                     key={product.id}
                     className={`cursor-pointer relative px-2 ${selectedProduct === product.id ? 'opacity-100' : 'opacity-70'}`}
                     onClick={() => setSelectedProduct(product.id)}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
+                    ref={(el) => (titleRefs.current[index] = el)} // Assign ref to each title
                   >
                     {/* Product logo */}
                     <div className="h-12 sm:h-14 md:h-16 flex items-center mb-3">
@@ -176,31 +190,32 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                   </motion.div>
                 ))}
               </div>
-              
+
               {/* Horizontal line with selection indicator */}
               <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 relative">
                 {/* Selection indicator on the horizontal line */}
                 {products.map((product, index) => {
-                  // Calculate positions for each title
-                  const totalProducts = products.length;
-                  const segmentWidth = 100 / totalProducts;
-                  const position = segmentWidth * index + (segmentWidth / 2);
-                  
-                  // Create a proportional width indicator for each product
+                  const titleElement = titleRefs.current[index];
+                  if (!titleElement) return null;
+
+                  // Get the width and position of the title element
+                  const { offsetWidth, offsetLeft } = titleElement;
+
+                  // Position style based on the title element's dimensions
                   const positionStyle = {
-                    left: `${position}%`,
-                    width: `${segmentWidth * 0.9}%`, // Make width 90% of the segment width
-                    maxWidth: '120px', // Set a maximum width for larger screens
-                    minWidth: '60px',  // Set a minimum width for smaller screens
-                    transform: 'translateX(-50%)'
+                    width: `${offsetWidth * 0.9}px`, // 90% of the title width
+                    left: `${offsetLeft + offsetWidth * 0.05}px`, // Center the indicator
                   };
-                  
+
                   return selectedProduct === product.id && (
-                    <motion.div 
+                    <motion.div
                       key={`indicator-${product.id}`}
                       className="absolute h-[4px] bg-black top-[-2px]"
                       style={positionStyle}
                       layoutId="lineIndicator"
+                      initial={{ opacity: 0, scaleX: 0 }}
+                      animate={{ opacity: 1, scaleX: 1 }}
+                      exit={{ opacity: 0, scaleX: 0 }}
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     />
                   );
@@ -209,7 +224,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
             </div>
           </div>
         </div>
-        
+
         {/* Product content */}
         <div className="pl-1 md:pl-4 lg:pl-6">
           <AnimatePresence mode="wait">
@@ -222,22 +237,21 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
               className="w-full"
             >
               {currentProduct.id === 'assureBI' && <AssureBIComponent />}
-              
               {currentProduct.id === 'arbutus' && <ArbutusComponent />}
-              
               {currentProduct.id === 'enInvoice' && <EnInvoiceComponent />}
-              
               {currentProduct.id === 'truOI' && <TruOIComponent />}
-              
               {currentProduct.id === 'barnowl' && <BarnOwlComponent />}
-              
-              {currentProduct.id !== 'assureBI' && currentProduct.id !== 'arbutus' && currentProduct.id !== 'enInvoice' && currentProduct.id !== 'barnowl' && currentProduct.id !== 'truOI' && (
-                <GenericProductComponent 
-                  title={currentProduct.title}
-                  description={currentProduct.content.description}
-                  features={currentProduct.content.features}
-                />
-              )}
+              {currentProduct.id !== 'assureBI' &&
+                currentProduct.id !== 'arbutus' &&
+                currentProduct.id !== 'enInvoice' &&
+                currentProduct.id !== 'barnowl' &&
+                currentProduct.id !== 'truOI' && (
+                  <GenericProductComponent
+                    title={currentProduct.title}
+                    description={currentProduct.content.description}
+                    features={currentProduct.content.features}
+                  />
+                )}
             </motion.div>
           </AnimatePresence>
         </div>
