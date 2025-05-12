@@ -112,6 +112,9 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
 
   // State to track the selected product
   const [selectedProduct, setSelectedProduct] = useState(products[0].id);
+  
+  // State to track if component is mounted
+  const [isMounted, setIsMounted] = useState(false);
 
   // Refs to store references to title/logo elements
   const titleRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -126,9 +129,13 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
     }
   }, [selectedProduct, onProductChange]);
 
+  // Set mounted state after initial render
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Ensure the indicator is positioned correctly on mount
   useEffect(() => {
-    // Force a re-render or layout update if needed
     const selectedIndex = products.findIndex(product => product.id === selectedProduct);
     const titleElement = titleRefs.current[selectedIndex];
     if (titleElement) {
@@ -207,13 +214,13 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                     left: `${offsetLeft + offsetWidth * 0.05}px`, // Center the indicator
                   };
 
-                  return selectedProduct === product.id && (
+                  return (selectedProduct === product.id || (!isMounted && index === 0)) && (
                     <motion.div
                       key={`indicator-${product.id}`}
                       className="absolute h-[4px] bg-black top-[-2px]"
                       style={positionStyle}
                       layoutId="lineIndicator"
-                      initial={{ opacity: 0, scaleX: 0 }}
+                      initial={{ opacity: 1, scaleX: 1 }}
                       animate={{ opacity: 1, scaleX: 1 }}
                       exit={{ opacity: 0, scaleX: 0 }}
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
