@@ -117,7 +117,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
   const [isMounted, setIsMounted] = useState(false);
 
   // Refs to store references to title/logo elements
-  const titleRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const titleRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   // Get the currently selected product data
   const currentProduct = products.find(product => product.id === selectedProduct) || products[0];
@@ -159,7 +159,10 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                     onClick={() => setSelectedProduct(product.id)}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    ref={(el) => (titleRefs.current[index] = el)} // Assign ref to each title
+                    ref={el => {
+                      // Properly type the ref callback to avoid TypeScript errors
+                      titleRefs.current[index] = el;
+                    }}
                   >
                     {/* Product logo */}
                     <div className="h-12 sm:h-14 md:h-16 flex items-center mb-3">
