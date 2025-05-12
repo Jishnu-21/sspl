@@ -8,7 +8,7 @@ import ProductShowcase from './ProductShowcase'
 const Products = () => {
   return (
     <>
-          <main className="flex flex-col bg-white min-h-screen">
+      <main className="flex flex-col bg-white min-h-screen">
       <Header/>
       <PageBanner
         backgroundImage="/images/about/banner.png"

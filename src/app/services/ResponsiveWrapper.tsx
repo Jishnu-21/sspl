@@ -10,9 +10,15 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
     
     // Add responsive styles
     style.textContent = `
-      /* Base responsive adjustments */
+      /* Fix for PageBanner positioning */
+      #page-banner, .page-banner {
+        margin-top: 105px !important;
+        z-index: 1;
+      }
+      
+      /* Base responsive adjustments - exclude page banner elements */
       @media (max-width: 768px) {
-        h1 {
+        h1:not(#page-banner h1):not(.page-banner h1) {
           font-size: 2rem !important;
           line-height: 1.2 !important;
           word-wrap: break-word;
@@ -25,7 +31,7 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
           white-space: normal !important;
         }
         
-        p {
+        p:not(#page-banner p):not(.page-banner p) {
           font-size: 0.95rem;
           line-height: 1.6;
         }
@@ -39,7 +45,7 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
 
       /* Extra small devices */
       @media (max-width: 480px) {
-        h1 {
+        h1:not(#page-banner h1):not(.page-banner h1) {
           font-size: 1.75rem !important;
           margin-bottom: 1rem !important;
           padding-left: 0.5rem;
@@ -51,7 +57,7 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
           margin-bottom: 1rem !important;
         }
         
-        section {
+        section:not(#page-banner):not(.page-banner) {
           padding-top: 2rem !important;
           padding-bottom: 2rem !important;
         }
