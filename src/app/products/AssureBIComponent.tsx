@@ -3,6 +3,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AssureBIComponent = () => {
+  const brochures = [
+    {
+      id: 1,
+      name: 'assureBI',
+      icon: '📊',
+      file: '/brochures/assurebi-brochure.pdf'
+    },
+    {
+      id: 2,
+      name: 'CM Dashboard',
+      icon: '📊',
+      file: '/brochures/cm-dashboard-brochure.pdf'
+    },
+    {
+      id: 3,
+      name: 'Crime Dashboard',
+      icon: '📊',
+      file: '/brochures/crime-dashboard-brochure.pdf'
+    }
+  ];
+
+  const handleDownload = (file: string, name: string) => {
+    // Create an anchor element and trigger download
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = `${name.toLowerCase().replace(' ', '-')}-brochure.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
       <p className="text-gray-800 mb-4">
@@ -14,6 +45,36 @@ const AssureBIComponent = () => {
       <p className="text-gray-800 mb-6">
         assureBI runs on the cloud as well as on your enterprise servers.
       </p>
+      
+      {/* Download Brochure section */}
+      <div className="mt-8 mb-12 w-full">
+        <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Download Brochure</h3>
+        <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
+        
+        <div className="flex flex-wrap gap-6 md:gap-8 lg:gap-10">
+          {brochures.map((brochure) => (
+            <motion.div
+              key={brochure.id}
+              className="relative group cursor-pointer"
+              whileHover={{ y: -5 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              onClick={() => handleDownload(brochure.file, brochure.name)}
+            >
+              <div className="bg-white rounded-sm shadow-lg p-4 flex items-center w-[180px] h-[60px] relative overflow-hidden">
+                {/* Shadow effect at the bottom */}
+                <div className="absolute bottom-0 left-0 w-full h-[15px] bg-gradient-to-t from-gray-200 to-transparent"></div>
+                
+                <div className="flex items-center">
+                  <div className="text-red-500 text-xl mr-2">
+                    {brochure.icon}
+                  </div>
+                  <span className="text-sm font-medium text-gray-800">{brochure.name}</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
       
       {/* Why assureBI makes more sense section */}
       <div className="mt-8 mb-12 w-full">

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AssureBIComponent from './AssureBIComponent';
 import ArbutusComponent from './ArbutusComponent';
@@ -29,7 +29,11 @@ interface Product {
   content: ProductContent;
 }
 
-const ProductShowcase = () => {
+interface ProductShowcaseProps {
+  onProductChange?: (productId: string) => void;
+}
+
+const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) => {
   // Products data with logos and content
   const products = [
     {
@@ -111,59 +115,64 @@ const ProductShowcase = () => {
 
   // Get the currently selected product data
   const currentProduct = products.find(product => product.id === selectedProduct) || products[0];
+  
+  // Notify parent component when selected product changes
+  useEffect(() => {
+    if (onProductChange) {
+      onProductChange(selectedProduct);
+    }
+  }, [selectedProduct, onProductChange]);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         {/* Product logos with full width spread */}
-        <div className="pl-1 md:pl-4 lg:pl-6 mb-2">
-          <div className="w-full relative">
+        <div className="pl-1 md:pl-4 lg:pl-6 mb-2 overflow-x-auto">
+          <div className="w-full relative min-w-[768px] md:min-w-0">
             {/* Horizontal line with selection indicator */}
             <div className="relative mb-10">
               <div className="flex justify-between items-end w-full px-0">
                 {products.map((product) => (
                   <motion.div
                     key={product.id}
-                    className={`cursor-pointer relative ${selectedProduct === product.id ? 'opacity-100' : 'opacity-70'}`}
+                    className={`cursor-pointer relative px-2 ${selectedProduct === product.id ? 'opacity-100' : 'opacity-70'}`}
                     onClick={() => setSelectedProduct(product.id)}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                   >
                     {/* Product logo */}
-                    <div className="h-16 flex items-center mb-3">
+                    <div className="h-12 sm:h-14 md:h-16 flex items-center mb-3">
                       {product.id === 'assureBI' && (
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-bold text-3xl">assure</span>
-                          <span className="text-green-600 font-bold italic text-3xl">BI</span>
+                          <span className="text-blue-600 font-bold text-xl sm:text-2xl md:text-3xl">assure</span>
+                          <span className="text-green-600 font-bold italic text-xl sm:text-2xl md:text-3xl">BI</span>
                         </div>
                       )}
                       {product.id === 'arbutus' && (
                         <div className="flex items-center">
-                          <div className="w-7 h-7 rounded-full bg-orange-500 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-xl">ARBUTUS</span>
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-orange-500 mr-2"></div>
+                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">ARBUTUS</span>
                         </div>
                       )}
                       {product.id === 'truOI' && (
                         <div className="flex items-center">
-                          <span className="text-blue-700 font-bold text-3xl">tru</span>
-                          <span className="text-blue-400 font-bold text-3xl">OI</span>
+                          <span className="text-blue-700 font-bold text-xl sm:text-2xl md:text-3xl">tru</span>
+                          <span className="text-blue-400 font-bold text-xl sm:text-2xl md:text-3xl">OI</span>
                         </div>
                       )}
                       {product.id === 'enInvoice' && (
                         <div className="flex items-center">
-                          <div className="w-7 h-7 rounded-full bg-green-500 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-xl">en<span className="text-green-500">Invoice</span></span>
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-green-500 mr-2"></div>
+                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">en<span className="text-green-500">Invoice</span></span>
                         </div>
                       )}
                       {product.id === 'barnowl' && (
                         <div className="flex items-center">
-                          <div className="w-7 h-7 rounded-full bg-gray-400 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-xl">BARNOWL</span>
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-gray-400 mr-2"></div>
+                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">BARNOWL</span>
                         </div>
                       )}
                     </div>
-                    
-                    {/* Removed selection indicator from here */}
                   </motion.div>
                 ))}
               </div>
@@ -173,32 +182,18 @@ const ProductShowcase = () => {
                 {/* Selection indicator on the horizontal line */}
                 {products.map((product, index) => {
                   // Calculate positions for each title
-                  let positionStyle = {};
+                  const totalProducts = products.length;
+                  const segmentWidth = 100 / totalProducts;
+                  const position = segmentWidth * index + (segmentWidth / 2);
                   
-                  // First title - align to left edge
-                  if (index === 0) {
-                    positionStyle = {
-                      left: '0%',
-                      width: `${100 / (products.length * 1.5)}%`
-                    };
-                  }
-                  // Last title - align to right edge
-                  else if (index === products.length - 1) {
-                    positionStyle = {
-                      right: '0%',
-                      width: `${100 / (products.length * 1.5)}%`
-                    };
-                  }
-                  // Middle titles - custom positioning
-                  else {
-                    // For 5 products, positions would be at 0%, 25%, 50%, 75%, 100%
-                    const positions = [0, 25, 50, 75, 100];
-                    positionStyle = {
-                      left: `${positions[index]}%`,
-                      width: `${100 / (products.length * 1.5)}%`,
-                      transform: `translateX(-50%)`
-                    };
-                  }
+                  // Create a proportional width indicator for each product
+                  const positionStyle = {
+                    left: `${position}%`,
+                    width: `${segmentWidth * 0.9}%`, // Make width 90% of the segment width
+                    maxWidth: '120px', // Set a maximum width for larger screens
+                    minWidth: '60px',  // Set a minimum width for smaller screens
+                    transform: 'translateX(-50%)'
+                  };
                   
                   return selectedProduct === product.id && (
                     <motion.div 

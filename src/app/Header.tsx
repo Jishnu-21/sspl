@@ -302,6 +302,14 @@ const Header = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
+          
+          {/* Logo in mobile menu */}
+          <div className="flex justify-center mb-6 mt-[-10px]">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <Image src="/logo.png" alt="SSPL Logo" width={160} height={55} />
+            </Link>
+          </div>
+          
           <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</Link>
           <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</Link>
           <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</Link>

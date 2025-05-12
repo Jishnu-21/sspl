@@ -3,7 +3,6 @@ import Header from '../Header'
 import Footer from '../Footer'
 import PageBanner from '../components/PageBanner'
 import ScheduleDemo from './ScheduleDemo'
-import DownloadBrochure from './DownloadBrochure'
 import ProductShowcase from './ProductShowcase'
 
 const Products = () => {
@@ -15,7 +14,6 @@ const Products = () => {
         backgroundImage="/images/about/banner.png"
         title="Products"
       />
-      <DownloadBrochure />
       <ProductShowcase />
       <ScheduleDemo />
       <Footer/>

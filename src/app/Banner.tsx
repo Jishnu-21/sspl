@@ -19,7 +19,7 @@ const Banner = () => {
       </div>
       
       {/* Banner Content Section */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-[500px] sm:min-h-[550px] lg:min-h-screen flex items-center">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
           {/* Banner content can go here */}
         </div>

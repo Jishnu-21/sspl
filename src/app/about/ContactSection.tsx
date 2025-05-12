@@ -51,7 +51,7 @@ const ContactSection = () => {
           </button>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-1 gap-8 max-w-6xl mx-auto relative">
           {/* Left Column - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

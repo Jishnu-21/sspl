@@ -17,23 +17,23 @@ const cards = [
 
 const AboutContent = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-8 sm:py-10 md:py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-semibold text-black text-center mb-14 text-comfortaa">Who We Are</h2>
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-6 sm:mb-7 md:mb-8 text-comfortaa">Who We Are</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-5 md:gap-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
               className="group"
             >
-              <div className="h-[280px] p-5 rounded-lg border border-[#1B3D69] bg-white 
-                transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <p className="text-gray-700 text-[12px] leading-[1.6] font-light">
+              <div className="h-auto sm:h-[280px] md:h-[300px] p-4 rounded-lg border border-[#1B3D69] bg-white 
+                transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden">
+                <p className="text-gray-700 text-[14px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[1.4] md:leading-[1.5] font-light">
                   {card.text}
                 </p>
               </div>

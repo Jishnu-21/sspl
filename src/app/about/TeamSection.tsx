@@ -23,21 +23,23 @@ interface TeamSectionProps {
 
 const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-semibold text-black text-center mb-14 text-comfortaa">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black text-center mb-8 sm:mb-10 md:mb-14 text-comfortaa">
           {title}
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
           {members.map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative h-[520px] overflow-hidden transition-all duration-500 hover:h-[560px] hover:-translate-y-5 hover:z-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)] bg-gray-100"
+              viewport={{ once: true, margin: "-50px" }}
+              className="group relative h-[400px] sm:h-[450px] md:h-[480px] lg:h-[520px] overflow-hidden transition-all duration-500 
+                hover:h-[440px] sm:hover:h-[490px] md:hover:h-[520px] lg:hover:h-[560px] 
+                hover:-translate-y-5 hover:z-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)] bg-gray-100"
             >
               <div className="relative h-full w-full">
                 {/* Image */}
@@ -47,7 +49,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                     alt={member.name}
                     fill
                     className="object-cover w-full h-full"
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     priority
                   />
                 </div>
@@ -55,13 +57,13 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                 {/* Overlay with gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80
                   opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 text-white
+                  <div className="absolute inset-0 flex flex-col items-center justify-end pb-6 sm:pb-7 md:pb-8 text-white
                     transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
-                    <p className="font-medium text-lg text-center">{member.name}</p>
-                    <p className="text-sm text-gray-100 mb-3 text-center">{member.designation}</p>
+                    <p className="font-medium text-base sm:text-lg text-center">{member.name}</p>
+                    <p className="text-xs sm:text-sm text-gray-100 mb-2 sm:mb-3 text-center">{member.designation}</p>
                     
                     {/* Social Icons */}
-                    <div className="flex gap-4">
+                    <div className="flex gap-3 sm:gap-4">
                       {member.socials.linkedin && (
                         <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer"
                           className="text-white hover:text-blue-300 transition-colors">

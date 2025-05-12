@@ -13,12 +13,13 @@ const Footer = ({ className = '' }: FooterProps) => {
   
   return (
     <footer className={`bg-white border-t border-gray-200 ${className}`}>
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - Logo and company info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src='/logo.png'></img>
+              <img src='/logo.png' alt="SSPL Logo" className="h-10 sm:h-12" />
             </div>
             <p className="text-gray-500 text-sm">
               Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
@@ -43,8 +44,8 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
 
           {/* Column 2 - Product */}
-          <div>
-            <h3 className="font-medium text-gray-900 mb-4">Product</h3>
+          <div className="mt-2 sm:mt-0">
+            <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Product</h3>
             <ul className="space-y-2">
               <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Features</Link></li>
               <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Pricing</Link></li>
@@ -55,8 +56,8 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
 
           {/* Column 3 - Company */}
-          <div>
-            <h3 className="font-medium text-gray-900 mb-4">Company</h3>
+          <div className="mt-2 sm:mt-0">
+            <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">About</Link></li>
               <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Contact us</Link></li>
@@ -67,19 +68,10 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
 
           {/* Column 4 - Support and Contact */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:col-span-1">
-            <div>
-              <h3 className="font-medium text-gray-900 mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Getting started</Link></li>
-                <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Help center</Link></li>
-                <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Server status</Link></li>
-                <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Report a bug</Link></li>
-                <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Chat support</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-medium text-gray-900 mb-4">Contact us</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8 sm:gap-4 lg:gap-8">
+
+            <div className="mt-2 sm:mt-0">
+              <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Contact us</h3>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <IconMail size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
@@ -99,12 +91,12 @@ const Footer = ({ className = '' }: FooterProps) => {
         </div>
 
         {/* Bottom copyright section */}
-        <div className="border-t border-gray-200 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">Copyright © {currentYear} SSPL. All Rights Reserved</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/terms" className="text-gray-500 hover:text-indigo-600 text-sm">Terms and Conditions</Link>
+        <div className="border-t border-gray-200 mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-gray-500 text-xs sm:text-sm">Copyright {currentYear} SSPL. All Rights Reserved</p>
+          <div className="flex space-x-2 sm:space-x-4 mt-3 sm:mt-0">
+            <Link href="/terms" className="text-gray-500 hover:text-indigo-600 text-xs sm:text-sm">Terms and Conditions</Link>
             <span className="text-gray-300">|</span>
-            <Link href="/privacy" className="text-gray-500 hover:text-indigo-600 text-sm">Privacy Policy</Link>
+            <Link href="/privacy" className="text-gray-500 hover:text-indigo-600 text-xs sm:text-sm">Privacy Policy</Link>
           </div>
         </div>
       </div>
