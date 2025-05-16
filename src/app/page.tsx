@@ -12,6 +12,7 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <div className="flex flex-col">
+          <main className="flex flex-col bg-white min-h-screen">
       <Header/>
       <main className="pt-0">
         <Banner/>
@@ -27,6 +28,7 @@ export default function Home() {
         </div>
       </main>
       <Footer className="relative bg-white w-full"/>
+    </main>
     </div>
   );
 }

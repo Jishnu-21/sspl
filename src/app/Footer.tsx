@@ -22,7 +22,7 @@ const Footer = ({ className = '' }: FooterProps) => {
               <img src='/logo.png' alt="SSPL Logo" className="h-10 sm:h-12" />
             </div>
             <p className="text-gray-500 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+            No matter what questions you have, we're here to work with you on your terms.
             </p>
             <div className="flex space-x-3">
               <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
@@ -47,11 +47,11 @@ const Footer = ({ className = '' }: FooterProps) => {
           <div className="mt-2 sm:mt-0">
             <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Features</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Pricing</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Case studies</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Reviews</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Updates</Link></li>
+              <li><Link href="/services" className="text-gray-500 hover:text-indigo-600 text-sm">Services</Link></li>
+              <li><Link href="/products" className="text-gray-500 hover:text-indigo-600 text-sm">Products</Link></li>
+              <li><Link href="/case-studies" className="text-gray-500 hover:text-indigo-600 text-sm">Case Studies</Link></li>
+              <li><Link href="/events" className="text-gray-500 hover:text-indigo-600 text-sm">Events</Link></li>
+              <li><Link href="/training" className="text-gray-500 hover:text-indigo-600 text-sm">Training</Link></li>
             </ul>
           </div>
 
@@ -59,11 +59,11 @@ const Footer = ({ className = '' }: FooterProps) => {
           <div className="mt-2 sm:mt-0">
             <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">About</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Contact us</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Careers</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Culture</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Blog</Link></li>
+              <li><Link href="/about" className="text-gray-500 hover:text-indigo-600 text-sm">About</Link></li>
+              <li><Link href="/contact" className="text-gray-500 hover:text-indigo-600 text-sm">Contact us</Link></li>
+              <li><Link href="/testimonials" className="text-gray-500 hover:text-indigo-600 text-sm">Testimonials</Link></li>
+              <li><Link href="/webinars" className="text-gray-500 hover:text-indigo-600 text-sm">Webinars</Link></li>
+              <li><Link href="/partner" className="text-gray-500 hover:text-indigo-600 text-sm">Become a Partner</Link></li>
             </ul>
           </div>
 
@@ -75,15 +75,15 @@ const Footer = ({ className = '' }: FooterProps) => {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <IconMail size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">contact@company.com</span>
+                  <span className="text-gray-500 text-sm">info@sspl.net.com</span>
                 </li>
                 <li className="flex items-start">
                   <IconPhone size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">(414) 687 - 5892</span>
+                  <span className="text-gray-500 text-sm">(+91) 11-23765968</span>
                 </li>
                 <li className="flex items-start">
                   <IconMapPin size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">764 McAllister St<br />San Francisco, 94102</span>
+                  <span className="text-gray-500 text-sm">M-91 Connaught Circus<br />New Delhi, 110001</span>
                 </li>
               </ul>
             </div>
