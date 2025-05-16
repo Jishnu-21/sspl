@@ -32,7 +32,7 @@ const CaseStudy = () => {
         </motion.div>
         <CaseStudiesSection/>
         <CTASection/>
-        <ContactSection className="mb-6" />
+        <ContactSection />
         <Footer />
       </main>
     </>

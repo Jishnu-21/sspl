@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import UpArrow from './components/UpArrow';
 import { motion as m, AnimatePresence } from 'framer-motion';
@@ -19,18 +19,8 @@ interface ServiceItemProps {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, isActive, onClick }) => {
-  const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
   return (
-    <MotionDiv 
-      className="mb-8 relative pl-3 md:pl-5"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={variants}
-      transition={{ duration: 0.5, delay: parseInt(id) * 0.1 }}>
+    <div className="mb-8 relative pl-3 md:pl-5">
       <div 
         className={`flex items-start cursor-pointer ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
         onClick={onClick}
@@ -87,12 +77,15 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
           )}
         </div>
       </div>
-    </MotionDiv>
+    </div>
   );
 };
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState('01');
+  const [currentPage, setCurrentPage] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   const services = [
     {
@@ -118,11 +111,62 @@ const ServicesSection = () => {
       number: '04',
       title: 'Operations & Finance Analytics',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
-    }
+    },
+    {
+      id: '05',
+      number: '05',
+      title: 'Risk Management Audit Analytics',
+      description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
+    },
+    {
+      id: '06',
+      number: '06',
+      title: 'Fraud Management & Detection',
+      description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
+    },
+    {
+      id: '07',
+      number: '07',
+      title: 'Data Migration',
+      description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
+    },
+    {
+      id: '08',
+      number: '08',
+      title: 'Algorithm Auditing',
+      description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
+    },
+    {
+      id: '09',
+      number: '09',
+      title: 'Media Analytics',
+      description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.'
+    },
   ];
+
+  // Split services into pages of 4 items each
+  const pageSize = 4;
+  const totalPages = Math.ceil(services.length / pageSize);
+  const paginatedServices = Array.from({ length: totalPages }, (_, i) => 
+    services.slice(i * pageSize, (i + 1) * pageSize)
+  );
 
   const handleToggle = (id: string) => {
     setActiveService(id);
+  };
+
+  const goToNextPage = () => {
+    setDirection(1);
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+    // Reset active service when changing pages
+    setActiveService(paginatedServices[(currentPage + 1) % totalPages][0]?.id || '01');
+  };
+
+  const goToPrevPage = () => {
+    setDirection(-1);
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+    // Reset active service when changing pages
+    setActiveService(paginatedServices[(currentPage - 1 + totalPages) % totalPages][0]?.id || '01');
   };
 
   return (
@@ -140,19 +184,73 @@ const ServicesSection = () => {
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* Left column - Services list */}
-          <div className="w-full md:w-1/2">
-            <div>
-              {services.map((service) => (
-                <ServiceItem
-                  key={service.id}
-                  id={service.id}
-                  number={service.number}
-                  title={service.title}
-                  description={service.description}
-                  isActive={activeService === service.id}
-                  onClick={() => handleToggle(service.id)}
-                />
-              ))}
+          <div className="w-full md:w-1/2 relative" ref={servicesRef}>
+            <div className="relative min-h-[500px]">
+              <div className="absolute w-full">
+                <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                  <MotionDiv
+                    key={`page-${currentPage}`}
+                    initial={{
+                      x: direction > 0 ? 200 : -200,
+                      opacity: 0
+                    }}
+                    animate={{
+                      x: 0,
+                      opacity: 1 
+                    }}
+                    exit={{
+                      x: direction < 0 ? 200 : -200,
+                      opacity: 0
+                    }}
+                    transition={{ 
+                      x: { type: "tween", duration: 0.25, ease: "easeInOut" },
+                      opacity: { duration: 0.2 }
+                    }}
+                    className="w-full"
+                  >
+                    {paginatedServices[currentPage]?.map((service) => (
+                      <ServiceItem
+                        key={service.id}
+                        id={service.id}
+                        number={service.number}
+                        title={service.title}
+                        description={service.description}
+                        isActive={activeService === service.id}
+                        onClick={() => handleToggle(service.id)}
+                      />
+                    ))}
+                  </MotionDiv>
+                </AnimatePresence>
+              </div>
+            </div>
+            
+            {/* Navigation arrows - positioned to the right */}
+            <div className="flex justify-end items-center mt-6 mb-6 space-x-3 pr-4 relative z-10">
+              <MotionButton
+                onClick={goToPrevPage}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition-colors cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                disabled={totalPages <= 1}
+                aria-label="Previous page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </MotionButton>
+              
+              <MotionButton
+                onClick={goToNextPage}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-gray-600 hover:bg-gray-100 transition-colors shadow-md cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                disabled={totalPages <= 1}
+                aria-label="Next page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </MotionButton>
             </div>
           </div>
           
