@@ -3,6 +3,7 @@ import Footer from '@/app/Footer'
 import Header from '@/app/Header'
 import React from 'react'
 import Image from 'next/image'
+import { FaUmbrella, FaBroadcastTower, FaWind } from 'react-icons/fa'
 
 const predictiveanalysis= () => {
   return (
@@ -39,7 +40,7 @@ const predictiveanalysis= () => {
             {/* Image */}
             <div className="mb-8 flex justify-center">
               <Image 
-                src="/images/services/data-analytics-charts.jpg" 
+                src="/images/services/pred1.jpg" 
                 alt="Data Analytics Charts" 
                 width={600} 
                 height={350}
@@ -73,28 +74,43 @@ const predictiveanalysis= () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-[95%] mx-auto">
-            {/* Dashboard Card 1 */}
-            <div className="bg-gray-100 p-10 rounded-md flex flex-col items-center justify-center aspect-square">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium text-gray-800 mb-4">Dashboards</h3>
-                <p className="text-gray-600 text-xl">Financial Analytics</p>
+            {/* Insurance Card */}
+            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center">
+              <div className="mb-6">
+                <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                  <FaUmbrella className="text-white text-3xl" />
+                </div>
               </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">Insurance</h3>
+              <p className="text-gray-600 text-center">
+                Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.
+              </p>
             </div>
             
-            {/* Dashboard Card 2 */}
-            <div className="bg-gray-100 p-10 rounded-md flex flex-col items-center justify-center aspect-square">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium text-gray-800 mb-4">Dashboards</h3>
-                <p className="text-gray-600 text-xl">Marketing Analytics</p>
+            {/* Telecom Card */}
+            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center">
+              <div className="mb-6">
+                <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                  <FaBroadcastTower className="text-white text-3xl" />
+                </div>
               </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">Telecom</h3>
+              <p className="text-gray-600 text-center">
+                Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
+              </p>
             </div>
             
-            {/* Dashboard Card 3 */}
-            <div className="bg-gray-100 p-10 rounded-md flex flex-col items-center justify-center aspect-square">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium text-gray-800 mb-4">Dashboards</h3>
-                <p className="text-gray-600 text-xl">Operational Analytics</p>
+            {/* Wind-Mill Card */}
+            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center">
+              <div className="mb-6">
+                <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                  <FaWind className="text-white text-3xl" />
+                </div>
               </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">Wind-Mill</h3>
+              <p className="text-gray-600 text-center">
+                Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.
+              </p>
             </div>
           </div>
         </section>

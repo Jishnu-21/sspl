@@ -48,7 +48,7 @@ const TruOIComponent = () => {
         <div className="flex justify-center mb-8">
           <div className="max-w-2xl w-full">
             <Image 
-              src="/images/products/truoi-analytics.jpg" 
+              src="/images/products/tru-oi.png" 
               alt="AI-Powered Analytics Dashboard" 
               width={600}
               height={350}
@@ -276,7 +276,7 @@ const TruOIComponent = () => {
         <div className="mb-10 flex justify-center">
           <div className="max-w-3xl w-full">
             <Image 
-              src="/images/products/truoi-analytics-report.jpg" 
+              src="/images/products/tru-oi-about.png" 
               alt="TruOI Analytics Report" 
               width={800}
               height={400}
@@ -323,21 +323,43 @@ const TruOIComponent = () => {
                 }}
               >
                 {/* First row of integration blocks */}
-                {Array.from({ length: 10 }).map((_, index) => (
+                {[
+                  "POS (POINT-OF-SALE)",
+                  "CRM",
+                  "ERP",
+                  "EXCEL",
+                  "GOOGLE SHEETS",
+                  "ACCOUNTING-CORP",
+                  "ACCOUNTING-UNIT",
+                  "LOYALTY SOFTWARE",
+                  "ROYALTY SOFTWARE",
+                  "VERTICAL SOFTWARE"
+                ].map((item, index) => (
                   <div 
                     key={`integration-1-${index}`} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
                   >
-                    <span className="text-gray-700 font-medium">Integration {index + 1}</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
-                {Array.from({ length: 10 }).map((_, index) => (
+                {[
+                  "POS (POINT-OF-SALE)",
+                  "CRM",
+                  "ERP",
+                  "EXCEL",
+                  "GOOGLE SHEETS",
+                  "ACCOUNTING-CORP",
+                  "ACCOUNTING-UNIT",
+                  "LOYALTY SOFTWARE",
+                  "ROYALTY SOFTWARE",
+                  "VERTICAL SOFTWARE"
+                ].map((item, index) => (
                   <div 
                     key={`integration-1-dup-${index}`} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
                   >
-                    <span className="text-gray-700 font-medium">Integration {index + 1}</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -353,21 +375,43 @@ const TruOIComponent = () => {
                 }}
               >
                 {/* Second row of integration blocks */}
-                {Array.from({ length: 10 }).map((_, index) => (
+                {[
+                  "HUMAN RESOURCES",
+                  "MARKETING",
+                  "SOCIAL MEDIA",
+                  "INVENTORY",
+                  "PRODUCTION",
+                  "LABOR MANAGEMENT",
+                  "WORKFLOW",
+                  "CUSTOMER SERVICE",
+                  "FRANCHISE APPS",
+                  "CUSTOM APPS"
+                ].map((item, index) => (
                   <div 
                     key={`integration-2-${index}`} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
                   >
-                    <span className="text-gray-700 font-medium">Software {index + 1}</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
-                {Array.from({ length: 10 }).map((_, index) => (
+                {[
+                  "HUMAN RESOURCES",
+                  "MARKETING",
+                  "SOCIAL MEDIA",
+                  "INVENTORY",
+                  "PRODUCTION",
+                  "LABOR MANAGEMENT",
+                  "WORKFLOW",
+                  "CUSTOMER SERVICE",
+                  "FRANCHISE APPS",
+                  "CUSTOM APPS"
+                ].map((item, index) => (
                   <div 
                     key={`integration-2-dup-${index}`} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
                   >
-                    <span className="text-gray-700 font-medium">Software {index + 1}</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
               </div>

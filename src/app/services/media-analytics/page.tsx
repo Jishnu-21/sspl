@@ -5,13 +5,14 @@ import Header from '@/app/Header'
 import React from 'react'
 import PageBanner from '@/app/components/PageBanner'
 import Image from 'next/image'
+import { FaChartLine, FaThumbsUp, FaUsers, FaChartBar, FaChartArea, FaChartPie, FaShieldAlt, FaCogs, FaGlobe, FaClock } from 'react-icons/fa'
 
 const media = () => {
   return (
     <>
-          <main className="flex flex-col bg-white min-h-screen">
-    <Header/>
-    <PageBanner
+      <main className="flex flex-col bg-white min-h-screen">
+        <Header/>
+        <PageBanner
           backgroundImage="/images/about/banner.png"
           title="Media Analytics"
           subtitle="Media Analytics Enabling Software Solution"
@@ -39,7 +40,7 @@ const media = () => {
                     {/* Image */}
                     <div className="mb-8 flex justify-center">
                       <Image 
-                        src="/images/services/data-analytics-charts.jpg" 
+                        src="/images/services/media1.jpg" 
                         alt="Data Analytics Charts" 
                         width={600} 
                         height={350}
@@ -78,90 +79,220 @@ const media = () => {
                         {/* Feature Cards - First Set */}
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaChartLine className="text-white text-2xl" />
                             </div>
                           </div>
                           <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendation engine to suggest movies and programs based on user's viewing history and preferences.
+                            Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
                           </p>
                         </div>
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaThumbsUp className="text-white text-2xl" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Recommendations</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content and understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendation engine for better customer experience.
+                            It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
                           </p>
                         </div>
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaUsers className="text-white text-2xl" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Audience Engagement</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content and understand viewing patterns of the customer. The insights can be leveraged to build loyalty programs and improve content recommendations.
+                            Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
+                          </p>
+                        </div>
+                        
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                          <div className="flex justify-center mb-4">
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaChartBar className="text-white text-2xl" />
+                            </div>
+                          </div>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Visualization</h3>
+                          <p className="text-sm text-gray-700">
+                            The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
                           </p>
                         </div>
                         
                         {/* Duplicate cards for continuous carousel */}
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaChartLine className="text-white text-2xl" />
                             </div>
                           </div>
                           <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendation engine to suggest movies and programs based on user's viewing history and preferences.
+                            Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
                           </p>
                         </div>
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaThumbsUp className="text-white text-2xl" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Recommendations</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content and understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendation engine for better customer experience.
+                            It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
                           </p>
                         </div>
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-400 flex items-center justify-center">
-                              <span className="text-white font-bold">Icon</span>
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaUsers className="text-white text-2xl" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Audience Engagement</h3>
                           <p className="text-sm text-gray-700">
-                            Media analytics platforms can be used to monitor audience engagement with content and understand viewing patterns of the customer. The insights can be leveraged to build loyalty programs and improve content recommendations.
+                            Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
+                          </p>
+                        </div>
+                        
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                          <div className="flex justify-center mb-4">
+                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                              <FaChartBar className="text-white text-2xl" />
+                            </div>
+                          </div>
+                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Visualization</h3>
+                          <p className="text-sm text-gray-700">
+                            The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </section>
+
+        {/* Business Benefits Marquee */}
+        <section className="py-8 w-full mb-16 overflow-hidden">
+          <div 
+            className="flex gap-12"
+            style={{ 
+              width: "fit-content",
+              animation: "benefits-marquee 40s linear infinite"
+            }}
+          >
+            {/* Benefits Items */}
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaChartArea className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Gain Actionable Insights</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaChartPie className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Gain Competitive Advantage</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaShieldAlt className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Mitigate Risks Effectively</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaCogs className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Extensive Product Engineering Experience</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaGlobe className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Domain-Specific Solutions</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaClock className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Quicker Time-to-Market</p>
+            </div>
+            
+            {/* Repeat items for better continuity */}
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaChartArea className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Gain Actionable Insights</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaChartPie className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Gain Competitive Advantage</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaShieldAlt className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Mitigate Risks Effectively</p>
+            </div>
+            
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaCogs className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Extensive Product Engineering Experience</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaGlobe className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Domain-Specific Solutions</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[160px]">
+              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
+                <FaClock className="text-white text-2xl" />
+              </div>
+              <p className="text-center text-sm font-medium text-black">Quicker Time-to-Market</p>
+            </div>
+          </div>
+        </section>
         
-    <Footer/>
-    </main>
+        <Footer/>
+      </main>
     </>
   )
 }
 
-// Add CSS for the carousel animation
+// Add CSS for the carousel animations
 const carouselStyles = `
   @keyframes feature-carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes benefits-marquee {
     0% {
       transform: translateX(0);
     }

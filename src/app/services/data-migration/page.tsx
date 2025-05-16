@@ -37,6 +37,17 @@ const dataMigration = () => {
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Why Migrate Your Data?</h2>
           </div>
 
+          {/* Image */}
+          <div className="mb-8 flex justify-center">
+            <Image 
+              src="/images/services/data-mig2.jpg" 
+              alt="Data Migration Risks" 
+              width={600} 
+              height={350}
+              className="rounded-md"
+            />
+          </div>
+
           <div className="text-center">
             <p className="text-gray-700 leading-relaxed mb-6">
               Data migrations generally result from the introduction of a new system. This may involve an application migration or consolidation in which one or more legacy systems are replaced or the deployment of an additional system that will sit alongside the existing applications. Whatever the specific nature of any data migration, the ultimate aim is to improve corporate performance and deliver competitive advantage. Accurate data is the raw material that maximizes the value of enterprise applications. However, when existing data is migrated to a new target application, it can become apparent that it may contain inaccuracies, unknowns, redundant and duplication. Although the data in the source system may be perfectly adequate for its current use, yet, it may be wholly inadequate in terms of content and structure to achieve the objectives of the target system. Without a reasonable understanding of both source and target, transferring data into a more sophisticated application will only lead to amplify the negative impact of any incorrect or irrelevant data, perpetuate any hidden legacy problems, and increase exposure to risk.

@@ -8,6 +8,7 @@ import React from 'react'
 import VideoGallery, { VideoItem } from '@/app/components/VideoGallery'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import DashboardGrid from '@/app/components/DashboardGrid'
+import { FaExclamationTriangle, FaUniversity, FaUserTie, FaSearch, FaMoneyCheckAlt, FaFileInvoiceDollar } from 'react-icons/fa'
 
 const fraudManagement = () => {
   // Sample videos for the video gallery
@@ -96,7 +97,7 @@ const fraudManagement = () => {
             {/* Image */}
             <div className="mb-8 flex justify-center">
               <Image 
-                src="/images/services/data-analytics-charts.jpg" 
+                src="/images/services/fraud1.jpg" 
                 alt="Fraud Analytics Dashboard" 
                 width={600} 
                 height={350}
@@ -114,11 +115,74 @@ const fraudManagement = () => {
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.              
               </p>
               
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-8">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches.
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.
-              When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system. Software programs can uncover the following key elements :
+              When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system. Software programs can uncover the following key elements:
               </p>
+              
+              {/* Fraud Detection Dashboard */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                {/* Item 1 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaExclamationTriangle className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Payments to risky vendors, including government contractors and parties on government watch lists
+                  </p>
+                </div>
+                
+                {/* Item 2 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaUniversity className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Payments made from foreign bank accounts
+                  </p>
+                </div>
+                
+                {/* Item 3 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaUserTie className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Use of new attorneys, accountants, consultants or people from other professions with no prior relationship to the company
+                  </p>
+                </div>
+                
+                {/* Item 4 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaSearch className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Missing descriptions or suspicious payment keywords, such as "for services rendered," "gifts," or "facilitation"
+                  </p>
+                </div>
+                
+                {/* Item 5 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaMoneyCheckAlt className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Checks made out to "cash"
+                  </p>
+                </div>
+                
+                {/* Item 6 */}
+                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
+                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
+                    <FaFileInvoiceDollar className="text-white text-3xl" />
+                  </div>
+                  <p className="text-center text-gray-700">
+                    Payments classified as government expenses, made in cash, or written to an individual
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
