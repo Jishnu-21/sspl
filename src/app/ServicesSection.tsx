@@ -18,9 +18,10 @@ interface ServiceItemProps {
   url: string;
   isActive: boolean;
   onClick: () => void;
+  isMobile: boolean;
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, url, isActive, onClick }) => {
+const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, url, isActive, onClick, isMobile }) => {
   return (
     <div className="mb-8 relative pl-3 md:pl-5">
       <div 
@@ -81,6 +82,36 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
               </MotionButton>
             </Link>
           )}
+          
+          {/* Mobile images - only shown on mobile when service is active */}
+          {isMobile && isActive && (
+            <div className="md:hidden mt-4">
+              <MotionDiv 
+                className="flex flex-row gap-4 justify-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}>
+                <div className="w-1/2 aspect-square max-w-[150px]">
+                  <Image 
+                    src="/images/services/image1.png" 
+                    alt={`${title} - Main`} 
+                    width={250} 
+                    height={250}
+                    className="w-full h-full rounded-md shadow-md object-cover"
+                  />
+                </div>
+                <div className="w-1/2 aspect-square max-w-[150px]">
+                  <Image 
+                    src="/images/services/image1.png" 
+                    alt={`${title} - Secondary`} 
+                    width={250} 
+                    height={250}
+                    className="w-full h-full rounded-md shadow-md object-cover"
+                  />
+                </div>
+              </MotionDiv>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -89,7 +120,24 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState('01');
+  const [isMobile, setIsMobile] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  
+  // Check if device is mobile on component mount and window resize
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is the md breakpoint in Tailwind
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const services = [
     {
@@ -195,8 +243,9 @@ const ServicesSection = () => {
           </p>
         </MotionDiv>
         
+        {/* Responsive layout container - Column on mobile, Row on desktop */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-          {/* Left column - Services list */}
+          {/* Services list - Full width on mobile, Half width on desktop */}
           <MotionDiv 
             className="w-full md:w-1/2 relative" 
             ref={servicesRef}
@@ -219,6 +268,7 @@ const ServicesSection = () => {
                       url={service.url}
                       isActive={activeService === service.id}
                       onClick={() => handleToggle(service.id)}
+                      isMobile={isMobile}
                     />
                   ))}
                 </div>
@@ -235,6 +285,7 @@ const ServicesSection = () => {
                       url={service.url}
                       isActive={activeService === service.id}
                       onClick={() => handleToggle(service.id)}
+                      isMobile={isMobile}
                     />
                   ))}
                 </div>
@@ -242,11 +293,11 @@ const ServicesSection = () => {
             </div>
           </MotionDiv>
           
-          {/* Right column - Two stacked images */}
+          {/* Images column - Only visible on desktop */}
           <MotionDiv 
-            className="w-full md:w-1/2 order-first md:order-last mb-6 md:mb-0 flex items-center"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="hidden md:block w-full md:w-1/2 md:order-last mb-6 md:mb-0"
+            initial={{ opacity: 0, y: 30, x: 0 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
@@ -255,30 +306,30 @@ const ServicesSection = () => {
               activeService === service.id && (
                 <MotionDiv 
                   key={service.id} 
-                  className="relative w-full flex flex-col gap-2 mx-auto max-w-xs"
+                  className="relative w-full flex flex-col gap-2 justify-center mx-auto"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}>
-                  {/* Top image - square 1:1 ratio */}
-                  <div className="w-full aspect-square">
+                  {/* First image - rectangular on desktop with increased height */}
+                  <div className="w-full h-[350px] max-w-full">
                     <Image 
                       src="/images/services/image1.png" 
                       alt={`${service.title} - Main`} 
-                      width={250} 
-                      height={250}
+                      width={400} 
+                      height={350}
                       className="w-full h-full rounded-md shadow-md object-cover"
                       priority={activeService === '01'}
                     />
                   </div>
                   
-                  {/* Bottom image - square 1:1 ratio */}
-                  <div className="w-full aspect-square">
+                  {/* Second image - rectangular on desktop with increased height */}
+                  <div className="w-full h-[350px] max-w-full">
                     <Image 
                       src="/images/services/image1.png" 
                       alt={`${service.title} - Secondary`} 
-                      width={250} 
-                      height={250}
+                      width={400} 
+                      height={350}
                       className="w-full h-full rounded-md shadow-md object-cover"
                     />
                   </div>

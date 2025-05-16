@@ -1,27 +1,57 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const Banner = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <>
       {/* Banner Section with Video Background */}
-      <section className="relative mt-[110px] min-h-[calc(100vh-110px)] flex items-center overflow-hidden">
+      <section className="relative mt-[110px] md:min-h-[calc(100vh-110px)] min-h-[56.25vw] flex items-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video 
-            src="/videos/home-banner.webm" 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="absolute top-0 left-0 w-full h-full"
-            style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'fill' 
-            }}
-          />
+          {isMobile ? (
+            <div className="w-full h-full relative" style={{ aspectRatio: '16/9' }}>
+              <video 
+                ref={videoRef}
+                src="/videos/home-banner.webm" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          ) : (
+            <video 
+              src="/videos/home-banner.webm" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="absolute top-0 left-0 w-full h-full"
+              style={{ objectFit: 'fill' }}
+            />
+          )}
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
