@@ -33,55 +33,55 @@ const CaseStudiesSection = () => {
     {
       title: "Internal Audit Analytics",
       description: "Auditors are developing the technical capacity to analyse the vast amounts of information they have captured, and are using the insights generated from that data to build stronger audit methodologies and improve the bottom line...",
-      icon: FaChartLine,
+      image: "/images/case-study/internal-audit-analysis.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Telecom Analytics",
       description: "Telecom analytics include increasing sales, reducing churn and fraud, network management monitoring, billing analytics, revenue assurance, improving risk management, automation of operational analytics and predictive analytics...",
-      icon: FaChartBar,
+      image: "/images/case-study/telecom-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Retail Analytics",
       description: "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions. Through our solution, we are able to provide...",
-      icon: FaShoppingCart,
+      image: "/images/case-study/retail-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Banking Analytics",
       description: "While basic reporting and descriptive analytics continues to be a must-have for banks, advances predictive and prescriptive analytics are now starting to generate powerful insights...",
-      icon: FaUniversity,
+      image: "/images/case-study/banking-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Insurance Analytics",
       description: "Analytics is emerging as a game changer for the Insurance industry facing significant profitability and growth challenges. Advanced and Predictive Analytics are now taking turn for better business management...",
-      icon: FaUmbrella,
+      image: "/images/case-study/insurance-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Oil & Energy Analytics",
       description: "Analytics can be a core catalyst to achieving high performance in the energy industry but it takes pragmatic action to become analytically empowered...",
-      icon: FaOilCan,
+      image: "/images/case-study/oil-energy-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Media Analytics",
       description: "An unprecedented amount of data is being generated from enormous video traffic presents an array of opportunities and challenges for the Channel...",
-      icon: FaTv,
+      image: "/images/case-study/media-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Data Migration",
       description: "Businesses spend huge investment migrating data between information-intensive applications. Yet up to 75 percent of new systems fail to meet expectations often because flaws in the migration...",
-      icon: FaDatabase,
+      image: "/images/case-study/data-analytics.jpg",
       color: "bg-[#a4ce4e]"
     },
     {
       title: "Robotic Process Automation",
       description: "We offer following solutions of Robotic Process Automation including assureBI Arabic ChatBOT and assureBI bankRPA...",
-      icon: FaRobot,
+      image: "/images/case-study/robot-analytics.jpg",
       color: "bg-[#a4ce4e]"
     }
   ];
@@ -92,8 +92,13 @@ const CaseStudiesSection = () => {
       key={index}
       className="flex-shrink-0 w-80 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className={`${study.color} h-48 overflow-hidden relative rounded-t-xl flex items-center justify-center`}>
-        {React.createElement(study.icon, { className: "text-white text-6xl" })}
+      <div className="h-48 overflow-hidden relative rounded-t-xl">
+        <Image 
+          src={study.image} 
+          alt={study.title}
+          fill
+          className="object-cover"
+        />
       </div>
       <div className="p-4 bg-white flex-1 rounded-b-xl">
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
