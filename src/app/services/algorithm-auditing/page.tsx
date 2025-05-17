@@ -36,7 +36,7 @@ const algorithmAuditing = () => {
                 {/* Image */}
                 <div className="mb-8 flex justify-center">
                   <Image 
-                    src="/images/services/data-analytics-charts.jpg" 
+                    src="/images/services/algo-audit1.jpg" 
                     alt="Fraud Analytics Dashboard" 
                     width={600} 
                     height={350}

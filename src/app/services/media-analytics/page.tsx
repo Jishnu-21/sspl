@@ -6,6 +6,7 @@ import React from 'react'
 import PageBanner from '@/app/components/PageBanner'
 import Image from 'next/image'
 import { FaChartLine, FaThumbsUp, FaUsers, FaChartBar, FaChartArea, FaChartPie, FaShieldAlt, FaCogs, FaGlobe, FaClock } from 'react-icons/fa'
+import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 
 const media = () => {
   return (
@@ -178,102 +179,43 @@ const media = () => {
                   </div>
                 </section>
 
-        {/* Business Benefits Marquee */}
-        <section className="py-8 w-full mb-16 overflow-hidden">
-          <div 
-            className="flex gap-12"
-            style={{ 
-              width: "fit-content",
-              animation: "benefits-marquee 40s linear infinite"
-            }}
-          >
-            {/* Benefits Items */}
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaChartArea className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Gain Actionable Insights</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaChartPie className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Gain Competitive Advantage</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaShieldAlt className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Mitigate Risks Effectively</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaCogs className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Extensive Product Engineering Experience</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaGlobe className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Domain-Specific Solutions</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaClock className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Quicker Time-to-Market</p>
-            </div>
-            
-            {/* Repeat items for better continuity */}
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaChartArea className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Gain Actionable Insights</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaChartPie className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Gain Competitive Advantage</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaShieldAlt className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Mitigate Risks Effectively</p>
-            </div>
-            
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaCogs className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Extensive Product Engineering Experience</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaGlobe className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Domain-Specific Solutions</p>
-            </div>
-
-            <div className="flex flex-col items-center min-w-[160px]">
-              <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center mb-3">
-                <FaClock className="text-white text-2xl" />
-              </div>
-              <p className="text-center text-sm font-medium text-black">Quicker Time-to-Market</p>
-            </div>
-          </div>
-        </section>
+        {/* Business Benefits */}
+        <PartnersScroll
+          title="Business Benefits"
+          backgroundColor="#ffffff"
+          items={[
+            {
+              caption: "Gain Actionable Insights",
+              useIcon: true,
+              icon: FaChartArea
+            },
+            {
+              caption: "Gain Competitive Advantage",
+              useIcon: true,
+              icon: FaChartPie
+            },
+            {
+              caption: "Mitigate Risks Effectively",
+              useIcon: true,
+              icon: FaShieldAlt
+            },
+            {
+              caption: "Extensive Product Engineering Experience",
+              useIcon: true,
+              icon: FaCogs
+            },
+            {
+              caption: "Domain-Specific Solutions",
+              useIcon: true,
+              icon: FaGlobe
+            },
+            {
+              caption: "Quicker Time-to-Market",
+              useIcon: true,
+              icon: FaClock
+            }
+          ]}
+        />
         
         <Footer/>
       </main>

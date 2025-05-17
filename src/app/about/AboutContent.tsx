@@ -31,9 +31,9 @@ const AboutContent = () => {
               viewport={{ once: true, margin: "-50px" }}
               className="group"
             >
-              <div className="h-auto sm:h-[280px] md:h-[300px] p-4 rounded-lg border border-[#1B3D69] bg-white 
-                transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden">
-                <p className="text-gray-700 text-[14px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[1.4] md:leading-[1.5] font-light">
+              <div className="h-auto sm:h-[220px] md:h-[240px] p-4 rounded-lg border border-[#1B3D69] bg-white 
+                transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden flex items-center">
+                <p className="text-gray-700 text-[14px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[1.4] md:leading-[1.5] font-light text-center">
                   {card.text}
                 </p>
               </div>

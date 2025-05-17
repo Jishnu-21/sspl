@@ -21,9 +21,10 @@ const OfficeLocations = () => {
   ];
 
   return (
-    <div className="bg-white pt-16">
-      <div className="flex font-comfortaa">
-        <div className="w-[80px] relative">
+    <div className="bg-white pt-8 md:pt-16">
+      <div className="flex flex-col md:flex-row font-comfortaa">
+        {/* Left sidebar - hidden on mobile, visible on md and up */}
+        <div className="hidden md:block w-[80px] relative">
           <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gray-200 ml-[480px]"></div>
           <div className="absolute left-0 top-8 w-[3px] h-6 bg-gray-800 ml-8"></div>
           <div className="pl-12 pt-8">
@@ -32,13 +33,20 @@ const OfficeLocations = () => {
             </button>
           </div>
         </div>
-        <div className="flex-1 pl-[500px] pr-16 py-12">
+        
+        {/* Mobile title - visible only on mobile */}
+        <div className="block md:hidden px-6 py-4">
+          <h2 className="text-gray-700 text-lg font-medium">Our offices</h2>
+          <div className="w-12 h-[2px] bg-gray-800 mt-2"></div>
+        </div>
+        
+        <div className="flex-1 px-6 md:px-0 md:pl-[500px] md:pr-16 py-6 md:py-12">
           <div className="max-w-4xl">
             {offices.map((office, index) => (
               <div key={index} className="border-t border-gray-200 mb-6 first:border-t-0 first:pt-0">
-                <div className="flex items-center py-6 border-b border-gray-100 w-full">
-                  {/* Time */}
-                  <div className="flex items-center text-gray-400 w-24">
+                <div className="flex flex-col md:flex-row md:items-center py-6 border-b border-gray-100 w-full">
+                  {/* Time - Hidden on mobile */}
+                  <div className="hidden md:flex items-center text-gray-400 w-24">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -46,18 +54,18 @@ const OfficeLocations = () => {
                   </div>
                   
                   {/* Country */}
-                  <div className="w-64">
-                    <h2 className="text-3xl text-black font-medium">{office.country}</h2>
+                  <div className="w-full md:w-64 mb-4 md:mb-0">
+                    <h2 className="text-2xl md:text-3xl text-black font-medium">{office.country}</h2>
                   </div>
                   
                   {/* Address and Contact Info */}
-                  <div className="flex-1 pl-24 text-left">
+                  <div className="flex-1 md:pl-24 text-left">
                     <div className="text-sm text-gray-600 leading-relaxed">
-                      <p>{office.address}</p>
-                      <p>Mail ID - <a href={`mailto:${office.email}`} className="text-blue-600 hover:underline">{office.email}</a></p>
-                      {office.tel && <p>Tel : {office.tel}</p>}
-                      {office.mobile && <p>Mobile: {office.mobile}</p>}
-                      {office.fax && <p>Fax : {office.fax}</p>}
+                      <p className="mb-2">{office.address}</p>
+                      <p className="mb-2">Mail ID - <a href={`mailto:${office.email}`} className="text-blue-600 hover:underline">{office.email}</a></p>
+                      {office.tel && <p className="mb-2">Tel : {office.tel}</p>}
+                      {office.mobile && <p className="mb-2">Mobile: {office.mobile}</p>}
+                      {office.fax && <p className="mb-2">Fax : {office.fax}</p>}
                     </div>
                   </div>
                 </div>

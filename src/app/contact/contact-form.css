@@ -1,0 +1,18 @@
+/* Custom placeholder styling */
+::placeholder {
+  color: rgba(0, 0, 0, 0.7) !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Additional hover effects for the button */
+button:hover {
+  transform: translateY(-2px);
+}

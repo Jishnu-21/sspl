@@ -2,11 +2,14 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { IconType } from 'react-icons'
 
 export interface PartnerItem {
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
   caption: string;
+  icon?: IconType;
+  useIcon?: boolean;
 }
 
 interface PartnersScrollProps {
@@ -38,13 +41,19 @@ const PartnersScroll = ({
               <div key={index} className="flex-shrink-0 flex flex-col items-center">
                 <div className="bg-white p-4 rounded-md shadow-sm w-[280px] h-[160px] flex items-center justify-center mb-4">
                   <div className="text-center">
-                    <Image 
-                      src={item.imageSrc} 
-                      alt={item.imageAlt} 
-                      width={200} 
-                      height={100}
-                      className="mx-auto"
-                    />
+                    {item.useIcon && item.icon ? (
+                      <div className="w-24 h-24 rounded-full bg-[#a4ce4e] flex items-center justify-center mx-auto">
+                        {React.createElement(item.icon, { className: "text-white text-4xl" })}
+                      </div>
+                    ) : (
+                      <Image 
+                        src={item.imageSrc || ""} 
+                        alt={item.imageAlt || ""} 
+                        width={200} 
+                        height={100}
+                        className="mx-auto"
+                      />
+                    )}
                   </div>
                 </div>
                 <p className="text-base font-semibold text-[#1B3D69] text-center">{item.caption}</p>

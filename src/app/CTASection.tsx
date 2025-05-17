@@ -48,7 +48,7 @@ const CTASection = () => {
             <p className="text-lg md:text-xl mb-8 opacity-90">Get AI-driven insights for smarter decisions. Contact us today!</p>
             
             <motion.a 
-              href="#contact"
+              href="/contact"
               className="inline-block px-8 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-[#0f2756] transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

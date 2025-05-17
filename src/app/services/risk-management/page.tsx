@@ -1,37 +1,50 @@
+"use client"
+
 import PageBanner from '@/app/components/PageBanner'
 import Footer from '@/app/Footer'
 import Header from '@/app/Header'
 import Image from 'next/image'
 import React from 'react'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
+import { FaCreditCard, FaMoneyBillWave, FaSearchDollar, FaChartLine, FaBoxes, FaUserTie, FaGavel } from 'react-icons/fa'
 
 
-  // Define telecom industry areas for the PartnersScroll component
+  // Define risk management areas for the PartnersScroll component with icons
   const riskAreas: PartnerItem[] = [
     {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
+      icon: FaCreditCard,
+      useIcon: true,
       caption: "Purchase to Payment\n(Accounts Payable)"
     },
     {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
+      icon: FaMoneyBillWave,
+      useIcon: true,
       caption: "Order to Cash\n(Accounts Receivables)"
     },
     {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Fraud Detection and Management"
+      icon: FaSearchDollar,
+      useIcon: true,
+      caption: "Fraud Detection\nand Management"
     },
     {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
+      icon: FaChartLine,
+      useIcon: true,
       caption: "Cost Management"
     },
     {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
+      icon: FaBoxes,
+      useIcon: true,
       caption: "Inventory Management"
+    },
+    {
+      icon: FaUserTie,
+      useIcon: true,
+      caption: "HR Analysis"
+    },
+    {
+      icon: FaGavel,
+      useIcon: true,
+      caption: "Regulatory Compliances"
     }
   ];
   
@@ -64,7 +77,7 @@ const page = () => {
                 {/* Image */}
                 <div className="mb-8 flex justify-center">
                   <Image 
-                    src="/images/services/data-analytics-charts.jpg" 
+                    src="/images/services/risk1.jpg" 
                     alt="Data Analytics Charts" 
                     width={600} 
                     height={350}

@@ -94,7 +94,7 @@ const Training = () => {
 
             <div className="w-full md:w-1/3 mt-6 md:mt-0">
               <Image
-                src="/images/training/training.png"
+                src="/images/training/training1.jpg"
                 alt="Big Data Analytics Training Illustration"
                 width={500}
                 height={500}
@@ -112,7 +112,7 @@ const Training = () => {
           {/* Logo/Image Section */}
           <div className="w-full md:w-1/5 flex items-center justify-center md:justify-start mb-4 md:mb-0 md:pr-6">
             <Image
-              src="/images/clients/hsbc.png"
+              src="/images/training/toyota.jpg"
               alt="HSBC Logo"
               width={100}
               height={50}
@@ -123,20 +123,7 @@ const Training = () => {
           {/* Testimonial Text */}
           <div className="w-full md:w-4/5">
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-              "We have utilized the services of SSPL in successfully running our
-              project implementation for our team within the assureBi training
-              courses from SSPL and found the value to be very high. SSPL offers
-              unique and varied Big Data Analytics expert knowledge to help us
-              learn about ourselves that we otherwise would not have learned. One
-              of SSPL's skills within their SSPL support services and fraud risk
-              areas is the very practical and user-friendly approach. Another skill
-              which SSPL has demonstrated is their ability to adapt to the local
-              environment and culture. SSPL has been able to work with the local
-              team to understand the local issues and challenges. We at the
-              organization of the software have been able to make use of the
-              methodological capabilities of the assureBi system to such a level
-              that it has become a part of our day-to-day work. Overall, it has
-              always been a pleasure interacting and working with SSPL."
+              "SSPL Middle East - conducted a hands-on-training program on data analytics for Toyota Motors U.K. and other subsidiaries. It comprised of practical sessions on how to deploy analytics using excel and Power BI. The learners were thrilled to be a part of this course, as it allowed them to grasp a vast array of technical know-how embedded via a simplistic approach. The course received phenomenal positive responses from the learners, who clearly stated their insights on how "Data" was better read and understood, after attending the training sessions. In fact, the participants in the training sessions who did not seem to have any particular use of analytics in their day-2-day job profile, found this course to be immensely helpful and informative as well. The sessions were well-tailored & subsequently addressed the real case studies at the end of each training module. The proficiency that was acquired via the training sessions, promised the participants to adapt and implement the objectives with respect to data analytics. PowerBI sessions successfully equipped the learners with the essential skills to create a dashboard themselves using different themes, maps and data transformations. On the whole, participants thoroughly enjoyed the course and learned many new concepts related to data analytics and data in general. The mean score based on the feedback received by the participants was a high value notched at 4.5 out of 5."
             </p>
           </div>
         </div>
