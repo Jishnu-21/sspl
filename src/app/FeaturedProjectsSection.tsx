@@ -4,6 +4,7 @@ import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+import { FaChartLine, FaChartBar, FaShoppingCart, FaUniversity, FaUmbrella, FaOilCan, FaTv, FaDatabase, FaRobot } from 'react-icons/fa';
 
 const CaseStudiesSection = () => {
   const controls = useAnimation();
@@ -30,40 +31,58 @@ const CaseStudiesSection = () => {
   // Sample case studies data
   const caseStudies = [
     {
-      title: "Auditing Analytics",
-      description: "Auditors are developing the technical capacity to analyze the vast amounts of information they have access to and are using advanced techniques to mine that data to build stronger audit methodologies and improve the bottom line.",
-      image: "/images/services/image1.png",
-      color: "bg-purple-400"
+      title: "Internal Audit Analytics",
+      description: "Auditors are developing the technical capacity to analyse the vast amounts of information they have captured, and are using the insights generated from that data to build stronger audit methodologies and improve the bottom line...",
+      icon: FaChartLine,
+      color: "bg-[#a4ce4e]"
     },
     {
       title: "Telecom Analytics",
-      description: "Telecom analytics include increasing sales, reducing churn and fraud, network management optimization, customer experience enhancement, improving risk management, automation of operational analytics and predictive analytics.",
-      image: "/images/services/image2.png",
-      color: "bg-purple-400"
-    },
-    {
-      title: "Telecom Analytics",
-      description: "Telecom analytics include increasing sales, reducing churn and fraud, network management optimization, customer experience enhancement, improving risk management, automation of operational analytics and predictive analytics.",
-      image: "/images/services/image2.png",
-      color: "bg-purple-400"
-    },
-    {
-      title: "Telecom Analytics",
-      description: "Telecom analytics include increasing sales, reducing churn and fraud, network management optimization, customer experience enhancement, improving risk management, automation of operational analytics and predictive analytics.",
-      image: "/images/services/image2.png",
-      color: "bg-purple-400"
-    },
-    {
-      title: "Telecom Analytics",
-      description: "Telecom analytics include increasing sales, reducing churn and fraud, network management optimization, customer experience enhancement, improving risk management, automation of operational analytics and predictive analytics.",
-      image: "/images/services/image2.png",
-      color: "bg-purple-400"
+      description: "Telecom analytics include increasing sales, reducing churn and fraud, network management monitoring, billing analytics, revenue assurance, improving risk management, automation of operational analytics and predictive analytics...",
+      icon: FaChartBar,
+      color: "bg-[#a4ce4e]"
     },
     {
       title: "Retail Analytics",
-      description: "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions. Through our solutions, we provide...",
-      image: "/images/services/image3.png",
-      color: "bg-purple-400"
+      description: "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions. Through our solution, we are able to provide...",
+      icon: FaShoppingCart,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Banking Analytics",
+      description: "While basic reporting and descriptive analytics continues to be a must-have for banks, advances predictive and prescriptive analytics are now starting to generate powerful insights...",
+      icon: FaUniversity,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Insurance Analytics",
+      description: "Analytics is emerging as a game changer for the Insurance industry facing significant profitability and growth challenges. Advanced and Predictive Analytics are now taking turn for better business management...",
+      icon: FaUmbrella,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Oil & Energy Analytics",
+      description: "Analytics can be a core catalyst to achieving high performance in the energy industry but it takes pragmatic action to become analytically empowered...",
+      icon: FaOilCan,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Media Analytics",
+      description: "An unprecedented amount of data is being generated from enormous video traffic presents an array of opportunities and challenges for the Channel...",
+      icon: FaTv,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Data Migration",
+      description: "Businesses spend huge investment migrating data between information-intensive applications. Yet up to 75 percent of new systems fail to meet expectations often because flaws in the migration...",
+      icon: FaDatabase,
+      color: "bg-[#a4ce4e]"
+    },
+    {
+      title: "Robotic Process Automation",
+      description: "We offer following solutions of Robotic Process Automation including assureBI Arabic ChatBOT and assureBI bankRPA...",
+      icon: FaRobot,
+      color: "bg-[#a4ce4e]"
     }
   ];
 
@@ -73,20 +92,15 @@ const CaseStudiesSection = () => {
       key={index}
       className="flex-shrink-0 w-80 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className={`${study.color} h-48 overflow-hidden relative rounded-t-xl`}>
-        <Image 
-          src={study.image} 
-          alt={study.title}
-          fill
-          className="object-cover opacity-70"
-        />
+      <div className={`${study.color} h-48 overflow-hidden relative rounded-t-xl flex items-center justify-center`}>
+        {React.createElement(study.icon, { className: "text-white text-6xl" })}
       </div>
       <div className="p-4 bg-white flex-1 rounded-b-xl">
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
         <p className="text-xs text-gray-600 mb-4">{study.description}</p>
         <div className="mt-auto">
           <button className="flex items-center text-black text-xs font-medium">
-            Learn More
+            View Case Study
             <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center">
               <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                 <path d="M5 12h14M12 5l7 7-7 7" />

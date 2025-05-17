@@ -8,47 +8,46 @@ import React from 'react'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import { FaCreditCard, FaMoneyBillWave, FaSearchDollar, FaChartLine, FaBoxes, FaUserTie, FaGavel } from 'react-icons/fa'
 
+// Define risk management areas for the PartnersScroll component with icons
+const riskAreas: PartnerItem[] = [
+  {
+    icon: FaCreditCard,
+    useIcon: true,
+    caption: "Purchase to Payment\n(Accounts Payable)"
+  },
+  {
+    icon: FaMoneyBillWave,
+    useIcon: true,
+    caption: "Order to Cash\n(Accounts Receivables)"
+  },
+  {
+    icon: FaSearchDollar,
+    useIcon: true,
+    caption: "Fraud Detection\nand Management"
+  },
+  {
+    icon: FaChartLine,
+    useIcon: true,
+    caption: "Cost Management"
+  },
+  {
+    icon: FaBoxes,
+    useIcon: true,
+    caption: "Inventory Management"
+  },
+  {
+    icon: FaUserTie,
+    useIcon: true,
+    caption: "HR Analysis"
+  },
+  {
+    icon: FaGavel,
+    useIcon: true,
+    caption: "Regulatory Compliances"
+  }
+];
 
-  // Define risk management areas for the PartnersScroll component with icons
-  const riskAreas: PartnerItem[] = [
-    {
-      icon: FaCreditCard,
-      useIcon: true,
-      caption: "Purchase to Payment\n(Accounts Payable)"
-    },
-    {
-      icon: FaMoneyBillWave,
-      useIcon: true,
-      caption: "Order to Cash\n(Accounts Receivables)"
-    },
-    {
-      icon: FaSearchDollar,
-      useIcon: true,
-      caption: "Fraud Detection\nand Management"
-    },
-    {
-      icon: FaChartLine,
-      useIcon: true,
-      caption: "Cost Management"
-    },
-    {
-      icon: FaBoxes,
-      useIcon: true,
-      caption: "Inventory Management"
-    },
-    {
-      icon: FaUserTie,
-      useIcon: true,
-      caption: "HR Analysis"
-    },
-    {
-      icon: FaGavel,
-      useIcon: true,
-      caption: "Regulatory Compliances"
-    }
-  ];
-  
-const page = () => {
+const risk = () => {
   return (
     <>
         <main className="flex flex-col bg-white min-h-screen">
@@ -108,4 +107,4 @@ const page = () => {
   )
 }
 
-export default page
+export default risk;

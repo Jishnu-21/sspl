@@ -243,9 +243,6 @@ const fraudManagement = () => {
                   
                   <div className="p-4">
                     <h3 className="font-medium text-gray-800 mb-2">{video.title}</h3>
-                    {video.description && (
-                      <p className="text-sm text-gray-600">{video.description}</p>
-                    )}
                   </div>
                 </div>
               );
