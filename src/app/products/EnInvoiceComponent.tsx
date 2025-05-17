@@ -34,7 +34,7 @@ const EnInvoiceComponent = () => {
         {/* Dashboard Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div 
-            className="bg-green-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
@@ -51,7 +51,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-blue-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
@@ -68,7 +68,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-pink-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
@@ -85,7 +85,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-orange-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
@@ -102,7 +102,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-red-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
@@ -119,7 +119,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-purple-400 p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
             whileHover={{ 
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
