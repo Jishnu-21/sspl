@@ -111,7 +111,7 @@ const Header = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="SSPL Logo" width={160} height={55} className="py-1" />
+            <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1" />
             </Link>
           </div>
           
