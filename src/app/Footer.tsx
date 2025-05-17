@@ -51,6 +51,7 @@ const Footer = ({ className = '' }: FooterProps) => {
               <li><Link href="/products" className="text-gray-500 hover:text-indigo-600 text-sm">Products</Link></li>
               <li><Link href="/events" className="text-gray-500 hover:text-indigo-600 text-sm">Events</Link></li>
               <li><Link href="/training" className="text-gray-500 hover:text-indigo-600 text-sm">Training</Link></li>
+              <li><Link href="/partner" className="text-gray-500 hover:text-indigo-600 text-sm">Become a Partner</Link></li>
             </ul>
           </div>
 
@@ -61,8 +62,8 @@ const Footer = ({ className = '' }: FooterProps) => {
               <li><Link href="/about" className="text-gray-500 hover:text-indigo-600 text-sm">About</Link></li>
               <li><Link href="/contact" className="text-gray-500 hover:text-indigo-600 text-sm">Contact us</Link></li>
               <li><Link href="/testimonials" className="text-gray-500 hover:text-indigo-600 text-sm">Testimonials</Link></li>
-              <li><Link href="/webinars" className="text-gray-500 hover:text-indigo-600 text-sm">Webinars</Link></li>
-              <li><Link href="/partner" className="text-gray-500 hover:text-indigo-600 text-sm">Become a Partner</Link></li>
+              <li><Link href="/webinar" className="text-gray-500 hover:text-indigo-600 text-sm">Webinars</Link></li>
+              <li><Link href="/events" className="text-gray-500 hover:text-indigo-600 text-sm">Events</Link></li>
             </ul>
           </div>
 
