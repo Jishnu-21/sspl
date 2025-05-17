@@ -229,7 +229,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h2 className="text-3xl md:text-4xl font-comfortaa font-bold text-blue-900 mb-2">About us</h2>
+          <h2 className="text-3xl md:text-4xl font-comfortaa font-bold text-blue-900 mb-2">Services</h2>
         </MotionDiv>
         
         <MotionDiv

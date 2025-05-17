@@ -76,11 +76,14 @@ const ScheduleDemo = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#2D3A62] p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-xl">
+            <div className="backdrop-blur-md bg-[#2D3A62]/70 p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-xl border border-white/10 relative overflow-hidden">
+              {/* Glassmorphic highlights */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+              <div className="absolute top-0 left-0 bottom-0 w-[1px] bg-gradient-to-b from-white/30 via-white/10 to-transparent"></div>
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row gap-4 sm:gap-5">
                   {/* Left column - input fields */}
-                  <div className="w-full md:w-1/2 space-y-4 sm:space-y-5">
+                  <div className="w-full md:w-1/2 space-y-4 sm:space-y-5 flex flex-col">
                     <input 
                       type="text" 
                       name="interestedDemo" 
@@ -120,12 +123,12 @@ const ScheduleDemo = () => {
                   </div>
                   
                   {/* Right column - message textarea */}
-                  <div className="w-full md:w-1/2 h-full mt-4 md:mt-0">
+                  <div className="w-full md:w-1/2 flex flex-col mt-4 md:mt-0">
                     <textarea 
                       name="message" 
                       placeholder="Message" 
-                      className="w-full h-full px-3 sm:px-4 py-2.5 sm:py-3 rounded bg-white text-gray-800 focus:outline-none resize-none text-sm sm:text-base"
-                      style={{ minHeight: '150px', height: '100%' }}
+                      className="w-full flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded bg-white text-gray-800 focus:outline-none resize-none text-sm sm:text-base"
+                      style={{ height: 'calc(100% - 1px)' }} /* Ensures exact height match */
                       value={formData.message}
                       onChange={handleChange}
                     />
@@ -135,7 +138,7 @@ const ScheduleDemo = () => {
                 <div className="flex justify-center mt-5 sm:mt-6">
                   <button 
                     type="submit" 
-                    className={`px-8 sm:px-12 py-2 sm:py-2.5 rounded border border-white text-white font-medium transition-all duration-300 w-full sm:w-auto ${
+                    className={`px-8 sm:px-12 py-2 sm:py-2.5 rounded cursor-pointer border border-white text-white font-medium transition-all duration-300 w-full sm:w-auto ${
                       isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white hover:text-[#2D3A62]'
                     }`}
                     disabled={isSubmitting}
