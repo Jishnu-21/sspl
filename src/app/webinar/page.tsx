@@ -1,7 +1,10 @@
+
+
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import PageBanner from '../components/PageBanner'
+import WebinarForm from './WebinarForm'
 
 const Webinar = () => {
   return (
@@ -14,7 +17,7 @@ const Webinar = () => {
         subtitle="Series of Webinars from the Industry Experts"
       />
 
-<section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+<section className="py-10 px-4 md:px-8 max-w-7xl mx-auto">
               <div className="mb-2">
                 <div className="max-w-4xl mx-auto text-center mb-2">
                   <p className="text-gray-700 leading-relaxed mb-6">
@@ -29,6 +32,7 @@ const Webinar = () => {
 
       <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
+      <WebinarForm />
 
     <Footer/>
     </main>
