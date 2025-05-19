@@ -81,15 +81,15 @@ const WebinarForm = () => {
       
       {/* Right side - Registration form */}
       <motion.div 
-        className="flex-1 bg-white px-6 pt-6 pb-5 rounded-lg shadow-md mx-auto md:mx-0 border border-gray-200 md:h-full flex flex-col"
+        className="flex-1 bg-white px-6 pt-5 pb-4 rounded-lg shadow-md mx-auto md:mx-0 border border-gray-200 md:h-full flex flex-col"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        style={{ maxWidth: '450px', minHeight: '580px' }}
+        style={{ maxWidth: '450px', minHeight: '480px' }}
       >
         <h3 className="text-base font-semibold text-left mb-4 text-green-800 pl-1">Complete the form below to access<br/>the webcast</h3>
         
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-2.5">
           <div>
             <input
               type="text"
@@ -97,7 +97,7 @@ const WebinarForm = () => {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:border-green-600 text-gray-600 bg-white text-sm"
+              className="w-full p-2.5 border border-gray-200 rounded focus:outline-none focus:border-green-600 text-gray-600 bg-gray-50 text-sm"
               required
             />
           </div>
