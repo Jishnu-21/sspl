@@ -33,23 +33,23 @@ const Grc = () => {
 
         {/* Governance Framework Section */}
         <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#366A00] text-center mb-12">Governance Framework</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#366A00] text-center mb-16">Governance Framework</h2>
           
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Left side - Image */}
             <motion.div 
-              className="w-full md:w-3/5"
+              className="w-full md:w-3/5 flex"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-lg">
                 <Image 
                   src="/images/services/grc1.jpg" 
                   alt="Governance Framework" 
                   fill
-                  className="object-cover"
+                  className="object-contain object-center"
                   priority
                 />
               </div>
@@ -57,44 +57,379 @@ const Grc = () => {
             
             {/* Right side - Content */}
             <motion.div 
-              className="w-full md:w-2/5"
+              className="w-full md:w-2/5 flex"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Reassess Core Values, Vision and Mission</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Review Organizational Structure</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Redesign Charters, Policies and Procedures</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Culture Consulting</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Training sessions held on Governance, Culture, Core Values & Ethics</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#366A00] mt-1 text-lg">▢</span>
-                  <span className="text-black">Training imparted to Operations Staff on Policies and Procedures</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-[400px] md:h-[450px] lg:h-[500px] w-full overflow-y-auto py-6 px-2">
+                {/* Row 1 */}
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Reassess Core Values, Vision and Mission</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Review Organizational Structure</span>
+                </div>
+                
+                {/* Row 2 */}
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Redesign Charters, Policies and Procedures</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Culture Consulting</span>
+                </div>
+                
+                {/* Row 3 */}
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Training sessions held on Governance, Culture, Core Values & Ethics</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#366A00] mt-0.5 text-sm flex-shrink-0">▶</span>
+                  <span className="text-gray-700 text-xs md:text-sm">Training imparted to Operations Staff on Policies and Procedures</span>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
         
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
 
+        {/* Risk Management Section */}
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#366A00] text-center mb-16">Risk Management</h2>
+          
+          <div className="mb-8">
+            <p className="text-gray-700 text-center max-w-4xl mx-auto">
+              We help in managing organizational uncertainties by designing Risk Management Framework, providing Risk Assurance and implementing Risk Management Solutions.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left side - Content */}
+            <motion.div 
+              className="w-full md:w-3/5 flex"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full py-6 px-2">
+                {/* Risk Management Framework */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Risk Management Framework</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Identify Key Risks of the organization</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Assist in preparing Risk Register / RCSA / ORSA</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Redesign the process and controls to mitigate the risk</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Trainings across the hierarchy on Risk culture and Controls</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Risk Assurance */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Risk Assurance</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Operational Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Information Security Risk / Cyber Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Fraud Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Quality Assurance including SOX Audits</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Risk Management Solutions */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Risk Management Solutions - Outsourcing</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">External Management of Operational Risk through an outsource agreement</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Implement the newly designed Risk Management Framework</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Coordinate Self Assessments</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">ERM / ORM Software Implementation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Implement Business Continuity Planning</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Stress Testing, ICAAP, ILAAP</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Right side - Image */}
+            <motion.div 
+              className="w-full md:w-2/5 flex"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+                <Image 
+                  src="/images/services/risk-management.jpg" 
+                  alt="Risk Management" 
+                  fill
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        
+        <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
+
+        {/* Compliance Section */}
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#366A00] text-center mb-16">Compliance</h2>
+          
+          <div className="mb-8">
+            <p className="text-gray-700 text-center max-w-4xl mx-auto">
+              We help you in actualizing Regulatory Compliance at Financial Institutions through our Regulatory Risk Management solutions and Risk Assurance
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left side - Image */}
+            <motion.div 
+              className="w-full md:w-2/5 flex"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+                <Image 
+                  src="/images/services/compliance.jpg" 
+                  alt="Compliance" 
+                  fill
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </motion.div>
+            
+            {/* Right side - Content */}
+            <motion.div 
+              className="w-full md:w-3/5 flex"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full py-6 px-2">
+                {/* Regulatory Risk Management */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Regulatory Risk Management</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Preparation of Compliance & AML Policies and Procedures</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Software Implementation for Compliance, AML and Sanctions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Implementation of Data Privacy laws (GDPR / PDPL)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Compliance and AML training</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Implementation of New Regulations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Regulatory Compliance Reporting</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Regulatory Risk Assurance */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Regulatory Risk Assurance</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Regulatory Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">AML, KYC and Sanctions Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Data Privacy Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Vendor Risk Assurance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">ORM Framework External Assessment as required by CBB</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">LRM External Assessment as required by CBB</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        
+        <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
+
+        {/* IT & IS Solutions Section */}
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#366A00] text-center mb-16">IT & IS Solutions</h2>
+          
+          <div className="mb-8">
+            <p className="text-gray-700 text-center max-w-4xl mx-auto">
+              We bring reliable and economical solutions to meet your needs in the related field of Information Technology Solutions and Information Security.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left side - Content */}
+            <motion.div 
+              className="w-full md:w-3/5 flex"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full py-6 px-2">
+                {/* Information Technology Solutions */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Information Technology Solutions</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Governance Risk and Controls (GRC) Software</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Operational Risk Management (ORM) Software</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">IFRS 9 Software</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Regulatory Risk Management & AML Software</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Accounting Software</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Information Security Solutions */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Information Security Solutions</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Information Security Risk Assessment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Information Security Policies and Procedures</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Information Security Outsourcing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Cyber Risk Assessment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Vulnerability Assessment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#366A00] mt-1 text-sm">▶</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Information Security Software Selection Advisory</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Right side - Image */}
+            <motion.div 
+              className="w-full md:w-2/5 flex"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+                <Image 
+                  src="/images/services/it-solutions.jpg" 
+                  alt="IT & IS Solutions" 
+                  fill
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        
     <Footer/>
     </main>
 

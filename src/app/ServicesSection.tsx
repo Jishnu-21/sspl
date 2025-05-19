@@ -152,7 +152,7 @@ const ServicesSection = () => {
       number: '02',
       title: 'GRC Solutions & Services',
       description: 'Our Governance, Risk, and Compliance solutions help organizations meet regulatory requirements while optimizing business performance. We provide integrated frameworks to manage compliance, mitigate risks, and ensure proper governance across all operations.',
-      url: '/services/risk-management'
+      url: '/services/grc-solutions-services'
     },
     {
       id: '03',
