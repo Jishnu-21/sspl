@@ -166,6 +166,12 @@ const Header = () => {
                       Predictive & Big Data Analytics
                     </Link>
                     <Link 
+                      href="/services/grc-solutions-services" 
+                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                    >
+                      GRC Solutions & Services
+                    </Link>
+                    <Link 
                       href="/services/media-analytics" 
                       className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >

@@ -19,9 +19,13 @@ interface ServiceItemProps {
   isActive: boolean;
   onClick: () => void;
   isMobile: boolean;
+  images: {
+    main: string;
+    secondary: string;
+  };
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, url, isActive, onClick, isMobile }) => {
+const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, url, isActive, onClick, isMobile, images }) => {
   return (
     <div className="mb-8 relative pl-3 md:pl-5">
       <div 
@@ -93,7 +97,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
                 transition={{ duration: 0.3 }}>
                 <div className="w-1/2 aspect-square max-w-[150px]">
                   <Image 
-                    src="/images/services/image1.png" 
+                    src={images.main} 
                     alt={`${title} - Main`} 
                     width={250} 
                     height={250}
@@ -102,7 +106,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
                 </div>
                 <div className="w-1/2 aspect-square max-w-[150px]">
                   <Image 
-                    src="/images/services/image1.png" 
+                    src={images.secondary} 
                     alt={`${title} - Secondary`} 
                     width={250} 
                     height={250}
@@ -145,63 +149,99 @@ const ServicesSection = () => {
       number: '01',
       title: 'Predictive & Big Data Analytics',
       description: 'Our big data analytics solutions help businesses harness the power of data to make strategic decisions. We provide comprehensive analytics tools that transform raw data into actionable insights, enabling you to predict trends, optimize operations, and drive growth.',
-      url: '/services/predictive-analysis'
+      url: '/services/predictive-analysis',
+      images: {
+        main: '/images/home/bigdata1.jpg',
+        secondary: '/images/services/predictive-analytics-2.jpg'
+      }
     },
     {
       id: '02',
       number: '02',
       title: 'GRC Solutions & Services',
       description: 'Our Governance, Risk, and Compliance solutions help organizations meet regulatory requirements while optimizing business performance. We provide integrated frameworks to manage compliance, mitigate risks, and ensure proper governance across all operations.',
-      url: '/services/grc-solutions-services'
+      url: '/services/grc-solutions-services',
+      images: {
+        main: '/images/services/grc1.jpg',
+        secondary: '/images/services/risk-management.jpg'
+      }
     },
     {
       id: '03',
       number: '03',
       title: 'Revenue Assurance',
       description: 'Our Revenue Assurance services help businesses identify and prevent revenue leakage. We implement comprehensive systems to monitor, detect, and correct issues that impact your bottom line, ensuring maximum revenue capture and financial integrity.',
-      url: '/services/revenue-assurance'
+      url: '/services/revenue-assurance',
+      images: {
+        main: '/images/services/revenue-assurance-1.jpg',
+        secondary: '/images/services/revenue-assurance-2.jpg'
+      }
     },
     {
       id: '04',
       number: '04',
       title: 'Operations & Finance Analytics',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/operations-finance'
+      url: '/services/operations-finance',
+      images: {
+        main: '/images/services/operations-finance-1.jpg',
+        secondary: '/images/services/operations-finance-2.jpg'
+      }
     },
     {
       id: '05',
       number: '05',
       title: 'Risk Management Audit Analytics',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/risk-management'
+      url: '/services/risk-management',
+      images: {
+        main: '/images/services/risk-management.jpg',
+        secondary: '/images/services/risk-audit-2.jpg'
+      }
     },
     {
       id: '06',
       number: '06',
       title: 'Fraud Management & Detection',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/fraud-management'
+      url: '/services/fraud-management',
+      images: {
+        main: '/images/services/fraud-management-1.jpg',
+        secondary: '/images/services/fraud-management-2.jpg'
+      }
     },
     {
       id: '07',
       number: '07',
       title: 'Data Migration',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/data-migration'
+      url: '/services/data-migration',
+      images: {
+        main: '/images/services/data-migration-1.jpg',
+        secondary: '/images/services/data-migration-2.jpg'
+      }
     },
     {
       id: '08',
       number: '08',
       title: 'Algorithm Auditing',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/algorithm-auditing'
+      url: '/services/algorithm-auditing',
+      images: {
+        main: '/images/services/algorithm-audit-1.jpg',
+        secondary: '/images/services/algorithm-audit-2.jpg'
+      }
     },
     {
       id: '09',
       number: '09',
       title: 'Media Analytics',
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-      url: '/services/media-analytics'
+      url: '/services/media-analytics',
+      images: {
+        main: '/images/services/media-analytics-1.jpg',
+        secondary: '/images/services/media-analytics-2.jpg'
+      }
     },
   ];
 
@@ -269,6 +309,7 @@ const ServicesSection = () => {
                       isActive={activeService === service.id}
                       onClick={() => handleToggle(service.id)}
                       isMobile={isMobile}
+                      images={service.images}
                     />
                   ))}
                 </div>
@@ -286,6 +327,7 @@ const ServicesSection = () => {
                       isActive={activeService === service.id}
                       onClick={() => handleToggle(service.id)}
                       isMobile={isMobile}
+                      images={service.images}
                     />
                   ))}
                 </div>
@@ -314,7 +356,7 @@ const ServicesSection = () => {
                   {/* First image - rectangular on desktop with increased height */}
                   <div className="w-full h-[350px] max-w-full">
                     <Image 
-                      src="/images/services/image1.png" 
+                      src={service.images.main} 
                       alt={`${service.title} - Main`} 
                       width={400} 
                       height={350}
@@ -326,7 +368,7 @@ const ServicesSection = () => {
                   {/* Second image - rectangular on desktop with increased height */}
                   <div className="w-full h-[350px] max-w-full">
                     <Image 
-                      src="/images/services/image1.png" 
+                      src={service.images.secondary} 
                       alt={`${service.title} - Secondary`} 
                       width={400} 
                       height={350}
