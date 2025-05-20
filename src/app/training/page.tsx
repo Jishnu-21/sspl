@@ -5,6 +5,7 @@ import Header from "../Header";
 import PageBanner from "../components/PageBanner";
 import Footer from "../Footer";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Sample video IDs for training rankings
 const trainingVideos = [
@@ -23,12 +24,17 @@ const Training = () => {
         subtitle="How to use the best out of Big Data Analytics Tools and Technology, to achieve More in Less Time, with Robotic Analytics."
       />
 
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#366A00] mb-4 sm:mb-6 whitespace-nowrap">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#366A00] mb-3 sm:mb-4 md:mb-6 px-2 sm:px-0 sm:whitespace-nowrap">
             Using Various Tools & Technologies
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed px-1 sm:px-2 md:px-0">
             Big Data Analytics is fast gaining grounds in the professional services
             related to Operations, Internal Audit, Risk Advisory, Fraud Management,
             and MIS Reporting. Industries are now relying more on the reports and
@@ -38,7 +44,7 @@ const Training = () => {
             and approach in a lucid way.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       <div className="h-[1px] w-full border-t border-gray-300 mb-6"></div>
 
@@ -98,8 +104,9 @@ const Training = () => {
                 alt="Big Data Analytics Training Illustration"
                 width={500}
                 height={500}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="rounded-md object-cover h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full"
                 layout="responsive"
-                className="rounded-md"
               />
             </div>
           </div>
