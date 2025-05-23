@@ -120,24 +120,24 @@ const WhyChooseSection = () => {
     <div className="h-[250vh] relative">
       <section 
         ref={sectionRef} 
-        className="sticky top-0 py-16 sm:py-20 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center"
+        className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center"
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
-            <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-10 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[600px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-6 md:gap-4 lg:gap-6 xl:gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[400px] sm:min-h-[450px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-2 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8">
               {/* Background gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D69] to-[#152d4f] opacity-50"></div>
-              <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[35%] md:mb-0 md:pl-0 lg:pl-6 xl:pl-8 2xl:pl-12 text-center md:text-left relative z-10">
-                <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white md:whitespace-nowrap inline-block pb-2 border-b-2 border-white/30 md:border-none">
+              <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[35%] mb-1 sm:mb-2 md:mb-0 md:pl-0 lg:pl-6 xl:pl-8 2xl:pl-12 text-center md:text-left relative z-10">
+                <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white inline-block pb-1 border-b-2 border-white/30 md:border-none md:whitespace-nowrap">
                   Why choose SSPL?
                 </h2>
               </div>
               
-              <div className="w-full md:w-[40%] lg:w-[45%] xl:w-[50%] px-2 sm:px-4 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 relative h-[350px] sm:h-[320px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] z-10">
+              <div className="w-full md:w-[40%] lg:w-[45%] xl:w-[50%] px-2 sm:px-4 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 relative h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
-                    className="absolute p-4 sm:p-5 lg:p-6 xl:p-8 2xl:p-10 rounded-md shadow-lg h-[350px] sm:h-[320px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] flex flex-col justify-center w-full"
+                    className="absolute p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 2xl:p-10 rounded-md shadow-lg h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] flex flex-col justify-center w-full"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
@@ -153,14 +153,14 @@ const WhyChooseSection = () => {
                     }}
                   >
                     <div className="text-white text-center flex flex-col items-center justify-center h-full">
-                      <div className="mb-6 text-4xl sm:text-5xl lg:text-6xl">
+                      <div className="mb-2 sm:mb-3 md:mb-6 text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
                         {React.createElement(contentItems[currentIndex].icon)}
                       </div>
-                      <div>
-                        <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight mb-4 sm:mb-4 lg:mb-5 xl:mb-6 font-poppins">
+                      <div className="px-1">
+                        <p className="text-base sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight mb-2 sm:mb-3 lg:mb-5 xl:mb-6 font-poppins">
                           {contentItems[currentIndex].title}
                         </p>
-                        <p className="text-[11px] sm:text-sm lg:text-base xl:text-base 2xl:text-lg leading-tight lg:leading-snug font-comfortaa max-w-md mx-auto">
+                        <p className="text-xs sm:text-sm lg:text-base xl:text-base 2xl:text-lg leading-tight sm:leading-snug lg:leading-snug font-comfortaa max-w-md mx-auto">
                           {contentItems[currentIndex].description}
                         </p>
                       </div>

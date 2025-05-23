@@ -93,11 +93,6 @@ const Footer = ({ className = '' }: FooterProps) => {
         {/* Bottom copyright section */}
         <div className="border-t border-gray-200 mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-500 text-xs sm:text-sm">Copyright {currentYear} SSPL. All Rights Reserved</p>
-          <div className="flex space-x-2 sm:space-x-4 mt-3 sm:mt-0">
-            <Link href="/terms" className="text-gray-500 hover:text-indigo-600 text-xs sm:text-sm">Terms and Conditions</Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/privacy" className="text-gray-500 hover:text-indigo-600 text-xs sm:text-sm">Privacy Policy</Link>
-          </div>
         </div>
       </div>
     </footer>
