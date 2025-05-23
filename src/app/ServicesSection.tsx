@@ -37,6 +37,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
         <div className="flex-grow">
           <h3 className={`${isActive ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'} font-bold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}>{title}</h3>
         </div>
+        
       </div>
       
       {/* Expandable content */}
@@ -239,8 +240,8 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/media-analytics',
       images: {
-        main: '/images/services/media-analytics-1.jpg',
-        secondary: '/images/services/media-analytics-2.jpg'
+        main: '/images/home/med1.jpg',
+        secondary: '/images/home/med2.jpg'
       }
     },
   ];

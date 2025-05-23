@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import GoToTop from "./components/GoToTop";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "SSPL - Security and Protection",
   description: "SSPL provides security and protection services",
+  viewport: "width=device-width, initial-scale=1.0"
 };
 
 export default function RootLayout({
@@ -14,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className="font-comfortaa antialiased">
         {children}
         <GoToTop />

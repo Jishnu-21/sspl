@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Toaster, toast } from 'react-hot-toast';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,11 +12,57 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    
+    // Basic validation
+    if (!formData.fullName || !formData.email || !formData.subject || !formData.message) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    const loadingToast = toast.loading('Sending your message...');
+    
+    try {
+      const response = await fetch('/api/about-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Message sent successfully!', { id: loadingToast });
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        toast.error(data.error || 'Failed to send message', { id: loadingToast });
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again later.', { id: loadingToast });
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,6 +74,7 @@ const ContactSection = () => {
 
   return (
     <section className="pt-20 pb-32 bg-gradient-to-b from-gray-200 via-gray-100 to-white">
+      <Toaster position="top-right" />
       <div className="absolute inset-0 bg-gradient-to-b from-gray-200/80 via-transparent to-transparent h-48"></div>
       <div className="container mx-auto px-4">
         <motion.h2 
@@ -99,7 +147,7 @@ const ContactSection = () => {
                     placeholder="Full Name"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black text-black"
                     required
                   />
                   <input
@@ -108,7 +156,7 @@ const ContactSection = () => {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black text-black"
                     required
                   />
                 </div>
@@ -119,7 +167,7 @@ const ContactSection = () => {
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black text-black"
                   />
                   <input
                     type="text"
@@ -127,7 +175,7 @@ const ContactSection = () => {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none bg-white/80 placeholder-black text-black"
                     required
                   />
                 </div>
@@ -137,7 +185,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none resize-none bg-white/80 placeholder-black"
+                  className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none resize-none bg-white/80 placeholder-black text-black"
                   required
                 />
                 <div className="flex items-start gap-2 mb-4">
@@ -154,9 +202,10 @@ const ContactSection = () => {
                 <div className="flex justify-center">
                   <button
                     type="submit"
-                    className="px-8 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className={`px-8 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300 cursor-pointer ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
-                    Send
+                    {isSubmitting ? 'Sending...' : 'Send'}
                   </button>
                 </div>
               </form>

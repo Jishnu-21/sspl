@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Toaster, toast } from 'react-hot-toast';
 
 const ScheduleDemo = () => {
+  // Add Toaster component at the top level of the component
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,29 +27,63 @@ const ScheduleDemo = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.contactNo || !formData.interestedDemo) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    const loadingToast = toast.loading('Submitting your request...');
+    
+    try {
+      const response = await fetch('/api/schedule-demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Demo request sent successfully!', { id: loadingToast });
+        setSubmitSuccess(true);
+        
+        // Reset form after success
+        setTimeout(() => {
+          setSubmitSuccess(false);
+          setFormData({
+            name: '',
+            email: '',
+            contactNo: '',
+            message: '',
+            interestedDemo: ''
+          });
+        }, 3000);
+      } else {
+        toast.error(data.error || 'Failed to send demo request', { id: loadingToast });
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again later.', { id: loadingToast });
+      console.error('Error submitting form:', error);
+    } finally {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-      
-      // Reset form after success
-      setTimeout(() => {
-        setSubmitSuccess(false);
-        setFormData({
-          name: '',
-          email: '',
-          contactNo: '',
-          message: '',
-          interestedDemo: ''
-        });
-      }, 3000);
-    }, 1500);
+    }
   };
 
   return (
     <section className="py-8 sm:py-12 md:py-16 lg:py-20" style={{ backgroundColor: '#0F1A42' }}>
+      <Toaster position="top-right" />
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 sm:gap-8 lg:gap-16">
           {/* Left side content */}

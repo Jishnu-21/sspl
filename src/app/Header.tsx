@@ -19,9 +19,7 @@ const Header = () => {
   
   // Close mobile menu when clicking outside
   useEffect(() => {
-    // Handle scroll locking and outside click
     if (mobileMenuOpen && mobileMenuRef.current) {
-      // Lock scroll
       document.body.style.overflow = 'hidden';
       
       const handleOutsideClick = (event: MouseEvent) => {
@@ -32,7 +30,6 @@ const Header = () => {
       
       document.addEventListener('mousedown', handleOutsideClick);
       return () => {
-        // Unlock scroll when menu closes
         document.body.style.overflow = '';
         document.removeEventListener('mousedown', handleOutsideClick);
       };
@@ -43,19 +40,16 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       
-      // Always hide top bar after scrolling down a bit
       if (currentScrollPos > 50) {
         setTopBarVisible(false);
       } else {
         setTopBarVisible(true);
       }
       
-      // Show/hide main header based on scroll direction
       const isScrollingUp = prevScrollPos > currentScrollPos;
       
       setPrevScrollPos(currentScrollPos);
       
-      // Only show header when at top or scrolling up
       if (currentScrollPos < 50) {
         setVisible(true);
       } else if (isScrollingUp !== visible) {
@@ -70,12 +64,10 @@ const Header = () => {
     };
   }, [prevScrollPos, visible]);
 
-  // Close services dropdown when clicking outside
   useOutsideClick(servicesDropdownRef as React.RefObject<HTMLDivElement>, () => {
     if (servicesDropdownOpen) setServicesDropdownOpen(false);
   });
   
-  // Close events dropdown when clicking outside
   useOutsideClick(eventsDropdownRef as React.RefObject<HTMLDivElement>, () => {
     if (eventsDropdownOpen) setEventsDropdownOpen(false);
   });
@@ -111,7 +103,7 @@ const Header = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-            <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1" />
+              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1" />
             </Link>
           </div>
           
@@ -284,7 +276,7 @@ const Header = () => {
             </svg>
           </button>
           
-          <div className="hidden md:block w-[140px]"></div> {/* Empty div to balance the layout - hidden on mobile */}
+          <div className="hidden md:block w-[140px]"></div>
         </div>
       </div>
       
@@ -316,15 +308,14 @@ const Header = () => {
             </Link>
           </div>
           
-          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Home</Link>
-          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">About us</Link>
-          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium">Products</Link>
+          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
+          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
           
           {/* Mobile Services Dropdown */}
           <div className="border-b border-gray-100">
             <button 
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
             >
               Services
@@ -341,28 +332,94 @@ const Header = () => {
             
             {/* Mobile Services Submenu */}
             <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${servicesDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
-              <Link href="/services/predictive-analysis" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/predictive-analysis" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Predictive & Big Data Analytics
               </Link>
-              <Link href="/services/media-analytics" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/grc-solutions-services" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
+                GRC Solutions & Services
+              </Link>
+              <Link 
+                href="/services/media-analytics" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Media Analytics
               </Link>
-              <Link href="/services/revenue-assurance" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/revenue-assurance" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Revenue Assurance
               </Link>
-              <Link href="/services/risk-management" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/risk-management" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Risk Management Audit Analytics
               </Link>
-              <Link href="/services/operations-finance" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/operations-finance" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Operations & Finance Analytics
               </Link>
-              <Link href="/services/fraud-management" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/fraud-management" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Fraud Management & Detection
               </Link>
-              <Link href="/services/data-migration" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/data-migration" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Data Migration
               </Link>
-              <Link href="/services/algorithm-auditing" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/services/algorithm-auditing" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Algorithm Auditing
               </Link>
             </div>
@@ -371,8 +428,7 @@ const Header = () => {
           {/* Mobile Events Dropdown */}
           <div className="border-b border-gray-100">
             <button 
-              onMouseEnter={() => setEventsDropdownOpen(true)}
-              onMouseLeave={() => setEventsDropdownOpen(false)}
+              onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
               className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
             >
               Events
@@ -389,16 +445,30 @@ const Header = () => {
             
             {/* Mobile Events Submenu */}
             <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${eventsDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
-              <Link href="/video-gallery" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/video-gallery" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Video Gallery
               </Link>
-              <Link href="/photo-gallery" className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100">
+              <Link 
+                href="/photo-gallery" 
+                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Image Gallery
               </Link>
             </div>
           </div>
           
-          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium">Contact us</Link>
+          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
         </div>
       </div>
     </header>
