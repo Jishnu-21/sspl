@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 const Testimonials = () => {
   const [visibleMajorClients, setVisibleMajorClients] = React.useState(2);
   const [visibleMinorClients, setVisibleMinorClients] = React.useState(4);
-  const [visibleTrainees, setVisibleTrainees] = React.useState(3);
+  const [visibleTrainees, setVisibleTrainees] = React.useState(4);
   
   const handleLoadMoreClients = () => {
     if (visibleMajorClients < majorClients.length) {
@@ -27,7 +27,7 @@ const Testimonials = () => {
   };
 
   const handleLoadMoreTrainees = () => {
-    setVisibleTrainees(prev => Math.min(prev + 3, traineeTestimonials.length));
+    setVisibleTrainees(prev => Math.min(prev + 4, traineeTestimonials.length));
   };
 
   return (

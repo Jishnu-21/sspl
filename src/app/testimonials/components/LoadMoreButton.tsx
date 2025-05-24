@@ -17,7 +17,7 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ onClick }) => {
     >
       <button
         onClick={onClick}
-        className="px-6 py-2 bg-white border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors duration-200 shadow-sm"
+        className="px-6 py-2 bg-white border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 hover:text-[#366A00] hover:border-[#366A00] hover:scale-105 transition-all duration-300 shadow-sm cursor-pointer"
       >
         Load more
       </button>
