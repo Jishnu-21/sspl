@@ -21,7 +21,7 @@ const MajorClientTestimonial: React.FC<MajorClientTestimonialProps> = ({ clients
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <div className="flex items-center mb-4">
-            <div className="w-16 h-8 relative mr-4">
+            <div className="w-36 h-24 relative mr-4 bg-white p-1 rounded">
               <Image
                 src={client.logo}
                 alt={`${client.company} logo`}

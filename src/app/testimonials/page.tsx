@@ -13,8 +13,8 @@ import PageBanner from '../components/PageBanner';
 import { motion } from 'framer-motion';
 
 const Testimonials = () => {
-  const [visibleMajorClients, setVisibleMajorClients] = React.useState(1);
-  const [visibleMinorClients, setVisibleMinorClients] = React.useState(2);
+  const [visibleMajorClients, setVisibleMajorClients] = React.useState(2);
+  const [visibleMinorClients, setVisibleMinorClients] = React.useState(4);
   const [visibleTrainees, setVisibleTrainees] = React.useState(3);
   
   const handleLoadMoreClients = () => {
@@ -55,7 +55,7 @@ const Testimonials = () => {
               What our clients are saying
             </motion.h1>
             
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col lg:flex-row gap-10">
               <MajorClientTestimonial clients={majorClients.slice(0, visibleMajorClients)} />
               <MinorClientTestimonial clients={minorClients.slice(0, visibleMinorClients)} />
             </div>
