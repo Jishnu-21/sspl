@@ -121,12 +121,16 @@ const ContactSection = () => {
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
               <h4 className="text-xl text-black font-semibold mb-4 text-center">Middle East</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
-              Flat No.33, Building No.114, Road No.383, Block No.316, Manama Centre, Manama, Bahrain</p>
+              Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain<br/>
+              Tel.: ‪+973-13622552‬ | M: ‪+973-3889 2927‬<br/>
+              E: info@ssplme.com | W: www.ssplme.com | CR: 120861-1</p>
             </div>
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
               <h4 className="text-xl text-black font-semibold mb-4 text-center">India</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
-              M-91, Connaught Circus, New Delhi - 110001</p>
+              M-91, 1st. Floor, Connaught Circus, New Delhi - 110001<br/>
+              Tel.: ‪+91-11-23765368‬ | M: ‪+91-98101 02927‬<br/>
+              E: info@sspl.net.in | W: www.sspl.net.in | CIN: U72300DL2008PTC182090</p>
             </div>
           </motion.div>
 

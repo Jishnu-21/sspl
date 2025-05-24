@@ -13,7 +13,7 @@ const Footer = ({ className = '' }: FooterProps) => {
   
   return (
     <footer className={`bg-white border-t border-gray-200 ${className}`}>
-      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12">
+      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-10">
         {/* Main footer content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - Logo and company info */}
@@ -72,26 +72,52 @@ const Footer = ({ className = '' }: FooterProps) => {
 
             <div className="mt-2 sm:mt-0">
               <h3 className="font-medium text-gray-900 mb-3 sm:mb-4">Contact us</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <IconMail size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">info@sspl.net.com</span>
-                </li>
-                <li className="flex items-start">
-                  <IconPhone size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">(+91) 11-23765968</span>
-                </li>
-                <li className="flex items-start">
-                  <IconMapPin size={16} className="text-gray-400 mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-gray-500 text-sm">M-91 Connaught Circus<br />New Delhi, 110001</span>
-                </li>
-              </ul>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* India Office */}
+                <div>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">India</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-start">
+                      <IconMapPin size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">M-91, 1st Floor, Connaught Circus, New Delhi</span>
+                    </li>
+                    <li className="flex items-start">
+                      <IconMail size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">info@sspl.net.in</span>
+                    </li>
+                    <li className="flex items-start">
+                      <IconPhone size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">Tel: ‪+91-11-23765368‬</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Middle East Office */}
+                <div>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Middle East</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-start">
+                      <IconMapPin size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">Bahrain Financial Harbour, East Tower, Bahrain</span>
+                    </li>
+                    <li className="flex items-start">
+                      <IconMail size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">info@ssplme.com</span>
+                    </li>
+                    <li className="flex items-start">
+                      <IconPhone size={14} className="text-gray-400 mt-0.5 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs">Tel: ‪+973-13622552‬</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom copyright section */}
-        <div className="border-t border-gray-200 mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center">
+        <div className="border-t border-gray-200 mt-6 sm:mt-8 md:mt-10 pt-3 sm:pt-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-500 text-xs sm:text-sm">Copyright {currentYear} SSPL. All Rights Reserved</p>
         </div>
       </div>

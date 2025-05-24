@@ -1,22 +1,59 @@
-import React from 'react';
+'use client'
+
+import React, { useState, useEffect } from 'react';
 
 const OfficeLocations = () => {
+  const [currentTime, setCurrentTime] = useState({
+    india: '',
+    middleEast: ''
+  });
+
+  useEffect(() => {
+    // Function to update time
+    const updateTime = () => {
+      // India time (UTC+5:30)
+      const indiaTime = new Date();
+      indiaTime.setHours(indiaTime.getHours());
+      indiaTime.setMinutes(indiaTime.getMinutes());
+      
+      // Bahrain time (UTC+3)
+      const bahrainTime = new Date();
+      bahrainTime.setHours(bahrainTime.getHours() - 2); // 2.5 hours behind India
+      bahrainTime.setMinutes(bahrainTime.getMinutes() - 30);
+
+      setCurrentTime({
+        india: indiaTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
+        middleEast: bahrainTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+      });
+    };
+
+    // Update time immediately and then every minute
+    updateTime();
+    const intervalId = setInterval(updateTime, 60000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
   const offices = [
     {
       country: 'INDIA',
-      time: '00:06',
-      address: 'M-91, Connaught Circus, New Delhi - 110001',
+      time: currentTime.india,
+      address: 'M-91, 1st. Floor, Connaught Circus, New Delhi - 110001',
       email: 'info@sspl.net.in',
       tel: '+91-11-23765368',
-      mobile: '+91-9818602927',
-      fax: '+91-11-43565927'
+      mobile: '+91-98101 02927',
+      fax: '+91-11-43565927',
+      cin: 'U72300DL2008PTC182090'
     },
     {
       country: 'MIDDLE EAST',
-      time: '00:06',
-      address: 'Flat No.33, Building No.114, Road No.383, Block No.316,\nManama Centre, Manama, Bahrain',
-      email: 'admin@sspl.com',
-      mobile: '+973-3889 5927 (Nishith Seth), +973-3920 6169 (BVS Prathap)'
+      time: currentTime.middleEast,
+      address: 'Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain',
+      email: 'info@ssplme.com',
+      tel: '+973-13622552',
+      mobile: '+973-3889 2927',
+      cr: '120861-1'
     }
   ];
 
@@ -46,11 +83,11 @@ const OfficeLocations = () => {
               <div key={index} className="border-t border-gray-200 mb-6 first:border-t-0 first:pt-0">
                 <div className="flex flex-col md:flex-row md:items-center py-6 border-b border-gray-100 w-full">
                   {/* Time - Hidden on mobile */}
-                  <div className="hidden md:flex items-center text-gray-400 w-24">
+                  <div className="hidden md:flex items-center text-gray-400 w-36">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-xs">{office.time}</span>
+                    <span className="text-xs">{office.time || 'Loading...'}</span>
                   </div>
                   
                   {/* Country */}
@@ -66,6 +103,8 @@ const OfficeLocations = () => {
                       {office.tel && <p className="mb-2">Tel : {office.tel}</p>}
                       {office.mobile && <p className="mb-2">Mobile: {office.mobile}</p>}
                       {office.fax && <p className="mb-2">Fax : {office.fax}</p>}
+                      {office.cin && <p className="mb-2">CIN: {office.cin}</p>}
+                      {office.cr && <p className="mb-2">CR: {office.cr}</p>}
                     </div>
                   </div>
                 </div>
