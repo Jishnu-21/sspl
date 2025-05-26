@@ -28,6 +28,32 @@ const CaseStudiesSection = () => {
     }
   }, [controls, isInView]);
 
+  // PDF file paths for each case study
+  const casePdfs: Record<string, string | { [key: string]: string }> = {
+    "Internal Audit Analytics": "/pdfs/internal-audit-analytics.pdf",
+    "Telecom Analytics": "/pdfs/telecom.pdf",
+    "Retail Analytics": "/pdfs/retail.pdf",
+    "Banking Analytics": "/pdfs/banking.pdf",
+    "Insurance Analytics": "/pdfs/insurance.pdf",
+    "Oil & Energy Analytics": "/pdfs/oil-energy-  .pdf",
+    "Media Analytics": "/pdfs/media.pdf",
+    "Data Migration": "/pdfs/data.pdf",
+    "Robotic Process Automation": {
+      "assureBI Arabic ChatBOT": "/pdfs/robot1.pdf",
+      "assureBI bankRPA": "/pdfs/robot2.pdf"
+    }
+  };
+
+  // Function to open PDF in a new tab
+  const openPdf = (title: string, subType?: string) => {
+    const pdfPath = casePdfs[title];
+    if (typeof pdfPath === 'string') {
+      window.open(pdfPath, '_blank');
+    } else if (typeof pdfPath === 'object' && subType && pdfPath[subType]) {
+      window.open(pdfPath[subType], '_blank');
+    }
+  };
+
   // Sample case studies data
   const caseStudies = [
     {
@@ -82,7 +108,8 @@ const CaseStudiesSection = () => {
       title: "Robotic Process Automation",
       description: "We offer following solutions of Robotic Process Automation including assureBI Arabic ChatBOT and assureBI bankRPA...",
       image: "/images/case-study/robot-analytics.jpg",
-      color: "bg-[#a4ce4e]"
+      color: "bg-[#a4ce4e]",
+      subtypes: ["assureBI Arabic ChatBOT", "assureBI bankRPA"]
     }
   ];
 
@@ -104,14 +131,36 @@ const CaseStudiesSection = () => {
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
         <p className="text-xs text-gray-600 mb-4">{study.description}</p>
         <div className="mt-auto">
-          <button className="flex items-center text-black text-xs font-medium">
-            View Case Study
-            <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center">
-              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+          {study.subtypes ? (
+            <div className="flex flex-col space-y-2">
+              {study.subtypes.map((subtype, idx) => (
+                <button 
+                  key={idx}
+                  onClick={() => openPdf(study.title, subtype)}
+                  className="flex items-center text-black text-xs font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+                >
+                  {subtype}
+                  <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+                    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </button>
+              ))}
             </div>
-          </button>
+          ) : (
+            <button 
+              onClick={() => openPdf(study.title)}
+              className="flex items-center text-black text-xs font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+            >
+              View Case Study
+              <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </button>
+          )}
         </div>
       </div>
     </div>
