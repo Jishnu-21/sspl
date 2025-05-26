@@ -99,26 +99,27 @@ const Header = () => {
         </div>
       </div>
       {/* Main Navigation */}
-      <div className="bg-white h-[70px] border-b border-[#eee] shadow-sm">
+      <div className="bg-white h-[60px] md:h-[65px] lg:h-[70px] border-b border-[#eee] shadow-sm">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1" />
+              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1 md:w-[140px] lg:w-[160px]" />
             </Link>
           </div>
           
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex justify-center flex-1">
-            <div className="flex gap-9 justify-center">
-              <Link href="/" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+            <div className="flex md:gap-5 lg:gap-9 justify-center md:ml-6 lg:ml-12">
+
+              <Link href="/" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Home
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
-              <Link href="/about" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/about" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 About us
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
-              <Link href="/products" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/products" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Products
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
@@ -130,7 +131,7 @@ const Header = () => {
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
                 <button 
-                  className="flex items-center group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                  className="flex items-center group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
                   Services
                   <svg 
@@ -147,61 +148,61 @@ const Header = () => {
                 
                 {/* Services Dropdown */}
                 <div 
-                  className={`absolute left-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${servicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                  className={`absolute left-0 mt-2 w-60 md:w-56 lg:w-64 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${servicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                   ref={servicesDropdownRef}
                 >
                   <div className="py-2">
                     <Link 
                       href="/services/predictive-analysis" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Predictive & Big Data Analytics
                     </Link>
                     <Link 
                       href="/services/grc-solutions-services" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       GRC Solutions & Services
                     </Link>
                     <Link 
                       href="/services/media-analytics" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Media Analytics
                     </Link>
                     <Link 
                       href="/services/revenue-assurance" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Revenue Assurance
                     </Link>
                     <Link 
                       href="/services/risk-management" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Risk Management Audit Analytics
                     </Link>
                     <Link 
                       href="/services/operations-finance" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Operations & Finance Analytics
                     </Link>
                     <Link 
                       href="/services/fraud-management" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Fraud Management & Detection
                     </Link>
                     <Link 
                       href="/services/data-migration" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Data Migration
                     </Link>
                     <Link 
                       href="/services/algorithm-auditing" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Algorithm Auditing
                     </Link>
@@ -216,7 +217,7 @@ const Header = () => {
                 onMouseLeave={() => setEventsDropdownOpen(false)}
               >
                 <button 
-                  className="flex items-center group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                  className="flex items-center group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
                   Events
                   <svg 
@@ -233,19 +234,19 @@ const Header = () => {
                 
                 {/* Events Dropdown */}
                 <div 
-                  className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${eventsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                  className={`absolute left-0 mt-2 w-48 md:w-44 lg:w-48 bg-white border border-gray-200 shadow-lg rounded-sm z-50 transition-all duration-200 ${eventsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                   ref={eventsDropdownRef}
                 >
                   <div className="py-2">
                     <Link 
                       href="/video-gallery" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Video Gallery
                     </Link>
                     <Link 
                       href="/photo-gallery" 
-                      className="block px-4 py-2 text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
+                      className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
                       Image Gallery
                     </Link>
@@ -253,7 +254,7 @@ const Header = () => {
                 </div>
               </div>
               
-              <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Contact us
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
@@ -276,7 +277,7 @@ const Header = () => {
             </svg>
           </button>
           
-          <div className="hidden md:block w-[140px]"></div>
+          <div className="hidden md:block md:w-[100px] lg:w-[140px]"></div>
         </div>
       </div>
       
@@ -308,15 +309,15 @@ const Header = () => {
             </Link>
           </div>
           
-          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
-          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
+          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
           
           {/* Mobile Services Dropdown */}
           <div className="border-b border-gray-100">
             <button 
               onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium"
             >
               Services
               <svg 
@@ -429,7 +430,7 @@ const Header = () => {
           <div className="border-b border-gray-100">
             <button 
               onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium"
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium"
             >
               Events
               <svg 
@@ -468,7 +469,7 @@ const Header = () => {
             </div>
           </div>
           
-          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
+          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
         </div>
       </div>
     </header>
