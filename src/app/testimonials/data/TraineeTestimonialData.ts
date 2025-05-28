@@ -37,7 +37,7 @@ export const traineeTestimonials: TraineeTestimonial[] = [
   },
   {
     id: 5,
-    avatar: '/images/testimonials/trainees/Harsh-Trivedi.jpg',
+    avatar: '/images/testimonials/trainees/Harsh_Trivedi.jpg',
     text: 'I, Harsh Trivedi worked as an intern at SSPL for a tenure of 1 month and was assigned tasks related to data science and robotic process automation.This experience has given me real zest of professional world and I had a great opportunity taking all this experiences with me in my career ahead. I really thank SSPL team for providing me with this learning opportunity',
     name: 'Mr.Harsh Trivedi',
     course: ''
