@@ -37,21 +37,21 @@ export const traineeTestimonials: TraineeTestimonial[] = [
   },
   {
     id: 5,
-    avatar: '/images/testimonials/trainees/harsh_trivedi.jpeg',
+    avatar: '/images/testimonials/trainees/Harsh-Trivedi.jpg',
     text: 'I, Harsh Trivedi worked as an intern at SSPL for a tenure of 1 month and was assigned tasks related to data science and robotic process automation.This experience has given me real zest of professional world and I had a great opportunity taking all this experiences with me in my career ahead. I really thank SSPL team for providing me with this learning opportunity',
     name: 'Mr.Harsh Trivedi',
     course: ''
   },
   {
     id: 6,
-    avatar: '/images/testimonials/trainees/bhumika-pushpa-rao.jpeg',
+    avatar: '/images/testimonials/trainees/Bhumika-Pushpa-Rao.jpg',
     text: 'I got trained on active campaign tool and worked on it in the same regard and processed emails and prepared flow charts depicting the client base.',
     name: 'Ms. Bhumika Pushpa Rao',
     course: ''
   },
   {
     id: 7,
-    avatar: '/images/testimonials/trainees/praidhi-mantri.jpeg',
+    avatar: '/images/testimonials/trainees/Praidhi-Mantri.jpg',
     text: 'I, Praidhi Mantri interned in SSPL for 3 months. During my tenure, I was assigned tasks related to Email Marketing, Presentation Making, Searching for Contact Details, Data of CFOs for the Webinar, Documentation of Inventory Analytics, Translation of File and SOW Report. It was a great experience for me working with the company and I have leaned a lot. Thank you for this opportunity.',
     name: 'Ms. Praidhi Mantri',
     course: ''
