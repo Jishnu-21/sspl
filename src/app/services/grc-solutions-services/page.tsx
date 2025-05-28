@@ -44,7 +44,7 @@ const Grc = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-lg">
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg bg-gray-50">
                 <Image 
                   src="/images/services/grc1.jpg" 
                   alt="Governance Framework" 
@@ -207,9 +207,9 @@ const Grc = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg bg-gray-50">
                 <Image 
-                  src="/images/services/risk-management.jpg" 
+                  src="/images/services/grc2.jpg" 
                   alt="Risk Management" 
                   fill
                   className="object-contain object-center"
@@ -235,15 +235,15 @@ const Grc = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Left side - Image */}
             <motion.div 
-              className="w-full md:w-2/5 flex"
+              className="w-full md:w-1/2 flex justify-center"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg bg-gray-50">
                 <Image 
-                  src="/images/services/compliance.jpg" 
+                  src="/images/services/grc3.jpg" 
                   alt="Compliance" 
                   fill
                   className="object-contain object-center"
@@ -254,7 +254,7 @@ const Grc = () => {
             
             {/* Right side - Content */}
             <motion.div 
-              className="w-full md:w-3/5 flex"
+              className="w-full md:w-1/2 flex"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -417,9 +417,9 @@ const Grc = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-lg">
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg bg-gray-50">
                 <Image 
-                  src="/images/services/it-solutions.jpg" 
+                  src="/images/services/grc4.jpg" 
                   alt="IT & IS Solutions" 
                   fill
                   className="object-contain object-center"

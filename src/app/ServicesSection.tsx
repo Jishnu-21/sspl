@@ -27,12 +27,12 @@ interface ServiceItemProps {
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, description, url, isActive, onClick, isMobile, images }) => {
   return (
-    <div className="mb-8 relative pl-3 md:pl-5">
+    <div className="mb-8 relative pl-2 md:pl-4">
       <div 
         className={`flex items-start cursor-pointer ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
         onClick={onClick}
       >
-        <div className="absolute -ml-6 md:-ml-8 font-bold text-gray-700 text-base md:text-xl">{number}</div>
+        <div className="absolute -ml-4 md:-ml-6 font-bold text-gray-700 text-base md:text-xl">{number}</div>
         <div className="w-5 font-bold text-gray-700 hidden md:block">—</div>
         <div className="flex-grow">
           <h3 className={`${isActive ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'} font-bold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}>{title}</h3>
@@ -46,7 +46,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
           isActive ? 'max-h-[800px] opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="pl-4 md:pl-12">
+        <div className="pl-2 md:pl-8">
           <p className="text-sm text-gray-600 mb-4">{description}</p>
           
           {id === '01' && (
@@ -92,7 +92,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, number, title, descriptio
           {isMobile && isActive && (
             <div className="md:hidden mt-4">
               <MotionDiv 
-                className="flex flex-row gap-4 justify-center"
+                className="flex flex-row gap-3 justify-start"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}>
@@ -263,7 +263,7 @@ const ServicesSection = () => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="py-12 md:py-16 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -285,10 +285,10 @@ const ServicesSection = () => {
         </MotionDiv>
         
         {/* Responsive layout container - Column on mobile, Row on desktop */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-6">
           {/* Services list - Full width on mobile, Half width on desktop */}
           <MotionDiv 
-            className="w-full md:w-1/2 relative" 
+            className="w-full md:w-1/2 relative pr-2 md:pr-4" 
             ref={servicesRef}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -338,7 +338,7 @@ const ServicesSection = () => {
           
           {/* Images column - Only visible on desktop */}
           <MotionDiv 
-            className="hidden md:block w-full md:w-1/2 md:order-last mb-6 md:mb-0"
+            className="hidden md:block w-full md:w-1/2 mb-6 md:mb-0 pl-4 md:pl-8 lg:pl-12"
             initial={{ opacity: 0, y: 30, x: 0 }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true }}
@@ -349,29 +349,29 @@ const ServicesSection = () => {
               activeService === service.id && (
                 <MotionDiv 
                   key={service.id} 
-                  className="relative w-full flex flex-col gap-2 justify-center mx-auto"
+                  className="relative w-full flex flex-col gap-4 justify-start"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}>
-                  {/* First image - rectangular on desktop with increased height */}
-                  <div className="w-full h-[350px] max-w-full">
+                  {/* First image - rectangular on desktop with improved alignment */}
+                  <div className="w-full h-[300px] md:h-[320px] lg:h-[350px]">
                     <Image 
                       src={service.images.main} 
                       alt={`${service.title} - Main`} 
-                      width={400} 
+                      width={500} 
                       height={350}
                       className="w-full h-full rounded-md shadow-md object-cover"
                       priority={activeService === '01'}
                     />
                   </div>
                   
-                  {/* Second image - rectangular on desktop with increased height */}
-                  <div className="w-full h-[350px] max-w-full">
+                  {/* Second image - rectangular on desktop with improved alignment */}
+                  <div className="w-full h-[300px] md:h-[320px] lg:h-[350px]">
                     <Image 
                       src={service.images.secondary} 
                       alt={`${service.title} - Secondary`} 
-                      width={400} 
+                      width={500} 
                       height={350}
                       className="w-full h-full rounded-md shadow-md object-cover"
                     />
