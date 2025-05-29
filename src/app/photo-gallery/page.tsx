@@ -58,12 +58,95 @@ const galleryImages = [
   { src: '/images/photo-gallery/g-39.jpg.jpeg', alt: 'SSPL Gallery Image 34' },
   { src: '/images/photo-gallery/g-40.jpg.jpeg', alt: 'SSPL Gallery Image 35' },
   
-  // Eighth row
-  { src: '/images/photo-gallery/g-41.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
-  { src: '/images/photo-gallery/g-42.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
-  { src: '/images/photo-gallery/g-43.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
-  { src: '/images/photo-gallery/g-44.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
-  { src: '/images/photo-gallery/g-45.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Ninth row
+  { src: '/images/photo-gallery/g-46.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-47.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-48.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-49.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-50.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Tenth row
+  { src: '/images/photo-gallery/g-22-1.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-52.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-53.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-54.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-55.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Eleventh row
+  { src: '/images/photo-gallery/g-56.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-57.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-58.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-59.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-60.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Twelfth row
+  { src: '/images/photo-gallery/g-61.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-62.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-63.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-64.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-65.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Thirteenth row
+  { src: '/images/photo-gallery/g-66.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-67.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-68.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-69.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-70.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Fourteenth row
+  { src: '/images/photo-gallery/g-71.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-72.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-73.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-74.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-75.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Fifteenth row
+  { src: '/images/photo-gallery/g-76.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-77.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-78.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-79.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-80.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Sixteenth row
+  { src: '/images/photo-gallery/g-81.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-82.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-83.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-84.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-85.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Seventeenth row
+  { src: '/images/photo-gallery/g-86.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-87.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-88.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-89.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-90.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Eighteenth row
+  { src: '/images/photo-gallery/g-91.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-92.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-93.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-94.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-95.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Nineteenth row
+  { src: '/images/photo-gallery/g-96.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-97.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-98.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-99.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-100.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Twentieth row
+  { src: '/images/photo-gallery/g-101.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-102.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-103.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-104.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-105.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Twenty-first row
+  { src: '/images/photo-gallery/g-106.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-107.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-201.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-202.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-203.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  { src: '/images/photo-gallery/g-204.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  // Twenty-second row
+  { src: '/images/photo-gallery/g-205.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
+  { src: '/images/photo-gallery/g-206.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
+  { src: '/images/photo-gallery/g-207.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
+  { src: '/images/photo-gallery/g-208.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
+  { src: '/images/photo-gallery/g-22-2.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  { src: '/images/photo-gallery/g-22-3.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  { src: '/images/photo-gallery/g-22-4.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  { src: '/images/photo-gallery/g-22-5.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
+  { src: '/images/photo-gallery/g-22-6.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
 ];
 
 const PhotoGallery = () => {
