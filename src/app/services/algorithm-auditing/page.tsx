@@ -12,7 +12,7 @@ const algorithmAuditing = () => {
     <main className="flex flex-col bg-white min-h-screen">
     <Header/>
     <PageBanner 
-      backgroundImage="/images/services/banners/algorithm-auditing.jpg"
+      backgroundImage="/images/services/banners/algorithm-auditing.png"
       title="Algorithm Auditing"
       subtitle="Test and verify the working of application"
     />

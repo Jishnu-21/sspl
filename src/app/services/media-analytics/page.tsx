@@ -14,7 +14,7 @@ const media = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner
-          backgroundImage="/images/services/banners/media-analytic.jpg"
+          backgroundImage="/images/services/banners/media-analytics.png"
           title="Media Analytics"
           subtitle="Media Analytics Enabling Software Solution"
         />

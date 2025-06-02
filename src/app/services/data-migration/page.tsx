@@ -13,7 +13,7 @@ const dataMigration = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner
-          backgroundImage="/images/services/banners/datamigration.jpg"
+          backgroundImage="/images/services/banners/datamigration.png"
           title="Data Migration"
           subtitle="Ensuring Seamless Transition of Your Critical Business Data"
         />

@@ -62,7 +62,7 @@ const revenue = () => {
     <main className="flex flex-col bg-white min-h-screen">
     <Header/>
     <PageBanner
-          backgroundImage="/images/services/banners/revenue-assurance.jpg"
+          backgroundImage="/images/services/banners/revenue-assurance.png"
           title="Revenue Assurance"
           subtitle="Refining Capabilities in Digital and Converge Space"
         />
