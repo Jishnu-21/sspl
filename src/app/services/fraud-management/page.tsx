@@ -88,7 +88,7 @@ const fraudManagement = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner
-          backgroundImage="/images/about/banner.png"
+          backgroundImage="/images/services/banners/fmd.jpg"
           title="Fraud Management & Detection"
           subtitle="Using Analytics to Protect Yourself"
         />

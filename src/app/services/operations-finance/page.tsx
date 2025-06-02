@@ -13,7 +13,7 @@ const OperationsFinance = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner
-          backgroundImage="/images/about/banner.png"
+          backgroundImage="/images/services/banners/ofa.jpg"
           title="Operations & Finance Analytics"
           subtitle="Can CFOs really use big data for Finance Analytics?"
         />

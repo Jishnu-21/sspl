@@ -53,7 +53,7 @@ const risk = () => {
         <main className="flex flex-col bg-white min-h-screen">
     <Header/>
     <PageBanner
-          backgroundImage="/images/about/banner.png"
+          backgroundImage="/images/services/banners/risk-management.jpg"
           title="Risk Management Audit Analytics"
           subtitle="Challenging to separate the hype from the reality, when it comes to analytics and risk management..."
         />
