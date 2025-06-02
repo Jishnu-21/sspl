@@ -11,7 +11,7 @@ const Products = () => {
       <main className="flex flex-col bg-white min-h-screen">
       <Header/>
       <PageBanner
-        backgroundImage="/images/about/banner.png"
+        backgroundImage="/images/products/product-banner.png"
         title="Products"
       />
       <ProductShowcase />

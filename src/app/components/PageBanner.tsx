@@ -24,7 +24,7 @@ const PageBanner = ({
   children
 }: PageBannerProps) => {
   return (
-    <section id="page-banner" className="page-banner relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] w-full mt-[105px]">
+    <section id="page-banner" className="page-banner relative h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] w-full mt-[105px]">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
