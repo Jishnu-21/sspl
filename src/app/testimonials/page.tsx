@@ -36,7 +36,7 @@ const Testimonials = () => {
         <Header />
         
         <PageBanner
-        backgroundImage="/images/about/banner.png"
+        backgroundImage="/images/testimonials/banner.jpg"
         title="Testimonials"
       />
         <section className="py-12 px-4 sm:px-6 lg:px-8">

@@ -167,7 +167,7 @@ const PhotoGallery = () => {
       <Header />
       <PageBanner
         title="Photo Gallery"
-        backgroundImage="/images/about/banner.png"
+        backgroundImage="/images/photo-gallery/banner.jpg"
       />
       
       <section className="py-16 md:py-20">

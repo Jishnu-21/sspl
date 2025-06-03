@@ -13,7 +13,7 @@ const Grc = () => {
     <main className="flex flex-col bg-white min-h-screen">
     <Header/>
     <PageBanner
-          backgroundImage="/images/about/banner.png"
+          backgroundImage="/images/services/banners/grc.jpg"
           title="GRC Solution & Services"
           subtitle="Test and verify the working of application"
         />

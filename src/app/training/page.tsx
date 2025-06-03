@@ -19,7 +19,7 @@ const Training = () => {
     <main className="flex flex-col bg-white min-h-screen">
       <Header />
       <PageBanner
-        backgroundImage="/images/about/banner.png"
+        backgroundImage="/images/training/banner.jpg"
         title="Training on Big Data Analytics"
         subtitle="How to use the best out of Big Data Analytics Tools and Technology, to achieve More in Less Time, with Robotic Analytics."
       />

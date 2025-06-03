@@ -10,19 +10,19 @@ const ArbutusAnalyticsSection = () => {
     {
       title: "Auditing Analytics",
       description: "Auditors are developing the technical capacity to analyze the vast amounts of information they have access to and are using advanced techniques to mine that data to build stronger audit methodologies and improve the bottom line.",
-      image: "/images/services/image1.png",
+      image: "/images/products/arbutus/Auditing Analytics.jpg",
       color: "bg-purple-400"
     },
     {
       title: "Telecom Analytics",
       description: "Telecom analytics include increasing sales, reducing churn and fraud, network management optimization, customer experience enhancement, improving risk management, automation of operational analytics and predictive analytics.",
-      image: "/images/services/image2.png",
+      image: "/images/products/arbutus/Telecom Analytics.jpg",
       color: "bg-purple-400"
     },
     {
       title: "Retail Analytics",
       description: "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions. Through our solutions, we provide...",
-      image: "/images/services/image3.png",
+      image: "/images/products/arbutus/Retail Analytics.jpg",
       color: "bg-purple-400"
     }
   ];
@@ -48,14 +48,6 @@ const ArbutusAnalyticsSection = () => {
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
         <p className="text-xs text-gray-600 mb-4">{study.description}</p>
         <div className="mt-auto">
-          <button className="flex items-center text-black text-xs font-medium">
-            Learn More
-            <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center">
-              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
-          </button>
         </div>
       </div>
     </motion.div>

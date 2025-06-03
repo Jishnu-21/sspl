@@ -10,7 +10,7 @@ const events = () => {
     <main className="flex flex-col bg-white min-h-screen">
     <Header />
     <PageBanner
-    backgroundImage="/images/about/banner.png"
+    backgroundImage="/images/events.webp"
     title="Events"
     subtitle="Get information about current & upcoming events"
     />

@@ -196,7 +196,7 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/risk-management',
       images: {
-        main: '/images/services/risk-management.jpg',
+        main: '/images/home/Risk Management Audit Analytics.jpg',
         secondary: '/images/services/risk-audit-2.jpg'
       }
     },
@@ -207,7 +207,7 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/fraud-management',
       images: {
-        main: '/images/services/fraud-management-1.jpg',
+        main: '/images/home/fraud management.jpg',
         secondary: '/images/services/fraud-management-2.jpg'
       }
     },
@@ -218,7 +218,7 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/data-migration',
       images: {
-        main: '/images/services/data-migration-1.jpg',
+        main: '/images/home/data migration.jpg',
         secondary: '/images/services/data-migration-2.jpg'
       }
     },
@@ -229,7 +229,7 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/algorithm-auditing',
       images: {
-        main: '/images/services/algorithm-audit-1.jpg',
+        main: '/images/home/Algorithm Auditing.jpg',
         secondary: '/images/services/algorithm-audit-2.jpg'
       }
     },
@@ -240,8 +240,8 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/media-analytics',
       images: {
-        main: '/images/home/med1.jpg',
-        secondary: '/images/home/med2.jpg'
+        main: '/images/home/media analytics.jpg',
+        secondary: '/images/home/media analytics.jpg'
       }
     },
   ];
@@ -349,31 +349,20 @@ const ServicesSection = () => {
               activeService === service.id && (
                 <MotionDiv 
                   key={service.id} 
-                  className="relative w-full flex flex-col gap-4 justify-start"
+                  className="relative w-full flex flex-col justify-center h-full"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}>
-                  {/* First image - rectangular on desktop with improved alignment */}
-                  <div className="w-full h-[300px] md:h-[320px] lg:h-[350px]">
+                  {/* Single larger image with increased height */}
+                  <div className="w-full h-[700px] md:h-[750px] lg:h-[800px] flex items-center justify-center">
                     <Image 
                       src={service.images.main} 
-                      alt={`${service.title} - Main`} 
-                      width={500} 
-                      height={350}
-                      className="w-full h-full rounded-md shadow-md object-cover"
+                      alt={service.title} 
+                      width={600} 
+                      height={700}
+                      className="max-w-full max-h-full rounded-md shadow-lg object-contain"
                       priority={activeService === '01'}
-                    />
-                  </div>
-                  
-                  {/* Second image - rectangular on desktop with improved alignment */}
-                  <div className="w-full h-[300px] md:h-[320px] lg:h-[350px]">
-                    <Image 
-                      src={service.images.secondary} 
-                      alt={`${service.title} - Secondary`} 
-                      width={500} 
-                      height={350}
-                      className="w-full h-full rounded-md shadow-md object-cover"
                     />
                   </div>
                 </MotionDiv>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const AboutBanner = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[url('/images/about/banner.png')] bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-black/40">
+    <section className="relative min-h-screen flex items-center justify-center bg-[url('/images/about/banner.jpg')] bg-contain bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-black/40">
       {/* Content Container */}
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 

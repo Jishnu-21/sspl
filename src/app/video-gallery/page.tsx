@@ -200,7 +200,7 @@ const VideoGallery = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner 
-          backgroundImage="/images/about/banner.png"
+          backgroundImage="/images/video gallery.jpg"
           title="Video Gallery"
         />
         
