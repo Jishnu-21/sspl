@@ -131,7 +131,7 @@ const CaseStudiesSection = () => {
         <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
         <p className="text-xs text-gray-600 mb-4">{study.description}</p>
         <div className="mt-auto">
-          {study.subtypes ? (
+          {study.subtypes && (
             <div className="flex flex-col space-y-2">
               {study.subtypes.map((subtype, idx) => (
                 <button 
@@ -148,7 +148,8 @@ const CaseStudiesSection = () => {
                 </button>
               ))}
             </div>
-          ) : (
+          )}
+          {!study.subtypes && index !== 0 && (
             <button 
               onClick={() => openPdf(study.title)}
               className="flex items-center text-black text-xs font-medium hover:text-[#366A00] transition-colors cursor-pointer"

@@ -48,7 +48,6 @@ const Footer = ({ className = '' }: FooterProps) => {
             <h3 className="font-medium text-gray-900 mb-2 sm:mb-3 md:mb-4">Product</h3>
             <ul className="space-y-1 sm:space-y-2">
               <li><Link href="/products" className="text-gray-500 hover:text-indigo-600 text-sm">Products</Link></li>
-              <li><Link href="/events" className="text-gray-500 hover:text-indigo-600 text-sm">Events</Link></li>
               <li><Link href="/training" className="text-gray-500 hover:text-indigo-600 text-sm">Training</Link></li>
               <li><Link href="/partner" className="text-gray-500 hover:text-indigo-600 text-sm">Become a Partner</Link></li>
               <li><Link href="/events" className="text-gray-500 hover:text-indigo-600 text-sm">Events</Link></li>
