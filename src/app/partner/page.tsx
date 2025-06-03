@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
-import PageBanner from '../components/PageBanner'
+import ShortPageBanner from '../components/ShortPageBanner'
 import PartnerForm from './PartnerForm'
 import ClientMarquee from '../components/ClientMarquee'
 
@@ -10,7 +10,7 @@ const partner = () => {
     <>
     <main className="flex flex-col bg-white min-h-screen">
       <Header/>
-      <PageBanner
+      <ShortPageBanner
         title="Become a Partner"
         backgroundImage="/images/partner.jpg"
         subtitle='SSPL is represented by a worldwide network of partners.'

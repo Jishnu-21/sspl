@@ -9,7 +9,7 @@ import MajorClientTestimonial from './components/MajorClientTestimonial';
 import MinorClientTestimonial from './components/MinorClientTestimonial';
 import TraineeTestimonialComponent from './components/TraineeTestimonial';
 import LoadMoreButton from './components/LoadMoreButton';
-import PageBanner from '../components/PageBanner';
+import ShortPageBanner from '../components/ShortPageBanner';
 import { motion } from 'framer-motion';
 
 const Testimonials = () => {
@@ -35,7 +35,7 @@ const Testimonials = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header />
         
-        <PageBanner
+        <ShortPageBanner
         backgroundImage="/images/testimonials/banner.jpg"
         title="Testimonials"
       />

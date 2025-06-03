@@ -3,7 +3,7 @@
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
-import PageBanner from '../components/PageBanner'
+import ShortPageBanner from '../components/ShortPageBanner'
 import WebinarForm from './WebinarForm'
 
 const Webinar = () => {
@@ -11,7 +11,7 @@ const Webinar = () => {
     <>
     <main className="flex flex-col bg-white min-h-screen">
     <Header />
-    <PageBanner
+    <ShortPageBanner
         backgroundImage="/images/webinar.jpg"
         title="Webinar"
         subtitle="Series of Webinars from the Industry Experts"

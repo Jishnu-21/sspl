@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import PageBanner from '../components/PageBanner';
+import ShortPageBanner from '../components/ShortPageBanner';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -199,7 +199,7 @@ const VideoGallery = () => {
     <>
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
-        <PageBanner 
+        <ShortPageBanner 
           backgroundImage="/images/video gallery.jpg"
           title="Video Gallery"
         />

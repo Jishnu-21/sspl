@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "../Header";
-import PageBanner from "../components/PageBanner";
+import ShortPageBanner from "../components/ShortPageBanner";
 import Footer from "../Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -18,7 +18,7 @@ const Training = () => {
   return (
     <main className="flex flex-col bg-white min-h-screen">
       <Header />
-      <PageBanner
+      <ShortPageBanner
         backgroundImage="/images/training/banner.jpg"
         title="Training on Big Data Analytics"
         subtitle="How to use the best out of Big Data Analytics Tools and Technology, to achieve More in Less Time, with Robotic Analytics."
