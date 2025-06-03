@@ -92,7 +92,7 @@ const StatsSection = () => {
               transition={{ duration: 0.5 }}
             >
               <Image
-                src="/images/services/image1.png"
+                src="/images/home/sspl-community.png"
                 alt="SSPL Analytics"
                 width={500}
                 height={500}

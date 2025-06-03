@@ -152,8 +152,8 @@ const ServicesSection = () => {
       description: 'Our big data analytics solutions help businesses harness the power of data to make strategic decisions. We provide comprehensive analytics tools that transform raw data into actionable insights, enabling you to predict trends, optimize operations, and drive growth.',
       url: '/services/predictive-analysis',
       images: {
-        main: '/images/home/bigdata1.jpg',
-        secondary: '/images/services/predictive-analytics-2.jpg'
+        main: '/images/home/bigdata.png',
+        secondary: '/images/home/bigdata.jpg'
       }
     },
     {
@@ -163,7 +163,7 @@ const ServicesSection = () => {
       description: 'Our Governance, Risk, and Compliance solutions help organizations meet regulatory requirements while optimizing business performance. We provide integrated frameworks to manage compliance, mitigate risks, and ensure proper governance across all operations.',
       url: '/services/grc-solutions-services',
       images: {
-        main: '/images/services/grc1.jpg',
+        main: '/images/home/grc.png',
         secondary: '/images/services/risk-management.jpg'
       }
     },
@@ -174,7 +174,7 @@ const ServicesSection = () => {
       description: 'Our Revenue Assurance services help businesses identify and prevent revenue leakage. We implement comprehensive systems to monitor, detect, and correct issues that impact your bottom line, ensuring maximum revenue capture and financial integrity.',
       url: '/services/revenue-assurance',
       images: {
-        main: '/images/services/revenue-assurance-1.jpg',
+        main: '/images/home/assurance.png',
         secondary: '/images/services/revenue-assurance-2.jpg'
       }
     },
@@ -185,8 +185,8 @@ const ServicesSection = () => {
       description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
       url: '/services/operations-finance',
       images: {
-        main: '/images/services/operations-finance-1.jpg',
-        secondary: '/images/services/operations-finance-2.jpg'
+        main: '/images/home/global-analytics.png',
+        secondary: '/images/home/global-analytics.jpg'
       }
     },
     {
