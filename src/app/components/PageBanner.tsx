@@ -35,7 +35,7 @@ const PageBanner = ({
           className="object-fit-cover"
           sizes="100vw"
         />
-        <div className={`absolute inset-0 bg-black/50`}></div>
+        <div className={`absolute inset-0 bg-black/70`}></div>
       </div>
 
       {/* Content Container */}
