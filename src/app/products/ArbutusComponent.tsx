@@ -1,9 +1,39 @@
 'use client'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ArbutusAnalyticsSection from './ArbutusAnalyticsSection';
 
 const ArbutusComponent = () => {
+  // Testimonials data
+  const testimonials = [
+    {
+      quote: "We use your product and it works great. We'll be adding more to this automation process on the table, and I'd love to get training from your end.",
+      name: "Mr. Mohandes Liem",
+      title: "Group IT Manager (Information Technology)",
+      company: "A.A. Abunayyan Trading Company of Bahrain",
+      logo: '/images/testimonials/yk.jpg',
+    },
+    {
+      quote: "We have been using Arbutus Analyzer tool since 2020 and to summarize our experience we can conclude as below: The organization has been utilizing the tool on recurring basis. The overall design of logics and output makes it user friendly. The interface is quite seamless and helps in deriving targeted outliers. In addition to that, post-sale customer experience is satisfying.",
+      name: "Maitree Panchal",
+      title: "Finance",
+      company: "Birla Sun Life Insurance",
+      logo: '/images/testimonials/birla.gif',
+    },
+
+  ];
+
+  // State for current testimonial
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000); // Change testimonial every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
   return (
     <div>
       <div className="mb-6">
@@ -13,28 +43,73 @@ const ArbutusComponent = () => {
         </p>
       </div>
       
-      {/* Arbutus Image */}
+      {/* Company Logos */}
       <div className="mb-8 flex justify-center">
-        <div className="border-4 border-blue-100 p-1 max-w-2xl">
-          <img 
-            src="/images/products/arbutus-analytics.jpg" 
-            alt="Arbutus Analytics Dashboard" 
-            className="w-full h-auto"
-          />
+        <div className="relative h-[120px] w-[240px] flex items-center justify-center">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: currentIndex === index ? 1 : 0,
+                display: currentIndex === index ? 'flex' : 'none'
+              }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 flex items-center justify-center"
+            >
+              <div className="border-2 border-blue-100 rounded-lg p-4 bg-white shadow-sm">
+                <img 
+                  src={testimonial.logo} 
+                  alt={`${testimonial.company} logo`} 
+                  className="h-[80px] w-auto object-contain"
+                />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
       
-      {/* Testimonial */}
-      <div className="mb-8 text-center max-w-3xl mx-auto">
-        <p className="text-gray-800 italic mb-2">
-          "We use your product and it works great. We'll be adding more to this automation process on the table, and I'd love to get training from your end."
-        </p>
-        <p className="text-gray-700 font-medium">
-          Mr. Mohandes Liem, Group IT Manager (Information Technology)
-        </p>
-        <p className="text-gray-600 text-sm">
-          A.A. Abunayyan Trading Company of Bahrain
-        </p>
+      {/* Testimonials Carousel */}
+      <div className="mb-12 text-center max-w-3xl mx-auto relative overflow-hidden py-8">      
+        <div className="relative h-[200px] flex items-center justify-center">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: currentIndex === index ? 1 : 0,
+                y: currentIndex === index ? 0 : 20,
+                display: currentIndex === index ? 'block' : 'none'
+              }}
+              transition={{ duration: 0.5 }}
+              className="absolute w-full px-4"
+            >
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+                <p className="text-gray-800 italic mb-4 text-lg">
+                  "{testimonial.quote}"
+                </p>
+                <p className="text-gray-700 font-medium">
+                  {testimonial.name}, {testimonial.title}
+                </p>
+                <p className="text-gray-600 text-sm">
+                  {testimonial.company}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        {/* Dots indicator */}
+        <div className="flex justify-center space-x-2 mt-4">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${currentIndex === index ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
       
       {/* Why Arbutus for Analytics section */}
