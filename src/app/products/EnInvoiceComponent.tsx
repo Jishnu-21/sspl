@@ -1,18 +1,8 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const EnInvoiceComponent = () => {
-  // Dashboard images for the grid
-  const dashboards = [
-    { id: 1, image: '/images/products/dashboard-placeholder.jpg' },
-    { id: 2, image: '/images/products/dashboard-placeholder.jpg' },
-    { id: 3, image: '/images/products/dashboard-placeholder.jpg' },
-    { id: 4, image: '/images/products/dashboard-placeholder.jpg' },
-    { id: 5, image: '/images/products/dashboard-placeholder.jpg' },
-    { id: 6, image: '/images/products/dashboard-placeholder.jpg' },
-  ];
 
   return (
     <div>
@@ -210,14 +200,14 @@ const EnInvoiceComponent = () => {
           <div className="grid grid-cols-2 gap-6 mt-8">
             <div className="bg-white border border-gray-300 p-4 rounded-md shadow-sm flex items-center justify-center aspect-square">
               <img 
-                src="/images/products/qr-code-sample-1.png" 
+                src="/images/products/envoice/qr1.jpg" 
                 alt="QR Code Sample 1" 
                 className="max-w-full max-h-full object-contain"
               />
             </div>
             <div className="bg-white border border-gray-300 p-4 rounded-md shadow-sm flex items-center justify-center aspect-square">
               <img 
-                src="/images/products/qr-code-sample-2.png" 
+                src="/images/products/envoice/qr2.jpg" 
                 alt="QR Code Sample 2" 
                 className="max-w-full max-h-full object-contain"
               />

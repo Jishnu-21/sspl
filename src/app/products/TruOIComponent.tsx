@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import PartnerMarquee from './PartnerMarquee';
 
 const TruOIComponent = () => {
   const firstRowRef = useRef<HTMLDivElement>(null);
@@ -139,148 +140,8 @@ const TruOIComponent = () => {
               </h3>
             </div>
             
-            {/* Partner logos marquee */}
-            <div className="overflow-hidden w-full whitespace-nowrap">
-              <div 
-                className="flex gap-10 md:gap-16 lg:gap-20 partner-marquee"
-                style={{ 
-                  width: "fit-content",
-                  display: "flex",
-                  willChange: "transform"
-                }}
-              >
-                {/* First group of logos */}
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/premium.png" 
-                      alt="Premium" 
-                      width={100} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/burger.png" 
-                      alt="Burger" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-                
-                {/* Second group of logos */}
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/jsc.png" 
-                      alt="JSC" 
-                      width={180} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/senior-helper.jpg" 
-                      alt="Senior Helper" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-                
-                {/* Third group of logos */}
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/partners/coxhealth.png" 
-                      alt="Cox Health" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/partners/bristol-myers.png" 
-                      alt="Bristol Myers" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-                
-                {/* Fourth group of logos */}
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/premium.png" 
-                      alt="Premium" 
-                      width={100} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/burger.png" 
-                      alt="Burger" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-                
-                {/* Duplicate groups for seamless looping */}
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/jsc.png" 
-                      alt="JSC" 
-                      width={180} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/senior-helper.jpg" 
-                      alt="Senior Helper" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex gap-8 items-center">
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/coxhealth.svg" 
-                      alt="Cox Health" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="grayscale hover:grayscale-0 transition-all duration-300">
-                    <Image 
-                      src="/images/products/tru-oi/logo/nasa.png" 
-                      alt="Bristol Myers" 
-                      width={150} 
-                      height={60}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <PartnerMarquee />
+           
           </div>
         </section>
       </div>

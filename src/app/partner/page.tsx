@@ -15,6 +15,8 @@ const partner = () => {
         backgroundImage="/images/partner.jpg"
         subtitle='SSPL is represented by a worldwide network of partners.'
       />
+
+      
     
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="mb-8">
@@ -26,6 +28,8 @@ const partner = () => {
           </div>
         </div>
       </section>
+
+
       
       {/* Full width divider line */}
       <div className="w-full border-t border-gray-300"></div>
