@@ -31,13 +31,13 @@ const Footer = ({ className = '' }: FooterProps) => {
               <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandTwitter size={20} />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
+              <Link href="https://www.linkedin.com/company/ssplindia/ " className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandLinkedin size={20} />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandInstagram size={20} />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
+              <Link href="https://www.youtube.com/@sspladvanceanalyticsgrc2906 " className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandYoutube size={20} />
               </Link>
             </div>

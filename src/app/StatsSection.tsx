@@ -83,21 +83,70 @@ const StatsSection = () => {
     <section ref={ref} className="py-24 pb-32 bg-white text-black">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
         <div className="flex flex-col md:flex-row gap-16">
-          {/* Left side - Image */}
-          <div className="md:w-1/3 lg:w-5/12 flex items-center">
+          {/* Left side - Image matching right section height */}
+          <div className="md:w-1/3 lg:w-5/12 flex">
             <motion.div
-              className="bg-gray-200 w-full h-full"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+              className="bg-gray-200 w-full h-full relative overflow-hidden rounded-lg"
+              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
+              animate={{ 
+                opacity: inView ? 1 : 0, 
+                scale: inView ? 1 : 0.9,
+                rotateY: inView ? 0 : -15
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
             >
-              <Image
-                src="/images/home/sspl-community.png"
-                alt="SSPL Analytics"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover"
-                style={{ minHeight: '100%' }}
+              <motion.div
+                className="w-full h-full"
+                animate={inView ? { 
+                  rotateY: [0, 1, 0, -1, 0],
+                  scale: [1, 1.01, 1, 1.01, 1]
+                } : {}}
+                transition={{ 
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1.2
+                }}
+              >
+                <Image
+                  src="/images/home/sspl-community.png"
+                  alt="SSPL Analytics"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              
+              {/* Floating elements for extra visual interest */}
+              <motion.div
+                className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-70"
+                animate={{ 
+                  y: [0, -10, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
+                }}
+              />
+              <motion.div
+                className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-500 rounded-full opacity-70"
+                animate={{ 
+                  y: [0, 8, 0],
+                  scale: [1, 0.8, 1]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1.5
+                }}
               />
             </motion.div>
           </div>
