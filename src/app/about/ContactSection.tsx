@@ -114,7 +114,7 @@ const ContactSection = () => {
                 We would love to hear from you
               </h3>
               <button className="px-6 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300">
-                Call us +973-8889 2927
+                Call us +91-11-23765368
               </button>
             </div>
 
