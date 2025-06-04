@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="flex flex-col">
           <main className="flex flex-col bg-white min-h-screen">
+      <main className="">
       <Header/>
-      <main className="pt-0">
         <Banner/>
         <div className="relative bg-white mt-screen w-full">
           <ServicesSection/>

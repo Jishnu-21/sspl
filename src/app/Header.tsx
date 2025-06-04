@@ -73,7 +73,7 @@ const Header = () => {
   });
 
   return (
-    <header className="fixed top-0 w-full z-50 border-t-[3px] border-[#222] bg-white box-border font-poppins transition-transform duration-300" 
+    <header className="fixed top-0 w-full z-50  bg-white box-border font-poppins transition-transform duration-300" 
       style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
       {/* Top Bar */}
       <div 
@@ -116,7 +116,7 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
               <Link href="/about" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
-                About us
+                About
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
               <Link href="/products" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
@@ -255,7 +255,7 @@ const Header = () => {
               </div>
               
               <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
-                Contact us
+                Contact
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
             </div>

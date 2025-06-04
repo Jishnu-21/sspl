@@ -120,11 +120,11 @@ const WhyChooseSection = () => {
     <div className="h-[250vh] relative">
       <section 
         ref={sectionRef} 
-        className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center"
+        className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center justify-center"
       >
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] text-center">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
-            <div className="flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[400px] sm:min-h-[450px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+            <div className="flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[400px] sm:min-h-[450px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
               {/* Background gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D69] to-[#152d4f] opacity-50"></div>
               <div className="w-full md:w-[40%] lg:w-[35%] xl:w-[35%] mb-1 sm:mb-2 md:mb-0 md:pl-0 lg:pl-6 xl:pl-8 2xl:pl-12 text-center md:text-left relative z-10">
@@ -137,7 +137,7 @@ const WhyChooseSection = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
-                    className="absolute p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 2xl:p-10 rounded-md shadow-lg h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] flex flex-col justify-center w-full"
+                    className="absolute p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 2xl:p-10 rounded-md shadow-lg h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] flex flex-col justify-center items-center w-full"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
