@@ -19,7 +19,7 @@ const AboutContent = () => {
   return (
     <section className="py-8 sm:py-10 md:py-12 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-6 sm:mb-7 md:mb-8 text-comfortaa">Who We Are</h2>
+        <h2 className="text-base sm:text-base md:text-base font-semibold text-black text-center mb-6 sm:mb-7 md:mb-8 text-comfortaa">Who We Are</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-5 md:gap-6">
           {cards.map((card, index) => (
@@ -33,7 +33,7 @@ const AboutContent = () => {
             >
               <div className="h-auto sm:h-[240px] md:h-auto lg:h-[240px] p-4 sm:p-5 md:p-6 rounded-lg border border-[#1B3D69] bg-white 
                 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden flex items-center">
-                <p className="text-gray-700 text-[14px] sm:text-[14px] md:text-[14px] lg:text-[15px] leading-[1.4] sm:leading-[1.4] md:leading-[1.6] lg:leading-[1.5] font-light text-center w-full">
+                <p className="text-gray-700 text-[11px] sm:text-[11px] md:text-[11px] lg:text-[12px] leading-[1.4] sm:leading-[1.4] md:leading-[1.6] lg:leading-[1.5] font-light text-center w-full">
                   {card.text}
                 </p>
               </div>
