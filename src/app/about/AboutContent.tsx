@@ -19,7 +19,7 @@ const AboutContent = () => {
   return (
     <section className="py-8 sm:py-10 md:py-12 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-base sm:text-base md:text-base font-semibold text-black text-center mb-6 sm:mb-7 md:mb-8 text-comfortaa">Who We Are</h2>
+        <h2 className="text-base sm:text-base md:text-5xl font-semibold text-black text-center mb-6 sm:mb-7 md:mb-8 text-comfortaa">Who We Are</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-5 md:gap-6">
           {cards.map((card, index) => (
