@@ -77,7 +77,7 @@ const Header = () => {
       style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
       {/* Top Bar */}
       <div 
-        className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[35px] md:h-[35px] opacity-100' : 'h-0 opacity-0'}`}
+        className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[38px] md:h-[38px] opacity-100' : 'h-0 opacity-0'}`}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 flex flex-wrap justify-between">
           <div className="flex items-center gap-2">

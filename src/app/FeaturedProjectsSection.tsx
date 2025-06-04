@@ -11,7 +11,7 @@ const CaseStudiesSection = () => {
   const sectionRef = useRef(null);
   // Adjust the inView settings to prevent reanimation and flickering
   const isInView = useInView(sectionRef, { 
-    once: false, // Keep false to animate every time it enters viewport
+    once: true, // Set to true to animate only once when it first enters viewport
     amount: 0.2,
     margin: "-100px 0px -100px 0px" // Add margin to trigger animation before fully in view
   });
