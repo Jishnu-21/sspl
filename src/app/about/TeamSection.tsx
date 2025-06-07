@@ -39,7 +39,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
               viewport={{ once: true, margin: "-50px" }}
               className="group relative h-[400px] sm:h-[450px] md:h-[480px] lg:h-[520px] overflow-hidden transition-all duration-500 
                 hover:h-[440px] sm:hover:h-[490px] md:hover:h-[520px] lg:hover:h-[560px] 
-                hover:-translate-y-5 hover:z-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)] bg-gray-100"
+                hover:-translate-y-5 hover:z-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)] bg-gray-100 rounded-lg"
             >
               <div className="relative h-full w-full">
                 {/* Image */}
@@ -48,7 +48,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full rounded-lg"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     priority
                   />

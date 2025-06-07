@@ -43,6 +43,14 @@ const WhyChooseSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<number>(0);
 
+  const sectionStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '50px 0', // Add gap at top and bottom
+  };
+
   // Detect when the component is in the viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -120,7 +128,8 @@ const WhyChooseSection = () => {
     <div className="h-[250vh] relative">
       <section 
         ref={sectionRef} 
-        className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen flex items-center justify-center"
+        style={sectionStyle}
+        className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen"
       >
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] text-center">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>

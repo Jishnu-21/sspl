@@ -101,16 +101,15 @@ const Header = () => {
       {/* Main Navigation */}
       <div className="bg-white h-[60px] md:h-[65px] lg:h-[70px] border-b border-[#eee] shadow-sm">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center overflow-hidden">
             <Link href="/" className="flex items-center">
-              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1 md:w-[140px] lg:w-[160px]" />
+              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={160} height={55} className="py-1 md:w-auto lg:w-auto" />
             </Link>
           </div>
           
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex justify-center flex-1">
-            <div className="flex md:gap-5 lg:gap-9 justify-center md:ml-6 lg:ml-12">
-
+            <div className="flex justify-center md:gap-5 lg:gap-9">
               <Link href="/" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Home
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>

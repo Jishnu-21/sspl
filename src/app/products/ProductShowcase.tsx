@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import AssureBIComponent from './AssureBIComponent';
 import ArbutusComponent from './ArbutusComponent';
 import GenericProductComponent from './GenericProductComponent';
@@ -168,32 +169,27 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                     <div className="h-12 sm:h-14 md:h-16 flex items-center mb-3">
                       {product.id === 'assureBI' && (
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-bold text-xl sm:text-2xl md:text-3xl">assure</span>
-                          <span className="text-green-600 font-bold italic text-xl sm:text-2xl md:text-3xl">BI</span>
+                          <Image src="/images/products/logos/logo1.png" alt="AssureBI Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'arbutus' && (
                         <div className="flex items-center">
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-orange-500 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">ARBUTUS</span>
+                          <Image src="/images/products/logos/logo2.png" alt="Arbutus Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'truOI' && (
                         <div className="flex items-center">
-                          <span className="text-blue-700 font-bold text-xl sm:text-2xl md:text-3xl">tru</span>
-                          <span className="text-blue-400 font-bold text-xl sm:text-2xl md:text-3xl">OI</span>
+                          <Image src="/images/products/logos/logo3.png" alt="TruOI Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'enInvoice' && (
                         <div className="flex items-center">
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-green-500 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">en<span className="text-green-500">Invoice</span></span>
+                          <Image src="/images/products/logos/logo4.png" alt="EnInvoice Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'barnowl' && (
                         <div className="flex items-center">
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full bg-gray-400 mr-2"></div>
-                          <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl">BARNOWL</span>
+                          <Image src="/images/products/logos/logo5.png" alt="Barnowl Logo" width={150} height={150} />
                         </div>
                       )}
                     </div>
