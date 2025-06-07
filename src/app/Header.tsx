@@ -79,7 +79,7 @@ const Header = () => {
       <div 
         className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[38px] md:h-[38px] opacity-100' : 'h-0 opacity-0'}`}
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 flex flex-wrap justify-between">
+        <div className="container mx-auto flex flex-wrap justify-between">
           <div className="flex items-center gap-2">
             <span className="flex items-center text-[#222]">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -99,11 +99,11 @@ const Header = () => {
         </div>
       </div>
       {/* Main Navigation */}
-      <div className="bg-white h-[60px] md:h-[65px] lg:h-[70px] border-b border-[#eee] shadow-sm">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full flex items-center justify-between">
+      <div className="bg-white h-[65px] md:h-[65px] lg:h-[70px] border-b border-[#eee] shadow-sm">
+        <div className="container mx-auto  h-full flex items-center justify-between">
           <div className="flex items-center overflow-hidden">
             <Link href="/" className="flex items-center">
-              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" width={120} height={40} className="py-1 md:w-auto lg:w-auto" />
+              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" layout="intrinsic" width={140} height={40} className="py-1 md:w-auto lg:w-auto max-h-[40px]" />
             </Link>
           </div>
           
