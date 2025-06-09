@@ -14,4 +14,7 @@ const VideoGalleryLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+export const viewport = 'width=device-width, initial-scale=1';
+
+
 export default  VideoGalleryLayout; // Default export of the layout component

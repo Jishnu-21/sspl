@@ -14,4 +14,6 @@ const ContactLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+export const viewport = 'width=device-width, initial-scale=1';
+
 export default  ContactLayout; // Default export of the layout component

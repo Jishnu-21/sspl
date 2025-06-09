@@ -19,3 +19,5 @@ export default function ServicesLayout({
     </ResponsiveWrapper>
   )
 }
+
+export const viewport = 'width=device-width, initial-scale=1';

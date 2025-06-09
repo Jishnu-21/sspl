@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: "SSPL - Security and Protection",
   description: "SSPL provides security and protection services",
-  viewport: "width=device-width, initial-scale=1.0"
 };
 
 export default function RootLayout({
@@ -28,3 +27,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport = 'width=device-width, initial-scale=1';
