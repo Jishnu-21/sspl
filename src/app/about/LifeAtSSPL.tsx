@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const images = Array.from({ length: 20 }, (_, i) => ({
-  src: `/images/about/life/${i + 1}.jpg`,
+  src: `/images/about/life/${i + 1}.jpeg`,
   alt: `Life at SSPL ${i + 1}`
 }));
 
