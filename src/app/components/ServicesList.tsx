@@ -190,7 +190,7 @@ const ServicesList = () => {
                               src={service.image}
                               alt={service.title}
                               fill
-                              className="object-contain"
+                              className="object-cover"
                             />
                           </div>
                           <div className="p-4 bg-white/90 backdrop-blur-sm">
@@ -288,7 +288,7 @@ const ServicesList = () => {
                             src={service.image}
                             alt={service.title}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                           />
                         </div>
                         <div className="p-2 xs:p-3 bg-white/90 backdrop-blur-sm">
