@@ -30,7 +30,6 @@ const CTASection = () => {
       y: 50
     },
     visible: { 
-      opacity: 0.4, 
       scale: 1,
       y: 0,
       transition: {
@@ -119,26 +118,26 @@ const CTASection = () => {
         >
           {/* Background circles with enhanced animations */}
           <motion.div 
-            variants={circleVariants}
-            className="absolute top-[-15%] left-[5%] w-40 h-40 rounded-full bg-[#1a3666]"
+            variants={{ ...circleVariants, visible: { ...circleVariants.visible, opacity: 0.2 } }}
+            className="absolute top-[-15%] left-[5%] w-40 h-40 rounded-full bg-blue-200/20 backdrop-blur-xl"
           ></motion.div>
           
           <motion.div 
-            variants={circleVariants}
+            variants={{ ...circleVariants, visible: { ...circleVariants.visible, opacity: 0.3 } }}
             transition={{ delay: 0.2 }}
-            className="absolute bottom-[-20%] right-[5%] w-72 h-72 rounded-full bg-[#1a3666]"
+            className="absolute bottom-[-20%] right-[5%] w-72 h-72 rounded-full bg-blue-200/20 backdrop-blur-xl"
           ></motion.div>
           
           <motion.div 
-            variants={circleVariants}
+            variants={{ ...circleVariants, visible: { ...circleVariants.visible, opacity: 0.5 } }}
             transition={{ delay: 0.4 }}
-            className="absolute top-[40%] right-[25%] w-12 h-12 rounded-full bg-[#1a3666]"
+            className="absolute top-[40%] right-[25%] w-12 h-12 rounded-full bg-blue-200/20 backdrop-blur-xl"
           ></motion.div>
           
           <motion.div 
-            variants={circleVariants}
+            variants={{ ...circleVariants, visible: { ...circleVariants.visible, opacity: 0.6 } }}
             transition={{ delay: 0.6 }}
-            className="absolute bottom-[25%] left-[20%] w-6 h-6 rounded-full bg-[#1a3666]"
+            className="absolute bottom-[25%] left-[20%] w-6 h-6 rounded-full bg-blue-200/20 backdrop-blur-xl"
           ></motion.div>
           
           {/* Content with staggered animations */}
@@ -158,7 +157,17 @@ const CTASection = () => {
                 transition={{ staggerChildren: 0.03, delayChildren: 0.2 }}
                 className="inline-block"
               >
-                {splitText("Transform Your Data, Transform Your Business")}
+                {splitText("Transform Your Data,")}
+              </motion.span>
+              <br />
+              <motion.span
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ staggerChildren: 0.03, delayChildren: 0.3 }}
+                className="inline-block"
+              >
+                {splitText("Transform Your Business")}
               </motion.span>
             </motion.h2>
             
