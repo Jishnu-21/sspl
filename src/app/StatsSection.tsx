@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useSpring, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import UpArrow from './components/UpArrow';
 
@@ -11,32 +11,247 @@ interface StatItemProps {
   description: string;
 }
 
-const StatItem: React.FC<StatItemProps & { delay: number }> = ({ title, value, description, delay }) => {
+// Custom hook for number animation
+const useNumberAnimation = (target: number, inView: boolean, delay: number = 0, isSpecial: boolean = false) => {
+  const [displayValue, setDisplayValue] = useState(0);
+  
+  useEffect(() => {
+    if (inView && !isSpecial) {
+      const timer = setTimeout(() => {
+        let start = 0;
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        
+        const counter = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            setDisplayValue(target);
+            clearInterval(counter);
+          } else {
+            setDisplayValue(Math.floor(start));
+          }
+        }, 16);
+        
+        return () => clearInterval(counter);
+      }, delay * 200);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [inView, target, delay, isSpecial]);
+  
+  return displayValue;
+};
+
+const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = ({ 
+  title, 
+  value, 
+  description, 
+  delay,
+  inView 
+}) => {
+  // Handle special case for 24/7
+  const isSpecialValue = value === '24/7';
+  
+  if (isSpecialValue) {
+    return (
+      <motion.div
+        className="flex flex-col text-black"
+        initial={{ opacity: 0, y: 30, scale: 0.9 }}
+        animate={{ 
+          opacity: inView ? 1 : 0, 
+          y: inView ? 0 : 30,
+          scale: inView ? 1 : 0.9
+        }}
+        transition={{ 
+          duration: 0.6, 
+          delay: delay * 0.15,
+          ease: [0.25, 0.46, 0.45, 0.94]
+        }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.2 }
+        }}
+      >
+        <motion.div 
+          className="relative pb-3 mb-4"
+          initial={{ width: 0 }}
+          animate={{ width: inView ? "100%" : 0 }}
+          transition={{ duration: 0.8, delay: delay * 0.15 + 0.3 }}
+        >
+          <motion.div 
+            className="text-sm font-semibold text-gray-700 uppercase tracking-wider"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ delay: delay * 0.15 + 0.2 }}
+          >
+            {title}
+          </motion.div>
+          <motion.div 
+            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: inView ? "100%" : 0 }}
+            transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
+          />
+        </motion.div>
+        
+        <div className="flex items-start mb-6 justify-between">
+          <motion.div
+            className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ 
+              scale: inView ? 1 : 0.5,
+              opacity: inView ? 1 : 0
+            }}
+            transition={{ 
+              duration: 0.5, 
+              delay: delay * 0.15 + 0.3,
+              type: "spring",
+              stiffness: 200
+            }}
+          >
+            {value}
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, rotate: -90, scale: 0 }}
+            animate={{ 
+              opacity: inView ? 1 : 0,
+              rotate: inView ? 0 : -90,
+              scale: inView ? 1 : 0
+            }}
+            transition={{ 
+              duration: 0.4, 
+              delay: delay * 0.15 + 0.6,
+              type: "spring"
+            }}
+          >
+            <UpArrow className="text-green-500 mt-2" delay={delay + 0.3} />
+          </motion.div>
+        </div>
+        
+        <motion.div 
+          className="text-sm text-gray-600 max-w-[220px] leading-relaxed"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ 
+            opacity: inView ? 1 : 0,
+            y: inView ? 0 : 10
+          }}
+          transition={{ 
+            duration: 0.4, 
+            delay: delay * 0.15 + 0.5
+          }}
+        >
+          {description}
+        </motion.div>
+      </motion.div>
+    );
+  }
+  
+  // Extract number from value string (e.g., "25+" -> 25)
+  const numericValue = parseInt(value.replace(/[^\d]/g, '')) || 0;
+  const suffix = value.replace(/[\d]/g, '');
+  
+  const animatedNumber = useNumberAnimation(numericValue, inView, delay);
+  
   return (
     <motion.div
       className="flex flex-col text-black"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: delay * 0.2 }}
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      animate={{ 
+        opacity: inView ? 1 : 0, 
+        y: inView ? 0 : 30,
+        scale: inView ? 1 : 0.9
+      }}
+      transition={{ 
+        duration: 0.6, 
+        delay: delay * 0.15,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }}
+      whileHover={{
+        scale: 1.02,
+        transition: { duration: 0.2 }
+      }}
     >
-      <div className="relative pb-2 mb-2">
-        <div className="text-sm font-medium text-black">{title}</div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gray-300"></div>
+      <motion.div 
+        className="relative pb-3 mb-4"
+        initial={{ width: 0 }}
+        animate={{ width: inView ? "100%" : 0 }}
+        transition={{ duration: 0.8, delay: delay * 0.15 + 0.3 }}
+      >
+        <motion.div 
+          className="text-sm font-semibold text-gray-700 uppercase tracking-wider"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ delay: delay * 0.15 + 0.2 }}
+        >
+          {title}
+        </motion.div>
+        <motion.div 
+          className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: inView ? "100%" : 0 }}
+          transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
+        />
+      </motion.div>
+      
+      <div className="flex items-start mb-6 justify-between">
+        <motion.div
+          className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ 
+            scale: inView ? 1 : 0.5,
+            opacity: inView ? 1 : 0
+          }}
+          transition={{ 
+            duration: 0.5, 
+            delay: delay * 0.15 + 0.3,
+            type: "spring",
+            stiffness: 200
+          }}
+        >
+          <motion.span>{animatedNumber}</motion.span>
+          <span>{suffix}</span>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, rotate: -90, scale: 0 }}
+          animate={{ 
+            opacity: inView ? 1 : 0,
+            rotate: inView ? 0 : -90,
+            scale: inView ? 1 : 0
+          }}
+          transition={{ 
+            duration: 0.4, 
+            delay: delay * 0.15 + 0.6,
+            type: "spring"
+          }}
+        >
+          <UpArrow className="text-green-500 mt-2" delay={delay + 0.3} />
+        </motion.div>
       </div>
-      <div className="flex items-start mb-4 justify-between">
-        <span className="text-6xl font-bold text-black">{value}</span>
-        <UpArrow className="text-black mt-2" delay={delay + 0.3} />
-      </div>
-      <div className="text-sm text-gray-600 max-w-[200px] leading-relaxed">{description}</div>
+      
+      <motion.div 
+        className="text-sm text-gray-600 max-w-[220px] leading-relaxed"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ 
+          opacity: inView ? 1 : 0,
+          y: inView ? 0 : 10
+        }}
+        transition={{ 
+          duration: 0.4, 
+          delay: delay * 0.15 + 0.5
+        }}
+      >
+        {description}
+      </motion.div>
     </motion.div>
   );
 };
 
 const StatsSection = () => {
-  const [visibleStats, setVisibleStats] = useState(0);
   const { ref, inView } = useInView({
-    triggerOnce: true, // Only trigger the animation once
-    threshold: 0.3, // Trigger when 30% of the section is visible
+    triggerOnce: true,
+    threshold: 0.3,
   });
 
   const stats = [
@@ -48,68 +263,61 @@ const StatsSection = () => {
     {
       title: 'Clients',
       value: '100+',
-      description: 'years of active, market-driven experience under our belt.',
+      description: 'satisfied clients who trust our expertise and solutions.',
     },
     {
       title: 'Global Analytics Hub',
       value: '24/7',
-      description: 'years of active, market-driven experience under our belt.',
+      description: 'continuous monitoring and support for your business needs.',
     },
     {
       title: 'Projects',
-      value: '100+',
-      description: 'years of active, market-driven experience under our belt.',
+      value: '150+',
+      description: 'successful projects delivered across various industries.',
     },
   ];
 
-  useEffect(() => {
-    if (inView) {
-      // Start showing stats one by one with a delay when the section is in view
-      const interval = setInterval(() => {
-        setVisibleStats((prev) => {
-          if (prev < stats.length) {
-            return prev + 1;
-          }
-          clearInterval(interval);
-          return prev;
-        });
-      }, 200); // Show a new stat every 200ms
-
-      return () => clearInterval(interval);
-    }
-  }, [inView]);
-
   return (
-    <section ref={ref} className="py-24 pb-32 bg-white text-black">
+    <section ref={ref} className="py-24 pb-32 bg-gradient-to-br from-gray-50 to-white text-black overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
-        <div className="flex flex-col md:flex-row gap-16">
-          {/* Left side - Image matching right section height */}
-          <div className="md:w-1/3 lg:w-5/12 flex">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          {/* Left side - Image loads when in view */}
+          <motion.div 
+            className="lg:w-5/12 w-full max-w-md lg:max-w-none mx-auto"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ 
+              opacity: inView ? 1 : 0,
+              x: inView ? 0 : -50
+            }}
+            transition={{ 
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
+          >
             <motion.div
-              className="bg-gray-200 w-full h-full relative overflow-hidden rounded-lg"
-              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
-              animate={{ 
-                opacity: inView ? 1 : 0, 
-                scale: inView ? 1 : 0.9,
-                rotateY: inView ? 0 : -15
-              }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200"
               whileHover={{ 
                 scale: 1.02,
+                rotateY: 2,
+                rotateX: 2,
                 transition: { duration: 0.3 }
+              }}
+              style={{
+                transformStyle: "preserve-3d",
+                perspective: "1000px"
               }}
             >
               <motion.div
-                className="w-full h-full"
+                className="w-full h-full relative"
                 animate={inView ? { 
-                  rotateY: [0, 1, 0, -1, 0],
-                  scale: [1, 1.01, 1, 1.01, 1]
+                  rotateY: [0, 0.5, 0, -0.5, 0],
+                  scale: [1, 1.005, 1, 1.005, 1]
                 } : {}}
                 transition={{ 
-                  duration: 8,
+                  duration: 10,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: 1.2
+                  delay: 1.5
                 }}
               >
                 <Image
@@ -119,52 +327,83 @@ const StatsSection = () => {
                   height={500}
                   className="w-full h-full object-cover"
                 />
+                
+                {/* Overlay gradient for depth */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-white/10 pointer-events-none" />
               </motion.div>
               
-              {/* Floating elements for extra visual interest */}
+              {/* Enhanced floating elements */}
               <motion.div
-                className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-70"
+                className="absolute -top-3 -right-3 w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-lg"
                 animate={{ 
-                  y: [0, -10, 0],
-                  scale: [1, 1.2, 1]
+                  y: [0, -15, 0],
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360]
                 }}
                 transition={{ 
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                   delay: 0.5
                 }}
               />
               <motion.div
-                className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-500 rounded-full opacity-70"
+                className="absolute -bottom-3 -left-3 w-4 h-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-lg"
                 animate={{ 
-                  y: [0, 8, 0],
-                  scale: [1, 0.8, 1]
+                  y: [0, 12, 0],
+                  scale: [1, 0.7, 1],
+                  rotate: [0, -180, -360]
                 }}
                 transition={{ 
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: 1.5
+                  delay: 2
+                }}
+              />
+              <motion.div
+                className="absolute top-1/2 -right-2 w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg"
+                animate={{ 
+                  x: [0, 8, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
                 }}
               />
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* Right side - Stats */}
-          <div className="md:w-2/3 lg:w-7/12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-              {stats.slice(0, visibleStats).map((stat, index) => (
+          {/* Right side - Stats appear when in view */}
+          <motion.div 
+            className="lg:w-7/12 w-full"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ 
+              opacity: inView ? 1 : 0,
+              x: inView ? 0 : 50
+            }}
+            transition={{ 
+              duration: 0.6,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+              {stats.map((stat, index) => (
                 <StatItem
                   key={index}
                   title={stat.title}
                   value={stat.value}
                   description={stat.description}
-                  delay={index * 0.2}
+                  delay={index}
+                  inView={inView}
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

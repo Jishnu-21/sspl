@@ -119,7 +119,7 @@ const CaseStudiesSection = () => {
       key={index}
       className="flex-shrink-0 w-80 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className="h-48 overflow-hidden relative rounded-t-xl">
+      <div className="h-64 overflow-hidden relative rounded-t-xl">
         <Image 
           src={study.image} 
           alt={study.title}
@@ -231,7 +231,7 @@ const CaseStudiesSection = () => {
             </div>
             
             {/* Right side scrollable cards */}
-            <div className="md:w-2/3 overflow-hidden">
+            <div className="md:w-2/3 overflow-hidden -mt-16">
               <div className="relative">
                 <Carousel items={cardItems} />
               </div>

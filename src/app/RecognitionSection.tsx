@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -156,7 +157,7 @@ const RecognitionSection: React.FC = () => {
                 {marqueeItems.map((item) => (
                   <div
                     key={item.logo}
-                    className="relative flex-shrink-0 w-[150px] h-[100px] sm:w-[200px] sm:h-[130px] md:w-[220px] md:h-[150px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
+                    className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
                     onMouseEnter={() => setHoveredItem(item.logo)}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
@@ -165,7 +166,7 @@ const RecognitionSection: React.FC = () => {
                         src={item.logo}
                         alt={item.hoverDetails.title}
                         fill
-                        sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 220px"
+                        sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1024px) 340px, 380px"
                         className="object-contain p-2"
                       />
                     </div>
@@ -187,7 +188,7 @@ const RecognitionSection: React.FC = () => {
           }
 
           .animate-marquee {
-            animation: marquee 20s linear infinite;
+            animation: marquee 55s linear infinite;
           }
 
           .animate-marquee:hover {
@@ -200,13 +201,13 @@ const RecognitionSection: React.FC = () => {
 
           @media (max-width: 768px) {
             .animate-marquee {
-              animation: marquee 15s linear infinite;
+              animation: marquee 45s linear infinite;
             }
           }
 
           @media (max-width: 640px) {
             .animate-marquee {
-              animation: marquee 12s linear infinite;
+              animation: marquee 38s linear infinite;
             }
           }
         `}</style>
