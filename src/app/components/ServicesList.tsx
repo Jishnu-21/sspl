@@ -119,14 +119,16 @@ const ServicesList = () => {
         <h2 
           ref={titleRef}
           className={`
-          text-3xl sm:text-4xl md:text-5xl 
-          font-bold text-center mb-16
+          text-center mb-16
           relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
           `}
         >
-          <span className="relative z-10 text-black">Services</span>
+          <div className="relative z-10 inline-block">
+            <span className="block text-5xl sm:text-6xl md:text-7xl font-light text-gray-300 leading-none">What we do</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-black -mt-4 sm:-mt-6 md:-mt-8 leading-none">Services</span>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-blue-900/10 blur-3xl transform -skew-y-6"></div>
         </h2>
         
