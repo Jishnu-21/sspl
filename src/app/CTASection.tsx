@@ -144,7 +144,7 @@ const CTASection = () => {
           <div className="relative z-10 max-w-3xl mx-auto">
             {/* Main heading with letter-by-letter animation */}
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+              className="text-xl md:text-4xl lg:text-5xl font-bold mb-6"
               variants={textVariants}
               initial="hidden"
               whileInView="visible"
