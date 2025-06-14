@@ -8,7 +8,7 @@ import CaseStudiesSection from "./FeaturedProjectsSection";
 import RecognitionSection from "./RecognitionSection";
 import CTASection from "./CTASection";
 import Footer from "./Footer";
-
+import ServicesList from "./components/ServicesList";
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -17,7 +17,7 @@ export default function Home() {
       <Header/>
         <Banner/>
         <div className="relative bg-white mt-screen w-full">
-          <ServicesSection/>
+        <ServicesList/>
           <WhyChooseSection/>
           <StatsSection/>
           <ClientMarquee/>

@@ -18,9 +18,7 @@ const Footer = ({ className = '' }: FooterProps) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
           {/* Column 1 - Logo and company info */}
           <div className="space-y-3 sm:space-y-4">
-            <div className="flex items-center">
-              <img src='/images/logos/logo2.jpg' alt="SSPL Logo" className="h-10 sm:h-12" />
-            </div>
+         
             <p className="text-gray-500 text-xs sm:text-sm md:text-sm">
             No matter what questions you have, we're here to work with you on your terms.
             </p>
