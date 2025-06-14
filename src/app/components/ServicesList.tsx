@@ -114,7 +114,7 @@ const ServicesList = () => {
       transition-colors duration-300
       w-full mt-8 sm:mt-10 md:mt-10
     `} ref={containerRef}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
         {/* Animated title */}
         <h2 
           ref={titleRef}
