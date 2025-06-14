@@ -108,7 +108,7 @@ const CTASection = () => {
 
   return (
     <section className="py-24 pb-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
         <motion.div 
           className="bg-[#0f2756] rounded-lg overflow-hidden relative py-28 px-8 text-center text-white h-[400px] flex items-center justify-center"
           variants={containerVariants}
