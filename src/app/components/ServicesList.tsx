@@ -119,9 +119,9 @@ const ServicesList = () => {
         <h2 
           ref={titleRef}
           className={`
-            text-3xl sm:text-4xl md:text-5xl 
-            font-bold text-center mb-16
-            relative
+          text-3xl sm:text-4xl md:text-5xl 
+          font-bold text-center mb-16
+          relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
           `}
@@ -177,24 +177,25 @@ const ServicesList = () => {
                         <div className={`
                           absolute inset-0
                           backface-hidden
-                          p-6 md:p-8
-                          flex flex-col items-center justify-center
+                          flex flex-col
                           bg-white
                           rounded-2xl
                           border border-gray-100
                           transition-all duration-300
                         `}>
-                          <div className="w-full h-48 relative mb-4 transition-transform duration-300 group-hover:scale-105">
+                          <div className="w-full h-64 relative overflow-hidden rounded-t-2xl">
                             <Image
                               src={service.image}
                               alt={service.title}
                               fill
-                              className="object-contain filter transition-all duration-300 group-hover:brightness-110"
+                              className="object-contain"
                             />
                           </div>
-                          <h3 className="text-black font-bold text-xl text-center transition-colors duration-300 group-hover:text-blue-900">
-                            {service.title}
-                          </h3>
+                          <div className="p-4 bg-white/90 backdrop-blur-sm">
+                            <h3 className="text-black font-bold text-lg text-center transition-colors duration-300 group-hover:text-blue-900">
+                              {service.title}
+                            </h3>
+                          </div>
                         </div>
 
                         {/* Back of card with enhanced description display */}
@@ -238,7 +239,7 @@ const ServicesList = () => {
 
           {/* Mobile View */}
           <div className="md:hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {services.map((service, index) => {
                 const isVisible = visibleCards.includes(index);
                 
@@ -250,7 +251,7 @@ const ServicesList = () => {
                     className={`
                       group relative
                       transition-all duration-700 ease-out
-                      h-[18rem] sm:h-[20rem]
+                      h-[16rem] xs:h-[18rem] sm:h-[20rem]
                       rounded-xl
                       cursor-pointer
                       transform-gpu
@@ -275,23 +276,24 @@ const ServicesList = () => {
                       <div className={`
                         absolute inset-0
                         backface-hidden
-                        p-5
-                        flex flex-col items-center justify-center
+                        flex flex-col
                         bg-white
                         rounded-xl
                         border border-gray-100
                       `}>
-                        <div className="w-full h-32 relative mb-4 transition-transform duration-300 group-hover:scale-105">
+                        <div className="w-full h-36 xs:h-40 sm:h-44 relative overflow-hidden rounded-t-xl">
                           <Image
                             src={service.image}
                             alt={service.title}
                             fill
-                            className="object-contain filter transition-all duration-300 group-hover:brightness-110"
+                            className="object-contain"
                           />
                         </div>
-                        <h3 className="text-black font-bold text-lg text-center transition-colors duration-300 group-hover:text-blue-900">
-                          {service.title}
-                        </h3>
+                        <div className="p-2 xs:p-3 bg-white/90 backdrop-blur-sm">
+                          <h3 className="text-black font-bold text-sm xs:text-base text-center transition-colors duration-300 group-hover:text-blue-900 line-clamp-2">
+                            {service.title}
+                          </h3>
+                        </div>
                       </div>
 
                       {/* Back of card */}
@@ -299,20 +301,20 @@ const ServicesList = () => {
                         absolute inset-0
                         backface-hidden
                         rotate-y-180
-                        p-5
+                        p-3 xs:p-4
                         flex flex-col
                         bg-gradient-to-br from-blue-50 to-white
                         rounded-xl
                         border border-blue-100
                       `}>
-                        <div className="flex items-center mb-3">
-                          <h3 className="text-blue-900 font-bold text-lg">
+                        <div className="flex items-center mb-2">
+                          <h3 className="text-blue-900 font-bold text-sm xs:text-base line-clamp-2">
                             {service.title}
                           </h3>
                         </div>
                         
                         <div className="flex-1 flex flex-col justify-between">
-                          <p className="text-gray-700 text-sm leading-relaxed line-clamp-6 mb-3">
+                          <p className="text-gray-700 text-xs xs:text-sm leading-relaxed line-clamp-4 xs:line-clamp-5 mb-2">
                             {service.description}
                           </p>
                           
@@ -320,7 +322,7 @@ const ServicesList = () => {
                             <span className="text-blue-900 text-xs font-semibold">
                               Learn More
                             </span>
-                            <div className="text-blue-900 text-xl transform transition-transform duration-300 hover:translate-x-1">
+                            <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
                               →
                             </div>
                           </div>
