@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -188,7 +187,7 @@ const RecognitionSection: React.FC = () => {
           }
 
           .animate-marquee {
-            animation: marquee 55s linear infinite;
+            animation: marquee 12s linear infinite;
           }
 
           .animate-marquee:hover {
@@ -201,13 +200,13 @@ const RecognitionSection: React.FC = () => {
 
           @media (max-width: 768px) {
             .animate-marquee {
-              animation: marquee 45s linear infinite;
+              animation: marquee 15s linear infinite;
             }
           }
 
           @media (max-width: 640px) {
             .animate-marquee {
-              animation: marquee 38s linear infinite;
+              animation: marquee 10s linear infinite;
             }
           }
         `}</style>
