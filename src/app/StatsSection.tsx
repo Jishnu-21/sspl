@@ -308,7 +308,7 @@ const StatsSection = () => {
               }}
             >
               <motion.div
-                className="w-full h-full relative"
+                className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] relative"
                 animate={inView ? { 
                   rotateY: [0, 0.5, 0, -0.5, 0],
                   scale: [1, 1.005, 1, 1.005, 1]
