@@ -1,7 +1,8 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Toaster, toast } from 'react-hot-toast';
+import { motion } from 'framer-motion';
 import './contact-form.css'; // Import custom CSS for placeholder styling
 
 const ContactForm = () => {
@@ -14,6 +15,34 @@ const ContactForm = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentTime, setCurrentTime] = useState({
+    india: '',
+    middleEast: ''
+  });
+
+  useEffect(() => {
+    // Function to update time
+    const updateTime = () => {
+      // India time (UTC+5:30)
+      const indiaTime = new Date();
+      indiaTime.setHours(indiaTime.getHours());
+      indiaTime.setMinutes(indiaTime.getMinutes());
+      
+      // Bahrain time (UTC+3)
+      const bahrainTime = new Date();
+      bahrainTime.setHours(bahrainTime.getHours() - 2);
+      bahrainTime.setMinutes(bahrainTime.getMinutes() - 30);
+
+      setCurrentTime({
+        india: indiaTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
+        middleEast: bahrainTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+      });
+    };
+
+    updateTime();
+    const intervalId = setInterval(updateTime, 60000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -75,106 +104,258 @@ const ContactForm = () => {
     }
   };
 
+  const offices = [
+    {
+      country: 'INDIA',
+      time: currentTime.india,
+      address: 'M-91, 1st. Floor, Connaught Circus, New Delhi - 110001',
+      email: 'info@sspl.net.in',
+      tel: '+91-11-23765368',
+      mobile: '+91-98101 02927',
+      fax: '+91-11-43565927',
+      cin: 'U72300DL2008PTC182090'
+    },
+    {
+      country: 'MIDDLE EAST',
+      time: currentTime.middleEast,
+      address: 'Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain',
+      email: 'info@ssplme.com',
+      tel: '+973-13622552',
+      mobile: '+973-3889 2927',
+      cr: '120861-1'
+    }
+  ];
+
   return (
-    <div className="bg-white pt-8 sm:pt-10 md:pt-12 lg:pt-16">
+    <div className="bg-white py-8 sm:py-12 md:py-16">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <div className="flex flex-col md:flex-row font-comfortaa">
-        {/* Left sidebar - hidden on mobile, visible on md and up */}
-        <div className="hidden md:block w-[80px] relative">
-          <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gray-200 md:ml-[280px] lg:ml-[480px]"></div>
-          <div className="absolute left-0 top-8 w-[3px] h-6 bg-gray-800 ml-8"></div>
-          <div className="pl-12 pt-8">
-            <button className="text-gray-700 text-sm hover:text-blue-600 transition-colors whitespace-nowrap">
-              Discuss the project
-            </button>
-          </div>
-        </div>
-        
-        {/* Mobile title - visible only on mobile */}
-        <div className="block md:hidden px-6 py-4">
-          <h2 className="text-gray-700 text-lg font-medium">Discuss the project</h2>
-          <div className="w-12 h-[2px] bg-gray-800 mt-2"></div>
-        </div>
-        
-        {/* Main content */}
-        <div className="flex-1 px-6 md:px-0 md:pl-[300px] lg:pl-[600px] md:pr-4 lg:pr-16 py-6 md:py-8 lg:py-12">
-          <div className="max-w-4xl">
-            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 font-bold mb-3 md:mb-4">GET IN TOUCH WITH US</h1>
-            <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 lg:mb-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-8xl">
+        <motion.div 
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* Left Side - Office Locations */}
+          <motion.div 
+            className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg h-full"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Our Offices
+            </h2>
+            <div className="w-full h-[1px] bg-gray-200 mb-6 sm:mb-8"></div>
+            <div className="space-y-4 sm:space-y-6 md:space-y-8">
+              {offices.map((office, index) => (
+                <motion.div 
+                  key={index} 
+                  className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                >
+                  <div className="flex flex-col space-y-3 sm:space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{office.country}</h3>
+                      <div className="flex items-center text-[#366A00] bg-[#366A00]/10 px-3 py-1 rounded-full w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="text-sm font-medium">{office.time || 'Loading...'}</span>
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-600 space-y-2">
+                      <p className="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span className="break-words">{office.address}</span>
+                      </p>
+                      <p className="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href={`mailto:${office.email}`} className="text-[#366A00] hover:underline break-all">{office.email}</a>
+                      </p>
+                      {office.tel && (
+                        <p className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                          </svg>
+                          {office.tel}
+                        </p>
+                      )}
+                      {office.mobile && (
+                        <p className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                          </svg>
+                          {office.mobile}
+                        </p>
+                      )}
+                      {office.fax && (
+                        <p className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                          </svg>
+                          {office.fax}
+                        </p>
+                      )}
+                      {office.cin && (
+                        <p className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          {office.cin}
+                        </p>
+                      )}
+                      {office.cr && (
+                        <p className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          {office.cr}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right Side - Contact Form */}
+          <motion.div 
+            className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg h-full"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              GET IN TOUCH WITH US
+            </h2>
+            <div className="w-full h-[1px] bg-gray-200 mb-6 sm:mb-8"></div>
+            <p className="text-gray-500 text-sm md:text-base mb-6 sm:mb-8">
               Get in touch with us by filling the form given below. We will get back to you at the earliest.
             </p>
-            <form className="space-y-4 md:space-y-5" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Name *"
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm placeholder-black text-black"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email *"
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm placeholder-black text-black"
-                  required
-                />
+            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Name *"
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
+                    required
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email *"
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
+                    required
+                  />
+                </motion.div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-                <input
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  placeholder="City"
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm placeholder-black text-black"
-                />
-                <input
-                  type="text"
-                  name="country"
-                  value={formData.country}
-                  onChange={handleChange}
-                  placeholder="Country"
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm placeholder-black text-black"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <input
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    placeholder="City"
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  <input
+                    type="text"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    placeholder="Country"
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
+                  />
+                </motion.div>
               </div>
-              <input
-                type="text"
-                name="organisation"
-                value={formData.organisation}
-                onChange={handleChange}
-                placeholder="Organisation"
-                className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm placeholder-black text-black"
-              />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Message *"
-                rows={4}
-                className="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-gray-300 shadow-sm resize-none placeholder-black text-black md:min-h-[120px]"
-                required
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`bg-transparent text-[#366A00] cursor-pointer text-xs font-medium py-2 px-5 rounded border border-[#366A00] hover:bg-[#366A00] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 transform ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.7 }}
               >
-                {isSubmitting ? 'Sending...' : 'Submit Message'}
-              </button>
+                <input
+                  type="text"
+                  name="organisation"
+                  value={formData.organisation}
+                  onChange={handleChange}
+                  placeholder="Organisation"
+                  className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.8 }}
+              >
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Message *"
+                  rows={6}
+                  className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm resize-none placeholder-gray-400 text-gray-900 transition-all duration-300 md:min-h-[180px]"
+                  required
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.9 }}
+                className="mt-6 sm:mt-8"
+              >
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full bg-[#366A00] text-white cursor-pointer text-sm font-medium py-3 px-6 rounded-lg border border-[#366A00] hover:bg-[#2d5500] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Submit Message'}
+                </button>
+              </motion.div>
               <Toaster position="top-right" />
             </form>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
