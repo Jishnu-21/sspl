@@ -185,7 +185,7 @@ const ServicesList = () => {
                           border border-gray-100
                           transition-all duration-300
                         `}>
-                          <div className="w-full h-64 relative overflow-hidden rounded-t-2xl">
+                          <div className="w-full h-74 relative overflow-hidden rounded-t-2xl">
                             <Image
                               src={service.image}
                               alt={service.title}

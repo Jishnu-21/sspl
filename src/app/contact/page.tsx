@@ -3,7 +3,6 @@ import Header from '../Header'
 import Footer from '../Footer'
 import ContactHero from './ContactHero'
 import ContactForm from './ContactForm'
-import OfficeLocations from './OfficeLocations'
 
 const Contact = () => {
   return (
