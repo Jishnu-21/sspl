@@ -217,7 +217,7 @@ const ServicesList = () => {
                           </h3>
                           
                           <div className="flex-1 flex flex-col justify-between">
-                            <p className="text-gray-700 text-[16gipx] leading-relaxed mb-4 overflow-y-auto">
+                            <p className="text-gray-700 text-sm leading-relaxed mb-4 overflow-y-auto">
                               {service.description}
                             </p>
                             
