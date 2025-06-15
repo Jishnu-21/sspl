@@ -149,28 +149,24 @@ const RecognitionSection: React.FC = () => {
 
         {/* Marquee Section */}
         <div className="w-full overflow-hidden bg-white py-4">
-          <div className="flex animate-marquee whitespace-nowrap">
+          <div className="flex animate-marquee whitespace-nowrap gap-4 sm:gap-6 md:gap-8">
             {/* Logos repeated to create seamless loop */}
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center gap-4 sm:gap-6 md:gap-8 mx-2 sm:mx-3 md:mx-4">
-                {marqueeItems.map((item) => (
-                  <div
-                    key={item.logo}
-                    className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
-                    onMouseEnter={() => setHoveredItem(item.logo)}
-                    onMouseLeave={() => setHoveredItem(null)}
-                  >
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={item.logo}
-                        alt={item.hoverDetails.title}
-                        fill
-                        sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1024px) 340px, 380px"
-                        className="object-contain p-2"
-                      />
-                    </div>
-                  </div>
-                ))}
+            {marqueeItems.concat(marqueeItems).map((item, index) => (
+              <div
+                key={`${item.logo}-${index}`}
+                className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
+                onMouseEnter={() => setHoveredItem(item.logo)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={item.logo}
+                    alt={item.hoverDetails.title}
+                    fill
+                    sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1024px) 340px, 380px"
+                    className="object-contain p-2"
+                  />
+                </div>
               </div>
             ))}
           </div>
