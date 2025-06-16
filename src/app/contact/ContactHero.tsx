@@ -37,7 +37,7 @@ const ContactHero = () => {
         {/* Right Map Side - Hidden on mobile and iPad, visible on lg and up */}
         <div className="absolute top-0 right-0 w-3/5 lg:w-4/6 h-full bg-gray-900 hidden lg:block">
           <Image
-            src="/images/contact/1.png"
+            src="/images/contact/banner3.webp"
             alt="World Map"
             fill
             className="object-cover"
