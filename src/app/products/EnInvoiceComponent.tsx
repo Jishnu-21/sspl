@@ -135,112 +135,98 @@ const EnInvoiceComponent = () => {
         </p>
 
         {/* QR Code Requirements Details */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_2fr] gap-8 items-stretch">
-            {/* Left Column: Invoice Image + Text Blocks + Larger QR Code */}
-            <div className="flex flex-col space-y-6">
-              {/* Invoice Image */}
-              <div className="w-full flex-grow flex items-center justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-8 items-stretch">
+          {/* Left Column: Invoice Image + QR Code */}
+          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col justify-center space-y-6">
+            {/* Invoice Image Container */}
+            <div className="flex-1 flex items-center justify-center">
+              <div className="w-full max-w-[300px] h-[300px] flex items-center justify-center">
                 <Image 
                   src="/images/products/envoice/qr1.jpg" 
                   alt="Simplified Tax Invoice" 
-                  width={400}
-                  height={500}
-                  className="max-h-full w-auto object-contain"
+                  width={300}
+                  height={300}
+                  className="max-h-full max-w-full object-contain rounded-md"
                 />
               </div>
-
-              {/* Combined Text Block and Larger QR Code with Buttons */}
-              <div className="bg-white p-4 rounded-md shadow-sm w-full flex flex-col items-center justify-center space-y-4 flex-grow">
-                {/* Text Block for Seller/VAT/Time/Amt */}
-                <div className="text-sm text-gray-700 w-full">
-                  <p className="font-bold mb-1">Seller:Farthing Purchasing Consortia</p>
-                  <p>VAT Num:34344444444447</p>
-                  <p>Time:2005-06-21T11:30:00</p>
-                  <p>VAT Amt:15.0</p>
-                  <p>Invoice Amt:115.0</p>
-                </div>
-                {/* Larger QR Code */}
-                <div className="w-full h-[150px] flex items-center justify-center">
-                  <Image 
-                    src="/images/products/envoice/qr2.jpg" 
-                    alt="Larger QR Code" 
-                    width={150}
-                    height={150}
-                    className="object-contain"
-                  />
-                </div>
-                {/* Buttons */}
-                <div className="mt-4 flex space-x-4 justify-center">
-                  <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">Copy</button>
-                  <button className="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition">Close</button>
-                </div>
+            </div>
+         
+            {/* QR Code Container */}
+            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center justify-center">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                <Image 
+                  src="/images/products/envoice/qr2.jpg" 
+                  alt="QR Code for Invoice Verification" 
+                  width={150}
+                  height={150}
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
+          </div>
 
-            {/* Right Column: Requirements List */}
-            <div className="bg-gray-200 p-8 rounded-md shadow-md h-full flex flex-col">
-              <h4 className="text-xl font-medium mb-6 text-gray-800">The generated QR codes should contain the following details :</h4>
+          {/* Right Column: Requirements List */}
+          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col">
+            <h4 className="text-lg sm:text-xl font-medium mb-6 text-gray-800">The generated QR codes should contain the following details :</h4>
+            
+            <ul className="space-y-4 flex-1">
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">The Seller Name and their VAT registration Number</span>
+              </li>
               
-              <ul className="space-y-4 flex-1">
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Time stamp of the Electronic Invoice or Credit/Debit Note (date and time)</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Electronic Invoice or Credit/Debit note amount (with VAT) & VAT amount</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Hash of XML Electronic Invoice or Credit/Debit Note</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Cryptographic stamp</span>
+              </li>
+              <ul className="ml-8 mt-3 space-y-3">
                 <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">The Seller Name and their VAT registration Number</span>
+                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                  <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, the stamp is generated by the E-Invoice Generating Solution</span>
                 </li>
                 
                 <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">Time stamp of the Electronic Invoice or Credit/Debit Note (date and time)</span>
-                </li>
-                
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">Electronic Invoice or Credit/Debit note amount (with VAT) & VAT amount</span>
-                </li>
-                
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">Hash of XML Electronic Invoice or Credit/Debit Note</span>
-                </li>
-                
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">Cryptographic stamp</span>
-                </li>
-                <ul className="ml-8 mt-3 space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-[#366A00] mr-3 font-bold">»</span>
-                    <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, the stamp is generated by the E-Invoice Generating Solution</span>
-                  </li>
-                  
-                  <li className="flex items-start">
-                    <span className="text-[#366A00] mr-3 font-bold">»</span>
-                    <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, the stamp is generated by ZATCA's platform</span>
-                  </li>
-                </ul>
-                
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">The public key used to generate the Cryptographic stamp</span>
-                </li>
-                <ul className="ml-8 mt-3 space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-[#366A00] mr-3 font-bold">»</span>
-                    <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, this is the public key of the E-Invoice Generating Solution</span>
-                  </li>
-                  
-                  <li className="flex items-start">
-                    <span className="text-[#366A00] mr-3 font-bold">»</span>
-                    <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, this field is optional and is the public key of ZATCA's platform</span>
-                  </li>
-                </ul>
-                
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
-                  <span className="text-gray-700 text-sm sm:text-base">In the case of Simplified Tax Invoices and their associated notes, the Authority's Portal Cryptographic stamp of the public key of the E-Invoice Solution</span>
+                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                  <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, the stamp is generated by ZATCA's platform</span>
                 </li>
               </ul>
-            </div>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">The public key used to generate the Cryptographic stamp</span>
+              </li>
+              <ul className="ml-8 mt-3 space-y-3">
+                <li className="flex items-start">
+                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                  <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, this is the public key of the E-Invoice Generating Solution</span>
+                </li>
+                
+                <li className="flex items-start">
+                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                  <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, this field is optional and is the public key of ZATCA's platform</span>
+                </li>
+              </ul>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">In the case of Simplified Tax Invoices and their associated notes, the Authority's Portal Cryptographic stamp of the public key of the E-Invoice Solution</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
