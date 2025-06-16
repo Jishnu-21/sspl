@@ -8,9 +8,9 @@ const ArbutusComponent = () => {
   const testimonials = [
     {
       quote: "We use your product and it works great. We'll be adding more to this automation process on the table, and I'd love to get training from your end.",
-      name: "Mr. Mohandes Liem",
+      name: "Mr. Mohandas Unni",
       title: "Group IT Manager (Information Technology)",
-      company: "A.A. Abunayyan Trading Company of Bahrain",
+      company: "Y.K. Almoayyed & Sons , Kingdom of Bahrain",
       logo: '/images/testimonials/yk.jpg',
     },
     {
@@ -20,7 +20,6 @@ const ArbutusComponent = () => {
       company: "Birla Sun Life Insurance",
       logo: '/images/testimonials/birla.gif',
     },
-
   ];
 
   // State for current testimonial
@@ -34,6 +33,7 @@ const ArbutusComponent = () => {
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
+
   return (
     <div>
       <div className="mb-6">
@@ -43,72 +43,74 @@ const ArbutusComponent = () => {
         </p>
       </div>
       
-      {/* Company Logos */}
-      <div className="mb-8 flex justify-center">
-        <div className="relative h-[120px] w-[240px] flex items-center justify-center">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ 
-                opacity: currentIndex === index ? 1 : 0,
-                display: currentIndex === index ? 'flex' : 'none'
-              }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex items-center justify-center"
-            >
-              <div className="border-2 border-blue-100 rounded-lg p-4 bg-white shadow-sm">
-                <img 
-                  src={testimonial.logo} 
-                  alt={`${testimonial.company} logo`} 
-                  className="h-[80px] w-auto object-contain"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      
-      {/* Testimonials Carousel */}
-      <div className="mb-12 text-center max-w-3xl mx-auto relative overflow-hidden py-8">      
-        <div className="relative h-[200px] flex items-center justify-center">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ 
-                opacity: currentIndex === index ? 1 : 0,
-                y: currentIndex === index ? 0 : 20,
-                display: currentIndex === index ? 'block' : 'none'
-              }}
-              transition={{ duration: 0.5 }}
-              className="absolute w-full px-4"
-            >
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-                <p className="text-gray-800 italic mb-4 text-lg">
-                  "{testimonial.quote}"
-                </p>
-                <p className="text-gray-700 font-medium">
-                  {testimonial.name}, {testimonial.title}
-                </p>
-                <p className="text-gray-600 text-sm">
-                  {testimonial.company}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        
-        {/* Dots indicator */}
-        <div className="flex justify-center space-x-2 mt-4">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${currentIndex === index ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
-              aria-label={`Go to testimonial ${index + 1}`}
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        {/* Left Side - YouTube Video */}
+        <div className="h-full flex items-center">
+          <div className="w-full relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/C3ABVOIBQXY"
+              title="Arbutus Software Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             />
-          ))}
+          </div>
+        </div>
+
+        {/* Right Side - Testimonials */}
+        <div className="h-full flex items-center">      
+          <div className="w-full relative min-h-[400px] flex flex-col items-center justify-center">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ 
+                  opacity: currentIndex === index ? 1 : 0,
+                  x: currentIndex === index ? 0 : 50,
+                  display: currentIndex === index ? 'flex' : 'none'
+                }}
+                transition={{ duration: 0.5 }}
+                className="absolute w-full px-4 flex flex-col items-center"
+              >
+                {/* Company Logo */}
+                <div className="mb-6">
+                  <div className="border-2 border-blue-100 rounded-lg p-4 bg-white shadow-sm">
+                    <img 
+                      src={testimonial.logo} 
+                      alt={`${testimonial.company} logo`} 
+                      className="h-[80px] w-auto object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Testimonial Content */}
+                <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 w-full">
+                  <p className="text-gray-800 italic mb-4 text-lg">
+                    "{testimonial.quote}"
+                  </p>
+                  <p className="text-gray-700 font-medium">
+                    {testimonial.name}, {testimonial.title}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    {testimonial.company}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Dots indicator */}
+          <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 mb-4">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${currentIndex === index ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
       

@@ -13,7 +13,6 @@ const EnInvoiceComponent = () => {
           EnInvoice is a comprehensive invoicing solution designed to streamline your billing processes. Our platform offers automated invoice generation and delivery, seamless integration with accounting systems, and detailed reporting and analytics for financial oversight.
         </p>
       </div>
-
       {/* Regulatory Invoicing Essentials */}
       <div className="mb-12">
         <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">Regulatory Invoicing Essentials</h3>
@@ -177,7 +176,7 @@ const EnInvoiceComponent = () => {
             
             <li className="flex items-start">
               <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">The public key used to generate the Cryptographic stamp</span>
+              <span className="text-gray-700">Public key for Cryptographic </span>
               <ul className="ml-8 mt-3 space-y-4">
                 <li className="flex items-start">
                   <span className="text-[#366A00] mr-3 font-bold">»</span>
