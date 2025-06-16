@@ -27,6 +27,42 @@ const ArbutusAnalyticsSection = () => {
     }
   ];
 
+  // "Your Need" cards data
+  const yourNeedCards = [
+    {
+      text: "Better teamwork when it comes to analytics?",
+      color: "bg-[#66CC66]" // Green
+    },
+    {
+      text: "An alternative to ACL Desktop™?",
+      color: "bg-[#6699FF]" // Blue
+    },
+    {
+      text: "Better backend analytics and data quality to feed Tableau™ or Qlik™?",
+      color: "bg-[#FF66CC]" // Pink
+    },
+    {
+      text: "Subject Matter Expertise in Audit Analytics?",
+      color: "bg-[#FF9966]" // Orange
+    },
+    {
+      text: "Simpler, more usable alternative to ACL Analytics Exchange™?",
+      color: "bg-[#FF3366]" // Red
+    },
+    {
+      text: "Help for your team with skills and tools that go beyond Excel™?",
+      color: "bg-[#9966FF]" // Purple
+    },
+    {
+      text: "Bringing you pertinent data for your perusal",
+      color: "bg-[#33CC99]" // Teal
+    },
+    {
+      text: "Analytics that work & enhance Audit Management Technology",
+      color: "bg-[#33CCFF]" // Light Blue
+    },
+  ];
+
   // Create card items for the carousel
   const cardItems = caseStudies.map((study, index) => (
     <motion.div 
@@ -55,8 +91,8 @@ const ArbutusAnalyticsSection = () => {
 
   return (
     <div className="-mx-4 md:-mx-6 lg:-mx-8">
-      <section className="py-16 bg-gray-200 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
-        <div className="max-w-[95%] mx-auto">
+      <section className="py-16 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
           {/* Top heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -65,55 +101,45 @@ const ArbutusAnalyticsSection = () => {
             transition={{ duration: 0.6 }}
             className="pb-4 mb-0"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1B3D69]">Why Arbutus for Analytics?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#366A00] mb-8">Why Arbutus for Analytics?</h2>
           </motion.div>
-          {/* Horizontal line that extends across the entire section */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
+
+          {/* Introductory paragraphs */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="border-b border-white w-full mb-8"
-            style={{ transformOrigin: 'left' }}
-          />
-          <div className="flex flex-col md:flex-row">
-            {/* Left side content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="md:w-1/3 mb-10 md:mb-0 pr-8 relative"
-            >
-              <p className="text-sm text-gray-800 font-medium mb-2">
-                We are a pivotal partner for analytics teams who see strong analytics as a key factor in their success.
-              </p>
-              <p className="text-sm text-gray-800 leading-relaxed">
-                Our customers know that we can make it easier and more cost-effective to implement and use analytics solutions. The unique data access and analysis capabilities of Arbutus simplify and support your path to analytics at every stage.
-              </p>
-              {/* Vertical line that connects with the horizontal line */}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gray-800 text-lg text-center mb-4 max-w-4xl mx-auto"
+          >
+            We are a pivotal partner for analytics teams who see strong analytics as a key factor in their success.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-gray-800 text-lg text-center mb-12 max-w-4xl mx-auto"
+          >
+            Arbutus has proven that we can make it easier and more cost effective to implement and use analytics within your team and audit processes.
+            The immense capabilities of Arbutus simplify and support your path to analytics at every stage.
+          </motion.p>
+
+          {/* "Your Need" Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {yourNeedCards.map((card, index) => (
               <motion.div
-                initial={{ scaleY: 0 }}
-                whileInView={{ scaleY: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
-                style={{ top: '-30px', transformOrigin: 'top' }}
-              />
-            </motion.div>
-            
-            {/* Right side scrollable cards */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="md:w-2/3 overflow-hidden relative"
-            >
-              <div className="relative">
-                <Carousel items={cardItems} />
-              </div>
-            </motion.div>
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`${card.color} p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[180px] hover:shadow-xl transition-shadow duration-300`}
+              >
+                <span className="bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded-full mb-4">YOUR NEED :</span>
+                <p className="font-medium text-lg leading-relaxed">{card.text}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
