@@ -225,13 +225,13 @@ const ContactForm = () => {
                           {office.cr}
                         </p>
                       )}
-                    </div>
-                  </div>
+          </div>
+        </div>
                 </motion.div>
               ))}
-            </div>
+        </div>
           </motion.div>
-
+        
           {/* Right Side - Contact Form */}
           <motion.div 
             className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg h-full"
@@ -253,30 +253,30 @@ const ContactForm = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Name *"
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Name *"
                     className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
-                    required
-                  />
+                  required
+                />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email *"
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email *"
                     className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
-                    required
-                  />
+                  required
+                />
                 </motion.div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -285,28 +285,28 @@ const ContactForm = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.5 }}
                 >
-                  <input
-                    type="text"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleChange}
-                    placeholder="City"
+                <input
+                  type="text"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  placeholder="City"
                     className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
-                  />
+                />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
                 >
-                  <input
-                    type="text"
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
-                    placeholder="Country"
+                <input
+                  type="text"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  placeholder="Country"
                     className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
-                  />
+                />
                 </motion.div>
               </div>
               <motion.div
@@ -314,29 +314,29 @@ const ContactForm = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
               >
-                <input
-                  type="text"
-                  name="organisation"
-                  value={formData.organisation}
-                  onChange={handleChange}
-                  placeholder="Organisation"
+              <input
+                type="text"
+                name="organisation"
+                value={formData.organisation}
+                onChange={handleChange}
+                placeholder="Organisation"
                   className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
-                />
+              />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.8 }}
               >
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Message *"
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message *"
                   rows={6}
                   className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm resize-none placeholder-gray-400 text-gray-900 transition-all duration-300 md:min-h-[180px]"
-                  required
-                />
+                required
+              />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -344,13 +344,13 @@ const ContactForm = () => {
                 transition={{ duration: 0.4, delay: 0.9 }}
                 className="mt-6 sm:mt-8"
               >
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
+              <button
+                type="submit"
+                disabled={isSubmitting}
                   className={`w-full bg-[#366A00] text-white cursor-pointer text-sm font-medium py-3 px-6 rounded-lg border border-[#366A00] hover:bg-[#2d5500] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                >
-                  {isSubmitting ? 'Sending...' : 'Submit Message'}
-                </button>
+              >
+                {isSubmitting ? 'Sending...' : 'Submit Message'}
+              </button>
               </motion.div>
               <Toaster position="top-right" />
             </form>

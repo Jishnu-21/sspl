@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const EnInvoiceComponent = () => {
 
@@ -134,83 +135,98 @@ const EnInvoiceComponent = () => {
         </p>
 
         {/* QR Code Requirements Details */}
-        <div className="max-w-4xl mx-auto bg-gray-200 p-8 rounded-md shadow-md">
-          <h4 className="text-xl font-medium mb-6 text-gray-800">The generated QR codes should contain the following details–</h4>
-          
-          <ul className="space-y-4">
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">The Seller Name and their VAT registration Number</span>
-            </li>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-8 items-stretch">
+          {/* Left Column: Invoice Image + QR Code */}
+          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col justify-center space-y-6">
+            {/* Invoice Image Container */}
+            <div className="flex-1 flex items-center justify-center">
+              <div className="w-full max-w-[300px] h-[300px] flex items-center justify-center">
+                <Image 
+                  src="/images/products/envoice/qr1.jpg" 
+                  alt="Simplified Tax Invoice" 
+                  width={300}
+                  height={300}
+                  className="max-h-full max-w-full object-contain rounded-md"
+                />
+              </div>
+            </div>
+         
+            {/* QR Code Container */}
+            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center justify-center">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                <Image 
+                  src="/images/products/envoice/qr2.jpg" 
+                  alt="QR Code for Invoice Verification" 
+                  width={150}
+                  height={150}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Requirements List */}
+          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col">
+            <h4 className="text-lg sm:text-xl font-medium mb-6 text-gray-800">The generated QR codes should contain the following details :</h4>
             
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">Time stamp of the Electronic Invoice or Credit/Debit Note (date and time)</span>
-            </li>
-            
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">Electronic Invoice or Credit/Debit note amount (with VAT) & VAT amount</span>
-            </li>
-            
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">Hash of XML Electronic Invoice or Credit/Debit Note</span>
-            </li>
-            
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">Cryptographic stamp</span>
-              <ul className="ml-8 mt-3 space-y-4">
+            <ul className="space-y-4 flex-1">
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">The Seller Name and their VAT registration Number</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Time stamp of the Electronic Invoice or Credit/Debit Note (date and time)</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Electronic Invoice or Credit/Debit note amount (with VAT) & VAT amount</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Hash of XML Electronic Invoice or Credit/Debit Note</span>
+              </li>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">Cryptographic stamp</span>
+              </li>
+              <ul className="ml-8 mt-3 space-y-3">
                 <li className="flex items-start">
                   <span className="text-[#366A00] mr-3 font-bold">»</span>
-                  <span className="text-gray-700">For Simplified Tax Invoices and their associated notes, the stamp is generated by the E-Invoice Generating Solution</span>
+                  <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, the stamp is generated by the E-Invoice Generating Solution</span>
                 </li>
                 
                 <li className="flex items-start">
                   <span className="text-[#366A00] mr-3 font-bold">»</span>
-                  <span className="text-gray-700">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, the stamp is generated by ZATCA's platform</span>
+                  <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, the stamp is generated by ZATCA's platform</span>
                 </li>
               </ul>
-            </li>
-            
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">Public key for Cryptographic </span>
-              <ul className="ml-8 mt-3 space-y-4">
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">The public key used to generate the Cryptographic stamp</span>
+              </li>
+              <ul className="ml-8 mt-3 space-y-3">
                 <li className="flex items-start">
                   <span className="text-[#366A00] mr-3 font-bold">»</span>
-                  <span className="text-gray-700">For Simplified Tax Invoices and their associated notes, this is the public key of the E-Invoice Generating Solution</span>
+                  <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, this is the public key of the E-Invoice Generating Solution</span>
                 </li>
                 
                 <li className="flex items-start">
                   <span className="text-[#366A00] mr-3 font-bold">»</span>
-                  <span className="text-gray-700">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, this field is optional and is the public key of ZATCA's platform</span>
+                  <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, this field is optional and is the public key of ZATCA's platform</span>
                 </li>
               </ul>
-            </li>
-            
-            <li className="flex items-start">
-              <span className="text-[#366A00] mr-3 font-bold">»</span>
-              <span className="text-gray-700">In the case of Simplified Tax Invoices and their associated notes, the Authority's Portal Cryptographic stamp of the public key of the E-Invoice Solution</span>
-            </li>
-          </ul>
-          
-          <div className="grid grid-cols-2 gap-6 mt-8">
-            <div className="bg-white border border-gray-300 p-4 rounded-md shadow-sm flex items-center justify-center aspect-square">
-              <img 
-                src="/images/products/envoice/qr1.jpg" 
-                alt="QR Code Sample 1" 
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
-            <div className="bg-white border border-gray-300 p-4 rounded-md shadow-sm flex items-center justify-center aspect-square">
-              <img 
-                src="/images/products/envoice/qr2.jpg" 
-                alt="QR Code Sample 2" 
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
+              
+              <li className="flex items-start">
+                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+                <span className="text-gray-700 text-sm sm:text-base">In the case of Simplified Tax Invoices and their associated notes, the Authority's Portal Cryptographic stamp of the public key of the E-Invoice Solution</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -225,7 +241,7 @@ const EnInvoiceComponent = () => {
         {/* AR & Finance Team Section */}
         <div className="mb-10">
           <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your AR & Finance team Gets</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
               whileHover={{ 
@@ -291,7 +307,7 @@ const EnInvoiceComponent = () => {
         {/* Tax & Compliance Team Section */}
         <div>
           <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your Tax & Compliance team Gets</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
               whileHover={{ 

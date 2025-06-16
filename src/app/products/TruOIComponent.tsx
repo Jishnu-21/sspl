@@ -46,30 +46,32 @@ const TruOIComponent = () => {
       {/* AI-Powered Operations Section */}
       <div className="mb-12">
         <h3 className="text-xl font-semibold text-center text-[#366A00] mb-6">AI-Powered Operations</h3>
-        <div className="flex justify-center mb-8">
-          <div className="max-w-2xl w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Image Section */}
+          <div className="w-full h-full">
             <Image 
               src="/images/products/tru-oi.png" 
               alt="AI-Powered Analytics Dashboard" 
               width={600}
               height={350}
-              className="w-full h-auto rounded-md shadow-md"
+              className="w-full h-full object-cover"
             />
           </div>
-        </div>
 
-        <div className="max-w-4xl mx-auto">
-          <p className="text-center text-gray-800 font-medium mb-6">
-            You dream big. You inspire. You lead with a vision. You now have the power of AI to bring a transformational change at unit level Operations.
-          </p>
+          {/* Content Section */}
+          <div className="flex flex-col justify-center h-full">
+            <p className="text-gray-800 font-medium mb-6">
+              You dream big. You inspire. You lead with a vision. You now have the power of AI to bring a transformational change at unit level Operations.
+            </p>
 
-          <div className="space-y-4 text-gray-700">
-            <p>
-              TruOI centralizes and automates your entire operations. Voice-activated AI Command instantly retrieves answers to any operational question for each location and keeps each location manager informed in real-time.
-            </p>
-            <p>
-              AI-powered platform for Franchisors, multi-unit Franchisees, Chains, and restaurants. Seamlessly integrate all your locations with intelligent operations, analytics, and AI-powered staff. Optimize your business through automation and drastically improve operations using AI.
-            </p>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                TruOI centralizes and automates your entire operations. Voice-activated AI Command instantly retrieves answers to any operational question for each location and keeps each location manager informed in real-time.
+              </p>
+              <p>
+                AI-powered platform for Franchisors, multi-unit Franchisees, Chains, and restaurants. Seamlessly integrate all your locations with intelligent operations, analytics, and AI-powered staff. Optimize your business through automation and drastically improve operations using AI.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -153,34 +155,34 @@ const TruOIComponent = () => {
           <div className="h-[1px] bg-gray-300 w-full mb-8"></div>
         </div>
 
-        {/* Analytics Image */}
-        <div className="mb-10 flex justify-center">
-          <div className="max-w-3xl w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Analytics Image */}
+          <div className="w-full h-full">
             <Image 
               src="/images/products/tru-oi-about.png" 
               alt="TruOI Analytics Report" 
               width={800}
               height={400}
-              className="w-full h-auto rounded-md"
+              className="w-full h-full object-cover"
             />
           </div>
-        </div>
 
-        {/* Customer Driven Section */}
-        <div className="max-w-4xl mx-auto text-center mb-10">
-          <h4 className="text-xl font-bold text-gray-800 mb-4">CUSTOMER DRIVEN. PEOPLE FOCUSED.</h4>
-          <p className="text-gray-700 mb-8">
-            For almost 20 years, TruOI has worked both domestically and internationally with growth-directed organizations seeking to simplify enterprise reporting, improve team member performance, and generate operational success in real time.
-          </p>
+          {/* Customer Driven Section */}
+          <div className="flex flex-col justify-center h-full">
+            <h4 className="text-xl font-bold text-gray-800 mb-4">CUSTOMER DRIVEN. PEOPLE FOCUSED.</h4>
+            <p className="text-gray-700 mb-8">
+              For almost 20 years, TruOI has worked both domestically and internationally with growth-directed organizations seeking to simplify enterprise reporting, improve team member performance, and generate operational success in real time.
+            </p>
 
-          <h4 className="text-xl font-bold text-gray-800 mb-4">ONE TO ONE, NOT ONE TO MANY.</h4>
-          <p className="text-gray-700 mb-8">
-            With over 3,000 clients and experience in multiple industries, our team members bring unique one-to-one coaching and support experience to each engagement.
-          </p>
+            <h4 className="text-xl font-bold text-gray-800 mb-4">ONE TO ONE, NOT ONE TO MANY.</h4>
+            <p className="text-gray-700 mb-8">
+              With over 3,000 clients and experience in multiple industries, our team members bring unique one-to-one coaching and support experience to each engagement.
+            </p>
 
-          <p className="text-gray-700">
-            Our Operational Intelligence Platform is not a static reporting system but a one-of-a-kind real-time measurement, automation, coaching & training, and business optimization.
-          </p>
+            <p className="text-gray-700">
+              Our Operational Intelligence Platform is not a static reporting system but a one-of-a-kind real-time measurement, automation, coaching & training, and business optimization.
+            </p>
+          </div>
         </div>
       </div>
 
