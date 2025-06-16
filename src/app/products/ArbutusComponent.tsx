@@ -61,7 +61,7 @@ const ArbutusComponent = () => {
         </div>
 
         {/* Right Side - Testimonials */}
-        <div className="h-full flex items-center">      
+        <div className="h-full flex flex-col">      
           <div className="w-full relative min-h-[400px] flex flex-col items-center justify-center">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -103,7 +103,20 @@ const ArbutusComponent = () => {
           </div>
           
           {/* Dots indicator */}
-       
+          <div className="flex justify-center items-center space-x-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentIndex === index 
+                    ? 'bg-[#1B3D69] scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
       

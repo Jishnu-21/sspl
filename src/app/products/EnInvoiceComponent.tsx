@@ -15,7 +15,13 @@ const EnInvoiceComponent = () => {
         </p>
       </div>
       {/* Regulatory Invoicing Essentials */}
-      <div className="mb-12">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="mb-12"
+      >
         <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">Regulatory Invoicing Essentials</h3>
         <p className="text-gray-700 text-center mb-10 max-w-3xl mx-auto">
           Rapidly evolving electronic invoicing requirements pose constant challenges to the enterprises and other businesses, in comprehensively addressing compliance automation.
@@ -25,12 +31,16 @@ const EnInvoiceComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">AUTOMATED DATA COLLECTION</span>
@@ -42,12 +52,16 @@ const EnInvoiceComponent = () => {
           
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">EFFICIENT DATA PREPARATION</span>
@@ -59,12 +73,16 @@ const EnInvoiceComponent = () => {
           
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">ADVANCED DATA QUALIFICATION</span>
@@ -76,12 +94,16 @@ const EnInvoiceComponent = () => {
           
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">IMPROVED & AUTOMATED PROCESSES</span>
@@ -93,12 +115,16 @@ const EnInvoiceComponent = () => {
           
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">INTELLIGENT DASHBOARDING</span>
@@ -110,12 +136,16 @@ const EnInvoiceComponent = () => {
           
           <motion.div 
             className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
-            whileHover={{ 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileHover={{
               y: -5, 
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              scale: 1.02
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 } 
             }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="text-center mb-3">
               <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">CHANGE READY AND REPORTING BY TIME</span>
@@ -125,21 +155,53 @@ const EnInvoiceComponent = () => {
             </p>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* QR Code Requirements Section */}
-      <div className="mb-12">
-        <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">QR Code Requirements</h3>
-        <p className="text-gray-700 text-center mb-8 max-w-3xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="mb-12"
+      >
+        <motion.h3 
+          className="text-xl font-semibold text-center text-[#366A00] mb-2"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
+          QR Code Requirements
+        </motion.h3>
+        <motion.p 
+          className="text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           The QR code must be provided within the printed Simplified (all phases) and Standard e-Invoices (from integration phase). They are used by customers for verifying their invoices and ensuring that they are compliant with ZATCA/GAZT requirements.
-        </p>
+        </motion.p>
 
         {/* QR Code Requirements Details */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-8 items-stretch">
           {/* Left Column: Invoice Image + QR Code */}
-          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col justify-center space-y-6">
+          <motion.div 
+            className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col justify-center space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Invoice Image Container */}
-            <div className="flex-1 flex items-center justify-center">
+            <motion.div 
+              className="flex-1 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <div className="w-full max-w-[300px] h-[300px] flex items-center justify-center">
                 <Image 
                   src="/images/products/envoice/qr1.jpg" 
@@ -149,10 +211,16 @@ const EnInvoiceComponent = () => {
                   className="max-h-full max-w-full object-contain rounded-md"
                 />
               </div>
-            </div>
+            </motion.div>
          
             {/* QR Code Container */}
-            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center justify-center">
+            <motion.div 
+              className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
                 <Image 
                   src="/images/products/envoice/qr2.jpg" 
@@ -162,94 +230,190 @@ const EnInvoiceComponent = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column: Requirements List */}
-          <div className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col">
-            <h4 className="text-lg sm:text-xl font-medium mb-6 text-gray-800">The generated QR codes should contain the following details :</h4>
+          <motion.div 
+            className="bg-gray-200 p-8 rounded-md shadow-md flex flex-col"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.h4 
+              className="text-lg sm:text-xl font-medium mb-6 text-gray-800"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              The generated QR codes should contain the following details :
+            </motion.h4>
             
             <ul className="space-y-4 flex-1">
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">The Seller Name and their VAT registration Number</span>
-              </li>
+              </motion.li>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">Time stamp of the Electronic Invoice or Credit/Debit Note (date and time)</span>
-              </li>
+              </motion.li>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">Electronic Invoice or Credit/Debit note amount (with VAT) & VAT amount</span>
-              </li>
+              </motion.li>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">Hash of XML Electronic Invoice or Credit/Debit Note</span>
-              </li>
+              </motion.li>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">Cryptographic stamp</span>
-              </li>
+              </motion.li>
               <ul className="ml-8 mt-3 space-y-3">
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                <motion.li 
+                  className="flex items-start"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
+                  <span className="text-[#366A00] mr-3 font-bold flex-shrink-0">◦</span>
                   <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, the stamp is generated by the E-Invoice Generating Solution</span>
-                </li>
+                </motion.li>
                 
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                <motion.li 
+                  className="flex items-start"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                >
+                  <span className="text-[#366A00] mr-3 font-bold flex-shrink-0">◦</span>
                   <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, the stamp is generated by ZATCA's platform</span>
-                </li>
+                </motion.li>
               </ul>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">The public key used to generate the Cryptographic stamp</span>
-              </li>
+              </motion.li>
               <ul className="ml-8 mt-3 space-y-3">
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                <motion.li 
+                  className="flex items-start"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 1.1 }}
+                >
+                  <span className="text-[#366A00] mr-3 font-bold flex-shrink-0">◦</span>
                   <span className="text-gray-700 text-sm">For Simplified Tax Invoices and their associated notes, this is the public key of the E-Invoice Generating Solution</span>
-                </li>
+                </motion.li>
                 
-                <li className="flex items-start">
-                  <span className="text-[#366A00] mr-3 font-bold">»</span>
+                <motion.li 
+                  className="flex items-start"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                >
+                  <span className="text-[#366A00] mr-3 font-bold flex-shrink-0">◦</span>
                   <span className="text-gray-700 text-sm">For Tax Invoices and their associated notes that are integrated with ZATCA's platform, this field is optional and is the public key of ZATCA's platform</span>
-                </li>
+                </motion.li>
               </ul>
               
-              <li className="flex items-start">
-                <span className="text-[#366A00] mr-3 font-bold text-lg">»</span>
+              <motion.li 
+                className="flex items-start"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 1.3 }}
+              >
+                <span className="text-[#366A00] mr-3 font-bold text-lg flex-shrink-0">•</span>
                 <span className="text-gray-700 text-sm sm:text-base">In the case of Simplified Tax Invoices and their associated notes, the Authority's Portal Cryptographic stamp of the public key of the E-Invoice Solution</span>
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Included Services and Outcomes Section */}
-      <div className="mb-12">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="mb-12"
+      >
         <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">Included Services and Outcomes</h3>
         <p className="text-gray-700 text-center mb-8 max-w-3xl mx-auto">
           Our comprehensive solution provides specialized dashboards for different teams in your organization.
         </p>
 
         {/* AR & Finance Team Section */}
-        <div className="mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-10"
+        >
           <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your AR & Finance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">01</span>
@@ -264,12 +428,16 @@ const EnInvoiceComponent = () => {
             
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">02</span>
@@ -284,12 +452,16 @@ const EnInvoiceComponent = () => {
             
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">03</span>
@@ -302,20 +474,30 @@ const EnInvoiceComponent = () => {
               </ul>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Tax & Compliance Team Section */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-10"
+        >
           <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your Tax & Compliance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">04</span>
@@ -330,12 +512,16 @@ const EnInvoiceComponent = () => {
             
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">05</span>
@@ -349,12 +535,16 @@ const EnInvoiceComponent = () => {
             
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
-              whileHover={{ 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{
                 y: -5, 
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                scale: 1.02
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 } 
               }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="mb-3 border-b pb-2">
                 <span className="text-gray-400 text-xs">06</span>
@@ -367,8 +557,8 @@ const EnInvoiceComponent = () => {
               </ul>
             </motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

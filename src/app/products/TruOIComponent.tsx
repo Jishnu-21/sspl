@@ -35,20 +35,60 @@ const TruOIComponent = () => {
 
   return (
     <div>
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold text-center text-[#366A00] mb-4">truOI</h2>
+      <motion.div 
+        className="mb-8"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h2 
+          className="text-2xl font-semibold text-center text-[#366A00] mb-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
+          truOI
+        </motion.h2>
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
-        <p className="text-gray-800 mb-6">
+        <motion.p 
+          className="text-gray-800 mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           truOI delivers true business intelligence by transforming complex data into actionable insights. Our platform offers real-time data processing and analysis, intuitive visualization tools for better decision making, and customizable alerts and notifications for critical metrics.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* AI-Powered Operations Section */}
-      <div className="mb-12">
-        <h3 className="text-xl font-semibold text-center text-[#366A00] mb-6">AI-Powered Operations</h3>
+      <motion.div 
+        className="mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h3 
+          className="text-xl font-semibold text-center text-[#366A00] mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
+          AI-Powered Operations
+        </motion.h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image Section */}
-          <div className="w-full h-full">
+          <motion.div 
+            className="w-full h-full"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             <Image 
               src="/images/products/tru-oi.png" 
               alt="AI-Powered Analytics Dashboard" 
@@ -56,37 +96,73 @@ const TruOIComponent = () => {
               height={350}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Content Section */}
-          <div className="flex flex-col justify-center h-full">
-            <p className="text-gray-800 font-medium mb-6">
+          <motion.div 
+            className="flex flex-col justify-center h-full"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.p 
+              className="text-gray-800 font-medium mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               You dream big. You inspire. You lead with a vision. You now have the power of AI to bring a transformational change at unit level Operations.
-            </p>
+            </motion.p>
 
-            <div className="space-y-4 text-gray-700">
+            <motion.div 
+              className="space-y-4 text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <p>
                 TruOI centralizes and automates your entire operations. Voice-activated AI Command instantly retrieves answers to any operational question for each location and keeps each location manager informed in real-time.
               </p>
               <p>
                 AI-powered platform for Franchisors, multi-unit Franchisees, Chains, and restaurants. Seamlessly integrate all your locations with intelligent operations, analytics, and AI-powered staff. Optimize your business through automation and drastically improve operations using AI.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* How TruOI Can Help You - Full Width Marquee */}
-      <div className="-mx-4 md:-mx-6 lg:-mx-8 mb-12">
+      <motion.div 
+        className="-mx-4 md:-mx-6 lg:-mx-8 mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <section className="py-12 bg-gray-100 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
           <div className="max-w-[95%] mx-auto">
-            <div className="text-center mb-8">
+            <motion.div 
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-5xl font-bold text-[#1B3D69] mb-2">Here's How TruOI Can Help You</h3>
               <p className="text-gray-600 text-sm">Turn Your Data Into Actionable Business Decisions</p>
-            </div>
+            </motion.div>
             
             {/* Feature blocks - animated marquee */}
-            <div className="overflow-hidden mb-3">
+            <motion.div 
+              className="overflow-hidden mb-3"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <div 
                 ref={firstRowRef}
                 className="flex gap-3 animate-marquee"
@@ -104,9 +180,15 @@ const TruOIComponent = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
             
-            <div className="overflow-hidden">
+            <motion.div 
+              className="overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <div 
                 ref={secondRowRef}
                 className="flex gap-3"
@@ -124,40 +206,74 @@ const TruOIComponent = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
-      </div>
-
-   
+      </motion.div>
 
       {/* Partners Section */}
-      <div className="-mx-4 md:-mx-6 lg:-mx-8 mb-12">
+      <motion.div 
+        className="-mx-4 md:-mx-6 lg:-mx-8 mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <section className="py-12 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
           <div className="max-w-[95%] mx-auto">
-            <div className="text-center mb-10">
+            <motion.div 
+              className="text-center mb-10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-5xl font-bold text-[#1B3D69] mb-4">
                 TruOI is partnered with 3k+ fastest<br />
                 growing companies
               </h3>
-            </div>
+            </motion.div>
             
-            <PartnerMarquee />
-           
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <PartnerMarquee />
+            </motion.div>
           </div>
         </section>
-      </div>
+      </motion.div>
 
       {/* About TruOI Section */}
-      <div className="mb-16">
-        <div className="text-center mb-8">
+      <motion.div 
+        className="mb-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div 
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-2xl font-semibold text-[#366A00] mb-4">About TruOI</h3>
           <div className="h-[1px] bg-gray-300 w-full mb-8"></div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Analytics Image */}
-          <div className="w-full h-full">
+          <motion.div 
+            className="w-full h-full"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             <Image 
               src="/images/products/tru-oi-about.png" 
               alt="TruOI Analytics Report" 
@@ -165,39 +281,98 @@ const TruOIComponent = () => {
               height={400}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Customer Driven Section */}
-          <div className="flex flex-col justify-center h-full">
-            <h4 className="text-xl font-bold text-gray-800 mb-4">CUSTOMER DRIVEN. PEOPLE FOCUSED.</h4>
-            <p className="text-gray-700 mb-8">
+          <motion.div 
+            className="flex flex-col justify-center h-full"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.h4 
+              className="text-xl font-bold text-gray-800 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              CUSTOMER DRIVEN. PEOPLE FOCUSED.
+            </motion.h4>
+            <motion.p 
+              className="text-gray-700 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               For almost 20 years, TruOI has worked both domestically and internationally with growth-directed organizations seeking to simplify enterprise reporting, improve team member performance, and generate operational success in real time.
-            </p>
+            </motion.p>
 
-            <h4 className="text-xl font-bold text-gray-800 mb-4">ONE TO ONE, NOT ONE TO MANY.</h4>
-            <p className="text-gray-700 mb-8">
+            <motion.h4 
+              className="text-xl font-bold text-gray-800 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              ONE TO ONE, NOT ONE TO MANY.
+            </motion.h4>
+            <motion.p 
+              className="text-gray-700 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               With over 3,000 clients and experience in multiple industries, our team members bring unique one-to-one coaching and support experience to each engagement.
-            </p>
+            </motion.p>
 
-            <p className="text-gray-700">
+            <motion.p 
+              className="text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               Our Operational Intelligence Platform is not a static reporting system but a one-of-a-kind real-time measurement, automation, coaching & training, and business optimization.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="-mx-4 md:-mx-6 lg:-mx-8 mb-12">
+      {/* Integration Section */}
+      <motion.div 
+        className="-mx-4 md:-mx-6 lg:-mx-8 mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <section className="py-12 bg-gray-100 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
           <div className="max-w-[95%] mx-auto">
-            <div className="text-center mb-8">
+            <motion.div 
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-5xl font-bold text-[#1B3D69] mb-2">
                 Integrates All Corporate / Unit Software
               </h3>
               <p className="text-gray-600 text-sm">ANY DATA, ANY DEVICE, USING POWERFUL AI TECHNOLOGY</p>
-            </div>
+            </motion.div>
             
             {/* Software integration blocks - first row marquee */}
-            <div className="overflow-hidden mb-3">
+            <motion.div 
+              className="overflow-hidden mb-3"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <div 
                 className="flex gap-3 animate-marquee"
                 style={{ 
@@ -246,10 +421,16 @@ const TruOIComponent = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
             
             {/* Software integration blocks - second row marquee (reverse direction) */}
-            <div className="overflow-hidden">
+            <motion.div 
+              className="overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <div 
                 className="flex gap-3"
                 style={{ 
@@ -298,10 +479,10 @@ const TruOIComponent = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
-      </div>
+      </motion.div>
       
       <style jsx>{`
         @keyframes marquee {

@@ -101,7 +101,7 @@ const ArbutusAnalyticsSection = () => {
             transition={{ duration: 0.6 }}
             className="pb-4 mb-0"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#366A00] mb-8">Why Arbutus for Analytics?</h2>
+            <h2 className="text-4xl md:text-5xl text-center font-bold text-[#366A00] mb-8">Why Arbutus for Analytics?</h2>
           </motion.div>
 
           {/* Introductory paragraphs */}
