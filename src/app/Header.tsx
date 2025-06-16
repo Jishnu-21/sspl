@@ -247,7 +247,7 @@ const Header = () => {
                       href="/photo-gallery" 
                       className="block px-4 py-2 text-[14px] md:text-[12px] lg:text-[14px] text-gray-700 hover:bg-[#f5f5f5] hover:text-[#366A00] border-l-2 border-transparent hover:border-[#366A00]"
                     >
-                      Image Gallery
+                      Photo Gallery
                     </Link>
                   </div>
                 </div>

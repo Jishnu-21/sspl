@@ -103,16 +103,7 @@ const ArbutusComponent = () => {
           </div>
           
           {/* Dots indicator */}
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 mb-4">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${currentIndex === index ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+       
         </div>
       </div>
       
