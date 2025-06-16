@@ -119,18 +119,18 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
-              <h4 className="text-xl text-black font-semibold mb-4 text-center">Middle East</h4>
-              <p className="text-gray-600 text-base leading-relaxed text-center">
-              Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain<br/>
-              Tel.: ‪+973-13622552‬ | M: ‪+973-3889 2927‬<br/>
-              E: info@ssplme.com | W: www.ssplme.com | CR: 120861-1</p>
-            </div>
-            <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
               <h4 className="text-xl text-black font-semibold mb-4 text-center">India</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
               M-91, 1st. Floor, Connaught Circus, New Delhi - 110001<br/>
               Tel.: ‪+91-11-23765368‬ | M: ‪+91-98101 02927‬<br/>
               E: info@sspl.net.in | W: www.sspl.net.in | CIN: U72300DL2008PTC182090</p>
+            </div>
+            <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
+              <h4 className="text-xl text-black font-semibold mb-4 text-center">Middle East</h4>
+              <p className="text-gray-600 text-base leading-relaxed text-center">
+              Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain<br/>
+              Tel.: ‪+973-13622552‬ | M: ‪+973-3889 2927‬<br/>
+              E: info@ssplme.com | W: www.ssplme.com | CR: 120861-1</p>
             </div>
           </motion.div>
 
@@ -141,9 +141,9 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white backdrop-blur-sm p-8 shadow-xl hover:shadow-2xl transition-shadow min-h-[540px] rounded-sm -translate-y-8">
+            <div className="bg-white backdrop-blur-sm p-8 shadow-xl hover:shadow-2xl transition-shadow min-h-[585px] rounded-sm">
               <h3 className="text-xl text-black font-medium mb-6">Send us a message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6 mt-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -188,11 +188,11 @@ const ContactSection = () => {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none resize-none bg-white/80 placeholder-black text-black"
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 focus:border-black outline-none resize-none bg-white/80 placeholder-black text-black min-h-[180px]"
                   required
                 />
-                <div className="flex items-start gap-2 mb-4">
+                <div className="flex items-start gap-2 mb-2">
                   <input
                     type="checkbox"
                     id="consent"
@@ -207,9 +207,9 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`px-8 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300 cursor-pointer ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    className={`w-full font-bold max-w-[160px] mt-6 px-8 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300 cursor-pointer ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send'}
+                    {isSubmitting ? 'Submitting...' : 'Submit'}
                   </button>
                 </div>
               </form>
