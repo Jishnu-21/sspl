@@ -416,7 +416,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">01</span>
+                <span className="text-gray-400 text-lg">01</span>
                 <h5 className="text-gray-800 font-medium">Seamless Integrations</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
@@ -440,7 +440,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">02</span>
+                <span className="text-gray-400 text-lg">02</span>
                 <h5 className="text-gray-800 font-medium">Process by Dept / Location / Company</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
@@ -464,7 +464,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">03</span>
+                <span className="text-gray-400 text-lg">03</span>
                 <h5 className="text-gray-800 font-medium">Accurate Documents</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
@@ -500,7 +500,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">04</span>
+                <span className="text-gray-400 text-lg">04</span>
                 <h5 className="text-gray-800 font-medium">End-to-End Compliance</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
@@ -524,7 +524,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">05</span>
+                <span className="text-gray-400 text-lg">05</span>
                 <h5 className="text-gray-800 font-medium">Automated VAT Reporting</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
@@ -547,7 +547,7 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-xs">06</span>
+                <span className="text-gray-400 text-lg">06</span>
                 <h5 className="text-gray-800 font-medium">Enable Reconciliations with</h5>
               </div>
               <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
