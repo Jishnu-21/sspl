@@ -39,6 +39,14 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
   // Duplicate the clients array to create a seamless loop
   const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
 
+  // Split clients into two groups for different rows
+  const firstHalf = clients.slice(0, Math.ceil(clients.length / 2));
+  const secondHalf = clients.slice(Math.ceil(clients.length / 2));
+
+  // Duplicate each half for seamless scrolling
+  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf, ...firstHalf];
+  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf];
+
   // Use animation controls to manage the marquee animation
   const controls = useAnimationControls();
 
@@ -64,7 +72,7 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
     controls.start({
       x: '-50%',
       transition: {
-        duration: 40,
+        duration: 120,
         repeat: Infinity,
         ease: 'linear',
         repeatType: 'loop',
@@ -73,28 +81,46 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
   };
 
   return (
-    <div className={`w-full  py-8 overflow-hidden ${className}`}>
+    <div className={`w-full py-8 overflow-hidden ${className}`}>
       <div className="relative w-full">
         <motion.div
-          className="flex items-center"
+          className="grid grid-rows-2 gap-8"
           initial={{ x: 0 }}
-          animate={controls} // Use animation controls
-          onHoverStart={handleHoverStart} // Pause on hover
-          onHoverEnd={handleHoverEnd} // Resume on hover end
+          animate={controls}
+          onHoverStart={handleHoverStart}
+          onHoverEnd={handleHoverEnd}
           style={{ width: 'fit-content' }}
         >
-          {duplicatedClients.map((client, index) => (
-            <div key={index} className="flex-shrink-0 mx-8">
-              <div className="relative h-14 w-36">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
+          {/* First row */}
+          <div className="flex items-center">
+            {duplicatedFirstHalf.map((client, index) => (
+              <div key={`row1-${index}`} className="flex-shrink-0 mx-8">
+                <div className="relative h-14 w-36">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          {/* Second row */}
+          <div className="flex items-center">
+            {duplicatedSecondHalf.map((client, index) => (
+              <div key={`row2-${index}`} className="flex-shrink-0 mx-8">
+                <div className="relative h-14 w-36">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </div>
