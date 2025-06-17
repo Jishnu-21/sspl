@@ -18,7 +18,7 @@ const predictiveanalysis= () => {
         
         <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Access meaningful data to deliver key insights with powerful analytics tools</h2>
               <p className="text-gray-700 leading-relaxed">
                 In a fast-paced demanding world, there has been a phenomenal growth seen in structured and unstructured data, 
@@ -26,7 +26,7 @@ const predictiveanalysis= () => {
                 insights faster & keep up with the momentum.
               </p>
             </div>
-            </div>
+          </div>
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
@@ -36,33 +36,36 @@ const predictiveanalysis= () => {
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Handling Large Data Sets</h2>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            {/* Image */}
-            <div className="mb-8 flex justify-center">
-              <Image 
-                src="/images/services/pred1.jpg" 
-                alt="Data Analytics Charts" 
-                width={600} 
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            
-            {/* Text content */}
-            <div className="text-center">
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Big data analytics is the process of examining large data sets to uncover hidden patterns, unknown correlations, 
-                market trends, customer preferences and other useful business information. The analytical findings can lead to 
-                more effective marketing strategies, building new revenue opportunities, rendering better customer service, 
-                improved operational efficiency so as to secure competitive advantages over rival organizations and add into 
-                other business benefits.
-              </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 items-stretch">
+              {/* Image */}
+              <div className="md:w-1/2">
+                <div className="relative aspect-[4/3]">
+                  <Image 
+                    src="/images/services/pred1.jpg" 
+                    alt="Data Analytics Charts" 
+                    fill
+                    className="rounded-md object-cover"
+                  />
+                </div>
+              </div>
               
-              <p className="text-gray-700 leading-relaxed">
-                Predictive Analytics is the next major development to Big Data Analytics wherein, technologies that are capable of 
-                handling large data sets can generate business interest trigger points, take into the calculations used for 
-                predicting any future decisions.
-              </p>
+              {/* Text content */}
+              <div className="md:w-1/2 text-left flex flex-col justify-center">
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Big data analytics is the process of examining large data sets to uncover hidden patterns, unknown correlations, 
+                  market trends, customer preferences and other useful business information. The analytical findings can lead to 
+                  more effective marketing strategies, building new revenue opportunities, rendering better customer service, 
+                  improved operational efficiency so as to secure competitive advantages over rival organizations and add into 
+                  other business benefits.
+                </p>
+                
+                <p className="text-gray-700 leading-relaxed">
+                  Predictive Analytics is the next major development to Big Data Analytics wherein, technologies that are capable of 
+                  handling large data sets can generate business interest trigger points, take into the calculations used for 
+                  predicting any future decisions.
+                </p>
+              </div>
             </div>
           </div>
         </section>
