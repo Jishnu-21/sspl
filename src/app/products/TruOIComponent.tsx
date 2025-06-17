@@ -10,27 +10,25 @@ const TruOIComponent = () => {
   
   // Feature items for the marquee
   const firstRowItems = [
-    "Real-time Analytics", 
-    "Voice-activated AI", 
-    "Multi-location Management", 
-    "Operational Insights", 
-    "Performance Tracking",
-    "Automated Reporting",
-    "Predictive Analysis",
-    "Custom Dashboards",
-    "Data Visualization",
-    "KPI Monitoring"
+    "Increase Sales & Profits", 
+    "ReduceInventory Costs", 
+    "Reduce Labor Costs", 
+    "Increase Talent Performance", 
+    "Increase Sales & Profits", 
+    "ReduceInventory Costs", 
+    "Reduce Labor Costs", 
+    "Increase Talent Performance", 
   ];
   
   const secondRowItems = [
-    "Business Intelligence", 
-    "Decision Support", 
-    "Process Automation", 
-    "AI-powered Insights",
-    "Trend Analysis",
-    "Revenue Forecasting",
-    "Inventory Management",
-    "Staff Optimization"
+   "Increase Customer Satisfaction",
+    "Reduce Reporting Time",
+    "No Need for Data Warehouse",
+    "No Programming Experience Required",
+   "Increase Customer Satisfaction",
+    "Reduce Reporting Time",
+    "No Need for Data Warehouse",
+    "No Programming Experience Required",
   ];
 
   return (

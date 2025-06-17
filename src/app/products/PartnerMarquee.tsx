@@ -14,6 +14,26 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
     { name: 'JSC', logo: '/images/products/tru-oi/logo/jsc.png' },
     { name: 'CoxHealth', logo: '/images/products/tru-oi/logo/coxhealth.svg' },
     { name: 'NASA', logo: '/images/products/tru-oi/logo/nasa.png' },
+    { name: 'Senior Helper', logo: '/images/products/tru-oi/logo/senior-helper.jpg' },
+    { name: 'Lockheed Martin', logo: '/images/products/tru-oi/logo/lockhead-martin.png' },
+    { name: 'Splash', logo: '/images/products/tru-oi/logo/splash.jpg' },
+    { name: 'Signal88', logo: '/images/products/tru-oi/logo/signal88.png' },
+    { name: 'Honest-1', logo: '/images/products/tru-oi/logo/honest-1.jpg' },
+    { name: 'Right at Home', logo: '/images/products/tru-oi/logo/rightathome.jpg' },
+    { name: 'Sonic', logo: '/images/products/tru-oi/logo/sonic.jpg' },
+    { name: 'Sysco', logo: '/images/products/tru-oi/logo/sysco.png' },
+    { name: 'Honeywell', logo: '/images/products/tru-oi/logo/honeywell.jpg' },
+    { name: 'Trijicon', logo: '/images/products/tru-oi/logo/trijicon.jpg' },
+    { name: 'Bancorp', logo: '/images/products/tru-oi/logo/bancorp.png' },
+    { name: 'MAG', logo: '/images/products/tru-oi/logo/mag.jpeg' },
+    { name: 'Pacmore', logo: '/images/products/tru-oi/logo/pacmore.png' },
+    { name: 'Arizona', logo: '/images/products/tru-oi/logo/arizona.png' },
+    { name: 'Pioneer', logo: '/images/products/tru-oi/logo/pioneer.jpg' },
+    { name: 'DWIHN', logo: '/images/products/tru-oi/logo/dwihn.webp' },
+    { name: 'Baystate', logo: '/images/products/tru-oi/logo/Baystate.jpg' },
+    { name: 'Bethesda', logo: '/images/products/tru-oi/logo/bethesda.jpg' },
+    { name: 'Cornell', logo: '/images/products/tru-oi/logo/cornell.jpeg' },
+    { name: 'Bristol', logo: '/images/products/tru-oi/logo/bristol.png' }
   ];
 
   // Duplicate the clients array to create a seamless loop
@@ -27,7 +47,7 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
     controls.start({
       x: '-50%',
       transition: {
-        duration: 25,
+        duration: 120,
         repeat: Infinity,
         ease: 'linear',
         repeatType: 'loop',
@@ -44,7 +64,7 @@ const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
     controls.start({
       x: '-50%',
       transition: {
-        duration: 25,
+        duration: 40,
         repeat: Infinity,
         ease: 'linear',
         repeatType: 'loop',
