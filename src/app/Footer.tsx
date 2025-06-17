@@ -98,7 +98,7 @@ const Footer = ({ className = '' }: FooterProps) => {
                     <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
                   </div>
                   <ul className="space-y-1 ml-5">
-                    <li className="text-gray-500 text-[11px] md:text-xs mb-2">Bahrain Financial Harbour, East Tower, Bahrain</li>
+                    <li className="text-gray-500 text-[11px] md:text-xs mb-2">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
                     <li className="flex items-center space-x-4">
                       <div className="flex items-center">
                         <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
