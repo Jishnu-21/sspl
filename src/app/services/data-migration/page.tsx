@@ -6,6 +6,7 @@ import Header from '@/app/Header'
 import Image from 'next/image'
 import React from 'react'
 import DataMigrationRisks from '@/app/components/DataMigrationRisks'
+import { motion } from 'framer-motion'
 
 const dataMigration = () => {
   return (
@@ -18,21 +19,33 @@ const dataMigration = () => {
           subtitle="Ensuring Seamless Transition of Your Critical Business Data"
         />
         
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <motion.section
+          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Data Migration Excellence</h2>
               <p className="text-gray-700 leading-relaxed">
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
         
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         
         {/* Why Migrate Your Data */}
-        <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12">
+        <motion.section
+          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Why Migrate Your Data?</h2>
           </div>
@@ -48,7 +61,7 @@ const dataMigration = () => {
             />
           </div>
 
-          <div className="text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <p className="text-gray-700 leading-relaxed mb-6">
               Data migrations generally result from the introduction of a new system. This may involve an application migration or consolidation in which one or more legacy systems are replaced or the deployment of an additional system that will sit alongside the existing applications. Whatever the specific nature of any data migration, the ultimate aim is to improve corporate performance and deliver competitive advantage. Accurate data is the raw material that maximizes the value of enterprise applications. However, when existing data is migrated to a new target application, it can become apparent that it may contain inaccuracies, unknowns, redundant and duplication. Although the data in the source system may be perfectly adequate for its current use, yet, it may be wholly inadequate in terms of content and structure to achieve the objectives of the target system. Without a reasonable understanding of both source and target, transferring data into a more sophisticated application will only lead to amplify the negative impact of any incorrect or irrelevant data, perpetuate any hidden legacy problems, and increase exposure to risk.
             </p>
@@ -74,7 +87,7 @@ const dataMigration = () => {
             </p>
 
           </div>
-        </section>
+        </motion.section>
         <DataMigrationRisks />
         <Footer/>   
       </main>

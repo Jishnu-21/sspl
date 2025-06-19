@@ -59,8 +59,26 @@ const services: Service[] = [
     description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
     color: 'from-blue-900/20',
     image: '/images/home/Algorithm Auditing.jpg'
+  },
+  {
+    title: 'Media Analytics',
+    description: 'Our Media Analytics services help organizations monitor, analyze, and gain insights from media data to optimize campaigns and measure brand impact.',
+    color: 'from-blue-900/20',
+    image: '/images/home/media analytics.jpg'
   }
 ];
+
+const serviceLinks = {
+  'Predictive & Big Data Analytics': 'predictive-analysis',
+  'GRC Solutions & Services': 'grc-solutions-services',
+  'Revenue Assurance': 'revenue-assurance',
+  'Operations & Finance Analytics': 'operations-finance',
+  'Risk Management Audit Analytics': 'risk-management',
+  'Fraud Management & Detection': 'fraud-management',
+  'Data Migration': 'data-migration',
+  'Algorithm Auditing': 'algorithm-auditing',
+  'Media Analytics': 'media-analytics'
+};
 
 const ServicesList = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -144,7 +162,7 @@ const ServicesList = () => {
                   
                   return (
                     <Link 
-                      href={`/services/${service.title.toLowerCase().replace(/[\s/]+/g, '-')}`}
+                      href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
                       key={index}
                       data-card-index={actualIndex}
                       className={`
@@ -247,7 +265,7 @@ const ServicesList = () => {
                 
                 return (
                   <Link 
-                    href={`/services/${service.title.toLowerCase().replace(/[\s/]+/g, '-')}`}
+                    href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
                     key={index}
                     data-card-index={index}
                     className={`

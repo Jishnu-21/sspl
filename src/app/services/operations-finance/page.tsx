@@ -6,6 +6,7 @@ import PageBanner from '@/app/components/PageBanner'
 import Footer from '@/app/Footer'
 import Image from 'next/image'
 import { FaChartLine, FaMoneyBillWave, FaSearchDollar, FaFileInvoiceDollar, FaChartPie, FaShieldAlt } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const OperationsFinance = () => {
   return (
@@ -17,21 +18,33 @@ const OperationsFinance = () => {
           title="Operations & Finance Analytics"
           subtitle="Can CFOs really use big data for Finance Analytics?"
         />
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <motion.section
+          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Can CFOs really use Big Data for Finance Analytics?</h2>
               <p className="text-gray-700 leading-relaxed">
                 With rare exceptions, until now the closest that Big Data has come to the CFO's office has been via the well-publicized examples involving the enormous consumer databases of credit card vendors, who use them to identify pertinent information, and then sell data on the buying patterns, credit worthiness of the customer pool, among other things. The typical finance department hardly encounters anything close to the size of those terabyte-scale databases when closing the books, preparing budgets and forecasting revenues.
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
         
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
-        <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12">
-          <div className="max-w-4xl mx-auto">
+        <motion.section
+          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Create Insight, Impact & Innovation for Financial Services</h2>
             </div>
@@ -123,7 +136,7 @@ const OperationsFinance = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
         <Footer/>
       </main>
     </>

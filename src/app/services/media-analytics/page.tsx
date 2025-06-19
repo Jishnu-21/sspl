@@ -2,13 +2,22 @@
 
 import Footer from '@/app/Footer'
 import Header from '@/app/Header'
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageBanner from '@/app/components/PageBanner'
 import Image from 'next/image'
 import { FaChartLine, FaThumbsUp, FaUsers, FaChartBar, FaChartArea, FaChartPie, FaShieldAlt, FaCogs, FaGlobe, FaClock } from 'react-icons/fa'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const media = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <>
       <main className="flex flex-col bg-white min-h-screen">
@@ -19,9 +28,9 @@ const media = () => {
           subtitle="Media Analytics Enabling Software Solution"
         />
 
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <p className="text-gray-700 leading-relaxed">
               An unprecedented amount of data is being generated from enormous video traffic that presents an array of opportunities and challenges for the Channel. Media Analytics proposes a solution to manage and take appropriate business decisions, at almost real-time basis. SSPL- with its given track record of over 20 years in the Industry of Data Analytics provides extremely fast, tested and trusted solution to various businesses that detail out Business Intelligent Reports and Trends based on the user defined parameters. The solution and services not only enables Channels to understand their viewers better, but also helps them optimize the airtime with best possible telecast.
               </p>
@@ -31,35 +40,37 @@ const media = () => {
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
                 {/* Handling Large Data Sets Section */}
-                <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12">
+                <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12" data-aos="fade-up">
                   <div className="text-center mb-8">
                     <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Media Analytics Enabling Software Solution</h2>
                   </div>
                   
 
-                  <div className="max-w-4xl mx-auto">
-                    {/* Image */}
-                    <div className="mb-8 flex justify-center">
-                      <Image 
-                        src="/images/services/media1.jpg" 
-                        alt="Data Analytics Charts" 
-                        width={600} 
-                        height={350}
-                        className="rounded-md"
-                      />
-                    </div>
-                    
-                    {/* Text content */}
-                    <div className="text-center">
-                      <p className="text-gray-700 leading-relaxed mb-6">
-                      SSPL’s Media Analytics enabling software solution can be leveraged to build offerings to understand the user behavior. Our solution generates audience engagement measurements and is capable of supporting structured as well as non-structured data from all possible sources in the Industry. The framework enables a user to run descriptive, predictive and prescriptive analytics over the collected data. It helps in generating reports, charts and dashboards that provide insights into customer behavior. The solution also implements a recommendation engine to suggest movies and programs based on user’s viewing history and preferences. It also provides a forecasting engine to estimate revenue generated through customer activity.
-                      </p>
+                  <div className="max-w-6xl mx-auto">
+                    <div className="flex flex-col md:flex-row items-stretch gap-8">
+                      {/* Image */}
+                      <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0" data-aos="fade-right">
+                        <div className="relative aspect-[5/3] w-full">
+                          <Image 
+                            src="/images/services/media1.jpg" 
+                            alt="Data Analytics Charts" 
+                            fill
+                            className="rounded-md object-cover"
+                          />
+                        </div>
+                      </div>
+                      {/* Text content */}
+                      <div className="w-full md:w-1/2 flex flex-col justify-center" data-aos="fade-left">
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                        SSPL's Media Analytics enabling software solution can be leveraged to build offerings to understand the user behavior. Our solution generates audience engagement measurements and is capable of supporting structured as well as non-structured data from all possible sources in the Industry. The framework enables a user to run descriptive, predictive and prescriptive analytics over the collected data. It helps in generating reports, charts and dashboards that provide insights into customer behavior. The solution also implements a recommendation engine to suggest movies and programs based on user's viewing history and preferences. It also provides a forecasting engine to estimate revenue generated through customer activity.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </section>
 
                 {/* Features Section - Full Width with Carousel */}
-                <section className="py-12 bg-gray-50 overflow-hidden w-screen relative mb-16" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+                <section className="py-12 bg-gray-50 overflow-hidden w-screen relative mb-16" data-aos="fade-up" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
                   <div className="max-w-[95%] mx-auto">
                     <div className="text-center mb-10">
                       <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Features</h2>
@@ -78,7 +89,7 @@ const media = () => {
                         }}
                       >
                         {/* Feature Cards - First Set */}
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaChartLine className="text-white text-2xl" />
@@ -90,7 +101,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaThumbsUp className="text-white text-2xl" />
@@ -102,7 +113,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaUsers className="text-white text-2xl" />
@@ -114,7 +125,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaChartBar className="text-white text-2xl" />
@@ -127,7 +138,7 @@ const media = () => {
                         </div>
                         
                         {/* Duplicate cards for continuous carousel */}
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaChartLine className="text-white text-2xl" />
@@ -139,7 +150,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaThumbsUp className="text-white text-2xl" />
@@ -151,7 +162,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaUsers className="text-white text-2xl" />
@@ -163,7 +174,7 @@ const media = () => {
                           </p>
                         </div>
                         
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]">
+                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                               <FaChartBar className="text-white text-2xl" />

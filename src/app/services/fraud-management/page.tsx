@@ -7,6 +7,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import { FaExclamationTriangle, FaUniversity, FaUserTie, FaSearch, FaMoneyCheckAlt, FaFileInvoiceDollar } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const fraudManagement = () => {
   // Helper function to extract YouTube video ID from URL
@@ -93,28 +94,40 @@ const fraudManagement = () => {
           subtitle="Using Analytics to Protect Yourself"
         />
         
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <motion.section
+          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Data Analytics for FCPA Compliance</h2>
               <p className="text-gray-700 leading-relaxed">
               The Foreign Corrupt Practices Act (FCPA) should not be taken lightly. But compliance can be tricky. The global business environment includes many international, centralized and decentralized companies. Individuals often operate in countries where bribes and payoffs have historically been a routine part of doing business. When languages and business cultures vary to a large degree, it can be extremely difficult to keep tabs on the operations.      
              </p>
               <p className="text-gray-700 leading-relaxed">
-              A key tool for avoiding FCPA difficulties is Data Analysis. The truth is held in the data, because that’s where a company’s conduct is recorded. The rows and columns of data often speak volumes about what is truly going on inside the business.             </p>
+              A key tool for avoiding FCPA difficulties is Data Analysis. The truth is held in the data, because that's where a company's conduct is recorded. The rows and columns of data often speak volumes about what is truly going on inside the business.             </p>
             </div>
           </div>
-        </section>
+        </motion.section>
         
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         
         {/* Key Fraud Management Capabilities */}
-        <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12">
+        <motion.section
+          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Using Analytics to Protect Yourself</h2>
           </div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Image */}
             <div className="mb-8 flex justify-center">
               <Image 
@@ -206,7 +219,7 @@ const fraudManagement = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Video Resources */}
         <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">

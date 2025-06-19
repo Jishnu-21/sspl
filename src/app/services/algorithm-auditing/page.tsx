@@ -5,6 +5,7 @@ import Header from '@/app/Header'
 import PageBanner from '@/app/components/PageBanner'
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const algorithmAuditing = () => {
   return (
@@ -17,22 +18,34 @@ const algorithmAuditing = () => {
       subtitle="Test and verify the working of application"
     />
      
-     <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+     <motion.section
+       className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+       initial={{ opacity: 0, y: 40 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.8 }}
+       viewport={{ once: true }}
+     >
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <p className="text-gray-700 leading-relaxed">
               Algorithm Auditing is to test and verify the working of application as per the Industry Rules and Norms. There could be genuine technical issues in the application, which might result benefitting certain class of user/ transaction types. There are also examples of algorithmic models that are so complex that their developers are not sure why a model is making particular decision. These algorithmic challenges, along with data privacy issues, have created the need for the role of algorithm audit. We as professional auditors have requisite knowledge about the domain under audit and its processes.
               </p>
             </div>
           </div>
-        </section> 
+        </motion.section> 
 
      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
             
             {/* Key Fraud Management Capabilities */}
-            <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12">
+            <motion.section
+              className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-6xl mx-auto">
                 {/* Image */}
                 <div className="mb-8 flex justify-center">
                   <Image 
@@ -54,23 +67,29 @@ const algorithmAuditing = () => {
                   </p>
                 </div>
               </div>
-            </section>
+            </motion.section>
 
-            <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+            <motion.section
+              className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
           <div className="mb-2">
-            <div className="max-w-4xl mx-auto text-center mb-2">
+            <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Professional Responsibilities</h2>
               <p className="text-gray-700 leading-relaxed mb-6 text-center">
               • Analysing the system for potential algorithmic risk that could hold a bias or benefit specific users.<br />
               • Use of Advance Analytics Techniques on data sets to determine if certain groups/ members/ clients are likely to be favored due to any inherent bias(es) in the Price Discovery Process Algorithm as well as reviewing for any violations of the regulatory norms.<br />
               • Assessing the performance of algorithms on real data, to test for hidden biases resulting from complex correlations.<br />
               • Providing a trusted and objective third party review, validating regulatory compliance of algorithms, and ensuring they are being used appropriately.<br />
-              • Delivering reasonable assurance to certify the algorithm as “Trustworthy” and making sure all the defects/ issues are being timely resolved.
+              • Delivering reasonable assurance to certify the algorithm as "Trustworthy" and making sure all the defects/ issues are being timely resolved.
               </p>
 
             </div>
           </div>
-        </section>
+        </motion.section>
 
 
     <Footer/>

@@ -122,7 +122,7 @@ const Grc = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="w-full">
+                <div className="w-full h-full flex flex-col justify-center">
                   {/* Risk Management Framework */}
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">Risk Management Framework</h3>
@@ -259,13 +259,13 @@ const Grc = () => {
               
               {/* Right side - Content */}
               <motion.div 
-                className="w-full md:w-1/2 flex flex-col justify-center h-full"
+                className="w-full md:w-1/2 flex flex-col justify-center"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="w-full">
+                <div className="w-full h-full flex flex-col justify-center">
                   {/* Regulatory Risk Management */}
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">Regulatory Risk Management</h3>
@@ -349,7 +349,7 @@ const Grc = () => {
             <div className="flex flex-col md:flex-row items-stretch gap-8">
               {/* Left side - Content */}
               <motion.div 
-                className="w-full md:w-1/2 flex flex-col justify-center h-full"
+                className="w-full md:w-1/2 flex flex-col"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}

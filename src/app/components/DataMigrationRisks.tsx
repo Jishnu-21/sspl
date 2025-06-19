@@ -6,19 +6,19 @@ import Image from 'next/image'
 const DataMigrationRisks = () => {
   return (
     <section className="py-12 px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold text-center text-[#366A00] mb-8">The Risks Of Overlooking Data Content</h2>
         
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Left side - Image */}
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <div className="bg-gray-100 p-4 rounded-md">
+          <div className="w-full md:w-2/3 mb-6 md:mb-0">
+            <div className="bg-gray-100 rounded-md">
               <Image 
                 src="/images/services/data-mig1.jpg" 
                 alt="Data Migration Risks" 
-                width={400} 
+                width={300} 
                 height={300}
-                className="w-full h-auto"
+                className="w-full "
               />
             </div>
           </div>

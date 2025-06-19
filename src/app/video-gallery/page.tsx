@@ -6,6 +6,8 @@ import Footer from '../Footer';
 import ShortPageBanner from '../components/ShortPageBanner';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Helper function to extract YouTube video ID from URL
 const extractYoutubeId = (url: string) => {
@@ -155,34 +157,10 @@ const videoData = [
 ];
 
 const VideoGallery = () => {
-  const [visibleVideos, setVisibleVideos] = useState(6);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-  const [newVideos, setNewVideos] = useState<number[]>([]);
-  
-  const loadMoreVideos = () => {
-    const currentVisible = visibleVideos;
-    const newVisible = Math.min(currentVisible + 3, videoData.length);
-    
-    // Mark the new videos for animation
-    const newIndices = [];
-    for (let i = currentVisible; i < newVisible; i++) {
-      newIndices.push(videoData[i].id);
-    }
-    
-    setNewVideos(newIndices);
-    setVisibleVideos(newVisible);
-  };
-  
-  // Clear the newVideos array after animation completes
   useEffect(() => {
-    if (newVideos.length > 0) {
-      const timer = setTimeout(() => {
-        setNewVideos([]);
-      }, 1000); // Clear after animation duration
-      
-      return () => clearTimeout(timer);
-    }
-  }, [newVideos]);
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   
   const openVideo = (youtubeId: string) => {
     const videoId = extractYoutubeId(youtubeId);
@@ -206,66 +184,46 @@ const VideoGallery = () => {
         
         <section className="py-10 sm:py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-5 md:px-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-              <AnimatePresence>
-                {videoData.slice(0, visibleVideos).map((video) => {
-                  const videoId = extractYoutubeId(video.youtubeId);
-                  const isNewVideo = newVideos.includes(video.id);
-                  
-                  return (
-                    <motion.div 
-                      key={video.id} 
-                      className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-                      initial={isNewVideo ? { opacity: 0, y: 50 } : false}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: isNewVideo ? 0.1 * (newVideos.indexOf(video.id) % 3) : 0 
-                      }}>
-                      <div className="relative aspect-video cursor-pointer group shadow-sm hover:shadow-md transition-shadow duration-300" onClick={() => openVideo(video.youtubeId)}>
-                        <Image 
-                          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                          alt={video.title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onError={(e) => {
-                            // Fallback to medium quality thumbnail if high quality is not available
-                            const target = e.target as HTMLImageElement;
-                            target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-                          }}
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8">
-                              <path d="M8 5v14l11-7z" />
-                            </svg>
-                          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8" data-aos="fade-up">
+              {videoData.map((video, idx) => {
+                const videoId = extractYoutubeId(video.youtubeId);
+                return (
+                  <div
+                    key={video.id}
+                    className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-up"
+                    data-aos-delay={idx * 60}
+                  >
+                    <div className="relative aspect-video cursor-pointer group shadow-sm hover:shadow-md transition-shadow duration-300" onClick={() => openVideo(video.youtubeId)}>
+                      <Image
+                        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                        alt={video.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        onError={(e) => {
+                          // Fallback to medium quality thumbnail if high quality is not available
+                          const target = e.target as HTMLImageElement;
+                          target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
                         </div>
-                        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                       </div>
-                      <div className="p-3 sm:p-4">
-                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2 line-clamp-2">{video.title}</h3>
-                        <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 sm:line-clamp-3">{video.description}</p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </AnimatePresence>
+                      <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-3 sm:p-4">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2 line-clamp-2">{video.title}</h3>
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 sm:line-clamp-3">{video.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            
-            {visibleVideos < videoData.length && (
-              <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
-                <motion.button 
-                  onClick={loadMoreVideos}
-                  className="px-6 py-3 bg-white cursor-pointer text-gray-800 border border-gray-300 rounded-md hover:scale-105 transition-all duration-300 font-medium"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Load More
-                </motion.button>
-              </div>
-            )}
           </div>
         </section>
         
