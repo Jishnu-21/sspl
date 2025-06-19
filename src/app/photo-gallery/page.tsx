@@ -109,16 +109,13 @@ const galleryImages = [
   { src: '/images/photo-gallery/g-86.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
   { src: '/images/photo-gallery/g-87.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
   { src: '/images/photo-gallery/g-88.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
-  { src: '/images/photo-gallery/g-89.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
   { src: '/images/photo-gallery/g-90.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
   // Eighteenth row
   { src: '/images/photo-gallery/g-91.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
   { src: '/images/photo-gallery/g-92.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
   { src: '/images/photo-gallery/g-93.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
   { src: '/images/photo-gallery/g-94.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
-  { src: '/images/photo-gallery/g-95.jpg.jpeg', alt: 'SSPL Gallery Image 40' },
   // Nineteenth row
-  { src: '/images/photo-gallery/g-96.jpg.jpeg', alt: 'SSPL Gallery Image 36' },
   { src: '/images/photo-gallery/g-97.jpg.jpeg', alt: 'SSPL Gallery Image 37' },
   { src: '/images/photo-gallery/g-98.jpg.jpeg', alt: 'SSPL Gallery Image 38' },
   { src: '/images/photo-gallery/g-99.jpg.jpeg', alt: 'SSPL Gallery Image 39' },
