@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface MarqueeItem {
   logo: string;
@@ -16,6 +18,10 @@ interface MarqueeItem {
 
 const RecognitionSection: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const marqueeItems: MarqueeItem[] = [
     {
@@ -98,14 +104,14 @@ const RecognitionSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 mt-20 bg-white text-black">
+    <section className="py-16 mt-20 bg-white text-black" data-aos="fade-up">
       <div className="container mx-auto px-4 md:px-8 mb-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-black">Recognition</h2>
         </div>
       </div>
       
-      <div className="relative w-full">
+      <div className="relative w-full" data-aos="fade-up">
         {/* Hover Section - Appears above the marquee on hover */}
         {hoveredItem && (
           <div className="absolute bottom-full left-0 w-full z-20 bg-[#1B3D69] bg-opacity-95 flex items-start p-4 md:p-6 transition-opacity duration-300">
@@ -148,7 +154,7 @@ const RecognitionSection: React.FC = () => {
         )}
 
         {/* Marquee Section */}
-        <div className="w-full overflow-hidden bg-white py-4">
+        <div className="w-full overflow-hidden bg-white py-4" data-aos="fade-up">
           <div className="flex animate-marquee whitespace-nowrap gap-4 sm:gap-6 md:gap-8">
             {/* Logos repeated to create seamless loop */}
             {marqueeItems.concat(marqueeItems).map((item, index) => (

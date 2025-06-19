@@ -48,7 +48,7 @@ const ArbutusComponent = () => {
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Left Side - YouTube Video */}
-        <div className="h-full flex items-center">
+        <div className="h-full flex items-center order-1 lg:order-none mb-8 lg:mb-0">
           <div className="w-full relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
@@ -61,8 +61,8 @@ const ArbutusComponent = () => {
         </div>
 
         {/* Right Side - Testimonials */}
-        <div className="h-full flex flex-col">      
-          <div className="w-full relative min-h-[400px] flex flex-col items-center justify-center">
+        <div className="h-full flex flex-col order-2 lg:order-none">      
+          <div className="w-full relative min-h-[320px] sm:min-h-[360px] md:min-h-[400px] flex flex-col items-center justify-center">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -73,22 +73,22 @@ const ArbutusComponent = () => {
                   display: currentIndex === index ? 'flex' : 'none'
                 }}
                 transition={{ duration: 0.5 }}
-                className="absolute w-full px-4 flex flex-col items-center"
+                className="absolute w-full px-2 sm:px-4 flex flex-col items-center"
               >
                 {/* Company Logo */}
                 <div className="mb-6">
-                  <div className="border-2 border-blue-100 rounded-lg p-4 bg-white shadow-sm">
+                  <div className="border-2 border-blue-100 rounded-lg p-2 sm:p-4 bg-white shadow-sm flex justify-center items-center">
                     <img 
                       src={testimonial.logo} 
                       alt={`${testimonial.company} logo`} 
-                      className="h-[80px] w-auto object-contain"
+                      className="h-[48px] sm:h-[60px] md:h-[80px] w-auto object-contain"
                     />
                   </div>
                 </div>
 
                 {/* Testimonial Content */}
-                <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 w-full">
-                  <p className="text-gray-800 italic mb-4 text-lg">
+                <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg border border-gray-100 w-full">
+                  <p className="text-gray-800 italic mb-4 text-base sm:text-lg">
                     "{testimonial.quote}"
                   </p>
                   <p className="text-gray-700 font-medium">
@@ -103,7 +103,7 @@ const ArbutusComponent = () => {
           </div>
           
           {/* Dots indicator */}
-          <div className="flex justify-center items-center space-x-2 mt-8">
+          <div className="flex justify-center items-center space-x-2 mt-6 sm:mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -121,7 +121,7 @@ const ArbutusComponent = () => {
       </div>
       
       {/* Why Arbutus for Analytics section */}
-      <div className="mt-12 mb-16">
+      <div className="mt-10 sm:mt-12 mb-12 sm:mb-16">
         <ArbutusAnalyticsSection />
       </div>
     </div>

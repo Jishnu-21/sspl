@@ -1,6 +1,8 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface AnimatedCardProps {
   imageSrc: string;
@@ -17,6 +19,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ imageSrc, title }) => {
         backgroundColor: "#f5f5f5"
       }}
       transition={{ type: "spring", stiffness: 300 }}
+      data-aos="fade-up"
     >
       <div className="mb-3 h-[60px] flex items-center justify-center">
         <img 
@@ -31,6 +34,10 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ imageSrc, title }) => {
 };
 
 const AssureBIComponent = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const brochures = [
     {
       id: 1,
@@ -64,19 +71,19 @@ const AssureBIComponent = () => {
 
   return (
     <div>
-      <p className="text-gray-800 mb-4">
+      <p className="text-gray-800 mb-4" data-aos="fade-up">
         <span className="font-bold">assureBI</span> is a management control and monitoring platform that is designed to help your company be more responsive and efficient. assureBI gives your company powerful tools that can help you to quickly identify and control the exceptions, before they could create losses to your business and boost your profitability. It helps the users to analyze data directly from the source or from the extracted form with business intelligence precision.
       </p>
-      <p className="text-gray-800 mb-4">
+      <p className="text-gray-800 mb-4" data-aos="fade-up">
         Blazing fast Business Intelligence service and application to analyze Large Databases, create awesome reports and share real-time dashboards.
       </p>
-      <p className="text-gray-800 mb-6">
+      <p className="text-gray-800 mb-6" data-aos="fade-up">
         assureBI runs on the cloud as well as on your enterprise servers.
       </p>
       
   
       {/* Why assureBI makes more sense section */}
-      <div className="mt-8 mb-12 w-full">
+      <div className="mt-8 mb-12 w-full" data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         
@@ -109,7 +116,7 @@ const AssureBIComponent = () => {
       </div>
       
       {/* Industries section */}
-      <div className="mb-8 w-full">
+      <div className="mb-8 w-full" data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Industries</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         

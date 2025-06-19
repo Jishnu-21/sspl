@@ -1,20 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useEffect ,useState} from "react";
 import Header from "../Header";
 import ShortPageBanner from "../components/ShortPageBanner";
 import Footer from "../Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 // Sample video IDs for training rankings
 const trainingVideos = [
-  { id: 1, videoId: "Wd5mTDaRe0Y", title: "Participant Feedback 1" },
-  { id: 2, videoId: "aoanfoqAXaw", title: "Participant Feedback 2" },
-  { id: 3, videoId: "pk1JJbMAG7g", title: "Participant Feedback 3" }
+  { id: 1, youtubeId: "Wd5mTDaRe0Y", title: "Participant Feedback 1" },
+  { id: 2, youtubeId: "aoanfoqAXaw", title: "Participant Feedback 2" },
+  { id: 3, youtubeId: "pk1JJbMAG7g", title: "Participant Feedback 3" }
 ];
 
+
+
 const Training = () => {
+
+  const extractYoutubeId = (url: string) => {
+    if (!url) return '';
+    
+    // Handle different YouTube URL formats
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    
+    return (match && match[2].length === 11) ? match[2] : '';
+  };
+
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <main className="flex flex-col bg-white min-h-screen">
       <Header />
@@ -29,8 +52,9 @@ const Training = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+        data-aos="fade-up"
       >
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#366A00] mb-3 sm:mb-4 md:mb-6 px-2 sm:px-0 sm:whitespace-nowrap">
             Using Various Tools & Technologies
           </h2>
@@ -46,10 +70,10 @@ const Training = () => {
         </div>
       </motion.section>
 
-      <div className="h-[1px] w-full border-t border-gray-300 mb-6"></div>
+      <div className="h-[1px] w-full border-t border-gray-300 mb-6" data-aos="fade-in"></div>
 
       {/* Benefits Section with full-width background */}
-      <div className="w-full bg-[#f8f8f8] py-8 sm:py-10 md:py-12">
+      <div className="w-full bg-[#f8f8f8] py-8 sm:py-10 md:py-12" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
             <div className="w-full md:w-2/3">
@@ -107,6 +131,7 @@ const Training = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="rounded-md object-cover h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full"
                 layout="responsive"
+                data-aos="fade-up"
               />
             </div>
           </div>
@@ -114,7 +139,7 @@ const Training = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div className="w-full bg-[#f8f8f8] border-t border-gray-300 mt-6 md:mt-8">
+      <div className="w-full bg-[#f8f8f8] border-t border-gray-300 mt-6 md:mt-8" data-aos="fade-up">
         <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
           {/* Logo/Image Section */}
           <div className="w-full md:w-1/5 flex items-center justify-center md:justify-start mb-4 md:mb-0 md:pr-6">
@@ -124,6 +149,7 @@ const Training = () => {
               width={100}
               height={50}
               className="object-contain w-24 sm:w-28 md:w-32"
+              data-aos="fade-up"
             />
           </div>
 
@@ -136,40 +162,72 @@ const Training = () => {
         </div>
       </div>
 
-      {/* Training Rankings Section */}
-      <div className="w-full bg-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#366A00] text-center mb-6 sm:mb-8 md:mb-10">
-            How Participants Rank Our Trainings
-          </h2>
+ 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {trainingVideos.map((video) => (
-              <div key={video.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="relative aspect-video cursor-pointer group">
-                  <Image 
-                    src={`https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg`}
-                    alt={video.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-7 h-7 sm:w-8 sm:h-8">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
+
+      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-2xl font-semibold text-[#366A00] mb-10 text-center">How Participants Rank Our Trainings
+          </h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+            {trainingVideos.map((video) => {
+              const videoId = video.youtubeId;
+              return (
+                <div key={video.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 w-full max-w-2xl mx-auto">
+                  <div className="relative aspect-video cursor-pointer group min-h-[260px]" onClick={() => setSelectedVideo(videoId)}>
+                    <Image 
+                      src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                      alt={video.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      onError={(e) => {
+                        // Fallback to medium quality thumbnail if high quality is not available
+                        const target = e.target as HTMLImageElement;
+                        target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+                      }}
+                    />
+                    
+                    {/* YouTube play button overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
+                      <div className="w-20 h-16 bg-red-600 rounded-lg flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.5 7.5V16.5L16.5 12L9.5 7.5Z" fill="white"/>
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-        </div>
-      </div>
+        </section>
+        
+        {/* Video Modal */}
+        {selectedVideo && (
+          <div className="fixed  inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedVideo(null)}>
+            <div className="relative w-full max-w-4xl aspect-video">
+              <button 
+                className="absolute -top-10 cursor-pointer right-0 text-white text-xl font-bold p-2"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedVideo(null);
+                }}
+              >
+                Close ×
+              </button>
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        )}
 
-      <div className="h-[1px] w-full border-t border-gray-300"></div>
 
       <Footer />
     </main>

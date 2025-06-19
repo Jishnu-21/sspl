@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { FaTrophy, FaGlobeAmericas, FaChartLine } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const contentItems = [
   {
@@ -50,6 +51,10 @@ const WhyChooseSection = () => {
     justifyContent: 'center',
     padding: '50px 0', // Add gap at top and bottom
   };
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   // Detect when the component is in the viewport
   useEffect(() => {
@@ -130,6 +135,7 @@ const WhyChooseSection = () => {
         ref={sectionRef} 
         style={sectionStyle}
         className="sticky top-0 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white min-h-screen"
+        data-aos="fade-up"
       >
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] text-center">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
