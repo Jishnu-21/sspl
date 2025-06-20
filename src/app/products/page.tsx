@@ -4,13 +4,14 @@ import Footer from '../Footer'
 import PageBanner from '../components/PageBanner'
 import ScheduleDemo from './ScheduleDemo'
 import ProductShowcase from './ProductShowcase'
+import ShortPageBanner from '../components/ShortPageBanner'
 
 const Products = () => {
   return (
     <>
       <main className="flex flex-col bg-white min-h-screen">
       <Header/>
-      <PageBanner
+      <ShortPageBanner
         backgroundImage="/images/products/product-banner.png"
         title="Products"
       />

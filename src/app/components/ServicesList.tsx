@@ -123,8 +123,9 @@ const ServicesList = () => {
     return () => observer.disconnect();
   }, [visibleCards]);
 
-  const firstRow = services.slice(0, 4);
-  const secondRow = services.slice(4);
+  const firstRow = services.slice(0, 3);
+  const secondRow = services.slice(3, 6);
+  const thirdRow = services.slice(6, 9);
 
   return (
     <div className={`
@@ -153,10 +154,10 @@ const ServicesList = () => {
         <div className="space-y-8">
           {/* Desktop View */}
           <div className="hidden md:block">
-            {[firstRow, secondRow].map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-between gap-4 mb-8">
+            {[firstRow, secondRow, thirdRow].map((row, rowIndex) => (
+              <div key={rowIndex} className="flex justify-between gap-4 mb-4">
                 {row.map((service, index) => {
-                  const actualIndex = rowIndex * 4 + index;
+                  const actualIndex = rowIndex * 3 + index;
                   const isVisible = visibleCards.includes(actualIndex);
                   const isHovered = actualIndex === activeIndex;
                   
@@ -169,8 +170,8 @@ const ServicesList = () => {
                         group relative
                         transition-all duration-700 ease-out
                         ${isHovered
-                          ? 'w-[28%] scale-105 z-10' 
-                          : 'w-[22%] hover:scale-102'
+                          ? 'w-[32%] scale-105 z-10' 
+                          : 'w-[28%] hover:scale-102'
                         }
                         h-[22rem]
                         rounded-2xl
