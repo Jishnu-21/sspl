@@ -178,7 +178,7 @@ const VideoGallery = () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <ShortPageBanner 
-          backgroundImage="/images/video gallery.jpg"
+          backgroundImage="/images/video gallery.png"
           title="Video Gallery"
         />
         

@@ -20,7 +20,7 @@ const partner = () => {
       <Header/>
       <ShortPageBanner
         title="Become a Partner"
-        backgroundImage="/images/partner.jpg"
+        backgroundImage="/images/partner.png"
         subtitle='SSPL is represented by a worldwide network of partners.'
       />
 

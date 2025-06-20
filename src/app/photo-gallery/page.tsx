@@ -166,7 +166,7 @@ const PhotoGallery = () => {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/images/photo-gallery/banner.jpg"
+            src="/images/photo-gallery/banner.png"
             alt="Photo Gallery"
             fill
             priority

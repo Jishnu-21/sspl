@@ -17,7 +17,7 @@ const Webinar = () => {
     <main className="flex flex-col bg-white min-h-screen">
     <Header />
     <ShortPageBanner
-        backgroundImage="/images/webinar.jpg"
+        backgroundImage="/images/webinar.png"
         title="Webinar"
         subtitle="Series of Webinars from the Industry Experts"
       />

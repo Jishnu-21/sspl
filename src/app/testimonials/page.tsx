@@ -36,9 +36,8 @@ const Testimonials = () => {
     <>
       <main className="flex flex-col bg-white min-h-screen">
         <Header />
-        
         <ShortPageBanner
-        backgroundImage="/images/testimonials/banner.jpg"
+        backgroundImage="/images/testimonials/banner.png"
         title="Testimonials"
       />
         <section className="py-12 px-4 sm:px-6 lg:px-8">
