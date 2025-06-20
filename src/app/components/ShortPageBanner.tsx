@@ -27,7 +27,7 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
           className="object-cover"
           sizes="100vw"
         />
-        <div className={`absolute inset-0 bg-black/50`}></div>
+        <div className={`absolute inset-0 bg-black/30`}></div>
       </div>
 
       {/* Content Container */}
