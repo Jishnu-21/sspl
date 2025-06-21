@@ -16,3 +16,26 @@
 button:hover {
   transform: translateY(-2px);
 }
+
+.contact-input {
+  @apply w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white;
+  @apply focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500;
+  @apply transition-all duration-300;
+}
+
+.contact-input::placeholder {
+  @apply text-gray-500;
+}
+
+/* For browsers that need a separate selector */
+.contact-input::-webkit-input-placeholder {
+  @apply text-gray-500;
+}
+
+.contact-input:-ms-input-placeholder {
+  @apply text-gray-500;
+}
+
+.contact-input::-ms-input-placeholder {
+  @apply text-gray-500;
+}

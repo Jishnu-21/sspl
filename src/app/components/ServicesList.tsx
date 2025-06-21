@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Service {
   title: string;
@@ -81,65 +80,97 @@ const serviceLinks = {
 };
 
 const ServicesList = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState(-1);
   const [titleVisible, setTitleVisible] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [autoPlay, setAutoPlay] = useState(true);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
+  // Calculate slides based on screen size
+  const getItemsPerSlide = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1280) return 4; // xl screens
+      if (window.innerWidth >= 1024) return 3; // lg screens
+      if (window.innerWidth >= 768) return 2;  // md screens
+      return 1; // sm screens
+    }
+    return 4;
+  };
+
+  const [itemsPerSlide, setItemsPerSlide] = useState(4);
+  const totalSlides = Math.ceil(services.length / itemsPerSlide);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerSlide(getItemsPerSlide());
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [totalSlides, autoPlay]);
+
+  // Title animation observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === titleRef.current) {
-              setTitleVisible(true);
-            } else {
-              const cardIndex = parseInt((entry.target as HTMLElement).dataset.cardIndex || '0');
-              if (!visibleCards.includes(cardIndex)) {
-                setTimeout(() => {
-                  setVisibleCards(prev => [...prev, cardIndex]);
-                }, cardIndex * 100); // Stagger the animations
-              }
-            }
+          if (entry.isIntersecting && entry.target === titleRef.current) {
+            setTitleVisible(true);
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
-    // Observe title
     if (titleRef.current) {
       observer.observe(titleRef.current);
     }
 
-    // Observe all cards
-    const cards = containerRef.current?.querySelectorAll('[data-card-index]');
-    cards?.forEach(card => observer.observe(card));
-
     return () => observer.disconnect();
-  }, [visibleCards]);
+  }, []);
 
-  const firstRow = services.slice(0, 3);
-  const secondRow = services.slice(3, 6);
-  const thirdRow = services.slice(6, 9);
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    setAutoPlay(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    setAutoPlay(false);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setAutoPlay(false);
+  };
+
+  const getCurrentSlideServices = () => {
+    const startIndex = currentSlide * itemsPerSlide;
+    return services.slice(startIndex, startIndex + itemsPerSlide);
+  };
 
   return (
-    <div className={`
-      py-12 sm:py-16 md:py-20
-      transition-colors duration-300
-      w-full mt-8 sm:mt-10 md:mt-10
-    `} ref={containerRef}>
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
-        {/* Animated title */}
+    <div className="py-12 sm:py-16 md:py-20 w-full mt-8 sm:mt-10 md:mt-10 bg-gradient-to-b from-gray-50/50 to-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
+        {/* Animated Title */}
         <h2 
           ref={titleRef}
           className={`
-          text-center mb-16
-          relative
+            text-center mb-16
+            relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
           `}
@@ -150,211 +181,135 @@ const ServicesList = () => {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-blue-900/10 blur-3xl transform -skew-y-6"></div>
         </h2>
-        
-        <div className="space-y-8">
-          {/* Desktop View */}
-          <div className="hidden md:block">
-            {[firstRow, secondRow, thirdRow].map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-between gap-4 mb-4">
-                {row.map((service, index) => {
-                  const actualIndex = rowIndex * 3 + index;
-                  const isVisible = visibleCards.includes(actualIndex);
-                  const isHovered = actualIndex === activeIndex;
-                  
-                  return (
-                    <Link 
-                      href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
-                      key={index}
-                      data-card-index={actualIndex}
-                      className={`
-                        group relative
-                        transition-all duration-700 ease-out
-                        ${isHovered
-                          ? 'w-[32%] scale-105 z-10' 
-                          : 'w-[28%] hover:scale-102'
-                        }
-                        h-[22rem]
-                        rounded-2xl
-                        cursor-pointer
-                        transform-gpu
-                        ${isVisible 
-                          ? 'translate-y-0 opacity-100' 
-                          : 'translate-y-16 opacity-0'
-                        }
-                      `}
-                      onMouseEnter={() => setActiveIndex(actualIndex)}
-                      onMouseLeave={() => setActiveIndex(-1)}
-                    >
-                      {/* Card container with flip animation */}
-                      <div className={`
-                        relative w-full h-full
-                        transition-transform duration-600 ease-in-out
-                        transform-style-preserve-3d
-                        ${isHovered ? 'rotate-y-180' : ''}
-                        shadow-lg hover:shadow-2xl
-                        rounded-2xl
-                      `}>
-                        {/* Front of card */}
-                        <div className={`
-                          absolute inset-0
-                          backface-hidden
-                          flex flex-col
-                          bg-white
-                          rounded-2xl
-                          border border-gray-100
-                          transition-all duration-300
-                        `}>
-                          <div className="w-full h-74 relative overflow-hidden rounded-t-2xl">
-                            <Image
-                              src={service.image}
-                              alt={service.title}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                          <div className="p-4 bg-white/90 backdrop-blur-sm">
-                            <h3 className="text-black font-bold text-lg text-center transition-colors duration-300 group-hover:text-blue-900">
-                              {service.title}
-                            </h3>
-                          </div>
-                        </div>
 
-                        {/* Back of card with enhanced description display */}
-                        <div className={`
-                          absolute inset-0
-                          backface-hidden
-                          rotate-y-180
-                          p-6 md:p-8
-                          flex flex-col
-                          bg-gradient-to-br from-blue-50 to-white
-                          rounded-2xl
-                          border border-blue-100
-                          shadow-inner
-                        `}>
-                          <h3 className="text-blue-900 font-bold text-xl mb-4">
-                            {service.title}
-                          </h3>
-                          
-                          <div className="flex-1 flex flex-col justify-between">
-                            <p className="text-gray-700 text-sm leading-relaxed mb-4 overflow-y-auto">
-                              {service.description}
-                            </p>
-                            
-                            <div className="flex items-center justify-between mt-auto">
-                              <span className="text-blue-900 text-sm font-semibold">
-                                Learn More
-                              </span>
-                              <div className="text-blue-900 text-2xl transform transition-transform duration-300 hover:translate-x-2">
-                                →
+        {/* Carousel Container */}
+        <div className="relative pb-20 flex items-center">
+          {/* Navigation Buttons - now outside and vertically centered */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg hover:shadow-xl rounded-full p-3 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200"
+            aria-label="Previous services"
+            style={{ marginLeft: '-2rem' }}
+          >
+            <ChevronLeft className="w-6 h-6 text-blue-900" />
+          </button>
+          <div 
+            ref={carouselRef}
+            className="overflow-hidden rounded-2xl mb-12 w-full"
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
+          >
+            <div 
+              className="flex transition-transform duration-700 ease-in-out w-full"
+              style={{
+                transform: `translateX(-${currentSlide * 100}%)`,
+              }}
+            >
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => {
+                // Always render itemsPerSlide slots per slide
+                const cards = services.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide);
+                const emptySlots = itemsPerSlide - cards.length;
+                return (
+                  <div
+                    key={slideIndex}
+                    className="flex gap-4 md:gap-6 w-full flex-shrink-0 px-12 md:px-16"
+                  >
+                    {cards.map((service, cardIndex) => {
+                      const actualIndex = slideIndex * itemsPerSlide + cardIndex;
+                      const isHovered = actualIndex === hoveredCard;
+                      return (
+                        <div
+                          key={actualIndex}
+                          className={`
+                            group relative cursor-pointer
+                            transition-all duration-500 ease-out
+                            hover:scale-105 hover:z-10
+                            ${itemsPerSlide === 1 ? 'w-full' : 
+                              itemsPerSlide === 2 ? 'w-1/2' : 
+                              itemsPerSlide === 3 ? 'w-1/3' : 'w-1/4'}
+                            h-80 md:h-[22rem] lg:h-[24rem]
+                          `}
+                          onMouseEnter={() => setHoveredCard(actualIndex)}
+                          onMouseLeave={() => setHoveredCard(-1)}
+                        >
+                          {/* Card Container */}
+                          <div className={`
+                            relative w-full h-full
+                            transition-transform duration-600 ease-in-out
+                            transform-style-preserve-3d
+                            ${isHovered ? 'rotate-y-180' : ''}
+                            shadow-lg hover:shadow-2xl
+                            rounded-2xl
+                          `}>
+                            {/* Front of Card */}
+                            <div className="absolute inset-0 backface-hidden bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col">
+                              <div className="w-full h-2/3 relative overflow-hidden flex items-center justify-center">
+                                <img
+                                  src={service.image}
+                                  alt={service.title}
+                                  className="object-cover w-full h-full"
+                                  style={{ borderTopLeftRadius: '1rem', borderTopRightRadius: '1rem' }}
+                                />
+                              </div>
+                              <div className="p-4 h-1/3 flex flex-col justify-center bg-white/95 backdrop-blur-sm">
+                                <h3 className="text-gray-900 font-bold text-lg md:text-xl text-center transition-colors duration-300 group-hover:text-blue-900 line-clamp-2">
+                                  {service.title}
+                                </h3>
+                              </div>
+                            </div>
+
+                            {/* Back of Card */}
+                            <div className="absolute inset-0 backface-hidden rotate-y-180 p-6 flex flex-col bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-inner">
+                              <h3 className="text-blue-900 font-bold text-xl mb-4 line-clamp-2">
+                                {service.title}
+                              </h3>
+                              
+                              <div className="flex-1 flex flex-col justify-between">
+                                <p className="text-gray-700 text-sm leading-relaxed mb-4 overflow-y-auto line-clamp-6">
+                                  {service.description}
+                                </p>
+                                
+                                <div className="flex items-center justify-between mt-auto pt-4 border-t border-blue-100">
+                                  <span className="text-blue-900 text-sm font-semibold">
+                                    Learn More
+                                  </span>
+                                  <div className="text-blue-900 text-2xl transform transition-transform duration-300 hover:translate-x-2">
+                                    →
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile View */}
-          <div className="md:hidden">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {services.map((service, index) => {
-                const isVisible = visibleCards.includes(index);
-                
-                return (
-                  <Link 
-                    href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
-                    key={index}
-                    data-card-index={index}
-                    className={`
-                      group relative
-                      transition-all duration-700 ease-out
-                      h-[16rem] xs:h-[18rem] sm:h-[20rem]
-                      rounded-xl
-                      cursor-pointer
-                      transform-gpu
-                      ${isVisible 
-                        ? 'translate-y-0 opacity-100' 
-                        : 'translate-y-8 opacity-0'
-                      }
-                    `}
-                    style={{
-                      transitionDelay: isVisible ? '0ms' : `${index * 100}ms`
-                    }}
-                  >
-                    <div className={`
-                      relative w-full h-full
-                      transition-transform duration-600 ease-in-out
-                      transform-style-preserve-3d
-                      group-hover:rotate-y-180
-                      shadow-lg hover:shadow-xl
-                      rounded-xl
-                    `}>
-                      {/* Front of card */}
-                      <div className={`
-                        absolute inset-0
-                        backface-hidden
-                        flex flex-col
-                        bg-white
-                        rounded-xl
-                        border border-gray-100
-                      `}>
-                        <div className="w-full h-36 xs:h-40 sm:h-44 relative overflow-hidden rounded-t-xl">
-                          <Image
-                            src={service.image}
-                            alt={service.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="p-2 xs:p-3 bg-white/90 backdrop-blur-sm">
-                          <h3 className="text-black font-bold text-sm xs:text-base text-center transition-colors duration-300 group-hover:text-blue-900 line-clamp-2">
-                            {service.title}
-                          </h3>
-                        </div>
-                      </div>
-
-                      {/* Back of card */}
-                      <div className={`
-                        absolute inset-0
-                        backface-hidden
-                        rotate-y-180
-                        p-3 xs:p-4
-                        flex flex-col
-                        bg-gradient-to-br from-blue-50 to-white
-                        rounded-xl
-                        border border-blue-100
-                      `}>
-                        <div className="flex items-center mb-2">
-                          <h3 className="text-blue-900 font-bold text-sm xs:text-base line-clamp-2">
-                            {service.title}
-                          </h3>
-                        </div>
-                        
-                        <div className="flex-1 flex flex-col justify-between">
-                          <p className="text-gray-700 text-xs xs:text-sm leading-relaxed line-clamp-4 xs:line-clamp-5 mb-2">
-                            {service.description}
-                          </p>
-                          
-                          <div className="flex items-center justify-between mt-auto">
-                            <span className="text-blue-900 text-xs font-semibold">
-                              Learn More
-                            </span>
-                            <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
-                              →
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
+                      );
+                    })}
+                    {/* Add empty spacers if this slide has fewer cards */}
+                    {emptySlots > 0 &&
+                      Array.from({ length: emptySlots }).map((_, i) => (
+                        <div
+                          key={`spacer-${i}`}
+                          className={`
+                            ${itemsPerSlide === 1 ? 'w-full' : 
+                              itemsPerSlide === 2 ? 'w-1/2' : 
+                              itemsPerSlide === 3 ? 'w-1/3' : 'w-1/4'}
+                            h-80 md:h-[22rem] lg:h-[24rem] invisible
+                          `}
+                          aria-hidden="true"
+                        />
+                      ))}
+                  </div>
                 );
               })}
             </div>
           </div>
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg hover:shadow-xl rounded-full p-3 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200"
+            aria-label="Next services"
+            style={{ marginRight: '-2rem' }}
+          >
+            <ChevronRight className="w-6 h-6 text-blue-900" />
+          </button>
         </div>
       </div>
 
@@ -368,9 +323,9 @@ const ServicesList = () => {
         .rotate-y-180 {
           transform: rotateY(180deg);
         }
-        .line-clamp-4 {
+        .line-clamp-2 {
           display: -webkit-box;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }

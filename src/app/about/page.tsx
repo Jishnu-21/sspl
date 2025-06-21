@@ -10,9 +10,9 @@ import Footer from '../Footer';
 
 const teamMembers = [
   {
-    name: 'John Smith',
+    name: 'Nishith Seth',
     designation: 'CEO & Founder',
-    image: '/images/about/team/1.png',
+    image: '/images/about/team/2.jpg',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
@@ -20,32 +20,41 @@ const teamMembers = [
     }
   },
   {
-    name: 'Sarah Wilson',
+    name: 'Mukesh Arya',
     designation: 'CTO',
-    image: '/images/about/team/2.png',
+    image: '/images/about/team/3.jpg',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
     }
   },
   {
-    name: 'Emily Chen',
+    name: 'Sujnesh',
     designation: 'Head of Analytics',
-    image: '/images/about/team/3.png',
+    image: '/images/about/team/4.jpg',
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com'
     }
   },
   {
-    name: 'Michael Brown',
+    name: 'Nikki Arya',
     designation: 'Lead Data Scientist',
-    image: '/images/about/team/4.png',
+    image: '/images/about/team/5.jpg',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
     }
-  }
+  },
+  {
+    name: 'Harshita Chadha',
+    designation: 'Lead Data Scientist',
+    image: '/images/about/team/1.jpg',
+    socials: {
+      linkedin: 'https://linkedin.com',
+      twitter: 'https://twitter.com'
+    }
+  },
 ];
 
 export default function About() {

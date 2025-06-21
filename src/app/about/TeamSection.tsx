@@ -29,7 +29,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
           {title}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
           {members.map((member, index) => (
             <motion.div
               key={index}
