@@ -213,7 +213,7 @@ const ServicesList = () => {
                             />
                           </div>
                           <div className="p-4 bg-white/90 backdrop-blur-sm">
-                            <h3 className="text-black font-bold text-lg text-center transition-colors duration-300 group-hover:text-blue-900">
+                            <h3 className="text-black font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-900">
                               {service.title}
                             </h3>
                           </div>
@@ -231,7 +231,7 @@ const ServicesList = () => {
                           border border-blue-100
                           shadow-inner
                         `}>
-                          <h3 className="text-blue-900 font-bold text-xl mb-4">
+                          <h3 className="text-blue-900 font-bold text-2xl mb-4">
                             {service.title}
                           </h3>
                           
