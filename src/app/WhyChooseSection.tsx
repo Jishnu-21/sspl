@@ -139,7 +139,7 @@ const WhyChooseSection = () => {
       >
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] text-center">
           <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#1B3D69' }}>
-            <div className="flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[400px] sm:min-h-[450px] md:min-h-[580px] lg:min-h-[400px] xl:min-h-[650px] 2xl:min-h-[700px] gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+            <div className="flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 relative min-h-[600px] sm:min-h-[650px] md:min-h-[780px] lg:min-h-[600px] xl:min-h-[850px] 2xl:min-h-[900px] gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
               {/* Background gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D69] to-[#152d4f] opacity-50"></div>
               <div className="w-full md:w-[40%] lg:w-[35%] xl:w-[35%] mb-1 sm:mb-2 md:mb-0 md:pl-0 lg:pl-6 xl:pl-8 2xl:pl-12 text-center md:text-left relative z-10">

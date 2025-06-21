@@ -84,8 +84,13 @@ const ServicesList = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const [titleVisible, setTitleVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -126,6 +131,75 @@ const ServicesList = () => {
   const firstRow = services.slice(0, 3);
   const secondRow = services.slice(3, 6);
   const thirdRow = services.slice(6, 9);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % services.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Touch/drag handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diffX = startX - currentX;
+    setTranslateX(-diffX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    
+    const threshold = 50; // Minimum swipe distance
+    if (Math.abs(translateX) > threshold) {
+      if (translateX > 0) {
+        // Swiped left - next slide
+        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
+      } else {
+        // Swiped right - previous slide
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      }
+    }
+    setTranslateX(0);
+  };
+
+  const handleMouseStart = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    const diffX = startX - currentX;
+    setTranslateX(-diffX);
+  };
+
+  const handleMouseEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    
+    const threshold = 50;
+    if (Math.abs(translateX) > threshold) {
+      if (translateX > 0) {
+        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
+      } else {
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      }
+    }
+    setTranslateX(0);
+  };
 
   return (
     <div className={`
@@ -258,101 +332,143 @@ const ServicesList = () => {
             ))}
           </div>
 
-          {/* Mobile View */}
+          {/* Mobile Carousel View */}
           <div className="md:hidden">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {services.map((service, index) => {
-                const isVisible = visibleCards.includes(index);
-                
-                return (
-                  <Link 
-                    href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
-                    key={index}
-                    data-card-index={index}
-                    className={`
-                      group relative
-                      transition-all duration-700 ease-out
-                      h-[16rem] xs:h-[18rem] sm:h-[20rem]
-                      rounded-xl
-                      cursor-pointer
-                      transform-gpu
-                      ${isVisible 
-                        ? 'translate-y-0 opacity-100' 
-                        : 'translate-y-8 opacity-0'
-                      }
-                    `}
-                    style={{
-                      transitionDelay: isVisible ? '0ms' : `${index * 100}ms`
-                    }}
-                  >
-                    <div className={`
-                      relative w-full h-full
-                      transition-transform duration-600 ease-in-out
-                      transform-style-preserve-3d
-                      group-hover:rotate-y-180
-                      shadow-lg hover:shadow-xl
-                      rounded-xl
-                    `}>
-                      {/* Front of card */}
-                      <div className={`
-                        absolute inset-0
-                        backface-hidden
-                        flex flex-col
-                        bg-white
-                        rounded-xl
-                        border border-gray-100
-                      `}>
-                        <div className="w-full h-36 xs:h-40 sm:h-44 relative overflow-hidden rounded-t-xl">
-                          <Image
-                            src={service.image}
-                            alt={service.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="p-2 xs:p-3 bg-white/90 backdrop-blur-sm">
-                          <h3 className="text-black font-bold text-sm xs:text-base text-center transition-colors duration-300 group-hover:text-blue-900 line-clamp-2">
-                            {service.title}
-                          </h3>
-                        </div>
-                      </div>
+            <div className="relative -mx-3">
+              {/* Carousel Container */}
+              <div 
+                ref={carouselRef}
+                className="overflow-hidden"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                onMouseDown={handleMouseStart}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseEnd}
+                onMouseLeave={handleMouseEnd}
+              >
+                <div 
+                  className="flex transition-transform duration-300 ease-out"
+                  style={{
+                    transform: `translateX(${-currentSlide * 100 + (isDragging ? (translateX / window.innerWidth) * 100 : 0)}%)`,
+                  }}
+                >
+                  {services.map((service, index) => {
+                    const isVisible = visibleCards.includes(index);
+                    
+                    return (
+                      <div
+                        key={index}
+                        className="w-full flex-shrink-0 px-3"
+                        data-card-index={index}
+                      >
+                        <Link 
+                          href={`/services/${serviceLinks[service.title as keyof typeof serviceLinks] || '#'}`}
+                          className={`
+                            group relative block
+                            transition-all duration-700 ease-out
+                            h-[18rem] xs:h-[20rem] sm:h-[22rem]
+                            rounded-xl
+                            cursor-pointer
+                            transform-gpu
+                            ${isVisible 
+                              ? 'translate-y-0 opacity-100' 
+                              : 'translate-y-8 opacity-0'
+                            }
+                          `}
+                          onClick={(e) => {
+                            if (isDragging || Math.abs(translateX) > 10) {
+                              e.preventDefault();
+                            }
+                          }}
+                        >
+                          <div className={`
+                            relative w-full h-full
+                            transition-transform duration-600 ease-in-out
+                            transform-style-preserve-3d
+                            group-hover:rotate-y-180
+                            shadow-lg hover:shadow-xl
+                            rounded-xl
+                          `}>
+                            {/* Front of card */}
+                            <div className={`
+                              absolute inset-0
+                              backface-hidden
+                              flex flex-col
+                              bg-white
+                              rounded-xl
+                              border border-gray-100
+                            `}>
+                              <div className="w-full h-60 xs:h-64 sm:h-72 relative overflow-hidden rounded-t-xl">
+                                <Image
+                                  src={service.image}
+                                  alt={service.title}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                              <div className="p-3 xs:p-4 bg-white/90 backdrop-blur-sm flex-1 flex items-center justify-center">
+                                <h3 className="text-black font-bold text-base xs:text-lg text-center transition-colors duration-300 group-hover:text-blue-900 leading-tight">
+                                  {service.title}
+                                </h3>
+                              </div>
+                            </div>
 
-                      {/* Back of card */}
-                      <div className={`
-                        absolute inset-0
-                        backface-hidden
-                        rotate-y-180
-                        p-3 xs:p-4
-                        flex flex-col
-                        bg-gradient-to-br from-blue-50 to-white
-                        rounded-xl
-                        border border-blue-100
-                      `}>
-                        <div className="flex items-center mb-2">
-                          <h3 className="text-blue-900 font-bold text-sm xs:text-base line-clamp-2">
-                            {service.title}
-                          </h3>
-                        </div>
-                        
-                        <div className="flex-1 flex flex-col justify-between">
-                          <p className="text-gray-700 text-xs xs:text-sm leading-relaxed line-clamp-4 xs:line-clamp-5 mb-2">
-                            {service.description}
-                          </p>
-                          
-                          <div className="flex items-center justify-between mt-auto">
-                            <span className="text-blue-900 text-xs font-semibold">
-                              Learn More
-                            </span>
-                            <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
-                              →
+                            {/* Back of card */}
+                            <div className={`
+                              absolute inset-0
+                              backface-hidden
+                              rotate-y-180
+                              p-3 xs:p-4
+                              flex flex-col
+                              bg-gradient-to-br from-blue-50 to-white
+                              rounded-xl
+                              border border-blue-100
+                            `}>
+                              <h3 className="text-blue-900 font-bold text-base xs:text-lg mb-2 leading-tight">
+                                {service.title}
+                              </h3>
+                              
+                              <div className="flex-1 flex flex-col justify-between">
+                                <p className="text-gray-700 text-xs xs:text-sm leading-relaxed mb-3 overflow-y-auto line-clamp-6">
+                                  {service.description}
+                                </p>
+                                
+                                <div className="flex items-center justify-between mt-auto">
+                                  <span className="text-blue-900 text-xs xs:text-sm font-semibold">
+                                    Learn More
+                                  </span>
+                                  <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
+                                    →
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
-                    </div>
-                  </Link>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Dot Indicators */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {services.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`
+                      w-2 h-2 rounded-full transition-all duration-300
+                      ${currentSlide === index 
+                        ? 'bg-blue-900 w-6' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                      }
+                    `}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
