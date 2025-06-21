@@ -60,29 +60,9 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                   <div className="absolute inset-0 flex flex-col items-center justify-end pb-6 sm:pb-7 md:pb-8 text-white
                     transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                     <p className="font-medium text-base sm:text-lg text-center">{member.name}</p>
-                    <p className="text-xs sm:text-sm text-gray-100 mb-2 sm:mb-3 text-center">{member.designation}</p>
                     
                     {/* Social Icons */}
-                    <div className="flex gap-3 sm:gap-4">
-                      {member.socials.linkedin && (
-                        <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors">
-                          <FaLinkedin size={16} />
-                        </a>
-                      )}
-                      {member.socials.twitter && (
-                        <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors">
-                          <FaTwitter size={16} />
-                        </a>
-                      )}
-                      {member.socials.instagram && (
-                        <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors">
-                          <FaInstagram size={16} />
-                        </a>
-                      )}
-                    </div>
+                 
                   </div>
                 </div>
               </div>

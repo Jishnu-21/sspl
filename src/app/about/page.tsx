@@ -12,7 +12,7 @@ const teamMembers = [
   {
     name: 'Nishith Seth',
     designation: 'CEO & Founder',
-    image: '/images/about/team/2.jpg',
+    image: '/images/about/team/4.png',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: 'Mukesh Arya',
     designation: 'CTO',
-    image: '/images/about/team/3.jpg',
+    image: '/images/about/team/1.png',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
@@ -31,7 +31,7 @@ const teamMembers = [
   {
     name: 'Sujnesh',
     designation: 'Head of Analytics',
-    image: '/images/about/team/4.jpg',
+    image: '/images/about/team/5.png',
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com'
@@ -40,7 +40,7 @@ const teamMembers = [
   {
     name: 'Nikki Arya',
     designation: 'Lead Data Scientist',
-    image: '/images/about/team/5.jpg',
+    image: '/images/about/team/3.png',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
@@ -49,7 +49,7 @@ const teamMembers = [
   {
     name: 'Harshita Chadha',
     designation: 'Lead Data Scientist',
-    image: '/images/about/team/1.jpg',
+    image: '/images/about/team/2.png',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
