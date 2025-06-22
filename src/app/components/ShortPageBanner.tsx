@@ -31,7 +31,7 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
       </div>
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full relative z-10">
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 h-full relative z-10">
         <div className="flex h-full items-center">
           <div className="flex flex-col w-full max-w-xl">
             <motion.h1 
