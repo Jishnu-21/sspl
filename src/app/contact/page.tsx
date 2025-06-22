@@ -6,7 +6,7 @@ import ContactForm from './ContactForm'
 
 const Contact = () => {
   return (
-    <main className="flex flex-col bg-black min-h-screen">
+    <main className="flex flex-col bg-white min-h-screen">
       <Header/>
       <div className="flex-1 flex flex-col">
         <ContactHero />

@@ -15,34 +15,7 @@ const galleryImages = [
   { src: '/images/photo-gallery/g-5.jpg.jpeg', alt: 'SSPL Gallery Image 4' },
   { src: '/images/photo-gallery/g-7.jpg.jpeg', alt: 'SSPL Gallery Image 5' },
   
-  // Second row
-  { src: '/images/photo-gallery/g-9.jpg.jpeg', alt: 'SSPL Gallery Image 6' },
-  { src: '/images/photo-gallery/g-11.jpg.jpeg', alt: 'SSPL Gallery Image 7' },
-  { src: '/images/photo-gallery/g-12.jpg.jpeg', alt: 'SSPL Gallery Image 8' },
-  { src: '/images/photo-gallery/g-13.jpg.jpeg', alt: 'SSPL Gallery Image 9' },
-  { src: '/images/photo-gallery/g-14.jpg.jpeg', alt: 'SSPL Gallery Image 10' },
-  
-  // Third row
-  { src: '/images/photo-gallery/g-15.jpg.jpeg', alt: 'SSPL Gallery Image 11' },
-  { src: '/images/photo-gallery/g-16.jpg.jpeg', alt: 'SSPL Gallery Image 12' },
-  { src: '/images/photo-gallery/g-17.jpg.jpeg', alt: 'SSPL Gallery Image 13' },
-  { src: '/images/photo-gallery/g-18.jpg.jpeg', alt: 'SSPL Gallery Image 14' },
-  { src: '/images/photo-gallery/g-19.jpg.jpeg', alt: 'SSPL Gallery Image 15' },
-  
-  // Fourth row
-  { src: '/images/photo-gallery/g-20.jpg.jpeg', alt: 'SSPL Gallery Image 16' },
-  { src: '/images/photo-gallery/g-21.jpg.jpeg', alt: 'SSPL Gallery Image 17' },
-  { src: '/images/photo-gallery/g-22.jpg.jpeg', alt: 'SSPL Gallery Image 18' },
-  { src: '/images/photo-gallery/g-23.jpg.jpeg', alt: 'SSPL Gallery Image 19' },
-  { src: '/images/photo-gallery/g-24.jpg.jpeg', alt: 'SSPL Gallery Image 20' },
-  
-  // Fifth row
-  { src: '/images/photo-gallery/g-25.jpg.jpeg', alt: 'SSPL Gallery Image 21' },
-  { src: '/images/photo-gallery/g-26.jpg.jpeg', alt: 'SSPL Gallery Image 22' },
-  { src: '/images/photo-gallery/g-27.jpg.jpeg', alt: 'SSPL Gallery Image 23' },
-  { src: '/images/photo-gallery/g-28.jpg.jpeg', alt: 'SSPL Gallery Image 24' },
-  { src: '/images/photo-gallery/g-29.jpg.jpeg', alt: 'SSPL Gallery Image 25' },
-  
+ 
   // Sixth row
   { src: '/images/photo-gallery/g-30.jpg.jpeg', alt: 'SSPL Gallery Image 26' },
   { src: '/images/photo-gallery/g-31.jpg.jpeg', alt: 'SSPL Gallery Image 27' },

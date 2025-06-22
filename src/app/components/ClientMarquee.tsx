@@ -1,7 +1,7 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface ClientMarqueeProps {
   className?: string;
@@ -18,50 +18,24 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
 
   // Duplicate the clients array to create a seamless loop
   const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
-
-  // Use animation controls to manage the marquee animation
-  const controls = useAnimationControls();
-
-  // Start the animation
-  useEffect(() => {
-    controls.start({
-      x: '-50%',
-      transition: {
-        duration: 25,
-        repeat: Infinity,
-        ease: 'linear',
-        repeatType: 'loop',
-      },
-    });
-  }, [controls]);
-
-  // Handle hover to pause/resume animation
-  const handleHoverStart = () => {
-    controls.stop(); // Pause the animation on hover
-  };
-
-  const handleHoverEnd = () => {
-    controls.start({
-      x: '-50%',
-      transition: {
-        duration: 25,
-        repeat: Infinity,
-        ease: 'linear',
-        repeatType: 'loop',
-      },
-    }); // Resume the animation when hover ends
-  };
+  
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <div className={`w-full bg-gray-200 py-8 overflow-hidden ${className}`}>
       <div className="relative w-full">
         <motion.div
           className="flex items-center"
-          initial={{ x: 0 }}
-          animate={controls} // Use animation controls
-          onHoverStart={handleHoverStart} // Pause on hover
-          onHoverEnd={handleHoverEnd} // Resume on hover end
+          animate={isPaused ? {} : { x: '-50%' }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',
+            repeatType: 'loop',
+          }}
           style={{ width: 'fit-content' }}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
         >
           {duplicatedClients.map((client, index) => (
             <div key={index} className="flex-shrink-0 mx-8">

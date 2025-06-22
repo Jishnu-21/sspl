@@ -10,8 +10,7 @@ interface MarqueeItem {
   hoverDetails: {
     title: string;
     description: string;
-    industry: string;
-    scopeOfWork: string;
+
     image1: string;
   };
 }
@@ -30,19 +29,17 @@ const RecognitionSection: React.FC = () => {
         title: 'Excellence in Innovation',
         description:
           'Awarded for outstanding innovation in data analytics solutions that have transformed business operations.',
-        industry: 'Technology',
-        scopeOfWork: 'DATA ANALYTICS',
+        
         image1: '/images/awards/award1.jpg',
       },
     },
     {
       logo: '/images/awards/award2.jpg',
       hoverDetails: {
-        title: 'Best Big Data Analytics Solution',
+        title: 'Excellence Award',
         description:
           'Recognized by WQPC for providing the most technically advanced Big Data Analytics solutions in the industry.',
-        industry: 'Technology',
-        scopeOfWork: 'BIG DATA',
+       
         image1: '/images/awards/award2.jpg',
       },
     },
@@ -52,8 +49,7 @@ const RecognitionSection: React.FC = () => {
         title: 'Technology Leadership Award',
         description:
           'Honored for leadership in developing cutting-edge technology solutions that drive business growth.',
-        industry: 'Technology',
-        scopeOfWork: 'LEADERSHIP',
+        
         image1: '/images/awards/award3.jpg',
       },
     },
@@ -63,8 +59,7 @@ const RecognitionSection: React.FC = () => {
         title: 'Customer Satisfaction Excellence',
         description:
           'Awarded for maintaining the highest standards of customer service and support in the industry.',
-        industry: 'Customer Service',
-        scopeOfWork: 'SUPPORT',
+      
         image1: '/images/awards/award4.jpg',
       },
     },
@@ -74,8 +69,7 @@ const RecognitionSection: React.FC = () => {
         title: 'Industry Impact Award',
         description:
           'Recognized for making significant contributions to advancing data analytics across multiple industries.',
-        industry: 'Technology',
-        scopeOfWork: 'INNOVATION',
+      
         image1: '/images/awards/award5.jpg',
       },
     },
@@ -85,8 +79,7 @@ const RecognitionSection: React.FC = () => {
         title: 'Digital Transformation Partner',
         description:
           'Awarded for helping organizations successfully navigate their digital transformation journey.',
-        industry: 'Digital Transformation',
-        scopeOfWork: 'CONSULTING',
+       
         image1: '/images/awards/award6.jpg',
       },
     },
@@ -96,8 +89,7 @@ const RecognitionSection: React.FC = () => {
         title: 'Best Enterprise Solution',
         description:
           'Recognized for providing comprehensive enterprise-level solutions that deliver measurable business value.',
-        industry: 'Enterprise Software',
-        scopeOfWork: 'SOLUTION DEVELOPMENT',
+      
         image1: '/images/awards/award8.jpg',
       },
     },
@@ -136,16 +128,8 @@ const RecognitionSection: React.FC = () => {
                         <h2 className="text-xl md:text-2xl font-bold">{item.hoverDetails.title}</h2>
                       </div>
                       <p className="mt-2 text-xs md:text-sm leading-relaxed">{item.hoverDetails.description}</p>
-                      <div className="mt-3 md:mt-4">
-                        <p className="text-xs md:text-sm font-semibold uppercase">Industry:</p>
-                        <p className="text-xs md:text-sm">{item.hoverDetails.industry}</p>
-                      </div>
-                      <div className="mt-3 md:mt-4">
-                        <p className="text-xs md:text-sm font-semibold uppercase">Scope of Work:</p>
-                        <button className="mt-1 md:mt-2 px-3 md:px-4 py-1 bg-gray-700 text-white rounded-full text-xs md:text-sm font-semibold">
-                          {item.hoverDetails.scopeOfWork}
-                        </button>
-                      </div>
+  
+                    
                     </div>
                   </div>
                 )

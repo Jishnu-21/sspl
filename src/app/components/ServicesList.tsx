@@ -164,11 +164,11 @@ const ServicesList = () => {
     const threshold = 50; // Minimum swipe distance
     if (Math.abs(translateX) > threshold) {
       if (translateX > 0) {
-        // Swiped left - next slide
-        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
-      } else {
         // Swiped right - previous slide
         setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      } else {
+        // Swiped left - next slide
+        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
       }
     }
     setTranslateX(0);
@@ -193,9 +193,9 @@ const ServicesList = () => {
     const threshold = 50;
     if (Math.abs(translateX) > threshold) {
       if (translateX > 0) {
-        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
-      } else {
         setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      } else {
+        setCurrentSlide((prev) => Math.min(prev + 1, services.length - 1));
       }
     }
     setTranslateX(0);

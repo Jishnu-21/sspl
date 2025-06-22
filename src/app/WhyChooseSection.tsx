@@ -148,7 +148,7 @@ const WhyChooseSection = () => {
                 </h2>
               </div>
               
-              <div className="w-full md:w-[55%] lg:w-[60%] xl:w-[55%] px-2 sm:px-4 md:px-6 lg:pr-8 xl:pr-10 2xl:pr-12 relative h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] z-10">
+              <div className="w-full md:w-[55%] lg:w-[60%] xl:w-[55%] mx-auto max-w-[95vw] sm:max-w-none sm:px-4 md:px-6 lg:pr-8 xl:pr-10 2xl:pr-12 relative h-[280px] sm:h-[300px] lg:h-[350px] xl:h-[380px] 2xl:h-[420px] z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}

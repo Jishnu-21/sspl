@@ -48,8 +48,8 @@ const ArbutusComponent = () => {
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Left Side - YouTube Video */}
-        <div className="h-full flex items-center order-1 lg:order-none mb-8 lg:mb-0">
-          <div className="w-full relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
+        <div className="h-full flex items-center order-1 lg:order-none mb-8 lg:mb-0 min-h-[400px] lg:min-h-[440px]">
+          <div className="w-full relative pb-[65%] h-0 rounded-lg overflow-hidden shadow-lg min-h-[400px] lg:min-h-[440px]">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/C3ABVOIBQXY"
@@ -61,19 +61,18 @@ const ArbutusComponent = () => {
         </div>
 
         {/* Right Side - Testimonials */}
-        <div className="h-full flex flex-col order-2 lg:order-none">      
-          <div className="w-full relative min-h-[320px] sm:min-h-[360px] md:min-h-[400px] flex flex-col items-center justify-center">
+        <div className="h-full flex flex-col order-2 lg:order-none min-h-[400px] lg:min-h-[440px]">
+          <div className="w-full flex flex-col items-center justify-center relative min-h-[400px] lg:min-h-[440px]">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0 }}
                 animate={{ 
                   opacity: currentIndex === index ? 1 : 0,
-                  x: currentIndex === index ? 0 : 50,
                   display: currentIndex === index ? 'flex' : 'none'
                 }}
                 transition={{ duration: 0.5 }}
-                className="absolute w-full px-2 sm:px-4 flex flex-col items-center"
+                className="w-full px-2 sm:px-4 flex flex-col items-center mb-6 absolute left-0 right-0"
               >
                 {/* Company Logo */}
                 <div className="mb-6">
@@ -88,22 +87,21 @@ const ArbutusComponent = () => {
 
                 {/* Testimonial Content */}
                 <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg border border-gray-100 w-full">
-                  <p className="text-gray-800 italic mb-4 text-base sm:text-lg">
+                  <p className="text-gray-800 italic mb-4 text-sm sm:text-base">
                     "{testimonial.quote}"
                   </p>
-                  <p className="text-gray-700 font-medium">
+                  <p className="text-gray-700 font-medium text-sm">
                     {testimonial.name}, {testimonial.title}
                   </p>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-xs">
                     {testimonial.company}
                   </p>
                 </div>
               </motion.div>
             ))}
           </div>
-          
           {/* Dots indicator */}
-          <div className="flex justify-center items-center space-x-2 mt-6 sm:mt-8">
+          <div className="flex justify-center items-center space-x-2 mt-4 sm:mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -121,7 +119,7 @@ const ArbutusComponent = () => {
       </div>
       
       {/* Why Arbutus for Analytics section */}
-      <div className="mt-10 sm:mt-12 mb-12 sm:mb-16">
+      <div >
         <ArbutusAnalyticsSection />
       </div>
     </div>

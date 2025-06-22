@@ -79,7 +79,7 @@ const Header = () => {
       <div 
         className={`flex items-center bg-[#e6e6e6] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[38px] md:h-[38px] opacity-100' : 'h-0 opacity-0'}`}
       >
-        <div className="container px-4 md:px-6 lg:px-8 mx-auto flex flex-wrap justify-between">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] flex flex-wrap justify-between">
           <div className="flex items-center gap-2">
             <span className="flex items-center text-[#222]">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -99,8 +99,8 @@ const Header = () => {
         </div>
       </div>
       {/* Main Navigation */}
-      <div className="bg-white h-[65px] md:h-[65px] lg:h-[70px] border-b border-[#eee] shadow-sm">
-        <div className="container mx-auto h-full flex items-center justify-between px-4 md:px-6 lg:px-8">
+      <div className="bg-white h-[75px] md:h-[70px] lg:h-[75px] border-b border-[#eee] shadow-sm">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] h-full flex items-center justify-between">
           <div className="flex items-center overflow-hidden">
             <Link href="/" className="flex items-center">
               <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" layout="intrinsic" width={140} height={40} className="py-1 md:w-auto lg:w-auto max-h-[40px]" />
@@ -110,15 +110,15 @@ const Header = () => {
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex justify-center flex-1">
             <div className="flex justify-center md:gap-5 lg:gap-9">
-              <Link href="/" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/" className="group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Home
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
-              <Link href="/about" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/about" className="group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 About
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
-              <Link href="/products" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/products" className="group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Products
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
@@ -130,7 +130,7 @@ const Header = () => {
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
                 <button 
-                  className="flex items-center group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                  className="flex items-center group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
                   Services
                   <svg 
@@ -216,7 +216,7 @@ const Header = () => {
                 onMouseLeave={() => setEventsDropdownOpen(false)}
               >
                 <button 
-                  className="flex items-center group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]"
+                  className="flex items-center group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
                   Events
                   <svg 
@@ -253,7 +253,7 @@ const Header = () => {
                 </div>
               </div>
               
-              <Link href="/contact" className="group relative text-[#222] no-underline text-[15px] md:text-[13px] lg:text-[15px] font-medium transition-colors duration-200 hover:text-[#000000]">
+              <Link href="/contact" className="group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]">
                 Contact
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#000000] transition-all duration-300 ease-in-out group-hover:w-full"></span>
               </Link>
@@ -285,7 +285,7 @@ const Header = () => {
         ref={mobileMenuRef}
         className={`fixed top-0 right-0 w-full md:w-[300px] h-screen bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="flex flex-col py-6 px-4 pt-20">
+        <div className="flex flex-col py-6 px-4 pt-24">
           <button 
             onClick={() => setMobileMenuOpen(false)}
             className="absolute top-4 right-4 p-2 text-gray-800 hover:text-black focus:outline-none"
@@ -308,15 +308,15 @@ const Header = () => {
             </Link>
           </div>
           
-          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
-          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
+          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
           
           {/* Mobile Services Dropdown */}
           <div className="border-b border-gray-100">
             <button 
               onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium"
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium"
             >
               Services
               <svg 
@@ -335,20 +335,14 @@ const Header = () => {
               <Link 
                 href="/services/predictive-analysis" 
                 className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Predictive & Big Data Analytics
               </Link>
               <Link 
                 href="/services/grc-solutions-services" 
                 className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 GRC Solutions & Services
               </Link>
@@ -429,7 +423,7 @@ const Header = () => {
           <div className="border-b border-gray-100">
             <button 
               onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium"
+              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium"
             >
               Events
               <svg 
@@ -468,7 +462,7 @@ const Header = () => {
             </div>
           </div>
           
-          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[15px] md:text-[13px] lg:text-[15px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
+          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
         </div>
       </div>
     </header>

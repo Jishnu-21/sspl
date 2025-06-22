@@ -208,7 +208,7 @@ const CaseStudiesSection = () => {
           </video>
         </div>
 
-        <div className="max-w-[95%] mx-auto relative z-20">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] relative z-20">
           {/* Top heading */}
           <div className="pb-4 mb-0">
             <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
