@@ -9,8 +9,11 @@ import { FaUmbrella, FaBroadcastTower, FaWind } from 'react-icons/fa'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ServiceInquiryModal from '@/app/components/ServiceInquiryModal'
 
 const predictiveanalysis= () => {
+  const [modal, setModal] = React.useState<string | null>(null)
+
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
@@ -91,7 +94,11 @@ const predictiveanalysis= () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-[95%] mx-auto">
             {/* Insurance Card */}
-            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center" data-aos="zoom-in">
+            <div
+              className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              data-aos="zoom-in"
+              onClick={() => setModal('Insurance')}
+            >
               <div className="mb-6">
                 <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                   <FaUmbrella className="text-white text-3xl" />
@@ -104,7 +111,12 @@ const predictiveanalysis= () => {
             </div>
             
             {/* Telecom Card */}
-            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              onClick={() => setModal('Telecom')}
+            >
               <div className="mb-6">
                 <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                   <FaBroadcastTower className="text-white text-3xl" />
@@ -117,7 +129,12 @@ const predictiveanalysis= () => {
             </div>
             
             {/* Wind-Mill Card */}
-            <div className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              onClick={() => setModal('Wind-Mill')}
+            >
               <div className="mb-6">
                 <div className="w-24 h-24 bg-[#a4ce4e] rounded-full flex items-center justify-center">
                   <FaWind className="text-white text-3xl" />
@@ -130,6 +147,8 @@ const predictiveanalysis= () => {
             </div>
           </div>
         </section>
+        
+        <ServiceInquiryModal open={!!modal} onClose={() => setModal(null)} title={modal || ''} />
         
         <Footer/>
       </main>

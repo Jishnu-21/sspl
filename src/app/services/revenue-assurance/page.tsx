@@ -13,6 +13,7 @@ import { FaMobileAlt, FaBuilding, FaNetworkWired, FaPlus, FaExchangeAlt, FaFileI
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ServiceInquiryModal from '@/app/components/ServiceInquiryModal'
 
 
 const revenue = () => {
@@ -59,6 +60,8 @@ const revenue = () => {
       caption: "Banking Payment Fraud"
     }
   ];
+
+  const [modal, setModal] = React.useState<string | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -127,10 +130,32 @@ const revenue = () => {
                   </p>
                   </section>
 
-            <PartnersScroll 
-              title="In telecom industry, the following areas are a part of our solutions;"
-              items={telecomAreas}
-            />
+            <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12" data-aos="fade-up">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-semibold text-[#366A00] mb-6">In telecom industry, the following areas are a part of our solutions;</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-[95%] mx-auto">
+                {telecomAreas.map((area, idx) => (
+                  <div
+                    key={area.caption}
+                    className="bg-white p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+                    data-aos="zoom-in"
+                    data-aos-delay={idx * 100}
+                    onClick={() => setModal(area.caption.replace(/\n.*/, ''))}
+                  >
+                    <div className="mb-6">
+                      <div className="w-20 h-20 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                        {area.useIcon && area.icon ? (
+                          React.createElement(area.icon, { className: 'text-white text-2xl' })
+                        ) : null}
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-medium text-gray-800 mb-2 text-center whitespace-pre-line">{area.caption}</h3>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <ServiceInquiryModal open={!!modal} onClose={() => setModal(null)} title={modal || ''} />
 
             <section className="py-8 px-4 md:px-8 max-w-6xl mx-auto mb-4" data-aos="fade-up">
               <div className="text-center">
