@@ -338,7 +338,14 @@ const eventDetails: Record<string, {
   },
 };
 
-export default function Page({ params }: { params: { slug: string } }) {
+type Props = {
+  params: {
+    slug: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+
+export default function Page({ params }: Props) {
   const event = eventDetails[params.slug];
 
   if (!event && params.slug !== 'apj-acl-channel-partner-2007') {
