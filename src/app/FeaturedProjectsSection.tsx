@@ -3,8 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
-import { FaChartLine, FaChartBar, FaShoppingCart, FaUniversity, FaUmbrella, FaOilCan, FaTv, FaDatabase, FaRobot } from 'react-icons/fa';
+
 
 const CaseStudiesSection = () => {
   const controls = useAnimation();

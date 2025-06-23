@@ -2,26 +2,26 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { FaFilePdf, FaChartBar, FaChartPie } from 'react-icons/fa';
 
 const DownloadBrochure = () => {
   const brochures = [
     {
       id: 1,
       name: 'assureBI',
-      icon: '📊',
+      icon: <FaChartBar className="text-2xl text-[#366A00] group-hover:text-red-600 transition-colors duration-200" />,
       file: '/brochures/assurebi-brochure.pdf'
     },
     {
       id: 2,
       name: 'CM Dashboard',
-      icon: '📊',
+      icon: <FaChartPie className="text-2xl text-[#366A00] group-hover:text-blue-600 transition-colors duration-200" />,
       file: '/brochures/cm-dashboard-brochure.pdf'
     },
     {
       id: 3,
       name: 'Crime Dashboard',
-      icon: '📊',
+      icon: <FaFilePdf className="text-2xl text-[#366A00] group-hover:text-red-600 transition-colors duration-200" />,
       file: '/brochures/crime-dashboard-brochure.pdf'
     }
   ];
@@ -66,29 +66,37 @@ const DownloadBrochure = () => {
         
         <motion.div 
           className="flex flex-wrap gap-6 md:gap-8 lg:gap-10 pl-1 md:pl-4 lg:pl-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
-          {brochures.map((brochure) => (
+          {brochures.map((brochure, idx) => (
             <motion.div
               key={brochure.id}
               className="relative group cursor-pointer"
-              whileHover={{ y: -5 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ scale: 1.07, boxShadow: "0 8px 32px rgba(54,106,0,0.12)" }}
+              transition={{ type: 'spring', stiffness: 300, delay: idx * 0.1 }}
               onClick={() => handleDownload(brochure.file, brochure.name)}
             >
-              <div className="bg-white rounded-sm shadow-lg p-4 flex items-center w-[180px] h-[60px] relative overflow-hidden">
-                {/* Shadow effect at the bottom */}
-                <div className="absolute bottom-0 left-0 w-full h-[15px] bg-gradient-to-t from-gray-200 to-transparent"></div>
-                
-                <div className="flex items-center">
-                  <div className="text-red-500 text-xl mr-2">
-                    {brochure.icon}
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">{brochure.name}</span>
+              <div className="bg-white rounded-xl shadow-lg p-5 flex flex-col items-center w-[200px] h-[110px] relative overflow-hidden border border-gray-100 group-hover:border-[#366A00] transition-colors duration-200">
+                <div className="mb-2">
+                  {brochure.icon}
                 </div>
+                <span className="text-base font-semibold text-gray-800 group-hover:text-[#366A00] transition-colors duration-200">{brochure.name}</span>
+                <span className="text-xs text-gray-500 mt-1 group-hover:text-[#366A00] transition-colors duration-200">PDF Brochure</span>
+                {/* Animated download arrow */}
+                <motion.div
+                  className="absolute bottom-3 right-3 text-[#366A00] group-hover:text-red-600"
+                  initial={{ x: 10, opacity: 0 }}
+                  whileHover={{ x: 0, opacity: 1 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                  </svg>
+                </motion.div>
               </div>
             </motion.div>
           ))}

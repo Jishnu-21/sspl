@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { FaUmbrella, FaBroadcastTower, FaWind } from 'react-icons/fa'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
 const predictiveanalysis= () => {
   useEffect(() => {
@@ -31,12 +32,13 @@ const predictiveanalysis= () => {
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Access meaningful data to deliver key insights with powerful analytics tools</h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 In a fast-paced demanding world, there has been a phenomenal growth seen in structured and unstructured data, 
                 data systems acquired from multiple sources which cater to the requirements of the businesses so as to derive 
                 insights faster & keep up with the momentum.
               </p>
             </div>
+            <DownloadBrochureButton pdfPath="/pdfs/predictive.pdf" />
           </div>
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>

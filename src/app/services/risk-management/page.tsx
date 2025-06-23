@@ -10,6 +10,8 @@ import { FaCreditCard, FaMoneyBillWave, FaSearchDollar, FaChartLine, FaBoxes, Fa
 import { motion } from 'framer-motion'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+
 
 // Define risk management areas for the PartnersScroll component with icons
 const riskAreas: PartnerItem[] = [
@@ -68,10 +70,12 @@ const risk = () => {
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
                   <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Using analytics tools for years to manage, monitor and control various Risk Parameters </h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed mb-6">
                   For virtually anyone working in the area of Risk Management-Audit Analytics isn't new. Risk managers have been using analytical tools for years to manage, monitor and control various Risk Parameters, depending upon the type of the Industry they are working with. There is a renaissance in analytics technology underway today, and its essence only surpasses just as the issue of risk takes on an even higher profile for leaders across industries. It can be challenging to separate the hype from the reality when it comes to analytics and risk management. Enterprise risk management can encompass so much more than merely making sure your business has purchased the right type and amount of insurance. With the tools now available, businesses can quantify and model the risks they face, to enable smarter mitigation strategies and better strategic decisions.  
                   </p>
                 </div>
+                <DownloadBrochureButton pdfPath="/pdfs/operations-finance.pdf" />
+
                 </div>
       </section>
       <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>

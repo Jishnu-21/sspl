@@ -6,6 +6,7 @@ import Header from '@/app/Header'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
 const Grc = () => {
   return (
@@ -21,9 +22,10 @@ const Grc = () => {
     <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
               We strengthen your core values, align your organization structure and infuse a culture that supports and sustains well in every season.
               </p>
+              <DownloadBrochureButton pdfPath="/pdfs/grc.pdf" />
             </div>
           </div>
         </section>

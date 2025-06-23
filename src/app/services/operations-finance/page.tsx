@@ -7,6 +7,7 @@ import Footer from '@/app/Footer'
 import Image from 'next/image'
 import { FaChartLine, FaMoneyBillWave, FaSearchDollar, FaFileInvoiceDollar, FaChartPie, FaShieldAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
 const OperationsFinance = () => {
   return (
@@ -28,9 +29,10 @@ const OperationsFinance = () => {
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Can CFOs really use Big Data for Finance Analytics?</h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 With rare exceptions, until now the closest that Big Data has come to the CFO's office has been via the well-publicized examples involving the enormous consumer databases of credit card vendors, who use them to identify pertinent information, and then sell data on the buying patterns, credit worthiness of the customer pool, among other things. The typical finance department hardly encounters anything close to the size of those terabyte-scale databases when closing the books, preparing budgets and forecasting revenues.
               </p>
+              <DownloadBrochureButton pdfPath="/pdfs/operations-finance.pdf" />
             </div>
           </div>
         </motion.section>
@@ -71,69 +73,6 @@ const OperationsFinance = () => {
               <p className="text-gray-700 leading-relaxed mb-8">
                 SSPL offers both. The solutions and services are well designed for the clients that cater into delivering the best optimized and customized proposals. Its services and solutions help and support the users to save much more, both in terms of timely reporting and financial savings. The processes are automated to reduce dependency on manpower and solutions work from Intranet to mobile computing. Users being placed anywhere on the globe can access the reports/dashboards via a dependable internet connection, and also get around making editions w.r.t their individual requirements.
               </p>
-              
-              {/* Finance Analytics Dashboard */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                {/* Item 1 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaChartLine className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Real-time financial performance tracking and visualization
-                  </p>
-                </div>
-                
-                {/* Item 2 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaMoneyBillWave className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Cash flow optimization and forecasting
-                  </p>
-                </div>
-                
-                {/* Item 3 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaSearchDollar className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Anomaly detection for expense management and cost reduction
-                  </p>
-                </div>
-                
-                {/* Item 4 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaFileInvoiceDollar className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Automated invoice processing and accounts payable optimization
-                  </p>
-                </div>
-                
-                {/* Item 5 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaChartPie className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Predictive analytics for budget planning and resource allocation
-                  </p>
-                </div>
-                
-                {/* Item 6 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaShieldAlt className="text-white text-3xl" />
-                  </div>
-                  <p className="text-center text-gray-700">
-                    Risk assessment and compliance monitoring for financial operations
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </motion.section>

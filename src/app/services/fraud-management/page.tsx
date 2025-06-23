@@ -8,6 +8,8 @@ import React, { useState } from 'react'
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import { FaExclamationTriangle, FaUniversity, FaUserTie, FaSearch, FaMoneyCheckAlt, FaFileInvoiceDollar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+
 
 const fraudManagement = () => {
   // Helper function to extract YouTube video ID from URL
@@ -107,9 +109,10 @@ const fraudManagement = () => {
               <p className="text-gray-700 leading-relaxed">
               The Foreign Corrupt Practices Act (FCPA) should not be taken lightly. But compliance can be tricky. The global business environment includes many international, centralized and decentralized companies. Individuals often operate in countries where bribes and payoffs have historically been a routine part of doing business. When languages and business cultures vary to a large degree, it can be extremely difficult to keep tabs on the operations.      
              </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
               A key tool for avoiding FCPA difficulties is Data Analysis. The truth is held in the data, because that's where a company's conduct is recorded. The rows and columns of data often speak volumes about what is truly going on inside the business.             </p>
             </div>
+            <DownloadBrochureButton pdfPath="/pdfs/fraud.pdf" />
           </div>
         </motion.section>
         

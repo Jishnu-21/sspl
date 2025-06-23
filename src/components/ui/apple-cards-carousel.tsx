@@ -65,7 +65,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      const { scrollLeft, clientWidth, scrollWidth } = carouselRef.current;
+      const cardWidth = 384 + 16; // md:w-96 + gap-4
+      const totalCards = items.length;
+      const visibleCards = Math.floor(clientWidth / cardWidth);
+      const maxIndex = totalCards - visibleCards;
+      const maxScrollLeft = maxIndex * cardWidth;
+      const nextScrollLeft = scrollLeft + cardWidth;
+      if (nextScrollLeft <= maxScrollLeft) {
+        carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
+      } else {
+        carouselRef.current.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+      }
     }
   };
 
@@ -125,7 +136,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                className="rounded-3xl"
               >
                 {item}
               </motion.div>

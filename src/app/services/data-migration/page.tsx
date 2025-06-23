@@ -7,6 +7,8 @@ import Image from 'next/image'
 import React from 'react'
 import DataMigrationRisks from '@/app/components/DataMigrationRisks'
 import { motion } from 'framer-motion'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+
 
 const dataMigration = () => {
   return (
@@ -28,10 +30,11 @@ const dataMigration = () => {
         >
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>
             </div>
+            <DownloadBrochureButton pdfPath="/pdfs/data-mig.pdf" />
           </div>
         </motion.section>
         

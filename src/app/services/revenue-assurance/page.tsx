@@ -12,6 +12,7 @@ import { FaMobileAlt, FaBuilding, FaNetworkWired, FaPlus, FaExchangeAlt, FaFileI
   FaMoneyBillWave, FaServer, FaChartLine, FaUserFriends, FaHandshake, FaCalculator } from 'react-icons/fa'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
 
 const revenue = () => {
@@ -79,10 +80,12 @@ const revenue = () => {
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
                   <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Refining Capabilities in Digital and Converge Space</h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed mb-6">
                   Revenue Assurance (RA) was conceived as a risk mitigation solution about 20 years ago in response to the constantly increasing complexity of the telecom value chain and growing revenue leakages.
                   </p>
                 </div>
+                <DownloadBrochureButton pdfPath="/pdfs/operations-finance.pdf" />
+
                 </div>
             </section>
             <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>

@@ -9,6 +9,8 @@ import { FaChartLine, FaThumbsUp, FaUsers, FaChartBar, FaChartArea, FaChartPie, 
 import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import DownloadBrochureButton from '@/app/components/DownloadBrochureButton';
+
 
 const media = () => {
   useEffect(() => {
@@ -36,6 +38,7 @@ const media = () => {
               </p>
             </div>
             </div>
+            <DownloadBrochureButton pdfPath="/pdfs/media.pdf" />
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
