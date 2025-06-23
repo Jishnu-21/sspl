@@ -545,4 +545,12 @@ export default async function Page({ params, searchParams }: Props) {
       <Footer />
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  const slugs = Object.keys(eventDetails);
+  if (!slugs.includes('apj-acl-channel-partner-2007')) {
+    slugs.push('apj-acl-channel-partner-2007');
+  }
+  return slugs.map(slug => ({ slug }));
 } 
