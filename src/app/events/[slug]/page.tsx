@@ -7,29 +7,29 @@ import ShortPageBanner from '@/app/components/ShortPageBanner';
 
 // Event content data structure
 const eventDetails: Record<string, {
-  main: {
-    title: string;
-    focusTitle: string;
-    focus: string;
-    topicsTitle: string;
-    topics: string[];
-    speakersTitle: string;
-    speakers: string[];
-  };
-  sidebar: {
-    speakerProfile: string;
-    feedback: string;
-    advisorBoard: { role: string; name: string; details: string }[];
-    coOrganiser: { name: string; logo: string };
-    sponsors: { name: string; logo: string }[];
-    institutionalSupporter?: { name: string; logos: { name: string; logo: string }[] };
-    customSidebar?: boolean;
-    coSponsor?: { name: string; logo: string };
-    institutionalSponsors?: { name: string; logo: string }[];
-    knowledgePartners?: { name: string; logo: string }[];
-    showOnlySessionDetails?: boolean;
-  };
-}> = {
+    main: {
+      title: string;
+      focusTitle: string;
+      focus: string;
+      topicsTitle: string;
+      topics: string[];
+      speakersTitle: string;
+      speakers: string[];
+    };
+    sidebar: {
+      speakerProfile: string;
+      feedback: string;
+      advisorBoard: { role: string; name: string; details: string }[];
+      coOrganiser: { name: string; logo: string };
+      sponsors: { name: string; logo: string }[];
+      institutionalSupporter?: { name: string; logos: { name: string; logo: string }[] };
+      customSidebar?: boolean;
+      coSponsor?: { name: string; logo: string };
+      institutionalSponsors?: { name: string; logo: string }[];
+      knowledgePartners?: { name: string; logo: string }[];
+      showOnlySessionDetails?: boolean;
+    };
+  }> = {
   'fraud-detection-2012': {
     main: {
       title: 'Assurance 2012 : Fraud Management: Practical Approach',
@@ -339,15 +339,12 @@ const eventDetails: Record<string, {
 };
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: { slug: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 };
 
-export default function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
   const event = eventDetails[params.slug];
-
   if (!event && params.slug !== 'apj-acl-channel-partner-2007') {
     notFound();
   }
