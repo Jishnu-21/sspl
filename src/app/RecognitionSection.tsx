@@ -10,8 +10,9 @@ interface MarqueeItem {
   hoverDetails: {
     title: string;
     description: string;
-
     image1: string;
+    industry?: string;
+    scopeOfWork?: string;
   };
 }
 
@@ -27,67 +28,70 @@ const RecognitionSection: React.FC = () => {
       logo: '/images/awards/award1.jpg',
       hoverDetails: {
         title: 'TechVikram Technical Talk Award',
-        description:
-          ' Recognizing excellence in faculty and student development through a technical talk on Big Data Analytics.'     ,
+        description: 'Recognizing excellence in faculty and student development through a technical talk on Big Data Analytics.',
         image1: '/images/awards/award1.jpg',
+        industry: 'Education',
+        scopeOfWork: 'Faculty and Student Development',
       },
     },
     {
       logo: '/images/awards/award2.jpg',
       hoverDetails: {
         title: 'Excellence Award',
-        description:
-          'Recognizing achievements in productivity, quality innovation, and management.',
-       
+        description: 'Recognizing achievements in productivity, quality innovation, and management.',
         image1: '/images/awards/award2.jpg',
+        industry: 'General',
+        scopeOfWork: 'Productivity, Quality Innovation, Management',
       },
     },
     {
       logo: '/images/awards/award3.jpg',
       hoverDetails: {
         title: 'Leadership Innovation Excellence Award',
-        description:
-          ' Recognizing leadership, innovation, and dedication in the corporate sector.',
-        
+        description: 'Recognizing leadership, innovation, and dedication in the corporate sector.',
         image1: '/images/awards/award3.jpg',
+        industry: 'Corporate',
+        scopeOfWork: 'Leadership, Innovation, Dedication',
       },
     },
     {
       logo: '/images/awards/award4.jpg',
       hoverDetails: {
         title: 'Highest Growth Year Over Year',
-        description:
-          'Recognizing exceptional growth and performance over the previous year.',
-      
+        description: 'Recognizing exceptional growth and performance over the previous year.',
         image1: '/images/awards/award4.jpg',
+        industry: 'Business',
+        scopeOfWork: 'Growth and Performance',
       },
     },
     {
       logo: '/images/awards/award5.jpg',
       hoverDetails: {
         title: 'Natraj Delhi Ratan Award 2017',
-        description:
-          'Recognizing outstanding contributions in the field of art and training.',
+        description: 'Recognizing outstanding contributions in the field of art and training.',
         image1: '/images/awards/award5.jpg',
+        industry: 'Art & Training',
+        scopeOfWork: 'Art and Training',
       },
     },
     {
       logo: '/images/awards/award6.jpg',
       hoverDetails: {
         title: 'India Excellence Award',
-        description:
-          'Purpose: Recognizing outstanding contributions to society.Industry: General (non-specific)Scope of Work: Social Impact / Community Service',
+        description: 'Recognizing outstanding contributions to society.',
         image1: '/images/awards/award6.jpg',
+        industry: 'General',
+        scopeOfWork: 'Social Impact / Community Service',
       },
     },
     {
       logo: '/images/awards/award8.jpg',
       hoverDetails: {
         title: 'FIT-IGNOU Centre of Excellence',
-        description:
-          'Recognizing excellence in advanced education and research',
-      
+        description: 'Recognizing excellence in advanced education and research',
         image1: '/images/awards/award8.jpg',
+        industry: 'Education & Research',
+        scopeOfWork: 'Advanced Education and Research',
       },
     },
   ];
@@ -122,11 +126,19 @@ const RecognitionSection: React.FC = () => {
                     {/* Right Text Section */}
                     <div className="w-full md:w-3/4 text-white">
                       <div className="flex items-center gap-2">
-                        <h2 className="text-xl md:text-2xl font-bold">{item.hoverDetails.title}</h2>
+                        <h2 className="text-2xl md:text-4xl font-bold">{item.hoverDetails.title}</h2>
                       </div>
-                      <p className="mt-2 text-xs md:text-sm leading-relaxed">{item.hoverDetails.description}</p>
-  
-                    
+                      <p className="mt-2 text-xl md:text-xl leading-relaxed">{item.hoverDetails.description}</p>
+                      {item.hoverDetails.industry && (
+                        <p className="mt-2 text-base md:text-lg text-blue-200">
+                          <span className="font-semibold text-white">Industry:</span> {item.hoverDetails.industry}
+                        </p>
+                      )}
+                      {item.hoverDetails.scopeOfWork && (
+                        <p className="mt-1 text-base md:text-lg text-blue-200">
+                          <span className="font-semibold text-white">Scope of Work:</span> {item.hoverDetails.scopeOfWork}
+                        </p>
+                      )}
                     </div>
                   </div>
                 )
