@@ -12,7 +12,6 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
-  
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const eventsDropdownRef = useRef<HTMLDivElement>(null);
@@ -103,7 +102,7 @@ const Header = () => {
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] h-full flex items-center justify-between">
           <div className="flex items-center overflow-hidden">
             <Link href="/" className="flex items-center">
-              <Image src="/images/logos/logo2.jpg" alt="SSPL Logo" layout="intrinsic" width={140} height={40} className="py-1 md:w-auto lg:w-auto max-h-[40px]" />
+              <Image src="/images/logos/logo.png" alt="SSPL Logo" width={280} height={85} priority sizes="280px" className="py-1 md:w-auto lg:w-auto max-h-[85px]" />
             </Link>
           </div>
           
@@ -304,7 +303,7 @@ const Header = () => {
           {/* Logo in mobile menu */}
           <div className="flex justify-center mb-6 mt-[-10px]">
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-              <Image src="/logo.png" alt="SSPL Logo" width={160} height={55} />
+              <Image src="/images/logos/logo.png" alt="SSPL Logo" width={280} height={85} priority sizes="280px" />
             </Link>
           </div>
           
