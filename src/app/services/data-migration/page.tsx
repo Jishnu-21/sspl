@@ -15,8 +15,8 @@ const dataMigration = () => {
         <Header/>
         <PageBanner
           backgroundImage="/images/services/banners/datamigration.png"
-          title="Data Migration"
-          subtitle="Ensuring Seamless Transition of Your Critical Business Data"
+          title="Data Migration Testing"
+          subtitle="Plotting a Smooth Path to Data Migration"
         />
         
         <motion.section
@@ -28,7 +28,6 @@ const dataMigration = () => {
         >
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
-              <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Data Migration Excellence</h2>
               <p className="text-gray-700 leading-relaxed">
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>

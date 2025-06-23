@@ -101,8 +101,8 @@ const Header = () => {
       <div className="bg-white h-[75px] md:h-[70px] lg:h-[75px] border-b border-[#eee] shadow-sm">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] h-full flex items-center justify-between">
           <div className="flex items-center overflow-hidden">
-            <Link href="/" className="flex items-center">
-              <Image src="/images/logos/logo.png" alt="SSPL Logo" width={280} height={85} priority sizes="280px" className="py-1 md:w-auto lg:w-auto max-h-[85px]" />
+            <Link href="/" className="flex items-center -mt-5 -ml-4">
+              <Image src="/images/logos/logo.png" alt="SSPL Logo" width={280} height={85} priority sizes="280px" className="md:w-auto lg:w-auto max-h-[235px]" />
             </Link>
           </div>
           
@@ -302,7 +302,7 @@ const Header = () => {
           
           {/* Logo in mobile menu */}
           <div className="flex justify-center mb-6 mt-[-10px]">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="-mt-2 -ml-2">
               <Image src="/images/logos/logo.png" alt="SSPL Logo" width={280} height={85} priority sizes="280px" />
             </Link>
           </div>
