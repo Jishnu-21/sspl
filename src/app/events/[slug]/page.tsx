@@ -22,7 +22,12 @@ const eventDetails: Record<string, {
     advisorBoard: { role: string; name: string; details: string }[];
     coOrganiser: { name: string; logo: string };
     sponsors: { name: string; logo: string }[];
-    institutionalSupporter?: { name: string; logo: string };
+    institutionalSupporter?: { name: string; logos: { name: string; logo: string }[] };
+    customSidebar?: boolean;
+    coSponsor?: { name: string; logo: string };
+    institutionalSponsors?: { name: string; logo: string }[];
+    knowledgePartners?: { name: string; logo: string }[];
+    showOnlySessionDetails?: boolean;
   };
 }> = {
   'fraud-detection-2012': {
@@ -141,10 +146,8 @@ const eventDetails: Record<string, {
         '<b>Mr. Niraj Ruparel</b>, <i>Chairman, Deloitte Haskins & Sells.</i>',
         '<b>Mr. V. Swaminathan</b>, <i>Chief Internal Auditor, Godrej Industries Ltd.</i>',
         '<b>Mr. Sunder Krishnan</b>, <i>Chief Risk Officer, Reliance Life Insurance Company Ltd.</i>',
-        '<b>Mr. Sanjay K. Mathur</b>, <i>Head Internal Audit, Reliance Communications Limited.</i>',
-        '<b>Mr. V. Sriram</b>, <i>Head Internal Audit, Bajaj Allianz Life Insurance Co. Ltd.</i>',
-        '<b>Mr. Aneel Gambhir</b>, <i>Senior Vice President - Internal Audit, Blue Dart Express.</i>',
-        '<b>Mr. Haresh Dua</b>, <i>Vice President - Internal Audit, JSW Steel Ltd.</i>',
+        '<b>Mr. Sandeep Bhadkande</b>, <i>Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</i>',
+        '<b>Mr. Salil Krishnan</b>, <i>Senior Vice President – Inspection and Audit, Axis Bank.</i>',
         '<b>Mr. Anil Bhandari</b>, <i>Vice President, IIA India.</i>',
         '<b>Mr. Nishith Seth</b>, <i>Managing Director, SSPL.</i>'
       ]
@@ -155,7 +158,182 @@ const eventDetails: Record<string, {
       advisorBoard: [],
       coOrganiser: { name: '', logo: '' },
       sponsors: [],
-      institutionalSupporter: { name: 'Institutional Supporter', logo: '/images/logos/2.svg' }
+      institutionalSupporter: {
+        name: 'Institutional Supporters',
+        logos: [
+          { name: 'eISA', logo: '/images/logos/1.svg' },
+          { name: 'IIA', logo: '/images/logos/5.svg' },
+          { name: 'ACL', logo: '/images/logos/3.svg' },
+          { name: 'Paladion', logo: '/images/logos/4.svg' }
+        ]
+      }
+    }
+  },
+  'gaining-audit-assurance-2009': {
+    main: {
+      title: 'Assurance 2009',
+      focusTitle: 'Conference Focus',
+      focus: `With the growing importance and responsibility from all quarters, corporate are required to gear-up with technology to handle Assurance and generate confidence both internally and externally. SSPL is pleased to provide you an opportunity to be a part of the Grand Meet on Assurance to deliberate, share and know how the Industry Experts are handling the Challenges.`,
+      topicsTitle: 'Key Conference Topic',
+      topics: [
+        'CaptionIdentifying preventative practices within your organisation to control potential risks that will affect your company',
+        'CaptionDetermining the steps and processes to be included in compiling a risk management framework in order to have a comprehensive risk agenda',
+        'CaptionIllustrating the various aspects of risk and how these will positively affect your organisations risk management efforts',
+        'CaptionDebating the need for more stringent and compulsory national legislation to be implemented within your company to improve risk management and business intelligence.'
+      ],
+      speakersTitle: 'Eminent Speaker',
+      speakers: [
+        '<b>Mr. Manoj Chugh</b>, <i>President of EMC India & SAARC.</i>',
+        '<b>Mr. Harald Will</b>, <i>President & CEO, ACL Services Limited.</i>',
+        '<b>Dr. K. Subramanian</b>, <i>IT Consultant to CAG of India, Director IGNOU.</i>',
+        '<b>Mr. R. Dayal</b>, <i>Executive Director (Internal Audit), Air India Limited.</i>',
+        '<b>Mr. Ravi S. Pani</b>, <i>Director/CFO,C1 India Limited.</i>',
+        '<b>Mr. Rajeev Arora</b>, <i>Vice President, Internal Audit – North EIH Limited.</i>',
+        '<b>Mr. Kallol Kundu</b>, <i>Director and CFO, C1 India.</i>',
+        '<b>Mr. G. K. Gupta</b>, <i>Vice-President, Distribution Standards & Contracts, Max New York Life Insurance Company Ltd.</i>',
+        '<b>Mr. Anil Roy</b>, <i>Partner, Grant Thortan.</i>',
+        '<b>Mr. Niraj Ruparel</b>, <i>Director, BMR Advisors.</i>',
+        '<b>Mr. Gaganpreet Singh</b>, <i>Director, KPMG.</i>',
+        '<b>Mr. Akshay Bhalla</b>, <i>Partner, Control Solutions.</i>',
+        '<b>Mr. Deepak Wadhawan</b>, <i>Senior Advisory (Risk Advisory Services) KPMG.</i>',
+        '<b>Mr. Ravi. H. Iyer</b>, <i>Vice President IIA Delhi.</i>',
+        '<b>Mr. Nishith Seth</b>, <i>ACDA, SSPL.</i>'
+      ]
+    },
+    sidebar: {
+      speakerProfile: '',
+      feedback: '',
+      advisorBoard: [],
+      coOrganiser: { name: '', logo: '' },
+      sponsors: [],
+      customSidebar: true,
+      coSponsor: { name: 'ACL', logo: '/images/logos/3.svg' },
+      institutionalSponsors: [
+        { name: 'IIA', logo: '/images/logos/5.svg' },
+        { name: 'ACFE', logo: '/images/logos/acfe.png' }
+      ],
+      knowledgePartners: [
+        { name: 'Forensics Guru', logo: '/images/logos/forensicsguru.png' },
+        { name: 'i2k2 Networks', logo: '/images/logos/i2k2.png' }
+      ]
+    }
+  },
+  'transformation-post-audit-2008': {
+    main: {
+      title: 'Assurance 2008',
+      focusTitle: 'Transformation from Post Audit to Continuous Control Monitoring – Technology and Methodology',
+      focus: `SSPL got the opportunity to organise a grand meet on Assurance. The invitees were executives, business managers and industry experts. They came together on one stage to exchange ideas and explore innovative business and technology solutions at 'ASSURANCE 2008'. This unique event is held in India once a year. It provides customer centric solutions on Business Assurance and Risk Management and also on expert insight and peer exchange.`,
+      topicsTitle: '',
+      topics: [],
+      speakersTitle: 'Eminent Speaker',
+      speakers: [
+        'Dr. K. Subramanian, IT Advisor to CAG of India.',
+        'Mr. Ganapathy Subramanian, Director (Finance), Bennet Coleman & Co. Limited.',
+        'Mr. P. N. Sharma, Chairman Audit Committee, UFlex Limited.',
+        'Mr. Nagesh Pinge, President – Internal Audit, JSW Limited.',
+        'Mr. Amar Kumar, Chief Risk Officer, Max New York Life Insurance Company India Limited.',
+        'Mr. Rajeev Arora, Vice President, Internal Audit – North EIH Limited.',
+        'Mr. Sunder Krishnan, Chief Risk Officer, Reliance Insurance Limited.',
+        'Mr. Sandeep Bhadkande, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.',
+        'Mr. Salil Krishnan, Senior Vice President – Inspection and Audit, Axis Bank.',
+        'Ms. Smitha Gune, General Manager, Operational Risk Management Group, ICICI Bank Limited.',
+        'Mr. Mohan Bhatia, Director, KPMG.',
+        'Mr. John Scrivener, Senior Consultant, SymSure Limited.',
+        'Mr. Jatin Thakkar, Senior Manager, HSBC Group.'
+      ]
+    },
+    sidebar: {
+      speakerProfile: '',
+      feedback: '',
+      advisorBoard: [],
+      coOrganiser: { name: '', logo: '' },
+      customSidebar: true,
+      sponsors: [
+        { name: 'ACL', logo: '/images/partners/arbutus.png' }
+      ],
+      institutionalSupporter: {
+        name: 'Supported by',
+        logos: [
+          { name: 'IIA India - Bombay Chapter', logo: '/images/logos/5.svg' },
+          { name: 'eISA', logo: '/images/logos/1.svg' },
+          { name: 'TiE', logo: '/images/partners/tie.png' }
+        ]
+      }
+    }
+  },
+  'assurance-2007': {
+    main: {
+      title: 'Assurance 2007',
+      focusTitle: 'Conference Focus',
+      focus: `Is an opportunity for you to be a part of the Grand Meet on Assurance. We invite you to join executives, business managers and industry experts who will come together to meet, exchange ideas and explore innovative business and technology solutions at <b>ASSURANCE 2007, The Sheraton New Delhi, from 23rd – 25th May 2007</b>. It is a unique event which would aim at providing customer centric solutions on Business Assurance and Risk Management, expert insight and peer exchange.<br/><br/>
+      <b>Assurance 2007</b> is a valuable opportunity for solutions related to compliance and risk management. It will provide a platform to audit professionals to exchange ideas and trade practices. An exclusive customer focused event that brings together the knowledge base of ACL with that of its users, partners and other industry experts. You shall benefit by not just from interacting with your colleagues from wide variety of industries but also by listening to intellectual view points of some of the leading visionaries in the open source of world.<br/><br/>
+      <b>Event highlights</b> include inspirational keynote presentations, client- presented sessions, detailed product workshops, hands-on product interface as well as many peer networking sessions.<br/><br/>
+      <span style='color:#7bb32e;font-weight:bold;font-size:1.2em;'>ASSURANCE 2007 shall benefit participants in many ways, a few of them being :</span>`,
+      topicsTitle: '',
+      topics: [
+        'Know if your company is harnessing current technologies to fullest? Or are you losing business by not keeping pace with market trends.',
+        'Explore best practices in governance, risk and compliance.',
+        'Hear Customer success stories',
+        'Learn from top industry experts.',
+        'Expand peer network and have countless opportunities to make beneficial contacts.',
+        'Be inspired & get new ideas.',
+        'Get on to becoming more imaginative & initiate new ideas to succeed.'
+      ],
+      speakersTitle: 'Eminent Speaker',
+      speakers: [
+        'Mr. Sunil Talati, President, The Institute of Chartered Accountants of India.',
+        'Mr. Amarjit Chopra, Central Council Member, The Institute of Chartered Accountants of India.',
+        'Mr. Michael Liu, Regional Director, ACL Services Limited.',
+        'Mr. Probal Ghosal, Director Finance, Benett, Coleman & Co. Limited.',
+        'Mr. Dr. K. Subramanian, IT Advisor to CAG of India.',
+        'Mr. Manoj Chugh, President India & SAARC, EMC.',
+        'Mr. Anil Kumar, Deputy Executive Director, Dalmia Cements.',
+        'Mr. Rajiv Arora, Director -Business Risk and Internal Audit, Aviva Life Insurance Company India Pvt Ltd.',
+        'Mr. Sandeep Bhatkhande, Head – Data Analysis Function, Siemens Corporate Finance Private Limited.',
+        'Ms. Akhilesh Tuteja, Executive Director, KPMG.',
+        'Mr. G. Kali Prasad, Partner, Ernst & Young.',
+        'Mr. P. N. Sharma, Director - Finance, Sir Ganga Ram Hospital.',
+        'Mr. S. Satyamoorty, Former Deputy CAG of India, Commercial.',
+        'Dr. D. P. S. Seth, Former Member Telecom, TRAI.',
+        'Mr. Amar Kumar, Assistant Vice President- Risk Management, Max New York Life Insurance Co Ltd.',
+        'Mr. Devangshu Dutta, Chief Executive, Third Eyesight.',
+        'Mr. Sanjay Bane, AGM - Head Information System Audit, ICICI Bank Limited.',
+        'Mr. Rajesh Bhatia, General Manager - Global Internal Audit, Ranbaxy Laboratories Limited.',
+        'Mr. Naveen Sherman, Principle Finance Officer, Bharti Airtel Limited.',
+        'Mr. Kallol Kundu, Director Regional Audit, EIH Limited.',
+        'Mr. Kallol Lahiri, Divisional Manager - Internal Audit, TATA Motors Limited.',
+        'Mr. Suveer Khanna, Manager - Forensic Practice, KPMG.'
+      ]
+    },
+    sidebar: {
+      speakerProfile: 'Speakers profile content for Assurance 2007.',
+      feedback: '',
+      advisorBoard: [],
+      coOrganiser: { name: '', logo: '' },
+      customSidebar: true,
+      coSponsor: { name: 'ACL', logo: '/images/logos/3.svg' },
+      sponsors: [
+        { name: 'Control Solutions', logo: '/images/partners/controlsolutions.png' },
+        { name: 'Dena Bank', logo: '/images/partners/denabank.png' }
+      ]
+    }
+  },
+  'apj-acl-channel-partner-2007': {
+    main: {
+      title: 'APJ Channel Partner Conference 2007',
+      focusTitle: 'Conference Focus',
+      focus: `It was a great opportunity to learn from ACL experts, hear partner success stories, celebrate accomplishments, and help position your company for new levels of achievement in 2008. The conference also provided a great platform for learning techniques to overcome selling challenges and strategies for identifying new sales opportunities.`,
+      topicsTitle: '',
+      topics: [],
+      speakersTitle: 'Eminent Speaker',
+      speakers: []
+    },
+    sidebar: {
+      speakerProfile: '',
+      feedback: '',
+      advisorBoard: [],
+      coOrganiser: { name: '', logo: '' },
+      sponsors: []
     }
   },
 };
@@ -178,102 +356,187 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
 
       <div className="max-w-[1600px] mx-auto w-full py-16 px-4 flex flex-col md:flex-row gap-8">
         {/* Main Content (left) */}
-        <section className="md:w-2/3 w-full order-1 md:order-none">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h1 className="text-3xl font-light mb-6 text-green-700">{event.main.title}</h1>
-            <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.focusTitle}</h2>
-            <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: event.main.focus }} />
-            <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.topicsTitle}</h2>
-            <ul className="mb-6 list-disc pl-6 text-gray-700">
-              {event.main.topics.map((topic: string, idx: number) => (
-                <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
-              ))}
-            </ul>
-            <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.speakersTitle}</h2>
-            <ul className="mb-6 list-disc pl-6 text-gray-700">
-              {event.main.speakers.map((speaker: string, idx: number) => (
-                <li key={idx} dangerouslySetInnerHTML={{ __html: speaker }} />
-              ))}
-            </ul>
-            <Link href="/events" className="mt-8 inline-block text-blue-600 hover:underline">&larr; Back to Events</Link>
+        {params.slug === 'apj-acl-channel-partner-2007' ? (
+          <div className="flex flex-col md:flex-row items-start gap-8 w-full justify-center">
+            <div>
+              <img src="/images/partners/apj-acl-award.png" alt="APJ ACL Award" className="w-64 h-auto object-contain mb-4" />
+            </div>
+            <div>
+              <h1 className="text-3xl md:text-4xl font-light mb-4 text-green-700">APJ Channel Partner Conference 2007</h1>
+              <div className="text-lg font-bold mb-2 text-gray-800">9<sup>th</sup> - 11<sup>th</sup> September 2007</div>
+              <div className="text-lg font-bold mb-4 text-gray-800">Bangkok Thailand</div>
+              <p className="mb-2 text-gray-700">It was a great opportunity to learn from ACL experts, hear partner success stories, celebrate accomplishments, and help position your company for new levels of achievement in 2008. The conference also provided a great platform for learning techniques to overcome selling challenges and strategies for identifying new sales opportunities.</p>
+              <Link href="/events" className="mt-8 inline-block text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded">&larr; BACK</Link>
+            </div>
           </div>
-        </section>
-
-        {/* Sidebar (right) */}
-        <aside className="md:w-1/3 w-full order-0 md:order-none space-y-6">
-          {params.slug === 'risk-intelligence-2011' ? (
-            <div className="bg-[#f5f5f5] rounded-lg p-0">
-              <div className="border-b border-[#e0e0e0]">
-                <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
-                <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
-              </div>
-            </div>
-          ) : params.slug === 'maintainability-of-assurance-2010' ? (
-            <div className="bg-[#f5f5f5] rounded-lg p-0">
-              <div className="border-b border-[#e0e0e0]">
-                <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
-                <img src="/images/logos/2.svg" alt="Institutional Supporter" className="w-32 h-16 object-contain bg-white" />
-              </div>
-            </div>
-          ) : (
-            <>
-              {/* Tabs */}
-              <div className="space-y-2">
-                <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">SPEAKER PROFILE</div>
-                <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">FEEDBACK</div>
-              </div>
-              {/* Conference Advisor Board */}
-              {event.sidebar.advisorBoard.length > 0 && (
-                <section className="bg-white rounded-lg shadow p-4">
-                  <h2 className="text-lg font-bold text-green-700 mb-4">Conference Advisor Board</h2>
-                  {event.sidebar.advisorBoard.map((member: { role: string; name: string; details: string }, idx: number) => (
-                    <div key={idx} className="mb-2 flex">
-                      <span className="font-semibold w-28 text-black">{member.role}</span>
-                      <span className="text-gray-700">: {member.name}<br/><span className='text-xs'>{member.details}</span></span>
-                    </div>
+        ) : (
+          <>
+            <section className="md:w-2/3 w-full order-1 md:order-none">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h1 className="text-3xl font-light mb-6 text-green-700">{event.main.title}</h1>
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.focusTitle}</h2>
+                <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: event.main.focus }} />
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.topicsTitle}</h2>
+                <ul className="mb-6 list-disc pl-6 text-gray-700">
+                  {event.main.topics.map((topic: string, idx: number) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
                   ))}
-                </section>
-              )}
-              {/* Co-Organiser and Sponsors */}
-              {(event.sidebar.coOrganiser.logo || (event.sidebar.sponsors && event.sidebar.sponsors.length > 0)) && (
-                <section className="bg-white rounded-lg shadow p-4">
-                  {event.sidebar.coOrganiser.logo && (
-                    <div className="mb-4">
-                      <h3 className="text-green-700 font-bold text-lg mb-2">Co-Organiser</h3>
-                      <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="w-28 h-12 object-contain bg-white mb-2" />
+                </ul>
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.speakersTitle}</h2>
+                <ul className="mb-6 list-disc pl-6 text-gray-700">
+                  {event.main.speakers.map((speaker: string, idx: number) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: speaker }} />
+                  ))}
+                </ul>
+                <Link href="/events" className="mt-8 inline-block text-blue-600 hover:underline">&larr; Back to Events</Link>
+              </div>
+            </section>
+            {/* Sidebar (right) */}
+            <aside className="md:w-1/3 w-full order-0 md:order-none space-y-6">
+              {params.slug === 'risk-intelligence-2011' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
+                    <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
+                  </div>
+                </div>
+              ) : params.slug === 'maintainability-of-assurance-2010' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
+                    <div className="grid grid-cols-4 gap-2">
+                      {event.sidebar.institutionalSupporter?.logos.map((logo: { name: string; logo: string }, idx: number) => (
+                        <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
+                      ))}
                     </div>
-                  )}
-                  {event.sidebar.sponsors && event.sidebar.sponsors.length > 0 && (
-                    <div className="mb-4">
-                      <h3 className="text-green-700 font-bold text-lg mb-2">Sponsors</h3>
-                      <div className="grid grid-cols-2 gap-2">
-                        {event.sidebar.sponsors.map((s: { name: string; logo: string }, idx: number) => (
-                          <img key={idx} src={s.logo} alt={s.name} className="w-28 h-12 object-contain bg-white" />
-                        ))}
+                  </div>
+                </div>
+              ) : params.slug === 'gaining-audit-assurance-2009' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6 space-y-6">
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
+                      <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Institutional Sponsor</h3>
+                      <div className="flex flex-col">
+                        <span className="font-bold text-green-700 mb-1">India</span>
+                        <div className="grid grid-cols-2 gap-2 mb-2">
+                          <img src="/images/logos/5.svg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
+                          <img src="/images/logos/acfe.png" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
+                        </div>
                       </div>
                     </div>
-                  )}
-                </section>
-              )}
-              {/* Institutional Supporter */}
-              {event.sidebar.institutionalSupporter && (
-                <section className="bg-white rounded-lg shadow p-4">
-                  <h2 className="text-lg font-bold text-green-700 mb-4">Institutional Supporter</h2>
-                  <div className="flex items-center">
-                    <img src={event.sidebar.institutionalSupporter.logo} alt={event.sidebar.institutionalSupporter.name} className="w-28 h-12 object-contain bg-white mr-4" />
-                    <span className="text-gray-700">{event.sidebar.institutionalSupporter.name}</span>
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Chapter</h3>
+                      <span className="font-bold text-green-700 mb-1">Knowledge Partners</span>
+                      <div className="grid grid-cols-2 gap-2 mt-2">
+                        <img src="/images/logos/forensicsguru.png" alt="Forensics Guru" className="w-28 h-12 object-contain bg-white" />
+                        <img src="/images/logos/i2k2.png" alt="i2k2 Networks" className="w-28 h-12 object-contain bg-white" />
+                      </div>
+                    </div>
                   </div>
-                </section>
+                </div>
+              ) : params.slug === 'transformation-post-audit-2008' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
+                    <img src="/images/partners/arbutus.png" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Supported by</h3>
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <img src="/images/logos/5.svg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/logos/1.svg" alt="eISA" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                    <div className="flex justify-center">
+                      <img src="/images/partners/tie.png" alt="TiE" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                  </div>
+                </div>
+              ) : params.slug === 'assurance-2007' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="space-y-2 border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white">SPEAKERS PROFILE</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
+                    <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Sponsor</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <img src="/images/partners/controlsolutions.png" alt="Control Solutions" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/partners/denabank.png" alt="Dena Bank" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  {/* Tabs */}
+                  <div className="space-y-2">
+                    <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">SPEAKER PROFILE</div>
+                    <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">FEEDBACK</div>
+                  </div>
+                  {/* Conference Advisor Board */}
+                  {event.sidebar.advisorBoard.length > 0 && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      <h2 className="text-lg font-bold text-green-700 mb-4">Conference Advisor Board</h2>
+                      {event.sidebar.advisorBoard.map((member: { role: string; name: string; details: string }, idx: number) => (
+                        <div key={idx} className="mb-2 flex">
+                          <span className="font-semibold w-28 text-black">{member.role}</span>
+                          <span className="text-gray-700">: {member.name}<br/><span className='text-xs'>{member.details}</span></span>
+                        </div>
+                      ))}
+                    </section>
+                  )}
+                  {/* Co-Organiser and Sponsors */}
+                  {(event.sidebar.coOrganiser.logo || (event.sidebar.sponsors && event.sidebar.sponsors.length > 0)) && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      {event.sidebar.coOrganiser.logo && (
+                        <div className="mb-4">
+                          <h3 className="text-green-700 font-bold text-lg mb-2">Co-Organiser</h3>
+                          <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="w-28 h-12 object-contain bg-white mb-2" />
+                        </div>
+                      )}
+                      {event.sidebar.sponsors && event.sidebar.sponsors.length > 0 && (
+                        <div className="mb-4">
+                          <h3 className="text-green-700 font-bold text-lg mb-2">Sponsors</h3>
+                          <div className="grid grid-cols-2 gap-2">
+                            {event.sidebar.sponsors.map((s: { name: string; logo: string }, idx: number) => (
+                              <img key={idx} src={s.logo} alt={s.name} className="w-28 h-12 object-contain bg-white" />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </section>
+                  )}
+                  {/* Institutional Supporter */}
+                  {event.sidebar.institutionalSupporter?.logos && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      <h2 className="text-lg font-bold text-green-700 mb-4">Institutional Supporter</h2>
+                      <div className="grid grid-cols-4 gap-2">
+                        {event.sidebar.institutionalSupporter.logos.map((logo: { name: string; logo: string }, idx: number) => (
+                          <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
+                        ))}
+                      </div>
+                    </section>
+                  )}
+                </>
               )}
-            </>
-          )}
-        </aside>
+            </aside>
+          </>
+        )}
       </div>
       <Footer />
     </main>
