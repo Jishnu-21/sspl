@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 interface EventCardProps {
   title: string;
@@ -37,48 +38,56 @@ const conferenceEvents = [
     date: '19th & 20th December',
     year: '2013',
     venue: 'India Habitat Centre, New Delhi',
+    slug: 'anti-fraud-measures-2013',
   },
   {
     title: 'Fraud Detection : Practical Approach',
     date: 'Friday, 31st August',
     year: '2012',
     venue: 'Rooftop, Hotel Trident, Nariman Point, Mumbai',
+    slug: 'fraud-detection-2012',
   },
   {
     title: 'Risk Intelligence',
     date: 'Friday, 26th August',
     year: '2011',
     venue: 'Crystal Ballroom, The Lalit, New Delhi',
+    slug: 'risk-intelligence-2011',
   },
   {
     title: 'Maintainability of Assurance',
     date: 'Wednesday, 22nd December',
     year: '2010',
     venue: 'Ball Room, The Hyatt Regency, Mumbai',
+    slug: 'maintainability-of-assurance-2010',
   },
   {
     title: 'Gaining Audit Assurance : Continuous Audit Techniques with Technology Identifying Fraud in Turbulent Economic Times',
     date: 'Friday, 18th December',
     year: '2009',
     venue: 'Regal Room, The Lalit, New Delhi',
+    slug: 'gaining-audit-assurance-2009',
   },
   {
     title: 'Transformation from Post Audit to Continuous Control Monitoring - Technology and Methodology',
     date: 'Thursday, 21st August',
     year: '2008',
     venue: 'Ball Room, The Hyatt Regency, Mumbai',
+    slug: 'transformation-post-audit-2008',
   },
   {
     title: 'Assurance 2007',
     date: 'May, 23rd - 25th',
     year: '2007',
     venue: 'Ballroom, The Sheraton, New Delhi',
+    slug: 'assurance-2007',
   },
   {
     title: 'APJ ACL Channel Partner Conference',
     date: 'September, 9th - 11th',
     year: '2007',
     venue: 'Bangkok, Thailand',
+    slug: 'apj-acl-channel-partner-2007',
   },
 ];
 
@@ -88,18 +97,21 @@ const eveningTalks = [
     date: 'Tuesday 7th August',
     year: '2018',
     venue: 'Narmada Yamuna, Trident Hotel, Gurgaon',
+    slug: 'data-application-integration-2018',
   },
   {
     title: 'Use of Technology for Audits',
     date: 'Friday, 11th May',
     year: '2012',
     venue: 'The Lotus Room, Hotel Crowne Plaza, Gurgaon',
+    slug: 'technology-for-audits-2012-gurgaon',
   },
   {
     title: 'Use of Technology for Audits',
     date: 'Friday, 25th February',
     year: '2011',
     venue: 'Hotel Hyatt Regency, Mumbai',
+    slug: 'technology-for-audits-2011-mumbai',
   },
 ];
 
@@ -112,25 +124,27 @@ const EventsGrid = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-4">Conference</h2>
       <div className="mt-12 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
         {conferenceEvents.map((event, index) => (
-          <EventCard 
-            key={index} 
-            title={event.title}
-            date={event.date}
-            year={event.year}
-            venue={event.venue}
-          />
+          <Link key={event.slug} href={`/events/${event.slug}`} className="block">
+            <EventCard 
+              title={event.title}
+              date={event.date}
+              year={event.year}
+              venue={event.venue}
+            />
+          </Link>
         ))}
       </div>
       <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mt-16 mb-6">Evening talk</h2>
       <div className="mt-8 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
         {eveningTalks.map((event, index) => (
-          <EventCard 
-            key={index} 
-            title={event.title}
-            date={event.date}
-            year={event.year}
-            venue={event.venue}
-          />
+          <Link key={event.slug} href={`/events/${event.slug}`} className="block">
+            <EventCard 
+              title={event.title}
+              date={event.date}
+              year={event.year}
+              venue={event.venue}
+            />
+          </Link>
         ))}
       </div>
     </section>
