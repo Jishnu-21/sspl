@@ -4,6 +4,7 @@ import Footer from '../../Footer';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ShortPageBanner from '@/app/components/ShortPageBanner';
+import AOSWrapper from '@/app/components/AOSWrapper';
 
 // Event content data structure
 const eventDetails: Record<string, {
@@ -351,200 +352,185 @@ type Props = {
     }
   
     return (
-      <main className="flex flex-col bg-white min-h-screen">
+      <div className="w-full bg-white min-h-screen">
         <Header />
+        <AOSWrapper>
         <ShortPageBanner
-          backgroundImage="/images/events.webp"
-          title="Events"
-          subtitle="Get information about current & upcoming events"
-        />
+    backgroundImage="/images/events.webp"
+    title="Events"
+    subtitle="Get information about current & upcoming events"
+    />
   
-        <div className="max-w-[1600px] mx-auto w-full py-16 px-4 flex flex-col md:flex-row gap-8">
-          {/* Main Content (left) */}
-          {slug === 'apj-acl-channel-partner-2007' ? (
-            <div className="flex flex-col md:flex-row items-start gap-8 w-full justify-center">
-              <div>
-                <img src="/images/partners/apj-acl-award.png" alt="APJ ACL Award" className="w-64 h-auto object-contain mb-4" />
-              </div>
-              <div>
-                <h1 className="text-3xl md:text-4xl font-light mb-4 text-green-700">APJ Channel Partner Conference 2007</h1>
-                <div className="text-lg font-bold mb-2 text-gray-800">9<sup>th</sup> - 11<sup>th</sup> September 2007</div>
-                <div className="text-lg font-bold mb-4 text-gray-800">Bangkok Thailand</div>
-                <p className="mb-2 text-gray-700">It was a great opportunity to learn from ACL experts, hear partner success stories, celebrate accomplishments, and help position your company for new levels of achievement in 2008. The conference also provided a great platform for learning techniques to overcome selling challenges and strategies for identifying new sales opportunities.</p>
-                <Link href="/events" className="mt-8 inline-block text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded">← BACK</Link>
+          <div className="max-w-7xl mx-auto py-12 px-4 flex flex-col md:flex-row gap-8" data-aos="fade-up">
+            {/* Main Content (left) */}
+            <div className="md:w-2/3 w-full" data-aos="fade-up">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h1 className="text-3xl font-light mb-6 text-green-700">{event.main.title}</h1>
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.focusTitle}</h2>
+                <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: event.main.focus }} />
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.topicsTitle}</h2>
+                <ul className="mb-6 list-disc pl-6 text-gray-700">
+                  {event.main.topics.map((topic: string, idx: number) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
+                  ))}
+                </ul>
+                <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.speakersTitle}</h2>
+                <ul className="mb-6 list-disc pl-6 text-gray-700">
+                  {event.main.speakers.map((speaker: string, idx: number) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: speaker }} />
+                  ))}
+                </ul>
+                <Link href="/events" className="mt-8 inline-block text-blue-600 hover:underline">← Back to Events</Link>
               </div>
             </div>
-          ) : (
-            <>
-              <section className="md:w-2/3 w-full order-1 md:order-none">
-                <div className="bg-white rounded-lg shadow-lg p-8">
-                  <h1 className="text-3xl font-light mb-6 text-green-700">{event.main.title}</h1>
-                  <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.focusTitle}</h2>
-                  <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: event.main.focus }} />
-                  <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.topicsTitle}</h2>
-                  <ul className="mb-6 list-disc pl-6 text-gray-700">
-                    {event.main.topics.map((topic: string, idx: number) => (
-                      <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
-                    ))}
-                  </ul>
-                  <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.speakersTitle}</h2>
-                  <ul className="mb-6 list-disc pl-6 text-gray-700">
-                    {event.main.speakers.map((speaker: string, idx: number) => (
-                      <li key={idx} dangerouslySetInnerHTML={{ __html: speaker }} />
-                    ))}
-                  </ul>
-                  <Link href="/events" className="mt-8 inline-block text-blue-600 hover:underline">← Back to Events</Link>
+            {/* Sidebar (right) */}
+            <aside className="md:w-1/3 w-full space-y-6" data-aos="fade-up" data-aos-delay="100">
+              {slug === 'risk-intelligence-2011' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
+                    <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
+                  </div>
                 </div>
-              </section>
-              {/* Sidebar (right) */}
-              <aside className="md:w-1/3 w-full order-0 md:order-none space-y-6">
-                {slug === 'risk-intelligence-2011' ? (
-                  <div className="bg-[#f5f5f5] rounded-lg p-0">
-                    <div className="border-b border-[#e0e0e0]">
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
-                      <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
+              ) : slug === 'maintainability-of-assurance-2010' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
+                    <div className="grid grid-cols-4 gap-2">
+                      {event.sidebar.institutionalSupporter?.logos.map((logo: { name: string; logo: string }, idx: number) => (
+                        <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
+                      ))}
                     </div>
                   </div>
-                ) : slug === 'maintainability-of-assurance-2010' ? (
-                  <div className="bg-[#f5f5f5] rounded-lg p-0">
-                    <div className="border-b border-[#e0e0e0]">
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                </div>
+              ) : slug === 'gaining-audit-assurance-2009' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6 space-y-6">
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
+                      <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white" />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Institutional Sponsor</h3>
+                      <div className="flex flex-col">
+                        <span className="font-bold text-green-700 mb-1">India</span>
+                        <div className="grid grid-cols-2 gap-2 mb-2">
+                          <img src="/images/logos/5.svg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
+                          <img src="/images/logos/acfe.png" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-green-700 font-bold text-lg mb-2">Chapter</h3>
+                      <span className="font-bold text-green-700 mb-1">Knowledge Partners</span>
+                      <div className="grid grid-cols-2 gap-2 mt-2">
+                        <img src="/images/logos/forensicsguru.png" alt="Forensics Guru" className="w-28 h-12 object-contain bg-white" />
+                        <img src="/images/logos/i2k2.png" alt="i2k2 Networks" className="w-28 h-12 object-contain bg-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : slug === 'transformation-post-audit-2008' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
+                    <img src="/images/partners/arbutus.png" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Supported by</h3>
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <img src="/images/logos/5.svg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/logos/1.svg" alt="eISA" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                    <div className="flex justify-center">
+                      <img src="/images/partners/tie.png" alt="TiE" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                  </div>
+                </div>
+              ) : slug === 'assurance-2007' ? (
+                <div className="bg-[#f5f5f5] rounded-lg p-0">
+                  <div className="space-y-2 border-b border-[#e0e0e0]">
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
+                    <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white">SPEAKERS PROFILE</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
+                    <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <h3 className="text-green-700 font-bold text-lg mb-2">Sponsor</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <img src="/images/partners/controlsolutions.png" alt="Control Solutions" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/partners/denabank.png" alt="Dena Bank" className="w-32 h-16 object-contain bg-white" />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  {/* Tabs */}
+                  <div className="space-y-2">
+                    <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">SPEAKER PROFILE</div>
+                    <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">FEEDBACK</div>
+                  </div>
+                  {/* Conference Advisor Board */}
+                  {event.sidebar.advisorBoard.length > 0 && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      <h2 className="text-lg font-bold text-green-700 mb-4">Conference Advisor Board</h2>
+                      {event.sidebar.advisorBoard.map((member: { role: string; name: string; details: string }, idx: number) => (
+                        <div key={idx} className="mb-2 flex">
+                          <span className="font-semibold w-28 text-black">{member.role}</span>
+                          <span className="text-gray-700">: {member.name}<br/><span className='text-xs'>{member.details}</span></span>
+                        </div>
+                      ))}
+                    </section>
+                  )}
+                  {/* Co-Organiser and Sponsors */}
+                  {(event.sidebar.coOrganiser.logo || (event.sidebar.sponsors && event.sidebar.sponsors.length > 0)) && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      {event.sidebar.coOrganiser.logo && (
+                        <div className="mb-4">
+                          <h3 className="text-green-700 font-bold text-lg mb-2">Co-Organiser</h3>
+                          <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="w-28 h-12 object-contain bg-white mb-2" />
+                        </div>
+                      )}
+                      {event.sidebar.sponsors && event.sidebar.sponsors.length > 0 && (
+                        <div className="mb-4">
+                          <h3 className="text-green-700 font-bold text-lg mb-2">Sponsors</h3>
+                          <div className="grid grid-cols-2 gap-2">
+                            {event.sidebar.sponsors.map((s: { name: string; logo: string }, idx: number) => (
+                              <img key={idx} src={s.logo} alt={s.name} className="w-28 h-12 object-contain bg-white" />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </section>
+                  )}
+                  {/* Institutional Supporter */}
+                  {event.sidebar.institutionalSupporter?.logos && (
+                    <section className="bg-white rounded-lg shadow p-4">
+                      <h2 className="text-lg font-bold text-green-700 mb-4">Institutional Supporter</h2>
                       <div className="grid grid-cols-4 gap-2">
-                        {event.sidebar.institutionalSupporter?.logos.map((logo: { name: string; logo: string }, idx: number) => (
+                        {event.sidebar.institutionalSupporter.logos.map((logo: { name: string; logo: string }, idx: number) => (
                           <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
                         ))}
                       </div>
-                    </div>
-                  </div>
-                ) : slug === 'gaining-audit-assurance-2009' ? (
-                  <div className="bg-[#f5f5f5] rounded-lg p-0">
-                    <div className="border-b border-[#e0e0e0]">
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-                    </div>
-                    <div className="p-6 space-y-6">
-                      <div>
-                        <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
-                        <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-green-700 font-bold text-lg mb-2">Institutional Sponsor</h3>
-                        <div className="flex flex-col">
-                          <span className="font-bold text-green-700 mb-1">India</span>
-                          <div className="grid grid-cols-2 gap-2 mb-2">
-                            <img src="/images/logos/5.svg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
-                            <img src="/images/logos/acfe.png" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-green-700 font-bold text-lg mb-2">Chapter</h3>
-                        <span className="font-bold text-green-700 mb-1">Knowledge Partners</span>
-                        <div className="grid grid-cols-2 gap-2 mt-2">
-                          <img src="/images/logos/forensicsguru.png" alt="Forensics Guru" className="w-28 h-12 object-contain bg-white" />
-                          <img src="/images/logos/i2k2.png" alt="i2k2 Networks" className="w-28 h-12 object-contain bg-white" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : slug === 'transformation-post-audit-2008' ? (
-                  <div className="bg-[#f5f5f5] rounded-lg p-0">
-                    <div className="border-b border-[#e0e0e0]">
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
-                      <img src="/images/partners/arbutus.png" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
-                      <h3 className="text-green-700 font-bold text-lg mb-2">Supported by</h3>
-                      <div className="grid grid-cols-2 gap-2 mb-2">
-                        <img src="/images/logos/5.svg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
-                        <img src="/images/logos/1.svg" alt="eISA" className="w-32 h-16 object-contain bg-white" />
-                      </div>
-                      <div className="flex justify-center">
-                        <img src="/images/partners/tie.png" alt="TiE" className="w-32 h-16 object-contain bg-white" />
-                      </div>
-                    </div>
-                  </div>
-                ) : slug === 'assurance-2007' ? (
-                  <div className="bg-[#f5f5f5] rounded-lg p-0">
-                    <div className="space-y-2 border-b border-[#e0e0e0]">
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
-                      <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white">SPEAKERS PROFILE</div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
-                      <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
-                      <h3 className="text-green-700 font-bold text-lg mb-2">Sponsor</h3>
-                      <div className="grid grid-cols-2 gap-4">
-                        <img src="/images/partners/controlsolutions.png" alt="Control Solutions" className="w-32 h-16 object-contain bg-white" />
-                        <img src="/images/partners/denabank.png" alt="Dena Bank" className="w-32 h-16 object-contain bg-white" />
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <>
-                    {/* Tabs */}
-                    <div className="space-y-2">
-                      <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">SPEAKER PROFILE</div>
-                      <div className="bg-white rounded shadow p-3 border-l-4 border-green-500 font-semibold text-gray-700">FEEDBACK</div>
-                    </div>
-                    {/* Conference Advisor Board */}
-                    {event.sidebar.advisorBoard.length > 0 && (
-                      <section className="bg-white rounded-lg shadow p-4">
-                        <h2 className="text-lg font-bold text-green-700 mb-4">Conference Advisor Board</h2>
-                        {event.sidebar.advisorBoard.map((member: { role: string; name: string; details: string }, idx: number) => (
-                          <div key={idx} className="mb-2 flex">
-                            <span className="font-semibold w-28 text-black">{member.role}</span>
-                            <span className="text-gray-700">: {member.name}<br/><span className='text-xs'>{member.details}</span></span>
-                          </div>
-                        ))}
-                      </section>
-                    )}
-                    {/* Co-Organiser and Sponsors */}
-                    {(event.sidebar.coOrganiser.logo || (event.sidebar.sponsors && event.sidebar.sponsors.length > 0)) && (
-                      <section className="bg-white rounded-lg shadow p-4">
-                        {event.sidebar.coOrganiser.logo && (
-                          <div className="mb-4">
-                            <h3 className="text-green-700 font-bold text-lg mb-2">Co-Organiser</h3>
-                            <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="w-28 h-12 object-contain bg-white mb-2" />
-                          </div>
-                        )}
-                        {event.sidebar.sponsors && event.sidebar.sponsors.length > 0 && (
-                          <div className="mb-4">
-                            <h3 className="text-green-700 font-bold text-lg mb-2">Sponsors</h3>
-                            <div className="grid grid-cols-2 gap-2">
-                              {event.sidebar.sponsors.map((s: { name: string; logo: string }, idx: number) => (
-                                <img key={idx} src={s.logo} alt={s.name} className="w-28 h-12 object-contain bg-white" />
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </section>
-                    )}
-                    {/* Institutional Supporter */}
-                    {event.sidebar.institutionalSupporter?.logos && (
-                      <section className="bg-white rounded-lg shadow p-4">
-                        <h2 className="text-lg font-bold text-green-700 mb-4">Institutional Supporter</h2>
-                        <div className="grid grid-cols-4 gap-2">
-                          {event.sidebar.institutionalSupporter.logos.map((logo: { name: string; logo: string }, idx: number) => (
-                            <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
-                          ))}
-                        </div>
-                      </section>
-                    )}
-                  </>
-                )}
-              </aside>
-            </>
-          )}
-        </div>
+                    </section>
+                  )}
+                </>
+              )}
+            </aside>
+          </div>
+        </AOSWrapper>
         <Footer />
-      </main>
+      </div>
     );
   }
   
