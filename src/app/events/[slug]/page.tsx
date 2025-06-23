@@ -338,10 +338,10 @@ const eventDetails: Record<string, {
   },
 };
 
-export default function EventDetailPage({ params }: { params: { slug: string } }) {
-  const event = eventDetails[params.slug];
+export default function EventDetailPage(props: { params: { slug: string } }) {
+  const event = eventDetails[props.params.slug];
 
-  if (!event) {
+  if (!event && props.params.slug !== 'apj-acl-channel-partner-2007') {
     notFound();
   }
 
@@ -356,7 +356,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
 
       <div className="max-w-[1600px] mx-auto w-full py-16 px-4 flex flex-col md:flex-row gap-8">
         {/* Main Content (left) */}
-        {params.slug === 'apj-acl-channel-partner-2007' ? (
+        {props.params.slug === 'apj-acl-channel-partner-2007' ? (
           <div className="flex flex-col md:flex-row items-start gap-8 w-full justify-center">
             <div>
               <img src="/images/partners/apj-acl-award.png" alt="APJ ACL Award" className="w-64 h-auto object-contain mb-4" />
@@ -393,7 +393,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
             </section>
             {/* Sidebar (right) */}
             <aside className="md:w-1/3 w-full order-0 md:order-none space-y-6">
-              {params.slug === 'risk-intelligence-2011' ? (
+              {props.params.slug === 'risk-intelligence-2011' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
                   <div className="border-b border-[#e0e0e0]">
                     <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
@@ -403,7 +403,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                     <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
                   </div>
                 </div>
-              ) : params.slug === 'maintainability-of-assurance-2010' ? (
+              ) : props.params.slug === 'maintainability-of-assurance-2010' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
                   <div className="border-b border-[#e0e0e0]">
                     <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
@@ -417,7 +417,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                     </div>
                   </div>
                 </div>
-              ) : params.slug === 'gaining-audit-assurance-2009' ? (
+              ) : props.params.slug === 'gaining-audit-assurance-2009' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
                   <div className="border-b border-[#e0e0e0]">
                     <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
@@ -447,7 +447,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                     </div>
                   </div>
                 </div>
-              ) : params.slug === 'transformation-post-audit-2008' ? (
+              ) : props.params.slug === 'transformation-post-audit-2008' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
                   <div className="border-b border-[#e0e0e0]">
                     <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
@@ -465,7 +465,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                     </div>
                   </div>
                 </div>
-              ) : params.slug === 'assurance-2007' ? (
+              ) : props.params.slug === 'assurance-2007' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
                   <div className="space-y-2 border-b border-[#e0e0e0]">
                     <div className="p-4 pl-6 font-semibold text-gray-700 border-l-4 border-green-500 bg-white rounded-t-lg">SESSION DETAILS</div>
