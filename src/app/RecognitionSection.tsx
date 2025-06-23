@@ -26,10 +26,9 @@ const RecognitionSection: React.FC = () => {
     {
       logo: '/images/awards/award1.jpg',
       hoverDetails: {
-        title: 'Excellence in Innovation',
+        title: 'TechVikram Technical Talk Award',
         description:
-          'Awarded for outstanding innovation in data analytics solutions that have transformed business operations.',
-        
+          ' Recognizing excellence in faculty and student development through a technical talk on Big Data Analytics.'     ,
         image1: '/images/awards/award1.jpg',
       },
     },
@@ -38,7 +37,7 @@ const RecognitionSection: React.FC = () => {
       hoverDetails: {
         title: 'Excellence Award',
         description:
-          'Recognized by WQPC for providing the most technically advanced Big Data Analytics solutions in the industry.',
+          'Recognizing achievements in productivity, quality innovation, and management.',
        
         image1: '/images/awards/award2.jpg',
       },
@@ -46,9 +45,9 @@ const RecognitionSection: React.FC = () => {
     {
       logo: '/images/awards/award3.jpg',
       hoverDetails: {
-        title: 'Technology Leadership Award',
+        title: 'Leadership Innovation Excellence Award',
         description:
-          'Honored for leadership in developing cutting-edge technology solutions that drive business growth.',
+          ' Recognizing leadership, innovation, and dedication in the corporate sector.',
         
         image1: '/images/awards/award3.jpg',
       },
@@ -56,9 +55,9 @@ const RecognitionSection: React.FC = () => {
     {
       logo: '/images/awards/award4.jpg',
       hoverDetails: {
-        title: 'Customer Satisfaction Excellence',
+        title: 'Highest Growth Year Over Year',
         description:
-          'Awarded for maintaining the highest standards of customer service and support in the industry.',
+          'Recognizing exceptional growth and performance over the previous year.',
       
         image1: '/images/awards/award4.jpg',
       },
@@ -66,29 +65,27 @@ const RecognitionSection: React.FC = () => {
     {
       logo: '/images/awards/award5.jpg',
       hoverDetails: {
-        title: 'Industry Impact Award',
+        title: 'Natraj Delhi Ratan Award 2017',
         description:
-          'Recognized for making significant contributions to advancing data analytics across multiple industries.',
-      
+          'Recognizing outstanding contributions in the field of art and training.',
         image1: '/images/awards/award5.jpg',
       },
     },
     {
       logo: '/images/awards/award6.jpg',
       hoverDetails: {
-        title: 'Digital Transformation Partner',
+        title: 'India Excellence Award',
         description:
-          'Awarded for helping organizations successfully navigate their digital transformation journey.',
-       
+          'Purpose: Recognizing outstanding contributions to society.Industry: General (non-specific)Scope of Work: Social Impact / Community Service',
         image1: '/images/awards/award6.jpg',
       },
     },
     {
       logo: '/images/awards/award8.jpg',
       hoverDetails: {
-        title: 'Best Enterprise Solution',
+        title: 'FIT-IGNOU Centre of Excellence',
         description:
-          'Recognized for providing comprehensive enterprise-level solutions that deliver measurable business value.',
+          'Recognizing excellence in advanced education and research',
       
         image1: '/images/awards/award8.jpg',
       },
