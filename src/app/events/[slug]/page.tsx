@@ -79,9 +79,11 @@ const eventDetails: Record<string, {
         { role: 'Member', name: 'Mr. P.N. Sharama', details: 'President - eISSA' },
         { role: 'Member', name: 'Dr. K. Subramanian', details: 'Emeritus President - eISSA' }
       ],
-      coOrganiser: { name: 'eISSA', logo: '/images/logos/1.svg' },
+      coOrganiser: { name: 'eISSA', logo: '/images/events/1/eissa.gif' },
       sponsors: [
-        { name: 'Central Bank of India', logo: '/images/logos/2.svg' },
+        { name: 'Central Bank of India', logo: '/images/events/1/cbi.jpg' },
+        { name: 'Union Bank', logo: '/images/events/1/ub.jpg' },
+        { name: 'India First', logo: '/images/events/1/if.gif' },
       ]
     }
   },
@@ -162,10 +164,10 @@ const eventDetails: Record<string, {
       institutionalSupporter: {
         name: 'Institutional Supporters',
         logos: [
-          { name: 'eISA', logo: '/images/logos/1.svg' },
-          { name: 'IIA', logo: '/images/logos/5.svg' },
-          { name: 'ACL', logo: '/images/logos/3.svg' },
-          { name: 'Paladion', logo: '/images/logos/4.svg' }
+          { name: 'eISA', logo: '/images/events/3/eissa.gif' },
+          { name: 'IIA', logo: '/images/events/3/tiia.jpg' },
+          { name: 'ACL', logo: '/images/events/3/acl.jpg' },
+          { name: 'Paladion', logo: '/images/events/3/paladion.jpg' }
         ]
       }
     }
@@ -351,6 +353,40 @@ type Props = {
       notFound();
     }
   
+    // Special layout for APJ Channel Partner Conference 2007
+    if (slug === 'apj-acl-channel-partner-2007') {
+      return (
+        <div className="w-full bg-white min-h-screen">
+          <Header />
+          <AOSWrapper>
+            <ShortPageBanner
+              backgroundImage="/images/events.webp"
+              title="Events"
+              subtitle="Get information about current & upcoming events"
+            />
+            <div className="max-w-7xl mx-auto py-12 px-4 flex flex-col md:flex-row items-start gap-8 w-full justify-start">
+              <div>
+                <img src="/images/awards/award4.jpg" alt="APJ ACL Award" className="w-60 md:w-80 h-80 object-contain mb-4" />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-4xl font-light mb-4 text-lime-600">APJ Channel Partner Conference 2007</h1>
+                <div className="text-lg font-bold mb-2 text-gray-800">9<sup>th</sup> - 11<sup>th</sup> September 2007</div>
+                <div className="text-lg font-bold mb-4 text-gray-800">Bangkok Thailand</div>
+                <p className="mb-4 text-gray-700 max-w-2xl">
+                  It was a great opportunity to learn from ACL experts, hear partner success stories, celebrate accomplishments, and help position your company for new levels of achievement in 2008. The conference also provided a great platform for learning techniques to overcome selling challenges and strategies for identifying new sales opportunities.
+                </p>
+                <a href="/events" className="mt-4 inline-flex items-center text-white bg-red-500 hover:bg-red-600 px-6 py-2 rounded font-semibold">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                  BACK
+                </a>
+              </div>
+            </div>
+          </AOSWrapper>
+          <Footer />
+        </div>
+      );
+    }
+  
     return (
       <div className="w-full bg-white min-h-screen">
         <Header />
@@ -392,7 +428,7 @@ type Props = {
                   </div>
                   <div className="p-6">
                     <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
-                    <img src="/images/logos/jims.png" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
+                    <img src="/images/events/2/jims.jpg" alt="JIMS" className="w-32 h-16 object-contain bg-white" />
                   </div>
                 </div>
               ) : slug === 'maintainability-of-assurance-2010' ? (
@@ -404,7 +440,7 @@ type Props = {
                     <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
                     <div className="grid grid-cols-4 gap-2">
                       {event.sidebar.institutionalSupporter?.logos.map((logo: { name: string; logo: string }, idx: number) => (
-                        <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
+                        <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
                       ))}
                     </div>
                   </div>
@@ -417,15 +453,15 @@ type Props = {
                   <div className="p-6 space-y-6">
                     <div>
                       <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
-                      <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/3/acl.jpg" alt="ACL" className="w-32 h-16 object-contain bg-white" />
                     </div>
                     <div>
                       <h3 className="text-green-700 font-bold text-lg mb-2">Institutional Sponsor</h3>
                       <div className="flex flex-col">
                         <span className="font-bold text-green-700 mb-1">India</span>
                         <div className="grid grid-cols-2 gap-2 mb-2">
-                          <img src="/images/logos/5.svg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
-                          <img src="/images/logos/acfe.png" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
+                          <img src="/images/events/3/tiia.jpg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
+                          <img src="/images/events/acfe.jpg" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
                         </div>
                       </div>
                     </div>
@@ -433,8 +469,8 @@ type Props = {
                       <h3 className="text-green-700 font-bold text-lg mb-2">Chapter</h3>
                       <span className="font-bold text-green-700 mb-1">Knowledge Partners</span>
                       <div className="grid grid-cols-2 gap-2 mt-2">
-                        <img src="/images/logos/forensicsguru.png" alt="Forensics Guru" className="w-28 h-12 object-contain bg-white" />
-                        <img src="/images/logos/i2k2.png" alt="i2k2 Networks" className="w-28 h-12 object-contain bg-white" />
+                        <img src="/images/events/fg.jpg" alt="Forensics Guru" className="w-28 h-12 object-contain bg-white" />
+                        <img src="/images/events/i2k.jpg" alt="i2k2 Networks" className="w-28 h-12 object-contain bg-white" />
                       </div>
                     </div>
                   </div>
@@ -446,14 +482,14 @@ type Props = {
                   </div>
                   <div className="p-6">
                     <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
-                    <img src="/images/partners/arbutus.png" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <img src="/images/events/3/acl.jpg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
                     <h3 className="text-green-700 font-bold text-lg mb-2">Supported by</h3>
                     <div className="grid grid-cols-2 gap-2 mb-2">
-                      <img src="/images/logos/5.svg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
-                      <img src="/images/logos/1.svg" alt="eISA" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/3/tiia.jpg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/1/eissa.gif" alt="eISA" className="w-32 h-16 object-contain bg-white" />
                     </div>
                     <div className="flex justify-center">
-                      <img src="/images/partners/tie.png" alt="TiE" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/tie.jpg" alt="TiE" className="w-32 h-16 object-contain bg-white" />
                     </div>
                   </div>
                 </div>
@@ -465,11 +501,11 @@ type Props = {
                   </div>
                   <div className="p-6">
                     <h3 className="text-green-700 font-bold text-lg mb-2">Co-Sponsor</h3>
-                    <img src="/images/logos/3.svg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
+                    <img src="/images/events/3/acl.jpg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
                     <h3 className="text-green-700 font-bold text-lg mb-2">Sponsor</h3>
                     <div className="grid grid-cols-2 gap-4">
-                      <img src="/images/partners/controlsolutions.png" alt="Control Solutions" className="w-32 h-16 object-contain bg-white" />
-                      <img src="/images/partners/denabank.png" alt="Dena Bank" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/cs.jpg" alt="Control Solutions" className="w-32 h-16 object-contain bg-white" />
+                      <img src="/images/events/dena-bank.jpg" alt="Dena Bank" className="w-32 h-16 object-contain bg-white" />
                     </div>
                   </div>
                 </div>
@@ -498,7 +534,7 @@ type Props = {
                       {event.sidebar.coOrganiser.logo && (
                         <div className="mb-4">
                           <h3 className="text-green-700 font-bold text-lg mb-2">Co-Organiser</h3>
-                          <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="w-28 h-12 object-contain bg-white mb-2" />
+                          <img src={event.sidebar.coOrganiser.logo} alt={event.sidebar.coOrganiser.name} className="h-16 w-auto object-contain bg-white mb-2" />
                         </div>
                       )}
                       {event.sidebar.sponsors && event.sidebar.sponsors.length > 0 && (
@@ -506,7 +542,7 @@ type Props = {
                           <h3 className="text-green-700 font-bold text-lg mb-2">Sponsors</h3>
                           <div className="grid grid-cols-2 gap-2">
                             {event.sidebar.sponsors.map((s: { name: string; logo: string }, idx: number) => (
-                              <img key={idx} src={s.logo} alt={s.name} className="w-28 h-12 object-contain bg-white" />
+                              <img key={idx} src={s.logo} alt={s.name} className="h-16 w-auto object-contain bg-white" />
                             ))}
                           </div>
                         </div>
@@ -519,10 +555,32 @@ type Props = {
                       <h2 className="text-lg font-bold text-green-700 mb-4">Institutional Supporter</h2>
                       <div className="grid grid-cols-4 gap-2">
                         {event.sidebar.institutionalSupporter.logos.map((logo: { name: string; logo: string }, idx: number) => (
-                          <img key={idx} src={logo.logo} alt={logo.name} className="w-28 h-12 object-contain bg-white" />
+                          <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
                         ))}
                       </div>
                     </section>
+                  )}
+                  {/* Supporter and Industry Supporter */}
+                  {slug === 'fraud-detection-2012' && (
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="font-bold text-lime-700 mb-2">Supporter</h4>
+                        <div className="flex gap-4 flex-wrap">
+                          <div className="bg-white p-2 rounded shadow flex items-center justify-center">
+                            <img src="/images/events/1/tiia.jpg" alt="IIA" className="h-16 w-auto" />
+                          </div>
+                          <div className="bg-white p-2 rounded shadow flex items-center justify-center">
+                            <img src="/images/events/1/bc.jpg" alt="Bombay Chamber" className="h-16 w-auto" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lime-700 mb-2">Industry Supporter</h4>
+                        <div className="bg-white p-2 rounded shadow flex items-center justify-center w-fit">
+                          <img src="/images/events/1/godrej.jpg" alt="Godrej" className="h-16 w-auto" />
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </>
               )}

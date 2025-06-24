@@ -29,7 +29,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
           {title}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
           {members.map((member, index) => (
             <motion.div
               key={index}
@@ -57,12 +57,10 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                 {/* Overlay with gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80
                   opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="absolute inset-0 flex flex-col items-center justify-end pb-6 sm:pb-7 md:pb-8 text-white
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-20 flex flex-col items-center text-white
                     transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                     <p className="font-medium text-base sm:text-lg text-center">{member.name}</p>
-                    
                     {/* Social Icons */}
-                 
                   </div>
                 </div>
               </div>

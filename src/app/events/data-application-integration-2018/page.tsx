@@ -47,7 +47,7 @@ export default function DataIntegration2020() {
             {/* Speaker 1: Image left, text right */}
             <div className="mb-12 flex flex-col md:flex-row items-center md:items-center gap-6" data-aos="fade-up">
               <div className="flex-shrink-0">
-                <Image src="/images/about/team/4.png" alt="Nishith Seth" width={120} height={120} className="rounded" />
+                <Image src="/images/events/nishith-seth.jpg" alt="Nishith Seth" width={280} height={280} className="rounded" />
               </div>
               <div className="flex-1">
                 <strong className="block text-xl text-gray-900 mb-2">Mr. Nishith Seth, MD - Substratal Solutions P. Ltd. (SSPL)</strong>
@@ -68,7 +68,7 @@ export default function DataIntegration2020() {
                 </p>
               </div>
               <div className="flex-shrink-0 order-1 md:order-2">
-                <Image src="/images/events/fabien-bruder.jpg" alt="Fabien Bruder" width={280} height={280} className="rounded" />
+                <Image src="/images/events/mr-fabien-bruder.jpg" alt="Fabien Bruder" width={280} height={280} className="rounded" />
               </div>
             </div>
             <Link href="/events" className="mt-12 inline-block text-blue-600 hover:underline text-lg font-medium">← Back to Events</Link>
@@ -79,16 +79,20 @@ export default function DataIntegration2020() {
             <div>
               <h4 className="font-bold text-lime-600 mb-2">Supported by</h4>
               <div className="flex gap-4 items-center">
-                <Image src="/images/logos/stambia.png" alt="Stambia" width={120} height={60} />
-                <Image src="/images/logos/sspl.png" alt="SSPL" width={120} height={60} />
+                <Image src="/images/events/stambia.jpg" alt="Stambia" width={120} height={60} />
+                <Image src="/images/logos/logo.png" alt="SSPL" width={120} height={60} />
               </div>
             </div>
             {/* Glimpses */}
             <div>
               <h4 className="font-bold text-lime-600 mb-2">Glimpses</h4>
               <div className="h-[464px] overflow-y-auto flex flex-col gap-4 pr-2">
-                <Image src="/images/events/glimpse1.jpg" alt="Glimpse 1" width={360} height={220} className="rounded" />
-                <Image src="/images/events/glimpse2.jpg" alt="Glimpse 2" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/1.jpeg" alt="Glimpse 1" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/2.jpeg" alt="Glimpse 2" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/3.jpeg" alt="Glimpse 1" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/4.jpeg" alt="Glimpse 2" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/5.jpeg" alt="Glimpse 1" width={360} height={220} className="rounded" />
+                <Image src="/images/about/life/6.jpeg" alt="Glimpse 2" width={360} height={220} className="rounded" />
                 {/* Add more images as needed */}
               </div>
             </div>
