@@ -1,8 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function SpeakerImage({ src, alt, className = "", ...props }: { src: string; alt: string; className?: string }) {
   const [imgSrc, setImgSrc] = useState(src);
+
+  // Reset imgSrc when src prop changes
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
   return (
     <img
       src={imgSrc}

@@ -25,6 +25,7 @@ export default function SpeakerProfileTabs({ speakers }: { speakers: SpeakerProf
             aria-selected={selected === idx}
           >
             <SpeakerImage
+              key={speaker.image + speaker.name}
               src={speaker.image}
               alt={speaker.name}
               className="w-12 h-12 object-cover rounded-full border border-gray-200"
