@@ -1,4 +1,3 @@
-
 'use client'
 import React, { useEffect } from 'react'
 import Header from '../Header'
@@ -39,8 +38,8 @@ const partner = () => {
       <div className="w-full border-t border-gray-300" data-aos="fade-in"></div>
       
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-          <div className="w-full md:w-2/3 lg:w-2/3">
+        <div className="flex flex-col md:flex-row gap-8 items-start md:items-center min-h-[500px]">
+          <div className="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-center h-full">
             <div className="prose max-w-none">
               <h3 className="text-2xl font-semibold text-[#366A00] mb-3">Better Results with Better Technology:</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">

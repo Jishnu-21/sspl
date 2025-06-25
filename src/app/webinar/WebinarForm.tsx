@@ -32,7 +32,7 @@ const WebinarForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-16">
+    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-16" style={{ minHeight: '700px', height: '700px' }}>
       {/* Left side - Webinar details */}
       <motion.div 
         className="flex-1 md:h-full flex flex-col"
@@ -41,41 +41,54 @@ const WebinarForm = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-2xl font-bold text-green-800 mb-6">Recorded Webinar</h2>
-        <div className="space-y-4 text-gray-800 flex-grow">
-          <p className="font-medium">Training on Big Data Analytics</p>
-          <p>by Mr. Nishith Seth, Managing Director, SSPL</p>
-          
-          <p className="font-medium mt-6">Computer Forensic & Cyber Crimes</p>
-          <p>by Mr. Nandkumar Saravade</p>
-          
-          <p className="font-medium mt-6">Managing Risk & Fraud from IA Perspective</p>
-          <p>by Mr. Kajal Kundu, Chief Internal Auditor, EIM Limited</p>
-          
-          <p className="font-medium mt-6">Risk & Fraud Management</p>
-          <p>by Mr. Amit Bansal, Partner, Deloitte</p>
-          
-          <p className="font-medium mt-6">Why Current Fraud Management Framework Fails</p>
-          
-          <p className="font-medium mt-6">by Mr. V. Swaminathan, Chief Internal Auditor, Godrej Industries Limited</p>
-          <p>and Mr. Surajit Dalbash, Partner, Deloitte</p>
-          
-          <p className="font-medium mt-6">Panel Discussion on Predictive Analytics</p>
-          <p>by Mr. V. Swaminathan, Chief Internal Auditor, Godrej Industries Limited</p>
-          
-          <p className="font-medium mt-6">Fraud Ethics & Morals,</p>
-          <p>Mr. P R Ramesh, Chairman, Deloitte, India</p>
-          
-          <p className="font-medium mt-6">Confused & Repetition not fit for Fraud Detection</p>
-          <p>by Uday Khanna, President, BCCI</p>
-          
-          <p className="font-medium mt-6">Soft Fraud Governance</p>
-          <p>by Dr. P. Nandagopal, Managing Director, India First Life Insurance</p>
-          
-          <p className="font-medium mt-6">SSPL Analyzer Demo</p>
-          <p>by Mr. Nishith Seth, Managing Director, SSPL</p>
-          
-          <p className="font-medium mt-6">SSPL Introductory Demo of Analyzer Tool</p>
-          <p>by Mr. Nishith Seth, Managing Director, SSPL</p>
+        <div className="overflow-y-auto pr-2" style={{ maxHeight: '640px' }}>
+          <ul className="space-y-4 text-gray-800 flex-grow list-disc list-inside">
+            <li>
+              <span className="font-medium">Training on Big Data Analytics</span><br/>
+              <span>by Mr. Nishith Seth, Managing Director, SSPL</span>
+            </li>
+            <li>
+              <span className="font-medium">Computer Forensic & Cyber Crimes</span><br/>
+              <span>by Mr. Nandkumar Saravade</span>
+            </li>
+            <li>
+              <span className="font-medium">Managing Risk & Fraud from IA Perspective</span><br/>
+              <span>by Mr. Kajal Kundu, Chief Internal Auditor, EIM Limited</span>
+            </li>
+            <li>
+              <span className="font-medium">Risk & Fraud Management</span><br/>
+              <span>by Mr. Amit Bansal, Partner, Deloitte</span>
+            </li>
+            <li>
+              <span className="font-medium">Why Current Fraud Management Framework Fails</span><br/>
+              <span>by Mr. V. Swaminathan, Chief Internal Auditor, Godrej Industries Limited</span><br/>
+              <span>and Mr. Surajit Dalbash, Partner, Deloitte</span>
+            </li>
+            <li>
+              <span className="font-medium">Panel Discussion on Predictive Analytics</span><br/>
+              <span>by Mr. V. Swaminathan, Chief Internal Auditor, Godrej Industries Limited</span>
+            </li>
+            <li>
+              <span className="font-medium">Fraud Ethics & Morals</span><br/>
+              <span>Mr. P R Ramesh, Chairman, Deloitte, India</span>
+            </li>
+            <li>
+              <span className="font-medium">Confused & Repetition not fit for Fraud Detection</span><br/>
+              <span>by Uday Khanna, President, BCCI</span>
+            </li>
+            <li>
+              <span className="font-medium">Soft Fraud Governance</span><br/>
+              <span>by Dr. P. Nandagopal, Managing Director, India First Life Insurance</span>
+            </li>
+            <li>
+              <span className="font-medium">SSPL Analyzer Demo</span><br/>
+              <span>by Mr. Nishith Seth, Managing Director, SSPL</span>
+            </li>
+            <li>
+              <span className="font-medium">SSPL Introductory Demo of Analyzer Tool</span><br/>
+              <span>by Mr. Nishith Seth, Managing Director, SSPL</span>
+            </li>
+          </ul>
         </div>
       </motion.div>
       
@@ -85,7 +98,7 @@ const WebinarForm = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        style={{ maxWidth: '450px', minHeight: '480px' }}
+        style={{ maxWidth: '450px' }}
       >
         <h3 className="text-base font-semibold text-left mb-4 text-green-800 pl-1">Complete the form below to access<br/>the webcast</h3>
         

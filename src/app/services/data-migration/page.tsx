@@ -34,7 +34,7 @@ const dataMigration = () => {
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/data-mig.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/datamig.pdf" />
           </div>
         </motion.section>
         
@@ -77,15 +77,17 @@ const dataMigration = () => {
               The technology with its critical technical advancements, helps the client to gain better insights of the migrated data tables, fields and records. Few of the technological benefits are listed below:     
             </p>
             <p className="text-gray-700 leading-relaxed ">
-              • 100% data testing, with no sampling or test records.<br />
-              • Once data is captured, the records cannot be modified. User gets most reliable report.<br />
-              • There is no limit on the number of records and fields to manage the testing.<br />
-              • Fast processing of the tables.<br />
-              • Fully customisable logics and conditions can be incorporated in shortest possible time.<br />
-              • It can be automated to be performing Auto-Mode testing analytics, and reports could be received over emails.<br />
-              • Output reports can be customised as per the needs and requirements.<br />
-              • Besides testing, SSPL also support for Data Migration activity.<br />
-              • If new application is being migrated, SSPL also perform application testing.
+              <ul className="list-disc list-inside  inline-block text-left">
+                <li>100% data testing, with no sampling or test records.</li>
+                <li>Once data is captured, the records cannot be modified. User gets most reliable report.</li>
+                <li>There is no limit on the number of records and fields to manage the testing.</li>
+                <li>Fast processing of the tables.</li>
+                <li>Fully customisable logics and conditions can be incorporated in shortest possible time.</li>
+                <li>It can be automated to be performing Auto-Mode testing analytics, and reports could be received over emails.</li>
+                <li>Output reports can be customised as per the needs and requirements.</li>
+                <li>Besides testing, SSPL also support for Data Migration activity.</li>
+                <li>If new application is being migrated, SSPL also perform application testing.</li>
+              </ul>
             </p>
 
           </div>

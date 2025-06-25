@@ -31,7 +31,7 @@ export default function DataIntegration2020() {
           {/* Left/Main Content */}
           <div className="md:w-2/3 w-full">
             <h1 className="text-3xl font-bold text-lime-600 mb-2">Event Talk</h1>
-            <h2 className="text-2xl font-light text-lime-500 mb-6">Data and Application Integration in 2020</h2>
+            <h2 className="text-2xl font-light text-lime-600 mb-6">Data and Application Integration in 2020</h2>
             <p className="mb-6 text-gray-700 text-lg">
               The Evening Talk, is being organised to bring the latest solution and industry closer to each other, to hear out what the user wants. Post massive technological advancements, there is still a hunger to mature the technology, to make the systems, efficient, predictive, robotic to support the ongoing Digitalisation. In this direction, Stambia and SSPL has collaborated to mature the business solutions both from the Backend to Frontend, hence providing the user, hassle-free and dynamic analytics for matured and advance monitoring and control.
             </p>

@@ -41,7 +41,7 @@ const predictiveanalysis= () => {
                 insights faster & keep up with the momentum.
               </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/predictive.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/pred.pdf" />
           </div>
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>

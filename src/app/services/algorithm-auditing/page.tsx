@@ -31,7 +31,6 @@ const algorithmAuditing = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
               Algorithm Auditing is to test and verify the working of application as per the Industry Rules and Norms. There could be genuine technical issues in the application, which might result benefitting certain class of user/ transaction types. There are also examples of algorithmic models that are so complex that their developers are not sure why a model is making particular decision. These algorithmic challenges, along with data privacy issues, have created the need for the role of algorithm audit. We as professional auditors have requisite knowledge about the domain under audit and its processes.              </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/algorithm.pdf" />
           </div>
         </motion.section> 
 

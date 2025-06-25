@@ -74,7 +74,7 @@ const risk = () => {
                   For virtually anyone working in the area of Risk Management-Audit Analytics isn't new. Risk managers have been using analytical tools for years to manage, monitor and control various Risk Parameters, depending upon the type of the Industry they are working with. There is a renaissance in analytics technology underway today, and its essence only surpasses just as the issue of risk takes on an even higher profile for leaders across industries. It can be challenging to separate the hype from the reality when it comes to analytics and risk management. Enterprise risk management can encompass so much more than merely making sure your business has purchased the right type and amount of insurance. With the tools now available, businesses can quantify and model the risks they face, to enable smarter mitigation strategies and better strategic decisions.  
                   </p>
                 </div>
-                <DownloadBrochureButton pdfPath="/pdfs/operations-finance.pdf" />
+                <DownloadBrochureButton pdfPath="/pdfs/risk.pdf" />
 
                 </div>
       </section>

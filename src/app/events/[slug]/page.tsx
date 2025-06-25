@@ -746,14 +746,14 @@ type Props = {
                     </Link>
                   </div>
                   {event.sidebar.institutionalSupporter?.logos && (
-                    <div className="p-6">
-                      <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
-                      <div className="grid grid-cols-4 gap-2">
+                  <div className="p-6">
+                    <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
+                    <div className="grid grid-cols-4 gap-2">
                         {event.sidebar.institutionalSupporter.logos.map((logo, idx) => (
-                          <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
-                        ))}
-                      </div>
+                        <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
+                      ))}
                     </div>
+                  </div>
                   )}
                 </div>
               ) : slug === 'gaining-audit-assurance-2009' ? (
@@ -949,7 +949,540 @@ type Props = {
                   </>
                 ) : tab === 'session-details' ? (
                   <>
-                    {slug === 'assurance-2007' ? (
+                    {slug === 'maintainability-of-assurance-2010' ? (
+                      <>
+                        <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2010</h1>
+                        <hr className="mb-6 border-gray-200" />
+                        {/* Wednesday, May 23 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Wednesday, May 23 '2007</div>
+                          <div className="text-green-700 mb-2">7:00 p.m. onwards - Welcome Cocktail Reception</div>
+                        </div>
+                        {/* Thursday, May 24 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Thursday, May 24 '2007</div>
+                          <div className="text-green-700 mb-2">9:30 a.m. to 11:00 a.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Inaugration</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. S. S. Kohli</span>, CMD, India Infrastructure Finance Company Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Keynote Address</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India</div>
+                          </div>
+                          <div className="text-green-700 mb-2">11:00 a.m. to 11:30 a.m. - Tea Break / Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 1 : 11:30 a.m. to 1:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Compliance Issues, Management and Challenges</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Aksh Rahotgi</span>, Senior Manager, Enterprise Risk Services, Deloitte</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. A. K. Viswanathan</span>, Partner, Deloitte</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Akshay Bhalla</span>, Partner, Control Solutions International.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">1:00 a.m. to 2:00 a.m. - Lunch Break / Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 2 : 2:00 noon to 3:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Anil Kumar</span>, Deputy Executive Director, Dalmia Cements</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Auditing Strategies for Success</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Assistant Vice President- Risk Management, Max New York Life Insurance Co. Ltd</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Continuous Control Monitoring for Effective Compliance and Improved Performance</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited</div>
+                          </div>
+                          <div className="text-green-700 mb-2">3:30 p.m. to 4:00 p.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 4:00 p.m. to 5:00 p.m.</div>
+                          <div className="text-green-700 font-semibold mb-1">Customer Case Study</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhatkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Private Limited</div>
+                          </div>
+                          <div className="text-green-700 mb-2">5:00 p.m. to 6:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Manoj Chugh</span>, President India & SAARC, EMC</div>
+                          </div>
+                          <div className="text-green-700 font-semibold mb-1">Industry Experts' Panel Discussion</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Akhilesh Tuteja</span>, Executive Director, KPMG</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Director - Business Risk and Internal Audit, Aviva Life Insurance Company India Pvt Ltd</div>
+                          </div>
+                        </div>
+                        {/* Friday, May 25 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Friday, May 25 '2007</div>
+                          <div className="text-green-700 mb-2">9:30 a.m. to 11:00 a.m.</div>
+                          <div className="text-green-700 font-semibold mb-1">Customer Case Study</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Kallol Lahiri</span>, Divisional Manager - Internal Audit, TATA Motors Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. G. K. Gupta</span>, Vice President, Max New York Life Insurance.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">11:00 a.m. to 11:30 a.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 11:30 a.m. to 1:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Audit Automation and Oversight of Control Management</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Assistant Vice President - Risk Management, Max New York Life Insurance Co Ltd</div>
+                          </div>
+                          <div className="text-green-700 mb-2">1:00 p.m. to 2:00 p.m. – Lunch Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 2:00 p.m. to 3:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhatkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Private Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Anti Money Laundering: Trends and Solutions</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Suveer Khanna</span>, Manager - Forensic Practice, KPMG.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ashis Rout</span>, Principal Officer (PML Compliance), Centurion Bank of Punjab.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Fraud Detection: Methodology and Best Practices</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, Managing Director, Seth Services Pvt Ltd.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">3:30 p.m. to 4:00 p.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 5 : 4:00 p.m. to 5:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Revenue Assurance: Telecom / Banking</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, Managing Director, Seth Services Pvt Ltd.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Retail Audit: Emerging Opportunity</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Devangshu Dutta</span>, Chief Executive, Third Eyesight.</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : slug === 'gaining-audit-assurance-2009' ? (
+                      <>
+                        <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2009</h1>
+                        <hr className="mb-6 border-gray-200" />
+                        {/* Session 1 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 1 : 10:00 a.m. to 11:30 a.m.</div>
+                          <div className="text-green-700 mb-2">Control Potential Risks: Identifying preventative practices within your organisation to control potential risks that will affect your company</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. Sanjeev Mishra</span>, Chief Controller of Accounts, Ministry of Home Affairs, Government of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sanjay Mehta</span>, Partner, BMR Advisors.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Asfar Khan</span>, Head – Operation Services, Wal-Mart India</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nalin Srivastava</span>, Controller of Accounts, Ministry of Home Affairs, Government of India</div>
+                          </div>
+                        </div>
+                        {/* Session 2 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 2 : 11:30 noon to 1:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Compiling a Risk Management : Determining the steps and processes to be included in compiling a risk management framework in order to have a comprehensive risk agenda</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Kallol Kundu</span>, Chief Internal Auditor, EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. R. R. Girish Kumar</span>, Group Head (Ethics & Intelligence), GMR Group</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amit Katyal</span>, Associate Director, BMR Advisors.</div>
+                          </div>
+                        </div>
+                        {/* Session 3 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 2:00 p.m. to 3:30 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management efforts: Illustrating the various aspects of risk and how these will positively affect your organisations risk management efforts</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, Director (Advanced Studies), IGNOU.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mukesh Arya</span>, Managing Director and CEO, Red Flag.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Shreenivas Samarth</span>, Head - Revenue Assurance, S Tel India.</div>
+                          </div>
+                        </div>
+                        {/* Session 4a */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 4:00 p.m. to 4:30 p.m.</div>
+                          <div className="text-green-700 mb-2">New Launch : Assure Audit Solutions Demo</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, ACDA, Master Trainer of ACL.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Neeraj Ruparel</span>, Wadia Ghandy & Co.</div>
+                          </div>
+                        </div>
+                        {/* Session 4b */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 4:30 p.m. to 6:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Industry Expert Panel Discussion Topic : Debating the need for more stringent and compulsory national legislation to be implemented within your company to improve risk management and business intelligence</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amarjit Chopra</span>, ex-president, ICAI, Partner GSA & Associates.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. A. B. L. Srivastava</span>, Managing Director, National Hydro Power Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sanjay Kotha</span>, Group Vice President - IT, Wal-Mart India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Neeru Abrol</span>, Director (Finance), National Fertilizers Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Director (Finance), Sir Ganga Ram Hospital.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ravi Pani</span>, Director (Finance) and CFO, C1 India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. K. P. Ganesh</span>, Chief Information Officer, S Tel India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Dr. J. K. Goyal</span>, Director, Jagan Institute of Management Studies.</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : slug === 'transformation-post-audit-2008' ? (
+                      <>
+                        <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2008</h1>
+                        <hr className="mb-6 border-gray-200" />
+                        {/* Session 1 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 1 : 10:00 a.m. to 11:30 a.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                        {/* Session 2 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 2 : 11:30 a.m. to 1:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                        {/* Session 3 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 1:00 p.m. to 2:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                        {/* Session 4 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 2:00 p.m. to 3:30 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                        {/* Session 5 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 5 : 3:30 p.m. to 4:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                        {/* Session 6 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 6 : 4:00 p.m. to 5:30 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management: Transformation from Post Audit to Continuous Control Monitoring</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ganapathy Subramanian</span>, Director (Finance), Bennet Coleman & Co. Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Chairman Audit Committee, UFlex Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nagesh Pinge</span>, President – Internal Audit, JSW Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Chief Risk Officer, Max New York Life Insurance Company India Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Vice President, Internal Audit – North EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sunder Krishnan</span>, Chief Risk Officer, Reliance Insurance Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhadkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Pvt. Ltd.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Salil Krishnan</span>, Senior Vice President – Inspection and Audit, Axis Bank.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Smitha Gune</span>, General Manager, Operational Risk Management Group, ICICI Bank Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mohan Bhatia</span>, Director, KPMG.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. John Scrivener</span>, Senior Consultant, SymSure Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Jatin Thakkar</span>, Senior Manager, HSBC Group.</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : slug === 'assurance-2007' ? (
                       <>
                         <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2007</h1>
                         <hr className="mb-6 border-gray-200" />
@@ -1098,6 +1631,106 @@ type Props = {
                             <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
                             <div className="col-span-1 text-green-700 font-bold text-center">:</div>
                             <div className="col-span-9"><span className="font-bold">Mr. Devangshu Dutta</span>, Chief Executive, Third Eyesight.</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : slug === 'risk-intelligence-2011' ? (
+                      <>
+                        <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2011</h1>
+                        <hr className="mb-6 border-gray-200" />
+                        {/* Session 1 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 1 : 10:00 a.m. to 11:30 a.m.</div>
+                          <div className="text-green-700 mb-2">Control Potential Risks: Identifying preventative practices within your organisation to control potential risks that will affect your company</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. Sanjeev Mishra</span>, Chief Controller of Accounts, Ministry of Home Affairs, Government of India.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sanjay Mehta</span>, Partner, BMR Advisors.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Asfar Khan</span>, Head – Operation Services, Wal-Mart India</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nalin Srivastava</span>, Controller of Accounts, Ministry of Home Affairs, Government of India</div>
+                          </div>
+                        </div>
+                        {/* Session 2 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 2 : 11:30 noon to 1:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Compiling a Risk Management : Determining the steps and processes to be included in compiling a risk management framework in order to have a comprehensive risk agenda</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Kallol Kundu</span>, Chief Internal Auditor, EIH Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. R. R. Girish Kumar</span>, Group Head (Ethics & Intelligence), GMR Group</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amit Katyal</span>, Associate Director, BMR Advisors.</div>
+                          </div>
+                        </div>
+                        {/* Session 3 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 2:00 p.m. to 3:30 p.m.</div>
+                          <div className="text-green-700 mb-2">Risk Management efforts: Illustrating the various aspects of risk and how these will positively affect your organisations risk management efforts</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, Director (Advanced Studies), IGNOU.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Mukesh Arya</span>, Managing Director and CEO, Red Flag.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Case Study</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Shreenivas Samarth</span>, Head - Revenue Assurance, S Tel India.</div>
+                          </div>
+                        </div>
+                        {/* Session 4a */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 4:00 p.m. to 4:30 p.m.</div>
+                          <div className="text-green-700 mb-2">New Launch : Assure Audit Solutions Demo</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, ACDA, Master Trainer of ACL.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Neeraj Ruparel</span>, Wadia Ghandy & Co.</div>
+                          </div>
+                        </div>
+                        {/* Session 4b */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 4:30 p.m. to 6:00 p.m.</div>
+                          <div className="text-green-700 mb-2">Industry Expert Panel Discussion Topic : Debating the need for more stringent and compulsory national legislation to be implemented within your company to improve risk management and business intelligence</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amarjit Chopra</span>, ex-president, ICAI, Partner GSA & Associates.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Panelist</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. A. B. L. Srivastava</span>, Managing Director, National Hydro Power Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sanjay Kotha</span>, Group Vice President - IT, Wal-Mart India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Ms. Neeru Abrol</span>, Director (Finance), National Fertilizers Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. P. N. Sharma</span>, Director (Finance), Sir Ganga Ram Hospital.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ravi Pani</span>, Director (Finance) and CFO, C1 India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. K. P. Ganesh</span>, Chief Information Officer, S Tel India.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Dr. J. K. Goyal</span>, Director, Jagan Institute of Management Studies.</div>
                           </div>
                         </div>
                       </>
