@@ -20,14 +20,7 @@ const AboutBanner = () => {
             drive sustainable growth
           </h1>
           
-          <motion.button
-            className="inline-flex items-center px-5 py-2 rounded bg-transparent text-white text-sm
-              border border-white hover:bg-white/10 transition-colors cursor-pointer duration-300"
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.99 }}
-          >
-            Download the Brochure
-          </motion.button>
+      
         </motion.div>
       </div>
     </section>

@@ -94,9 +94,6 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-16"
         >
-          <button className="px-6 py-2 border border-[#1B3D69] text-[#1B3D69] bg-transparent hover:bg-white transition-colors duration-300">
-            Download the Brochure
-          </button>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-1 gap-8 max-w-6xl mx-auto relative">
