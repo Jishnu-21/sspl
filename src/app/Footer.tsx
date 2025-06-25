@@ -23,18 +23,12 @@ const Footer = ({ className = '' }: FooterProps) => {
             No matter what questions you have, we're here to work with you on your terms.
             </p>
             <div className="flex space-x-3">
-              <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                <IconBrandFacebook size={20} />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                <IconBrandTwitter size={20} />
-              </Link>
+            
+            
               <Link href="https://www.linkedin.com/company/ssplindia/ " className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandLinkedin size={20} />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                <IconBrandInstagram size={20} />
-              </Link>
+           
               <Link href="https://www.youtube.com/@sspladvanceanalyticsgrc2906 " className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <IconBrandYoutube size={20} />
               </Link>

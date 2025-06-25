@@ -218,7 +218,7 @@ const Header = () => {
                 <button 
                   className="flex items-center group relative text-[#222] no-underline text-[16px] md:text-[15px] lg:text-[17px] font-medium transition-colors duration-200 hover:text-[#000000]"
                 >
-                  Events
+                  Gallery
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     className="h-4 w-4 ml-1" 
@@ -425,7 +425,7 @@ const Header = () => {
               onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
               className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium"
             >
-              Events
+              Gallery
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className={`h-4 w-4 transition-transform ${eventsDropdownOpen ? 'transform rotate-180' : ''}`}

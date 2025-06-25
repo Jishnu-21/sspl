@@ -8,11 +8,7 @@ import Footer from '../Footer';
 
 // Generate array of gallery images from the photo-gallery directory
 const galleryImages = [
-  // First row
-
-  { src: '/images/photo-gallery/g-7.jpg.jpeg', alt: 'SSPL Gallery Image 5' },
-  
- 
+  { src: '/images/photo-gallery/g-7.jpg.jpeg', alt: 'SSPL Gallery Image 5' }, 
   // Sixth row
   { src: '/images/photo-gallery/g-30.jpg.jpeg', alt: 'SSPL Gallery Image 26' },
   { src: '/images/photo-gallery/g-31.jpg.jpeg', alt: 'SSPL Gallery Image 27' },

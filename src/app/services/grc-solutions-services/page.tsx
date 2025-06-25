@@ -48,7 +48,7 @@ const Grc = () => {
               >
                 <div className="relative h-[350px]">
                   <Image 
-                    src="/images/services/grc1.jpg" 
+                    src="/images/services/grc3.png" 
                     alt="Governance Framework" 
                     fill
                     className="object-cover rounded-md"
@@ -214,7 +214,7 @@ const Grc = () => {
               >
                 <div className="relative h-[650px]">
                   <Image 
-                    src="/images/services/grc2.jpg" 
+                    src="/images/services/grc2.png" 
                     alt="Risk Management" 
                     fill
                     className="object-cover rounded-md"
@@ -250,7 +250,7 @@ const Grc = () => {
               >
                 <div className="relative h-[470px]">
                   <Image 
-                    src="/images/services/grc3.jpg" 
+                    src="/images/services/grc4.png" 
                     alt="Compliance" 
                     fill
                     className="object-cover rounded-md"
@@ -428,7 +428,7 @@ const Grc = () => {
               >
                 <div className="relative aspect-[4/3]">
                   <Image 
-                    src="/images/services/grc4.jpg" 
+                    src="/images/services/grc5.png" 
                     alt="IT & IS Solutions" 
                     fill
                     className="object-cover rounded-md"
