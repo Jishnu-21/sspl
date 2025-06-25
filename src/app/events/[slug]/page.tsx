@@ -707,6 +707,7 @@ type Props = {
     }
   
     return (
+      <main className="flex flex-col bg-white min-h-screen">
       <div className="w-full bg-white min-h-screen">
         <Header />
         <AOSWrapper>
@@ -1138,6 +1139,7 @@ type Props = {
         </AOSWrapper>
         <Footer />
       </div>
+      </main>
     );
   }
   
