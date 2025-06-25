@@ -15,7 +15,7 @@ const Footer = ({ className = '' }: FooterProps) => {
     <footer className={`bg-white border-t border-gray-200 ${className}`}>
       <div className="container mx-auto px-4 py-6 sm:py-8 md:py-10 lg:py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
           {/* Column 1 - Logo and company info */}
           <div className="space-y-3 sm:space-y-4">
          
@@ -58,53 +58,48 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
 
           {/* Column 4 - Support and Contact */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden lg:grid lg:grid-cols-1 gap-6 sm:gap-4 lg:gap-8">
-
-            <div className="mt-2 sm:mt-0">
-              <h3 className="font-medium text-gray-900 mb-2 sm:mb-3 md:mb-4">Contact us</h3>
-              
-              <div className="space-y-4">
-                {/* India Office */}
-                <div>
-                  <div className="flex items-center mb-2">
-                    <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                    <h4 className="text-xs md:text-sm font-medium text-gray-700">India</h4>
-                  </div>
-                  <ul className="space-y-1 ml-5">
-                    <li className="text-gray-500 text-[11px] md:text-xs mb-2">M-91, 1st Floor, Connaught Circus, New Delhi</li>
-                    <li className="flex items-center space-x-4">
-                      <div className="flex items-center">
-                        <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                        <span className="text-gray-500 text-xs md:text-xs">info@sspl.net.in</span>
-                      </div>
-                      <div className="flex items-center">
-                        <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                        <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+91-11-23765368‬</span>
-                      </div>
-                    </li>
-                  </ul>
+          <div className="mt-2 sm:mt-0">
+            <h3 className="font-medium text-gray-900 mb-2 sm:mb-3 md:mb-4">Contact us</h3>
+            <div className="space-y-4">
+              {/* India Office */}
+              <div>
+                <div className="flex items-center mb-2">
+                  <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                  <h4 className="text-xs md:text-sm font-medium text-gray-700">India</h4>
                 </div>
-                
-                {/* Middle East Office */}
-                <div>
-                  <div className="flex items-center mb-2">
-                    <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                    <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
-                  </div>
-                  <ul className="space-y-1 ml-5">
-                    <li className="text-gray-500 text-[11px] md:text-xs mb-2">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
-                    <li className="flex items-center space-x-4">
-                      <div className="flex items-center">
-                        <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                        <span className="text-gray-500 text-xs md:text-xs">info@ssplme.com</span>
-                      </div>
-                      <div className="flex items-center">
-                        <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                        <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+973-13622552‬</span>
-                      </div>
-                    </li>
-                  </ul>
+                <ul className="space-y-1 ml-5">
+                  <li className="text-gray-500 text-[11px] md:text-xs mb-2">M-91, 1st Floor, Connaught Circus, New Delhi</li>
+                  <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
+                    <div className="flex items-center">
+                      <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs md:text-xs">info@sspl.net.in</span>
+                    </div>
+                    <div className="flex items-center hidden sm:flex lg:hidden xl:flex">
+                      <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+91-11-23765368‬</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              {/* Middle East Office */}
+              <div>
+                <div className="flex items-center mb-2">
+                  <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                  <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
                 </div>
+                <ul className="space-y-1 ml-5">
+                  <li className="text-gray-500 text-[11px] md:text-xs mb-2">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
+                  <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
+                    <div className="flex items-center">
+                      <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs md:text-xs">info@ssplme.com</span>
+                    </div>
+                    <div className="flex items-center hidden sm:flex lg:hidden xl:flex">
+                      <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                      <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+973-13622552‬</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
