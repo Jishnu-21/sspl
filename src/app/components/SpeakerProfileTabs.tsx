@@ -14,9 +14,9 @@ export default function SpeakerProfileTabs({ speakers }: { speakers: SpeakerProf
   const selectedSpeaker = speakers[selected];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:max-h-[700px] max-h-[550px]">
+    <div className="flex flex-col md:flex-row gap-6 md:max-h-[800px] max-h-[650px]">
       {/* Tab List */}
-      <div className="flex md:flex-col gap-2 md:w-56 w-full overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-r border-gray-200 pb-2 md:pb-0 md:pr-4 md:max-h-[500px] max-h-[350px] overflow-auto">
+      <div className="flex md:flex-col gap-2 md:w-56 w-full overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-r border-gray-200 pb-2 md:pb-0 md:pr-4 md:max-h-[700px] max-h-[550px] overflow-auto">
         {speakers.map((speaker, idx) => (
           <button
             key={idx}
@@ -35,7 +35,7 @@ export default function SpeakerProfileTabs({ speakers }: { speakers: SpeakerProf
         ))}
       </div>
       {/* Details Panel */}
-      <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center md:items-start md:max-h-[500px] max-h-[350px] overflow-auto">
+      <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center md:items-start md:max-h-[700px] max-h-[550px] overflow-auto">
         <SpeakerImage
           src={selectedSpeaker.image}
           alt={selectedSpeaker.name}
