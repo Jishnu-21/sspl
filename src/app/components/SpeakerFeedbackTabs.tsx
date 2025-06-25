@@ -11,11 +11,11 @@ export interface SpeakerFeedback {
 
 export default function SpeakerFeedbackTabs({ feedbacks }: { feedbacks: SpeakerFeedback[] }) {
   return (
-    <div className="w-full flex flex-col space-y-10 min-h-[900px] md:min-h-[1400px] max-h-none py-20">
+    <div className="w-full flex flex-col space-y-10 min-h-[400px] md:min-h-[600px]">
       {feedbacks.map((fb, idx) => (
         <div
           key={idx}
-          className="bg-gray-100 p-10 rounded-lg shadow-sm flex flex-col md:flex-row items-center md:items-start"
+          className="bg-gray-100 p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center md:items-start"
         >
           {/* Logo and Company */}
           <div className="flex flex-col items-center md:items-start md:w-44 w-full mb-4 md:mb-0 md:mr-6 flex-shrink-0">

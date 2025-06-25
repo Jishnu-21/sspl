@@ -523,7 +523,110 @@ const eventDetails: Record<string, {
       ]
     },
     sidebar: {
-      speakerProfile: [],
+      speakerProfile: [
+        {
+          name: 'Mr. Surinder Singh Kohli',
+          designation: 'Chairman and Managing Director, India Infrastructure Finance Company Ltd.',
+          details: `Mr. Kohli, former Chairman and Managing Director of Punjab National Bank is a B.Sc. (Mechanical Engineering) and Diploma in Industrial Finance has been associated with Banking Industry for last 37 years. He has served the industry various capacities during his tenure with Nationalized Banks. Mr. Kohli is a recipient of "Bank of the Year Award", The Banker's Magazine of Financial Times, London for the year 2000 and many more awards are to his credits. Currently, he is Member, Board of Governors, Management Development Institute, Gurgaon, Member, Board of Governors, Indian Institute of Management, Lucknow, Director, Maharashtra Airport Development Co. Limited, Director, Modi Rubber Limited and Director, SME Rating Agency of India Limited.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'CA. Sunil H. Talati',
+          designation: 'President, ICAI',
+          details: `Mr. Talati a Fellow member of the ICAI, he is a postgraduate in commerce and also a law graduate. A member of the ICAI with more than 30 years of standing, Shri Talati was elected to the Council of ICAI for the first time in 2001 and thereafter in 2004. He was Vice-President of the Institute for the year 2006-07. He has held the position of Chairman of Expert Advisory Committee, Financial Reporting Review Board, Corporate & Allied Laws, Corporate Governance Committee; and Vice-Chairman of Professional Development Committee, Committee for Members in Industry, Board of Studies, Committee for Information Technology and Professional Development Committee. Besides the above, he has also served on the Examination Committee, Disciplinary Committee, Expert Advisory Committee, Committee for Vision & Restructuring, Fiscal Laws Committee, Research Committee, Committee on Ethical Standards, Committee on Career Counseling and Commerce Education, Professional Development Committee, Editorial Board, Financial Market and Investor's Protection, Expert Advisory Committee, Committee on Information Technology. Audit Committee, Accounting Standards Board and Board of Studies as a Member.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Amarjit Chopra',
+          designation: 'Central Council Member, ICAI',
+          details: `Mr. Chopra a Fellow member of the ICAI, he is also M.Com from Delhi University.He has a vast experience in Consultancy Services in the field of, Accounting- Particularly matters relating to Indian and International Accounting Standards, Corporate Laws, Restructuring of Business- Mergers, Amalgamations, Demergers, etc., Insurance, Corporate Taxation, Brand Valuation, Due Dilligence, and Specialisation in Internal and Statutory Audits of Private and Public Sector enterprises including audit of Divisional Offices of Insurance Companies. Audit of banks has been an area of special interest..`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Michael Liu',
+          designation: 'Regional Director (Asia Pacific), ACL Services Limited',
+          details: `Mr. Liu has worked in Network Associates, Remedy, Silicon Graphics (SGI), SAP and Digital Equipment (DEC). He completed his graduate work in economics at New York University.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Probal Ghosal',
+          designation: 'Director Finance, Times Group',
+          details: `Mr. Probal Ghosal has over 23 years of post qualification experience in industry.He has a vast experience in Consultancy Services in the field of, Accounting- Particularly matters relating to Indian and International Accounting Standards, Corporate Laws, Restructuring of Business- Mergers,Amalgamations, Demergers, etc. Insurance, Corporate Taxation, Brand Valuation, Due Dilligence, and Specialisation in Internal and Statutory Audits of Private and Public Sector enterprises including audit of Divisional Offices of Insurance Companies. Audit of banks has been an area of special interest`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Dr. K. Subramanian',
+          designation: 'IT Advisor to CAG of India',
+          details: `Dr. K. Subramanian holds a B.Sc. degree from Madras University and B.E., M.E. in Electronics and Communications Engineering and Ph.D. in Automation from Indian Institute of Science, Bangalore, is senior Deputy Director General at National Informatics Center, Ministry of Communications & Information Technology, New Delhi, and also the Information Technology Advisor to Comptroller & Auditor General (CAG) of India. He has been associated with planning and implementation of major Information Technology projects of Railways, Police, Immigration, Passports & Visas, Banks, Reserve Bank of India and coordinating the computerization of Finance and Audit functions of Central and State Governments, for more than two and half decades.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Manoj Chugh',
+          designation: 'President, India & SAARC, EMC',
+          details: `Manoj Chugh has managed and led companies to leadership position across diverse businesses segments such as servers; satellite networking; telecom and networking and data storage.In his current role as the President EMC, India and SAARC, Manoj has spearheaded the company's growth into the leading information storage and management vendor in the Indian Subcontinent.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Rajeev Arora',
+          designation: 'Director Business Risk and Internal Audit, Aviva Life Insurance - India',
+          details: `Rajeev has 14 years of experience in the area of operational and systems risk management. Rajeev has worked with the Big 4 accounting firms for the first 10 years of his career providing services to clients in various industries in India, United States of America, Russia and SriLanka. Rajeev has experience in the area of project management of mission critical IT implementations, process improvement in ERP environment, information system controls review and development of IT strategy. At Aviva India, Rajeev is looking after Business Risk, Internal Audit, Sales Compliance and Financial Crime. Rajeev is a Chartered Accountant, a Certified Public Accountant, Diploma in Systems Analysis and Design and a Certified Information Systems Auditor.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Sandeep Bhatkhande',
+          designation: 'Head – Data Analysis Function, Siemens Corporate Finance Private Limited',
+          details: `Sandeep Bhatkhande leads the data analysis function that is responsible for monitoring and identifying suspicious, unusual, non-compliant and fraudulent transactions. Data Analysis Function through ACL scripts has covered all Siemens companies in the Asia Pacific Region. More than 171 analyses have been developed so far on SAP data covering Payment Transactions, Vendor/ Customer Master Data, Purchase Orders, Inventory, Fixed Assets and Accounts Receivable and Accounts Payable. As an appreciation for effective usage of ACL software, Mr. Bhatkhande has been recently awarded "ACL Impact Award - 2007" for the Asia Region.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Akhilesh Tuteja',
+          designation: 'Chief Internal Auditor, KPMG',
+          details: `Mr. Tuteja with the Risk Advisory Services (RAS) practice of KPMG in India. He has extensive experience in the area of information risk managementHe has advised over 100 clients on matters relating to information risk assessment,design of information security architectures, development of business continuity plans and Sarbanes Oxley Act advisory. He has also helped many clients achieve compliance to ISO27001 standard and has conducted numerous SAS70 examinations. Mr. Tuteja has significant expertise in conducting audits of a variety of ERP systems including SAP, Oracle and Baan.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Kali Prasad',
+          designation: 'Partner - Risk Advisory Services (RAS), Ernst & Young',
+          details: `Mr. Prasad has over 22 years of experience in Internal Audits, Fraud Investigations, Information Systems Audits, Risk Management and other consulting work. As an industry specialization he focuses on Health Sciences Industry. He is Certified Internal Auditor from The Institute of Internal Auditors, Certified Information Systems Auditor from Information Systems Audit and Control Association and Certified Fraud Examiner from Association of Certified Fraud Examiners.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Amar Kumar',
+          designation: 'Head – Internal Audit, Max New York Life Insurance Co. Limited',
+          details: `He is CIA, CISA and CCSA and has 14 years of work experience which includes 8 years at Bank of America. He is also on the board of IIA & ISACA, New Delhi Chapter.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Akshay Bhalla',
+          designation: 'Partner, Control Solutions',
+          details: `Mr. Bhalla has over 13 years of experience in Internal Audits, Risk based assurance services, Statutory audits, Tax advisory services, Valuations and other corporate finance related services. Akshay has had experience working in Asia as well as North America and Europe. As Partner, Akshay manages Control Solutions' growth strategy in the India market with focus on business development, growth and profitability. He is responsible for managing and growing the portfolio of clients and ensuring successful and satisfactory client service delivery. He is also responsible for ensuring recruitment and training of talent to be deployed on international engagements.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Ashis Rout',
+          designation: 'Head - Information Systems Audit and Principal Officer (AML Compliance)',
+          details: `Mr. Ashish is a Post Graduate in Mathematics, Post Graduate Diploma in Computer Application & Post Graduate Diploma in Business Management. Prior to joining Centurion Bank Of Punjab Mr. Rout worked with ING Vysya Bank. Job profile includes overseeing and managing Bank's information system security program. Responsible to evaluate critical system and implement security processes, procedure and risk mitigation processes. Also responsible to conduct in-depth compliance audit including AML Compliance. Mr. Rout has working in the field of Banking Technology for last more than 15 years.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Devangshu Dutta',
+          designation: 'Chief Executive, Third Eyesight',
+          details: `Mr. Dutta is a part of a consulting firm focused on retail and consumer products sectors. Third Eyesight's clients include some of the largest / leading corporations and brands from India and other countries, to which it provides business strategy and operations support. Devangshu himself has spent 17 years in various roles in the retail sector and its supply chain. Apart from being an entrepreneur and a management consultant, he also writes frequently for print and electronic media and teaches at professional / management institutes. Early on, he was involved with producing and presenting music, feature and chat shows on radio over a period of 5 years`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Kallol Lahiri',
+          designation: 'Divisional Manager (Internal Audit), TATA Motors Limited',
+          details: `At present, Mr. Lahiri is responsible for auditing in the areas of Supply Chain & Manufacturing of Tata Motors Limited and its subsidiaries in Jamshedpur, implementing SOX, rolling-out of Self Assessment Questionnaire highlighting process related risk & controls, coordinatingIT requirements of the division with Tata Technologies,managing Ethics Office, training to new entrants of the Company on Tata Code of Conduct and internal training to new auditors on MS Office (Excel, Word, Access), SAP, ACL, ABAP/4 query etc.`,
+          image: '/images/speakers/placeholder.jpg'
+        },
+        {
+          name: 'Mr. Suveer Khanna',
+          designation: 'Manager - Forensic Practice, KPMG',
+          details: `Mr. Suveer has over 7 years of investigation, FCPA reviews, AML testing and compliance review, fraud diagnostic and accounting experience. He joined KPMG in January 2003 and has been a key team member/team leader on various engagements and specialised in AML reviews, investigations and fraud risk management work. He is a qualified Chartered Accountant. Suveer has successfully completed his B.Com (Honors) in 1999 from the prestigious Shri Ram College of Commerce (Delhi University).Currently he leads AML and FCPA initiatives at KPMG.`,
+          image: '/images/speakers/placeholder.jpg'
+        }
+      ],
       feedback: [],
       advisorBoard: [],
       coOrganiser: { name: '', logo: '' },
@@ -625,18 +728,6 @@ type Props = {
                     >
                       SESSION DETAILS
                     </Link>
-                    <Link
-                      href={`/events/${slug}?tab=speaker-profile`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'speaker-profile' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      SPEAKER PROFILE
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=feedback`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'feedback' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      FEEDBACK
-                    </Link>
                   </div>
                   <div className="p-6">
                     <h3 className="text-green-700 font-bold text-lg mb-4">Educational Partner</h3>
@@ -652,27 +743,17 @@ type Props = {
                     >
                       SESSION DETAILS
                     </Link>
-                    <Link
-                      href={`/events/${slug}?tab=speaker-profile`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'speaker-profile' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      SPEAKER PROFILE
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=feedback`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'feedback' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      FEEDBACK
-                    </Link>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
-                    <div className="grid grid-cols-4 gap-2">
-                      {event.sidebar.institutionalSupporter?.logos.map((logo, idx) => (
-                        <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
-                      ))}
+                  {event.sidebar.institutionalSupporter?.logos && (
+                    <div className="p-6">
+                      <h3 className="text-green-700 font-bold text-lg mb-4">Institutional Supporter</h3>
+                      <div className="grid grid-cols-4 gap-2">
+                        {event.sidebar.institutionalSupporter.logos.map((logo, idx) => (
+                          <img key={idx} src={logo.logo} alt={logo.name} className="h-16 w-auto object-contain bg-white" />
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ) : slug === 'gaining-audit-assurance-2009' ? (
                 <div className="bg-[#f5f5f5] rounded-lg p-0">
@@ -682,18 +763,6 @@ type Props = {
                       className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'session-details' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block rounded-t-lg`}
                     >
                       SESSION DETAILS
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=speaker-profile`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'speaker-profile' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      SPEAKER PROFILE
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=feedback`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'feedback' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      FEEDBACK
                     </Link>
                   </div>
                   <div className="p-6 space-y-6">
@@ -730,18 +799,6 @@ type Props = {
                     >
                       SESSION DETAILS
                     </Link>
-                    <Link
-                      href={`/events/${slug}?tab=speaker-profile`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'speaker-profile' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      SPEAKER PROFILE
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=feedback`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'feedback' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      FEEDBACK
-                    </Link>
                   </div>
                   <div className="p-6">
                     <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
@@ -770,12 +827,6 @@ type Props = {
                       className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'speaker-profile' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
                     >
                       SPEAKER PROFILE
-                    </Link>
-                    <Link
-                      href={`/events/${slug}?tab=feedback`}
-                      className={`p-4 pl-6 font-semibold text-gray-700 border-l-4 ${tab === 'feedback' ? 'border-green-700 bg-green-100' : 'border-green-500 bg-white'} block`}
-                    >
-                      FEEDBACK
                     </Link>
                   </div>
                   <div className="p-6">
@@ -897,13 +948,169 @@ type Props = {
                   </>
                 ) : tab === 'session-details' ? (
                   <>
-                    <h1 className="text-3xl font-light mb-6 text-green-700">Session Details</h1>
-                    <p className="text-gray-700 mb-4">Detailed information about the sessions for {event.main.title}.</p>
-                    <ul className="list-disc pl-6 text-gray-700">
-                      {event.main.topics.map((topic, idx) => (
-                        <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
-                      ))}
-                    </ul>
+                    {slug === 'assurance-2007' ? (
+                      <>
+                        <h1 className="text-4xl font-light mb-2 text-lime-700">Sessions Details : Assurance 2007</h1>
+                        <hr className="mb-6 border-gray-200" />
+                        {/* Wednesday, May 23 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Wednesday, May 23 '2007</div>
+                          <div className="text-green-700 mb-2">7:00 p.m. onwards - Welcome Cocktail Reception</div>
+                        </div>
+                        {/* Thursday, May 24 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Thursday, May 24 '2007</div>
+                          <div className="text-green-700 mb-2">9:30 a.m. to 11:00 a.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Inaugration</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. S. S. Kohli</span>, CMD, India Infrastructure Finance Company Limited.</div>
+                            <div className="col-span-2 font-semibold text-green-700">Keynote Address</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India</div>
+                          </div>
+                          <div className="text-green-700 mb-2">11:00 a.m. to 11:30 a.m. - Tea Break / Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 1 : 11:30 a.m. to 1:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Dr. K. Subramanian</span>, IT Advisor to CAG of India</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Compliance Issues, Management and Challenges</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Aksh Rahotgi</span>, Senior Manager, Enterprise Risk Services, Deloitte</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. A. K. Viswanathan</span>, Partner, Deloitte</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Akshay Bhalla</span>, Partner, Control Solutions International.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">1:00 a.m. to 2:00 a.m. - Lunch Break / Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 2 : 2:00 noon to 3:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Anil Kumar</span>, Deputy Executive Director, Dalmia Cements</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Auditing Strategies for Success</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Assistant Vice President- Risk Management, Max New York Life Insurance Co. Ltd</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Continuous Control Monitoring for Effective Compliance and Improved Performance</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited</div>
+                          </div>
+                          <div className="text-green-700 mb-2">3:30 p.m. to 4:00 p.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 4:00 p.m. to 5:00 p.m.</div>
+                          <div className="text-green-700 font-semibold mb-1">Customer Case Study</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhatkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Private Limited</div>
+                          </div>
+                          <div className="text-green-700 mb-2">5:00 p.m. to 6:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Manoj Chugh</span>, President India & SAARC, EMC</div>
+                          </div>
+                          <div className="text-green-700 font-semibold mb-1">Industry Experts' Panel Discussion</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Akhilesh Tuteja</span>, Executive Director, KPMG</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Rajeev Arora</span>, Director - Business Risk and Internal Audit, Aviva Life Insurance Company India Pvt Ltd</div>
+                          </div>
+                        </div>
+                        {/* Friday, May 25 */}
+                        <div className="mb-10">
+                          <div className="text-green-700 text-lg font-semibold mb-1">Friday, May 25 '2007</div>
+                          <div className="text-green-700 mb-2">9:30 a.m. to 11:00 a.m.</div>
+                          <div className="text-green-700 font-semibold mb-1">Customer Case Study</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Kallol Lahiri</span>, Divisional Manager - Internal Audit, TATA Motors Limited.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. G. K. Gupta</span>, Vice President, Max New York Life Insurance.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">11:00 a.m. to 11:30 a.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 3 : 11:30 a.m. to 1:00 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Audit Automation and Oversight of Control Management</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Amar Kumar</span>, Assistant Vice President - Risk Management, Max New York Life Insurance Co Ltd</div>
+                          </div>
+                          <div className="text-green-700 mb-2">1:00 p.m. to 2:00 p.m. – Lunch Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 4 : 2:00 p.m. to 3:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Sandeep Bhatkande</span>, Head – Data Analysis Function, Siemens Corporate Finance Private Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Anti Money Laundering: Trends and Solutions</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Suveer Khanna</span>, Manager - Forensic Practice, KPMG.</div>
+                            <div className="col-span-2"></div>
+                            <div className="col-span-1"></div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Ashis Rout</span>, Principal Officer (PML Compliance), Centurion Bank of Punjab.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Fraud Detection: Methodology and Best Practices</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, Managing Director, Seth Services Pvt Ltd.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">3:30 p.m. to 4:00 p.m. – Tea Break | Networking / Exhibits</div>
+                          <div className="text-green-700 text-lg font-semibold mb-1">Session 5 : 4:00 p.m. to 5:30 p.m.</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Michael Liu</span>, Regional Director, ACL Services Limited.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Revenue Assurance: Telecom / Banking</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Speakers</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Nishith Seth</span>, Managing Director, Seth Services Pvt Ltd.</div>
+                          </div>
+                          <div className="text-green-700 mb-2">Retail Audit: Emerging Opportunity</div>
+                          <div className="grid grid-cols-12 gap-2 items-start text-black text-base mb-2">
+                            <div className="col-span-2 font-semibold text-green-700">Chairperson</div>
+                            <div className="col-span-1 text-green-700 font-bold text-center">:</div>
+                            <div className="col-span-9"><span className="font-bold">Mr. Devangshu Dutta</span>, Chief Executive, Third Eyesight.</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <h1 className="text-3xl font-light mb-6 text-green-700">Session Details</h1>
+                        <p className="text-gray-700 mb-4">Detailed information about the sessions for {event.main.title}.</p>
+                        <ul className="list-disc pl-6 text-gray-700">
+                          {event.main.topics.map((topic, idx) => (
+                            <li key={idx} dangerouslySetInnerHTML={{ __html: topic }} />
+                          ))}
+                        </ul>
+                      </>
+                    )}
                   </>
                 ) : (
                   <>
