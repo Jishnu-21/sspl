@@ -776,7 +776,7 @@ type Props = {
                       <div className="flex flex-col">
                         <span className="font-bold text-green-700 mb-1">India</span>
                         <div className="grid grid-cols-2 gap-2 mb-2">
-                          <img src="/images/events/3/tiia.jpg" alt="IIA" className="w-28 h-12 object-contain bg-white" />
+                          <img src="/images/events/3/tiia.jpg" alt="IIA" className="w-40 h-24 object-contain bg-white" />
                           <img src="/images/events/acfe.jpg" alt="ACFE" className="w-28 h-12 object-contain bg-white" />
                         </div>
                       </div>
@@ -805,12 +805,10 @@ type Props = {
                     <h3 className="text-green-700 font-bold text-lg mb-4">Sponsor</h3>
                     <img src="/images/events/3/acl.jpg" alt="ACL" className="w-32 h-16 object-contain bg-white mb-6" />
                     <h3 className="text-green-700 font-bold text-lg mb-2">Supported by</h3>
-                    <div className="grid grid-cols-2 gap-2 mb-2">
-                      <img src="/images/events/3/tiia.jpg" alt="IIA India - Bombay Chapter" className="w-32 h-16 object-contain bg-white" />
-                      <img src="/images/events/1/eissa.gif" alt="eISA" className="w-32 h-16 object-contain bg-white" />
-                    </div>
-                    <div className="flex justify-center">
-                      <img src="/images/events/tie.jpg" alt="TiE" className="w-32 h-16 object-contain bg-white" />
+                    <div className="grid grid-cols-3 gap-2 mb-2">
+                      <img src="/images/events/3/tiia.jpg" alt="IIA India - Bombay Chapter" className="w-40 h-24 object-contain bg-white" />
+                      <img src="/images/events/1/eissa.gif" alt="eISA" className="w-40 h-24 object-contain bg-white" />
+                      <img src="/images/events/tie.jpg" alt="TiE" className="w-40 h-24 object-contain bg-white" />
                     </div>
                   </div>
                 </div>
