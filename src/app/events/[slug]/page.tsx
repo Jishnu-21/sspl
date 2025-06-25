@@ -78,133 +78,133 @@ const eventDetails: Record<string, {
           name: 'Dr. Nanda Gopal',
           designation: 'Managing Director, Indiafirst Life Insurance',
           details: `Dr. P. Nandagopal has worked for over 25 years in India's leading Banking, Asset Management, Financial Advisory, General and Life Insurance organizations. Before he joined the life insurance industry at the beginning of the historical opening of the sector in 1999, he was heading the retail sales at DSP Merrill Lynch, sales and marketing at GIC Asset Management and managing finance and operational functions at the divisional offices of New India Assurance. He also worked very briefly at Andhra Bank and Indian Oil Corporation before moving to the insurance industry.`,
-          image: '/images/speakers/nanda-gopal.jpg'
+          image: '/images/events/fraud/speakers/nandagopal.jpg'
         },
         {
           name: 'Mr. Amarjit Chopra',
           designation: 'Ex-President, ICAI',
           details: `Mr. Amarjit Chopra did his post graduation in commerce from Delhi University in 1973. He qualified as a Chartered Accountant in the year 1975 and since then has been in practice as a senior partner of GSA & ASSOCIATES, New Delhi. He was elected to the Northern India Regional Council (NIRC) of The Institute of Chartered Accountants of India for two terms 1985-88 and 1988-91. He was the Chairman of NIRC for the year 1988-89. He was elected to the Central Council of The Institute of Chartered Accountants of India for the term 1998-2001, 2001-2004, 2004-2007, 2007-2010 and was re-elected for the fifth consecutive term 2010 onwards. He served as the Vice President of Institute of Chartered Accountants (ICAI) for the year 2009-10 and President of Institute of Chartered Accountants (ICAI) for the year 2010-11.`,
-          image: '/images/speakers/amarjit-chopra.jpg'
+          image: '/images/events/fraud/speakers/amarjitsighchopra.jpg'
         },
         {
           name: 'Mr. S. Bhaskar',
           designation: 'President, IIA Bombay Chapter',
           details: `Mr. S. Bhaskar is currently Chief Internal Auditor at Tata Capital Limited and also Heads the Internal Audit function for the Tata Capital Group comprising of Corporate Finance, Consumer Finance, Housing Finance, Private Equity, Investment Banking, Broking, Wealth Management, Forex, Travels & International Business. He is a member of the Ethics Committee, Operations Committee and an invitee member of the Fraud & Operational Risk Management Committee of Tata Capital Ltd. Mr. S Bhaskar is currently the President of IIA, Bombay Chapter, a member of the IIA India Council and also a committee Member of the ASSOCHAM National Council on Internal Audit & Corporate Fraud. Mr. Bhaskar has also carried the TBEM(Business Excellence) assessments of the Tata Group of Companies as a Senior Business Lead Assessor.`,
-          image: '/images/speakers/s-bhaskar.jpg'
+          image: '/images/events/fraud/speakers/sbhaskar.jpg'
         },
         {
           name: 'Mr. Uday Khanna',
           designation: 'President, Bombay Chamber of Commerce & Industry',
           details: `Mr. Uday Khanna is a Chartered Accountant. Mr. Khanna is the Chairman of Lafarge India Pvt. Ltd. as also Chairman of Bata India Ltd and is on the Boards of Castrol India Ltd. & Pfizer Ltd. Prior to this Mr. Khanna was the Managing Director and CEO of Lafarge India till July 2011. Mr. Khanna joined the Lafarge Group in Paris on 1st June, 2003 as Senior Vice President for Group Strategy, after a long experience of almost 30 years with Hindustan Lever Ltd. /Unilever in a variety of financial, commercial and general management roles both nationally and internationally. His last position before joining Lafarge, was Senior Vice President Finance, Unilever - Asia, based in Singapore.`,
-          image: '/images/speakers/uday-khanna.jpg'
+          image: '/images/events/fraud/speakers/uday-khanna.jpg'
         },
         {
           name: 'Mr. P. R. Ramesh',
           designation: 'Chairman, Deloitte Haskins & Sells',
           details: `Mr. P. R. Ramesh is the Chairman of Deloitte Haskins & Sells with over 33 years of experience in providing audit services. He has extensive experience in serving large national and multi-national clients in banking, financial services, information technology, steel, automotive and other industry sectors. The positions that P R Ramesh holds and has held in committees and groups are as under: He was a special invitee to National Advisory Committee on Accounting Standards (NACAS) set up by the Ministry of Corporate Affairs of Government of India which was mandated with the task of convergence of Indian Accounting Standards to International Financial Reporting Standards (IFRS) Co-opted member of the Accounting Standards Board (ASB) of the Institute of Chartered Accountants of India Member of the Committee set up by the ASB for Convergence of Indian Accounting Standards with IFRS.`,
-          image: '/images/speakers/pr-ramesh.jpg'
+          image: '/images/events/fraud/speakers/pr-ramesh.jpg'
         },
         {
           name: 'Mr. P. N. Sharma',
           designation: 'Director (Finance), Sir Ganga Ram Hospital',
           details: `Mr. P. N. Sharma is a Fellow Chartered Accountants, Fellow Member Institute of Company Secretaries of India (F.C.S.). He Completed the Senior Course at Henley Management College, U.K. He is currently, Director and & Chief Finance Officer, at Sir Ganga Ram Hospital. It's a premier tertiary care 700 bedded hospital with most modern Healthcare and Diagnostic facilities. It is one of the largest POST GRADUATE INSTITUTE for DNB courses. In his present position he is responsible to the Trust Society and Management of the Hospital for Finance, Purchase, Administration, Materials Management and most other activities not directly related to Medicare, including, Acquisitions & takeovers as also strategic alliances. The hospital is engaged in implementing state of the art ERP System (HIS) for which he is fully responsible to revamp systems and procedures in all the departments, have set up Costing and Budgeting control system which are being migrated to the ERP System. He has also worked in Director capacity at Airport Authority of India, MMTC Limited, Flex Industries Limited. He is also President of eInformation Systems, Security and Audit Association.`,
-          image: '/images/speakers/pn-sharma.jpg'
+          image: '/images/events/fraud/speakers/pnsharma.gif'
         },
         {
           name: 'Mr. Deepak Wadhawan',
           designation: 'Director, All India Heart Foundation',
           details: `Mr. Deepak Wadhawan is currently on the Board of Directors of All India Heart Foundation. He has been for 28 years in internal audit & management consultancy practice with experience across a dozen industries including steel, power, coal, cement, road construction, logistics & transportation, auto ancillaries, engineering services, banking & financial services, IT & BPO, sugar, paper, spirits & wine, hospitals, etc. This broad exposure enables him to take a pragmatic approach to finding solutions. He is a former Senior Advisor at KPMG first in Risk Advisory Services & later in the Markets Group.`,
-          image: '/images/speakers/deepak-wadhawan.jpg'
+          image: '/images/events/fraud/speakers/deepak.gif'
         },
         {
           name: 'Mr. Sunder Krishnan',
           designation: 'EVP and Chief Risk Officer, Reliance Life Insurance',
           details: `Mr. Sunder Krishnan is currently EVP and Chief Risk Officer of Reliance Life Insurance for the past six years with an oversight of Risk Management, Compliance, Claims Operations, Legal- Secretarial functions, BCP and Internal Audit. More than two decade of varied experiences in Organizations such as Reliance Life Insurance, DSP Merrill Lynch, ING Vysya, Credit Lyonnais, Standard Chartered Bank, Bank Internasional Indonesia, Ernst and Young at Senior and Mid-Management levels. Started career with Deloitte in the year 1984 pursuing Chartered Accountancy. Today an Enterprise Wide Risk Management professional with professional qualifications and expertise in CA, CISA, ERM and CCSA. He was ISACA Mumbai Chapter President and currently Member of India Task Force – ISACA.`,
-          image: '/images/speakers/sunder-krishnan.jpg'
+          image: '/images/events/fraud/speakers/sunder.jpg'
         },
         {
           name: 'Mr. Aneel J. Gambhir',
           designation: 'Sr. Vice President - Internal Audit, Blue Dart Limited',
           details: `Mr. Aneel Gambhir is working as Senior Vice President and Head of Internal Audit in Blue Dart Express Ltd. He has been heading Audit Function for last nine years. He is instrumental in setting up Risk Management process and audit function in the company. Prior to taking over role in Audit, He has worked as Regional Finance Controller of Western Region in Blue Dart for about five years. While in Blue Dart, he has streamlined various processes, led cost optimization and efficiency improvement projects and plugged revenue leakages. He, through his own initiative, designed, developed and implemented Freight on Value (FOV) concept to provide complete peace of mind to Blue Dart Customers. FOV is Insurance arrangement on behalf of customers as value add feature and generates additional contribution to bottom line. He is also member of various committees to review performance as well as provide inputs on investments/automation etc.`,
-          image: '/images/speakers/aneel-gambhir.jpg'
+          image: '/images/events/fraud/speakers/aneel-gambhir.jpg'
         },
         {
           name: 'Mr. Kallol Kundu',
           designation: 'Chief Internal Auditor, The Oberoi Group',
           details: `Mr. Kallol Kundu, currently is a , Head of Group Internal Audit at The Oberoi Group. His Professional Qualifications includes: FCA, DISA, CISA, CFE. Organizational achievements are being Rated 'Exceptional' for 10 years in a row; Youngest 'head of a function' in the organization; Nominated for select-group Franklin Covey Leadership programs (Co-founded by Dr. Stephen R. Covey); Pioneered CAAT-based Management Audit structure; Pioneered implementation of online treasury management systems for power utility with 2-million consumer base. He has Industry Experience of over 20 years spanning Hospitality, Power Utility, FMCG sectors. Specialises in skill sets related to Anti-fraud specialist, Corporate Governance professional, Public Speaking, Active Controls professional, Courage Leadership, Professional networking.`,
-          image: '/images/speakers/kallol-kundu.jpg'
+          image: '/images/events/fraud/speakers/kallolkundu.jpg'
         },
         {
           name: 'Mr. Satish Warrier',
           designation: 'Chief Information Security Officer, Godrej Industries Ltd',
           details: `Mr. Satish Warrier, is a CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager) and a Certified ISO 27001 Lead Auditor, besides being an MBA in Finance and a Certified Associate of Indian Institute of Bankers. I have also done Mumbai University's Computer Management course from the reputed Jamnalal Bajaj Institute of Management Studies, Mumbai. His current role is that of the CISO [Chief Information Security Officer], catering to all the Associate Companies of the Godrej Industries Group. His main responsibility is to ensure that a proper Information Security posture, in accordance with the threat perception, is maintained in all the Companies within the Group.`,
-          image: '/images/speakers/satish-warrier.jpg'
+          image: '/images/events/fraud/speakers/satishwarier.jpg'
         },
         {
           name: 'Mr. V Sriram',
           designation: 'Vice-President & Head-Internal Audit, Bajaj Allianz Life Insurance',
           details: `Mr. V Sriram is a presently working as Vice-President & Head Internal Audit – Bajaj Allianz Life Insurance Company Limited. Fellow member of the Institute of Chartered Accountants of India since 1991. Completed Articleship from M/s N.C. Rajagaopal & Co a reputed firm of Chartered Accountants in Chennai. Having around 20 years of post qualification experience in the areas of Risk and Internal Audit. Has worked in different capacities in diverse industries like Non-Banking Finance Company / Housing Finance company / Hospitality Sector and Insurance Sector. Associate member of the Institute of Cost and Works Accountants of India since 1996. Member of Chennai chapter of Institute of Internal Auditors.`,
-          image: '/images/speakers/v-sriram.jpg'
+          image: '/images/events/fraud/speakers/blank.jpg'
         },
         {
           name: 'Mr. Haresh Dua',
           designation: 'Vice President (Internal Audit & Compliance), JSW Steel Limited',
           details: `Mr. Haresh Dua, is a Chartered Accountant, CIA, CISA, CISSP. He has 19 years of professional experience, out of which he has spent 18 years in Internal Audit. He has worked in manufacturing, FMCG, Projects, Mining and Retain Industry, while working with organisations such as Batliboi Limited, Blue Star Limited, Godrej Group, and Future Group. Currently, he is enriching with his experience JSW Steel Limited, as Vice President (Internal Audit & Compliance), and also Heads Internal Audit department of JSW group, which has various businesses like Steel, Power, Cement, Port, Mining and Aluminum. Experience includes: Implementation of Clause 49, i.e. implementation of Enterprise Risk Management Framework and Internal Control Framework. Preparation & roll out of Risk Based Audit Plans. Integration of Risks Management Framework with Internal Audit. In-charge of Fraud Investigation cell at Godrej & Future groups. Setting up of Internal Audit department at Pantaloon Retail India Ltd. Introducing Rating System for audit of various stores & warehouses at Pantaloon Retail India Ltd. Information Systems Audits at Godrej, Pantaloon and JSW group.`,
-          image: '/images/speakers/haresh-dua.jpg'
+          image: '/images/events/fraud/speakers/haresh-dua.gif'
         },
         {
           name: 'Mr. Satish Shenoy',
           designation: 'Head-Corporate Audit Services, Powai Larsen & Toubro Limited',
           details: `Mr. Satish Shenoy is a Chartered Accountant, Cost Accountant, Company Secretary & Diploma in Central Excise – a 8th rank holder in the final cs examination in 1988. He is currently working as Head Corporate Audit Services, Powai in Larsen & Toubro. He has over 25 years of experience in finance and internal auditing. He has worked in different sectors & companies such as Hindustan Petroleum, Onida, Lupin Pharma & Reliance Retail. He has been associated with the Institute of Internal Auditors – India, Bombay Chapter for last 15 years and was the President last year. He is a member in the accounting & auditing committee of the BCAS. He has also served in several committees of the WIRC, ICAI. He has delivered several papers on internal audit for various study circles in Mumbai, Pune, Thane, Nasik, Nagpur & Vadodara of the ICAI & IIA and for Asscoham at Delhi; he is the faculty for "Internal Audit Studies".`,
-          image: '/images/speakers/satish-shenoy.jpg'
+          image: '/images/events/fraud/speakers/satishshenoy.jpg'
         },
         {
           name: 'Mr. Sandip Roy',
           designation: 'Protector of Emigrants, Ministry of Overseas Indian Affairs',
           details: `Mr. Sandip Roy is a Bachelor of Technology in Electrical Engineering from Indian Institute of Technology (IIT) - Bombay, IAAS, CISA, CISM, CFE, CIA, ISO Lead Assessor (ISO 9001:2000), Certification in Finance and Project Management from National Institute of Finance Management and currently working as Protector of Emigrants Ministry of Overseas Indian Affairs, Government of India. He has been responsible for bringing transparency in the Emigration clearance process by initiating strong measures of deterrence against rogue elements and appropriately encouraging the conforming, forthright and committed elements. Computerised (implemented System Automation Initiative - SAI) each and every part of the Emigration process in house so as to bring transparency and enhance processing speed to over 5 times. Initiated SAI Project ERP implementation on a web enabled platform (SQL Server) on the cloud with Thin Clients on N Band Wireless network as the clients.`,
-          image: '/images/speakers/sandip-roy.jpg'
+          image: '/images/events/fraud/speakers/sandip-roy.jpg'
         },
         {
           name: 'Mr. Mukesh Arya',
           designation: 'ex-Director, Internal Oversight Services, UN Agency',
           details: `Mr. Mukesh Arya is the founder member of the Red Flag Oversight Consultancy Services P Ltd (Red Flag). Prior to this, he was positioned as the Director of the Department of Internal Oversight Services, United Nations Agency (UNRWA). Mr. Arya, an Indian Audit & Accounts Service (IA&AS) officer took early retirement to join the United Nations. Nationally, he held several important charges such as the Accountant General of Assam, Meghalaya, Arunachal Pradesh, and Mizoram. He was the Principal Director of Audit for Direct taxes and prepared reports for the Parliament of India, one of which was the famous report on VDIS (tax amnesty scheme). He assisted several legislative assemblies of various states in India and interfaced with the constitution assembly of the Republic of Seychelles.`,
-          image: '/images/speakers/mukesh-arya.jpg'
+          image: '/images/events/fraud/speakers/mukesh-arya.gif'
         },
         {
           name: 'Dr. K. Subramanian',
           designation: 'ex-IT Advisor, CAG of India',
           details: `Prof. Dr. K. Subramanian, Ex-Professor & Director, Advanced Center for Informatics & Innovative Learning, IGNOU. Honorary Information Technology Advisor to Comptroller & Auditor General (CAG) of India. Ex-Senior Deputy Director General at National Informatics Center, Ministry of Communications & Information Technology, New Delhi. More than three and half decades of experience in ICT Introduction, design, development, Implementation & Audit of Technology & Systems. Pioneer in introducing Technology in Banking, Financial services and Government Finance & Audit Functions (central & State). Associated with IT Implementation of major Projects of railways, Police, Immigration, Passports, Visas & security organizations. Review & e Audit of e Governance Programs.`,
-          image: '/images/speakers/k-subramanian.jpg'
+          image: '/images/events/fraud/speakers/subramanian.gif'
         },
         {
           name: 'Mr. Rohit Mahajan',
           designation: 'Partner & Co-Head, KPMG',
           details: `Rohit co-Heads KPMG India's Forensic practice, besides leading the Investigations and Anti-Bribery and Corruption service lines within the practice. Rohit has over 16 years of experience in handling projects in the areas of Fraud Investigation, Process Risk Consulting, Anti Bribery and Corruption diligence and compliance reviews, Financial Due Diligence and Valuation and Business Fraud Risk Review. His exposure spans all major industries with specific focus on Infrastructure, Pharmaceuticals, and Financial Services. Led a number of investigations involving financial improprieties, bribery, corruption, FCPA non-compliance, employee fraud and non-compliance including being part of the team investigating the Satyam case. He has successfully mentored the preparation and launch of publications like the India Anti Money Laundering Survey 2012, Survey on Bribery and Corruption 2011 and India Fraud Survey 2010; including point of view documents on the Lokpal Bill etc.`,
-          image: '/images/speakers/rohit-mahajan.jpg'
+          image: '/images/events/fraud/speakers/rohit-mahajan.jpg'
         },
         {
           name: 'Mr. Sarabjeet Singh',
           designation: 'Partner, BMR Advisors',
           details: `Mr. Sarabjeet Singh is a Partner in the BMR's Risk & Advisory Practice. With a specialization in process and compliance, Sarabjeet has 19 years of experience in advising Fortune 1000 multinationals and Indian business houses on a range of matters spanning process improvement, risk mitigation and controls development, merger integration, internal audits and compliance. He has worked extensively in the anti-money laundering area across geographies, consulting with financial institutions in setting up robust processes to meet compliance needs.`,
-          image: '/images/speakers/sarabjeet-singh.jpg'
+          image: '/images/events/fraud/speakers/sarabjeet.jpg'
         },
         {
           name: 'Mr. Thomas J. Karithanam',
           designation: 'Senior Advisor-Risk Consulting, Forensic Services, KPMG',
           details: `Mr. Thomas J. Karithanam is a Senior Advisor in KPMG Forensic, based in Mumbai. He joined KPMG Forensic in 2000 as a Manager. He is a former Police Officer with more than 25 years service with Central Bureau of Investigation, the premier Central investigating agency of India. He mainly worked in the anti - corruption and economic offences wings of the Agency with a stint in investigating conventional crimes, including homicide and unnatural death cases. He also worked for about 2 years on deputation with Bank of India, as a Specialist Investigating Officer. He was awarded the Indian Police Medal for Meritorious Service on Republic Day, 1993. He is the supporting national product leader for Investigation and marketing Forensic services.`,
-          image: '/images/speakers/thomas-karithanam.jpg'
+          image: '/images/events/fraud/speakers/thomas.jpg'
         },
         {
           name: 'Mr. Kunal Vajani',
           designation: 'Partner, Wadia Ghandy & Co',
           details: `Mr. Kunal Vajani is a Partner of a leading law firm M/s. Wadia Ghandy & Co. After obtaining his law degree from Government Law College, Mumbai, Mr. Kunal Vajani qualified as a Solicitor, Supreme Court of England & Wales and also completed his masters (LL.M) from Harvard Law School, USA. Mr. Kunal Vajani specializes in litigation and arbitration matters and has represented clients in various leading matters relating to corporate crimes, land disputes, public and private trusts, rehabilitation and restructuring of companies involving capital restructuring, amalgamations, mergers and demergers, challenges to policies/ orders of electricity distribution companies and regulatory commissions, cable and telecom disputes, natural gas and petroleum disputes, direct and indirect tax [income tax, service tax and entertainment duty], intellectual property litigation, recovery of debts including NCDs, FCCBs, OCBs, documentary credits, shareholder litigations, derivative actions.`,
-          image: '/images/speakers/kunal-vajani.jpg'
+          image: '/images/events/fraud/speakers/kunalv.gif'
         },
         {
           name: 'Mr. S.N Ravichandran',
           designation: 'Managing Director, Nilgiris Chemical Stoneware Co. (P) Ltd',
           details: `Mr. S.N Ravichandran is the Managing Director of Nilgiris Chemical Stoneware Co. (P) Ltd Coimbatore. He holds an M.Sc. Degree in Applied Sciences. He assists the Coimbatore City Police and Economic Offenses Wing on Cyber, White collar and Economic Offences investigation. He is one of the faculties at the In House Training School of the Tamil Nadu Police in Coimbatore for conducting training sessions on investigation of Cyber Crimes. He has also imparted training to the Chennai North Zone and Pondicherry Police on Cyber Crime Investigations. He has delivered several lectures to Schools, Colleges, Social and Industrial Organizations like CII, and Assocham and Professional bodies like Chartered Accountants and Sales Tax auditors on Cyber Crime, Cyber Security, Maritime and Airspace security threats, Information Technology Act, Economic Offences on the net, Money Laundering scams and Risk Management and Information Security. He was Involved in the framing of a Curriculum for a unique M.Tech/M.S course on Cyber Forensics for IGNOU and C-DAC.`,
-          image: '/images/speakers/sn-ravichandran.jpg'
+          image: '/images/events/fraud/speakers/snravi.jpg'
         }
       ],
       feedback: [
@@ -216,14 +216,14 @@ const eventDetails: Record<string, {
           content: 'I greatly enjoyed the session and learnt many takeaways for our business. Thank you.'
         },
         {
-          logo: '/images/events/1/rl.jpg',
+          logo: '/images/events/fraud/feedback/rli.gif',
           company: 'Reliance Life Insurance',
           name: 'Mr. Sunder Krishnan',
           designation: 'EVP and Chief Risk Officer',
           content: 'Thanks for the invite. Although could not spend much time in the summit – it was pleasure catching up with so many friends – albeit for a brief period. The summit was well organized and the arrangements were good.'
         },
         {
-          logo: '/images/events/1/oberoi.png',
+          logo: '/images/events/fraud/feedback/oberoi.jpg',
           company: 'The Oberoi Limited.',
           name: 'Mr. Kallol Kundu',
           designation: 'Chief Internal Auditor',
@@ -237,49 +237,49 @@ const eventDetails: Record<string, {
           content: 'Would like to compliment SSPL for efficiently and effectively organizing this seminar. The sessions, including your intervening comments, were quite informative and interesting. The number of sessions too was quite appropriate.'
         },
         {
-          logo: '/images/events/1/bajaj.jpg',
+          logo: '/images/events/fraud/feedback/bajaj-allianz.jpg',
           company: 'Bajaj Allianz Life Insurance Company.',
           name: 'Mr. V. Sriram',
           designation: 'Head Internal Audit',
           content: 'The whole show was well organized and hats off to you and your team. The only thing which could have been avoided was the delay in the start. This may be kept in mind for the future programme.'
         },
         {
-          logo: '/images/events/1/lt.jpg',
+          logo: '/images/events/fraud/feedback/lt.jpg',
           company: 'Powai Larsen & Toubro Limited',
           name: 'Mr. Satish Shenoy',
           designation: 'Head – Corporate Audit Services',
           content: 'It was a well-organized conference and every event was well participated by the delegates. I enjoyed the panoramic view at Trident Roof-top just as auditors need to have the overall view of the area to be audited.'
         },
         {
-          logo: '/images/events/1/bmr.jpg',
+          logo: '/images/events/fraud/feedback/bmr.png',
           company: 'BMR Advisors',
           name: 'Mr. Sarabjeet Singh',
           designation: 'Partner',
           content: 'Many congratulations on the success of your conference event. I think it was great – speakers and audience.'
         },
         {
-          logo: '/images/events/1/essar.jpg',
+          logo: '/images/events/fraud/feedback/essar.gif',
           company: 'Essar Services India Limited',
           name: 'Mr. Vishal Rathod',
           designation: '',
           content: 'Thanks for inviting us for the conference. We had an information packed day!.'
         },
         {
-          logo: '/images/events/1/kpmg.jpg',
+          logo: '/images/events/fraud/feedback/kpmg.gif',
           company: 'Forensic Services, KPMG',
           name: 'Mr. Thomas Karithanam',
           designation: 'Senior Advisor-Risk Consulting',
           content: 'Overall, it was a fruitful learning time, good ambience and nice people around. Let me once again express my gratitude to Srivatsan.'
         },
         {
-          logo: '/images/events/1/nilgiris.jpg',
+          logo: '/images/events/fraud/feedback/nilgiri_logo.jpg',
           company: 'Nilgiris Chemical Stoneware Co. (P) Ltd.',
           name: 'Mr. S. N. Ravichandran',
           designation: 'Managing Director',
           content: 'It was privilege attending the well organized and conducted meeting. My congratulation to you on that. I took back much information. It was my honor to meet so many eminent personalities on and off the dais and interact with them. Please convey my thanks and congratulations to Shri Bhaskar for coordinating and conducting the last session in the most admirable manner. I am planning to take some lessons from him on that! I look forward to be part of such events in future also'
         },
         {
-          logo: '/images/events/1/aneja.jpg',
+          logo: '/images/events/fraud/feedback/aneja.gif',
           company: 'Aneja Associates.',
           name: 'Harmeek Bhela',
           designation: '',
@@ -528,103 +528,103 @@ const eventDetails: Record<string, {
           name: 'Mr. Surinder Singh Kohli',
           designation: 'Chairman and Managing Director, India Infrastructure Finance Company Ltd.',
           details: `Mr. Kohli, former Chairman and Managing Director of Punjab National Bank is a B.Sc. (Mechanical Engineering) and Diploma in Industrial Finance has been associated with Banking Industry for last 37 years. He has served the industry various capacities during his tenure with Nationalized Banks. Mr. Kohli is a recipient of "Bank of the Year Award", The Banker's Magazine of Financial Times, London for the year 2000 and many more awards are to his credits. Currently, he is Member, Board of Governors, Management Development Institute, Gurgaon, Member, Board of Governors, Indian Institute of Management, Lucknow, Director, Maharashtra Airport Development Co. Limited, Director, Modi Rubber Limited and Director, SME Rating Agency of India Limited.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/sskohli.gif'
         },
         {
           name: 'CA. Sunil H. Talati',
           designation: 'President, ICAI',
           details: `Mr. Talati a Fellow member of the ICAI, he is a postgraduate in commerce and also a law graduate. A member of the ICAI with more than 30 years of standing, Shri Talati was elected to the Council of ICAI for the first time in 2001 and thereafter in 2004. He was Vice-President of the Institute for the year 2006-07. He has held the position of Chairman of Expert Advisory Committee, Financial Reporting Review Board, Corporate & Allied Laws, Corporate Governance Committee; and Vice-Chairman of Professional Development Committee, Committee for Members in Industry, Board of Studies, Committee for Information Technology and Professional Development Committee. Besides the above, he has also served on the Examination Committee, Disciplinary Committee, Expert Advisory Committee, Committee for Vision & Restructuring, Fiscal Laws Committee, Research Committee, Committee on Ethical Standards, Committee on Career Counseling and Commerce Education, Professional Development Committee, Editorial Board, Financial Market and Investor's Protection, Expert Advisory Committee, Committee on Information Technology. Audit Committee, Accounting Standards Board and Board of Studies as a Member.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/sunil-thali.gif'
         },
         {
           name: 'Mr. Amarjit Chopra',
           designation: 'Central Council Member, ICAI',
           details: `Mr. Chopra a Fellow member of the ICAI, he is also M.Com from Delhi University.He has a vast experience in Consultancy Services in the field of, Accounting- Particularly matters relating to Indian and International Accounting Standards, Corporate Laws, Restructuring of Business- Mergers, Amalgamations, Demergers, etc., Insurance, Corporate Taxation, Brand Valuation, Due Dilligence, and Specialisation in Internal and Statutory Audits of Private and Public Sector enterprises including audit of Divisional Offices of Insurance Companies. Audit of banks has been an area of special interest..`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/amarjit-chopra.gif'
         },
         {
           name: 'Mr. Michael Liu',
           designation: 'Regional Director (Asia Pacific), ACL Services Limited',
           details: `Mr. Liu has worked in Network Associates, Remedy, Silicon Graphics (SGI), SAP and Digital Equipment (DEC). He completed his graduate work in economics at New York University.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/michael-liu.gif'
         },
         {
           name: 'Mr. Probal Ghosal',
           designation: 'Director Finance, Times Group',
           details: `Mr. Probal Ghosal has over 23 years of post qualification experience in industry.He has a vast experience in Consultancy Services in the field of, Accounting- Particularly matters relating to Indian and International Accounting Standards, Corporate Laws, Restructuring of Business- Mergers,Amalgamations, Demergers, etc. Insurance, Corporate Taxation, Brand Valuation, Due Dilligence, and Specialisation in Internal and Statutory Audits of Private and Public Sector enterprises including audit of Divisional Offices of Insurance Companies. Audit of banks has been an area of special interest`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/probal-ghosal.gif'
         },
         {
           name: 'Dr. K. Subramanian',
           designation: 'IT Advisor to CAG of India',
           details: `Dr. K. Subramanian holds a B.Sc. degree from Madras University and B.E., M.E. in Electronics and Communications Engineering and Ph.D. in Automation from Indian Institute of Science, Bangalore, is senior Deputy Director General at National Informatics Center, Ministry of Communications & Information Technology, New Delhi, and also the Information Technology Advisor to Comptroller & Auditor General (CAG) of India. He has been associated with planning and implementation of major Information Technology projects of Railways, Police, Immigration, Passports & Visas, Banks, Reserve Bank of India and coordinating the computerization of Finance and Audit functions of Central and State Governments, for more than two and half decades.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/subramanian.gif'
         },
         {
           name: 'Mr. Manoj Chugh',
           designation: 'President, India & SAARC, EMC',
           details: `Manoj Chugh has managed and led companies to leadership position across diverse businesses segments such as servers; satellite networking; telecom and networking and data storage.In his current role as the President EMC, India and SAARC, Manoj has spearheaded the company's growth into the leading information storage and management vendor in the Indian Subcontinent.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/mr-manoj-chugh.gif'
         },
         {
           name: 'Rajeev Arora',
           designation: 'Director Business Risk and Internal Audit, Aviva Life Insurance - India',
           details: `Rajeev has 14 years of experience in the area of operational and systems risk management. Rajeev has worked with the Big 4 accounting firms for the first 10 years of his career providing services to clients in various industries in India, United States of America, Russia and SriLanka. Rajeev has experience in the area of project management of mission critical IT implementations, process improvement in ERP environment, information system controls review and development of IT strategy. At Aviva India, Rajeev is looking after Business Risk, Internal Audit, Sales Compliance and Financial Crime. Rajeev is a Chartered Accountant, a Certified Public Accountant, Diploma in Systems Analysis and Design and a Certified Information Systems Auditor.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/fraud/speakers/blank.jpg'
         },
         {
           name: 'Mr. Sandeep Bhatkhande',
           designation: 'Head – Data Analysis Function, Siemens Corporate Finance Private Limited',
           details: `Sandeep Bhatkhande leads the data analysis function that is responsible for monitoring and identifying suspicious, unusual, non-compliant and fraudulent transactions. Data Analysis Function through ACL scripts has covered all Siemens companies in the Asia Pacific Region. More than 171 analyses have been developed so far on SAP data covering Payment Transactions, Vendor/ Customer Master Data, Purchase Orders, Inventory, Fixed Assets and Accounts Receivable and Accounts Payable. As an appreciation for effective usage of ACL software, Mr. Bhatkhande has been recently awarded "ACL Impact Award - 2007" for the Asia Region.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/mr-sandeep-bhatkhande.gif'
         },
         {
           name: 'Mr. Akhilesh Tuteja',
           designation: 'Chief Internal Auditor, KPMG',
           details: `Mr. Tuteja with the Risk Advisory Services (RAS) practice of KPMG in India. He has extensive experience in the area of information risk managementHe has advised over 100 clients on matters relating to information risk assessment,design of information security architectures, development of business continuity plans and Sarbanes Oxley Act advisory. He has also helped many clients achieve compliance to ISO27001 standard and has conducted numerous SAS70 examinations. Mr. Tuteja has significant expertise in conducting audits of a variety of ERP systems including SAP, Oracle and Baan.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/akhilesh-tuteja.gif'
         },
         {
           name: 'Mr. Kali Prasad',
           designation: 'Partner - Risk Advisory Services (RAS), Ernst & Young',
           details: `Mr. Prasad has over 22 years of experience in Internal Audits, Fraud Investigations, Information Systems Audits, Risk Management and other consulting work. As an industry specialization he focuses on Health Sciences Industry. He is Certified Internal Auditor from The Institute of Internal Auditors, Certified Information Systems Auditor from Information Systems Audit and Control Association and Certified Fraud Examiner from Association of Certified Fraud Examiners.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/kali-prasad.gif'
         },
         {
           name: 'Mr. Amar Kumar',
           designation: 'Head – Internal Audit, Max New York Life Insurance Co. Limited',
           details: `He is CIA, CISA and CCSA and has 14 years of work experience which includes 8 years at Bank of America. He is also on the board of IIA & ISACA, New Delhi Chapter.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/amar-kumar.gif'
         },
         {
           name: 'Mr. Akshay Bhalla',
           designation: 'Partner, Control Solutions',
           details: `Mr. Bhalla has over 13 years of experience in Internal Audits, Risk based assurance services, Statutory audits, Tax advisory services, Valuations and other corporate finance related services. Akshay has had experience working in Asia as well as North America and Europe. As Partner, Akshay manages Control Solutions' growth strategy in the India market with focus on business development, growth and profitability. He is responsible for managing and growing the portfolio of clients and ensuring successful and satisfactory client service delivery. He is also responsible for ensuring recruitment and training of talent to be deployed on international engagements.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/bhalla.gif'
         },
         {
           name: 'Mr. Ashis Rout',
           designation: 'Head - Information Systems Audit and Principal Officer (AML Compliance)',
           details: `Mr. Ashish is a Post Graduate in Mathematics, Post Graduate Diploma in Computer Application & Post Graduate Diploma in Business Management. Prior to joining Centurion Bank Of Punjab Mr. Rout worked with ING Vysya Bank. Job profile includes overseeing and managing Bank's information system security program. Responsible to evaluate critical system and implement security processes, procedure and risk mitigation processes. Also responsible to conduct in-depth compliance audit including AML Compliance. Mr. Rout has working in the field of Banking Technology for last more than 15 years.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/ashis-rout.gif'
         },
         {
           name: 'Mr. Devangshu Dutta',
           designation: 'Chief Executive, Third Eyesight',
           details: `Mr. Dutta is a part of a consulting firm focused on retail and consumer products sectors. Third Eyesight's clients include some of the largest / leading corporations and brands from India and other countries, to which it provides business strategy and operations support. Devangshu himself has spent 17 years in various roles in the retail sector and its supply chain. Apart from being an entrepreneur and a management consultant, he also writes frequently for print and electronic media and teaches at professional / management institutes. Early on, he was involved with producing and presenting music, feature and chat shows on radio over a period of 5 years`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/devangshu-dutta.gif'
         },
         {
           name: 'Mr. Kallol Lahiri',
           designation: 'Divisional Manager (Internal Audit), TATA Motors Limited',
           details: `At present, Mr. Lahiri is responsible for auditing in the areas of Supply Chain & Manufacturing of Tata Motors Limited and its subsidiaries in Jamshedpur, implementing SOX, rolling-out of Self Assessment Questionnaire highlighting process related risk & controls, coordinatingIT requirements of the division with Tata Technologies,managing Ethics Office, training to new entrants of the Company on Tata Code of Conduct and internal training to new auditors on MS Office (Excel, Word, Access), SAP, ACL, ABAP/4 query etc.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/kallol-lahiri.gif'
         },
         {
           name: 'Mr. Suveer Khanna',
           designation: 'Manager - Forensic Practice, KPMG',
           details: `Mr. Suveer has over 7 years of investigation, FCPA reviews, AML testing and compliance review, fraud diagnostic and accounting experience. He joined KPMG in January 2003 and has been a key team member/team leader on various engagements and specialised in AML reviews, investigations and fraud risk management work. He is a qualified Chartered Accountant. Suveer has successfully completed his B.Com (Honors) in 1999 from the prestigious Shri Ram College of Commerce (Delhi University).Currently he leads AML and FCPA initiatives at KPMG.`,
-          image: '/images/speakers/placeholder.jpg'
+          image: '/images/events/assurance/suveer.gif'
         }
       ],
       feedback: [],
