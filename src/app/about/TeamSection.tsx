@@ -48,7 +48,7 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover w-full h-full rounded-lg"
+                    className="object-fit-contain w-full h-full rounded-lg"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     priority
                   />

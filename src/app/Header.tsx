@@ -103,7 +103,7 @@ const Header = () => {
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] h-full flex items-center justify-between">
         <div className="flex items-center">
         <Link href="/" className="flex items-center mt-2">
-              <Image src="/images/logos/logo.png" alt="SSPL Logo" layout="intrinsic" width={130} height={40} className="py-1 md:w-auto lg:w-auto max-h-[120px]" />
+              <Image src="/images/logos/logo.png" alt="SSPL Logo" layout="intrinsic" width={130} height={40} className="py-1 md:w-auto lg:w-auto max-h-[100px]" />
             </Link>
           </div>
           
