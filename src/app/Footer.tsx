@@ -69,12 +69,12 @@ const Footer = ({ className = '' }: FooterProps) => {
                 </div>
                 <ul className="space-y-1 ml-5">
                   <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">M-91, 1st Floor, Connaught Circus, New Delhi</li>
-                  <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
+                  <li className="flex flex-col lg:flex-row md:items-center space-y-1 lg:space-y-0 lg:space-x-4">
                     <div className="flex items-center">
                       <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
                       <span className="text-gray-500 text-xs md:text-xs">info@sspl.net.in</span>
                     </div>
-                    <div className="flex items-center hidden sm:flex lg:hidden xl:flex">
+                    <div className="flex items-center">
                       <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
                       <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+91-11-23765368‬</span>
                     </div>
@@ -89,12 +89,12 @@ const Footer = ({ className = '' }: FooterProps) => {
                 </div>
                 <ul className="space-y-1 ml-5">
                   <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
-                  <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
+                  <li className="flex flex-col lg:flex-row md:items-center space-y-1 lg:space-y-0 lg:space-x-4">
                     <div className="flex items-center">
                       <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
                       <span className="text-gray-500 text-xs md:text-xs">info@ssplme.com</span>
                     </div>
-                    <div className="flex items-center hidden sm:flex lg:hidden xl:flex">
+                    <div className="flex items-center">
                       <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
                       <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+973-13622552‬</span>
                     </div>
