@@ -28,9 +28,9 @@ const Banner = () => {
       <section className={`relative mt-[110px] ${isMobile ? 'min-h-[56.25vw]' : 'min-h-[calc(100vh-110px)]'} flex items-center overflow-hidden`}>
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <div className="w-full h-full relative" style={{ aspectRatio: '16/9' }}>
-            <video 
-              ref={videoRef}
+            <div className="w-full h-full relative" style={{ aspectRatio: '16/9' }}>
+              <video 
+                ref={videoRef}
               src="/videos/home-banner.webm" 
               autoPlay 
               loop 

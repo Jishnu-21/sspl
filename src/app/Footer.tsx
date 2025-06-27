@@ -15,7 +15,7 @@ const Footer = ({ className = '' }: FooterProps) => {
     <footer className={`bg-white border-t border-gray-200 ${className}`}>
       <div className="container mx-auto px-4 py-6 sm:py-8 md:py-10 lg:py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
           {/* Column 1 - Logo and company info */}
           <div className="space-y-3 sm:space-y-4">
          
@@ -68,7 +68,7 @@ const Footer = ({ className = '' }: FooterProps) => {
                   <h4 className="text-xs md:text-sm font-medium text-gray-700">India</h4>
                 </div>
                 <ul className="space-y-1 ml-5">
-                  <li className="text-gray-500 text-[11px] md:text-xs mb-2">M-91, 1st Floor, Connaught Circus, New Delhi</li>
+                  <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">M-91, 1st Floor, Connaught Circus, New Delhi</li>
                   <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
                     <div className="flex items-center">
                       <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
@@ -88,7 +88,7 @@ const Footer = ({ className = '' }: FooterProps) => {
                   <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
                 </div>
                 <ul className="space-y-1 ml-5">
-                  <li className="text-gray-500 text-[11px] md:text-xs mb-2">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
+                  <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
                   <li className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4">
                     <div className="flex items-center">
                       <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
