@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { FaChartLine, FaLightbulb, FaAward, FaGlobe } from 'react-icons/fa';
+import { FaChartLine, FaLightbulb, FaAward, FaGlobe, FaUserTie, FaUsers, FaServer, FaFolderOpen } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -10,10 +10,10 @@ const cards = [
     icon: <FaChartLine size={32} className="text-white" />,
     text: 'Substratad Solutions Pvt. Ltd. (SSPL) is a leading consulting firm specializing in Big Data Analytics, Data Visualization, Robotic Process Analytics, Business Intelligence, Digital Transformation, Data Migration, and Predictive Analytics. Our expert team has successfully implemented over 200+ projects across industries globally.',
     stats: [
-      { icon: <FaGlobe size={24} />, label: '15+', sub: 'Experience' },
-      { icon: <FaGlobe size={24} />, label: '100+', sub: 'Clients' },
-      { icon: <FaGlobe size={24} />, label: '24/7', sub: 'Global Analytics Hub' },
-      { icon: <FaGlobe size={24} />, label: '150+', sub: ' Projects' },
+      { icon: <FaUserTie size={24} />, label: '15+', sub: 'Experience' },
+      { icon: <FaUsers size={24} />, label: '100+', sub: 'Clients' },
+      { icon: <FaServer size={24} />, label: '24/7', sub: 'Global Analytics Hub' },
+      { icon: <FaFolderOpen size={24} />, label: '150+', sub: 'Projects' },
     ]
   },
   {
@@ -32,7 +32,7 @@ const AboutContent = () => {
   }, []);
 
   return (
-    <section className="py-6 sm:py-8 md:py-10 bg-white overflow-hidden">
+    <section className="py-10 sm:py-16 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-2 sm:px-4">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-black text-center mb-4 sm:mb-6 md:mb-8 text-comfortaa">
           Who We Are
