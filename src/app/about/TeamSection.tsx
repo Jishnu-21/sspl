@@ -37,8 +37,8 @@ const TeamSection = ({ members, title = "Meet Our Leaders" }: TeamSectionProps) 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="group relative h-[400px] sm:h-[450px] md:h-[480px] lg:h-[420px] overflow-hidden transition-all duration-500 
-                hover:h-[440px] sm:hover:h-[490px] md:hover:h-[520px] lg:hover:h-[460px] 
+              className="group relative h-[400px] sm:h-[450px] md:h-[40px] lg:h-[420px] xl:h-[520px] overflow-hidden transition-all duration-500 
+                hover:h-[440px] sm:hover:h-[490px] md:hover:h-[520px] lg:hover:h-[460px] xl:hover:h-[560px] 
                 hover:-translate-y-5 hover:z-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)] bg-gray-100 rounded-lg
                 w-full max-w-[300px] md:max-w-none"
             >
