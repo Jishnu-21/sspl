@@ -53,27 +53,27 @@ const AboutContent = () => {
               </p>
             </div>
             {/* Stats grid */}
-            <div className="ml-10 grid grid-cols-2 gap-x-8 gap-y-10 w-full mb-16">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-6 w-full mt-2">
               {cards[0].stats!.map((stat, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-x-4 text-center w-full -ml-2 -mt-2"
+                  className="flex flex-col items-center text-center w-full"
                 >
-                  <span className="text-white opacity-90 flex items-center justify-center text-3xl sm:text-4xl -mt-1">{stat.icon}</span>
-                  <div className="flex flex-col items-start -mt-1">
-                    <div className="text-white font-bold text-3xl sm:text-4xl leading-tight">{stat.label}</div>
-                    <div className="text-white text-sm opacity-80 -mt-1">{stat.sub}</div>
-                  </div>
+                  <span className="text-white opacity-90 flex items-center justify-center text-6xl sm:text-7xl md:text-8xl mb-1">
+                    {React.cloneElement(stat.icon, { size: 56, className: 'sm:text-7xl md:text-8xl' })}
+                  </span>
+                  <div className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight">{stat.label}</div>
+                  <div className="text-white text-base sm:text-lg md:text-xl opacity-80">{stat.sub}</div>
                 </div>
               ))}
             </div>
           </div>
           {/* Right column: two stacked cards */}
-          <div className="flex flex-col gap-4 h-full">
+          <div className="flex flex-col gap-4 h-full flex-1">
             {[cards[1], cards[2]].map((card, idx) => (
               <div
                 key={idx}
-                className="bg-[#23486b] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-col min-h-[140px] justify-start"
+                className="bg-[#23486b] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-col min-h-0 flex-1 justify-start"
                 data-aos={idx === 0 ? "fade-right" : "fade-left"}
                 data-aos-delay={200 + idx * 100}
               >
