@@ -58,48 +58,48 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
 
           {/* Column 4 - Support and Contact */}
-          <div className="mt-2 sm:mt-0">
-            <h3 className="font-medium text-gray-900 mb-2 sm:mb-3 md:mb-4">Contact us</h3>
-            <div className="space-y-4">
-              {/* India Office */}
-              <div>
-                <div className="flex items-center mb-2">
-                  <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                  <h4 className="text-xs md:text-sm font-medium text-gray-700">India</h4>
-                </div>
-                <ul className="space-y-1 ml-5">
+            <div className="mt-2 sm:mt-0">
+              <h3 className="font-medium text-gray-900 mb-2 sm:mb-3 md:mb-4">Contact us</h3>
+              <div className="space-y-4">
+                {/* India Office */}
+                <div>
+                  <div className="flex items-center mb-2">
+                    <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                    <h4 className="text-xs md:text-sm font-medium text-gray-700">India</h4>
+                  </div>
+                  <ul className="space-y-1 ml-5">
                   <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">M-91, 1st Floor, Connaught Circus, New Delhi</li>
                   <li className="flex flex-col lg:flex-row md:items-center space-y-1 lg:space-y-0 lg:space-x-4">
-                    <div className="flex items-center">
-                      <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                      <span className="text-gray-500 text-xs md:text-xs">info@sspl.net.in</span>
-                    </div>
-                    <div className="flex items-center">
-                      <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                      <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+91-11-23765368‬</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              {/* Middle East Office */}
-              <div>
-                <div className="flex items-center mb-2">
-                  <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                  <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
+                      <div className="flex items-center">
+                        <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                        <span className="text-gray-500 text-xs md:text-xs">info@sspl.net.in</span>
+                      </div>
+                      <div className="flex items-center">
+                        <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                        <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+91-11-23765368‬</span>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="space-y-1 ml-5">
+                {/* Middle East Office */}
+                <div>
+                  <div className="flex items-center mb-2">
+                    <IconMapPin size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                    <h4 className="text-xs md:text-sm font-medium text-gray-700">Middle East</h4>
+                  </div>
+                  <ul className="space-y-1 ml-5">
                   <li className="text-gray-500 text-[11px] md:text-xs mb-2 break-words">Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain</li>
                   <li className="flex flex-col lg:flex-row md:items-center space-y-1 lg:space-y-0 lg:space-x-4">
-                    <div className="flex items-center">
-                      <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                      <span className="text-gray-500 text-xs md:text-xs">info@ssplme.com</span>
-                    </div>
-                    <div className="flex items-center">
-                      <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
-                      <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+973-13622552‬</span>
-                    </div>
-                  </li>
-                </ul>
+                      <div className="flex items-center">
+                        <IconMail size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                        <span className="text-gray-500 text-xs md:text-xs">info@ssplme.com</span>
+                      </div>
+                      <div className="flex items-center">
+                        <IconPhone size={14} className="text-gray-400 mr-1 flex-shrink-0" />
+                        <span className="text-gray-500 text-xs md:text-xs">Tel: ‪+973-13622552‬</span>
+                      </div>
+                    </li>
+                  </ul>
               </div>
             </div>
           </div>

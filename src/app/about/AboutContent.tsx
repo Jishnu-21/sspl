@@ -10,10 +10,10 @@ const cards = [
     icon: <FaChartLine size={32} className="text-white" />,
     text: 'Substratad Solutions Pvt. Ltd. (SSPL) is a leading consulting firm specializing in Big Data Analytics, Data Visualization, Robotic Process Analytics, Business Intelligence, Digital Transformation, Data Migration, and Predictive Analytics. Our expert team has successfully implemented over 200+ projects across industries globally.',
     stats: [
-      { icon: <FaGlobe size={24} />, label: '200+', sub: 'Global Projects' },
-      { icon: <FaGlobe size={24} />, label: '200+', sub: 'Global Projects' },
-      { icon: <FaGlobe size={24} />, label: '200+', sub: 'Global Projects' },
-      { icon: <FaGlobe size={24} />, label: '200+', sub: 'Global Projects' },
+      { icon: <FaGlobe size={24} />, label: '15+', sub: 'Experience' },
+      { icon: <FaGlobe size={24} />, label: '100+', sub: 'Clients' },
+      { icon: <FaGlobe size={24} />, label: '24/7', sub: 'Global Analytics Hub' },
+      { icon: <FaGlobe size={24} />, label: '150+', sub: ' Projects' },
     ]
   },
   {
@@ -73,18 +73,16 @@ const AboutContent = () => {
             {[cards[1], cards[2]].map((card, idx) => (
               <div
                 key={idx}
-                className="bg-[#23486b] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-row items-start min-h-[140px] justify-start"
+                className="bg-[#23486b] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-col min-h-[140px] justify-start"
                 data-aos={idx === 0 ? "fade-right" : "fade-left"}
                 data-aos-delay={200 + idx * 100}
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-[#2e5d8a] rounded-lg mr-4 flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center bg-[#2e5d8a] rounded-lg mb-4">
                   {card.icon}
                 </div>
-                <div>
-                  <p className="text-white text-base sm:text-lg font-normal leading-relaxed">
-                    {card.text}
-                  </p>
-                </div>
+                <p className="text-white text-base sm:text-lg font-normal leading-relaxed">
+                  {card.text}
+                </p>
               </div>
             ))}
           </div>
