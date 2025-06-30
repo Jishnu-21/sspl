@@ -118,7 +118,7 @@ const PartnerForm = () => {
         <div className="pt-3">
           <button
             type="submit"
-            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 rounded border border-gray-300 transition-all duration-200 mt-3 mb-0 text-sm"
+            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 cursor-pointer rounded border border-gray-300 transition-all duration-200 mt-3 mb-0 text-sm"
           >
             Send
           </button>
