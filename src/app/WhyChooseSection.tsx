@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { FaTrophy, FaGlobeAmericas, FaChartLine } from 'react-icons/fa';
 import AOS from 'aos';
@@ -44,6 +44,32 @@ const WhyChooseSection = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  // Carousel state for md and below
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const isMd = typeof window !== 'undefined' && window.innerWidth >= 768 && window.innerWidth < 1024;
+  const isSm = typeof window !== 'undefined' && window.innerWidth < 768;
+
+  // Carousel navigation handlers
+  const next = () => {
+    if (isMd) {
+      setCarouselIndex((prev) => Math.min(prev + 1, contentItems.length - 2));
+    } else if (isSm) {
+      setCarouselIndex((prev) => Math.min(prev + 1, contentItems.length - 1));
+    }
+  };
+  const prev = () => {
+    setCarouselIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  // Responsive effect to reset carouselIndex if screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setCarouselIndex(0);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="py-24 pb-32">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
@@ -72,7 +98,8 @@ const WhyChooseSection = () => {
             <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          {/* lg+ grid layout */}
+          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {contentItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -109,6 +136,93 @@ const WhyChooseSection = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* md carousel: 2 cards at a time */}
+          <div className="md:block lg:hidden">
+            <div className="relative w-full">
+              <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${carouselIndex * 50}%)` }}>
+                {contentItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="w-1/2 flex-shrink-0 px-2"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: index * 0.2,
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 300
+                    }}
+                  >
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-xl h-full flex flex-col justify-center">
+                      <div className="text-center">
+                        <div className="mb-6">
+                          <div className="text-4xl sm:text-5xl md:text-6xl text-white/90 mx-auto w-fit">
+                            {React.createElement(item.icon)}
+                          </div>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
+                          {item.title}
+                        </h3>
+                        <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              {/* Carousel navigation */}
+              <div className="flex justify-between mt-4">
+                <button onClick={prev} disabled={carouselIndex === 0} className="text-white/80 px-4 py-2 rounded bg-white/20 hover:bg-white/30 disabled:opacity-50">Prev</button>
+                <button onClick={next} disabled={carouselIndex >= contentItems.length - 2} className="text-white/80 px-4 py-2 rounded bg-white/20 hover:bg-white/30 disabled:opacity-50">Next</button>
+              </div>
+            </div>
+          </div>
+
+          {/* sm carousel: 1 card at a time */}
+          <div className="block md:hidden">
+            <div className="relative w-full">
+              <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${carouselIndex * 100}%)` }}>
+                {contentItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="w-full flex-shrink-0 px-2"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: index * 0.2,
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 300
+                    }}
+                  >
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-xl h-full flex flex-col justify-center">
+                      <div className="text-center">
+                        <div className="mb-6">
+                          <div className="text-4xl sm:text-5xl md:text-6xl text-white/90 mx-auto w-fit">
+                            {React.createElement(item.icon)}
+                          </div>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
+                          {item.title}
+                        </h3>
+                        <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              {/* Carousel navigation */}
+              <div className="flex justify-between mt-4">
+                <button onClick={prev} disabled={carouselIndex === 0} className="text-white/80 px-4 py-2 rounded bg-white/20 hover:bg-white/30 disabled:opacity-50">Prev</button>
+                <button onClick={next} disabled={carouselIndex >= contentItems.length - 1} className="text-white/80 px-4 py-2 rounded bg-white/20 hover:bg-white/30 disabled:opacity-50">Next</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
