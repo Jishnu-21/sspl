@@ -74,23 +74,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                       <p className="font-semibold text-lg text-center mb-1">{member.name}</p>
-                      <p className="text-sm text-gray-200 text-center mb-3">{member.designation}</p>
                       
-                      <div className="flex gap-3">
-                        {Object.entries(member.socials).map(([platform, url]) => (
-                          url ? (
-                            <a
-                              key={platform}
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-white hover:text-blue-300 transition-colors duration-200"
-                            >
-                              {renderSocialIcon(platform as keyof TeamMember['socials'], url)}
-                            </a>
-                          ) : null
-                        ))}
-                      </div>
+                  
                     </div>
                   </div>
                 </div>
@@ -126,23 +111,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                       <p className="font-semibold text-lg text-center mb-1">{member.name}</p>
-                      <p className="text-sm text-gray-200 text-center mb-3">{member.designation}</p>
                       
-                      <div className="flex gap-3">
-                        {Object.entries(member.socials).map(([platform, url]) => (
-                          url ? (
-                            <a
-                              key={platform}
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-white hover:text-blue-300 transition-colors duration-200"
-                            >
-                              {renderSocialIcon(platform as keyof TeamMember['socials'], url)}
-                            </a>
-                          ) : null
-                        ))}
-                      </div>
+                 
                     </div>
                   </div>
                 </div>
@@ -180,23 +150,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/75 opacity-0 group-hover:opacity-100 transition-all duration-500">
                       <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                         <p className="font-semibold text-lg text-center mb-1">{member.name}</p>
-                        <p className="text-sm text-gray-200 text-center mb-4">{member.designation}</p>
                         
-                        <div className="flex gap-4">
-                          {Object.entries(member.socials).map(([platform, url]) => (
-                            url ? (
-                              <a
-                                key={platform}
-                                href={url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-blue-300 transition-colors duration-200"
-                              >
-                                {renderSocialIcon(platform as keyof TeamMember['socials'], url)}
-                              </a>
-                            ) : null
-                          ))}
-                        </div>
+                   
                       </div>
                     </div>
                   </div>
@@ -231,23 +186,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/75 opacity-0 group-hover:opacity-100 transition-all duration-500">
                         <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                           <p className="font-semibold text-lg text-center mb-1">{member.name}</p>
-                          <p className="text-sm text-gray-200 text-center mb-4">{member.designation}</p>
                           
-                          <div className="flex gap-4">
-                            {Object.entries(member.socials).map(([platform, url]) => (
-                              url ? (
-                                <a
-                                  key={platform}
-                                  href={url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-white hover:text-blue-300 transition-colors duration-200"
-                                >
-                                  {renderSocialIcon(platform as keyof TeamMember['socials'], url)}
-                                </a>
-                              ) : null
-                            ))}
-                          </div>
+                     
                         </div>
                       </div>
                     </div>
@@ -285,23 +225,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/25 to-black/80 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                       <p className="font-semibold text-lg xl:text-xl text-center mb-2">{member.name}</p>
-                      <p className="text-sm xl:text-base text-gray-200 text-center mb-4">{member.designation}</p>
                       
-                      <div className="flex gap-4">
-                        {Object.entries(member.socials).map(([platform, url]) => (
-                          url ? (
-                            <a
-                              key={platform}
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-white hover:text-blue-300 transition-colors duration-200"
-                            >
-                              {renderSocialIcon(platform as keyof TeamMember['socials'], url)}
-                            </a>
-                          ) : null
-                        ))}
-                      </div>
+                  
                     </div>
                   </div>
                 </div>
