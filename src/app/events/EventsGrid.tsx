@@ -131,7 +131,7 @@ const EventsGrid = () => {
               />
             </Link>
           ) : (
-            <div key={event.title + event.date} className="block cursor-default opacity-70">
+            <div key={event.title + event.date} className="block cursor-default">
               <EventCard 
                 title={event.title}
                 date={event.date}

@@ -20,9 +20,9 @@ const Grc = () => {
       />
 
       <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="mb-2">
-          <div className="max-w-6xl mx-auto text-center mb-2">
-            <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
+        <div className="">
+          <div className="max-w-6xl mx-auto text-center ">
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
               We strengthen your core values, align your organization structure and infuse a culture that supports and sustains well in every season.
             </p>
           </div>
@@ -35,7 +35,7 @@ const Grc = () => {
         <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-8 md:mb-16">Governance Framework</h2>
         
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
             {/* Left side - Image */}
             <motion.div 
               className="w-full md:w-1/2 flex items-center"
@@ -112,7 +112,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
             {/* Left side - Content */}
             <motion.div 
               className="w-full md:w-1/2 flex flex-col justify-center"
@@ -236,7 +236,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
             {/* Left side - Image */}
             <motion.div 
               className="w-full md:w-1/2 "
@@ -345,7 +345,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
             {/* Left side - Content */}
             <motion.div 
               className="w-full md:w-1/2 flex flex-col"

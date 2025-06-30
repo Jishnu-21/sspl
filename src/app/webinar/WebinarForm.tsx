@@ -32,7 +32,7 @@ const WebinarForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-16" style={{ minHeight: '700px', height: '700px' }}>
+    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-16" style={{ minHeight: '400px' }}>
       {/* Left side - Webinar details */}
       <motion.div 
         className="flex-1 md:h-full flex flex-col"
@@ -100,7 +100,7 @@ const WebinarForm = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         style={{ maxWidth: '450px' }}
       >
-        <h3 className="text-base font-semibold text-left mb-4 text-green-800 pl-1">Complete the form below to access<br/>the webcast</h3>
+        <h3 className="text-base font-semibold text-left mb-8 text-green-800 pl-1">Complete the form below to access<br/>the webcast</h3>
         
         <form onSubmit={handleSubmit} className="space-y-2.5">
           <div>
@@ -213,7 +213,7 @@ const WebinarForm = () => {
           
           <button
             type="submit"
-            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 rounded border border-gray-300 transition-all duration-200 mt-3 mb-0 text-sm"
+            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 rounded border border-gray-300 transition-all duration-200 mt-4 mb-0 text-sm"
           >
             Send
           </button>

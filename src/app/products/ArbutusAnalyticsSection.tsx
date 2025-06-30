@@ -91,6 +91,7 @@ const ArbutusAnalyticsSection = () => {
 
   return (
     <div className="-mx-4 md:-mx-6 lg:-mx-8">
+      
       <section className="py-16 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
         <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
           {/* Top heading */}
@@ -137,7 +138,7 @@ const ArbutusAnalyticsSection = () => {
                 className={`${card.color} p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[180px] hover:shadow-xl transition-shadow duration-300`}
               >
                 <span className="bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded-full mb-4">YOUR NEED :</span>
-                <p className="font-medium text-lg leading-relaxed">{card.text}</p>
+                <p className="font-medium text-sm leading-relaxed">{card.text}</p>
               </motion.div>
             ))}
           </div>

@@ -8,7 +8,7 @@ const EnInvoiceComponent = () => {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-2xl text-center font-semibold text-[#366A00] mb-4">EnInvoice</h2>
+        <h2 className="text-2xl text-center font-semibold text-[#366A00] mb-4">enInvoice</h2>
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         <p className="text-gray-800 mb-6">
           EnInvoice is a comprehensive invoicing solution designed to streamline your billing processes. Our platform offers automated invoice generation and delivery, seamless integration with accounting systems, and detailed reporting and analytics for financial oversight.

@@ -71,6 +71,8 @@ const AssureBIComponent = () => {
 
   return (
     <div>
+             <h2 className="text-2xl text-center font-semibold text-[#366A00] mb-4">assureBi</h2>
+             <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
       <p className="text-gray-800 mb-4" data-aos="fade-up">
         <span className="font-bold">assureBI</span> is a management control and monitoring platform that is designed to help your company be more responsive and efficient. assureBI gives your company powerful tools that can help you to quickly identify and control the exceptions, before they could create losses to your business and boost your profitability. It helps the users to analyze data directly from the source or from the extracted form with business intelligence precision.
       </p>

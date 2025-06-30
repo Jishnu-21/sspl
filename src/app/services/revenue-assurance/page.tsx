@@ -24,20 +24,11 @@ const revenue = () => {
       useIcon: true,
       caption: "Prepaid - Postpaid\nCustomers"
     },
-    {
-      icon: FaBuilding,
-      useIcon: true,
-      caption: "Site Management"
-    },
+   
     {
       icon: FaNetworkWired,
       useIcon: true,
       caption: "Network Management\nServices"
-    },
-    {
-      icon: FaPlus,
-      useIcon: true,
-      caption: "Value Added\nServices"
     },
     {
       icon: FaExchangeAlt,
@@ -45,10 +36,12 @@ const revenue = () => {
       caption: "Inter-operator\nSettlement"
     },
     {
-      icon: FaFileInvoiceDollar,
+      icon: FaPlus,
       useIcon: true,
-      caption: "Billing and Collections"
+      caption: "Value Added\nServices"
     },
+   
+   
     {
       icon: FaHeadset,
       useIcon: true,
@@ -58,7 +51,19 @@ const revenue = () => {
       icon: FaShieldAlt,
       useIcon: true,
       caption: "Banking Payment Fraud"
-    }
+    },
+    {
+      icon: FaBuilding,
+      useIcon: true,
+      caption: "Site Management"
+    },
+    {
+      icon: FaFileInvoiceDollar,
+      useIcon: true,
+      caption: "Billing and Collections"
+    },
+   
+   
   ];
 
   const [modal, setModal] = React.useState<string | null>(null);

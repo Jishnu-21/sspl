@@ -35,7 +35,7 @@ const PartnerForm = () => {
   };
 
   return (
-    <div className="bg-white shadow-md px-6 pt-5 pb-4 rounded-lg border border-gray-200 w-full" style={{ maxWidth: '450px', minHeight: '480px' }}>
+    <div className="bg-white shadow-md px-6 pt-5 pb-4 rounded-lg border border-gray-200 w-full" style={{ maxWidth: '450px', minHeight: '320px' }}>
       <h3 className="text-base font-semibold text-left mb-4 text-green-800 pl-1">Become a Partner</h3>
       
       <form onSubmit={handleSubmit} className="space-y-2.5">
@@ -118,7 +118,7 @@ const PartnerForm = () => {
         <div className="pt-3">
           <button
             type="submit"
-            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 cursor-pointer rounded border border-gray-300 transition-all duration-200 mt-3 mb-0 text-sm"
+            className="w-full bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 cursor-pointer rounded border border-gray-300 transition-all duration-200  mb-0 text-sm"
           >
             Send
           </button>
