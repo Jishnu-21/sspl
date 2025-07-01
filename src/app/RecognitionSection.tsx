@@ -150,10 +150,10 @@ const RecognitionSection: React.FC = () => {
         <div className="w-full overflow-hidden bg-white py-4" data-aos="fade-up">
           <div className="flex animate-marquee whitespace-nowrap gap-4 sm:gap-6 md:gap-8">
             {/* Logos repeated to create seamless loop */}
-            {marqueeItems.concat(marqueeItems).map((item, index) => (
+            {marqueeItems.concat(marqueeItems, marqueeItems).map((item, index) => (
               <div
                 key={`${item.logo}-${index}`}
-                className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300 overflow-hidden"
+                className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer"
                 onMouseEnter={() => setHoveredItem(item.logo)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
