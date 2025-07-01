@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const DataMigrationRisks = () => {
   return (
-    <section className="py-12 px-4 md:px-8 bg-white">
+    <section className=" px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold text-center text-[#366A00] mb-8">The Risks Of Overlooking Data Content</h2>
         

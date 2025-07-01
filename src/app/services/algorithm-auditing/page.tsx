@@ -70,7 +70,7 @@ const algorithmAuditing = () => {
             </motion.section>
 
             <motion.section
-              className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+              className="py-6 px-4 md:px-8 max-w-7xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
