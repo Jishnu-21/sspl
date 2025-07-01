@@ -102,9 +102,9 @@ const RecognitionSection: React.FC = () => {
             {marqueeItems.map(
               (item) =>
                 item.logo === hoveredItem && (
-                  <div key={item.logo} className="flex flex-col md:flex-row w-full gap-2 md:gap-4 min-h-[180px] md:min-h-[240px] items-center">
+                  <div key={item.logo} className="flex  flex-col md:flex-row w-full gap-2 md:gap-4 min-h-[180px] md:min-h-[240px] items-center">
                     {/* Left Image Section */}
-                    <div className="w-full md:w-1/5 flex flex-col gap-2 justify-center">
+                    <div className="w-full md:w-1/5 bg-white  flex flex-col gap-2 justify-center">
                       <div className="relative w-full h-24 md:h-32">
                         <Image
                           src={item.hoverDetails.image1}
