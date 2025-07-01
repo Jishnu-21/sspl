@@ -112,7 +112,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
+          <div className="flex flex-col md:flex-row items-stretch gap-2 md:gap-2">
             {/* Left side - Content */}
             <motion.div 
               className="w-full md:w-1/2 flex flex-col justify-center"
@@ -132,7 +132,7 @@ const Grc = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#366A00] mt-1 text-sm">▶</span>
-                      <span className="text-gray-700 textestros md:text-sm">Assist in preparing Risk Register / RCSA / ORSA</span>
+                      <span className="text-gray-700 text-xs md:text-sm">Assist in preparing Risk Register / RCSA / ORSA</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#366A00] mt-1 text-sm">▶</span>
@@ -236,7 +236,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
+          <div className="flex flex-col md:flex-row items-stretch ">
             {/* Left side - Image */}
             <motion.div 
               className="w-full md:w-1/2 "
@@ -345,7 +345,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
+          <div className="flex flex-col md:flex-row items-stretch gap-2 md:gap-2">
             {/* Left side - Content */}
             <motion.div 
               className="w-full md:w-1/2 flex flex-col"

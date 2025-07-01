@@ -153,7 +153,7 @@ const RecognitionSection: React.FC = () => {
             {marqueeItems.concat(marqueeItems).map((item, index) => (
               <div
                 key={`${item.logo}-${index}`}
-                className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300"
+                className="relative flex-shrink-0 w-[260px] h-[170px] sm:w-[300px] sm:h-[190px] md:w-[340px] md:h-[220px] lg:w-[380px] lg:h-[250px] cursor-pointer bg-white shadow-sm rounded-md hover:shadow-md transition-shadow duration-300 overflow-hidden"
                 onMouseEnter={() => setHoveredItem(item.logo)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
@@ -163,7 +163,7 @@ const RecognitionSection: React.FC = () => {
                     alt={item.hoverDetails.title}
                     fill
                     sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1024px) 340px, 380px"
-                    className="object-contain p-2"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
