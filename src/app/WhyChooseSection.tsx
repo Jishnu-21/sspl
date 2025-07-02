@@ -59,7 +59,7 @@ const WhyChooseSection = () => {
   let cardsPerView = 1;
   if (windowWidth >= 1024) {
     cardsPerView = 3;
-  } else if (windowWidth >= 768) {
+  } else if (windowWidth > 768) {
     cardsPerView = 2;
   }
 
@@ -75,11 +75,11 @@ const WhyChooseSection = () => {
   }, [cardsPerView]);
 
   return (
-    <div className="container mx-auto   md:px-10 lg:px-10 xl:px-1 2xl:px-10 max-w-[1920px]">
+    <div className="container mx-auto 2xl:px-8 max-w-[1920px]">
       <div className="rounded-2xl overflow-hidden p-4 sm:p-8 lg:p-12 xl:p-16">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <motion.h2 
-            className="text-3xl mt-6 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6"
+            className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6"
             variants={titleParent}
             initial="hidden"
             whileInView="visible"
@@ -102,7 +102,7 @@ const WhyChooseSection = () => {
         </div>
 
         {/* Only render one layout at a time */}
-        {windowWidth < 768 ? (
+        {windowWidth <= 768 ? (
           // Mobile: show cards stacked vertically
           <div className="flex flex-col gap-y-4">
             {contentItems.map((item, index) => (
@@ -123,7 +123,7 @@ const WhyChooseSection = () => {
                 <div className="text-center relative z-20">
                   <div className="mb-4">
                     <motion.div
-                      className="text-3xl text-white mx-auto w-fit"
+                      className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-6xl text-white mx-auto w-fit"
                       initial={{ scale: 0.8, rotate: -10 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: index * 0.2 + 0.3, type: "spring", stiffness: 300 }}
@@ -131,10 +131,10 @@ const WhyChooseSection = () => {
                       {React.createElement(item.icon)}
                     </motion.div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl font-bold text-white mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-white text-sm leading-relaxed font-light">
+                  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg 2xl:text-lg text-white leading-relaxed font-light">
                     {item.description}
                   </p>
                 </div>
@@ -162,7 +162,7 @@ const WhyChooseSection = () => {
                 <div className="text-center relative z-20">
                   <div className="mb-4 sm:mb-6">
                     <motion.div
-                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mx-auto w-fit"
+                      className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-6xl text-white mx-auto w-fit"
                       initial={{ scale: 0.8, rotate: -10 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: index * 0.2 + 0.3, type: "spring", stiffness: 300 }}
@@ -170,10 +170,10 @@ const WhyChooseSection = () => {
                       {React.createElement(item.icon)}
                     </motion.div>
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
                     {item.title}
                   </h3>
-                  <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg 2xl:text-lg text-white leading-relaxed font-light">
                     {item.description}
                   </p>
                 </div>
@@ -203,14 +203,14 @@ const WhyChooseSection = () => {
                     <div className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-4 sm:p-6 md:p-8 border border-[#1B3D69] shadow-xl h-full flex flex-col justify-center relative z-20">
                       <div className="text-center">
                         <div className="mb-4 sm:mb-6">
-                          <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mx-auto w-fit">
+                          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-6xl text-white mx-auto w-fit">
                             {React.createElement(item.icon)}
                           </div>
                         </div>
-                        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
+                        <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
                           {item.title}
                         </h3>
-                        <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                        <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg 2xl:text-lg text-white leading-relaxed font-light">
                           {item.description}
                         </p>
                       </div>
