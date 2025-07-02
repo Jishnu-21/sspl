@@ -184,7 +184,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <div className="py-4 relative will-change-transform overflow-visible">
+    <div className="py-8 relative will-change-transform overflow-visible">
       <motion.section 
         ref={sectionRef}
         initial="hidden"
@@ -207,7 +207,7 @@ const CaseStudiesSection = () => {
           <div className="flex flex-col md:flex-row">
             {/* Left side content */}
             <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-              <p className="text-2xl sm:text-sm md:text-3xl text-white leading-relaxed">
+              <p className="text-xl sm:text-sm md:text-[28px] text-white leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
               </p>
               {/* Vertical line that connects with the horizontal line */}

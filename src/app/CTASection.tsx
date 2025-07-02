@@ -66,7 +66,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
         <motion.div 
           className="bg-[#0f2756] rounded-lg overflow-hidden relative py-16 sm:py-20 md:py-28 px-6 sm:px-8 text-center text-white min-h-[300px] sm:min-h-[400px] flex items-center justify-center"
