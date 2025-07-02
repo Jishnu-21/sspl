@@ -49,7 +49,6 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
   delay,
   inView 
 }) => {
-  // Handle special case for 24/7
   const isSpecialValue = value === '24/7';
   
   if (isSpecialValue) {
@@ -79,7 +78,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
           transition={{ duration: 0.8, delay: delay * 0.15 + 0.3 }}
         >
           <motion.div 
-            className="text-sm font-semibold text-gray-700 uppercase tracking-wider"
+            className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-sm 2xl:text-sm font-semibold text-gray-700 uppercase tracking-wider"
             initial={{ opacity: 0 }}
             animate={{ opacity: inView ? 1 : 0 }}
             transition={{ delay: delay * 0.15 + 0.2 }}
@@ -96,7 +95,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
         
         <div className="flex items-start mb-6 justify-between">
           <motion.div
-            className="text-6xl font-bold bg-clip-text"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-6xl font-bold bg-clip-text"
             style={{ color: '#1b3d59' }}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ 
@@ -131,7 +130,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
         </div>
         
         <motion.div 
-          className="text-sm text-gray-600 max-w-[220px] leading-relaxed"
+          className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-sm 2xl:text-sm text-gray-600 max-w-[220px] leading-relaxed"
           initial={{ opacity: 0, y: 10 }}
           animate={{ 
             opacity: inView ? 1 : 0,
@@ -148,7 +147,6 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
     );
   }
   
-  // Extract number from value string (e.g., "25+" -> 25)
   const numericValue = parseInt(value.replace(/[^\d]/g, '')) || 0;
   const suffix = value.replace(/[\d]/g, '');
   
@@ -180,7 +178,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
         transition={{ duration: 0.8, delay: delay * 0.15 + 0.3 }}
       >
         <motion.div 
-          className="text-sm font-semibold text-gray-700 uppercase tracking-wider"
+          className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-sm 2xl:text-sm font-semibold text-gray-700 uppercase tracking-wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ delay: delay * 0.15 + 0.2 }}
@@ -197,7 +195,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
       
       <div className="flex items-start mb-6 justify-between">
         <motion.div
-          className="text-6xl font-bold bg-clip-text"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-6xl font-bold bg-clip-text"
           style={{ color: '#1b3d59' }}
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ 
@@ -233,7 +231,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
       </div>
       
       <motion.div 
-        className="text-sm text-gray-600 max-w-[220px] leading-relaxed"
+        className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-sm 2xl:text-sm text-gray-600 max-w-[220px] leading-relaxed"
         initial={{ opacity: 0, y: 10 }}
         animate={{ 
           opacity: inView ? 1 : 0,
@@ -263,14 +261,14 @@ const StatsSection = () => {
       description: 'years of active, market-driven experience under our belt.',
     },
     {
-      title: 'Clients',
-      value: '100+',
-      description: 'satisfied clients who trust our expertise and solutions.',
-    },
-    {
       title: 'Global Analytics Hub',
       value: '24/7',
       description: 'continuous monitoring and support for your business needs.',
+    },
+    {
+      title: 'Clients',
+      value: '100+',
+      description: 'satisfied clients who trust our expertise and solutions.',
     },
     {
       title: 'Projects',
@@ -280,12 +278,12 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-8 pb-32  text-black overflow-hidden">
+    <section ref={ref} className="py-8 pb-32 text-black overflow-hidden">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-16 items-center">
           {/* Left side - Image loads when in view */}
           <motion.div 
-            className="lg:w-5/12 w-full max-w-md lg:max-w-none mx-auto"
+            className="w-full lg:w-5/12 max-w-full mx-auto mb-8 lg:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ 
               opacity: inView ? 1 : 0,
@@ -310,7 +308,7 @@ const StatsSection = () => {
               }}
             >
               <motion.div
-                className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] relative"
+                className="w-full h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] relative"
                 animate={inView ? { 
                   rotateY: [0, 0.5, 0, -0.5, 0],
                   scale: [1, 1.005, 1, 1.005, 1]
@@ -325,9 +323,8 @@ const StatsSection = () => {
                 <Image
                   src="/images/home/sspl-community.png"
                   alt="SSPL Analytics"
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 
                 {/* Overlay gradient for depth */}
@@ -381,7 +378,7 @@ const StatsSection = () => {
 
           {/* Right side - Stats appear when in view */}
           <motion.div 
-            className="lg:w-7/12 w-full"
+            className="w-full lg:w-7/12"
             initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: inView ? 1 : 0,
@@ -393,17 +390,31 @@ const StatsSection = () => {
               ease: [0.25, 0.46, 0.45, 0.94]
             }}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-              {stats.map((stat, index) => (
-                <StatItem
-                  key={index}
-                  title={stat.title}
-                  value={stat.value}
-                  description={stat.description}
-                  delay={index}
-                  inView={inView}
-                />
-              ))}
+            <div className="grid grid-cols-2 gap-x-4 md:gap-x-8 gap-y-12">
+              <div className="flex flex-col space-y-12">
+                {stats.slice(0, 2).map((stat, index) => (
+                  <StatItem
+                    key={index}
+                    title={stat.title}
+                    value={stat.value}
+                    description={stat.description}
+                    delay={index}
+                    inView={inView}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col space-y-12">
+                {stats.slice(2, 4).map((stat, index) => (
+                  <StatItem
+                    key={index + 2}
+                    title={stat.title}
+                    value={stat.value}
+                    description={stat.description}
+                    delay={index + 2}
+                    inView={inView}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
