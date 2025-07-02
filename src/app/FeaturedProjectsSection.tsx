@@ -4,7 +4,6 @@ import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
-
 const CaseStudiesSection = () => {
   const controls = useAnimation();
   const sectionRef = useRef(null);
@@ -112,13 +111,13 @@ const CaseStudiesSection = () => {
     }
   ];
 
-  // Create card items for the carousel
+  // Create card items for the carousel - Responsive card sizes
   const cardItems = caseStudies.map((study, index) => (
     <div 
       key={index}
-      className="flex-shrink-0 w-96 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
+      className="flex-shrink-0 w-72 sm:w-80 md:w-84 lg:w-96 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className="h-80 overflow-hidden relative rounded-t-xl">
+      <div className="h-48 sm:h-56 md:h-64 lg:h-80 overflow-hidden relative rounded-t-xl">
         <Image 
           src={study.image} 
           alt={study.title}
@@ -126,21 +125,21 @@ const CaseStudiesSection = () => {
           className="object-cover"
         />
       </div>
-      <div className="p-6 bg-white flex-1 rounded-b-xl">
-        <h3 className="text-lg font-semibold mb-3 text-gray-800">{study.title}</h3>
-        <p className="text-base text-gray-600 mb-6">{study.description}</p>
+      <div className="p-3 sm:p-4 md:p-5 lg:p-6 bg-white flex-1 rounded-b-xl">
+        <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800">{study.title}</h3>
+        <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-3 sm:mb-4 md:mb-6 line-clamp-3">{study.description}</p>
         <div className="mt-auto">
           {study.subtypes && (
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1 sm:space-y-2">
               {study.subtypes.map((subtype, idx) => (
                 <button 
                   key={idx}
                   onClick={() => openPdf(study.title, subtype)}
-                  className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+                  className="flex items-center text-black text-xs sm:text-sm md:text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
                 >
                   {subtype}
-                  <div className="w-4 h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
-                    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+                    <svg className="w-2 h-2 sm:w-3 sm:h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -151,11 +150,11 @@ const CaseStudiesSection = () => {
           {!study.subtypes && index !== 0 && (
             <button 
               onClick={() => openPdf(study.title)}
-              className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+              className="flex items-center text-black text-xs sm:text-sm md:text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
             >
               View Case Study
-              <div className="w-4 h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
-                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+                <svg className="w-2 h-2 sm:w-3 sm:h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
@@ -184,41 +183,40 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <div className="py-16 relative will-change-transform overflow-visible">
+    <div className="py-8 sm:py-12 md:py-16 relative will-change-transform overflow-visible">
       <motion.section 
         ref={sectionRef}
         initial="hidden"
         animate={controls}
         variants={sectionVariants}
-        className="py-6 overflow-hidden rounded-3xl my-4 shadow-xl relative"
+        className="py-4 sm:py-6 overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl my-2 sm:my-3 md:my-4 shadow-xl relative"
       >
         {/* Solid Color Background */}
         <div className="absolute inset-0 w-full h-full bg-[#1B3D69] z-0"></div>
 
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] relative z-20">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-[1920px] relative z-20">
           {/* Top heading */}
-          <div className="pb-4  mb-0 text-center">
-            <h2 className="text-4xl md:text-5xl mt-4 font-bold text-white">Case Studies</h2>
+          <div className="pb-2 sm:pb-3 md:pb-4 mb-0 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 sm:mt-3 md:mt-4 font-bold text-white">Case Studies</h2>
           </div>
           {/* Horizontal line that extends across the entire section */}
-          <div
-            className="border-b border-white w-full mb-8"
-          />
-          <div className="flex flex-col md:flex-row">
+          <div className="border-b border-white w-full mb-4 sm:mb-6 md:mb-8" />
+          
+          <div className="flex flex-col lg:flex-row">
             {/* Left side content */}
-            <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-              <p className="text-xl sm:text-sm md:text-[26px] text-white leading-relaxed">
+            <div className="lg:w-1/3 mb-6 sm:mb-8 md:mb-10 lg:mb-0 pr-0 lg:pr-6 xl:pr-8 relative">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
               </p>
               {/* Vertical line that connects with the horizontal line */}
               <div
-                className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-white"
-                style={{ top: '-30px' }}
+                className="hidden lg:block absolute right-0 top-0 bottom-0 w-px bg-white"
+                style={{ top: '-20px' }}
               />
             </div>
             
             {/* Right side scrollable cards */}
-            <div className="md:w-2/3 overflow-hidden -mt-16">
+            <div className="lg:w-2/3 overflow-hidden -mt-8 sm:-mt-12 md:-mt-16">
               <div className="relative">
                 <Carousel items={cardItems} />
               </div>
