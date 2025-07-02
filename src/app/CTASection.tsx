@@ -128,7 +128,7 @@ const CTASection = () => {
               }}
               whileTap={{ scale: 0.98 }}
             >
-              Get Started
+              Get in Touch
             </motion.a>
           </div>
         </motion.div>
