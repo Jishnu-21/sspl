@@ -75,12 +75,11 @@ const WhyChooseSection = () => {
   }, [cardsPerView]);
 
   return (
-    <div className="py-4">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
-        <div className="rounded-2xl overflow-hidden  bg-gradient-to-br from-[#1B3D69] to-[#152d4f] p-8 sm:p-12 lg:p-16">
+    <div className="px-10">
+        <div className="rounded-2xl overflow-hidden p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2 
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6"
               variants={titleParent}
               initial="hidden"
               whileInView="visible"
@@ -99,17 +98,17 @@ const WhyChooseSection = () => {
                 </motion.span>
               ))}
             </motion.h2>
-            <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-[#1B3D69] mx-auto rounded-full"></div>
           </div>
 
           {/* Only render one layout at a time */}
           {windowWidth >= 1024 ? (
             // Desktop grid
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 items-stretch">
               {contentItems.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-xl"
+                  className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-12 border border-[#1B3D69] shadow-xl flex flex-col h-full justify-center w-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 relative group overflow-hidden"
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{
@@ -119,10 +118,12 @@ const WhyChooseSection = () => {
                     stiffness: 300
                   }}
                 >
-                  <div className="text-center">
+                  {/* Green overlay on hover */}
+                  <div className="absolute inset-0 bg-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
+                  <div className="text-center relative z-20">
                     <div className="mb-6">
                       <motion.div
-                        className="text-4xl sm:text-5xl md:text-6xl text-white/90 mx-auto w-fit"
+                        className="text-4xl sm:text-5xl md:text-6xl text-white mx-auto w-fit"
                         initial={{ scale: 0.8, rotate: -10 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ delay: index * 0.2 + 0.3, type: "spring", stiffness: 300 }}
@@ -133,7 +134,7 @@ const WhyChooseSection = () => {
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
                       {item.title}
                     </h3>
-                    <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                    <p className="text-white text-base md:text-lg leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
@@ -148,7 +149,7 @@ const WhyChooseSection = () => {
                   {contentItems.map((item, index) => (
                     <motion.div
                       key={index}
-                      className={`flex-shrink-0 px-2 ${cardsPerView === 2 ? 'w-1/2' : 'w-full'}`}
+                      className={`flex-shrink-0 px-2 ${cardsPerView === 2 ? 'w-1/2' : 'w-full'} transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 relative group overflow-hidden`}
                       initial={{ y: 50, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{
@@ -158,17 +159,19 @@ const WhyChooseSection = () => {
                         stiffness: 300
                       }}
                     >
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-xl h-full flex flex-col justify-center">
+                      {/* Green overlay on hover */}
+                      <div className="absolute inset-0 bg-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
+                      <div className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-8 border border-[#1B3D69] shadow-xl h-full flex flex-col justify-center relative z-20">
                         <div className="text-center">
                           <div className="mb-6">
-                            <div className="text-4xl sm:text-5xl md:text-6xl text-white/90 mx-auto w-fit">
+                            <div className="text-4xl sm:text-5xl md:text-6xl text-white mx-auto w-fit">
                               {React.createElement(item.icon)}
                             </div>
                           </div>
                           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
                             {item.title}
                           </h3>
-                          <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                          <p className="text-white text-base md:text-lg leading-relaxed font-light">
                             {item.description}
                           </p>
                         </div>
@@ -186,7 +189,6 @@ const WhyChooseSection = () => {
           )}
         </div>
       </div>
-    </div>
   );
 };
 

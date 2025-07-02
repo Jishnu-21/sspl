@@ -87,7 +87,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
             {title}
           </motion.div>
           <motion.div 
-            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+            className="absolute bottom-0 left-0 h-0.5 bg-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: inView ? "100%" : 0 }}
             transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
@@ -96,7 +96,8 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
         
         <div className="flex items-start mb-6 justify-between">
           <motion.div
-            className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700"
+            className="text-6xl font-bold bg-clip-text"
+            style={{ color: '#1b3d59' }}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ 
               scale: inView ? 1 : 0.5,
@@ -187,7 +188,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
           {title}
         </motion.div>
         <motion.div 
-          className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+          className="absolute bottom-0 left-0 h-0.5 bg-green-500 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: inView ? "100%" : 0 }}
           transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
@@ -196,7 +197,8 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
       
       <div className="flex items-start mb-6 justify-between">
         <motion.div
-          className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700"
+          className="text-6xl font-bold bg-clip-text"
+          style={{ color: '#1b3d59' }}
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ 
             scale: inView ? 1 : 0.5,
@@ -278,7 +280,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 pb-32 bg-gradient-to-br from-gray-50 to-white text-black overflow-hidden">
+    <section ref={ref} className="py-8 pb-32 bg-gradient-to-br from-gray-50 to-white text-black overflow-hidden">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left side - Image loads when in view */}
