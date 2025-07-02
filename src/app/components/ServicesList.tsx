@@ -25,22 +25,28 @@ const services: Service[] = [
     image: '/images/home/grc.png'
   },
   {
+    title: 'Media Analytics',
+    description: 'Our Media Analytics services help organizations monitor, analyze, and gain insights from media data to optimize campaigns and measure brand impact.',
+    color: 'from-blue-900/20',
+    image: '/images/home/media analytics.jpg'
+  },
+  {
     title: 'Revenue Assurance',
     description: 'Our Revenue Assurance services help businesses identify and prevent revenue leakage. We implement comprehensive systems to monitor, detect, and correct issues that impact your bottom line, ensuring maximum revenue capture and financial integrity.',
     color: 'from-blue-900/20',
     image: '/images/home/assurance.png'
   },
   {
-    title: 'Operations & Finance Analytics',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
-    color: 'from-blue-900/20',
-    image: '/images/home/global-analytics.png'
-  },
-  {
     title: 'Risk Management Audit Analytics',
     description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
     color: 'from-blue-900/20',
     image: '/images/home/Risk Management Audit Analytics.jpg'
+  },
+  {
+    title: 'Operations & Finance Analytics',
+    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    color: 'from-blue-900/20',
+    image: '/images/home/global-analytics.png'
   },
   {
     title: 'Fraud Management & Detection',
@@ -60,12 +66,7 @@ const services: Service[] = [
     color: 'from-blue-900/20',
     image: '/images/home/Algorithm Auditing.jpg'
   },
-  {
-    title: 'Media Analytics',
-    description: 'Our Media Analytics services help organizations monitor, analyze, and gain insights from media data to optimize campaigns and measure brand impact.',
-    color: 'from-blue-900/20',
-    image: '/images/home/media analytics.jpg'
-  }
+ 
 ];
 
 const serviceLinks = {
