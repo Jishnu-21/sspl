@@ -203,7 +203,7 @@ const ServicesList = () => {
 
   return (
     <div className={`
-      py-12 sm:py-16 md:py-20
+      py-4
       transition-colors duration-300
       w-full mt-8 sm:mt-10 md:mt-10
     `} ref={containerRef}>

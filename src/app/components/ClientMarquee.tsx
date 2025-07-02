@@ -22,36 +22,41 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <div className={`w-full bg-gray-200 py-8 overflow-hidden ${className}`}>
-      <div className="relative w-full">
-        <motion.div
-          className="flex items-center"
-          animate={isPaused ? {} : { x: '-50%' }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-            repeatType: 'loop',
-          }}
-          style={{ width: 'fit-content' }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {duplicatedClients.map((client, index) => (
-            <div key={index} className="flex-shrink-0 mx-8">
-              <div className="relative h-14 w-36">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-            </div>
-          ))}
-        </motion.div>
+    <>
+      <div className="w-full text-center ">
+      <h2 className="block text-3xl sm:text-4xl md:text-5xl font-bold text-black -mt-4 sm:-mt-6 md:-mt-8 mb-8 leading-none">Our Clients</h2>
       </div>
-    </div>
+      <div className={`w-full bg-gray-200 py-8 overflow-hidden ${className}`}>
+        <div className="relative w-full">
+          <motion.div
+            className="flex items-center"
+            animate={isPaused ? {} : { x: '-50%' }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: 'linear',
+              repeatType: 'loop',
+            }}
+            style={{ width: 'fit-content' }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {duplicatedClients.map((client, index) => (
+              <div key={index} className="flex-shrink-0 mx-8">
+                <div className="relative h-24 w-48">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </>
   );
 };
 

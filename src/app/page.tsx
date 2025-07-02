@@ -21,7 +21,6 @@ export default function Home() {
           <WhyChooseSection/>
           <StatsSection/>
           <ClientMarquee/>
-          <div className="bg-white h-30"></div>
           <CaseStudiesSection/>
           <RecognitionSection/>
           <CTASection/>

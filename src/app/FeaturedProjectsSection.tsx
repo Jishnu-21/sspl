@@ -116,9 +116,9 @@ const CaseStudiesSection = () => {
   const cardItems = caseStudies.map((study, index) => (
     <div 
       key={index}
-      className="flex-shrink-0 w-80 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
+      className="flex-shrink-0 w-96 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
     >
-      <div className="h-64 overflow-hidden relative rounded-t-xl">
+      <div className="h-80 overflow-hidden relative rounded-t-xl">
         <Image 
           src={study.image} 
           alt={study.title}
@@ -126,9 +126,9 @@ const CaseStudiesSection = () => {
           className="object-cover"
         />
       </div>
-      <div className="p-4 bg-white flex-1 rounded-b-xl">
-        <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
-        <p className="text-xs text-gray-600 mb-4">{study.description}</p>
+      <div className="p-6 bg-white flex-1 rounded-b-xl">
+        <h3 className="text-lg font-semibold mb-3 text-gray-800">{study.title}</h3>
+        <p className="text-base text-gray-600 mb-6">{study.description}</p>
         <div className="mt-auto">
           {study.subtypes && (
             <div className="flex flex-col space-y-2">
@@ -136,7 +136,7 @@ const CaseStudiesSection = () => {
                 <button 
                   key={idx}
                   onClick={() => openPdf(study.title, subtype)}
-                  className="flex items-center text-black text-xs font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+                  className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
                 >
                   {subtype}
                   <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
@@ -151,7 +151,7 @@ const CaseStudiesSection = () => {
           {!study.subtypes && index !== 0 && (
             <button 
               onClick={() => openPdf(study.title)}
-              className="flex items-center text-black text-xs font-medium hover:text-[#366A00] transition-colors cursor-pointer"
+              className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
             >
               View Case Study
               <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
@@ -184,32 +184,20 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <div className="relative will-change-transform overflow-visible">
+    <div className="py-4 relative will-change-transform overflow-visible">
       <motion.section 
         ref={sectionRef}
         initial="hidden"
         animate={controls}
         variants={sectionVariants}
-        className="py-24 overflow-hidden rounded-3xl my-8 shadow-xl relative"
+        className="py-10 overflow-hidden rounded-3xl my-8 shadow-xl relative"
       >
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-          <div className="absolute inset-0  z-10"></div> {/* Added proper overlay */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute w-full h-full object-cover"
-          >
-            <source src="/videos/case-studies.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        {/* Solid Color Background */}
+        <div className="absolute inset-0 w-full h-full bg-[#1B3D69] z-0"></div>
 
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] relative z-20">
           {/* Top heading */}
-          <div className="pb-4 mb-0">
+          <div className="pb-4 mb-0 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white">Case Studies</h2>
           </div>
           {/* Horizontal line that extends across the entire section */}
@@ -219,7 +207,7 @@ const CaseStudiesSection = () => {
           <div className="flex flex-col md:flex-row">
             {/* Left side content */}
             <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-              <p className="text-sm text-white leading-relaxed">
+              <p className="text-2xl sm:text-sm md:text-3xl text-white leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
               </p>
               {/* Vertical line that connects with the horizontal line */}
