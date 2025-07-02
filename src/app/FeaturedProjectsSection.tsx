@@ -139,7 +139,7 @@ const CaseStudiesSection = () => {
                   className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
                 >
                   {subtype}
-                  <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+                  <div className="w-4 h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
                     <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -154,7 +154,7 @@ const CaseStudiesSection = () => {
               className="flex items-center text-black text-base font-medium hover:text-[#366A00] transition-colors cursor-pointer"
             >
               View Case Study
-              <div className="w-4 h-4 ml-1 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
+              <div className="w-4 h-4 ml-1 mt-[-2px] rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#366A00]">
                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -190,7 +190,7 @@ const CaseStudiesSection = () => {
         initial="hidden"
         animate={controls}
         variants={sectionVariants}
-        className="py-10 overflow-hidden rounded-3xl my-8 shadow-xl relative"
+        className="py-6 overflow-hidden rounded-3xl my-4 shadow-xl relative"
       >
         {/* Solid Color Background */}
         <div className="absolute inset-0 w-full h-full bg-[#1B3D69] z-0"></div>
@@ -207,7 +207,7 @@ const CaseStudiesSection = () => {
           <div className="flex flex-col md:flex-row">
             {/* Left side content */}
             <div className="md:w-1/3 mb-10 md:mb-0 pr-8 relative">
-              <p className="text-xl sm:text-sm md:text-[28px] text-white leading-relaxed">
+              <p className="text-xl sm:text-sm md:text-[26px] text-white leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
               </p>
               {/* Vertical line that connects with the horizontal line */}
