@@ -75,7 +75,7 @@ const WhyChooseSection = () => {
   }, [cardsPerView]);
 
   return (
-    <div className="px-10">
+    <div className="px-8">
         <div className="rounded-2xl overflow-hidden p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2 
@@ -119,7 +119,7 @@ const WhyChooseSection = () => {
                   }}
                 >
                   {/* Green overlay on hover */}
-                  <div className="absolute inset-0 bg-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" style={{ backgroundColor: 'rgba(58, 107, 27, 1)' }}></div>
                   <div className="text-center relative z-20">
                     <div className="mb-6">
                       <motion.div
@@ -160,7 +160,7 @@ const WhyChooseSection = () => {
                       }}
                     >
                       {/* Green overlay on hover */}
-                      <div className="absolute inset-0 bg-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" style={{ backgroundColor: 'rgba(58, 107, 27, 0.2)' }}></div>
                       <div className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-8 border border-[#1B3D69] shadow-xl h-full flex flex-col justify-center relative z-20">
                         <div className="text-center">
                           <div className="mb-6">

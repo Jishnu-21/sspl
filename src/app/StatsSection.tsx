@@ -87,7 +87,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
             {title}
           </motion.div>
           <motion.div 
-            className="absolute bottom-0 left-0 h-0.5 bg-green-500 rounded-full"
+            className="absolute bottom-0 left-0 h-0.5 bg-[#3A6B1B] rounded-full"
             initial={{ width: 0 }}
             animate={{ width: inView ? "100%" : 0 }}
             transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
@@ -126,7 +126,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
               type: "spring"
             }}
           >
-            <UpArrow className="text-green-500 mt-2" delay={delay + 0.3} />
+            <UpArrow className="text-[#3A6B1B] mt-2" delay={delay + 0.3} />
           </motion.div>
         </div>
         
@@ -188,7 +188,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
           {title}
         </motion.div>
         <motion.div 
-          className="absolute bottom-0 left-0 h-0.5 bg-green-500 rounded-full"
+          className="absolute bottom-0 left-0 h-0.5 bg-[#3A6B1B] rounded-full"
           initial={{ width: 0 }}
           animate={{ width: inView ? "100%" : 0 }}
           transition={{ duration: 0.8, delay: delay * 0.15 + 0.4 }}
@@ -228,7 +228,7 @@ const StatItem: React.FC<StatItemProps & { delay: number; inView: boolean }> = (
             type: "spring"
           }}
         >
-          <UpArrow className="text-green-500 mt-2" delay={delay + 0.3} />
+          <UpArrow className="text-[#3A6B1B] mt-2" delay={delay + 0.3} />
         </motion.div>
       </div>
       
