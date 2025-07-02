@@ -57,7 +57,7 @@ const WhyChooseSection = () => {
 
   // Determine how many cards to show at a time
   let cardsPerView = 1;
-  if (windowWidth >= 1024) {
+  if (windowWidth > 1024) {
     cardsPerView = 3;
   } else if (windowWidth > 768) {
     cardsPerView = 2;
@@ -102,7 +102,7 @@ const WhyChooseSection = () => {
         </div>
 
         {/* Only render one layout at a time */}
-        {windowWidth <= 768 ? (
+        {windowWidth <= 1024 ? (
           // Mobile: show cards stacked vertically
           <div className="flex flex-col gap-y-4">
             {contentItems.map((item, index) => (
