@@ -65,16 +65,6 @@ const RecognitionSection: React.FC = () => {
       },
     },
     {
-      logo: '/images/awards/award5.jpg',
-      hoverDetails: {
-        title: 'Natraj Delhi Ratan Award 2017',
-        description: 'Recognizing outstanding contributions in the field of art and training.',
-        image1: '/images/awards/award5.jpg',
-        industry: 'Art & Training',
-        scopeOfWork: 'Art and Training',
-      },
-    },
-    {
       logo: '/images/awards/award6.jpg',
       hoverDetails: {
         title: 'India Excellence Award',
@@ -171,6 +161,15 @@ const RecognitionSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Scroll Indicator for all screens */}
+        <div className="flex justify-center mt-2" aria-hidden="true">
+          <div className="flex items-center gap-1">
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0s'}}></span>
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0.15s'}}></span>
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0.3s'}}></span>
+          </div>
+        </div>
+
         <style jsx>{`
           @keyframes marquee {
             0% {
@@ -201,6 +200,13 @@ const RecognitionSection: React.FC = () => {
           }
           .hide-scrollbar::-webkit-scrollbar {
             display: none; /* Chrome/Safari/Webkit */
+          }
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+          }
+          .animate-bounce {
+            animation: bounce 1.2s infinite;
           }
         `}</style>
       </div>
