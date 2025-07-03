@@ -91,10 +91,10 @@ const predictiveanalysis= () => {
             <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6">Some of the applied areas of the Predictive Analytics are:</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full max-w-[95%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full pt-4 sm:pt-6 pb-2 sm:pb-4" >
             {/* Insurance Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               data-aos="zoom-in"
               onClick={() => setModal('Insurance')}
             >
@@ -111,7 +111,7 @@ const predictiveanalysis= () => {
             
             {/* Telecom Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               data-aos="zoom-in"
               data-aos-delay="100"
               onClick={() => setModal('Telecom')}
@@ -129,7 +129,7 @@ const predictiveanalysis= () => {
             
             {/* Wind-Mill Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer"
+              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               data-aos="zoom-in"
               data-aos-delay="200"
               onClick={() => setModal('Wind-Mill')}
