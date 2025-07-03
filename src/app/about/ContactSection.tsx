@@ -123,7 +123,7 @@ const ContactSection = () => {
               E: info@sspl.net.in | W: www.sspl.net.in | CIN: U72300DL2008PTC182090</p>
             </div>
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
-              <h4 className="text-xl text-black font-semibold mb-4 text-center">Middle East</h4>
+              <h4 className="text-xl text-black font-semibold mb-4 text-center">BAHRAIN</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
               Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain<br/>
               Tel.: ‪+973-13622552‬ | M: ‪+973-3889 2927‬<br/>

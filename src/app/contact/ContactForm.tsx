@@ -116,7 +116,7 @@ const ContactForm = () => {
       cin: 'U72300DL2008PTC182090'
     },
     {
-      country: 'MIDDLE EAST',
+      country: 'BAHRAIN',
       time: currentTime.middleEast,
       address: 'Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain',
       email: 'info@ssplme.com',

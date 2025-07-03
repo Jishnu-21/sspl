@@ -28,7 +28,7 @@ const Footer = ({ className = '' }: FooterProps) => {
       phone: "+91-11-23765368"
     },
     {
-      name: "Middle East Office",
+      name: "Bahrain Office",
       address: "Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain",
       email: "info@ssplme.com",
       phone: "+973-13622552"
