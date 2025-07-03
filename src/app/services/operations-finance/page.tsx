@@ -17,10 +17,9 @@ const OperationsFinance = () => {
         <PageBanner
           backgroundImage="/images/services/banners/ofa.png"
           title="Operations & Finance Analytics"
-          subtitle="Can CFOs really use big data for Finance Analytics?"
         />
         <motion.section
-          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -40,7 +39,7 @@ const OperationsFinance = () => {
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
         <motion.section
-          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

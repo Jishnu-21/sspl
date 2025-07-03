@@ -9,8 +9,7 @@ import DataMigrationRisks from '@/app/components/DataMigrationRisks'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
-
-const dataMigration = () => {
+const DataMigration = () => {
   return (
     <>
       <main className="flex flex-col bg-white min-h-screen">
@@ -22,7 +21,7 @@ const dataMigration = () => {
         />
         
         <motion.section
-          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -42,7 +41,7 @@ const dataMigration = () => {
         
         {/* Why Migrate Your Data */}
         <motion.section
-          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto mb-4"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -76,8 +75,8 @@ const dataMigration = () => {
             <p className="text-gray-700 leading-relaxed mb-6">
               The technology with its critical technical advancements, helps the client to gain better insights of the migrated data tables, fields and records. Few of the technological benefits are listed below:     
             </p>
-            <p className="text-gray-700 leading-relaxed ">
-              <ul className="list-disc list-inside  inline-block text-left">
+            <p className="text-gray-700 leading-relaxed">
+              <ul className="list-disc list-inside inline-block text-left">
                 <li>100% data testing, with no sampling or test records.</li>
                 <li>Once data is captured, the records cannot be modified. User gets most reliable report.</li>
                 <li>There is no limit on the number of records and fields to manage the testing.</li>
@@ -89,7 +88,6 @@ const dataMigration = () => {
                 <li>If new application is being migrated, SSPL also perform application testing.</li>
               </ul>
             </p>
-
           </div>
         </motion.section>
         <DataMigrationRisks />
@@ -99,4 +97,4 @@ const dataMigration = () => {
   )
 }
 
-export default dataMigration
+export default DataMigration

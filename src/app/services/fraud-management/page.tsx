@@ -5,13 +5,11 @@ import Footer from '@/app/Footer'
 import Header from '@/app/Header'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import PartnersScroll, { PartnerItem } from '@/app/components/PartnersScroll'
 import { FaExclamationTriangle, FaUniversity, FaUserTie, FaSearch, FaMoneyCheckAlt, FaFileInvoiceDollar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
-
-const fraudManagement = () => {
+const FraudManagement = () => {
   // Helper function to extract YouTube video ID from URL
   const extractYoutubeId = (url: string) => {
     if (!url) return '';
@@ -58,34 +56,7 @@ const fraudManagement = () => {
   };
 
   // Define fraud management areas for the PartnersScroll component
-  const fraudAreas: PartnerItem[] = [
-    {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Transaction Monitoring"
-    },
-    {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Identity Verification"
-    },
-    {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Anomaly Detection"
-    },
-    {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Behavioral Analytics"
-    },
-    {
-      imageSrc: "/images/partners/baystate-health.png",
-      imageAlt: "Baystate Health",
-      caption: "Risk Scoring"
-    }
-  ];
-
+  
   return (
     <>
       <main className="flex flex-col bg-white min-h-screen">
@@ -97,7 +68,7 @@ const fraudManagement = () => {
         />
         
         <motion.section
-          className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -120,7 +91,7 @@ const fraudManagement = () => {
         
         {/* Key Fraud Management Capabilities */}
         <motion.section
-          className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12"
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -159,63 +130,70 @@ const fraudManagement = () => {
               </p>
               
               {/* Fraud Detection Dashboard */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 mb-12 pt-4 sm:pt-6 pb-2 sm:pb-4">
                 {/* Item 1 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaExclamationTriangle className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaExclamationTriangle className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Payments to risky vendors, including government contractors and parties on government watch lists
                   </p>
                 </div>
-                
                 {/* Item 2 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaUniversity className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="100">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaUniversity className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Payments made from foreign bank accounts
                   </p>
                 </div>
-                
                 {/* Item 3 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaUserTie className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="200">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaUserTie className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Use of new attorneys, accountants, consultants or people from other professions with no prior relationship to the company
                   </p>
                 </div>
-                
                 {/* Item 4 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaSearch className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="300">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaSearch className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Missing descriptions or suspicious payment keywords, such as "for services rendered," "gifts," or "facilitation"
                   </p>
                 </div>
-                
                 {/* Item 5 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaMoneyCheckAlt className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="400">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaMoneyCheckAlt className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Checks made out to "cash"
                   </p>
                 </div>
-                
                 {/* Item 6 */}
-                <div className="bg-white p-6 rounded-md shadow-md flex flex-col items-center">
-                  <div className="mb-4 w-20 h-20 rounded-full bg-[#a4ce4e] flex items-center justify-center">
-                    <FaFileInvoiceDollar className="text-white text-3xl" />
+                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="500">
+                  <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                      <FaFileInvoiceDollar className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
+                    </div>
                   </div>
-                  <p className="text-center text-gray-700">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Payments classified as government expenses, made in cash, or written to an individual
                   </p>
                 </div>
@@ -225,7 +203,9 @@ const fraudManagement = () => {
         </motion.section>
 
         {/* Video Resources */}
-        <section className="py-2 px-4 md:px-8 max-w-7xl mx-auto">
+        <section
+          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
+        >
           <h2 className="text-2xl font-semibold text-[#366A00] mb-10 text-center">Video Resources</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -268,7 +248,7 @@ const fraudManagement = () => {
         
         {/* Video Modal */}
         {selectedVideo && (
-          <div className="fixed  inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeVideo}>
+          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeVideo}>
             <div className="relative w-full max-w-4xl aspect-video">
               <button 
                 className="absolute -top-10 cursor-pointer right-0 text-white text-xl font-bold p-2"
@@ -297,4 +277,4 @@ const fraudManagement = () => {
   )
 }
 
-export default fraudManagement
+export default FraudManagement

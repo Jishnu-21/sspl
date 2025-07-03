@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 
-const algorithmAuditing = () => {
+const AlgorithmAuditing = () => {
   return (
     <>
     <main className="flex flex-col bg-white min-h-screen">
@@ -20,7 +20,7 @@ const algorithmAuditing = () => {
     />
      
      <motion.section
-       className="py-16 px-4 md:px-8 max-w-7xl mx-auto"
+       className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
        initial={{ opacity: 0, y: 40 }}
        whileInView={{ opacity: 1, y: 0 }}
        transition={{ duration: 0.8 }}
@@ -28,17 +28,17 @@ const algorithmAuditing = () => {
      >
           <div className="">
             <div className="max-w-6xl mx-auto text-center mb-1">
-              <p className="text-gray-700 leading-relaxed ">
-              Algorithm Auditing is to test and verify the working of application as per the Industry Rules and Norms. There could be genuine technical issues in the application, which might result benefitting certain class of user/ transaction types. There are also examples of algorithmic models that are so complex that their developers are not sure why a model is making particular decision. These algorithmic challenges, along with data privacy issues, have created the need for the role of algorithm audit. We as professional auditors have requisite knowledge about the domain under audit and its processes.              </p>
+              <p className="text-gray-700 leading-relaxed">
+              Algorithm Auditing is to test and verify the working of application as per the Industry Rules and Norms. There could be genuine technical issues in the application, which might result benefitting certain class of user/ transaction types. There are also examples of algorithmic models that are so complex that their developers are not sure why a model is making particular decision. These algorithmic challenges, along with data privacy issues, have created the need for the role of algorithm audit. We as professional auditors have requisite knowledge about the domain under audit and its processes.
+              </p>
             </div>
           </div>
         </motion.section> 
 
      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-2"></div>
             
-            {/* Key Fraud Management Capabilities */}
             <motion.section
-              className="py-8 px-4 md:px-8 max-w-7xl mx-auto "
+              className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -46,7 +46,6 @@ const algorithmAuditing = () => {
             >
               
               <div className="max-w-6xl mx-auto">
-                {/* Image */}
                 <div className="mb-8 flex justify-center">
                   <Image 
                     src="/images/services/algo-audit1.jpg" 
@@ -57,10 +56,10 @@ const algorithmAuditing = () => {
                   />
                 </div>
                 
-                {/* Text content */}
                 <div className="text-center">
                   <p className="text-gray-700 leading-relaxed mb-4">
-                  Based on the Audit Scope, appropriate tools and analytics should be used for the Audits. Reasonable size of the data set should be created based on the Auditee Business and Transaction volume and process complications. Functional capabilities of the Application under Audit should be well understood.                 </p>
+                  Based on the Audit Scope, appropriate tools and analytics should be used for the Audits. Reasonable size of the data set should be created based on the Auditee Business and Transaction volume and process complications. Functional capabilities of the Application under Audit should be well understood.
+                  </p>
                   
                   <p className="text-gray-700 leading-relaxed">
                   We cover all possible type of transactions that could happen in the system of the Auditee within their business model. We usually work with data science teams and advanced tools, methodologies to review algorithms, ensuring transparency, being fair and detailed output/report.
@@ -70,14 +69,14 @@ const algorithmAuditing = () => {
             </motion.section>
 
             <motion.section
-              className="py-6 px-4 md:px-8 max-w-7xl mx-auto"
+              className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
           <div className="mb-2">
-            <div className="max-w-6xl mx-auto text-center ">
+            <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-4 whitespace-nowrap">Professional Responsibilities</h2>
               <ul className="text-gray-700 leading-relaxed mb-6 text-left max-w-6xl mx-auto list-disc list-inside">
                 <li>Analysing the system for potential algorithmic risk that could hold a bias or benefit specific users.</li>
@@ -90,11 +89,10 @@ const algorithmAuditing = () => {
           </div>
         </motion.section>
 
-
     <Footer/>
     </main>
     </>
   )
 }
 
-export default algorithmAuditing
+export default AlgorithmAuditing

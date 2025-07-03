@@ -66,10 +66,10 @@ const risk = () => {
           subtitle="Challenging to separate the hype from the reality, when it comes to analytics and risk management..."
         />
       
-      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
-                  <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Using analytics tools for years to manage, monitor and control various Risk Parameters </h2>
+                  <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Using analytics tools for years to manage, monitor and control various Risk Parameters </h2>
                   <p className="text-gray-700 leading-relaxed mb-6">
                   For virtually anyone working in the area of Risk Management-Audit Analytics isn't new. Risk managers have been using analytical tools for years to manage, monitor and control various Risk Parameters, depending upon the type of the Industry they are working with. There is a renaissance in analytics technology underway today, and its essence only surpasses just as the issue of risk takes on an even higher profile for leaders across industries. It can be challenging to separate the hype from the reality when it comes to analytics and risk management. Enterprise risk management can encompass so much more than merely making sure your business has purchased the right type and amount of insurance. With the tools now available, businesses can quantify and model the risks they face, to enable smarter mitigation strategies and better strategic decisions.  
                   </p>
@@ -81,7 +81,7 @@ const risk = () => {
       <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
 
-      <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12" data-aos="fade-up">
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto mb-4" data-aos="fade-up">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-stretch gap-8">
             {/* Left: Image and Insights */}
@@ -107,7 +107,7 @@ const risk = () => {
       </section>
 
       <motion.section
-        className="py-2 px-4 md:px-8 max-w-7xl mx-auto"
+        className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
