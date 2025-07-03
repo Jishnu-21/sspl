@@ -204,16 +204,16 @@ const ServicesList = () => {
 
   return (
     <div className={`
-      py-4
+      py-2 sm:py-4
       transition-colors duration-300
-      w-full mt-8 sm:mt-10 md:mt-10
+      w-full mt-4 sm:mt-8 md:mt-10
     `} ref={containerRef}>
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px]">
         {/* Animated title */}
         <h2 
           ref={titleRef}
           className={`
-          text-center mb-16
+          text-center mb-4 sm:mb-8 md:mb-16
           relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
@@ -335,7 +335,7 @@ const ServicesList = () => {
 
           {/* Mobile Carousel View */}
           <div className="md:hidden">
-            <div className="relative -mx-3">
+            <div className="relative">
               {/* Carousel Container */}
               <div 
                 ref={carouselRef}
@@ -360,7 +360,7 @@ const ServicesList = () => {
                     return (
                       <div
                         key={index}
-                        className="w-full flex-shrink-0 px-3"
+                        className="w-full flex-shrink-0 px-1"
                         data-card-index={index}
                       >
                         <Link 
