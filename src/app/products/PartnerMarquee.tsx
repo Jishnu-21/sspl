@@ -33,15 +33,15 @@ const clientsRow2 = [
 
 const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <div className={`w-full py-8 overflow-hidden ${className}`}>
+    <div className={`w-full  overflow-hidden ${className}`}>
       <div className="relative w-full">
         <div className="marquee-container">
           {/* First row */}
           <div className="marquee-row">
             <div className="marquee-content">
               {clientsRow1.map((client, index) => (
-                <div key={index} className="flex-shrink-0 mx-4 flex items-center justify-center">
-                  <div className="relative w-72 h-40">
+                <div key={index} className="flex-shrink-0 mx-2 flex items-center justify-center">
+                  <div className="relative w-80 h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -54,8 +54,8 @@ const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) =>
               ))}
               {/* Duplicate for seamless loop */}
               {clientsRow1.map((client, index) => (
-                <div key={`dup1-${index}`} className="flex-shrink-0 mx-4 flex items-center justify-center">
-                  <div className="relative w-72 h-40">
+                <div key={`dup1-${index}`} className="flex-shrink-0 mx-2 flex items-center justify-center">
+                  <div className="relative w-80 h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -72,8 +72,8 @@ const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) =>
           <div className="marquee-row">
             <div className="marquee-content">
               {clientsRow2.map((client, index) => (
-                <div key={index} className="flex-shrink-0 mx-4 flex items-center justify-center">
-                  <div className="relative w-72 h-40">
+                <div key={index} className="flex-shrink-0 mx-2 flex items-center justify-center">
+                  <div className="relative w-80 h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -86,8 +86,8 @@ const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) =>
               ))}
               {/* Duplicate for seamless loop */}
               {clientsRow2.map((client, index) => (
-                <div key={`dup2-${index}`} className="flex-shrink-0 mx-4 flex items-center justify-center">
-                  <div className="relative w-72 h-40">
+                <div key={`dup2-${index}`} className="flex-shrink-0 mx-2 flex items-center justify-center">
+                  <div className="relative w-80 h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -106,7 +106,7 @@ const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) =>
         .marquee-container {
           display: flex;
           flex-direction: column;
-          gap: 2rem;
+          gap: 1rem;
           overflow: hidden;
           position: relative;
         }

@@ -37,7 +37,7 @@ const ArbutusComponent = () => {
   return (
     <div>
       <div className="mb-6">
-      <h2 className="text-2xl text-center font-semibold text-[#366A00] mb-4">Arbutus</h2>
+      <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">Arbutus</h2>
       <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         <h3 className="text-xl font-semibold text-[#1B3D69] mb-4">Arbutus Software</h3>
         <p className="text-gray-800 mb-4">
