@@ -92,7 +92,7 @@ const Header = () => {
           {/* Right: Social Icons */}
           <div className="flex items-center gap-2 ml-auto">
             <a
-              href="https://www.linkedin.com/company/ssplnetin/"
+              href="https://www.linkedin.com/company/ssplindia/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -101,7 +101,7 @@ const Header = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://www.youtube.com/@ssplnetin"
+              href="https://www.youtube.com/@sspladvanceanalyticsgrc2906"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
