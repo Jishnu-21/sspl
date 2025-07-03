@@ -63,10 +63,10 @@ const PartnersScroll = ({
   };
 
   return (
-    <section className={`py-16 mb-16 w-full overflow-hidden`} style={{ backgroundColor }} data-aos="fade-up">
+    <section className={`py-4 mb-4 w-full overflow-hidden`} style={{ backgroundColor }} data-aos="fade-up">
       {title && (
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-semibold text-[#366A00]">{title}</h2>
+        <div className="text-center mb-8 relative z-20">
+          <h2 className="text-2xl font-semibold text-[#366A00] ">{title}</h2>
         </div>
       )}
       <div className="relative w-full">
@@ -75,7 +75,7 @@ const PartnersScroll = ({
         
         {/* Scrollable container */}
         <div 
-          className={`overflow-x-auto pb-6 hide-scrollbar group select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+          className={`overflow-x-auto pb-6 hide-scrollbar select-none z-10`}
           ref={scrollRef}
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
@@ -86,7 +86,7 @@ const PartnersScroll = ({
           {/* Drag label */}
           {showDragLabel && !isDragging && (
             <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-2 z-20 transition-all duration-200 opacity-100">
-              <div className="px-6 py-2 rounded-full bg-[#a4ce4e] text-white font-bold shadow-lg text-base flex items-center gap-2" style={{minWidth:'90px',justifyContent:'center'}}>
+              <div className="px-6 py-2 rounded-full bg-[#1b3d69] text-white font-bold shadow-lg text-base flex items-center gap-2" style={{minWidth:'90px',justifyContent:'center'}}>
                 <svg width="18" height="18" fill="none" viewBox="0 0 20 20"><path d="M7 10h6M10 7v6" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
                 Drag
               </div>
@@ -94,12 +94,12 @@ const PartnersScroll = ({
           )}
           <div className="flex gap-12 min-w-max px-8 md:px-16 py-4">
             {items.map((item, index) => (
-              <div key={index} className="flex-shrink-0 flex flex-col items-center" data-aos="zoom-in" data-aos-delay={index * 100}>
-                <div className="bg-white p-4 rounded-md shadow-sm w-[280px] h-[160px] flex items-center justify-center mb-4">
+              <div key={index} className="flex-shrink-0 flex flex-col items-center group" data-aos="zoom-in" data-aos-delay={index * 100}>
+                <div className="bg-[#e6f0fa] p-4 rounded-md shadow-sm w-[280px] h-[160px] flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#366A00]">
                   <div className="text-center">
                     {item.useIcon && item.icon ? (
-                      <div className="w-24 h-24 rounded-full bg-[#a4ce4e] flex items-center justify-center mx-auto">
-                        {React.createElement(item.icon, { className: "text-white text-4xl" })}
+                      <div className="w-24 h-24 rounded-full bg-[#1B3D69] flex items-center justify-center mx-auto transition-all duration-300 group-hover:bg-white">
+                        {React.createElement(item.icon, { className: "text-white text-4xl group-hover:text-[#366A00] transition-all duration-300" })}
                       </div>
                     ) : (
                       <Image 
@@ -112,7 +112,7 @@ const PartnersScroll = ({
                     )}
                   </div>
                 </div>
-                <p className="text-base font-semibold text-[#1B3D69] text-center">{item.caption}</p>
+                <p className="text-base font-semibold text-[#1B3D69] text-center transition-colors duration-300 group-hover:text-[#366A00]">{item.caption}</p>
               </div>
             ))}
           </div>

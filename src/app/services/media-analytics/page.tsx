@@ -94,7 +94,7 @@ const media = () => {
                         {/* Feature Cards - First Set */}
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaChartLine className="text-white text-2xl" />
                             </div>
                           </div>
@@ -106,7 +106,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaThumbsUp className="text-white text-2xl" />
                             </div>
                           </div>
@@ -118,7 +118,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaUsers className="text-white text-2xl" />
                             </div>
                           </div>
@@ -130,7 +130,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaChartBar className="text-white text-2xl" />
                             </div>
                           </div>
@@ -143,7 +143,7 @@ const media = () => {
                         {/* Duplicate cards for continuous carousel */}
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaChartLine className="text-white text-2xl" />
                             </div>
                           </div>
@@ -155,7 +155,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaThumbsUp className="text-white text-2xl" />
                             </div>
                           </div>
@@ -167,7 +167,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaUsers className="text-white text-2xl" />
                             </div>
                           </div>
@@ -179,7 +179,7 @@ const media = () => {
                         
                         <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#a4ce4e] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
                               <FaChartBar className="text-white text-2xl" />
                             </div>
                           </div>
