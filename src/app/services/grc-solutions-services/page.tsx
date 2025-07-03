@@ -19,7 +19,7 @@ const Grc = () => {
         subtitle="Test and verify the working of application"
       />
 
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <section className="py-4 sm:py-8 md:py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="">
           <div className="max-w-6xl mx-auto text-center ">
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
@@ -29,10 +29,10 @@ const Grc = () => {
         </div>
       </section>
       
-      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
+      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-3 sm:mb-6"></div>
 
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-8 md:mb-16">Governance Framework</h2>
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-6">Governance Framework</h2>
         
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-4">
@@ -99,13 +99,13 @@ const Grc = () => {
         </div>
       </section>
 
-      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
+      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-3 sm:my-6"></div>
 
       {/* Risk Management Section */}
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-8 md:mb-16">Risk Management</h2>
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">Risk Management</h2>
         
-        <div className="mb-6 md:mb-8">
+        <div className="mb-3 sm:mb-6 md:mb-8">
           <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
             We help in managing organizational uncertainties by designing Risk Management Framework, providing Risk Assurance and implementing Risk Management Solutions.
           </p>
@@ -223,13 +223,13 @@ const Grc = () => {
         </div>
       </section>
       
-      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
+      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-3 sm:my-6"></div>
 
       {/* Compliance Section */}
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-8 md:mb-16">Compliance</h2>
+      <section className="py-4 max-w-7xl mx-auto">
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">Compliance</h2>
         
-        <div className="mb-6 md:mb-8">
+        <div className="mb-3 sm:mb-6 md:mb-8">
           <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
             We help you in actualizing Regulatory Compliance at Financial Institutions through our Regulatory Risk Management solutions and Risk Assurance
           </p>
@@ -332,13 +332,13 @@ const Grc = () => {
         </div>
       </section>
       
-      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-6"></div>
+      <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-3 sm:my-6"></div>
 
       {/* IT & IS Solutions Section */}
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-8 md:mb-16">IT & IS Solutions</h2>
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto mb-8" >
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">IT & IS Solutions</h2>
         
-        <div className="mb-6 md:mb-8">
+        <div className="mb-3 sm:mb-6 md:mb-8">
           <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
             We bring reliable and economical solutions to meet your needs in the related field of Information Technology Solutions and Information Security.
           </p>

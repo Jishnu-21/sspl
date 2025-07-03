@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useOutsideClick } from "../hooks/use-outside-click";
+import { FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -80,21 +81,34 @@ const Header = () => {
         className={`flex items-center bg-[#1B3D69] text-[14px] text-[#222] transition-all duration-300 overflow-hidden ${topBarVisible ? 'h-[38px] md:h-[38px] opacity-100' : 'h-0 opacity-0'}`}
       >
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-[1920px] flex flex-wrap justify-between">
-          <div className="flex items-center gap-2">
-            <span className="flex items-center text-white text-[#222]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-              </svg>
-            </span>
-            <span className="text-xs text-white md:text-sm">info@sspl.net.in</span>
+          {/* Left: Analytics GRC Robotics with round green dot separators */}
+          <div className="flex items-center gap-2 text-xs text-white md:text-sm">
+            <span>Analytics</span>
+            <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: '#366A00' }}></span>
+            <span>GRC</span>
+            <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: '#366A00' }}></span>
+            <span>Robotics</span>
           </div>
-          <div className="flex items-center  gap-2 ml-4 md:ml-8">
-            <span className="flex items-center text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-              </svg>
-            </span>
-            <span className="text-xs text-white md:text-sm ">+91-11-23765368</span>
+          {/* Right: Social Icons */}
+          <div className="flex items-center gap-2 ml-auto">
+            <a
+              href="https://www.linkedin.com/company/ssplnetin/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-white hover:text-blue-300 text-lg"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.youtube.com/@ssplnetin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="text-white hover:text-red-400 text-lg"
+            >
+              <FaYoutube />
+            </a>
           </div>
         </div>
       </div>

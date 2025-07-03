@@ -94,53 +94,53 @@ const predictiveanalysis= () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full pt-4 sm:pt-6 pb-2 sm:pb-4" >
             {/* Insurance Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
               data-aos="zoom-in"
               onClick={() => setModal('Insurance')}
             >
               <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#3A6B1B] rounded-full flex items-center justify-center">
-                  <FaUmbrella className="text-white text-3xl" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                  <FaUmbrella className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">Insurance</h3>
-              <p className="text-gray-600 text-center">
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Insurance</h3>
+              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.
               </p>
             </div>
             
             {/* Telecom Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
               data-aos="zoom-in"
               data-aos-delay="100"
               onClick={() => setModal('Telecom')}
             >
               <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#3A6B1B] rounded-full flex items-center justify-center">
-                  <FaBroadcastTower className="text-white text-3xl" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                  <FaBroadcastTower className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">Telecom</h3>
-              <p className="text-gray-600 text-center">
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Telecom</h3>
+              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
               </p>
             </div>
             
             {/* Wind-Mill Card */}
             <div
-              className="bg-white p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
               data-aos="zoom-in"
               data-aos-delay="200"
               onClick={() => setModal('Wind-Mill')}
             >
               <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#3A6B1B] rounded-full flex items-center justify-center">
-                  <FaWind className="text-white text-3xl" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                  <FaWind className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">Wind-Mill</h3>
-              <p className="text-gray-600 text-center">
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Wind-Mill</h3>
+              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.
               </p>
             </div>
