@@ -92,7 +92,7 @@ const ArbutusAnalyticsSection = () => {
   return (
     <div className="-mx-4 md:-mx-6 lg:-mx-8">
       
-      <section className="py-16 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+      <section className="py-2 pt-12 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
         <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
           {/* Top heading */}
           <motion.div
@@ -111,7 +111,7 @@ const ArbutusAnalyticsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-800 text-lg text-center mb-4 max-w-4xl mx-auto"
+            className="text-gray-800 text-lg text-center max-w-4xl mx-auto"
           >
             We are a pivotal partner for analytics teams who see strong analytics as a key factor in their success.
           </motion.p>
@@ -120,7 +120,7 @@ const ArbutusAnalyticsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-800 text-lg text-center mb-12 max-w-4xl mx-auto"
+            className="text-gray-800 text-lg text-center mb-8 max-w-4xl mx-auto"
           >
             Arbutus has proven that we can make it easier and more cost effective to implement and use analytics within your team and audit processes.
             The immense capabilities of Arbutus simplify and support your path to analytics at every stage.

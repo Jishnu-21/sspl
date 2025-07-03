@@ -48,7 +48,7 @@ const ArbutusComponent = () => {
       </div>
       
       {/* Main Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
         {/* Left Side - YouTube Video */}
         <div className="h-full flex items-center order-1 lg:order-none mb-8 lg:mb-0 min-h-[400px] lg:min-h-[440px]">
           <div className="w-full relative pb-[65%] h-0 rounded-lg overflow-hidden shadow-lg min-h-[400px] lg:min-h-[440px]">

@@ -216,7 +216,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                   return (selectedProduct === product.id || (!isMounted && index === 0)) && (
                     <motion.div
                       key={`indicator-${product.id}`}
-                      className="absolute h-[4px] bg-black top-[-2px]"
+                      className="absolute h-[4px] bg-[#3A6B1B] top-[-2px]"
                       style={positionStyle}
                       layoutId="lineIndicator"
                       initial={{ opacity: 1, scaleX: 1 }}
