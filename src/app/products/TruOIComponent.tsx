@@ -41,7 +41,7 @@ const TruOIComponent = () => {
         transition={{ duration: 0.6 }}
       >
         <motion.h2 
-          className="text-4xl font-semibold text-center text-[#366A00] mb-4"
+          className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center text-[#366A00] mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -70,7 +70,7 @@ const TruOIComponent = () => {
         transition={{ duration: 0.6 }}
       >
         <motion.h3 
-          className="text-xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6"
+          className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -149,7 +149,7 @@ const TruOIComponent = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-5xl font-bold text-[#1B3D69] mb-2">Here's How TruOI Can Help You</h3>
+              <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#1B3D69] mb-2">Here's How TruOI Can Help You</h3>
               <p className="text-gray-600 text-sm">Turn Your Data Into Actionable Business Decisions</p>
             </motion.div>
             
@@ -226,7 +226,7 @@ const TruOIComponent = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-5xl font-bold text-[#1B3D69] ">
+              <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#1B3D69] ">
                 TruOI is partnered with 3k+ fastest<br />
                 growing companies
               </h3>
@@ -259,7 +259,7 @@ const TruOIComponent = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-semibold text-[#366A00] mb-4">About TruOI</h3>
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#366A00] mb-4">About TruOI</h3>
           <div className="h-[1px] bg-gray-300 w-full mb-8"></div>
         </motion.div>
 
@@ -357,7 +357,7 @@ const TruOIComponent = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-5xl font-bold text-[#1B3D69] mb-2">
+              <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#1B3D69] mb-2">
                 Integrates All Corporate / Unit Software
               </h3>
               <p className="text-gray-600 text-sm">ANY DATA, ANY DEVICE, USING POWERFUL AI TECHNOLOGY</p>
