@@ -88,32 +88,25 @@ const AssureBIComponent = () => {
       <div className="mt-8 mb-12 w-full" data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full">
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Web Interface.png" 
-            title="Real-time Monitoring" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Analysis and Reporting.png" 
-            title="Powerful Analytics" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Dashboards.png" 
-            title="Interactive Dashboards" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/CCM.png" 
-            title="Intelligent Alerts" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Custom Reports.png" 
-            title="Custom Reports" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Cloud Ready.png" 
-            title="Cloud Ready with Mobile App to monitor dashboards" 
-          />
+        {/* Mobile Carousel */}
+        <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
+          <div className="flex gap-4">
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Web Interface.png" title="Real-time Monitoring" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Analysis and Reporting.png" title="Powerful Analytics" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Dashboards.png" title="Interactive Dashboards" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/CCM.png" title="Intelligent Alerts" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Custom Reports.png" title="Custom Reports" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Cloud Ready.png" title="Cloud Ready with Mobile App to monitor dashboards" /></div>
+          </div>
+        </div>
+        {/* Grid for larger screens */}
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full">
+          <AnimatedCard imageSrc="/images/products/assurebi/Web Interface.png" title="Real-time Monitoring" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Analysis and Reporting.png" title="Powerful Analytics" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Dashboards.png" title="Interactive Dashboards" />
+          <AnimatedCard imageSrc="/images/products/assurebi/CCM.png" title="Intelligent Alerts" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Custom Reports.png" title="Custom Reports" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Cloud Ready.png" title="Cloud Ready with Mobile App to monitor dashboards" />
         </div>
       </div>
       
@@ -121,32 +114,25 @@ const AssureBIComponent = () => {
       <div className="mb-8 w-full" data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Industries</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full">
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/banking-finance.png" 
-            title="Banking and Finance" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Retail.png" 
-            title="Retail" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Manufacturing.png" 
-            title="Manufacturing" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Telecom.png" 
-            title="Telecom" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/Insurance.png" 
-            title="Insurance" 
-          />
-          <AnimatedCard 
-            imageSrc="/images/products/assurebi/logistics.png" 
-            title="Logistics and Hospitality" 
-          />
+        {/* Mobile Carousel */}
+        <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
+          <div className="flex gap-4">
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/banking-finance.png" title="Banking and Finance" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Retail.png" title="Retail" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Manufacturing.png" title="Manufacturing" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Telecom.png" title="Telecom" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/Insurance.png" title="Insurance" /></div>
+            <div className="snap-center flex-shrink-0"><AnimatedCard imageSrc="/images/products/assurebi/logistics.png" title="Logistics and Hospitality" /></div>
+          </div>
+        </div>
+        {/* Grid for larger screens */}
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full">
+          <AnimatedCard imageSrc="/images/products/assurebi/banking-finance.png" title="Banking and Finance" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Retail.png" title="Retail" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Manufacturing.png" title="Manufacturing" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Telecom.png" title="Telecom" />
+          <AnimatedCard imageSrc="/images/products/assurebi/Insurance.png" title="Insurance" />
+          <AnimatedCard imageSrc="/images/products/assurebi/logistics.png" title="Logistics and Hospitality" />
         </div>
       </div>
     </div>
