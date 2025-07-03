@@ -28,10 +28,9 @@ const predictiveanalysis= () => {
         <PageBanner
           backgroundImage="/images/services/banners/big-data-analytics.png"
           title="Predictive and Big Data Analytics"
-          subtitle="Access meaningful data to deliver key insights with powerful analytics tools"
         />
         
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+        <section className="py-6 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Access meaningful data to deliver key insights with powerful analytics tools</h2>
@@ -87,7 +86,7 @@ const predictiveanalysis= () => {
         </section>
 
         {/* Applied Areas Section */}
-        <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-16" data-aos="fade-up">
+        <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto mb-16" data-aos="fade-up">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Some of the applied areas of the Predictive Analytics are:</h2>
           </div>
