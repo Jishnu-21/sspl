@@ -147,8 +147,8 @@ const RecognitionSection: React.FC = () => {
         )}
 
         {/* Marquee Section */}
-        <div className="w-full overflow-hidden bg-white py-4" data-aos="fade-up">
-          <div className="flex animate-marquee whitespace-nowrap gap-4 sm:gap-6 md:gap-8">
+        <div className="w-full overflow-x-auto overflow-y-hidden bg-white py-4 hide-scrollbar" data-aos="fade-up">
+          <div className="flex whitespace-nowrap gap-4 sm:gap-6 md:gap-8 animate-marquee-desktop" style={{ WebkitOverflowScrolling: 'touch' }}>
             {/* Logos repeated to create seamless loop */}
             {marqueeItems.concat(marqueeItems, marqueeItems).map((item, index) => (
               <div
@@ -181,28 +181,26 @@ const RecognitionSection: React.FC = () => {
             }
           }
 
-          .animate-marquee {
+          .animate-marquee-desktop {
             animation: marquee 12s linear infinite;
           }
-
-          .animate-marquee:hover {
+          .animate-marquee-desktop:hover {
             animation-play-state: paused;
           }
-
+          @media (max-width: 768px) {
+            .animate-marquee-desktop {
+              animation: none !important;
+            }
+          }
           .bottom-full {
             bottom: 100%;
           }
-
-          @media (max-width: 768px) {
-            .animate-marquee {
-              animation: marquee 15s linear infinite;
-            }
+          .hide-scrollbar {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
           }
-
-          @media (max-width: 640px) {
-            .animate-marquee {
-              animation: marquee 10s linear infinite;
-            }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none; /* Chrome/Safari/Webkit */
           }
         `}</style>
       </div>
