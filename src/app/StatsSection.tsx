@@ -261,7 +261,7 @@ const StatsSection = () => {
       description: 'years of active, market-driven experience under our belt.',
     },
     {
-      title: 'Global Analytics Hub',
+      title: 'Global Analytics ',
       value: '24/7',
       description: 'continuous monitoring and support for your business needs.',
     },
