@@ -1,7 +1,5 @@
 'use client'
 import React from 'react';
-import { Carousel } from '@/components/ui/apple-cards-carousel';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const ArbutusAnalyticsSection = () => {
@@ -63,32 +61,7 @@ const ArbutusAnalyticsSection = () => {
     },
   ];
 
-  // Create card items for the carousel
-  const cardItems = caseStudies.map((study, index) => (
-    <motion.div 
-      key={index}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-      className="flex-shrink-0 w-80 flex flex-col h-full"
-    >
-      <div className={`${study.color} h-48 overflow-hidden relative`}>
-        <Image 
-          src={study.image} 
-          alt={study.title}
-          fill
-          className="object-cover opacity-70"
-        />
-      </div>
-      <div className="p-4 bg-white flex-1">
-        <h3 className="text-sm font-medium mb-2 text-gray-800">{study.title}</h3>
-        <p className="text-xs text-gray-600 mb-4">{study.description}</p>
-        <div className="mt-auto">
-        </div>
-      </div>
-    </motion.div>
-  ));
-
+ 
   return (
     <div className="-mx-4 md:-mx-6 lg:-mx-8">
       
@@ -127,7 +100,26 @@ const ArbutusAnalyticsSection = () => {
           </motion.p>
 
           {/* "Your Need" Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Mobile Carousel */}
+          <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
+            <div className="flex gap-4">
+              {yourNeedCards.map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`${card.color} p-3 min-h-[120px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300 snap-center flex-shrink-0 w-56`}
+                >
+                  <span className="bg-white text-gray-800 text-xs font-bold px-2 py-0.5 rounded-full mb-2">YOUR NEED :</span>
+                  <p className="font-medium text-xs leading-relaxed">{card.text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          {/* Grid for larger screens */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {yourNeedCards.map((card, index) => (
               <motion.div
                 key={index}
