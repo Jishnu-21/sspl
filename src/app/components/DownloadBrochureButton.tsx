@@ -10,7 +10,6 @@ const DownloadBrochureButton: React.FC<DownloadBrochureButtonProps> = ({ pdfPath
   <div className="flex justify-center">
     <a
       href={pdfPath}
-      download
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 px-6 py-3 bg-[#366A00] text-white font-semibold rounded-md shadow hover:bg-[#274d00] transition-colors duration-200 group"

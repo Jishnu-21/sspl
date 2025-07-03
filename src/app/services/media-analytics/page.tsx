@@ -30,7 +30,7 @@ const media = () => {
           subtitle="Media Analytics Enabling Software Solution"
         />
 
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+        <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
               <p className="text-gray-700 leading-relaxed">
@@ -43,7 +43,7 @@ const media = () => {
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
                 {/* Handling Large Data Sets Section */}
-                <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-12" data-aos="fade-up">
+                <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
                   <div className="text-center mb-8">
                     <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Media Analytics Enabling Software Solution</h2>
                   </div>
@@ -73,7 +73,7 @@ const media = () => {
                 </section>
 
                 {/* Features Section - Full Width with Carousel */}
-                <section className="py-12 bg-gray-50 overflow-hidden w-screen relative mb-16" data-aos="fade-up" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+                <section className="py-4 bg-gray-50 overflow-hidden w-screen relative" data-aos="fade-up" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
                   <div className="max-w-[95%] mx-auto">
                     <div className="text-center mb-10">
                       <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Features</h2>
