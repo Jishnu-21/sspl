@@ -11,14 +11,86 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton';
 
-
 const media = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
+
+    // Add carousel styles to document head
+    const styleElement = document.createElement('style');
+    styleElement.innerHTML = `
+      @keyframes feature-carousel {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .carousel-container {
+        animation: feature-carousel 30s linear infinite;
+      }
+
+      .carousel-container:hover {
+        animation-play-state: paused;
+      }
+    `;
+    document.head.appendChild(styleElement);
+
+    // Cleanup function
+    return () => {
+      if (document.head.contains(styleElement)) {
+        document.head.removeChild(styleElement);
+      }
+    };
   }, []);
+
+  const featureCards = [
+    {
+      icon: FaChartLine,
+      title: "Media Analytics",
+      description: "Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads."
+    },
+    {
+      icon: FaThumbsUp,
+      title: "Recommendations",
+      description: "It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain."
+    },
+    {
+      icon: FaUsers,
+      title: "Audience Engagement",
+      description: "Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information."
+    },
+    {
+      icon: FaChartBar,
+      title: "Visualization",
+      description: "The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms."
+    }
+  ];
+
+  type FeatureCardProps = {
+    icon: React.ComponentType<{ className?: string }>;
+    title: string;
+    description: string;
+    delay?: number;
+  };
+
+  const FeatureCard = ({ icon: Icon, title, description, delay = 0 }: FeatureCardProps) => (
+    <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay={delay}>
+      <div className="flex justify-center mb-4">
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+          <Icon className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
+        </div>
+      </div>
+      <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">{title}</h3>
+      <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
+        {description}
+      </p>
+    </div>
+  );
 
   return (
     <>
@@ -42,148 +114,71 @@ const media = () => {
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 
-                {/* Handling Large Data Sets Section */}
-                <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
-                  <div className="text-center mb-8">
-                    <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Media Analytics Enabling Software Solution</h2>
-                  </div>
-                  
+        {/* Handling Large Data Sets Section */}
+        <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Media Analytics Enabling Software Solution</h2>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row items-stretch gap-8">
+              {/* Image */}
+              <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0" data-aos="fade-right">
+                <div className="relative aspect-[5/3] w-full">
+                  <Image 
+                    src="/images/services/media1.jpg" 
+                    alt="Data Analytics Charts" 
+                    fill
+                    className="rounded-md object-cover"
+                  />
+                </div>
+              </div>
+              {/* Text content */}
+              <div className="w-full md:w-1/2 flex flex-col justify-center" data-aos="fade-left">
+                <p className="text-gray-700 leading-relaxed mb-6">
+                SSPL's Media Analytics enabling software solution can be leveraged to build offerings to understand the user behavior. Our solution generates audience engagement measurements and is capable of supporting structured as well as non-structured data from all possible sources in the Industry. The framework enables a user to run descriptive, predictive and prescriptive analytics over the collected data. It helps in generating reports, charts and dashboards that provide insights into customer behavior. The solution also implements a recommendation engine to suggest movies and programs based on user's viewing history and preferences. It also provides a forecasting engine to estimate revenue generated through customer activity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                  <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-stretch gap-8">
-                      {/* Image */}
-                      <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0" data-aos="fade-right">
-                        <div className="relative aspect-[5/3] w-full">
-                          <Image 
-                            src="/images/services/media1.jpg" 
-                            alt="Data Analytics Charts" 
-                            fill
-                            className="rounded-md object-cover"
-                          />
-                        </div>
-                      </div>
-                      {/* Text content */}
-                      <div className="w-full md:w-1/2 flex flex-col justify-center" data-aos="fade-left">
-                        <p className="text-gray-700 leading-relaxed mb-6">
-                        SSPL's Media Analytics enabling software solution can be leveraged to build offerings to understand the user behavior. Our solution generates audience engagement measurements and is capable of supporting structured as well as non-structured data from all possible sources in the Industry. The framework enables a user to run descriptive, predictive and prescriptive analytics over the collected data. It helps in generating reports, charts and dashboards that provide insights into customer behavior. The solution also implements a recommendation engine to suggest movies and programs based on user's viewing history and preferences. It also provides a forecasting engine to estimate revenue generated through customer activity.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Features Section - Full Width with Carousel */}
-                <section className="py-4 bg-gray-50 overflow-hidden relative" data-aos="fade-up">
-                  <div className="m mx-auto">
-                    <div className="text-center mb-10">
-                      <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Features</h2>
-                      <p className="text-gray-700 max-w-4xl mx-auto mb-10">
-                        The key features of our Media Analytics that allow you to get insights into customer behavior are:
-                      </p>
-                    </div>
-                    {/* Features Carousel */}
-                    <div className="overflow-hidden">
-                      <div 
-                        className="flex gap-8"
-                        style={{ 
-                          width: "fit-content",
-                          animation: "feature-carousel 30s linear infinite"
-                        }}
-                      >
-                        {/* Feature Cards - First Set */}
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaChartLine className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Media Analytics</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaThumbsUp className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Recommendations</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaUsers className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Audience Engagement</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaChartBar className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Visualization</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
-                          </p>
-                        </div>
-                        {/* Duplicate cards for continuous carousel */}
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaChartLine className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Media Analytics</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaThumbsUp className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Recommendations</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaUsers className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Audience Engagement</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
-                          </p>
-                        </div>
-                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
-                          <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                              <FaChartBar className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
-                            </div>
-                          </div>
-                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Visualization</h3>
-                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
-                            The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+        {/* Features Section - Full Width with Carousel */}
+        <section className="py-4 bg-gray-50 overflow-hidden relative" data-aos="fade-up">
+          <div className="mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Features</h2>
+              <p className="text-gray-700 max-w-4xl mx-auto mb-10">
+                The key features of our Media Analytics that allow you to get insights into customer behavior are:
+              </p>
+            </div>
+            {/* Features Carousel */}
+            <div className="overflow-hidden">
+              <div className="flex gap-8 carousel-container" style={{ width: 'fit-content' }}>
+                {/* First set of cards */}
+                {featureCards.map((card, index) => (
+                  <FeatureCard
+                    key={`first-${index}`}
+                    icon={card.icon}
+                    title={card.title}
+                    description={card.description}
+                    delay={index * 100}
+                  />
+                ))}
+                {/* Duplicate set for seamless loop */}
+                {featureCards.map((card, index) => (
+                  <FeatureCard
+                    key={`second-${index}`}
+                    icon={card.icon}
+                    title={card.title}
+                    description={card.description}
+                    delay={0}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Business Benefits */}
         <PartnersScroll
@@ -227,34 +222,6 @@ const media = () => {
       </main>
     </>
   )
-}
-
-// Add CSS for the carousel animations
-const carouselStyles = `
-  @keyframes feature-carousel {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  @keyframes benefits-marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-`;
-
-// Add the styles to the document
-if (typeof document !== 'undefined') {
-  const styleElement = document.createElement('style');
-  styleElement.innerHTML = carouselStyles;
-  document.head.appendChild(styleElement);
 }
 
 export default media
