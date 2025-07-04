@@ -32,7 +32,7 @@ const PageBanner = ({
           alt={title}
           fill
           priority
-          className="object-cover"
+          className="object-fit-cover"
           sizes="100vw"
         />
         <div className={`absolute inset-0 bg-black/70`}></div>

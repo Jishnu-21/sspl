@@ -26,7 +26,7 @@ const predictiveanalysis= () => {
       <main className="flex flex-col bg-white min-h-screen">
         <Header/>
         <PageBanner
-          backgroundImage="/images/services/banners/big-data-analytics.png"
+          backgroundImage="/images/services/banners/pred.jpg"
           title="Predictive and Big Data Analytics"
         />
         
