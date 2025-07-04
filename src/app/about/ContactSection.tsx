@@ -73,7 +73,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="pt-20 pb-32 bg-gradient-to-b from-gray-200 via-gray-100 to-white">
+    <section className="py-10 bg-gradient-to-b from-gray-200 via-gray-100 to-white">
       <Toaster position="top-right" />
       <div className="absolute inset-0 bg-gradient-to-b from-gray-200/80 via-transparent to-transparent h-48"></div>
       <div className="container mx-auto px-4">
