@@ -38,7 +38,7 @@ const media = () => {
               </p>
             </div>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/media.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/assureBI_Media_Analytics.pdf" />
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
 

@@ -33,7 +33,7 @@ const DataMigration = () => {
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/datamig.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/assureBI_DataMigration_Testing.pdf" />
           </div>
         </motion.section>
         

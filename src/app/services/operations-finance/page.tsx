@@ -31,7 +31,7 @@ const OperationsFinance = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 With rare exceptions, until now the closest that Big Data has come to the CFO's office has been via the well-publicized examples involving the enormous consumer databases of credit card vendors, who use them to identify pertinent information, and then sell data on the buying patterns, credit worthiness of the customer pool, among other things. The typical finance department hardly encounters anything close to the size of those terabyte-scale databases when closing the books, preparing budgets and forecasting revenues.
               </p>
-              <DownloadBrochureButton pdfPath="/pdfs/operation.pdf" />
+              <DownloadBrochureButton pdfPath="/pdfs/assureBI_FinancialServices.pdf" />
             </div>
           </div>
         </motion.section>

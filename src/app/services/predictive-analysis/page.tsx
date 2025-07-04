@@ -40,7 +40,7 @@ const predictiveanalysis= () => {
                 insights faster & keep up with the momentum.
               </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/pred.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/Predictive_Modeling_Insurance.pdf" />
           </div>
         </section>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-4 sm:mb-6"></div>

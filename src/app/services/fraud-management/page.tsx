@@ -83,7 +83,7 @@ const FraudManagement = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
               A key tool for avoiding FCPA difficulties is Data Analysis. The truth is held in the data, because that's where a company's conduct is recorded. The rows and columns of data often speak volumes about what is truly going on inside the business.             </p>
             </div>
-            <DownloadBrochureButton pdfPath="/pdfs/fraud-management.pdf" />
+            <DownloadBrochureButton pdfPath="/pdfs/assureBI_fraud-detection.pdf" />
           </div>
         </motion.section>
         

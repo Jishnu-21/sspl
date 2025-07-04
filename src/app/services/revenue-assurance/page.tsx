@@ -91,7 +91,7 @@ const revenue = () => {
                   Revenue Assurance (RA) was conceived as a risk mitigation solution about 20 years ago in response to the constantly increasing complexity of the telecom value chain and growing revenue leakages.
                   </p>
                 </div>
-                <DownloadBrochureButton pdfPath="/pdfs/revenue.pdf" />
+                <DownloadBrochureButton pdfPath="/pdfs/assureBI_Telecom_DataSheet.pdf" />
 
                 </div>
             </section>
