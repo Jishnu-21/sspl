@@ -22,10 +22,11 @@ const Grc = () => {
       <section className="py-4 sm:py-8 md:py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="">
           <div className="max-w-6xl mx-auto text-center ">
-            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-6">
               We strengthen your core values, align your organization structure and infuse a culture that supports and sustains well in every season.
             </p>
           </div>
+          <DownloadBrochureButton pdfPath="/pdfs/fraud-management.pdf" />
         </div>
       </section>
       
@@ -226,7 +227,7 @@ const Grc = () => {
       <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 my-3 sm:my-6"></div>
 
       {/* Compliance Section */}
-      <section className="py-4 max-w-7xl mx-auto">
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto mb-8" >
         <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">Compliance</h2>
         
         <div className="mb-3 sm:mb-6 md:mb-8">
@@ -236,7 +237,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch md:gap-x-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-y-6 md:gap-x-8">
             {/* Left side - Image */}
             <motion.div 
               className="w-full md:w-1/2 "
@@ -245,7 +246,7 @@ const Grc = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative w-full h-full min-h-[200px] md:min-h-[450px]">
+              <div className="relative w-full h-full min-h-[200px] md:min-h-[450px] mb-4 md:mb-0 w-full mx-0">
                 <Image 
                   src="/images/services/compliance.png" 
                   alt="Compliance" 
