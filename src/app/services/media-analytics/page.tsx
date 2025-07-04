@@ -73,15 +73,14 @@ const media = () => {
                 </section>
 
                 {/* Features Section - Full Width with Carousel */}
-                <section className="py-4 bg-gray-50 overflow-hidden w-screen relative" data-aos="fade-up" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
-                  <div className="max-w-[95%] mx-auto">
+                <section className="py-4 bg-gray-50 overflow-hidden relative" data-aos="fade-up">
+                  <div className="m mx-auto">
                     <div className="text-center mb-10">
                       <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Features</h2>
                       <p className="text-gray-700 max-w-4xl mx-auto mb-10">
                         The key features of our Media Analytics that allow you to get insights into customer behavior are:
                       </p>
                     </div>
-                    
                     {/* Features Carousel */}
                     <div className="overflow-hidden">
                       <div 
@@ -92,99 +91,92 @@ const media = () => {
                         }}
                       >
                         {/* Feature Cards - First Set */}
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaChartLine className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaChartLine className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Media Analytics</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaThumbsUp className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaThumbsUp className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Recommendations</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Recommendations</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaUsers className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaUsers className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Audience Engagement</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Audience Engagement</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaChartBar className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaChartBar className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Visualization</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Visualization</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
                           </p>
                         </div>
-                        
                         {/* Duplicate cards for continuous carousel */}
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaChartLine className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaChartLine className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Media Analytics</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Media Analytics</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             Media analytics dashboards are used to monitor audience engagement with content and to understand viewing patterns of the customer. The insights can be leveraged to build customer loyalty programs. The solution also provides recommendations for targeted ads insertion to optimize effectiveness of ads.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="100">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaThumbsUp className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaThumbsUp className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Recommendations</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Recommendations</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             It provides out-of-the-box recommendation for VOD and linear TV based on the customer preferences, their viewing history and compares it to the same parameters with similar users in a different domain.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaUsers className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaUsers className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Audience Engagement</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Audience Engagement</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             Audience engagement dashboards to understand the audience better. It enables service providers to collect and correlate second-by-second subscriber activity across television, video-on-demand, mobile and broadband services taking into consideration the demographic and psychographic information.
                           </p>
                         </div>
-                        
-                        <div className="bg-gray-200 p-6 rounded-md min-w-[300px] md:min-w-[350px]" data-aos="zoom-in" data-aos-delay="300">
+                        <div className="bg-[#1B3D69] p-6 rounded-md min-w-[300px] md:min-w-[350px] group transition-all duration-300 shadow-md flex flex-col items-center hover:scale-105 hover:shadow-lg hover:bg-[#366A00] cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
                           <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-[#3a6b1b] rounded-full flex items-center justify-center">
-                              <FaChartBar className="text-white text-2xl" />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
+                              <FaChartBar className="text-[#1B3D69] group-hover:text-[#366A00] text-2xl transition-colors duration-300" />
                             </div>
                           </div>
-                          <h3 className="text-center text-lg font-medium text-[#1B3D69] mb-3">Visualization</h3>
-                          <p className="text-sm text-gray-700">
+                          <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">Visualization</h3>
+                          <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
                             The accelerator generates visually rich interactive dashboards, reports and charts using the analytical and visualization platform. These reports provide high level view on customer trends including traffic, behavior and sentiment from both Web and social media platforms.
                           </p>
                         </div>
