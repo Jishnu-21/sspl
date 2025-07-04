@@ -236,7 +236,7 @@ const Grc = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-stretch ">
+          <div className="flex flex-col md:flex-row items-stretch md:gap-x-8">
             {/* Left side - Image */}
             <motion.div 
               className="w-full md:w-1/2 "
@@ -247,7 +247,7 @@ const Grc = () => {
             >
               <div className="relative w-full h-full min-h-[200px] md:min-h-[450px]">
                 <Image 
-                  src="/images/services/grc1.png" 
+                  src="/images/services/compliance.png" 
                   alt="Compliance" 
                   fill
                   className="object-cover rounded-md"

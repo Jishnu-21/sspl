@@ -137,7 +137,7 @@ const RecognitionSection: React.FC = () => {
         )}
 
         {/* Marquee Section */}
-        <div className="w-full overflow-x-auto overflow-y-hidden bg-white py-4 hide-scrollbar" data-aos="fade-up">
+        <div className="relative w-full overflow-x-auto overflow-y-hidden bg-white py-4 hide-scrollbar" data-aos="fade-up">
           <div className="flex whitespace-nowrap gap-4 sm:gap-6 md:gap-8 animate-marquee-desktop" style={{ WebkitOverflowScrolling: 'touch' }}>
             {/* Logos repeated to create seamless loop */}
             {marqueeItems.concat(marqueeItems, marqueeItems).map((item, index) => (
@@ -159,14 +159,17 @@ const RecognitionSection: React.FC = () => {
               </div>
             ))}
           </div>
+          {/* Static right arrow indicator */}
+   
         </div>
 
         {/* Scroll Indicator for all screens */}
         <div className="flex justify-center mt-2" aria-hidden="true">
           <div className="flex items-center gap-1">
-            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0s'}}></span>
-            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0.15s'}}></span>
-            <span className="block w-2 h-2 rounded-full bg-[#1B3D69] animate-bounce" style={{animationDelay:'0.3s'}}></span>
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69]" ></span>
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69]" ></span>
+            <span className="block w-2 h-2 rounded-full bg-[#1B3D69]" ></span>
+          
           </div>
         </div>
 
