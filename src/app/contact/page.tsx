@@ -10,7 +10,7 @@ const Contact = () => {
       <Header/>
       <div className="flex-1 flex flex-col">
         <ContactHero />
-        <div className='mb-20'>
+        <div className=''>
         <ContactForm />
         </div>
       </div>

@@ -127,7 +127,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <div className="bg-white py-8 sm:py-12 md:py-16">
+    <div className="bg-white py-6">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
