@@ -26,7 +26,7 @@ const Grc = () => {
               We strengthen your core values, align your organization structure and infuse a culture that supports and sustains well in every season.
             </p>
           </div>
-          <DownloadBrochureButton pdfPath="/pdfs/fraud-management.pdf" />
+          <DownloadBrochureButton pdfPath="/pdfs/SSPL_GRC_Solution.pdf" />
         </div>
       </section>
       
