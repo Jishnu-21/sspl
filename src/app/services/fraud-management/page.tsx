@@ -97,11 +97,11 @@ const FraudManagement = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-8">
+          <div className="text-center mb-0">
             <h2 className="text-2xl font-semibold text-[#366A00] mb-6">Using Analytics to Protect Yourself</h2>
           </div>
           
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto mb-0">
             {/* Image */}
             <div className="mb-8 flex justify-center">
               <Image 
@@ -123,14 +123,14 @@ const FraudManagement = () => {
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.              
               </p>
               
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches.
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.
               When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system. Software programs can uncover the following key elements:
               </p>
               
               {/* Fraud Detection Dashboard */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 mb-12 pt-4 sm:pt-6 pb-2 sm:pb-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 mb-0 pt-0 sm:pt-6">
                 {/* Item 1 */}
                 <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in">
                   <div className="mb-4 sm:mb-6">
@@ -204,9 +204,9 @@ const FraudManagement = () => {
 
         {/* Video Resources */}
         <section
-          className="py-4 px-4 md:px-8 max-w-7xl mx-auto"
+          className="px-4 lg:mt-4  md:px-8 max-w-7xl mx-auto  pt-0"
         >
-          <h2 className="text-2xl font-semibold text-[#366A00] mb-10 text-center">Video Resources</h2>
+          <h2 className="text-2xl font-semibold text-[#366A00] lg:mb-4 text-center">Video Resources</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {fraudVideos.map((video) => {
