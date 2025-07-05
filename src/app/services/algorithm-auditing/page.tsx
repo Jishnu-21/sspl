@@ -16,7 +16,6 @@ const AlgorithmAuditing = () => {
     <PageBanner 
       backgroundImage="/images/services/banners/algorithm.jpg"
       title="Algorithm Auditing"
-      subtitle="Test and verify the working of application"
     />
      
      <motion.section

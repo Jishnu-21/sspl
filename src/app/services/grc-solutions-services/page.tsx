@@ -16,7 +16,6 @@ const Grc = () => {
       <PageBanner
         backgroundImage="/images/services/banners/grc.jpg"
         title="GRC Solution & Services"
-        subtitle="Test and verify the working of application"
       />
 
       <section className="py-4 sm:py-8 md:py-12 px-4 md:px-8 max-w-7xl mx-auto">

@@ -64,7 +64,6 @@ const FraudManagement = () => {
         <PageBanner
           backgroundImage="/images/services/banners/fmd.png"
           title="Fraud Management & Detection"
-          subtitle="Using Analytics to Protect Yourself"
         />
         
         <motion.section

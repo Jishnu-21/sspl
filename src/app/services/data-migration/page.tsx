@@ -17,7 +17,6 @@ const DataMigration = () => {
         <PageBanner
           backgroundImage="/images/services/banners/datamigration.png"
           title="Data Migration Testing"
-          subtitle="Plotting a Smooth Path to Data Migration"
         />
         
         <motion.section
