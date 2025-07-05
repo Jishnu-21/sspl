@@ -190,7 +190,7 @@ const VideoGallery = () => {
                 return (
                   <div
                     key={video.id}
-                    className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="bg-[#1B3D69] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                     data-aos="fade-up"
                     data-aos-delay={idx * 60}
                   >
@@ -217,8 +217,8 @@ const VideoGallery = () => {
                       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     </div>
                     <div className="p-3 sm:p-4">
-                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2 line-clamp-2">{video.title}</h3>
-                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 sm:line-clamp-3">{video.description}</p>
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2 line-clamp-2">{video.title}</h3>
+                      <p className="text-xs sm:text-sm text-white line-clamp-2 sm:line-clamp-3">{video.description}</p>
                     </div>
                   </div>
                 );

@@ -181,9 +181,8 @@ const PhotoGallery = () => {
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                   />
                 </div>
-                
-                {/* Simple hover overlay */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                {/* Hover overlay with #1B3D69 */}
+                <div className="absolute inset-0 bg-[#1B3D69]/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </motion.div>
             ))}
           </div>
