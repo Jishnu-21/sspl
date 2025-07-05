@@ -27,7 +27,7 @@ const MinorClientTestimonial: React.FC<MinorClientTestimonialProps> = ({ clients
           {pair.map((client, index) => (
             <motion.div
               key={client.id}
-              className="bg-amber-50 p-5 rounded-lg shadow-md flex-1 hover:shadow-lg transition-shadow"
+              className="bg-[#1B3D69] p-5 rounded-lg shadow-md flex-1 hover:shadow-lg transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + (pairIndex * 2 + index) * 0.1 }}
@@ -42,12 +42,12 @@ const MinorClientTestimonial: React.FC<MinorClientTestimonialProps> = ({ clients
                     className="p-1"
                   />
                 </div>
-                <h3 className="text-sm font-semibold text-gray-800">{client.company}</h3>
+                <h3 className="text-sm font-semibold text-white">{client.company}</h3>
               </div>
               
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">{client.text}</p>
+              <p className="text-white text-sm mb-4 leading-relaxed">{client.text}</p>
               
-              <div className="text-xs text-gray-600 border-t border-amber-200 pt-3">
+              <div className="text-xs text-white border-t border-white/30 pt-3">
                 <p className="font-medium">{client.author}</p>
                 {client.position && <p>{client.position}</p>}
               </div>

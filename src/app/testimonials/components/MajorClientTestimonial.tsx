@@ -15,7 +15,7 @@ const MajorClientTestimonial: React.FC<MajorClientTestimonialProps> = ({ clients
       {clients.map((client, index) => (
         <motion.div
           key={client.id}
-          className="bg-gray-100 p-6 rounded-lg shadow-sm flex-1"
+          className="bg-[#1B3D69] p-6 rounded-lg shadow-sm flex-1"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -29,12 +29,12 @@ const MajorClientTestimonial: React.FC<MajorClientTestimonialProps> = ({ clients
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">{client.company}</h3>
+            <h3 className="text-xl font-semibold text-white">{client.company}</h3>
           </div>
           
-          <p className="text-gray-700 mb-4 italic">"{client.text}"</p>
+          <p className="text-white mb-4 italic">"{client.text}"</p>
           
-          <div className="text-sm text-gray-600">
+          <div className="text-sm text-white">
             <p className="font-medium">{client.author}</p>
             <p>{client.position}</p>
           </div>
