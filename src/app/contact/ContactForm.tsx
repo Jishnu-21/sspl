@@ -23,19 +23,21 @@ const ContactForm = () => {
   useEffect(() => {
     // Function to update time
     const updateTime = () => {
-      // India time (UTC+5:30)
-      const indiaTime = new Date();
-      indiaTime.setHours(indiaTime.getHours());
-      indiaTime.setMinutes(indiaTime.getMinutes());
-      
-      // Bahrain time (UTC+3)
-      const bahrainTime = new Date();
-      bahrainTime.setHours(bahrainTime.getHours() - 2);
-      bahrainTime.setMinutes(bahrainTime.getMinutes() - 30);
-
+      const indiaTime = new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kolkata'
+      });
+      const bahrainTime = new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Bahrain'
+      });
       setCurrentTime({
-        india: indiaTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
-        middleEast: bahrainTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+        india: indiaTime,
+        middleEast: bahrainTime
       });
     };
 
