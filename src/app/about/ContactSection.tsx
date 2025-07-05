@@ -116,7 +116,7 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow rounded-sm">
-              <h4 className="text-xl text-black font-semibold mb-4 text-center">India</h4>
+              <h4 className="text-xl text-black font-semibold mb-4 text-center">INDIA</h4>
               <p className="text-gray-600 text-base leading-relaxed text-center">
               M-91, 1st. Floor, Connaught Circus, New Delhi - 110001<br/>
               Tel.: ‪+91-11-23765368‬ | M: ‪+91-98101 02927‬<br/>
