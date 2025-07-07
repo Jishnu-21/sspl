@@ -14,10 +14,8 @@ const AboutBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-[28px] sm:text-[32px] font-medium text-white leading-[1.4] mb-8">
-            At SSPL, we turn complex data into powerful insights,
-            enabling businesses to make smarter decisions and
-            drive sustainable growth
+          <h1 className="text-[26px] font-medium text-white leading-[1.4] mb-8">
+          SSPL is a Software and IT Consulting organization that has been rendering services via its expert team of professionals towards the field of Big Data Analytics, Data Visualization, Robotics Process Analytics, Business Intelligence, Digital Transformation, Data Migration and Predictive Analytics
           </h1>
           
       

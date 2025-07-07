@@ -7,6 +7,7 @@ import TeamSection from './TeamSection'
 import LifeAtSSPL from './LifeAtSSPL'
 import ContactSection from './ContactSection'
 import Footer from '../Footer';
+import VisionSection from './components/VisionSection';
 
 const teamMembers = [
   {
@@ -62,6 +63,8 @@ export default function About() {
     <>
       <Header/>
       <AboutBanner />
+      <><div className='bg-white'>      <VisionSection/>
+      </div></>
       <AboutContent />
       <TeamSection members={teamMembers} title="Meet Our Leaders" />
       <LifeAtSSPL />
