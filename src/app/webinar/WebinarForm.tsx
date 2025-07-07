@@ -94,15 +94,15 @@ const WebinarForm = () => {
       
       {/* Right side - Registration form */}
       <motion.div 
-        className="flex-1 bg-[#1B3D69] px-6 pt-5 pb-4 rounded-lg shadow-md mx-auto md:mx-0 border border-[#1B3D69] md:h-full flex flex-col min-h-[600px]"
+        className="flex-1 bg-white px-6 pt-5 pb-4 rounded-lg shadow-md mx-auto md:mx-0 border border-gray-200 md:h-full flex flex-col min-h-[600px]"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         style={{ maxWidth: '450px' }}
       >
-        <h3 className="text-base font-semibold text-left mb-8 text-white pl-1">Complete the form below to access<br/>the webcast</h3>
+        <h3 className="text-xl font-bold text-left mb-6 text-gray-900 pl-1">Complete the form below to access<br/>the webcast</h3>
         
-        <form onSubmit={handleSubmit} className="space-y-2.5 flex-1 flex flex-col">
+        <form onSubmit={handleSubmit} className="space-y-4 flex-1 flex flex-col">
           <div>
             <input
               type="text"
@@ -110,7 +110,7 @@ const WebinarForm = () => {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
               required
             />
           </div>
@@ -121,7 +121,7 @@ const WebinarForm = () => {
               value={formData.job}
               onChange={handleChange}
               placeholder="Job"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
             />
           </div>
           <div>
@@ -131,7 +131,7 @@ const WebinarForm = () => {
               value={formData.companyName}
               onChange={handleChange}
               placeholder="Company Name"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
             />
           </div>
           <div>
@@ -141,7 +141,7 @@ const WebinarForm = () => {
               value={formData.city}
               onChange={handleChange}
               placeholder="City"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
             />
           </div>
           <div>
@@ -151,7 +151,7 @@ const WebinarForm = () => {
               value={formData.country}
               onChange={handleChange}
               placeholder="Country"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
             />
           </div>
           <div>
@@ -161,7 +161,7 @@ const WebinarForm = () => {
               value={formData.workEmail}
               onChange={handleChange}
               placeholder="Work Email ID"
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
               required
             />
           </div>
@@ -172,7 +172,7 @@ const WebinarForm = () => {
               value={formData.phoneNo}
               onChange={handleChange}
               placeholder="Phone no."
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] placeholder-white text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm placeholder-gray-400 text-gray-900 transition-all duration-300"
             />
           </div>
           <div>
@@ -180,7 +180,7 @@ const WebinarForm = () => {
               name="annualRevenue"
               value={formData.annualRevenue}
               onChange={handleChange}
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] appearance-none text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm text-gray-900 placeholder-gray-400 appearance-none text-sm"
               style={{ backgroundImage: "url('data:image/svg+xml;charset=US-ASCII,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22m6 9 6 6 6-6%22/></svg>')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center' }}
             >
               <option value="" disabled selected>What is annual revenue of your company?</option>
@@ -196,7 +196,7 @@ const WebinarForm = () => {
               name="employees"
               value={formData.employees}
               onChange={handleChange}
-              className="w-full p-2.5 border border-white rounded focus:outline-none focus:border-[#366A00] text-white bg-[#1B3D69] appearance-none text-sm"
+              className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] shadow-sm text-gray-900 placeholder-gray-400 appearance-none text-sm"
               style={{ backgroundImage: "url('data:image/svg+xml;charset=US-ASCII,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22m6 9 6 6 6-6%22/></svg>')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center' }}
             >
               <option value="" disabled selected>No. of employee</option>
@@ -210,7 +210,7 @@ const WebinarForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-white hover:bg-[#366A00] hover:text-white text-[#1B3D69] font-medium py-2 rounded border border-white transition-all duration-200 mt-4 mb-0 text-sm"
+            className="w-full bg-[#366A00] text-white cursor-pointer text-sm font-medium py-3 px-6 rounded-lg border border-[#366A00] hover:bg-[#2d5500] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] mt-4 mb-0"
           >
             Send
           </button>
