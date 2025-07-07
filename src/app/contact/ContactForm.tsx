@@ -109,22 +109,20 @@ const ContactForm = () => {
   const offices = [
     {
       country: 'INDIA',
-      time: currentTime.india,
-      address: 'M-91, 1st. Floor, Connaught Circus, New Delhi - 110001',
-      email: 'info@sspl.net.in',
-      tel: '+91-11-23765368',
+      company: 'Substratal Solutions Private Limited',
+      address: 'M-91, 1st. Floor, Connaught Circus, New Delhi - 110001, India',
+      tel: '+91-11-2376 5368',
       mobile: '+91-98101 02927',
-      fax: '+91-11-43565927',
+      email: 'info@sspl.net.in',
       cin: 'U72300DL2008PTC182090'
     },
     {
       country: 'BAHRAIN',
-      time: currentTime.middleEast,
-      address: 'Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain',
-      email: 'info@ssplme.com',
-      tel: '+973-13622552',
+      company: 'Substratal Solutions Middle East WLL',
+      address: 'BCCI, 2145, 2nd. Floor, Building 934, Road No.1015, Block No. 410, Kingdom of Bahrain',
       mobile: '+973-3889 2927',
-      cr: '120861-1'
+      email: 'info@ssplme.com',
+      cr: '185894-1'
     }
   ];
 
@@ -166,26 +164,15 @@ const ContactForm = () => {
                   <div className="flex flex-col space-y-3 sm:space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
                       <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{office.country}</h3>
-                      <div className="flex items-center text-[#366A00] bg-[#366A00]/10 px-3 py-1 rounded-full w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span className="text-sm font-medium">{office.time || 'Loading...'}</span>
-                      </div>
                     </div>
                     <div className="text-sm text-gray-600 space-y-2">
+                      {office.company && <p className="font-bold text-base sm:text-lg">{office.company}</p>}
                       <p className="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <span className="break-words">{office.address}</span>
-                      </p>
-                      <p className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <a href={`mailto:${office.email}`} className="text-[#366A00] hover:underline break-all">{office.email}</a>
                       </p>
                       {office.tel && (
                         <p className="flex items-center">
@@ -203,14 +190,12 @@ const ContactForm = () => {
                           {office.mobile}
                         </p>
                       )}
-                      {office.fax && (
-                        <p className="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-                          </svg>
-                          {office.fax}
-                        </p>
-                      )}
+                      <p className="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href={`mailto:${office.email}`} className="text-[#366A00] hover:underline break-all">{office.email}</a>
+                      </p>
                       {office.cin && (
                         <p className="flex items-center">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#366A00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -227,11 +212,11 @@ const ContactForm = () => {
                           {office.cr}
                         </p>
                       )}
-          </div>
-        </div>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
-        </div>
+            </div>
           </motion.div>
         
           {/* Right Side - Contact Form */}

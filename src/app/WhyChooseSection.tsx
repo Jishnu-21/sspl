@@ -79,13 +79,13 @@ const WhyChooseSection = () => {
       <div className="rounded-2xl overflow-hidden p-4 sm:p-8 lg:p-12 xl:p-16">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <motion.h2 
-            className="text-3xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6"
+            className="text-3xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold text-black mb-3 sm:mb-4 md:mb-6"
             variants={titleParent}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {Array.from('Why choose SSPL?').map((char, idx) => (
+            {Array.from('Why choose us?').map((char, idx) => (
               <motion.span
                 key={idx}
                 variants={letterVariant}
