@@ -8,9 +8,8 @@ const CareerBanner = () => {
     <PageBanner
       backgroundImage="/images/about/banner.png"
       title="Career"
-      subtitle="Get in touch with us"
-      buttonText="View Open Positions"
-      buttonLink="/careers#open-positions"
+      subtitle="SSPL is represented by a worldwide network of partners."
+     
     />
   );
 };
