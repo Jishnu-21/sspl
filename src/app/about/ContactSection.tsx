@@ -115,19 +115,29 @@ const ContactSection = () => {
               </button>
             </div>
 
-            <div className="bg-[#1B3D69] backdrop-blur-sm p-6 shadow-lg transition-shadow rounded-sm hover:scale-105 hover:shadow-[0_4px_32px_0_#366A00] duration-300">
-              <h4 className="text-xl text-white font-semibold mb-4 text-center">INDIA OFFICE</h4>
-              <p className="text-white text-base leading-relaxed text-center">
-              M-91, 1st. Floor, Connaught Circus, New Delhi - 110001<br/>
-              Tel.: ‪+91-11-23765368‬ | M: ‪+91-98101 02927‬<br/>
-              E: info@sspl.net.in | W: www.sspl.net.in | CIN: U72300DL2008PTC182090</p>
+            <div className="bg-[#1B3D69] backdrop-blur-sm p-4 shadow-lg transition-shadow rounded-md hover:scale-105 hover:bg-[#366A00] hover:shadow-[0_4px_32px_0_#366A00] duration-300">
+              <h4 className="text-xl text-white font-semibold mb-3 text-left">INDIA</h4>
+              <p className="text-white text-base leading-relaxed text-left">
+                <span className="font-bold text-lg md:text-xl lg:text-2xl">Substratal Solutions Private Limited</span><br/>
+                M-91, 1st. Floor, Connaught Circus,<br/>
+                New Delhi - 110001, India<br/>
+                T: ‪+91-11-2376 5368‬<br/>
+                M: ‪+91-98101 02927‬<br/>
+                E: info@sspl.net.in<br/>
+                CIN: U72300DL2008PTC182090
+              </p>
             </div>
-            <div className="bg-[#1B3D69] backdrop-blur-sm p-6 shadow-lg transition-shadow rounded-sm hover:scale-105 hover:shadow-[0_4px_32px_0_#366A00] duration-300">
-              <h4 className="text-xl text-white font-semibold mb-4 text-center">BAHRAIN OFFICE</h4>
-              <p className="text-white text-base leading-relaxed text-center">
-              Bahrain Financial Harbour, East Tower, 3420, 34th Floor, Building 1398, Road No.4626, Block No. 346, Bahrain<br/>
-              Tel.: ‪+973-13622552‬ | M: ‪+973-3889 2927‬<br/>
-              E: info@ssplme.com | W: www.ssplme.com | CR: 120861-1</p>
+            <div className="bg-[#1B3D69] backdrop-blur-sm p-4 shadow-lg transition-shadow rounded-md hover:scale-105 hover:bg-[#366A00] hover:shadow-[0_4px_32px_0_#366A00] duration-300">
+              <h4 className="text-xl text-white font-semibold mb-3 text-left">BAHRAIN</h4>
+              <p className="text-white text-base leading-relaxed text-left">
+                <span className="font-bold text-lg md:text-xl lg:text-2xl">Substratal Solutions Middle East WLL</span><br/>
+                BCCI, 2145, 2nd. Floor, Building 934,<br/>
+                Road No.1015, Block No. 410,<br/>
+                Kingdom of Bahrain<br/>
+                M: ‪+973-3889 2927‬<br/>
+                E: info@ssplme.com<br/>
+                CR: 185894-1
+              </p>
             </div>
           </motion.div>
 
@@ -138,17 +148,17 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#1b3d69] backdrop-blur-sm p-8 shadow-xl transition-shadow min-h-[585px] rounded-xl border-2 border-transparent hover:scale-105 hover:shadow-[0_4px_32px_0_#1B3D69] hover:border-[#1B3D69] duration-300">
-              <h3 className="text-xl text-white font-medium mb-6">Send us a message</h3>
+            <div className="bg-white p-8 shadow-xl transition-shadow min-h-[585px] rounded-xl border-2 border-gray-200 hover:scale-105 hover:shadow-[0_4px_32px_0_#1B3D69] hover:border-[#1B3D69] duration-300">
+              <h3 className="text-xl text-gray-900 font-medium mb-6">Send us a message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <input
                     type="text"
                     name="fullName"
                     placeholder="Full Name"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-white focus:border-[#1B3D69] outline-none bg-[#1B3D69] placeholder-white text-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] outline-none bg-white placeholder-gray-400 text-gray-900 rounded-lg shadow-sm transition-all duration-300"
                     required
                   />
                   <input
@@ -157,18 +167,16 @@ const ContactSection = () => {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-white focus:border-[#1B3D69] outline-none bg-[#1B3D69] placeholder-white text-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] outline-none bg-white placeholder-gray-400 text-gray-900 rounded-lg shadow-sm transition-all duration-300"
                     required
                   />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
                   <input
                     type="tel"
                     name="phone"
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-white focus:border-[#1B3D69] outline-none bg-[#1B3D69] placeholder-white text-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] outline-none bg-white placeholder-gray-400 text-gray-900 rounded-lg shadow-sm transition-all duration-300"
                   />
                   <input
                     type="text"
@@ -176,7 +184,7 @@ const ContactSection = () => {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-white focus:border-[#1B3D69] outline-none bg-[#1B3D69] placeholder-white text-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] outline-none bg-white placeholder-gray-400 text-gray-900 rounded-lg shadow-sm transition-all duration-300"
                     required
                   />
                 </div>
@@ -186,7 +194,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 border border-white focus:border-[#1B3D69] outline-none resize-none bg-[#1B3D69] placeholder-white text-white min-h-[180px]"
+                  className="w-full px-4 py-3 border border-gray-200 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] outline-none resize-none bg-white placeholder-gray-400 text-gray-900 rounded-lg shadow-sm min-h-[180px] transition-all duration-300"
                   required
                 />
                 <div className="flex items-start gap-2 mb-2">
@@ -196,7 +204,7 @@ const ContactSection = () => {
                     className="mt-1"
                     required
                   />
-                  <label htmlFor="consent" className="text-sm text-white">
+                  <label htmlFor="consent" className="text-sm text-gray-900">
                     I accept the privacy policy
                   </label>
                 </div>
@@ -204,7 +212,7 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full font-bold max-w-[160px] mt-6 px-8 py-2 border-2 border-white bg-white text-[#366A00] hover:bg-[#1B3D69] hover:text-white hover:border-white transition-colors duration-300 cursor-pointer ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    className={`w-full font-bold max-w-[160px] mt-6 px-8 py-2 border-2 border-[#366A00] bg-[#366A00] text-white hover:bg-[#2d5500] hover:text-white hover:border-[#366A00] transition-colors duration-300 cursor-pointer rounded-lg ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit'}
                   </button>
