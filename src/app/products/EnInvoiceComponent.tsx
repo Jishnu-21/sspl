@@ -166,7 +166,7 @@ const EnInvoiceComponent = () => {
         className="mb-12"
       >
         <motion.h3 
-          className="text-xl font-semibold text-center text-[#366A00] mb-2"
+          className="text-3xl font-semibold text-center text-[#366A00] mb-2"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -387,7 +387,7 @@ const EnInvoiceComponent = () => {
         transition={{ duration: 0.6 }}
         className=""
       >
-        <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">Included Services and Outcomes</h3>
+        <h3 className="text-3xl font-semibold text-center text-[#366A00] mb-2">Included Services and Outcomes</h3>
         <p className="text-gray-700 text-center mb-8 max-w-3xl mx-auto">
           Our comprehensive solution provides specialized dashboards for different teams in your organization.
         </p>
@@ -400,7 +400,7 @@ const EnInvoiceComponent = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-10"
         >
-          <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your AR & Finance team Gets</h4>
+          <h4 className="text-2xl font-medium text-center text-[#366A00] mb-6">Your AR & Finance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
@@ -484,7 +484,7 @@ const EnInvoiceComponent = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-10"
         >
-          <h4 className="text-lg font-medium text-center text-[#366A00] mb-6">Your Tax & Compliance team Gets</h4>
+          <h4 className="text-2xl font-medium text-center text-[#366A00] mb-6">Your Tax & Compliance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
               className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
