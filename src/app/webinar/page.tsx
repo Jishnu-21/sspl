@@ -22,7 +22,7 @@ const Webinar = () => {
         subtitle="Series of Webinars from the Industry Experts"
       />
 
-<section className="py-10 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+<section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
                   <p className="text-gray-700 leading-relaxed mb-6">

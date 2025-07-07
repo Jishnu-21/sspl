@@ -65,7 +65,7 @@ const Training = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+        className="py-4 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
         data-aos="fade-up"
       >
         <div className="max-w-6xl mx-auto text-center">
@@ -87,7 +87,7 @@ const Training = () => {
       <div className="h-[1px] w-full border-t border-gray-300 mb-6" data-aos="fade-in"></div>
 
       {/* Benefits Section with full-width background */}
-      <div className="w-full bg-[#f8f8f8] py-8 sm:py-10 md:py-12" data-aos="fade-up">
+      <div className="w-full py-4" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
             <div className="w-full md:w-2/3">
@@ -156,9 +156,9 @@ const Training = () => {
       </div>
 
       {/* Testimonials Heading */}
-      <div className="w-full bg-[#f8f8f8] border-t border-gray-300 mt-6 md:mt-8" data-aos="fade-up">
+      <div className="w-full bg-[#1b3d69]  border-t border-gray-300 mt-6 md:mt-8" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-8 pb-2">
-          <h2 className="text-2xl font-bold text-[#366A00] mb-6 text-center">Testimonials</h2>
+          <h2 className="text-3xl font-bold text-[#366A00] mb-6 text-center">Testimonials</h2>
         </div>
         <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pb-6">
           {/* Logo/Image Section */}
@@ -174,7 +174,7 @@ const Training = () => {
           </div>
           {/* Testimonial Text */}
           <div className="w-full md:w-4/5">
-            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <p className="text-xs text-white sm:text-sm text-gray-700 leading-relaxed">
               "SSPL Middle East - conducted a hands-on-training program on data analytics for Toyota Motors U.K. and other subsidiaries. It comprised of practical sessions on how to deploy analytics using excel and Power BI. The learners were thrilled to be a part of this course, as it allowed them to grasp a vast array of technical know-how embedded via a simplistic approach. The course received phenomenal positive responses from the learners, who clearly stated their insights on how \"Data\" was better read and understood, after attending the training sessions. In fact, the participants in the training sessions who did not seem to have any particular use of analytics in their day-2-day job profile, found this course to be immensely helpful and informative as well. The sessions were well-tailored & subsequently addressed the real case studies at the end of each training module. The proficiency that was acquired via the training sessions, promised the participants to adapt and implement the objectives with respect to data analytics. PowerBI sessions successfully equipped the learners with the essential skills to create a dashboard themselves using different themes, maps and data transformations. On the whole, participants thoroughly enjoyed the course and learned many new concepts related to data analytics and data in general. The mean score based on the feedback received by the participants was a high value notched at 4.5 out of 5."
             </p>
             <div className="mt-2 text-right text-sm font-semibold text-[#366A00]">- Toyota U.K.</div>
@@ -185,8 +185,8 @@ const Training = () => {
  
 
 
-      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-          <h2 className="text-2xl font-semibold text-[#366A00] mb-10 text-center">How Participants Rank Our Trainings
+      <section className="py-6 px-4 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#366A00] mb-10 text-center">How Participants Rank Our Trainings
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">

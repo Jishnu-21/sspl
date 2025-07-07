@@ -46,7 +46,7 @@ const Testimonials = () => {
             data-aos="fade-up"
           >
             <h1 
-              className="text-xl md:text-2xl lg:text-3xl text-[#366A00] font-bold text-center mb-12"
+              className="text-xl md:text-2xl lg:text-4xl text-[#366A00] font-bold text-center mb-12"
               data-aos="fade-up"
             >
               What our clients are saying
@@ -71,7 +71,7 @@ const Testimonials = () => {
             data-aos="fade-up"
           >
             <h1 
-              className="text-xl md:text-2xl lg:text-3xl text-[#366A00] font-bold text-center mb-12"
+              className="text-xl md:text-2xl lg:text-4xl text-[#366A00] font-bold text-center mb-12"
               data-aos="fade-up"
             >
               What our trainees are saying

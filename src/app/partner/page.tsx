@@ -23,7 +23,7 @@ const partner = () => {
         subtitle='SSPL is represented by a worldwide network of partners.'
       />
 
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
         <div className="mb-8">
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="text-3xl font-semibold text-[#366A00] mb-4">Who shares our commitment to a high level of service & support to our clientele?</h2>
@@ -37,7 +37,7 @@ const partner = () => {
       {/* Full width divider line */}
       <div className="w-full border-t border-gray-300" data-aos="fade-in"></div>
       
-      <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+      <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center min-h-[500px]">
           <div className="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-center h-full">
             <div className="prose max-w-none">

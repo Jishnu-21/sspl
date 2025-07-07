@@ -32,7 +32,7 @@ const WebinarForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-16" style={{ minHeight: '400px' }}>
+    <div className="flex flex-col md:flex-row md:items-stretch gap-10 max-w-7xl mx-auto px-4 md:px-8 py-4" style={{ minHeight: '400px' }}>
       {/* Left side - Webinar details */}
       <motion.div 
         className="flex-1 md:h-full flex flex-col"
