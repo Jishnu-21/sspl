@@ -40,7 +40,7 @@ const Testimonials = () => {
         backgroundImage="/images/testimonials/banner.png"
         title="Testimonials"
       />
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-4 px-4 sm:px-6 lg:px-8">
           <div 
             className="max-w-7xl mx-auto"
             data-aos="fade-up"
@@ -65,7 +65,7 @@ const Testimonials = () => {
           </div>
         </section>
 
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div 
             className="max-w-7xl mx-auto"
             data-aos="fade-up"
