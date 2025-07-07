@@ -22,7 +22,7 @@ const EnInvoiceComponent = () => {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <h3 className="text-xl font-semibold text-center text-[#366A00] mb-2">Regulatory Invoicing Essentials</h3>
+        <h3 className="text-3xl font-semibold text-center text-[#366A00] mb-2">Regulatory Invoicing Essentials</h3>
         <p className="text-gray-700 text-center mb-10 max-w-3xl mx-auto">
           Rapidly evolving electronic invoicing requirements pose constant challenges to the enterprises and other businesses, in comprehensively addressing compliance automation.
         </p>
