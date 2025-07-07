@@ -14,7 +14,7 @@ const DataMigrationRisks = () => {
           <div className="w-full md:w-2/3 mb-6 md:mb-0">
             <div className="bg-gray-100 rounded-md">
               <Image 
-                src="/images/services/data-mig1.jpg" 
+                src="/images/services/data-mig1.png" 
                 alt="Data Migration Risks" 
                 width={300} 
                 height={300}
