@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import GoToTop from "./components/GoToTop";
-import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
-
-const inter = Inter({ subsets: ['latin'] });
+import { comfortaa, poppins } from "./fonts";
 
 export const metadata: Metadata = {
   title: "SSPL - Security and Protection",
@@ -17,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${comfortaa.variable} ${poppins.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
