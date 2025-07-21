@@ -33,9 +33,9 @@ const predictiveanalysis= () => {
         
         <section className="py-3 sm:py-6 px-2 sm:px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
           <div className="mb-1 sm:mb-2">
-            <div className="max-w-6xl mx-auto text-center mb-1 sm:mb-2">
-              <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 whitespace-nowrap">Access meaningful data to deliver key insights with powerful analytics tools</h2>
-              <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6">
+            <div className="max-w-6xl mx-auto text-left mb-1 sm:mb-2">
+              <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 text-center">Access meaningful data to deliver key insights with powerful analytics tools</h2>
+              <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6 text-justify">
                 In a fast-paced demanding world, there has been a phenomenal growth seen in structured and unstructured data, 
                 data systems acquired from multiple sources which cater to the requirements of the businesses so as to derive 
                 insights faster & keep up with the momentum.
@@ -48,8 +48,8 @@ const predictiveanalysis= () => {
 
         {/* Handling Large Data Sets Section */}
         <section className="py-3 sm:py-6 px-2 sm:px-4 md:px-8 max-w-7xl mx-auto mb-6 sm:mb-12" data-aos="fade-up">
-          <div className="text-center mb-4 sm:mb-8">
-            <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6">Handling Large Data Sets</h2>
+          <div className="text-left mb-4 sm:mb-8">
+            <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 text-center">Handling Large Data Sets</h2>
           </div>
           
           <div className="max-w-6xl mx-auto">
@@ -68,7 +68,7 @@ const predictiveanalysis= () => {
               
               {/* Text content */}
               <div className="md:w-1/2 text-left flex flex-col justify-center" data-aos="fade-left">
-                <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6 text-justify">
                   Big data analytics is the process of examining large data sets to uncover hidden patterns, unknown correlations, 
                   market trends, customer preferences and other useful business information. The analytical findings can lead to 
                   more effective marketing strategies, building new revenue opportunities, rendering better customer service, 
@@ -76,7 +76,7 @@ const predictiveanalysis= () => {
                   other business benefits.
                 </p>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   Predictive Analytics is the next major development to Big Data Analytics wherein, technologies that are capable of 
                   handling large data sets can generate business interest trigger points, take into the calculations used for 
                   predicting any future decisions.
@@ -88,8 +88,8 @@ const predictiveanalysis= () => {
 
         {/* Applied Areas Section */}
         <section className="px-2 sm:px-4 md:px-8 max-w-7xl mx-auto mb-8 sm:mb-16" data-aos="fade-up">
-          <div className="text-center mb-6 sm:mb-10">
-            <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6">Some of the applied areas of the Predictive Analytics are:</h2>
+          <div className="text-left mb-6 sm:mb-10">
+            <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 text-center">Some of the applied areas of the Predictive Analytics are:</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full pt-4 sm:pt-6 pb-2 sm:pb-4" >
@@ -104,7 +104,7 @@ const predictiveanalysis= () => {
                   <FaUmbrella className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Insurance</h3>
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Insurance</h3>
               <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.
               </p>
@@ -122,7 +122,7 @@ const predictiveanalysis= () => {
                   <FaBroadcastTower className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Telecom</h3>
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Telecom</h3>
               <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
               </p>
@@ -140,7 +140,7 @@ const predictiveanalysis= () => {
                   <FaWind className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300">Wind-Mill</h3>
+              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Wind-Mill</h3>
               <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                 Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.
               </p>
