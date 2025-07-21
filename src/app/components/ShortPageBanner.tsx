@@ -8,7 +8,7 @@ interface ShortPageBannerProps {
   title: string;
   backgroundImage: string;
   subtitle?: string;
-  bannerKey?: string; // <-- new prop
+  bannerKey?: string;
 }
 
 const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
@@ -36,7 +36,10 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
   const imageToShow = dynamicImage || backgroundImage;
 
   return (
-    <section id="page-banner" className="page-banner relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full mt-[105px]">
+    <section
+      id="page-banner"
+      className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full mt-[105px] overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -47,33 +50,31 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
           className="object-cover"
           sizes="100vw"
         />
-        <div className={`absolute inset-0 bg-black/30`}></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
-      {/* Content Container */}
-      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 h-full relative z-10">
-        <div className="flex h-full items-center">
-          <div className="flex flex-col w-full max-w-xl">
-            <motion.h1 
+      {/* Centered Content */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center px-4 text-center">
+        <div className="flex flex-col items-center justify-center w-full max-w-3xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-white break-words"
+          >
+            {title}
+          </motion.h1>
+
+          {subtitle && (
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-white break-words sm:whitespace-normal"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-white/90 text-base sm:text-lg mt-3"
             >
-              {title}
-            </motion.h1>
-            
-            {subtitle && (
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-white/90 text-base sm:text-lg mt-3"
-              >
-                {subtitle}
-              </motion.p>
-            )}
-          </div>
+              {subtitle}
+            </motion.p>
+          )}
         </div>
       </div>
     </section>
