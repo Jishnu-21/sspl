@@ -127,77 +127,10 @@ const FraudManagement = () => {
               <p className="text-gray-700 text-justify leading-relaxed mb-4">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches.
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.
-              When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system. Software programs can uncover the following key elements:
+              When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system.
               </p>
               
-              {/* Fraud Detection Dashboard */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 mb-0 pt-0 sm:pt-6">
-                {/* Item 1 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaExclamationTriangle className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white text-center  group-hover:text-white transition-colors duration-300">
-                    Payments to risky vendors, including government contractors and parties on government watch lists
-                  </p>
-                </div>
-                {/* Item 2 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="100">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaUniversity className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white text-center  group-hover:text-white transition-colors duration-300">
-                  Transactions originating from foreign bank accounts, indicating possible unauthorized or hidden payments                  </p>
-                </div>
-                {/* Item 3 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="200">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaUserTie className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white  text-center group-hover:text-white transition-colors duration-300">
-                    Use of new attorneys, accountants, consultants or people from other professions with no prior relationship to the company
-                  </p>
-                </div>
-                {/* Item 4 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="300">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaSearch className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
-                    Missing descriptions or suspicious payment keywords, such as "for services rendered," "gifts," or "facilitation"
-                  </p>
-                </div>
-                {/* Item 5 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="400">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaMoneyCheckAlt className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white  text-center group-hover:text-white transition-colors duration-300">
-                  Checks made out of “cash,” which are difficult to trace and may bypass internal controls                  </p>
-                </div>
-                {/* Item 6 */}
-                <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="500">
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                      <FaFileInvoiceDollar className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                    </div>
-                  </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
-                    Payments classified as government expenses, made in cash, or written to an individual
-                  </p>
-                </div>
-              </div>
-            </div>
+             </div>
           </div>
         </motion.section>
 
