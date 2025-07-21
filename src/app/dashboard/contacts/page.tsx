@@ -27,7 +27,7 @@ const ContactsPage = () => {
     setError("");
     const fetchContacts = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/contacts`);
+        const res = await fetch('/api/contacts');
         if (!res.ok) throw new Error("Failed to fetch contacts");
         const data = await res.json();
         setContacts(data);

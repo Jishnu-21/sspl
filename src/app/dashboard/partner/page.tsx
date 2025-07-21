@@ -24,7 +24,7 @@ const PartnersDashboard = () => {
     setError("");
     const fetchPartners = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/partners`);
+        const res = await fetch('/api/partners');
         if (!res.ok) throw new Error("Failed to fetch partners");
         const data = await res.json();
         setPartners(data);

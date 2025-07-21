@@ -1,13 +1,13 @@
-import { BASE_URL } from '../../config/endpoint';
 import { NextRequest, NextResponse } from 'next/server';
+import { BASE_URL } from '../../../config/endpoint';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const backendRes = await fetch(`http://${BASE_URL}/api/login`, {
+    // Forward the form-data as-is
+    const formData = await req.formData();
+    const backendRes = await fetch(`http://${BASE_URL}/api/banners/upload`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      body: formData,
     });
     const data = await backendRes.json();
     return new NextResponse(JSON.stringify(data), {
@@ -21,4 +21,3 @@ export async function POST(req: NextRequest) {
     });
   }
 } 
-

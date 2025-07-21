@@ -28,7 +28,7 @@ const WebinarsDashboard = () => {
     setError("");
     const fetchWebinars = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/webinars`);
+        const res = await fetch('/api/webinars');
         if (!res.ok) throw new Error("Failed to fetch webinars");
         const data = await res.json();
         setWebinars(data);

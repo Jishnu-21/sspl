@@ -27,7 +27,7 @@ export default function BlogAdminPage() {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
 
   const fetchBlogs = () => {
-    fetch(`http://${BASE_URL}/api/blogs`)
+    fetch('/api/blogs')
       .then(res => res.json())
       .then(setBlogs);
   };
@@ -73,7 +73,7 @@ export default function BlogAdminPage() {
         }
       });
       if (coverFile) formData.append('coverImage', coverFile);
-      const res = await fetch(`http://${BASE_URL}/api/blogs`, {
+      const res = await fetch('/api/blogs', {
         method: 'POST',
         body: formData,
       });
@@ -96,7 +96,7 @@ export default function BlogAdminPage() {
     setSuccess('');
     setError('');
     try {
-      const res = await fetch(`http://${BASE_URL}/api/blogs/${slug}`, { method: 'DELETE' });
+      const res = await fetch(`/api/blogs/${slug}`, { method: 'DELETE' });
       if (!res.ok) throw new Error('Failed to delete blog');
       setSuccess('Blog deleted!');
       fetchBlogs();
@@ -144,7 +144,7 @@ export default function BlogAdminPage() {
         }
       });
       if (editCoverFile) formData.append('coverImage', editCoverFile);
-      const res = await fetch(`http://${BASE_URL}/api/blogs/${editSlug}`, {
+      const res = await fetch(`/api/blogs/${editSlug}`, {
         method: 'PUT',
         body: formData,
       });

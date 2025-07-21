@@ -34,7 +34,7 @@ const BannerAdminPage = () => {
     setError('');
     setFile(null);
     setLoading(true);
-    fetch(`http://${BASE_URL}/api/banners/${selectedKey}`)
+    fetch(`/api/banners/${selectedKey}`)
       .then(async (res) => {
         if (!res.ok) throw new Error('No banner found');
         const data = await res.json();
@@ -78,7 +78,7 @@ const BannerAdminPage = () => {
     formData.append('key', selectedKey);
     formData.append('image', file);
     try {
-      const res = await fetch(`http://${BASE_URL}/api/banners/upload`, {
+      const res = await fetch('/api/banners/upload', {
         method: 'POST',
         body: formData,
       });

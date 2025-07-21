@@ -43,7 +43,7 @@ const JobOpeningDetailPage = () => {
     if (!id) return;
     setLoading(true);
     setError("");
-    fetch(`http://${BASE_URL}/api/job-openings/${id}`)
+    fetch(`/api/job-openings/${id}`)
       .then(async (res) => {
         if (!res.ok) throw new Error("Job not found");
         const data = await res.json();
@@ -73,7 +73,7 @@ const JobOpeningDetailPage = () => {
     setFormSuccess("");
     setFormError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings/${id}`, {
+      const res = await fetch(`/api/job-openings/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -102,7 +102,7 @@ const JobOpeningDetailPage = () => {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings/${id}`, {
+      const res = await fetch(`/api/job-openings/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete job opening");

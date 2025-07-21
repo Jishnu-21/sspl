@@ -81,7 +81,7 @@ const CareersDashboard = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/job-openings`);
+        const res = await fetch('/api/job-openings');
         if (!res.ok) throw new Error("Failed to fetch job openings");
         const data = await res.json();
         setJobOpenings(data);
@@ -98,7 +98,7 @@ const CareersDashboard = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/careers`);
+        const res = await fetch('/api/careers');
         if (!res.ok) throw new Error("Failed to fetch candidates");
         const data = await res.json();
         setCandidates(data);
@@ -123,7 +123,7 @@ const CareersDashboard = () => {
     setFormSuccess("");
     setFormError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings`, {
+      const res = await fetch('/api/job-openings', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -142,7 +142,7 @@ const CareersDashboard = () => {
       setForm({ title: "", description: "", location: "", requirements: "", contactEmail: "", contactPhone: "", benefits: "", whoWeAre: "" });
       setFormSuccess("Job opening created!");
       // Refresh job openings
-      const jobsRes = await fetch(`http://${BASE_URL}/api/job-openings`);
+      const jobsRes = await fetch('/api/job-openings');
       setJobOpenings(await jobsRes.json());
     } catch (err: any) {
       setFormError(err.message || "Error creating job opening");
@@ -160,7 +160,7 @@ const CareersDashboard = () => {
     setSelectedJobFormError("");
     setSelectedJobDeleteError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings/${id}`);
+      const res = await fetch(`/api/job-openings/${id}`);
       if (!res.ok) throw new Error("Job not found");
       const data = await res.json();
       setSelectedJobForm({
@@ -191,7 +191,7 @@ const CareersDashboard = () => {
     setSelectedJobFormSuccess("");
     setSelectedJobFormError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings/${selectedJobId}`, {
+      const res = await fetch(`/api/job-openings/${selectedJobId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -209,7 +209,7 @@ const CareersDashboard = () => {
       if (!res.ok) throw new Error("Failed to update job opening");
       setSelectedJobFormSuccess("Job opening updated!");
       // Refresh job openings
-      const jobsRes = await fetch(`http://${BASE_URL}/api/job-openings`);
+      const jobsRes = await fetch('/api/job-openings');
       setJobOpenings(await jobsRes.json());
     } catch (err: any) {
       setSelectedJobFormError(err.message || "Error updating job opening");
@@ -224,7 +224,7 @@ const CareersDashboard = () => {
     setSelectedJobDeleteLoading(true);
     setSelectedJobDeleteError("");
     try {
-      const res = await fetch(`http://${BASE_URL}/api/job-openings/${selectedJobId}`, {
+      const res = await fetch(`/api/job-openings/${selectedJobId}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete job opening");
@@ -240,7 +240,7 @@ const CareersDashboard = () => {
         whoWeAre: "",
       });
       // Refresh job openings
-      const jobsRes = await fetch(`http://${BASE_URL}/api/job-openings`);
+      const jobsRes = await fetch('/api/job-openings');
       setJobOpenings(await jobsRes.json());
     } catch (err: any) {
       setSelectedJobDeleteError(err.message || "Error deleting job opening");
