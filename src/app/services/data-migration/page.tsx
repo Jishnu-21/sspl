@@ -76,19 +76,17 @@ const DataMigration = () => {
             <p className="text-gray-700 text-justify leading-relaxed mb-6">
               The technology with its critical technical advancements, helps the client to gain better insights of the migrated data tables, fields and records. Few of the technological benefits are listed below:     
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              <ul className="list-disc list-inside inline-block text-left">
-                <li>100% data testing, with no sampling or test records.</li>
-                <li>Once data is captured, the records cannot be modified. User gets most reliable report.</li>
-                <li>There is no limit on the number of records and fields to manage the testing.</li>
-                <li>Fast processing of the tables.</li>
-                <li>Fully customisable logics and conditions can be incorporated in shortest possible time.</li>
-                <li>It can be automated to be performing Auto-Mode testing analytics, and reports could be received over emails.</li>
-                <li>Output reports can be customised as per the needs and requirements.</li>
-                <li>Besides testing, SSPL also support for Data Migration activity.</li>
-                <li>If new application is being migrated, SSPL also perform application testing.</li>
-              </ul>
-            </p>
+            <ul className="list-disc list-inside text-gray-700 text-justify leading-relaxed ">
+              <li>100% data testing, with no sampling or test records.</li>
+              <li>Once data is captured, the records cannot be modified. User gets most reliable report.</li>
+              <li>There is no limit on the number of records and fields to manage the testing.</li>
+              <li>Fast processing of the tables.</li>
+              <li>Fully customisable logics and conditions can be incorporated in shortest possible time.</li>
+              <li>It can be automated to be performing Auto-Mode testing analytics, and reports could be received over emails.</li>
+              <li>Output reports can be customised as per the needs and requirements.</li>
+              <li>Besides testing, SSPL also support for Data Migration activity.</li>
+              <li>If new application is being migrated, SSPL also perform application testing.</li>
+            </ul>
           </div>
         </motion.section>
         <DataMigrationRisks />
