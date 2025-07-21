@@ -53,7 +53,7 @@ const CareerOpeningDetailPage = () => {
     formData.append('position', jobData.title); // Pass job title as position
     formData.append('resume', form.resume);
     try {
-      const res = await fetch(`http://${BASE_URL}/api/careers`, {
+      const res = await fetch('/api/careers', {
         method: 'POST',
         body: formData,
       });
@@ -71,7 +71,7 @@ const CareerOpeningDetailPage = () => {
     if (!slug) return;
     setLoading(true);
     setError('');
-    fetch(`http://${BASE_URL}/api/job-openings/slug/${slug}`)
+    fetch(`/api/job-openings/slug/${slug}`)
       .then(async (res) => {
         if (!res.ok) throw new Error('Job not found');
         const data = await res.json();

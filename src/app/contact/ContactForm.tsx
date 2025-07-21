@@ -75,7 +75,7 @@ const ContactForm = () => {
     const loadingToast = toast.loading('Submitting your message...');
 
     try {
-      const response = await fetch(`http://${BASE_URL}/api/contact`, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -31,7 +31,7 @@ const CareerOpenings = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(`http://${BASE_URL}/api/job-openings`);
+        const res = await fetch('/api/job-openings');
         if (!res.ok) throw new Error('Failed to fetch job openings');
         const data = await res.json();
         setOpenPositions(data);

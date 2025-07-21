@@ -33,7 +33,7 @@ const PageBanner = ({
       setDynamicImage(null);
       return;
     }
-    fetch(`http://${BASE_URL}/api/banners/${bannerKey}`)
+    fetch(`/api/banners/${bannerKey}`)
       .then(async (res) => {
         if (!res.ok) throw new Error('No banner found');
         const data = await res.json();
