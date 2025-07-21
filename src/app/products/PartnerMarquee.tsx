@@ -31,69 +31,44 @@ const clientsRow2 = [
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/24.png' },
 ];
 
-const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) => {
+const PartnerMarquee = ({ className = '' }) => {
   return (
-    <div className={`w-full  overflow-hidden ${className}`}>
-      <div className="relative w-full">
-        <div className="marquee-container">
-          {/* First row */}
-          <div className="marquee-row">
-            <div className="marquee-content">
+    <div className={`w-full overflow-hidden ${className}`}>
+      <div className="relative">
+        {/* First Row - Left to Right */}
+        <div className="mb-3 sm:mb-4 md:mb-6">
+          <div className="marquee-wrapper overflow-hidden">
+            <div className="marquee-row-1 flex gap-2 sm:gap-3 md:gap-4">
+              {/* Original logos */}
               {clientsRow1.map((client, index) => (
-                <div key={index} className="flex-shrink-0 mx-2 flex items-center justify-center">
-                  <div className="relative w-80 h-48">
+                <div 
+                  key={`row1-${index}`} 
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                >
+                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
                     <Image
                       src={client.logo}
                       alt={client.name}
                       fill
                       style={{ objectFit: 'contain' }}
-                      className="rounded-lg"
+                      className="transition-all duration-300"
                     />
                   </div>
                 </div>
               ))}
               {/* Duplicate for seamless loop */}
               {clientsRow1.map((client, index) => (
-                <div key={`dup1-${index}`} className="flex-shrink-0 mx-2 flex items-center justify-center">
-                  <div className="relative w-80 h-48">
+                <div 
+                  key={`row1-dup-${index}`} 
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                >
+                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
                     <Image
                       src={client.logo}
                       alt={client.name}
                       fill
                       style={{ objectFit: 'contain' }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Second row */}
-          <div className="marquee-row">
-            <div className="marquee-content">
-              {clientsRow2.map((client, index) => (
-                <div key={index} className="flex-shrink-0 mx-2 flex items-center justify-center">
-                  <div className="relative w-80 h-48">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {clientsRow2.map((client, index) => (
-                <div key={`dup2-${index}`} className="flex-shrink-0 mx-2 flex items-center justify-center">
-                  <div className="relative w-80 h-48">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="rounded-lg"
+                      className=" transition-all duration-300"
                     />
                   </div>
                 </div>
@@ -101,32 +76,108 @@ const PartnerMarquee: React.FC<{ className?: string }> = ({ className = '' }) =>
             </div>
           </div>
         </div>
+
+        {/* Second Row - Right to Left */}
+        <div>
+          <div className="marquee-wrapper overflow-hidden">
+            <div className="marquee-row-2 flex gap-2 sm:gap-3 md:gap-4">
+              {/* Original logos */}
+              {clientsRow2.map((client, index) => (
+                <div 
+                  key={`row2-${index}`} 
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                >
+                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {clientsRow2.map((client, index) => (
+                <div 
+                  key={`row2-dup-${index}`} 
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                >
+                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
       </div>
+
       <style jsx>{`
-        .marquee-container {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          overflow: hidden;
+        .marquee-wrapper {
           position: relative;
+          width: 100%;
         }
-        .marquee-row {
-          display: flex;
-          position: relative;
+
+        .marquee-row-1 {
+          animation: marquee-left 45s linear infinite;
+          width: fit-content;
         }
-        .marquee-content {
-          display: flex;
-          animation: marquee 60s linear infinite;
+
+        .marquee-row-2 {
+          animation: marquee-right 50s linear infinite;
+          width: fit-content;
         }
-        .marquee-row:nth-child(2) .marquee-content {
-          animation-direction: reverse;
+
+        /* Pause animation on hover for better user experience */
+        .marquee-wrapper:hover .marquee-row-1,
+        .marquee-wrapper:hover .marquee-row-2 {
+          animation-play-state: paused;
         }
-        @keyframes marquee {
+
+        @keyframes marquee-left {
           0% {
             transform: translateX(0);
           }
           100% {
             transform: translateX(-50%);
+          }
+        }
+
+        @keyframes marquee-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        /* Responsive animation speeds */
+        @media (max-width: 640px) {
+          .marquee-row-1 {
+            animation-duration: 35s;
+          }
+          .marquee-row-2 {
+            animation-duration: 40s;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .marquee-row-1 {
+            animation-duration: 60s;
+          }
+          .marquee-row-2 {
+            animation-duration: 65s;
           }
         }
       `}</style>

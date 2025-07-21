@@ -39,10 +39,9 @@ const ArbutusAnalyticsSection = () => {
 
  
   return (
-    <div className="-mx-4 md:-mx-6 lg:-mx-8">
-      
-      <section className="py-2 pt-12 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.1vw", marginRight: "-50vw", maxWidth: "100vw" }}>
-        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
+    <div className="w-full">
+      <section className="py-8 pt-12 bg-white w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

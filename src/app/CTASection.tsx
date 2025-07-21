@@ -122,8 +122,6 @@ const CTASection = () => {
               variants={fadeIn}
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: 'white',
-                color: '#0f2756',
                 boxShadow: '0 0 20px rgba(255,255,255,0.2)'
               }}
               whileTap={{ scale: 0.98 }}
