@@ -530,7 +530,7 @@ const TruOIComponent = () => {
         }
         
         .partner-marquee {
-          animation: partner-marquee 40s linear infinite;
+          animation: partner-marquee 20s linear infinite;
           display: flex;
           will-change: transform;
         }
