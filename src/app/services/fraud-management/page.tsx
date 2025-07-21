@@ -139,7 +139,7 @@ const FraudManagement = () => {
                       <FaExclamationTriangle className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify  group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-center  group-hover:text-white transition-colors duration-300">
                     Payments to risky vendors, including government contractors and parties on government watch lists
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const FraudManagement = () => {
                       <FaUniversity className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify  group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-center  group-hover:text-white transition-colors duration-300">
                     Payments made from foreign bank accounts
                   </p>
                 </div>
@@ -161,7 +161,7 @@ const FraudManagement = () => {
                       <FaUserTie className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white  text-center group-hover:text-white transition-colors duration-300">
                     Use of new attorneys, accountants, consultants or people from other professions with no prior relationship to the company
                   </p>
                 </div>
@@ -172,7 +172,7 @@ const FraudManagement = () => {
                       <FaSearch className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Missing descriptions or suspicious payment keywords, such as "for services rendered," "gifts," or "facilitation"
                   </p>
                 </div>
@@ -183,7 +183,7 @@ const FraudManagement = () => {
                       <FaMoneyCheckAlt className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white  text-center group-hover:text-white transition-colors duration-300">
                     Checks made out to "cash"
                   </p>
                 </div>
@@ -194,7 +194,7 @@ const FraudManagement = () => {
                       <FaFileInvoiceDollar className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
                     Payments classified as government expenses, made in cash, or written to an individual
                   </p>
                 </div>
