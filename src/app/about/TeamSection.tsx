@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
@@ -22,6 +22,7 @@ interface TeamSectionProps {
 }
 
 const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Leaders" }) => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const renderSocialIcon = (platform: keyof TeamMember['socials'], url: string) => {
     const iconProps = {
       size: 20,
@@ -58,6 +59,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 className="group relative h-[350px] w-[280px] overflow-hidden transition-all duration-500 hover:h-[390px] hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(8,_112,_184,_0.25)] bg-gray-100 rounded-lg"
+                onClick={() => setSelectedIndex(selectedIndex === index ? null : index)}
               >
                 <div className="relative h-full w-full">
                   <div className="absolute inset-0">
@@ -71,11 +73,15 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
                     />
                   </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                  <div className={
+                    `absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70 transition-all duration-500 ` +
+                    ((selectedIndex === index) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100')
+                  }>
+                    <div className={
+                      `absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center text-white transform transition-all duration-500 ease-out ` +
+                      ((selectedIndex === index) ? 'opacity-100 translate-y-0' : 'translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0')
+                    }>
                       <p className="font-semibold text-lg text-center mb-1">{member.name}</p>
-                      
-                  
                     </div>
                   </div>
                 </div>
