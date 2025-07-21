@@ -41,7 +41,7 @@ const AboutBanner = () => {
     <>
       <ShortPageBanner
         backgroundImage={bgImage}
-        title=""
+        title="About Us"
       />
 
       {/* Blue Section with Vision & Values */}
