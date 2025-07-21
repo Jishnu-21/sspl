@@ -129,8 +129,6 @@ const WebinarForm = () => {
               <div
                 key={idx}
                 className="bg-white p-6 rounded-md shadow-md border-b-4 border-[#a4ce4e] flex flex-col min-h-[110px]"
-                data-aos="fade-up"
-                data-aos-delay={200 + idx * 100}
               >
                 <div className="text-lg font-semibold mb-2 text-green-800 leading-snug">{webinar.title}</div>
                 <div className="text-gray-800 text-sm">{webinar.speaker}</div>
