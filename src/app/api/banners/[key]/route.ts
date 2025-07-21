@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { BASE_URL } from '../../../config/endpoint';
 
-export async function GET(req: NextRequest, context: { params: { key: string } }) {
+export async function GET(req: NextRequest, context: { params: any }) {
   try {
     const { key } = context.params;
     const backendRes = await fetch(`http://${BASE_URL}/api/banners/${key}`);
