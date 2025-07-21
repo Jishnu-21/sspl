@@ -306,7 +306,7 @@ const ServicesList = () => {
                           rounded-2xl
                           border border-blue-100
                           shadow-inner
-                          text-justify
+                          text-left
                         `}>
                     <h3 className="text-black font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-900">
   {service.title}
