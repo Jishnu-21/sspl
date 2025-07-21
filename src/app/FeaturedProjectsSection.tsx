@@ -172,7 +172,8 @@ const CaseStudiesSection = () => {
         {/* Solid Color Background */}
         <div className="absolute inset-0 w-full h-full bg-[#1B3D69] z-0"></div>
 
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-[1920px] relative z-20">
+        {/* Remove container and padding, use w-full and px-0 */}
+        <div className="w-full relative z-20 px-0">
           {/* Top heading */}
           <div className="pb-2 sm:pb-3 md:pb-4 mb-0 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 sm:mt-3 md:mt-4 font-bold text-white">Case Studies</h2>
@@ -180,22 +181,10 @@ const CaseStudiesSection = () => {
           {/* Horizontal line that extends across the entire section */}
           <div className="border-b border-white w-full mb-4 sm:mb-6 md:mb-8" />
           
-          <div className="flex flex-col lg:flex-row">
-            {/* Left side content */}
-            <div className="lg:w-1/3 mb-6 sm:mb-8 md:mb-10 lg:mb-0 pr-0 lg:pr-6 xl:pr-8 relative">
-              <p className="text-sm sm:text-base text-justify md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-              </p>
-              {/* Vertical line that connects with the horizontal line */}
-              <div
-                className="hidden lg:block absolute right-0 top-0 bottom-0 w-px bg-white"
-                style={{ top: '-20px' }}
-              />
-            </div>
-            
+          <div className="">
             {/* Right side scrollable cards */}
-            <div className="lg:w-2/3 overflow-hidden -mt-8 sm:-mt-12 md:-mt-16">
-              <div className="relative">
+            <div className="overflow-hidden -mt-8 sm:-mt-12 md:-mt-16 w-full">
+              <div className="relative w-full">
                 <Carousel items={cardItems} />
               </div>
             </div>

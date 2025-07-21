@@ -75,7 +75,7 @@ const WhyChooseSection = () => {
   }, [cardsPerView]);
 
   return (
-    <div className="container py-6 md:py-0 mx-auto 2xl:px-8 max-w-[1920px]">
+    <div className="container py-4 md:py-0 mx-auto 2xl:px-8 max-w-[1920px]">
       <div className="rounded-2xl overflow-hidden p-4 sm:p-8 lg:p-12 xl:p-16">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <motion.h2 

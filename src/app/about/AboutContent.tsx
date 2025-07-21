@@ -10,7 +10,7 @@ const cards = [
     icon: <FaChartLine size={32} className="text-white text-justify" />,
     text: 'Substratad Solutions Pvt. Ltd. (SSPL) is a leading consulting firm specializing in Big Data Analytics, Data Visualization, Robotic Process Analytics, Business Intelligence, Digital Transformation, Data Migration, and Predictive Analytics. Our expert team has successfully implemented over 200+ projects across industries globally.',
     stats: [
-      { icon: <FaUserTie size={24} />, label: '15+', sub: 'Experience' },
+      { icon: <FaUserTie size={24} />, label: '25+', sub: 'Experience' },
       { icon: <FaUsers size={24} />, label: '100+', sub: 'Clients' },
       { icon: <FaServer size={24} />, label: '24/7', sub: 'Global Analytics Hub' },
       { icon: <FaFolderOpen size={24} />, label: '150+', sub: 'Projects' },
