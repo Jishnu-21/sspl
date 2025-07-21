@@ -113,11 +113,11 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             )}
           ></div>
 
-          {/* Fixed: Remove padding-left and margin classes that create the gap */}
+          {/* Fixed: Add consistent gap at start matching gap between cards */}
           <div
             className={cn(
-              "flex flex-row justify-start gap-4",
-              // Removed: "pl-4" and "mx-auto max-w-7xl" which were causing the left gap
+              "flex flex-row justify-start gap-4 pl-4",
+              // Added back pl-4 to match the gap-4 between cards (1rem each)
             )}
           >
             {items.map((item, index) => (
@@ -138,10 +138,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 }}
                 key={"card" + index}
                 className="rounded-3xl"
-                style={{
-                  // Ensure the first card starts at the very left
-                  marginLeft: index === 0 ? '0' : undefined
-                }}
               >
                 {item}
               </motion.div>
