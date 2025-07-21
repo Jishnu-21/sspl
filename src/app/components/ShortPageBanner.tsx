@@ -50,7 +50,7 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Centered Content */}
