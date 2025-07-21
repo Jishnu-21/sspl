@@ -307,11 +307,9 @@ const ServicesList = () => {
                           border border-blue-100
                           shadow-inner
                         `}>
-                    <h3 className="text-black font-bold text-xl md:text-2xl text-left transition-colors duration-300 group-hover:text-blue-900">
-  {service.title}
-</h3>
-
-                          
+                          <h3 className="text-black font-bold text-xl md:text-2xl text-left transition-colors duration-300 group-hover:text-blue-900">
+                            {service.title}
+                          </h3> 
                           <div className="flex-1 flex flex-col justify-between">
                             <p className="text-gray-700 text-sm leading-relaxed mb-4 overflow-y-auto">
                               {service.description}
