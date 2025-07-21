@@ -105,7 +105,7 @@ const predictiveanalysis= () => {
                 </div>
               </div>
               <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Insurance</h3>
-              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+              <p className="text-white  group-hover:text-white transition-colors duration-300">
                 Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.
               </p>
             </div>
@@ -123,7 +123,7 @@ const predictiveanalysis= () => {
                 </div>
               </div>
               <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Telecom</h3>
-              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+              <p className="text-white group-hover:text-white transition-colors duration-300">
                 Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
               </p>
             </div>
@@ -141,7 +141,7 @@ const predictiveanalysis= () => {
                 </div>
               </div>
               <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Wind-Mill</h3>
-              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+              <p className="text-white  group-hover:text-white transition-colors duration-300">
                 Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.
               </p>
             </div>
