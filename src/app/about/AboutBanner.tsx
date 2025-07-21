@@ -69,7 +69,7 @@ const AboutBanner = () => {
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Protect & respect confidentiality</h3>
               <p className="text-white/90 text-justify text-sm px-4">
-                We often work in sensitive environments where the slightest breach of confidentiality-or the appearance of a breach-could have severe consequences and hinder our ability to serve our clients well. We strictly maintain our clients’ confidentiality and do everything we can to encourage others involved in the process including the service providers etc to share our approach.
+                We often work in sensitive environments where the slightest breach of confidentiality- or the appearance of a breach- could have severe consequences and hinder our ability to serve our clients well. We strictly maintain our clients’ confidentiality and do everything we can to encourage others involved in the process including the service providers etc to share our approach.
               </p>
             </div>
             {/* Lead with insight */}
