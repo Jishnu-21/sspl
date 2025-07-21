@@ -14,6 +14,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 import ServiceInquiryModal from '@/app/components/ServiceInquiryModal'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 
 const revenue = () => {
@@ -382,6 +383,7 @@ const revenue = () => {
                 </motion.div>
               </div>
             </section>
+            <ScheduleDemo/>
             
      <Footer/>   
      </main>

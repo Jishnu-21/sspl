@@ -8,6 +8,7 @@ import React from 'react'
 import DataMigrationRisks from '@/app/components/DataMigrationRisks'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const DataMigration = () => {
   return (
@@ -91,6 +92,7 @@ const DataMigration = () => {
           </div>
         </motion.section>
         <DataMigrationRisks />
+        <ScheduleDemo/>
         <Footer/>   
       </main>
     </>

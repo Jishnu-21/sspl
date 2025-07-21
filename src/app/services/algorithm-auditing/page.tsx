@@ -7,6 +7,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const AlgorithmAuditing = () => {
   return (
@@ -88,6 +89,7 @@ const AlgorithmAuditing = () => {
             </div>
           </div>
         </motion.section>
+        <ScheduleDemo/>
 
     <Footer/>
     </main>

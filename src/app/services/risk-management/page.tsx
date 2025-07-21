@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 
 // Define risk management areas for the PartnersScroll component with icons
@@ -126,7 +127,7 @@ const risk = () => {
               items={riskAreas}
             />
 
-
+    <ScheduleDemo/>
     <Footer/>
     </main>
     </>

@@ -7,6 +7,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const Grc = () => {
   return (
@@ -437,7 +438,7 @@ const Grc = () => {
           </div>
         </div>
       </section>
-      
+      <ScheduleDemo/>
       <Footer/>
     </main>
     </>

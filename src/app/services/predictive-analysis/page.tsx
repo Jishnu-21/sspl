@@ -10,6 +10,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
 import ServiceInquiryModal from '@/app/components/ServiceInquiryModal'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const predictiveanalysis= () => {
   const [modal, setModal] = React.useState<string | null>(null)
@@ -47,7 +48,7 @@ const predictiveanalysis= () => {
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-4 sm:mb-6"></div>
 
         {/* Handling Large Data Sets Section */}
-        <section className="py-3 sm:py-6 px-2 sm:px-4 md:px-8 max-w-7xl mx-auto mb-6 sm:mb-12" data-aos="fade-up">
+        <section className=" px-2 sm:px-4 md:px-8 max-w-7xl mx-auto " data-aos="fade-up">
           <div className="text-left mb-4 sm:mb-8">
             <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 text-center">Handling Large Data Sets</h2>
           </div>
@@ -87,9 +88,9 @@ const predictiveanalysis= () => {
         </section>
 
         {/* Applied Areas Section */}
-        <section className="px-2 sm:px-4 md:px-8 max-w-7xl mx-auto mb-8 sm:mb-16" data-aos="fade-up">
-          <div className="text-left mb-6 sm:mb-10">
-            <h2 className="text-2xl font-semibold text-[#366A00] mb-4 sm:mb-6 text-center">Some of the applied areas of the Predictive Analytics are:</h2>
+        <section className="px-2 mt-8 sm:px-4 md:px-8 " data-aos="fade-up">
+        <div className="text-left mb-4">
+            <h2 className="text-2xl font-semibold text-[#366A00]  text-center">Some of the applied areas of the Predictive Analytics are:</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full pt-4 sm:pt-6 pb-2 sm:pb-4" >
@@ -149,7 +150,7 @@ const predictiveanalysis= () => {
         </section>
         
         <ServiceInquiryModal open={!!modal} onClose={() => setModal(null)} title={modal || ''} />
-        
+        <ScheduleDemo/>
         <Footer/>
       </main>
     </>

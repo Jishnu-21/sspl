@@ -30,7 +30,7 @@ const EnInvoiceComponent = () => {
         {/* Dashboard Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -51,7 +51,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -72,7 +72,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -93,7 +93,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -114,7 +114,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -135,7 +135,7 @@ const EnInvoiceComponent = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#366A00] p-6 rounded-md shadow-sm cursor-pointer"
+            className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}

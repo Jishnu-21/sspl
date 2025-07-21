@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { FaChartLine, FaMoneyBillWave, FaSearchDollar, FaFileInvoiceDollar, FaChartPie, FaShieldAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const OperationsFinance = () => {
   return (
@@ -76,6 +77,7 @@ const OperationsFinance = () => {
             </div>
           </div>
         </motion.section>
+        <ScheduleDemo/>
         <Footer/>
       </main>
     </>

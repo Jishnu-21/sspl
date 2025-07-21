@@ -10,80 +10,7 @@ const ScheduleDemo = () => {
    const router = useRouter()
 
   // Add Toaster component at the top level of the component
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    contactNo: '',
-    message: '',
-    interestedDemo: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.contactNo || !formData.interestedDemo) {
-      toast.error('Please fill in all required fields');
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast.error('Please enter a valid email address');
-      return;
-    }
-    
-    setIsSubmitting(true);
-    const loadingToast = toast.loading('Submitting your request...');
-    
-    try {
-      const response = await fetch('/api/schedule-demo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        toast.success('Demo request sent successfully!', { id: loadingToast });
-        setSubmitSuccess(true);
-        
-        // Reset form after success
-        setTimeout(() => {
-          setSubmitSuccess(false);
-          setFormData({
-            name: '',
-            email: '',
-            contactNo: '',
-            message: '',
-            interestedDemo: ''
-          });
-        }, 3000);
-      } else {
-        toast.error(data.error || 'Failed to send demo request', { id: loadingToast });
-      }
-    } catch (error) {
-      toast.error('An error occurred. Please try again later.', { id: loadingToast });
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+ 
 
   return (
     <>
@@ -110,9 +37,8 @@ const ScheduleDemo = () => {
             </motion.div>
           </div>
         </div>
-      </section>
       {/* CTA Button below the section */}
-      <div className="w-full flex justify-center py-8" style={{ backgroundColor: '#0F1A42' }}>
+      <div className="w-full flex justify-center py-6" style={{ backgroundColor: '#0F1A42' }}>
         <button 
           className="px-10 py-3 rounded-lg cursor-pointer border border-white text-white font-bold text-lg shadow-lg transition-all duration-300 bg-[#2D3A62] hover:bg-[#366A00] hover:text-white"
           onClick={() => router.push('/contact')}
@@ -120,6 +46,7 @@ const ScheduleDemo = () => {
           Get in Touch
         </button>
       </div>
+      </section>
     </>
   );
 };

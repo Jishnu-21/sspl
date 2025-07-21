@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 import { FaExclamationTriangle, FaUniversity, FaUserTie, FaSearch, FaMoneyCheckAlt, FaFileInvoiceDollar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
+import ScheduleDemo from '@/app/products/ScheduleDemo'
 
 const FraudManagement = () => {
   // Helper function to extract YouTube video ID from URL
@@ -270,7 +271,7 @@ const FraudManagement = () => {
             </div>
           </div>
         )}
-        
+        <ScheduleDemo/>
         <Footer/>   
       </main>
     </>

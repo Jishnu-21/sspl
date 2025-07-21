@@ -21,6 +21,7 @@ import PartnersScroll from '@/app/components/PartnersScroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton';
+import ScheduleDemo from '@/app/products/ScheduleDemo';
 
 type FeatureCardProps = {
   icon: React.ComponentType<{ className?: string }>;
@@ -220,7 +221,7 @@ const media = () => {
             { caption: 'Quicker Time-to-Market', useIcon: true, icon: FaClock }
           ]}
         />
-
+        <ScheduleDemo/>
         <Footer />
       </main>
     </>
