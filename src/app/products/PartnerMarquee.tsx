@@ -43,9 +43,9 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow1.map((client, index) => (
                 <div 
                   key={`row1-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
                 >
-                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
+                  <div className="relative w-40 h-28 sm:w-44 sm:h-32 md:w-48 md:h-36 lg:w-52 lg:h-40 xl:w-56 xl:h-44">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -60,9 +60,9 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow1.map((client, index) => (
                 <div 
                   key={`row1-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
                 >
-                  <div className="relative w-20 h-16 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32">
+                  <div className="relative w-40 h-28 sm:w-44 sm:h-32 md:w-48 md:h-36 lg:w-52 lg:h-40 xl:w-56 xl:h-44">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -85,9 +85,9 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow2.map((client, index) => (
                 <div 
                   key={`row2-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
                 >
-                  <div className="relative w-24 h-20 sm:w-32 sm:h-26 md:w-36 md:h-28 lg:w-40 lg:h-32 xl:w-44 xl:h-36">
+                  <div className="relative w-44 h-32 sm:w-48 sm:h-36 md:w-52 md:h-40 lg:w-56 lg:h-44 xl:w-60 xl:h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -102,9 +102,9 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow2.map((client, index) => (
                 <div 
                   key={`row2-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-2 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
                 >
-                  <div className="relative w-24 h-20 sm:w-32 sm:h-26 md:w-36 md:h-28 lg:w-40 lg:h-32 xl:w-44 xl:h-36">
+                  <div className="relative w-44 h-32 sm:w-48 sm:h-36 md:w-52 md:h-40 lg:w-56 lg:h-44 xl:w-60 xl:h-48">
                     <Image
                       src={client.logo}
                       alt={client.name}
