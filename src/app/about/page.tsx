@@ -62,12 +62,10 @@ export default function About() {
   return (
     <>
           <main className="flex flex-col bg-white min-h-screen">
-
       <Header/>
-      <AboutBanner />
-      <><div className='bg-white'>      <VisionSection/>
-      </div></>
+      <AboutBanner/>
       <AboutContent />
+     
       <TeamSection members={teamMembers} title="Meet Our Leaders" />
       <LifeAtSSPL />
       <ContactSection />

@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import ShortPageBanner from '../components/ShortPageBanner';
+import { FaEye, FaLock, FaLightbulb } from 'react-icons/fa';
 
 const STOCK_IMAGE = "/images/about/about.webp";
 const BANNER_KEY = "about";
@@ -36,24 +38,45 @@ const AboutBanner = () => {
   }
 
   return (
-    <section
-      className="relative pt-20 md:pt-0 mt-[110px] min-h-[40vh] md:min-h-[calc(100vh-110px)] flex items-center overflow-hidden bg-center bg-cover bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-black/50 bg-black"
-      style={{ backgroundImage: `url('${bgImage}')` }}
-    >
-      {/* Content Container */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="max-w-3xl mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-[16px] md:text-[20px] xl:text-[26px] font-medium text-white leading-[1.4] mb-8">
-          SSPL is a Software and IT Consulting organization that has been rendering services via its expert team of professionals towards the field of Big Data Analytics, Data Visualization, Robotics Process Analytics, Business Intelligence, Digital Transformation, Data Migration and Predictive Analytics
-          </h1>
-        </motion.div>
-      </div>
-    </section>
+    <>
+      <ShortPageBanner
+        backgroundImage={bgImage}
+        title=""
+      />
+
+      {/* Blue Section with Vision & Values */}
+      <section className="w-full bg-[#1B3D69] py-10 sm:py-14 md:py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-10">Our Vision & Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Vision */}
+            <div className="flex flex-col items-center text-center">
+              <span className="w-14 h-14 flex items-center justify-center rounded-full  mb-4 shadow-lg">
+                <FaEye size={28} className="text-white" />
+              </span>
+              <h3 className="text-lg font-semibold text-white mb-2">Vision</h3>
+              <p className="text-white/90 text-sm">Formed with a vision to be “the leading data analytics and data intelligence organisation”, we at SSPL are committed to continuous customer service and advance analytics solution Development Company. Helping our clients to steer towards their corporate vision and attain their goals with best possible optimized analytics solutions and services.</p>
+            </div>
+            {/* Protect & respect confidentiality */}
+            <div className="flex flex-col items-center text-center">
+              <span className="w-14 h-14 flex items-center justify-center rounded-full bg-[#1B3D69] mb-4 shadow-lg">
+                <FaLock size={28} className="text-white" />
+              </span>
+              <h3 className="text-lg font-semibold text-white mb-2">Protect & respect confidentiality</h3>
+              <p className="text-white/90 text-sm">We often work in sensitive environments where the slightest breach of confidentiality - or the appearance of a breach - could have severe consequences and hinder our ability to serve our clients well. We strictly maintain our clients’ confidentiality and do everything we can to encourage others involved in the process including the service providers etc to share our approach.</p>
+            </div>
+            {/* Lead with insight */}
+            <div className="flex flex-col items-center text-center">
+              <span className="w-14 h-14 flex items-center justify-center rounded-full mb-4 shadow-lg">
+                <FaLightbulb size={28} className="text-white" />
+              </span>
+              <h3 className="text-lg font-semibold text-white mb-2">Lead with insight</h3>
+              <p className="text-white/90 text-sm">Our consultants carry a wealth of expertise that most companies are always looking forward to tap into managing analytics for their various internal functions such as Operations, Risk and Revenue Assurance but struggle to achieve. SSPL is a strategic thought leader in the discipline of Data and Big Data Analytics for efficient Enterprise Management. .</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

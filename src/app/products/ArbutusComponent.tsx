@@ -41,7 +41,7 @@ const ArbutusComponent = () => {
       <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         <h3 className="text-xl font-semibold text-[#1B3D69] mb-4">Arbutus Software</h3>
         <p className="text-gray-800 mb-4">
-          <span className="font-bold">ARBUTUS Software </span>provides the best in audit software and data analysis technology. Since 2003, we have been innovating and delivering specialized data analysis technology to our users. Today, Arbutus offers auditors and analysts, the very best in data analytics and audit software. It is well-designed to meet the essential features for auditing, risk analysis, and compliance professionals. Arbutus Audit Analytics represents the very best in audit software and data analysis technology. Based on 25 years of software innovation and development, Analytics has become a premium choice of leading audit and data analysis professionals.
+          <span className="justify-text font-bold">ARBUTUS Software </span>provides the best in audit software and data analysis technology. Since 2003, we have been innovating and delivering specialized data analysis technology to our users. Today, Arbutus offers auditors and analysts, the very best in data analytics and audit software. It is well-designed to meet the essential features for auditing, risk analysis, and compliance professionals. Arbutus Audit Analytics represents the very best in audit software and data analysis technology. Based on 25 years of software innovation and development, Analytics has become a premium choice of leading audit and data analysis professionals.
 
 
         </p>

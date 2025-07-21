@@ -141,7 +141,7 @@ const TruOIComponent = () => {
         transition={{ duration: 0.6 }}
       >
         <section className="py-6 sm:py-10 bg-gray-100 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-0">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
@@ -350,7 +350,7 @@ const TruOIComponent = () => {
         transition={{ duration: 0.6 }}
       >
         <section className="py-6 sm:py-10 bg-gray-100 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-0">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
