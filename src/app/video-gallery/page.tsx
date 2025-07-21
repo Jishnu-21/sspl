@@ -12,15 +12,15 @@ import 'aos/dist/aos.css';
 // Helper function to extract YouTube video ID from URL
 const extractYoutubeId = (url: string) => {
   if (!url) return '';
-  
+
   // Handle different YouTube URL formats
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
-  
+
   return (match && match[2].length === 11) ? match[2] : '';
 };
 
-// Sample video data
+
 const videoData = [
   {
     id: 1,
@@ -177,7 +177,7 @@ const VideoGallery = () => {
   
   return (
     <>
-      <main className="flex flex-col bg-white min-h-screen">
+      <main className="flex flex-col bg-white min-h-screen ">
         <Header/>
         <ShortPageBanner 
           backgroundImage="/images/video gallery.png"
@@ -187,7 +187,7 @@ const VideoGallery = () => {
         
         <section className="py-10 sm:py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-5 md:px-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8" data-aos="fade-up">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10" data-aos="fade-up">
               {videoData.map((video, idx) => {
                 const videoId = extractYoutubeId(video.youtubeId);
                 return (
@@ -229,9 +229,9 @@ const VideoGallery = () => {
                       </div>
                       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     </div>
-                    <div className="p-3 sm:p-4">
-                      <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2 line-clamp-2">{video.title}</h3>
-                      <p className="text-xs sm:text-sm text-white line-clamp-2 sm:line-clamp-3">{video.description}</p>
+                    <div className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl text-justify font-normal text-white mb-2 line-clamp-2">{video.title}</h3>
+                      <p className="text-xs sm:text-sm font-thin text-justify text-white line-clamp-2 sm:line-clamp-3">{video.description}</p>
                     </div>
                   </div>
                 );
@@ -285,3 +285,4 @@ const VideoGallery = () => {
 };
 
 export default VideoGallery;
+

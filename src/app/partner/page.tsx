@@ -49,7 +49,7 @@ const partner = () => {
                 <li>Offers countless competitive advantages, but is compatible with alternative Big Data Analytics solutions.</li>
               </ul>
               
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-justify text-gray-700">
                 Organizations that provide sales network and solutions in the economic sectors such as Manufacturing, Retail, Telecom, Banking, Insurance, Media, Transportation and Government shall find a very strong, supportive partner in SSPL. SSPL as an Organisation that will open up new business opportunities for significant revenue in software sales, support, training, and consulting for its Partners and Associates.
               </p>
             </div>

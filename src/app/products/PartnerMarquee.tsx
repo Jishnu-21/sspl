@@ -43,7 +43,7 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow1.map((client, index) => (
                 <div 
                   key={`row1-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
                 >
                   <div className="relative w-40 h-28 sm:w-44 sm:h-32 md:w-48 md:h-36 lg:w-52 lg:h-40 xl:w-56 xl:h-44">
                     <Image
@@ -60,7 +60,7 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow1.map((client, index) => (
                 <div 
                   key={`row1-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
                 >
                   <div className="relative w-40 h-28 sm:w-44 sm:h-32 md:w-48 md:h-36 lg:w-52 lg:h-40 xl:w-56 xl:h-44">
                     <Image
@@ -85,7 +85,7 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow2.map((client, index) => (
                 <div 
                   key={`row2-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
                 >
                   <div className="relative w-44 h-32 sm:w-48 sm:h-36 md:w-52 md:h-40 lg:w-56 lg:h-44 xl:w-60 xl:h-48">
                     <Image
@@ -102,7 +102,7 @@ const PartnerMarquee = ({ className = '' }) => {
               {clientsRow2.map((client, index) => (
                 <div 
                   key={`row2-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4"
+                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
                 >
                   <div className="relative w-44 h-32 sm:w-48 sm:h-36 md:w-52 md:h-40 lg:w-56 lg:h-44 xl:w-60 xl:h-48">
                     <Image
@@ -180,6 +180,13 @@ const PartnerMarquee = ({ className = '' }) => {
             animation-duration: 65s;
           }
         }
+
+        .partner-card {
+          background: white;
+          transition: background 0.3s;
+        }
+        .partner-card:hover {
+          background: white
       `}</style>
     </div>
   );

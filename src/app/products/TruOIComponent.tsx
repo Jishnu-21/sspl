@@ -32,7 +32,7 @@ const TruOIComponent = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div>
       <motion.div 
         className="mb-4 sm:mb-8"
         initial={{ opacity: 0, y: 50 }}
@@ -49,9 +49,9 @@ const TruOIComponent = () => {
         >
           truOI
         </motion.h2>
-        <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
+        <div className="h-[1px] bg-gray-300 text-justify w-full mb-4"></div>
         <motion.p 
-          className="text-gray-800 mb-4 text-justify sm:mb-6"
+          className="text-gray-800 mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -134,14 +134,14 @@ const TruOIComponent = () => {
 
       {/* How TruOI Can Help You - Full Width Marquee */}
       <motion.div 
-        className="mb-6 sm:mb-10"
+        className="-mx-4 md:-mx-6 lg:-mx-8 mb-6 sm:mb-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="py-6 sm:py-10 bg-gray-100 w-full">
-          <div className="w-full px-0">
+        <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+          <div className="max-w-[95%] mx-auto">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
@@ -211,14 +211,14 @@ const TruOIComponent = () => {
 
       {/* Partners Section */}
       <motion.div 
-        className="mb-6 sm:mb-10"
+        className="-mx-4 md:-mx-6 lg:-mx-8 mb-6 sm:mb-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="py-2 bg-white w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="PY-2 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+          <div className="max-w-[95%] mx-auto">
             <motion.div 
               className="text-center mb-6 sm:mb-10"
               initial={{ opacity: 0, y: 30 }}
@@ -226,7 +226,7 @@ const TruOIComponent = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#1B3D69]">
+              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#1B3D69] ">
                 TruOI is partnered with 3k+ fastest<br />
                 growing companies
               </h3>
@@ -237,9 +237,8 @@ const TruOIComponent = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex justify-center items-center py-8"
             >
-              <PartnerMarquee/>
+              <PartnerMarquee />
             </motion.div>
           </div>
         </section>
@@ -343,14 +342,14 @@ const TruOIComponent = () => {
 
       {/* Integration Section */}
       <motion.div 
-        className=""
+        className="-mx-4 md:-mx-6 lg:-mx-8 "
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="py-6 sm:py-10 bg-gray-100 w-full">
-          <div className="w-full px-0">
+        <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+          <div className="max-w-[95%] mx-auto">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
