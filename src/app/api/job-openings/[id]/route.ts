@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { BASE_URL } from '../../../config/endpoint';
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, context: { params: any }) {
   try {
-    const { id } = params;
+    const { id } = context.params;
     const backendRes = await fetch(`http://${BASE_URL}/api/job-openings/${id}`);
     const data = await backendRes.json();
     return new NextResponse(JSON.stringify(data), {
@@ -18,9 +18,9 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(req: NextRequest, context: { params: any }) {
   try {
-    const { id } = params;
+    const { id } = context.params;
     const body = await req.json();
     const backendRes = await fetch(`http://${BASE_URL}/api/job-openings/${id}`, {
       method: 'PUT',
@@ -40,9 +40,9 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, context: { params: any }) {
   try {
-    const { id } = params;
+    const { id } = context.params;
     const backendRes = await fetch(`http://${BASE_URL}/api/job-openings/${id}`, { method: 'DELETE' });
     const data = await backendRes.json();
     return new NextResponse(JSON.stringify(data), {
