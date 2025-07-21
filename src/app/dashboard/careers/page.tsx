@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import JobOpeningsList from "./JobOpeningsList";
 import CandidatesTable from "./CandidatesTable";
 import JobOpeningForm from "./JobOpeningForm";
-import { BASE_URL } from '../../config/endpoint';
 
 interface Candidate {
   _id: string;

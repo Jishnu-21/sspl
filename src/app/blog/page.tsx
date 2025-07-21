@@ -6,12 +6,11 @@ import Head from 'next/head';
 import Header from '../Header'
 import Footer from '../Footer'
 import PageBanner from '../components/PageBanner';
-import { BASE_URL } from '../config/endpoint';
 
 export default function BlogListPage() {
   const [blogs, setBlogs] = useState<any[]>([]);
   useEffect(() => {
-    fetch(`http://${BASE_URL}/api/blogs`)
+    fetch('/api/blogs')
       .then(res => res.json())
       .then(setBlogs);
   }, []);

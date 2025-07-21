@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BASE_URL } from '../config/endpoint';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -39,7 +38,7 @@ const WebinarForm = () => {
     setSuccess('');
     setError('');
     try {
-      const res = await fetch(`http://${BASE_URL}/api/webinar`, {
+      const res = await fetch('/api/webinars', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

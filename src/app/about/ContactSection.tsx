@@ -34,7 +34,7 @@ const ContactSection = () => {
     const loadingToast = toast.loading('Sending your message...');
     
     try {
-      const response = await fetch('/api/about-contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

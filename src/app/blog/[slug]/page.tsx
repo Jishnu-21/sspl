@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
-import { BASE_URL } from "../../config/endpoint";
-
 export default function BlogDetailPage() {
   const { slug } = useParams();
   const [blog, setBlog] = useState<any>(null);
@@ -12,7 +10,7 @@ export default function BlogDetailPage() {
 
   useEffect(() => {
     if (!slug) return;
-    fetch(`http://${BASE_URL}/api/blogs/${slug}`)
+    fetch(`/api/blogs/${slug}`)
       .then((res) => {
         if (!res.ok) throw new Error("Blog not found");
         return res.json();

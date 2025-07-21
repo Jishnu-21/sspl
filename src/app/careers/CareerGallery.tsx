@@ -55,8 +55,8 @@ const CareerGallery = () => {
             <motion.div className="col-span-2 row-span-1" variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" 
-                  alt="Modern Office Space" 
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+                  alt="Professional Team Meeting" 
                   fill 
                   className="object-cover"
                 />
@@ -65,8 +65,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" 
-                  alt="Team Collaboration" 
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" 
+                  alt="Business Professional" 
                   fill 
                   className="object-cover"
                 />
@@ -77,8 +77,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
-                  alt="Data Analytics" 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                  alt="Female Professional" 
                   fill 
                   className="object-cover"
                 />
@@ -87,8 +87,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" 
-                  alt="Team Meeting" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Male Professional" 
                   fill 
                   className="object-cover"
                 />
@@ -97,8 +97,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=800&q=80" 
-                  alt="Customer Support" 
+                  src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&w=800&q=80" 
+                  alt="Diverse Team Collaboration" 
                   fill 
                   className="object-cover"
                 />
@@ -109,8 +109,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" 
-                  alt="Collaborative Workspace" 
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" 
+                  alt="Career Growth Discussion" 
                   fill 
                   className="object-cover"
                 />
@@ -119,8 +119,8 @@ const CareerGallery = () => {
             <motion.div variants={fadeInUp}>
               <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" 
-                  alt="Team Member" 
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
+                  alt="Professional Training Session" 
                   fill 
                   className="object-cover"
                 />
