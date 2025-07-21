@@ -213,8 +213,8 @@ const ServicesList = () => {
         <h2 
           ref={titleRef}
           className={`
-          text-left mb-4 sm:mb-8 md:mb-16
-          relative
+            text-center mb-4 sm:mb-8 md:mb-16
+            relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
           `}
