@@ -1,7 +1,7 @@
-'use client';
+'use client'
+
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 const clientsRow1 = [
   { name: 'Premium', logo: '/images/products/tru-oi/logo/1.png' },
@@ -32,72 +32,68 @@ const clientsRow2 = [
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/24.png' },
 ];
 
-interface PartnerMarqueeProps {
-  className?: string;
-}
-
-const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
-  const duplicatedClientsRow1 = [...clientsRow1, ...clientsRow1];
-  const duplicatedClientsRow2 = [...clientsRow2, ...clientsRow2];
-
+const ClientsMarquee = () => {
   return (
-    <div className={`w-full overflow-hidden space-y-4 ${className}`}>
-      {/* First Row - Scroll Left */}
-      <div className="relative w-full overflow-hidden">
-        <motion.div
-          className="flex gap-x-8"
-          animate={{ x: '-50%' }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          style={{ width: '200%' }}
-        >
-          {duplicatedClientsRow1.map((client, index) => (
-            <div key={`row1-${index}`} className="flex-shrink-0">
-              <div className="relative w-40 h-24 sm:w-60 sm:h-44">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
+    <div className="relative">
+      <div className="overflow-hidden relative">
+        <div className="marquee-container">
+          {[clientsRow1, clientsRow2].map((rowClients, rowIndex) => (
+            <div key={rowIndex} className="marquee-row">
+              {[...Array(2)].map((_, dupIndex) => (
+                <div key={dupIndex} className="marquee-content">
+                  {rowClients.map((client, index) => (
+                    <div key={index} className="client-logo mx-0 flex items-center justify-center opacity-90">
+                      <div className="relative w-[280px] h-[200px]">
+                        <Image
+                          src={client.logo}
+                          alt={client.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
-      {/* Second Row - Scroll Right */}
-      <div className="relative w-full overflow-hidden">
-        <motion.div
-          className="flex gap-x-8"
-          animate={{ x: '0%' }}
-          initial={{ x: '-50%' }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          style={{ width: '200%' }}
-        >
-          {duplicatedClientsRow2.map((client, index) => (
-            <div key={`row2-${index}`} className="flex-shrink-0">
-              <div className="relative w-40 h-24 sm:w-60 sm:h-44">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+      <style jsx>{`
+        .marquee-container {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .marquee-row {
+          display: flex;
+          position: relative;
+        }
+
+        .marquee-content {
+          display: flex;
+          animation: marquee 35s linear infinite;
+        }
+
+        .marquee-row:nth-child(2) .marquee-content {
+          animation-direction: reverse;
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default PartnerMarquee;
+export default ClientsMarquee;
