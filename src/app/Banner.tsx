@@ -51,8 +51,7 @@ const Banner = () => {
             <div className="w-full h-full relative" style={{ aspectRatio: '16/9' }}>
               {/* Loading Overlay */}
               {loading && (
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black/100 z-20">
-                  <span className="text-white text-lg animate-pulse">Loading...</span>
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-white/100 z-20">
                 </div>
               )}
               <video 
@@ -77,11 +76,7 @@ const Banner = () => {
             </div>
             {/* Overlay */}
             <div className="absolute inset-0"></div>
-        </div>
-        {/* Banner Content */}
-        <div className="container relative z-10 mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
-          {/* Banner content can go here */}
-        </div>
+        </div>     
       </section>
     </>
   );
