@@ -56,14 +56,15 @@ const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
       {/* Centered Content */}
       <div className="relative z-10 w-full h-full flex items-center justify-center px-4 text-center">
         <div className="flex flex-col items-center justify-center w-full max-w-3xl pt-16">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-white break-words"
-          >
-            {title}
-          </motion.h1>
+        <motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-white break-words mt-20"
+>
+  {title}
+</motion.h1>
+
 
           {subtitle && (
             <motion.p
