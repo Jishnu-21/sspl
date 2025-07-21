@@ -213,7 +213,7 @@ const ServicesList = () => {
         <h2 
           ref={titleRef}
           className={`
-          text-center mb-4 sm:mb-8 md:mb-16
+          text-left mb-4 sm:mb-8 md:mb-16
           relative
             transform transition-all duration-1000 ease-out
             ${titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
@@ -300,15 +300,14 @@ const ServicesList = () => {
                           absolute inset-0
                           backface-hidden
                           rotate-y-180
-                          p-6 md:p-8
+                          p-6 md:p-6
                           flex flex-col
                           bg-gradient-to-br from-blue-50 to-white
                           rounded-2xl
                           border border-blue-100
                           shadow-inner
-                          text-left
                         `}>
-                    <h3 className="text-black font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-900">
+                    <h3 className="text-black font-bold text-xl md:text-2xl text-left transition-colors duration-300 group-hover:text-blue-900">
   {service.title}
 </h3>
 
@@ -423,13 +422,14 @@ const ServicesList = () => {
                               absolute inset-0
                               backface-hidden
                               rotate-y-180
-                              p-3 xs:p-4
+                              pt-2 pb-3 px-3 xs:pt-2 xs:pb-4 xs:px-4
                               flex flex-col
                               bg-gradient-to-br from-blue-50 to-white
                               rounded-xl
                               border border-blue-100
+                            
                             `}>
-                              <h3 className="text-blue-900 font-bold text-base xs:text-lg mb-2 leading-tight">
+                              <h3 className="text-blue-900 font-bold  text-base xs:text-lg mb-2 leading-tight mt-0">
                                 {service.title}
                               </h3>
                               
