@@ -18,9 +18,11 @@ export default function Home() {
 
   // Redirect to dashboard if already logged in
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && router) {
       const token = localStorage.getItem('token');
-      if (token) {
+      console.log('LoginPage token:', token);
+      // Only redirect if not already on /dashboard
+      if (token && window.location.pathname !== '/dashboard') {
         router.replace('/dashboard');
       }
     }

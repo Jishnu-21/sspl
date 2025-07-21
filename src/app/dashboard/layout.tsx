@@ -9,9 +9,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && router) {
       const token = localStorage.getItem('token');
-      if (!token) {
+      console.log('DashboardLayout token:', token);
+      // Only redirect if not already on /login
+      if (!token && window.location.pathname !== '/login') {
         router.replace('/login');
       } else {
         setCheckingAuth(false);
