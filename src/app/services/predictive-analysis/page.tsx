@@ -123,7 +123,7 @@ const predictiveanalysis= () => {
                 </div>
               </div>
               <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Telecom</h3>
-              <p className="text-white group-hover:text-white transition-colors duration-300">
+              <p className="text-white group-hover:text-white  text-justify justify-center transition-colors duration-300">
                 Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
               </p>
             </div>
