@@ -44,7 +44,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
     <h3 className="text-center text-lg font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">
       {title}
     </h3>
-    <p className="text-sm text-white text-justify group-hover:text-white transition-colors duration-300">
+    <p className="text-sm text-white text-center group-hover:text-white transition-colors duration-300">
       {description}
     </p>
   </div>
