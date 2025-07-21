@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Banner from "./Banner";
-import ServicesSection from "./ServicesSection";
 import WhyChooseSection from "./WhyChooseSection";
 import StatsSection from "./StatsSection";
 import ClientMarquee from "./components/ClientMarquee";
@@ -12,7 +11,7 @@ import ServicesList from "./components/ServicesList";
 export default function Home() {
   return (
     <div className="flex flex-col">
-          <main className="flex flex-col bg-white min-h-screen">
+      <main className="flex flex-col bg-white min-h-screen">
       <main className="">
       <Header/>
         <Banner/>

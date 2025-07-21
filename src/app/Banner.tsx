@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 
-const DEFAULT_VIDEO = "/videos/home-banner.webm";
+const DEFAULT_VIDEO = "/videos/home-banner.mp4";
 
 const Banner = () => {
   const [isMobile, setIsMobile] = useState(false);
