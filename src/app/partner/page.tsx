@@ -28,7 +28,7 @@ const partner = () => {
         <div className="mb-8">
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="text-3xl font-semibold text-[#366A00] mb-4">Who shares our commitment to a high level of service & support to our clientele?</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 text-justify leading-relaxed text-lg">
               SSPL provides the most technically advanced Data Analytics and Big Data Analytics solutions. Take pride in being awarded as Best Big Data Analytics Solution Company by WQPC. We offer a gala of opportunities to participate in learning the proven growth of technology.
             </p>
           </div>

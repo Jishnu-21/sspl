@@ -305,6 +305,7 @@ const ServicesList = () => {
                           rounded-2xl
                           border border-blue-100
                           shadow-inner
+                          text-justify
                         `}>
                           <h3 className="text-blue-900 font-bold text-2xl mb-4">
                             {service.title}

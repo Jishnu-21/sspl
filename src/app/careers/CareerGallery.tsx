@@ -38,7 +38,7 @@ const CareerGallery = () => {
           >
             <h3 className="text-[#366A00] uppercase font-medium mb-3">OUR GALLERY</h3>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">We've been here almost 15 years</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 text-justify mb-8">
               At SSPL, we've built a collaborative and innovative workspace where talented professionals come together to solve complex data challenges. Our team has been delivering cutting-edge analytics solutions for nearly two decades, helping businesses across industries transform their data into actionable insights.
             </p>
           </motion.div>

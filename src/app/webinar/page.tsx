@@ -26,12 +26,13 @@ const Webinar = () => {
 <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-gray-700 leading-relaxed text-justify mb-6">
                   If you are not using data analysis technology for your business management you are still hibernating in the dark ages and may be missing out on great opportunities!
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
-                  SSPL has started the series of Webinars in the interest of the Professionals and Industry. This is to bring the best available information about the technology in Big Data Analytics and its usability. Webinars are FREE OF COST and you may enroll by filling the registration form.
-                  </p>
+                  <p className="text-gray-700 text-justify leading-relaxed">
+                   SSPL has started the series of Webinars in the interest of the Professionals and Industry. This is to bring the best available information about the technology in Big Data Analytics and its usability. Webinars are <strong>FREE OF COST</strong> and you may enroll by filling the registration form.
+                </p>
+
                 </div>
                 </div>
       </section>
