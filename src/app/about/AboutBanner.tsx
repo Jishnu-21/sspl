@@ -38,7 +38,7 @@ const AboutBanner = () => {
   }
 
   return (
-    <>
+    <section className="min-h-screen flex flex-col">
       <ShortPageBanner
         backgroundImage={bgImage}
         title=''
@@ -46,15 +46,15 @@ const AboutBanner = () => {
       />
 
       {/* Blue Section with Vision & Values */}
-      <section className="w-full bg-gradient-to-r from-[#1B3D69] via-[#234e75] to-[#1b3d69] py-10 sm:py-14 md:py-16 shadow-lg">
+      <section className="w-full bg-gradient-to-r from-[#1B3D69] via-[#234e75] to-[#1b3d69] py-4 shadow-lg flex-1 flex flex-col justify-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-12">
             Our Vision & Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Vision */}
-            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#f39c12] to-[#f1c40f] mb-4 shadow-lg transition-all duration-300">
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-xl hover:rounded-3xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-white/30 mb-4 shadow-lg transition-all duration-300">
                 <FaEye size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Vision</h3>
@@ -63,8 +63,8 @@ const AboutBanner = () => {
               </p>
             </div>
             {/* Protect & respect confidentiality */}
-            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#27ae60] to-[#2ecc71] mb-4 shadow-lg transition-all duration-300">
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-xl hover:rounded-3xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-white/30 mb-4 shadow-lg transition-all duration-300">
                 <FaLock size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Protect & respect confidentiality</h3>
@@ -73,8 +73,8 @@ const AboutBanner = () => {
               </p>
             </div>
             {/* Lead with insight */}
-            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#3498db] to-[#2980b9] mb-4 shadow-lg transition-all duration-300">
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-xl hover:rounded-3xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-white/30 mb-4 shadow-lg transition-all duration-300">
                 <FaLightbulb size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Lead with insight</h3>
@@ -85,7 +85,7 @@ const AboutBanner = () => {
           </div>
         </div>
       </section>
-    </>
+    </section>
   );
 };
 
