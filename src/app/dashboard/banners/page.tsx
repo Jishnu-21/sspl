@@ -1,6 +1,5 @@
 'use client'
 
-import { BASE_URL } from '../../config/endpoint';
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 
 const PAGE_KEYS = [

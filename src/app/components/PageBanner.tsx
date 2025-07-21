@@ -3,7 +3,6 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { BASE_URL } from '../config/endpoint';
 
 interface PageBannerProps {
   backgroundImage: string;
