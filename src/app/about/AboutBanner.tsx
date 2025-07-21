@@ -48,7 +48,7 @@ const AboutBanner = () => {
       {/* Blue Section with Vision & Values */}
       <section className="w-full bg-gradient-to-r from-[#1B3D69] via-[#234e75] to-[#1b3d69] py-4 shadow-lg flex-1 flex flex-col justify-center">
         <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-semibold text-black text-center mb-14 text-comfortaa">
+        <h2 className="text-5xl font-semibold text-white text-center mb-14 text-comfortaa">
             Our Vision & Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
