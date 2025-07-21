@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const clientsRow1 = [
   { name: 'Premium', logo: '/images/products/tru-oi/logo/1.png' },
@@ -31,164 +32,70 @@ const clientsRow2 = [
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/24.png' },
 ];
 
-const PartnerMarquee = ({ className = '' }) => {
+interface PartnerMarqueeProps {
+  className?: string;
+}
+
+const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({ className = '' }) => {
+  const duplicatedClientsRow1 = [...clientsRow1, ...clientsRow1];
+  const duplicatedClientsRow2 = [...clientsRow2, ...clientsRow2];
+
   return (
-    <div className={`w-full overflow-hidden ${className}`}>
-      <div className="relative">
-        {/* First Row - Left to Right */}
-        <div className="mb-3 sm:mb-4 md:mb-6">
-          <div className="marquee-wrapper overflow-hidden">
-            <div className="marquee-row-1 flex gap-2 sm:gap-3 md:gap-4">
-              {/* Original logos */}
-              {clientsRow1.map((client, index) => (
-                <div 
-                  key={`row1-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
-                >
-                  <div className="relative w-40 h-20 sm:w-44 sm:h-24 md:w-48 md:h-28 lg:w-52 lg:h-32 xl:w-56 xl:h-36">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {clientsRow1.map((client, index) => (
-                <div 
-                  key={`row1-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
-                >
-                  <div className="relative w-40 h-20 sm:w-44 sm:h-24 md:w-48 md:h-28 lg:w-52 lg:h-32 xl:w-56 xl:h-36">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
+    <div className={`w-full overflow-hidden space-y-4 ${className}`}>
+      {/* First Row - Scroll Left */}
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex gap-x-8"
+          animate={{ x: '-50%' }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+          style={{ width: '200%' }}
+        >
+          {duplicatedClientsRow1.map((client, index) => (
+            <div key={`row1-${index}`} className="flex-shrink-0">
+              <div className="relative w-40 h-24 sm:w-60 sm:h-44">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Second Row - Right to Left */}
-        <div>
-          <div className="marquee-wrapper overflow-hidden">
-            <div className="marquee-row-2 flex gap-2 sm:gap-3 md:gap-4">
-              {/* Original logos */}
-              {clientsRow2.map((client, index) => (
-                <div 
-                  key={`row2-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
-                >
-                  <div className="relative w-44 h-24 sm:w-48 sm:h-28 md:w-52 md:h-32 lg:w-56 lg:h-36 xl:w-60 xl:h-40">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {clientsRow2.map((client, index) => (
-                <div 
-                  key={`row2-dup-${index}`} 
-                  className="flex-shrink-0 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-1 sm:p-3 md:p-4 partner-card"
-                >
-                  <div className="relative w-44 h-24 sm:w-48 sm:h-28 md:w-52 md:h-32 lg:w-56 lg:h-36 xl:w-60 xl:h-40">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
+          ))}
+        </motion.div>
       </div>
 
-      <style jsx>{`
-        .marquee-wrapper {
-          position: relative;
-          width: 100%;
-        }
-
-        .marquee-row-1 {
-          animation: marquee-left 45s linear infinite;
-          width: fit-content;
-        }
-
-        .marquee-row-2 {
-          animation: marquee-right 50s linear infinite;
-          width: fit-content;
-        }
-
-        /* Pause animation on hover for better user experience */
-        .marquee-wrapper:hover .marquee-row-1,
-        .marquee-wrapper:hover .marquee-row-2 {
-          animation-play-state: paused;
-        }
-
-        @keyframes marquee-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes marquee-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        /* Responsive animation speeds */
-        @media (max-width: 640px) {
-          .marquee-row-1 {
-            animation-duration: 35s;
-          }
-          .marquee-row-2 {
-            animation-duration: 40s;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .marquee-row-1 {
-            animation-duration: 60s;
-          }
-          .marquee-row-2 {
-            animation-duration: 65s;
-          }
-        }
-
-        .partner-card {
-          background: white;
-          transition: background 0.3s;
-        }
-        .partner-card:hover {
-          background: white;
-        }
-      `}</style>
+      {/* Second Row - Scroll Right */}
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex gap-x-8"
+          animate={{ x: '0%' }}
+          initial={{ x: '-50%' }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+          style={{ width: '200%' }}
+        >
+          {duplicatedClientsRow2.map((client, index) => (
+            <div key={`row2-${index}`} className="flex-shrink-0">
+              <div className="relative w-40 h-24 sm:w-60 sm:h-44">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

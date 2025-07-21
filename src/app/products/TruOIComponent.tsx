@@ -266,20 +266,21 @@ const TruOIComponent = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-center">
           {/* Analytics Image */}
           <motion.div 
-            className="w-full h-full"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Image 
-              src="/images/products/tru-oi-about.png" 
-              alt="TruOI Analytics Report" 
-              width={800}
-              height={400}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+  className="w-full max-w-[700px] mx-auto h-auto"
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6 }}
+>
+  <Image 
+    src="/images/products/tru-oi-about.png" 
+    alt="TruOI Analytics Report" 
+    width={800}
+    height={400}
+    className="w-full h-auto object-contain"
+  />
+</motion.div>
+
 
           {/* Customer Driven Section */}
           <motion.div 
