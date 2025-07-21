@@ -20,6 +20,7 @@ const events = () => {
     backgroundImage="/images/events.webp"
     title="Events"
     subtitle="Get information about current & upcoming events"
+    bannerKey='events'
     />
     <div data-aos="fade-up">
       <EventsGrid />

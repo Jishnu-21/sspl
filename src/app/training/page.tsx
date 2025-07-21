@@ -59,6 +59,7 @@ const Training = () => {
         backgroundImage="/images/training/banner.png"
         title="Training on Big Data Analytics"
         subtitle="How to use the best out of Big Data Analytics Tools and Technology, to achieve More in Less Time, with Robotic Analytics."
+        bannerKey="training"
       />
 
       <motion.section 

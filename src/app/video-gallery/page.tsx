@@ -182,6 +182,7 @@ const VideoGallery = () => {
         <ShortPageBanner 
           backgroundImage="/images/video gallery.png"
           title="Video Gallery"
+          bannerKey='video-gallery'
         />
         
         <section className="py-10 sm:py-12 md:py-16 lg:py-20">

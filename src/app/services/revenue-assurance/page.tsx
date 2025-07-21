@@ -82,6 +82,7 @@ const revenue = () => {
     <PageBanner
           backgroundImage="/images/services/banners/revenue-assurance.png"
           title="Revenue Assurance"
+          bannerKey='revenue-assurance'
         />
             <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">
               <div className="mb-2">

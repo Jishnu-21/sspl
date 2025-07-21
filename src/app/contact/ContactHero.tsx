@@ -12,6 +12,7 @@ const ContactHero = () => {
     backgroundImage="/images/contact/banner.jpg"
     title="Contact us"
     subtitle="Get in touch with us"
+    bannerKey='contact'
     />
   );
 };

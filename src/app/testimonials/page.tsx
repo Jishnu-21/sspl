@@ -39,7 +39,7 @@ const Testimonials = () => {
         <ShortPageBanner
         backgroundImage="/images/testimonials/banner.webp"
         title="Testimonials"
-        
+        bannerKey='testimonials'
       />
         <section className="py-4 px-4 sm:px-6 lg:px-8">
           <div 

@@ -17,6 +17,7 @@ const OperationsFinance = () => {
         <PageBanner
           backgroundImage="/images/services/banners/ofa.png"
           title="Operations & Finance Analytics"
+          bannerKey='operations-finance'
         />
         <motion.section
           className="py-4 px-4 md:px-8 max-w-7xl mx-auto"

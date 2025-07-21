@@ -21,6 +21,7 @@ const partner = () => {
         title="Become a Partner"
         backgroundImage="/images/partner.png"
         subtitle='SSPL is represented by a worldwide network of partners.'
+        bannerKey='partner'
       />
 
       <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">

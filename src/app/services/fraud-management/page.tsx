@@ -64,6 +64,7 @@ const FraudManagement = () => {
         <PageBanner
           backgroundImage="/images/services/banners/fmd.png"
           title="Fraud Management & Detection"
+          bannerKey='fraud-management'
         />
         
         <motion.section

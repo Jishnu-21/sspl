@@ -63,6 +63,7 @@ const risk = () => {
     <PageBanner
           backgroundImage="/images/services/banners/risk-manangement.png"
           title="Risk Management Audit Analytics"
+          bannerKey='risk-management'
         />
       
       <section className="py-4 px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">

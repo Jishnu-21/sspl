@@ -11,7 +11,9 @@ const PAGE_KEYS = [
   { key: 'testimonials', label: 'Testimonials' },
   { key: 'video-gallery', label: 'Video Gallery' },
   { key: 'photo-gallery', label: 'Photo Gallery' },
-  { key: 'blog', label: 'Blogs' },
+  { key: 'partner', label: 'Partner' },
+  { key: 'training', label: 'Training' },
+  { key: 'webinar', label: 'Webinar' },
   // Add more as needed
 ];
 

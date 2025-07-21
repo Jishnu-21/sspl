@@ -23,7 +23,7 @@ const Banner = () => {
   useEffect(() => {
     // Fetch banner video from backend (using key 'home')
     setLoading(true);
-    fetch('http://localhost:5000/api/banners/home')
+    fetch('/api/banners/home')
       .then(async (res) => {
         if (!res.ok) throw new Error('No banner found');
         const data = await res.json();

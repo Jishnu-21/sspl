@@ -17,6 +17,7 @@ const DataMigration = () => {
         <PageBanner
           backgroundImage="/images/services/banners/datamigration.png"
           title="Data Migration Testing"
+          bannerKey='data-migration'
         />
         
         <motion.section

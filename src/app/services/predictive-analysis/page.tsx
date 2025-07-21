@@ -28,6 +28,7 @@ const predictiveanalysis= () => {
         <PageBanner
           backgroundImage="/images/services/banners/pred.jpg"
           title="Predictive and Big Data Analytics"
+          bannerKey='predictive'
         />
         
         <section className="py-3 sm:py-6 px-2 sm:px-4 md:px-8 max-w-7xl mx-auto" data-aos="fade-up">

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -8,19 +8,39 @@ interface ShortPageBannerProps {
   title: string;
   backgroundImage: string;
   subtitle?: string;
+  bannerKey?: string; // <-- new prop
 }
 
 const ShortPageBanner: React.FC<ShortPageBannerProps> = ({
   title,
   backgroundImage,
   subtitle,
+  bannerKey,
 }) => {
+  const [dynamicImage, setDynamicImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!bannerKey) {
+      setDynamicImage(null);
+      return;
+    }
+    fetch(`/api/banners/${bannerKey}`)
+      .then(async (res) => {
+        if (!res.ok) throw new Error('No banner found');
+        const data = await res.json();
+        setDynamicImage(data.mediaUrl);
+      })
+      .catch(() => setDynamicImage(null));
+  }, [bannerKey]);
+
+  const imageToShow = dynamicImage || backgroundImage;
+
   return (
     <section id="page-banner" className="page-banner relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full mt-[105px]">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src={backgroundImage}
+          src={imageToShow}
           alt={title}
           fill
           priority

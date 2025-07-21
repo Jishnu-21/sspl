@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
+import ShortPageBanner from '../components/ShortPageBanner';
 
 // Generate array of gallery images from the photo-gallery directory
 const galleryImages = [
@@ -128,36 +129,11 @@ const PhotoGallery = () => {
     <main className="flex flex-col bg-white min-h-screen">
       <Header />
       {/* Custom styled banner with reduced height for photo gallery page only */}
-      <section id="page-banner" className="page-banner relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full mt-[105px]">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/images/photo-gallery/banner.png"
-            alt="Photo Gallery"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className={`absolute inset-0 bg-black/50`}></div>
-        </div>
-
-        {/* Content Container */}
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16 h-full relative z-10">
-          <div className="flex h-full items-center">
-            <div className="flex flex-col w-full max-w-xl">
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-white break-words sm:whitespace-normal"
-              >
-                Photo Gallery
-              </motion.h1>
-            </div>
-          </div>
-        </div>
-      </section>
+     <ShortPageBanner
+     title='Photo Gallery'
+      backgroundImage="/images/photo-gallery/banner.png"
+      bannerKey='photo-gallery'
+     />
       
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
