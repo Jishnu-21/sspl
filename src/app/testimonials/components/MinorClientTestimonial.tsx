@@ -42,10 +42,10 @@ const MinorClientTestimonial: React.FC<MinorClientTestimonialProps> = ({ clients
                     className="p-1"
                   />
                 </div>
-                <h3 className="text-sm font-semibold text-white">{client.company}</h3>
+                <h3 className="text-xl font-semibold text-white">{client.company}</h3>
               </div>
               
-              <p className="text-white text-sm mb-4 leading-relaxed">{client.text}</p>
+              <p className="text-white text-justify text-sm mb-4 leading-relaxed">{client.text}</p>
               
               <div className="text-xs text-white border-t border-white/30 pt-3">
                 <p className="font-medium">{client.author}</p>

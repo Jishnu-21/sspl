@@ -32,7 +32,7 @@ const MajorClientTestimonial: React.FC<MajorClientTestimonialProps> = ({ clients
             <h3 className="text-xl font-semibold text-white">{client.company}</h3>
           </div>
           
-          <p className="text-white mb-4 italic">"{client.text}"</p>
+          <p className="text-white mb-4 text-justify">"{client.text}"</p>
           
           <div className="text-sm text-white">
             <p className="font-medium">{client.author}</p>

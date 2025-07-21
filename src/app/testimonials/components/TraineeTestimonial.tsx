@@ -32,7 +32,7 @@ const TraineeTestimonialComponent: React.FC<TraineeTestimonialProps> = ({ testim
           <div className="flex-1">
             <h3 className="text-sm font-semibold text-white mb-1">{testimonial.name}</h3>
             {testimonial.course && <p className="text-xs text-white/80 mb-2">{testimonial.course}</p>}
-            <p className="text-white text-sm leading-relaxed">{testimonial.text}</p>
+            <p className="text-white text-justify text-sm leading-relaxed">{testimonial.text}</p>
           </div>
         </motion.div>
       ))}

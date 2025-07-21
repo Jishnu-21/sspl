@@ -18,28 +18,28 @@ export const traineeTestimonials: TraineeTestimonial[] = [
     id: 2,
     avatar: '/images/testimonials/trainees/joan-jose.jpg',
     text: 'I would like to express my sincere gratitude to Mr. Nishith Seth, Director of SSPL, for giving me the opportunity to take up this internship and become a part of SSPL. I owe much to my mentor, Mr. Siddhant Kumar, Executive Data Scientist at SSPL, whose unwavering guidance, support, and encouragement have been invaluable throughout this internship. Your expertise and insights have enriched my learning experience.Throughout this Data Science Internship, I worked with Microsoft Power BI, a powerful business intelligence tool. From cleaning and transforming data to creating visually compelling reports and dashboards, it helped me to hone my analytical and problem-solving skills. The skills and insights gained during this internship will be invaluable assets for my future endeavors.',
-    name: 'Ms.Joan Jose',
+    name: 'Ms. Joan Jose',
     course: ''
   },
   {
     id: 3,
     avatar: '/images/testimonials/trainees/bhushra-modi.jpg',
     text: 'Thank you for the exciting opportunity at SSPL. Over the course of the Data Science Intern, I was able to work with Excel, Powerbi, extracting tables into Excel using python and much more. My workload varied, it was difficult and interesting for me to seek solutions to the problem. I would like to thank Nishith Sir, Siddhant Sir and Bhumika. By selecting me for this internship, you showed confidence in my abilities, and I sincerely appreciate the opportunity. I learned to properly draw the documents, do quality work, to not be afraid of mistakes, to discuss problems and to find the best solutions. In general, I can say that the internship at SSPL was an invaluable experience for me, and the knowledge and skills I gained during this period will certainly help me in the future.',
-    name: 'Ms.Bhushra Modi',
+    name: 'Ms. Bhushra Modi',
     course: ''
   },
   {
     id: 4,
     avatar: '/images/testimonials/trainees/satya_prakash.jpg',
     text: 'My experience with SSPL was decent. In the initial phase of my internship, I was fortunate to be one-on-one mentored by Ms. Nishith Seth. His insightful suggestions have really helped me a lot to improve my technical capabilities. However, I feel that I could have learned/ worked on various other projects if my first 3 weeks would have not been taken by Arbutus Analyzer software training. In the later one month, I worked on designing visually interactive and insightful PowerBI dashboard. I would also take this opportunity to thank Mr. Siddhant Kumar to patiently guide me by giving fruitful suggestions. At last, I would like to express my gratitude to Ms. Shveta for giving me this opportunity to intern at SSPL.',
-    name: 'Mr.Satya Prakash',
+    name: 'Mr. Satya Prakash',
     course: ''
   },
   {
     id: 5,
     avatar: '/images/testimonials/trainees/Harsh_Trivedi.jpg',
     text: 'I, Harsh Trivedi worked as an intern at SSPL for a tenure of 1 month and was assigned tasks related to data science and robotic process automation.This experience has given me real zest of professional world and I had a great opportunity taking all this experiences with me in my career ahead. I really thank SSPL team for providing me with this learning opportunity',
-    name: 'Mr.Harsh Trivedi',
+    name: 'Mr. Harsh Trivedi',
     course: ''
   },
   {

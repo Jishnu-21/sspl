@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 const cards = [
   {
-    icon: <FaChartLine size={32} className="text-white" />,
+    icon: <FaChartLine size={32} className="text-white text-justify" />,
     text: 'Substratad Solutions Pvt. Ltd. (SSPL) is a leading consulting firm specializing in Big Data Analytics, Data Visualization, Robotic Process Analytics, Business Intelligence, Digital Transformation, Data Migration, and Predictive Analytics. Our expert team has successfully implemented over 200+ projects across industries globally.',
     stats: [
       { icon: <FaUserTie size={24} />, label: '15+', sub: 'Experience' },
@@ -17,11 +17,11 @@ const cards = [
     ]
   },
   {
-    icon: <FaLightbulb size={32} className="text-white" />,
+    icon: <FaLightbulb size={32} className="text-white text-justify" />,
     text: "Operating through our Global Analytics Hub, we provide 24/7 services to meet our clients diverse needs. Our commitment to excellence has earned us the Best Big Data Analytics Solution Company Award by WQPC. With a vision to be the leading data analytics and intelligence organization, we are dedicated to continuous customer service and advanced analytics solution development."
   },
   {
-    icon: <FaAward size={32} className="text-white" />,
+    icon: <FaAward size={32} className="text-white text-justify" />,
     text: "Our consultants help organizations leverage data analytics to manage operations across various functions, including operations, risk, and revenue assurance. As strategic thought leaders in Data and Big Data Analytics, we aim to enhance efficient enterprise management. At SSPL, we believe in simplifying complex data to empower businesses, driving informed decisions and fostering growth."
   }
 ];
