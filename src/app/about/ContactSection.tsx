@@ -82,7 +82,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-5xl font-normal text-black text-center  text-comfortaa"
+          className="text-2xl sm:text-3xl md:text-5xl font-semibold text-black text-center  text-comfortaa"
         >
           Future-Ready Analytics for Your Business
         </motion.h2>
