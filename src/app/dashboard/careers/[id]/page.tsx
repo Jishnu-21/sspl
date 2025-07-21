@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import JobOpeningForm from "../JobOpeningForm";
-import { BASE_URL } from '../../../config/endpoint';
 
 interface JobOpening {
   _id: string;

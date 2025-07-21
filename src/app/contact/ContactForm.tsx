@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { Toaster, toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import './contact-form.css'; // Import custom CSS for placeholder styling
-import { BASE_URL } from '../config/endpoint';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaGithub, FaLinkedin, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'sonner';
-import { BASE_URL } from '../config/endpoint';
 import Link from 'next/link';
 import Image from 'next/image';
 

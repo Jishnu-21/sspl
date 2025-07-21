@@ -6,7 +6,6 @@ import PageBanner from '../../../components/PageBanner';
 import '../../../contact/contact-form.css';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { BASE_URL } from '../../../config/endpoint';
 
 const CareerOpeningDetailPage = () => {
   const { slug } = useParams();

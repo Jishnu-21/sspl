@@ -1,5 +1,4 @@
 'use client';
-import { BASE_URL } from '../../config/endpoint';
 import React, { useEffect, useState, useRef } from 'react';
 
 export default function BlogAdminPage() {
