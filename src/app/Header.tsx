@@ -73,6 +73,13 @@ const Header = () => {
     if (eventsDropdownOpen) setEventsDropdownOpen(false);
   });
 
+  // Handle mobile link clicks - closes menu after a small delay
+  const handleMobileLinkClick = () => {
+    setTimeout(() => {
+      setMobileMenuOpen(false);
+    }, 150);
+  };
+
   return (
     <header className="fixed top-0 w-full z-50  bg-white box-border font-poppins transition-transform duration-300" 
       style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}>
@@ -317,166 +324,107 @@ const Header = () => {
           
           {/* Logo in mobile menu */}
           <div className="flex justify-center mb-6 mt-[-10px]">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" onClick={handleMobileLinkClick}>
               <Image src="/logo.png" alt="SSPL Logo" width={170} height={45} />
             </Link>
           </div>
           
-          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>About us</Link>
-          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+          <Link href="/" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={handleMobileLinkClick}>Home</Link>
+          <Link href="/about" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={handleMobileLinkClick}>About us</Link>
+          <Link href="/products" className="py-3 px-4 text-[#222] border-b border-gray-100 hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={handleMobileLinkClick}>Products</Link>
           
-          {/* Mobile Services Dropdown */}
-          <div className="border-b border-gray-100">
-            <button 
-              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium"
-            >
-              Services
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className={`h-4 w-4 transition-transform ${servicesDropdownOpen ? 'transform rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            {/* Mobile Services Submenu */}
-            <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${servicesDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
-              <Link 
-                href="/services/predictive-analysis" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Predictive & Big Data Analytics
-              </Link>
-              <Link 
-                href="/services/grc-solutions-services" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                GRC Solutions & Services
-              </Link>
-              <Link 
-                href="/services/media-analytics" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Media Analytics
-              </Link>
-              <Link 
-                href="/services/revenue-assurance" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Revenue Assurance
-              </Link>
-              <Link 
-                href="/services/risk-management" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Risk Management Audit Analytics
-              </Link>
-              <Link 
-                href="/services/operations-finance" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Operations & Finance Analytics
-              </Link>
-              <Link 
-                href="/services/fraud-management" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Fraud Management & Detection
-              </Link>
-              <Link 
-                href="/services/data-migration" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Data Migration
-              </Link>
-              <Link 
-                href="/services/algorithm-auditing" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Algorithm Auditing
-              </Link>
-            </div>
+          {/* Services Section Header */}
+          <div className="py-2 px-4 text-[14px] font-semibold text-[#366A00] bg-gray-50 border-b border-gray-100">
+            SERVICES
           </div>
           
-          {/* Mobile Events Dropdown */}
-          <div className="border-b border-gray-100">
-            <button 
-              onClick={() => setEventsDropdownOpen(!eventsDropdownOpen)}
-              className="w-full flex justify-between items-center py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium"
-            >
-              Gallery
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className={`h-4 w-4 transition-transform ${eventsDropdownOpen ? 'transform rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            {/* Mobile Events Submenu */}
-            <div className={`bg-gray-50 overflow-hidden transition-all duration-300 ${eventsDropdownOpen ? 'max-h-96' : 'max-h-0'}`}>
-              <Link 
-                href="/video-gallery" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Video Gallery
-              </Link>
-              <Link 
-                href="/photo-gallery" 
-                className="block py-2 px-8 text-[14px] text-gray-700 hover:bg-gray-100" 
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Image Gallery
-              </Link>
-            </div>
+          {/* All Services Listed Directly */}
+          <Link 
+            href="/services/predictive-analysis" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Predictive & Big Data Analytics
+          </Link>
+          <Link 
+            href="/services/grc-solutions-services" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            GRC Solutions & Services
+          </Link>
+          <Link 
+            href="/services/media-analytics" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Media Analytics
+          </Link>
+          <Link 
+            href="/services/revenue-assurance" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Revenue Assurance
+          </Link>
+          <Link 
+            href="/services/risk-management" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Risk Management Audit Analytics
+          </Link>
+          <Link 
+            href="/services/operations-finance" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Operations & Finance Analytics
+          </Link>
+          <Link 
+            href="/services/fraud-management" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Fraud Management & Detection
+          </Link>
+          <Link 
+            href="/services/data-migration" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Data Migration
+          </Link>
+          <Link 
+            href="/services/algorithm-auditing" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Algorithm Auditing
+          </Link>
+          
+          {/* Gallery Section Header */}
+          <div className="py-2 px-4 text-[14px] font-semibold text-[#366A00] bg-gray-50 border-b border-gray-100">
+            GALLERY
           </div>
           
-          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
+          {/* Gallery Items Listed Directly */}
+          <Link 
+            href="/video-gallery" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Video Gallery
+          </Link>
+          <Link 
+            href="/photo-gallery" 
+            className="py-2 px-6 text-[14px] text-gray-700 hover:bg-gray-50 border-b border-gray-100 block" 
+            onClick={handleMobileLinkClick}
+          >
+            Photo Gallery
+          </Link>
+          
+          <Link href="/contact" className="py-3 px-4 text-[#222] hover:bg-gray-50 text-[16px] md:text-[15px] lg:text-[17px] font-medium" onClick={handleMobileLinkClick}>Contact us</Link>
         </div>
       </div>
     </header>
