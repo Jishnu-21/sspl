@@ -38,8 +38,8 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
         
         .max-w-4xl {
           width: 100%;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
         }
       }
 
@@ -47,32 +47,32 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
       @media (max-width: 480px) {
         h1:not(#page-banner h1):not(.page-banner h1) {
           font-size: 1.75rem !important;
-          margin-bottom: 1rem !important;
-          padding-left: 0.5rem;
-          padding-right: 0.5rem;
+          margin-bottom: 0.75rem !important;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
         }
         
         h2 {
           font-size: 1.35rem !important;
-          margin-bottom: 1rem !important;
+          margin-bottom: 0.75rem !important;
         }
         
         section:not(#page-banner):not(.page-banner) {
-          padding-top: 2rem !important;
-          padding-bottom: 2rem !important;
+          padding-top: 1.5rem !important;
+          padding-bottom: 1.5rem !important;
         }
         
         .py-16 {
-          padding-top: 2.5rem !important;
-          padding-bottom: 2.5rem !important;
+          padding-top: 1.5rem !important;
+          padding-bottom: 1.5rem !important;
         }
         
         .mb-8 {
-          margin-bottom: 1.5rem !important;
+          margin-bottom: 1rem !important;
         }
         
         .mb-6 {
-          margin-bottom: 1rem !important;
+          margin-bottom: 0.75rem !important;
         }
       }
 
@@ -102,7 +102,7 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
       /* Ensure proper spacing in nested flex containers */
       @media (max-width: 640px) {
         .flex-col > * + * {
-          margin-top: 1rem;
+          margin-top: 0.75rem;
         }
       }
     `
