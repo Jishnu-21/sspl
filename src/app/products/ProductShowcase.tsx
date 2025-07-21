@@ -156,9 +156,8 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                 {products.map((product, index) => (
                   <motion.div
                     key={product.id}
-                    className={`cursor-pointer relative px-2 ${selectedProduct === product.id ? 'opacity-100' : 'opacity-70'}`}
+                    className={`cursor-pointer relative px-2 ${selectedProduct === product.id ? 'opacity-100' : 'opacity-100'}`}
                     onClick={() => setSelectedProduct(product.id)}
-                    whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                     ref={el => {
                       // Properly type the ref callback to avoid TypeScript errors
@@ -174,7 +173,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                       )}
                       {product.id === 'arbutus' && (
                         <div className="flex items-center">
-                          <Image src="/images/products/logos/logo2.png" alt="Arbutus Logo" width={150} height={150} />
+                          <Image src="/images/products/logos/logo2.webp" alt="Arbutus Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'truOI' && (
