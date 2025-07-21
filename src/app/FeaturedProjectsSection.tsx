@@ -183,7 +183,7 @@ const CaseStudiesSection = () => {
           <div className="flex flex-col lg:flex-row">
             {/* Left side content */}
             <div className="lg:w-1/3 mb-6 sm:mb-8 md:mb-10 lg:mb-0 pr-0 lg:pr-6 xl:pr-8 relative">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
+              <p className="text-sm sm:text-base text-justify md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
               </p>
               {/* Vertical line that connects with the horizontal line */}
