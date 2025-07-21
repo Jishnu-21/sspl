@@ -77,10 +77,10 @@ const FraudManagement = () => {
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
               <h2 className="text-2xl font-semibold text-[#366A00] mb-6 whitespace-nowrap">Data Analytics for FCPA Compliance</h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-justify leading-relaxed">
               The Foreign Corrupt Practices Act (FCPA) should not be taken lightly. But compliance can be tricky. The global business environment includes many international, centralized and decentralized companies. Individuals often operate in countries where bribes and payoffs have historically been a routine part of doing business. When languages and business cultures vary to a large degree, it can be extremely difficult to keep tabs on the operations.      
              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 text-justify leading-relaxed mb-6">
               A key tool for avoiding FCPA difficulties is Data Analysis. The truth is held in the data, because that's where a company's conduct is recorded. The rows and columns of data often speak volumes about what is truly going on inside the business.             </p>
             </div>
             <DownloadBrochureButton pdfPath="/pdfs/assureBI_fraud-detection.pdf" />
@@ -115,15 +115,15 @@ const FraudManagement = () => {
             
             {/* Text content */}
             <div className="text-center">
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 text-justify leading-relaxed mb-6">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches. 
              </p>
               
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 text-justify leading-relaxed mb-6">
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.              
               </p>
               
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 text-justify leading-relaxed mb-4">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches.
               One way to monitor for FCPA violations is through use of data analytics, which allow for complete, comprehensive testing of all corporate transactions. Companies can meet FCPA accounting provisions by employing assureBI to repeatedly test the effectiveness of internal controls and highlight specific transactions that appear suspicious.
               When it comes to bribery provisions, data analysis solutions can quickly and easily identify red flags and provide an invaluable early warning system. Software programs can uncover the following key elements:
@@ -138,7 +138,7 @@ const FraudManagement = () => {
                       <FaExclamationTriangle className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify  group-hover:text-white transition-colors duration-300">
                     Payments to risky vendors, including government contractors and parties on government watch lists
                   </p>
                 </div>
@@ -149,7 +149,7 @@ const FraudManagement = () => {
                       <FaUniversity className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify  group-hover:text-white transition-colors duration-300">
                     Payments made from foreign bank accounts
                   </p>
                 </div>
@@ -160,7 +160,7 @@ const FraudManagement = () => {
                       <FaUserTie className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
                     Use of new attorneys, accountants, consultants or people from other professions with no prior relationship to the company
                   </p>
                 </div>
@@ -171,7 +171,7 @@ const FraudManagement = () => {
                       <FaSearch className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
                     Missing descriptions or suspicious payment keywords, such as "for services rendered," "gifts," or "facilitation"
                   </p>
                 </div>
@@ -182,7 +182,7 @@ const FraudManagement = () => {
                       <FaMoneyCheckAlt className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
                     Checks made out to "cash"
                   </p>
                 </div>
@@ -193,7 +193,7 @@ const FraudManagement = () => {
                       <FaFileInvoiceDollar className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
                     </div>
                   </div>
-                  <p className="text-white text-center group-hover:text-white transition-colors duration-300">
+                  <p className="text-white text-justify text-center group-hover:text-white transition-colors duration-300">
                     Payments classified as government expenses, made in cash, or written to an individual
                   </p>
                 </div>

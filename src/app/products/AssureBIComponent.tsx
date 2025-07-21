@@ -61,8 +61,8 @@ const AssureBIComponent = () => {
     <div>
              <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">assureBi</h2>
              <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
-      <p className="text-gray-800 mb-4" data-aos="fade-up">
-        <span className="font-bold">assureBI</span> is a management control and monitoring platform that is designed to help your company be more responsive and efficient. assureBI gives your company powerful tools that can help you to quickly identify and control the exceptions, before they could create losses to your business and boost your profitability. It helps the users to analyze data directly from the source or from the extracted form with business intelligence precision.
+      <p className="text-gray-800 mb-4 text-justify" data-aos="fade-up">
+        <span className="font-bold ">assureBI</span> is a management control and monitoring platform that is designed to help your company be more responsive and efficient. assureBI gives your company powerful tools that can help you to quickly identify and control the exceptions, before they could create losses to your business and boost your profitability. It helps the users to analyze data directly from the source or from the extracted form with business intelligence precision.
       </p>
       <p className="text-gray-800 mb-4" data-aos="fade-up">
         Blazing fast Business Intelligence service and application to analyze Large Databases, create awesome reports and share real-time dashboards.
@@ -74,7 +74,7 @@ const AssureBIComponent = () => {
   
       {/* Why assureBI makes more sense section */}
       <div className="mt-8 mb-12 w-full" data-aos="fade-up">
-        <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
+        <h3 className="text-2xl font-semibold text-center text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         {/* Mobile Carousel */}
         <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
@@ -100,7 +100,7 @@ const AssureBIComponent = () => {
       
       {/* Industries section */}
       <div className="mb-8 w-full" data-aos="fade-up">
-        <h3 className="text-2xl font-semibold text-[#366A00] mb-4">Industries</h3>
+        <h3 className="text-2xl font-semibold text-center text-[#366A00] mb-4">Industries</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         {/* Mobile Carousel */}
         <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">

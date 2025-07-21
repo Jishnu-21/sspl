@@ -29,7 +29,7 @@ const DataMigration = () => {
         >
           <div className="mb-2">
             <div className="max-w-6xl mx-auto text-center mb-2">
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 text-justify leading-relaxed mb-6">
                 Data migration is the process of transferring data between storage systems, data formats, or computer systems. It is a key consideration for any system implementation, upgrade, or consolidation. Data migrations are critical projects that require careful planning, execution, and validation to ensure business continuity and data integrity.
               </p>
             </div>
@@ -63,16 +63,16 @@ const DataMigration = () => {
           </div>
 
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 text-justify leading-relaxed mb-6">
               Data migrations generally result from the introduction of a new system. This may involve an application migration or consolidation in which one or more legacy systems are replaced or the deployment of an additional system that will sit alongside the existing applications. Whatever the specific nature of any data migration, the ultimate aim is to improve corporate performance and deliver competitive advantage. Accurate data is the raw material that maximizes the value of enterprise applications. However, when existing data is migrated to a new target application, it can become apparent that it may contain inaccuracies, unknowns, redundant and duplication. Although the data in the source system may be perfectly adequate for its current use, yet, it may be wholly inadequate in terms of content and structure to achieve the objectives of the target system. Without a reasonable understanding of both source and target, transferring data into a more sophisticated application will only lead to amplify the negative impact of any incorrect or irrelevant data, perpetuate any hidden legacy problems, and increase exposure to risk.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 text-justify leading-relaxed mb-6">
               It is quite often heard that an application is moved to a different server, the technology is changed, it is updated to the next version or moved to different database server etc. The entire database is migrated to a new version or totally to a new platform. In both the cases, when the data is pushed to the new environment, it is important to be assured that the records are being correctly migrated and their essential values are correct, as earlier. SSPL, with its team of experts in this field, helps the clients' to test the migration with 100% records being analyzed on its tool, and tested with user required parameters.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 text-justify leading-relaxed mb-6">
               It helps to identify the shortcomings and data related issues w.r.t the earlier version versus to the new version. Assures on the critical GoLive day, everything is perfect and as per the expectations.    
             </p>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 text-justify leading-relaxed mb-6">
               The technology with its critical technical advancements, helps the client to gain better insights of the migrated data tables, fields and records. Few of the technological benefits are listed below:     
             </p>
             <p className="text-gray-700 leading-relaxed">

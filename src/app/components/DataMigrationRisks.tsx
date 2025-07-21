@@ -25,11 +25,11 @@ const DataMigrationRisks = () => {
           
           {/* Right side - Text content */}
           <div className="w-full md:w-2/3">
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 text-justify mb-4">
               With respect to the rules, based on the examination of initial source data samples and totally relying on metadata descriptions, tends to be a major risk that indicates the following:
             </p>
             
-            <ul className="space-y-3 text-gray-700 list-disc pl-5">
+            <ul className="space-y-3 text-gray-700 text-justify list-disc pl-5">
               <li>The end users' expectations will not be met or will fall short of actual needs.</li>
               <li>The target system will not perform effectively.</li>
               <li>Workarounds will need to be implemented and resourced.</li>

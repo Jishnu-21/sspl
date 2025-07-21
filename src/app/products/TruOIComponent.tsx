@@ -51,7 +51,7 @@ const TruOIComponent = () => {
         </motion.h2>
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         <motion.p 
-          className="text-gray-800 mb-4 sm:mb-6"
+          className="text-gray-800 mb-4 text-justify sm:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -105,7 +105,7 @@ const TruOIComponent = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.p 
-              className="text-gray-800 font-medium mb-4 sm:mb-6"
+              className="text-gray-800 font-medium text-justify mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -115,7 +115,7 @@ const TruOIComponent = () => {
             </motion.p>
 
             <motion.div 
-              className="space-y-2 sm:space-y-4 text-gray-700"
+              className="space-y-2 sm:space-y-4 text-justify text-gray-700"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -300,7 +300,7 @@ const TruOIComponent = () => {
               CUSTOMER DRIVEN. PEOPLE FOCUSED.
             </motion.h4>
             <motion.p 
-              className="text-gray-700 mb-4 sm:mb-8"
+              className="text-gray-700 mb-4 text-justify sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -319,7 +319,7 @@ const TruOIComponent = () => {
               ONE TO ONE, NOT ONE TO MANY.
             </motion.h4>
             <motion.p 
-              className="text-gray-700 mb-4 sm:mb-8"
+              className="text-gray-700 mb-4 text-justify sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -329,7 +329,7 @@ const TruOIComponent = () => {
             </motion.p>
 
             <motion.p 
-              className="text-gray-700"
+              className="text-gray-700 text-justify"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}

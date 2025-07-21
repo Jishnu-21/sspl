@@ -88,7 +88,7 @@ const revenue = () => {
               <div className="mb-2">
                 <div className="max-w-6xl mx-auto text-center mb-2">
                   <h2 className="text-xl md:text-2xl font-semibold text-[#366A00] mb-4 md:mb-6">Refining Capabilities in Digital and Converge Space</h2>
-                  <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 md:mb-6">
+                  <p className="text-sm md:text-base text-gray-700 justify-center text-justify leading-relaxed mb-4 md:mb-6">
                   Revenue Assurance (RA) was conceived as a risk mitigation solution about 20 years ago in response to the constantly increasing complexity of the telecom value chain and growing revenue leakages.
                   </p>
                 </div>
@@ -121,7 +121,7 @@ const revenue = () => {
                 
                 {/* Text content */}
                 <div className="w-full md:w-1/2 flex flex-col justify-center h-full" data-aos="fade-left">
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 text-justify leading-relaxed">
                 Today, Revenue Assurance is being looked upon seriously by Banking, Insurance, Manufacturing and Retail Sectors also. The priority of the CFO (Chief Financial Officers) of an organization is to protect, monitor and control all possible revenue leakages, be it through Frauds, Manipulations or Adjustments. With the declining margins and new opportunities on the horizon, corporates success cannot rely solely on state-of-the-art networks, as technology alone cannot bet upon securing benefits for companies. The recent industry shift toward convergence within the telecom, media and technology (TMT) industry and the emergence of other entrants such as Over-The-Top (OTT) players, make revenue assurance more mandatory than ever before for the providers to ensure their strategies and systems are robust. Timely Inter-Operator settlement also poses major concerns for the CFO to maintain the flow of funds within the organisation ensuring smooth operations and growth.
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const revenue = () => {
             </section>
 
             <section className="max-w-6xl mx-auto mb-4 px-4 md:px-8" data-aos="fade-up">
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 text-justify leading-relaxed">
                   Revenue Assurance is the methodology of increasing an organization's income by identifying areas where revenue gets lost and minimizing these losses by addressing the source of the leaked revenue. There are various business activities that can contribute to revenue leakage within the companies. Various analytics are being used to monitor and control the revenue leakages.
                   </p>
                   </section>
