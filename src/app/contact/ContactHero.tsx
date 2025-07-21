@@ -9,7 +9,7 @@ import ShortPageBanner from '../components/ShortPageBanner';
 const ContactHero = () => {
   return (
     <ShortPageBanner
-    backgroundImage="/images/contact/banner2.jpg"
+    backgroundImage="/images/contact/banner.jpg"
     title="Contact us"
     subtitle="Get in touch with us"
     />
