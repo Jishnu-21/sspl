@@ -151,8 +151,7 @@ const FraudManagement = () => {
                     </div>
                   </div>
                   <p className="text-white text-center  group-hover:text-white transition-colors duration-300">
-                    Payments made from foreign bank accounts
-                  </p>
+                  Transactions originating from foreign bank accounts, indicating possible unauthorized or hidden payments                  </p>
                 </div>
                 {/* Item 3 */}
                 <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="200">
@@ -184,8 +183,7 @@ const FraudManagement = () => {
                     </div>
                   </div>
                   <p className="text-white  text-center group-hover:text-white transition-colors duration-300">
-                    Checks made out to "cash"
-                  </p>
+                  Checks made out of “cash,” which are difficult to trace and may bypass internal controls                  </p>
                 </div>
                 {/* Item 6 */}
                 <div className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group" data-aos="zoom-in" data-aos-delay="500">

@@ -46,33 +46,41 @@ const AboutBanner = () => {
       />
 
       {/* Blue Section with Vision & Values */}
-      <section className="w-full bg-[#1B3D69] py-10 sm:py-14 md:py-16">
+      <section className="w-full bg-gradient-to-r from-[#1B3D69] via-[#234e75] to-[#1b3d69] py-10 sm:py-14 md:py-16 shadow-lg">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-10">Our Vision & Values</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-12">
+            Our Vision & Values
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Vision */}
-            <div className="flex flex-col items-center text-center">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full  mb-4 shadow-lg">
-                <FaEye size={28} className="text-white" />
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#f39c12] to-[#f1c40f] mb-4 shadow-lg transition-all duration-300">
+                <FaEye size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Vision</h3>
-              <p className="text-white/90 text-justify text-sm">Formed with a vision to be “the leading data analytics and data intelligence organisation”, we at SSPL are committed to continuous customer service and advance analytics solution Development Company. Helping our clients to steer towards their corporate vision and attain their goals with best possible optimized analytics solutions and services.</p>
+              <p className="text-white/90 text-justify text-sm px-4">
+                Formed with a vision to be “the leading data analytics and data intelligence organisation”, we at SSPL are committed to continuous customer service and advance analytics solution Development Company. Helping our clients to steer towards their corporate vision and attain their goals with best possible optimized analytics solutions and services.
+              </p>
             </div>
             {/* Protect & respect confidentiality */}
-            <div className="flex flex-col items-center text-center">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full bg-[#1B3D69] mb-4 shadow-lg">
-                <FaLock size={28} className="text-white" />
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#27ae60] to-[#2ecc71] mb-4 shadow-lg transition-all duration-300">
+                <FaLock size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Protect & respect confidentiality</h3>
-              <p className="text-white/90  text-justify text-sm">We often work in sensitive environments where the slightest breach of confidentiality - or the appearance of a breach - could have severe consequences and hinder our ability to serve our clients well. We strictly maintain our clients’ confidentiality and do everything we can to encourage others involved in the process including the service providers etc to share our approach.</p>
+              <p className="text-white/90 text-justify text-sm px-4">
+                We often work in sensitive environments where the slightest breach of confidentiality - or the appearance of a breach - could have severe consequences and hinder our ability to serve our clients well. We strictly maintain our clients’ confidentiality and do everything we can to encourage others involved in the process including the service providers etc to share our approach.
+              </p>
             </div>
             {/* Lead with insight */}
-            <div className="flex flex-col items-center text-center">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full mb-4 shadow-lg">
-                <FaLightbulb size={28} className="text-white" />
+            <div className="flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-[#3498db] to-[#2980b9] mb-4 shadow-lg transition-all duration-300">
+                <FaLightbulb size={30} className="text-white" />
               </span>
               <h3 className="text-lg font-semibold text-white mb-2">Lead with insight</h3>
-              <p className="text-white/90 text-justify text-sm">Our consultants carry a wealth of expertise that most companies are always looking forward to tap into managing analytics for their various internal functions such as Operations, Risk and Revenue Assurance but struggle to achieve. SSPL is a strategic thought leader in the discipline of Data and Big Data Analytics for efficient Enterprise Management. .</p>
+              <p className="text-white/90 text-justify text-sm px-4">
+                Our consultants carry a wealth of expertise that most companies are always looking forward to tap into managing analytics for their various internal functions such as Operations, Risk and Revenue Assurance but struggle to achieve. SSPL is a strategic thought leader in the discipline of Data and Big Data Analytics for efficient Enterprise Management.
+              </p>
             </div>
           </div>
         </div>
