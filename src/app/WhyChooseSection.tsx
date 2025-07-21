@@ -173,7 +173,7 @@ const WhyChooseSection = () => {
                   <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
                     {item.title}
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg 2xl:text-lg text-white leading-relaxed font-light">
+                  <p className="text-xs xs:text-sm sm:text-base md:text-sm lg:text-sm 2xl:text-lg text-white leading-relaxed font-light">
                     {item.description}
                   </p>
                 </div>
