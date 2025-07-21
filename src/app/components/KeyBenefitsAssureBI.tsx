@@ -4,7 +4,7 @@ import React from 'react'
 
 const KeyBenefitsAssureBI = () => {
   return (
-    <section className="bg-[#F8F8F8] py-12 px-4 md:px-8 bg-gray-50">
+    <section className="bg-[#F8F8F8] py-4 mb-6 px-4 md:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold text-black mb-6">Key benefits of assureBI</h2>
         

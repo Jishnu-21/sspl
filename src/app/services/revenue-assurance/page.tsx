@@ -139,9 +139,9 @@ const revenue = () => {
        
             <ServiceInquiryModal open={!!modal} onClose={() => setModal(null)} title={modal || ''} />
 
-            <section className="py-4 px-4 md:px-8 max-w-6xl mx-auto mb-4" data-aos="fade-up">
+            <section className="px-4 py-4 md:px-8 max-w-6xl mx-auto mb-4" data-aos="fade-up">
               <div className="text-center">
-                <h2 className="text-xl md:text-2xl font-semibold text-[#366A00]">SSPL has been working in providing revenue assurance solutions and services for various Banks, Insurance, Retail and Telecom Companies.</h2>
+                <h2 className="text-xl text-center md:text-2xl font-semibold text-[#366A00]">SSPL has been working in providing revenue assurance solutions and services for various Banks, Insurance, Retail and Telecom Companies.</h2>
               </div>
             </section>
             

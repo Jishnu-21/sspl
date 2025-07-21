@@ -47,32 +47,24 @@ const ResponsiveWrapper = ({ children }: { children: React.ReactNode }) => {
       @media (max-width: 480px) {
         h1:not(#page-banner h1):not(.page-banner h1) {
           font-size: 1.75rem !important;
-          margin-bottom: 0.75rem !important;
           padding-left: 0.25rem;
           padding-right: 0.25rem;
         }
         
         h2 {
           font-size: 1.35rem !important;
-          margin-bottom: 0.75rem !important;
         }
         
         section:not(#page-banner):not(.page-banner) {
-          padding-top: 1.5rem !important;
-          padding-bottom: 1.5rem !important;
         }
         
         .py-16 {
-          padding-top: 1.5rem !important;
-          padding-bottom: 1.5rem !important;
         }
         
         .mb-8 {
-          margin-bottom: 1rem !important;
         }
         
         .mb-6 {
-          margin-bottom: 0.75rem !important;
         }
       }
 
