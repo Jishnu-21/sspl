@@ -90,10 +90,10 @@ const ScheduleDemo = () => {
       <section className="py-2 sm:py-4 md:py-6 lg:py-8" style={{ backgroundColor: '#0F1A42' }}>
         <Toaster position="top-right" />
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-6 sm:gap-8 lg:gap-16">
+          <div className="flex flex-col items-start justify-between gap-6 sm:gap-8 lg:gap-16">
             {/* Left side content */}
             <motion.div 
-              className="w-full lg:w-1/2 text-white pt-4 sm:pt-6 md:pt-8"
+              className="w-full text-white pt-4 sm:pt-6 md:pt-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
