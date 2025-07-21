@@ -41,7 +41,8 @@ const videoData = [
   {
     id: 4,
     title: 'ASSOCHAM International Conference 7 May 2021 Presentation by Mr. Nishith Seth',
-    youtubeId: 'https://youtu.be/tmKpWjcs9PM'
+    youtubeId: 'https://youtu.be/tmKpWjcs9PM',
+    customThumbnail: '/images/video-gallery/4.png', // <-- Add your custom image here
   },
   {
     id: 5,
@@ -95,7 +96,8 @@ const videoData = [
     id: 13,
     title: 'SSPL: Analyzer Demo by Nishith Seth',
     description: 'This is a Introductory Level Demo of the Analyzer Tool by Mr. Nishith Seth. It explains the most commonly used features and important capabilities of the Tool.',
-    youtubeId: 'https://youtu.be/tTYacqLVZFw'
+    youtubeId: 'https://youtu.be/tTYacqLVZFw',
+    customThumbnail: '/images/video-gallery/13.png', // <-- Add your custom image here
   },
   {
     id: 14,
@@ -195,18 +197,28 @@ const VideoGallery = () => {
                     data-aos-delay={idx * 60}
                   >
                     <div className="relative aspect-video cursor-pointer group shadow-sm hover:shadow-md transition-shadow duration-300" onClick={() => openVideo(video.youtubeId)}>
-                      <Image
-                        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                        alt={video.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        onError={(e) => {
-                          // Fallback to medium quality thumbnail if high quality is not available
-                          const target = e.target as HTMLImageElement;
-                          target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-                        }}
-                      />
+                      {video.customThumbnail ? (
+                        <Image
+                          src={video.customThumbnail}
+                          alt={video.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <Image
+                          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                          alt={video.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          onError={(e) => {
+                            // Fallback to medium quality thumbnail if high quality is not available
+                            const target = e.target as HTMLImageElement;
+                            target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+                          }}
+                        />
+                      )}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8">
