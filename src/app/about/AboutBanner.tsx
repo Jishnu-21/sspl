@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const STOCK_IMAGE = "/images/about/banner5.png";
+const STOCK_IMAGE = "/images/about/about.png";
 const BANNER_KEY = "about";
 
 const AboutBanner = () => {
