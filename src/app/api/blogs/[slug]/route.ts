@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { BASE_URL } from '../../../config/endpoint';
 
-export async function DELETE(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function DELETE(req: NextRequest, context: { params: any }) {
   try {
-    const { slug } = params;
+    const { slug } = context.params;
     const backendRes = await fetch(`http://${BASE_URL}/api/blogs/${slug}`, { method: 'DELETE' });
     const data = await backendRes.json();
     return new NextResponse(JSON.stringify(data), {
@@ -18,9 +18,9 @@ export async function DELETE(req: NextRequest, { params }: { params: { slug: str
   }
 }
 
-export async function PUT(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function PUT(req: NextRequest, context: { params: any }) {
   try {
-    const { slug } = params;
+    const { slug } = context.params;
     const formData = await req.formData();
     const backendRes = await fetch(`http://${BASE_URL}/api/blogs/${slug}`, {
       method: 'PUT',
