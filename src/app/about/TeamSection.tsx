@@ -44,7 +44,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ members, title = "Meet Our Le
   return (
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-5xl font-semibold text-black text-center mb-14 text-comfortaa">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-black text-center mb-4 sm:mb-6 md:mb-8 text-comfortaa">
       {title}
         </h2>
 
