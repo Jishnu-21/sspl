@@ -42,7 +42,6 @@ const ArbutusComponent = () => {
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         
         {/* Sub-heading centered */}
-        <h3 className="text-xl text-center font-semibold text-[#1B3D69] mb-4">Arbutus Software</h3>
         
         {/* Paragraph with justified alignment */}
         <p className="text-gray-800 mb-4 text-justify">
