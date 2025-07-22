@@ -161,7 +161,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <div className="py-8 sm:py-12 md:py-16 relative will-change-transform overflow-visible">
+    <div className="py-4 relative will-change-transform overflow-visible">
       <motion.section 
         ref={sectionRef}
         initial="hidden"

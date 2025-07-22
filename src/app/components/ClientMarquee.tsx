@@ -47,7 +47,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
       <div className="w-full text-center ">
         <h2 className="block text-3xl sm:text-4xl md:text-5xl font-bold text-black mt-0 sm:-mt-6 md:-mt-8 mb-8 leading-none">Our Clients</h2>
       </div>
-      <div className={`w-full  py-4 sm:py-8 overflow-hidden ${className}`}>
+      <div className={`w-full  sm:py-8 overflow-hidden ${className}`}>
         <div className="relative w-full">
           <motion.div
             className="flex items-center"
