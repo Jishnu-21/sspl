@@ -244,102 +244,97 @@ const TruOIComponent = () => {
         </section>
       </motion.div>
 
-      {/* About TruOI Section */}
-      <motion.div 
-        className="mb-4"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
-      >
-        <motion.div 
-          className="text-center mb-4 sm:mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h3 className="text-2xl md:text-3xl lg:text-3xl font-semibold text-[#366A00] mb-4">About TruOI</h3>
-          <div className="h-[1px] bg-gray-300 w-full mb-8"></div>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-center">
-          {/* Analytics Image */}
-          <motion.div 
-  className="w-full max-w-[700px] mx-auto h-auto"
-  initial={{ opacity: 0, x: -50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true, amount: 0.3 }}
+{/* About TruOI Section */}
+<motion.div 
+  className="mb-8"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
   transition={{ duration: 0.6 }}
 >
-  <Image 
-    src="/images/products/tru-oi-about.png" 
-    alt="TruOI Analytics Report" 
-    width={800}
-    height={400}
-    className="w-full h-auto object-contain"
-  />
-</motion.div>
+  <motion.div 
+    className="text-center mb-6"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.5 }}
+  >
+    <h3 className="text-2xl md:text-3xl lg:text-3xl font-semibold text-[#366A00] mb-3">About TruOI</h3>
+    <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent w-full mb-6"></div>
+  </motion.div>
 
+  <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
+    {/* Analytics Image */}
+    <motion.div 
+      className="w-full max-w-[500px] mx-auto h-auto lg:order-1 order-2"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Image 
+        src="/images/products/tru-oi-about.png" 
+        alt="TruOI Analytics Report" 
+        width={600}
+        height={300}
+        className="w-full h-auto object-contain"
+      />
+    </motion.div>
 
-          {/* Customer Driven Section */}
-          <motion.div 
-            className="flex flex-col justify-center h-full"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.h4 
-              className="text-xl font-bold text-gray-800 mb-2 sm:mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              CUSTOMER DRIVEN. PEOPLE FOCUSED.
-            </motion.h4>
-            <motion.p 
-              className="text-gray-700 mb-4 text-justify sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              For almost 20 years, TruOI has worked both domestically and internationally with growth-directed organizations seeking to simplify enterprise reporting, improve team member performance, and generate operational success in real time.
-            </motion.p>
-
-            <motion.h4 
-              className="text-xl font-bold text-gray-800 mb-2 sm:mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              ONE TO ONE, NOT ONE TO MANY.
-            </motion.h4>
-            <motion.p 
-              className="text-gray-700 mb-4 text-justify sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              With over 3,000 clients and experience in multiple industries, our team members bring unique one-to-one coaching and support experience to each engagement.
-            </motion.p>
-
-            <motion.p 
-              className="text-gray-700 text-justify"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              Our Operational Intelligence Platform is not a static reporting system but a one-of-a-kind real-time measurement, automation, coaching & training, and business optimization.
-            </motion.p>
-          </motion.div>
-        </div>
+    {/* Customer Driven Section */}
+    <motion.div 
+      className="flex flex-col justify-center h-full lg:order-2 order-1 space-y-4"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <h4 className="text-xl font-bold text-gray-800 mb-2 flex items-center">
+          <div className="w-1 h-6 bg-[#366A00] rounded-full mr-3"></div>
+          CUSTOMER DRIVEN. PEOPLE FOCUSED.
+        </h4>
+        <p className="text-gray-700  text-smtext-justify leading-relaxed">
+          For almost 20 years, TruOI has worked both domestically and internationally with growth-directed organizations seeking to simplify enterprise reporting, improve team member performance, and generate operational success in real time.
+        </p>
       </motion.div>
+
+      <motion.div
+        className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <h4 className="text-xl font-bold text-gray-800 mb-2 flex items-center">
+          <div className="w-1 h-6 bg-[#366A00] rounded-full mr-3"></div>
+          ONE TO ONE, NOT ONE TO MANY.
+        </h4>
+        <p className="text-gray-700 text-sm text-justify leading-relaxed">
+          With over 3,000 clients and experience in multiple industries, our team members bring unique one-to-one coaching and support experience to each engagement.
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="bg-gradient-to-r from-[#366A00]/5 to-[#366A00]/10 rounded-lg p-5 border border-[#366A00]/20"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <p className="text-gray-700 text-justify leading-relaxed font-medium">
+          Our Operational Intelligence Platform is not a static reporting system but a one-of-a-kind real-time measurement, automation, coaching & training, and business optimization.
+        </p>
+      </motion.div>
+    </motion.div>
+  </div>
+</motion.div>
 
       {/* Integration Section */}
       <motion.div 
