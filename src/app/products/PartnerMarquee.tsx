@@ -27,8 +27,6 @@ const clientsRow2 = [
   { name: 'Arizona', logo: '/images/products/tru-oi/logo/19.png' },
   { name: 'Pioneer', logo: '/images/products/tru-oi/logo/20.png' },
   { name: 'DWIHN', logo: '/images/products/tru-oi/logo/21.png' },
-  { name: 'Baystate', logo: '/images/products/tru-oi/logo/22.png' },
-  { name: 'Bethesda', logo: '/images/products/tru-oi/logo/23.png' },
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/24.png' },
 ];
 
