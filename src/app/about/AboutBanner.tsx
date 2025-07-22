@@ -13,7 +13,7 @@ const AboutBanner = () => {
   return (
     <section className="min-h-screen flex flex-col">
       <ShortPageBanner
-        backgroundImage="/images/webinar.png"
+        backgroundImage="/images/about/about.jpg"
         title=''
         subtitle=''
         bannerKey='about'
