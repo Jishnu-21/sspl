@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ShortPageBanner from '@/app/components/ShortPageBanner';
 import AOSWrapper from '@/app/components/AOSWrapper';
-import SpeakerImage from '@/app/components/SpeakerImage';
 import SpeakerProfileTabs from '@/app/components/SpeakerProfileTabs';
 import SpeakerFeedbackTabs from '@/app/components/SpeakerFeedbackTabs';
 
@@ -1748,7 +1747,7 @@ type Props = {
                   <>
                     <h1 className="text-3xl font-light mb-6 text-green-700">{event.main.title}</h1>
                     <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.focusTitle}</h2>
-                    <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: event.main.focus }} />
+                    <p className="mb-6 text-gray-700 justify-content " dangerouslySetInnerHTML={{ __html: event.main.focus }} />
                     <h2 className="text-2xl font-bold text-green-700 mb-2">{event.main.topicsTitle}</h2>
                     <ul className="mb-6 list-disc pl-6 text-gray-700">
                       {event.main.topics.map((topic, idx) => (

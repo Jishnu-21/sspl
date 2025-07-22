@@ -108,6 +108,8 @@ const WhyChooseSection = () => {
             {contentItems.map((item, index) => (
               <motion.div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-4 border border-[#1B3D69] shadow-xl flex flex-col h-full justify-center w-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 relative group overflow-hidden"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -147,6 +149,8 @@ const WhyChooseSection = () => {
             {contentItems.map((item, index) => (
               <motion.div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-gradient-to-br from-[#1B3D69] to-[#152d4f] rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 border border-[#1B3D69] shadow-xl flex flex-col h-full justify-center w-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 relative group overflow-hidden"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -188,6 +192,8 @@ const WhyChooseSection = () => {
                 {contentItems.map((item, index) => (
                   <motion.div
                     key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
                     className={`flex-shrink-0 ${cardsPerView === 2 ? 'w-1/2' : 'w-full'} transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 relative group overflow-hidden`}
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}

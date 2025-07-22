@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Carousel } from '@/components/ui/apple-cards-carousel';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
@@ -107,11 +107,16 @@ const CaseStudiesSection = () => {
     }
   ];
 
+  // State for hovered card
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   // Create card items for the carousel - Responsive card sizes
   const cardItems = caseStudies.map((study, index) => (
     <div 
       key={index}
-      className="flex-shrink-0 w-72 sm:w-80 md:w-84 lg:w-96 flex flex-col h-full rounded-xl overflow-hidden shadow-lg"
+      className="flex-shrink-0 w-72 sm:w-80 md:w-84 lg:w-96 flex flex-col h-full rounded-xl overflow-hidden shadow-lg relative"
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
     >
       <div className="h-48 sm:h-56 md:h-64 lg:h-80 overflow-hidden relative rounded-t-xl">
         <Image 
@@ -140,6 +145,13 @@ const CaseStudiesSection = () => {
         
         </div>
       </div>
+      {/* Dialog for full description */}
+      {hoveredIndex === index && (
+        <div className="absolute left-1/2 top-4 z-50 w-80 max-w-xs sm:max-w-sm md:max-w-md -translate-x-1/2 bg-white border border-gray-300 shadow-2xl rounded-xl p-4 text-gray-800 text-sm sm:text-base animate-fade-in" style={{ pointerEvents: 'none' }}>
+          <div className="font-semibold mb-2">{study.title}</div>
+          <div>{study.description}</div>
+        </div>
+      )}
     </div>
   ));
 
