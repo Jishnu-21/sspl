@@ -13,7 +13,7 @@ const PerkCard: React.FC<PerkCardProps> = ({ icon, title, delay }) => {
   return (
     <motion.div 
       className={
-        `bg-[#366A00] hover:bg-[#1B3D69] transition-colors duration-300 rounded-lg p-6 flex flex-col items-center justify-center h-[120px] md:h-[150px] group`
+        `bg-[#1b3d69] hover:bg-[#366a00] transition-colors duration-300 rounded-lg p-6 flex flex-col items-center justify-center h-[120px] md:h-[150px] group`
       }
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ const CareerPerks = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B3D69] mb-2">Our Perks & Benefits</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#366a00] mb-2">Our Perks & Benefits</h2>
         </motion.div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 overflow-visible">
