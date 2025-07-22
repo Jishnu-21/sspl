@@ -5,8 +5,7 @@ import { motion } from 'framer-motion';
 import ShortPageBanner from '../components/ShortPageBanner';
 import { FaEye, FaLock, FaLightbulb } from 'react-icons/fa';
 
-const STOCK_IMAGE = "/images/about/about.webp";
-const BANNER_KEY = "about";
+
 
 const AboutBanner = () => {
 
@@ -14,8 +13,9 @@ const AboutBanner = () => {
   return (
     <section className="min-h-screen flex flex-col">
       <ShortPageBanner
-        backgroundImage="/images/about/about.webp"
+        backgroundImage="/images/webinar.png"
         title=''
+        subtitle=''
         bannerKey='about'
       />
 
