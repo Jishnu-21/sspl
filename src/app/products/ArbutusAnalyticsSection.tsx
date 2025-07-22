@@ -85,7 +85,7 @@ const ArbutusAnalyticsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`bg-[#1B3D69] p-3 min-h-[120px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 snap-center flex-shrink-0 w-56`}
+                  className={`bg-[#1B3D69] p-3 min-h-[120px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 snap-center flex-shrink-0 w-56 transform transition-transform hover:scale-105`}
                 >
                   <span className="bg-white text-gray-800 text-xs font-bold px-2 py-0.5 rounded-full mb-2">YOUR NEED :</span>
                   <p className="font-medium text-xs leading-relaxed">{card.text}</p>
@@ -102,7 +102,7 @@ const ArbutusAnalyticsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[180px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300`}
+                className={`bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[180px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 transform transition-transform hover:scale-105`}
               >
                 <span className="bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded-full mb-4">YOUR NEED :</span>
                 <p className="font-medium text-sm leading-relaxed">{card.text}</p>

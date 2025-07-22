@@ -108,7 +108,7 @@ const Grc = () => {
         <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">Risk Management</h2>
         
         <div className="mb-3 sm:mb-6 md:mb-8">
-          <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
+          <p className="text-gray-700  max-w-6xl  text-sm md:text-base">
             We help in managing organizational uncertainties by designing Risk Management Framework, providing Risk Assurance and implementing Risk Management Solutions.
           </p>
         </div>
@@ -232,7 +232,7 @@ const Grc = () => {
         <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">Compliance</h2>
         
         <div className="mb-3 sm:mb-6 md:mb-8">
-          <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
+          <p className="text-gray-700  max-w-6xl mx-auto text-sm md:text-base">
             We help you in actualizing Regulatory Compliance at Financial Institutions through our Regulatory Risk Management solutions and Risk Assurance
           </p>
         </div>
@@ -341,7 +341,7 @@ const Grc = () => {
         <h2 className="text-2xl md:text-4xl font-semibold text-[#366A00] text-center mb-4">IT & IS Solutions</h2>
         
         <div className="mb-3 sm:mb-6 md:mb-8">
-          <p className="text-gray-700 text-center max-w-6xl mx-auto text-sm md:text-base">
+          <p className="text-gray-700 max-w-6xl mx-auto text-sm md:text-base">
             We bring reliable and economical solutions to meet your needs in the related field of Information Technology Solutions and Information Security.
           </p>
         </div>
