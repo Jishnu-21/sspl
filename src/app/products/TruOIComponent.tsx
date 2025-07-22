@@ -14,17 +14,9 @@ const TruOIComponent = () => {
     "ReduceInventory Costs", 
     "Reduce Labor Costs", 
     "Increase Talent Performance", 
-    "Increase Sales & Profits", 
-    "ReduceInventory Costs", 
-    "Reduce Labor Costs", 
-    "Increase Talent Performance", 
   ];
   
   const secondRowItems = [
-   "Increase Customer Satisfaction",
-    "Reduce Reporting Time",
-    "No Need for Data Warehouse",
-    "No Programming Experience Required",
    "Increase Customer Satisfaction",
     "Reduce Reporting Time",
     "No Need for Data Warehouse",
