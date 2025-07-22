@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface PerkCardProps {
   icon: React.ReactNode;
@@ -21,15 +23,24 @@ const PerkCard: React.FC<PerkCardProps> = ({ icon, title, delay }) => {
       transition={{ duration: 0.5, delay }}
       whileHover={{ scale: 1.07, zIndex: 10 }}
     >
-      <div className="mb-3 text-white">
-        {icon}
+      <div
+        data-aos="fade-up"
+        data-aos-delay={Math.round(delay * 1000)}
+        className="flex flex-col items-center justify-center w-full h-full"
+      >
+        <div className="mb-3 text-white">
+          {icon}
+        </div>
+        <p className="text-center text-sm md:text-base font-medium text-white">{title}</p>
       </div>
-      <p className="text-center text-sm md:text-base font-medium text-white">{title}</p>
     </motion.div>
   );
 };
 
 const CareerPerks = () => {
+  React.useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
   const perks = [
     {
       icon: (

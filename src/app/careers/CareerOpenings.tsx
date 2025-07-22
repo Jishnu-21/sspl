@@ -216,7 +216,7 @@ const CareerOpenings = () => {
     onClick={() => setShowPopup(true)}
     className="text-[#366A00] cursor-pointer font-semibold hover:underline"
   >
-    Drop Your CV.
+    Drop your CV.
   </button>
 </div>
 

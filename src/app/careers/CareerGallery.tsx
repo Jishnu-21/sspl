@@ -3,8 +3,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CareerGallery = () => {
+  React.useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -46,7 +52,6 @@ const CareerGallery = () => {
           <div className="flex flex-col items-center w-full">
             <h3 className="text-[#366A00] uppercase font-medium mb-3 text-center text-lg tracking-widest relative">
               OUR GALLERY
-              <span className="block mx-auto mt-2 w-12 h-1 bg-[#366A00] rounded-full"></span>
             </h3>
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full"
@@ -57,76 +62,76 @@ const CareerGallery = () => {
             >
               {/* Row 1 */}
               <motion.div className="col-span-2 row-span-1" variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up">
                   <Image 
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
                     alt="Professional Team Meeting" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                   <Image 
                     src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" 
                     alt="Business Professional" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
 
               {/* Row 2 */}
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                   <Image 
                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
                     alt="Female Professional" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                   <Image 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
                     alt="Male Professional" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="400">
                   <Image 
                     src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&w=800&q=80" 
                     alt="Diverse Team Collaboration" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
 
               {/* Row 3 */}
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="500">
                   <Image 
                     src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" 
                     alt="Career Growth Discussion" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden">
+                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="600">
                   <Image 
                     src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
                     alt="Professional Training Session" 
                     fill 
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   />
                 </div>
               </motion.div>
