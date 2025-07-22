@@ -9,11 +9,29 @@ interface ClientMarqueeProps {
 
 const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
   const clients = [
-    { name: 'Indian Police', logo: '/images/logos/1.svg' },
-    { name: 'Toyota', logo: '/images/logos/2.svg' },
-    { name: 'GPIC', logo: '/images/logos/3.svg' },
-    { name: 'Reliance Life Insurance', logo: '/images/logos/4.svg' },
-    { name: 'Godrej', logo: '/images/logos/5.svg' },
+    { name: 'Godrej', logo: '/images/logos/7.svg' },
+    { name: 'Godrej', logo: '/images/logos/8.svg' },
+    { name: 'Godrej', logo: '/images/logos/9.svg' },
+    { name: 'Godrej', logo: '/images/logos/10.svg' },
+    { name: 'Godrej', logo: '/images/logos/11.svg' },
+    { name: 'Godrej', logo: '/images/logos/12.svg' },
+    { name: 'Godrej', logo: '/images/logos/13.svg' },
+    { name: 'Godrej', logo: '/images/logos/14.svg' },
+    { name: 'Godrej', logo: '/images/logos/16.svg' },
+    { name: 'Godrej', logo: '/images/logos/17.svg' },
+    { name: 'Godrej', logo: '/images/logos/18.svg' },
+    { name: 'Godrej', logo: '/images/logos/19.svg' },
+    { name: 'Godrej', logo: '/images/logos/20.svg' },
+    { name: 'Godrej', logo: '/images/logos/21.svg' },
+    { name: 'Godrej', logo: '/images/logos/22.svg' },
+    { name: 'Godrej', logo: '/images/logos/23.svg' },
+    { name: 'Godrej', logo: '/images/logos/24.svg' },
+    { name: 'Godrej', logo: '/images/logos/25.svg' },
+    { name: 'Godrej', logo: '/images/logos/26.svg' },
+    { name: 'Godrej', logo: '/images/logos/27.svg' },
+    { name: 'Godrej', logo: '/images/logos/28.svg' },
+    { name: 'Godrej', logo: '/images/logos/29.svg' },
+    
   ];
 
   // Duplicate the clients array to create a seamless loop
@@ -43,7 +61,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
           >
             {duplicatedClients.map((client, index) => (
               <div key={index} className="flex-shrink-0 mx-8">
-                <div className="relative h-24 w-48">
+                <div className="relative h-46 w-58">
                   <Image
                     src={client.logo}
                     alt={client.name}
