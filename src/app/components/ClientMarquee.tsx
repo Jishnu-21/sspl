@@ -32,7 +32,6 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
     { name: 'Godrej', logo: '/images/logos/Asset-23.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-24.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-25.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-26.svg' },
  
   ];
 
