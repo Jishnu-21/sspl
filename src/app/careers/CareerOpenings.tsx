@@ -20,6 +20,8 @@ interface FormData {
   position: string;
   message: string;
   experience?: string;
+  portfolios?: string;
+  projects?: string;
 }
 
 // Utility to slugify job titles for URLs
@@ -41,7 +43,9 @@ const CareerOpenings = () => {
     phone: '',
     position: '',
     message: '',
-    experience: ''
+    experience: '',
+    portfolios: '',
+    projects: ''
   });
   const [resume, setResume] = useState<File | null>(null);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -88,6 +92,8 @@ const CareerOpenings = () => {
     formData.append('position', form.position);
     formData.append('message', form.message);
     formData.append('experience', form.experience || '');
+    formData.append('portfolios', form.portfolios || '');
+    formData.append('projects', form.projects || '');
     if (resume) {
       formData.append('resume', resume);
     }
@@ -103,7 +109,7 @@ const CareerOpenings = () => {
         setSubmitStatus('success');
         setSubmitMsg('Application submitted successfully!');
         // Reset form
-        setForm({ name: '', email: '', phone: '', position: '', message: '', experience: '' });
+        setForm({ name: '', email: '', phone: '', position: '', message: '', experience: '', portfolios: '', projects: '' });
         setResume(null);
         setTimeout(() => {
           setShowPopup(false);
@@ -210,7 +216,7 @@ const CareerOpenings = () => {
     onClick={() => setShowPopup(true)}
     className="text-[#366A00] cursor-pointer font-semibold hover:underline"
   >
-    Drop Your Resume Here
+    Drop Your CV.
   </button>
 </div>
 
@@ -233,7 +239,7 @@ const CareerOpenings = () => {
               <h2 className="text-2xl font-bold text-[#1B3D69]">Apply Now</h2>
               <button
                 onClick={closePopup}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 cursor-pointer hover:text-gray-600 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -248,27 +254,29 @@ const CareerOpenings = () => {
                 value={form.name} 
                 onChange={handleInputChange} 
                 placeholder="Name" 
-                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900" 
+                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full" 
                 required 
               />
-              <input 
-                type="email" 
-                name="email" 
-                value={form.email} 
-                onChange={handleInputChange} 
-                placeholder="Email ID" 
-                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900" 
-                required 
-              />
-              <input 
-                type="text" 
-                name="phone" 
-                value={form.phone} 
-                onChange={handleInputChange} 
-                placeholder="Contact No." 
-                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900" 
-              />
-              <label className="block">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input 
+                  type="email" 
+                  name="email" 
+                  value={form.email} 
+                  onChange={handleInputChange} 
+                  placeholder="Email ID" 
+                  className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full" 
+                  required 
+                />
+                <input 
+                  type="text" 
+                  name="phone" 
+                  value={form.phone} 
+                  onChange={handleInputChange} 
+                  placeholder="Contact No." 
+                  className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full" 
+                />
+              </div>
+              <label className="block w-full">
                 <span className="text-gray-700 text-sm">Domain</span>
                 <select
                   name="position"
@@ -290,8 +298,24 @@ const CareerOpenings = () => {
                 onChange={handleInputChange}
                 placeholder="Experience (In years)"
                 min="0"
-                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900"
+                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full"
                 required
+              />
+              <input
+                type="text"
+                name="portfolios"
+                value={form.portfolios}
+                onChange={handleInputChange}
+                placeholder="Portfolios (Links, optional)"
+                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full"
+              />
+              <input
+                type="text"
+                name="projects"
+                value={form.projects}
+                onChange={handleInputChange}
+                placeholder="Projects (optional)"
+                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900 w-full"
               />
               <textarea 
                 name="message" 

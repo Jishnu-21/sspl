@@ -9,11 +9,30 @@ interface ClientMarqueeProps {
 
 const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
   const clients = [
-    { name: 'Indian Police', logo: '/images/logos/1.svg' },
-    { name: 'Toyota', logo: '/images/logos/2.svg' },
-    { name: 'GPIC', logo: '/images/logos/3.svg' },
-    { name: 'Reliance Life Insurance', logo: '/images/logos/4.svg' },
-    { name: 'Godrej', logo: '/images/logos/5.svg' },
+    { name: 'GPIC', logo: '/images/logos/asset 3.svg' },
+    { name: 'Reliance Life Insurance', logo: '/images/logos/asset 4.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 6.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 7.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 8.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 9.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 10.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 11.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 12.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 13.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 14.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 15.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 16.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 17.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 18.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 19.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 20.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 21.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 22.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 23.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 24.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 25.svg' },
+    { name: 'Godrej', logo: '/images/logos/asset 26.svg' },
+ 
   ];
 
   // Duplicate the clients array to create a seamless loop
@@ -32,7 +51,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
             className="flex items-center"
             animate={isPaused ? {} : { x: '-50%' }}
             transition={{
-              duration: 25,
+              duration: 40,
               repeat: Infinity,
               ease: 'linear',
               repeatType: 'loop',
@@ -43,7 +62,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
           >
             {duplicatedClients.map((client, index) => (
               <div key={index} className="flex-shrink-0 mx-8">
-                <div className="relative h-24 w-48">
+                <div className="relative h-24 w-38">
                   <Image
                     src={client.logo}
                     alt={client.name}
