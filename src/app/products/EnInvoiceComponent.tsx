@@ -43,7 +43,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">AUTOMATED DATA COLLECTION</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">AUTOMATED DATA COLLECTION</span>
             </div>
             <p className="text-white text-sm text-center">
               Standardize data collection and flow with 2-way integrations with automated transformations, merging and segregation of data.
@@ -64,7 +64,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">EFFICIENT DATA PREPARATION</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">EFFICIENT DATA PREPARATION</span>
             </div>
             <p className="text-white text-sm text-center">
               Unified data preparation processes for Efficient Data standardization with data coming from multiple sources.
@@ -85,7 +85,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">ADVANCED DATA QUALIFICATION</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">ADVANCED DATA QUALIFICATION</span>
             </div>
             <p className="text-white text-sm text-center">
               Qualify data with validation rules, tolerance rules, conditional rules, computational rules and against reference data / 3rd party APIs.
@@ -106,7 +106,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">IMPROVED & AUTOMATED PROCESSES</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">IMPROVED & AUTOMATED PROCESSES</span>
             </div>
             <p className="text-white text-sm text-center">
               Implement tailored processes cutting across data preparers, reviewers and approvers cutting across departments and roles.
@@ -127,7 +127,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">INTELLIGENT DASHBOARDING</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">INTELLIGENT DASHBOARDING</span>
             </div>
             <p className="text-white text-sm text-center">
               Deliver regulatory einvoicing status cutting across Org and various Sub-Orgs with actionable insights from regulatory data.
@@ -148,7 +148,7 @@ const EnInvoiceComponent = () => {
             }}
           >
             <div className="text-center mb-3">
-              <span className="bg-white text-gray-800 text-xs font-medium px-3 py-1 rounded-full">CHANGE READY AND REPORTING BY TIME</span>
+              <span className="bg-white text-[#366A00] text-xs font-medium px-3 py-1 rounded-full">CHANGE READY AND REPORTING BY TIME</span>
             </div>
             <p className="text-white text-sm text-center">
               Keep up with ever-changing rules and reporting formats with innate ability to effortlessly update processing Applications.
@@ -403,7 +403,7 @@ const EnInvoiceComponent = () => {
           <h4 className="text-2xl font-medium text-center text-[#366A00] mb-6">Your AR & Finance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -416,10 +416,9 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">01</span>
-                <h5 className="text-gray-800 font-medium">Seamless Integrations</h5>
+                <h5 className="text-white font-medium">Seamless Integrations</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>Pre-built ERP specific connectors</li>
                 <li>REST APIs, SFTP, File Share / Upload</li>
                 <li>Source friendly templates / payloads</li>
@@ -427,7 +426,7 @@ const EnInvoiceComponent = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -440,10 +439,9 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">02</span>
-                <h5 className="text-gray-800 font-medium">Process by Dept / Location / Company</h5>
+                <h5 className="text-white font-medium">Process by Dept / Location / Company</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>Upload data by location or Business Unit</li>
                 <li>Process eInvoice AR activity at any level</li>
                 <li>Consolidate or Segregate at will.</li>
@@ -451,7 +449,7 @@ const EnInvoiceComponent = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -464,10 +462,9 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">03</span>
-                <h5 className="text-gray-800 font-medium">Accurate Documents</h5>
+                <h5 className="text-white font-medium">Accurate Documents</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>Tax IDs validated</li>
                 <li>VAT Chapter Codes validated</li>
                 <li>Tax determination performed</li>
@@ -487,7 +484,7 @@ const EnInvoiceComponent = () => {
           <h4 className="text-2xl font-medium text-center text-[#366A00] mb-6">Your Tax & Compliance team Gets</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -500,10 +497,9 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">04</span>
-                <h5 className="text-gray-800 font-medium">End-to-End Compliance</h5>
+                <h5 className="text-white font-medium">End-to-End Compliance</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>Comprehensive Audit Trail</li>
                 <li>Precision Reporting</li>
                 <li>Versioning By-Time</li>
@@ -511,7 +507,7 @@ const EnInvoiceComponent = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -524,17 +520,16 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">05</span>
-                <h5 className="text-gray-800 font-medium">Automated VAT Reporting</h5>
+                <h5 className="text-white font-medium">Automated VAT Reporting</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>Automated transfer of Sales data for VAT Reporting</li>
                 <li>Compute, Prepare and Process VAT Reports.</li>
               </ul>
             </motion.div>
             
             <motion.div 
-              className="bg-white border border-gray-200 p-6 rounded-md shadow-sm cursor-pointer"
+              className="bg-[#1B3D69] p-6 rounded-md shadow-sm cursor-pointer transition-colors duration-300 hover:bg-[#366A00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -547,10 +542,9 @@ const EnInvoiceComponent = () => {
               }}
             >
               <div className="mb-3 border-b pb-2">
-                <span className="text-gray-400 text-lg">06</span>
-                <h5 className="text-gray-800 font-medium">Enable Reconciliations with</h5>
+                <h5 className="text-white font-medium">Enable Reconciliations with</h5>
               </div>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <ul className="list-disc pl-5 text-sm text-white space-y-2">
                 <li>ERP / Source Systems</li>
                 <li>B2B Partners</li>
                 <li>Intra-Company</li>
