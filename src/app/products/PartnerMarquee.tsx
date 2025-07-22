@@ -43,7 +43,7 @@ const ClientsMarquee = () => {
                 <div key={dupIndex} className="marquee-content">
                   {rowClients.map((client, index) => (
                     <div key={index} className="client-logo mx-0 flex items-center justify-center opacity-90">
-                      <div className="relative w-[280px] h-[200px]">
+                      <div className="relative w-[180px] h-[180px]">
                         <Image
                           src={client.logo}
                           alt={client.name}
