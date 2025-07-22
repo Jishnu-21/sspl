@@ -360,9 +360,9 @@ const TruOIComponent = () => {
                 ].map((item, index) => (
                   <div 
                     key={`integration-1-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
@@ -380,9 +380,9 @@ const TruOIComponent = () => {
                 ].map((item, index) => (
                   <div 
                     key={`integration-1-dup-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -418,9 +418,9 @@ const TruOIComponent = () => {
                 ].map((item, index) => (
                   <div 
                     key={`integration-2-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-medium transition-colors duration-300 hover:text-white">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
@@ -438,9 +438,9 @@ const TruOIComponent = () => {
                 ].map((item, index) => (
                   <div 
                     key={`integration-2-dup-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap"
+                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-medium transition-colors duration-300 hover:text-white">{item}</span>
                   </div>
                 ))}
               </div>
