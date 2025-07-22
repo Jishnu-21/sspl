@@ -257,7 +257,7 @@ const StatsSection = () => {
   const stats = [
     {
       title: 'Experience',
-      value: '25+',
+      value: '35+',
       description: 'years of active, market-driven experience under our belt.',
     },
     {

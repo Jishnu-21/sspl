@@ -14,7 +14,6 @@ const Careers = () => {
         <Header/>
         <CareerBanner/>
         <CareerGallery/>
-        <CareerPerks/>
         <CareerOpenings/>
         <Footer/>
       </main>
