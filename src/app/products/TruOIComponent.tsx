@@ -132,16 +132,16 @@ const TruOIComponent = () => {
         </div>
       </motion.div>
 
-      {/* How TruOI Can Help You - Full Width Marquee */}
+      {/* How TruOI Can Help You - Card Grid Section */}
       <motion.div 
-        className="-mx-4 md:-mx-6 lg:-mx-8 mb-6 sm:mb-10"
+        className="mb-6 sm:mb-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
-          <div className="max-w-[95%] mx-auto">
+        <section className="py-6 sm:py-10  overflow-hidden">
+          <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
@@ -152,59 +152,36 @@ const TruOIComponent = () => {
               <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#1B3D69] mb-2">Here's How TruOI Can Help You</h3>
               <p className="text-gray-600 text-sm">Turn Your Data Into Actionable Business Decisions</p>
             </motion.div>
-            
-            {/* Feature blocks - animated marquee */}
-            <motion.div 
-              className="overflow-hidden mb-2 sm:mb-3"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <div 
-                ref={firstRowRef}
-                className="flex gap-3 animate-marquee"
-                style={{ 
-                  width: "fit-content",
-                  animation: "marquee 30s linear infinite"
-                }}
-              >
-                {[...firstRowItems, ...firstRowItems].map((item, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-4 whitespace-nowrap"
-                  >
-                    <span className="text-gray-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div 
-                ref={secondRowRef}
-                className="flex gap-3"
-                style={{ 
-                  width: "fit-content",
-                  animation: "marquee-reverse 25s linear infinite"
-                }}
-              >
-                {[...secondRowItems, ...secondRowItems].map((item, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gray-300 h-10 rounded flex items-center justify-center px-4 whitespace-nowrap"
-                  >
-                    <span className="text-gray-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              {firstRowItems.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="rounded-xl bg-[#366A00] hover:bg-[#1B3D69] transition-colors duration-300 shadow-md p-4 flex items-center justify-center h-16 text-center cursor-pointer group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <span className="text-white text-base font-semibold group-hover:text-white transition-colors duration-300">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {secondRowItems.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="rounded-xl bg-[#366A00] hover:bg-[#1B3D69] transition-colors duration-300 shadow-md p-4 flex items-center justify-center h-16 text-center cursor-pointer group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <span className="text-white text-base font-semibold group-hover:text-white transition-colors duration-300">{item}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
       </motion.div>
@@ -259,7 +236,9 @@ const TruOIComponent = () => {
     viewport={{ once: true, amount: 0.3 }}
     transition={{ duration: 0.5 }}
   >
-    <h3 className="text-2xl md:text-3xl lg:text-3xl font-semibold text-[#366A00] mb-3">About TruOI</h3>
+             
+
+    <h3  className="text-2xl md:text-3xl lg:text-3xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6">About TruOI</h3>
     <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent w-full mb-6"></div>
   </motion.div>
 

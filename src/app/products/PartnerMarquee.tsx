@@ -21,9 +21,9 @@ const clientsRow1 = [
 const clientsRow2 = [
   { name: 'Honeywell', logo: '/images/products/tru-oi/logo/Asset-15.png' },
   { name: 'Trijicon', logo: '/images/products/tru-oi/logo/Asset-16.png' },
-  { name: 'MAG', logo: '/images/products/tru-oi/logo/Asset-17.png' },
-  { name: 'Pacmore', logo: '/images/products/tru-oi/logo/Asset-18.png' },
-  { name: 'Pioneer', logo: '/images/products/tru-oi/logo/Asset-23.png' },
+  { name: 'MAG', logo: '/images/products/tru-oi/logo/14.png' },
+  { name: 'Pacmore', logo: '/images/products/tru-oi/logo/21.png' },
+  { name: 'Pioneer', logo: '/images/products/tru-oi/logo/5.png' },
   { name: 'DWIHN', logo: '/images/products/tru-oi/logo/Asset-21.png' },
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-22.png' },
   { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-25.png' },
