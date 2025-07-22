@@ -40,7 +40,7 @@ const AboutBanner = () => {
   return (
     <section className="min-h-screen flex flex-col">
       <ShortPageBanner
-        backgroundImage={bgImage}
+        backgroundImage="/images/about/about.webp"
         title=''
         bannerKey='about'
       />
