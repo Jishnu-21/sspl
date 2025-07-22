@@ -41,7 +41,7 @@ const ArbutusAnalyticsSection = () => {
   return (
     <div className="w-full">
       <section className="py-8 pt-12 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-6 lg:px-8">
           {/* Top heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const ArbutusAnalyticsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-800 text-lg justify-text max-w-4xl mx-auto"
+            className="text-gray-800 text-lg justify-text"
           >
             We are a pivotal partner for analytics teams who see strong analytics as a key factor in their success.
           </motion.p>
@@ -68,7 +68,7 @@ const ArbutusAnalyticsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-800 text-lg justify-text mb-8 max-w-4xl mx-auto"
+            className="text-gray-800 text-lg justify-text mb-8"
           >
             Arbutus has proven that we can make it easier and more cost effective to implement and use analytics within your team and audit processes.
             The immense capabilities of Arbutus simplify and support your path to analytics at every stage.

@@ -23,7 +23,7 @@ const EnInvoiceComponent = () => {
         className="mb-12"
       >
         <h3 className="text-3xl font-semibold text-center text-[#366A00] mb-2">Regulatory Invoicing Essentials</h3>
-        <p className="text-gray-700 text-center mb-10 max-w-3xl mx-auto">
+        <p className="text-gray-700 mb-10">
           Rapidly evolving electronic invoicing requirements pose constant challenges to the enterprises and other businesses, in comprehensively addressing compliance automation.
         </p>
 
@@ -175,7 +175,7 @@ const EnInvoiceComponent = () => {
           QR Code Requirements
         </motion.h3>
         <motion.p 
-          className="text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+          className="text-gray-700 mb-8 "
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
