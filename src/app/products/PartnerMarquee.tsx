@@ -4,30 +4,29 @@ import React from 'react';
 import Image from 'next/image';
 
 const clientsRow1 = [
-  { name: 'Premium', logo: '/images/products/tru-oi/logo/1.png' },
-  { name: 'Burger', logo: '/images/products/tru-oi/logo/2.png' },
-  { name: 'JSC', logo: '/images/products/tru-oi/logo/3.png' },
-  { name: 'CoxHealth', logo: '/images/products/tru-oi/logo/4.png' },
-  { name: 'NASA', logo: '/images/products/tru-oi/logo/5.png' },
-  { name: 'Senior Helper', logo: '/images/products/tru-oi/logo/6.png' },
-  { name: 'Lockheed Martin', logo: '/images/products/tru-oi/logo/7.png' },
-  { name: 'Splash', logo: '/images/products/tru-oi/logo/8.png' },
-  { name: 'Signal88', logo: '/images/products/tru-oi/logo/9.png' },
-  { name: 'Honest-1', logo: '/images/products/tru-oi/logo/10.png' },
-  { name: 'Right at Home', logo: '/images/products/tru-oi/logo/11.png' },
-  { name: 'Sonic', logo: '/images/products/tru-oi/logo/12.png' },
+  { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
+  { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
+  { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+  { name: 'CoxHealth', logo: '/images/products/tru-oi/logo/Asset-5.png' },
+  { name: 'NASA', logo: '/images/products/tru-oi/logo/Asset-6.png' },
+  { name: 'Senior Helper', logo: '/images/products/tru-oi/logo/Asset-7.png' },
+  { name: 'Lockheed Martin', logo: '/images/products/tru-oi/logo/Asset-8.png' },
+  { name: 'Splash', logo: '/images/products/tru-oi/logo/Asset-9.png' },
+  { name: 'Signal88', logo: '/images/products/tru-oi/logo/Asset-10.png' },
+  { name: 'Honest-1', logo: '/images/products/tru-oi/logo/Asset-11.png' },
+  { name: 'Right at Home', logo: '/images/products/tru-oi/logo/Asset-12.png' },
+  { name: 'Sonic', logo: '/images/products/tru-oi/logo/Asset-13.png' },
 ];
 
 const clientsRow2 = [
-  { name: 'Sysco', logo: '/images/products/tru-oi/logo/13.png' },
-  { name: 'Honeywell', logo: '/images/products/tru-oi/logo/14.png' },
-  { name: 'Trijicon', logo: '/images/products/tru-oi/logo/15.png' },
-  { name: 'MAG', logo: '/images/products/tru-oi/logo/17.png' },
-  { name: 'Pacmore', logo: '/images/products/tru-oi/logo/18.png' },
-  { name: 'Arizona', logo: '/images/products/tru-oi/logo/19.png' },
-  { name: 'Pioneer', logo: '/images/products/tru-oi/logo/20.png' },
-  { name: 'DWIHN', logo: '/images/products/tru-oi/logo/21.png' },
-  { name: 'Cornell', logo: '/images/products/tru-oi/logo/24.png' },
+  { name: 'Honeywell', logo: '/images/products/tru-oi/logo/Asset-15.png' },
+  { name: 'Trijicon', logo: '/images/products/tru-oi/logo/Asset-16.png' },
+  { name: 'MAG', logo: '/images/products/tru-oi/logo/Asset-17.png' },
+  { name: 'Pacmore', logo: '/images/products/tru-oi/logo/Asset-18.png' },
+  { name: 'Pioneer', logo: '/images/products/tru-oi/logo/Asset-23.png' },
+  { name: 'DWIHN', logo: '/images/products/tru-oi/logo/Asset-21.png' },
+  { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-22.png' },
+  { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-25.png' },
 ];
 
 const ClientsMarquee = () => {
@@ -40,8 +39,8 @@ const ClientsMarquee = () => {
               {[...Array(2)].map((_, dupIndex) => (
                 <div key={dupIndex} className="marquee-content">
                   {rowClients.map((client, index) => (
-                    <div key={index} className="client-logo mx-0 flex items-center justify-center opacity-90">
-                      <div className="relative w-[180px] h-[180px]">
+                    <div key={index} className="client-logo mx-4 flex items-center justify-center opacity-90 mb-2">
+                      <div className="relative w-[140px] h-[140px]">
                         <Image
                           src={client.logo}
                           alt={client.name}

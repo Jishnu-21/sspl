@@ -217,7 +217,7 @@ const TruOIComponent = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="PY-2 bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+        <section className=" bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
           <div className="max-w-[95%] mx-auto">
             <motion.div 
               className="text-center mb-6 sm:mb-10"
