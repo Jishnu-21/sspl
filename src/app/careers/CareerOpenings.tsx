@@ -19,6 +19,7 @@ interface FormData {
   phone: string;
   position: string;
   message: string;
+  experience?: string;
 }
 
 // Utility to slugify job titles for URLs
@@ -39,7 +40,8 @@ const CareerOpenings = () => {
     email: '',
     phone: '',
     position: '',
-    message: ''
+    message: '',
+    experience: ''
   });
   const [resume, setResume] = useState<File | null>(null);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -61,7 +63,7 @@ const CareerOpenings = () => {
     fetchJobs();
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setForm(prev => ({
       ...prev,
@@ -85,6 +87,7 @@ const CareerOpenings = () => {
     formData.append('phone', form.phone);
     formData.append('position', form.position);
     formData.append('message', form.message);
+    formData.append('experience', form.experience || '');
     if (resume) {
       formData.append('resume', resume);
     }
@@ -100,7 +103,7 @@ const CareerOpenings = () => {
         setSubmitStatus('success');
         setSubmitMsg('Application submitted successfully!');
         // Reset form
-        setForm({ name: '', email: '', phone: '', position: '', message: '' });
+        setForm({ name: '', email: '', phone: '', position: '', message: '', experience: '' });
         setResume(null);
         setTimeout(() => {
           setShowPopup(false);
@@ -202,7 +205,7 @@ const CareerOpenings = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
        <div className="flex items-center justify-start gap-2 flex-wrap">
-  <p className="text-gray-600 mb-0">Can't find the job you're looking for?</p>
+  <p className="text-gray-600 mb-0">Work with us</p>
   <button
     onClick={() => setShowPopup(true)}
     className="text-[#366A00] cursor-pointer font-semibold hover:underline"
@@ -265,13 +268,30 @@ const CareerOpenings = () => {
                 placeholder="Contact No." 
                 className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900" 
               />
-              <input 
-                type="text" 
-                name="position" 
-                value={form.position} 
-                onChange={handleInputChange} 
-                placeholder="Position" 
-                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900" 
+              <label className="block">
+                <span className="text-gray-700 text-sm">Domain</span>
+                <select
+                  name="position"
+                  value={form.position}
+                  onChange={handleInputChange}
+                  required
+                  className="mt-1 block w-full p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900"
+                >
+                  <option value="" disabled>Select Domain</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                  <option value="Information Technology & Computer Science">Information Technology & Computer Science</option>
+                  <option value="Sales & Marketing">Sales & Marketing</option>
+                </select>
+              </label>
+              <input
+                type="number"
+                name="experience"
+                value={form.experience}
+                onChange={handleInputChange}
+                placeholder="Experience (In years)"
+                min="0"
+                className="p-3 rounded border border-gray-300 focus:border-[#366A00] focus:ring-1 focus:ring-[#366A00] bg-white text-gray-900"
+                required
               />
               <textarea 
                 name="message" 
