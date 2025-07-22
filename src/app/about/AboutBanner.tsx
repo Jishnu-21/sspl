@@ -9,33 +9,7 @@ const STOCK_IMAGE = "/images/about/about.webp";
 const BANNER_KEY = "about";
 
 const AboutBanner = () => {
-  const [dynamicImage, setDynamicImage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch(`/api/banners/${BANNER_KEY}`)
-      .then(async (res) => {
-        if (!res.ok) throw new Error('No banner found');
-        const data = await res.json();
-        if (data && data.mediaUrl) {
-          setDynamicImage(data.mediaUrl);
-        } else {
-          setDynamicImage(null);
-        }
-      })
-      .catch(() => setDynamicImage(null))
-      .finally(() => setLoading(false));
-  }, []);
-
-  const bgImage = dynamicImage || STOCK_IMAGE;
-
-  if (loading) {
-    return (
-      <section className="relative pt-20 md:pt-0 mt-[110px] min-h-[40vh] md:min-h-[calc(100vh-110px)] flex items-center justify-center overflow-hidden bg-white">
-      </section>
-    );
-  }
 
   return (
     <section className="min-h-screen flex flex-col">
