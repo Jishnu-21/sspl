@@ -9,7 +9,6 @@ interface ClientMarqueeProps {
 
 const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
   const clients = [
-    { name: 'GPIC', logo: '/images/logos/asset-3.svg' },
     { name: 'Reliance Life Insurance', logo: '/images/logos/Asset-4.svg' },
     { name: 'Indian Police', logo: '/images/logos/Asset-5.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-6.svg' },
