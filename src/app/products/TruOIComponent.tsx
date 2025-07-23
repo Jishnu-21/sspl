@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import PartnerMarquee from './PartnerMarquee';
+import { MdShowChart, MdInventory, MdPeople, MdTrendingUp, MdSentimentSatisfiedAlt, MdAccessTime, MdStorage, MdCodeOff } from 'react-icons/md';
 
 const TruOIComponent = () => {
   const firstRowRef = useRef<HTMLDivElement>(null);
@@ -10,23 +11,47 @@ const TruOIComponent = () => {
   
   // Feature items for the marquee
   const firstRowItems = [
-    "Increase Sales & Profits", 
-    "ReduceInventory Costs", 
-    "Reduce Labor Costs", 
-    "Increase Talent Performance", 
+    {
+      label: "Increase Sales & Profits",
+      icon: <MdShowChart size={32} />,
+    },
+    {
+      label: "Reduce Inventory Costs",
+      icon: <MdInventory size={32} />,
+    },
+    {
+      label: "Reduce Labor Costs",
+      icon: <MdPeople size={32} />,
+    },
+    {
+      label: "Increase Talent Performance",
+      icon: <MdTrendingUp size={32} />,
+    },
   ];
-  
+
   const secondRowItems = [
-   "Increase Customer Satisfaction",
-    "Reduce Reporting Time",
-    "No Need for Data Warehouse",
-    "No Programming Experience Required",
+    {
+      label: "Increase Customer Satisfaction",
+      icon: <MdSentimentSatisfiedAlt size={32} />,
+    },
+    {
+      label: "Reduce Reporting Time",
+      icon: <MdAccessTime size={32} />,
+    },
+    {
+      label: "No Need for Data Warehouse",
+      icon: <MdStorage size={32} />,
+    },
+    {
+      label: "No Programming Experience Required",
+      icon: <MdCodeOff size={32} />,
+    },
   ];
 
   return (
     <div>
       <motion.div 
-        className="mb-4 sm:mb-8"
+        className="mb-"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -41,6 +66,9 @@ const TruOIComponent = () => {
         >
           truOI
         </motion.h2>
+        <h3 className="text-lg text-center font-medium text-[#1B3D69] mb-2">
+        AI-Powered Operations Management Solutions for Multi-Unit Businesses.
+        </h3>
         <div className="h-[1px] bg-gray-300 text-justify w-full mb-4"></div>
         <motion.p 
           className="text-gray-800 mb-4 sm:mb-6"
@@ -49,80 +77,30 @@ const TruOIComponent = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          truOI delivers true business intelligence by transforming complex data into actionable insights. Our platform offers real-time data processing and analysis, intuitive visualization tools for better decision making, and customizable alerts and notifications for critical metrics.
-        </motion.p>
-      </motion.div>
-
-      {/* AI-Powered Operations Section */}
-      <motion.div 
-        className="mb-6 sm:mb-10"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
-      >
-        <motion.h3 
-          className="text-2xl md:text-3xl lg:text-3xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6"
+TruOI is an intelligent AI platform purpose-built for multi-unit businesses — including Franchisors, Franchisees, Restaurants, and Retail Chains.
+</motion.p>
+        <motion.p 
+          className="text-gray-800 mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          AI-Powered Operations
-        </motion.h3>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-center">
-          {/* Image Section */}
-          <motion.div 
-            className="w-full h-full"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Image 
-              src="/images/products/tru-oi.png" 
-              alt="AI-Powered Analytics Dashboard" 
-              width={600}
-              height={350}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-
-          {/* Content Section */}
-          <motion.div 
-            className="flex flex-col justify-center h-full"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.p 
-              className="text-gray-800 font-medium text-justify mb-4 sm:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              You dream big. You inspire. You lead with a vision. You now have the power of AI to bring a transformational change at unit level Operations.
-            </motion.p>
-
-            <motion.div 
-              className="space-y-2 sm:space-y-4 text-justify text-gray-700"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <p>
-                TruOI centralizes and automates your entire operations. Voice-activated AI Command instantly retrieves answers to any operational question for each location and keeps each location manager informed in real-time.
-              </p>
-              <p>
-                AI-powered platform for Franchisors, multi-unit Franchisees, Chains, and restaurants. Seamlessly integrate all your locations with intelligent operations, analytics, and AI-powered staff. Optimize your business through automation and drastically improve operations using AI.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
+Designed to streamline and elevate operations, TruOI delivers smart, AI-driven tools to optimize performance across all locations. From simplifying site audits and monitoring employee training to managing digital checklists, incident reports, and customized alerts — everything you need is at your fingertips.
+</motion.p>
+        <motion.p 
+          className="text-gray-800 mb-4 sm:mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+With all units connected in a single, unified system, site managers gain actionable insights, while leadership teams maintain complete visibility and control across the network.
+</motion.p>
       </motion.div>
+
+      {/* AI-Powered Operations Section */}
+    
 
       {/* How TruOI Can Help You - Card Grid Section */}
       <motion.div 
@@ -144,35 +122,53 @@ const TruOIComponent = () => {
               <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366A00] mb-2">Here's How TruOI Can Help You</h3>
               <p className="text-gray-600 text-md">Turn Your Data Into Actionable Business Decisions</p>
             </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-              {firstRowItems.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  className="rounded-xl bg-[#1b3d69] hover:bg-[#366a00] transition-colors duration-300 shadow-md p-4 flex items-center justify-center h-16 text-center cursor-pointer group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <span className="text-white text-base font-semibold group-hover:text-white transition-colors duration-300">{item}</span>
-                </motion.div>
-              ))}
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="flex flex-row items-center justify-center gap-0 w-full">
+                {firstRowItems.map((item, idx) => (
+                  <React.Fragment key={idx}>
+                    <motion.div
+                      className="rounded-xl bg-[#1b3d69] hover:bg-[#366a00] transition-colors duration-300 shadow-md p-4 flex flex-col items-center justify-center h-36 w-56 text-center cursor-pointer group transition-transform hover:scale-105"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      whileHover={{ scale: 1.07 }}
+                    >
+                      <span className="mb-3 text-white">{item.icon}</span>
+                      <span className="text-white text-base font-semibold">{item.label}</span>
+                    </motion.div>
+                    {idx !== firstRowItems.length - 1 && (
+                      <div className="flex-1 flex items-center justify-center">
+                        <div className="border-t border-dotted border-blue-200 w-12 md:w-16 lg:w-20 xl:w-24"></div>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {secondRowItems.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  className="rounded-xl bg-[#1b3d69] hover:bg-[#366a00] transition-colors duration-300 shadow-md p-4 flex items-center justify-center h-16 text-center cursor-pointer group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <span className="text-white text-base font-semibold group-hover:text-white transition-colors duration-300">{item}</span>
-                </motion.div>
-              ))}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row items-center justify-center gap-0 w-full">
+                {secondRowItems.map((item, idx) => (
+                  <React.Fragment key={idx}>
+                    <motion.div
+                      className="rounded-xl bg-[#1b3d69] hover:bg-[#366a00] transition-colors duration-300 shadow-md p-4 flex flex-col items-center justify-center h-36 w-56 text-center cursor-pointer group transition-transform hover:scale-105"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      whileHover={{ scale: 1.07 }}
+                    >
+                      <span className="mb-3 text-white">{item.icon}</span>
+                      <span className="text-white text-base font-semibold">{item.label}</span>
+                    </motion.div>
+                    {idx !== secondRowItems.length - 1 && (
+                      <div className="flex-1 flex items-center justify-center">
+                        <div className="border-t border-dotted border-blue-200 w-12 md:w-16 lg:w-20 xl:w-24"></div>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -195,7 +191,7 @@ const TruOIComponent = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#1B3D69] ">
+              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
                 TruOI is partnered with 3k+ fastest<br />
                 growing companies
               </h3>
@@ -447,6 +443,9 @@ const TruOIComponent = () => {
             </motion.div>
           </div>
         </section>
+        <h3 className="text-2xl text-center pt-14 md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
+        One Platform - One Sign-on
+              </h3>
       </motion.div>
       
       <style jsx>{`
