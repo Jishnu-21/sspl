@@ -43,36 +43,14 @@ const ArbutusAnalyticsSection = () => {
         <div className="">
           {/* Top heading */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="pb-4 mb-0"
           >
             <h2 className="text-3xl md:text-3xl text-center font-bold text-[#366A00] ">Why Arbutus for Analytics?</h2>
           </motion.div>
-
-          {/* Introductory paragraphs 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-800 text-lg justify-text"
-          >
-            We are a pivotal partner for analytics teams who see strong analytics as a key factor in their success.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-800 text-lg justify-text mb-8"
-          >
-            Arbutus has proven that we can make it easier and more cost effective to implement and use analytics within your team and audit processes.
-            The immense capabilities of Arbutus simplify and support your path to analytics at every stage.
-          </motion.p>
-          */}
 
           {/* "Your Need" Cards Grid */}
           {/* Mobile Carousel */}
@@ -81,10 +59,10 @@ const ArbutusAnalyticsSection = () => {
               {yourNeedCards.map((card, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-[#1B3D69] p-3 min-h-[180px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 snap-center flex-shrink-0 w-64 transform transition-transform hover:scale-105`}
                 >
                   <span className="mb-2 flex items-center justify-center w-12 h-12 rounded-full bg-[#23486b]">{React.createElement(card.icon, { className: "text-3xl text-white" })}</span>
@@ -99,10 +77,10 @@ const ArbutusAnalyticsSection = () => {
             {yourNeedCards.map((card, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 transform transition-transform hover:scale-105`}
               >
                 <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">{React.createElement(card.icon, { className: "text-4xl text-white" })}</span>
@@ -112,15 +90,27 @@ const ArbutusAnalyticsSection = () => {
             ))}
           </div>
           {/* Custom analytics paragraph */}
-          <div className="w-full flex justify-center mt-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="w-full flex justify-center mt-8"
+          >
             <p className=" text-base md:text-lg text-gray-800">
               Develop complex, custom analytics using scripts, workflows or menu-driven functionality. Integrate with executables in R, Python, and DOS, enabling the development of efficient, unified analytics.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* Arbutus Powering Data Analytics Section */}
-      <section className="w-full py-6">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="w-full py-6"
+      >
         <div className="mx-auto flex flex-col items-center">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-[#366A00] mb-4">
             Arbutus is Powering data analytics for over 1,000 growth-focused firms
@@ -130,7 +120,7 @@ const ArbutusAnalyticsSection = () => {
             Discover with us  “Why top organizations across the globe trust Arbutus technology to drive their Audit, Fraud Detection, Risk Management, Compliance, and IT initiatives?”.
           </p>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
