@@ -5,11 +5,35 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/navigation';
+
+const testimonials = [
+  {
+    id: 1,
+    avatar: '/images/testimonials/trainees/joan-jose.jpg',
+    text: 'I would like to express my sincere gratitude to Mr. Nishith Seth, Director of SSPL, for giving me the opportunity to take up this internship and become a part of SSPL. I owe much to my mentor, Mr. Siddhant Kumar, Executive Data Scientist at SSPL, whose unwavering guidance, support, and encouragement have been invaluable throughout this internship. Your expertise and insights have enriched my learning experience.Throughout this Data Science Internship, I worked with Microsoft Power BI, a powerful business intelligence tool. From cleaning and transforming data to creating visually compelling reports and dashboards, it helped me to hone my analytical and problem-solving skills. The skills and insights gained during this internship will be invaluable assets for my future endeavors.',
+    name: 'Ms. Joan Jose',
+    course: ''
+  },
+  {
+    id: 9,
+    avatar: '/images/testimonials/trainees/loveytyagi.jpg',
+    text: 'I thoroughly enjoyed my sales and marketing internship this summer and now have very valuable experience under my belt. I know this will help when looking for jobs and needing references. We all know that practical experience is the best, and internships give students that hands-on experience they need. I feel that quality internships are essential to develop key skills that you cant get in a classroom. Skills such as multitasking, communicating, learning to deal with diversity, and dealing with deadlines are different when you are working for someone else, not yourself like you do in college. I learned that customer dealing is tough. I have learned that stressing over little things will not get me anywhere. I have learned to work well as a team. I have learned to ask lots of probing questions. Thank you so much Sonal mam.',
+    name: 'Ms. Lovey Tyagi',
+  },
+  {
+    id: 10,
+    avatar: '/images/testimonials/trainees/siddhant-kumar.jpg',
+    text: 'I have worked with SSPL for 6 months as an intern. I was part of the Data Analytics team and worked under the guidance of Mr. Nishith Seth. He helped me in understanding the real world problems so that i can learn how to work in the professional world. SSPL gave me a chance to work on the real time project rather than a dummy one, from which i was able to grasp the concepts of Data Analysis and implemented them in a practical way. Each day brought different challenges and I had the opportunity to make decisions on my own and learn from both my successes and failures. The internship was a worthwhile experience and I feel that it has prepared me well for my professional career.I thank SSPL and Mr. Nishith Seth for this wonderful opportunity that has helped me learn and grow both personally and professionally',
+    name: 'Mr. Siddhant Kumar',
+  },
+];
 
 const CareerGallery = () => {
   React.useEffect(() => {
     AOS.init({ once: true, duration: 800 });
   }, []);
+  const router = useRouter();
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -51,94 +75,42 @@ const CareerGallery = () => {
             </p>
           </motion.div>
 
-          {/* Right Gallery Grid with Title Above */}
+          {/* Right: Testimonials Section */}
           <div className="flex flex-col items-center w-full">
             <h3 className="text-[#366A00] uppercase font-medium mb-3 text-center text-lg tracking-widest relative">
-              OUR GALLERY
+              Testimonials
             </h3>
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full"
+            <motion.div
+              className="flex flex-col items-center gap-6 w-full"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
             >
-              {/* Row 1 */}
-              <motion.div className="col-span-2 row-span-1" variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-                    alt="Professional Team Meeting" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" 
-                    alt="Business Professional" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Row 2 */}
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
-                    alt="Female Professional" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
-                    alt="Male Professional" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&w=800&q=80" 
-                    alt="Diverse Team Collaboration" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Row 3 */}
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="500">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" 
-                    alt="Career Growth Discussion" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <div className="relative h-48 md:h-56 w-full rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="600">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
-                    alt="Professional Training Session" 
-                    fill 
-                    className="object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                  />
-                </div>
-              </motion.div>
+              {testimonials.map((t, i) => (
+                <motion.div
+                  key={t.id}
+                  className="bg-[#1b3d69] hover:bg-[#366A00] transition-colors duration-300 rounded-xl shadow-md p-5 flex flex-col items-center text-center border border-[#e5e7eb] w-full max-w-xl cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                  variants={fadeInUp}
+                  data-aos="fade-up"
+                  data-aos-delay={i * 120}
+                >
+                  <div className="w-16 h-16 mb-3 rounded-full overflow-hidden border-2 border-[#13bd69]">
+                    <Image src={t.avatar} alt={t.name} width={64} height={64} className="object-cover w-full h-full" />
+                  </div>
+                  <p className="text-white text-sm mb-2 line-clamp-4">{t.text}</p>
+                  <span className="font-semibold text-white mt-2">{t.name}</span>
+                </motion.div>
+              ))}
             </motion.div>
+            <div className="w-full flex justify-center mt-6">
+              <button
+                className="px-6 py-2 rounded-full bg-white hover:bg-[#366A00] text-[#366A00] border border-[#366A00] hover:text-white cursor-pointer font-semibold shadow transition-colors duration-300"
+                onClick={() => router.push('/testimonials')}
+              >
+                Read More
+              </button>
+            </div>
           </div>
         </div>
       </div>
