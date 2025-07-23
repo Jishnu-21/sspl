@@ -356,9 +356,9 @@ With all units connected in a single, unified system, site managers gain actiona
                 ].map((item, index) => (
                   <div 
                     key={`integration-1-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
+                    className="bg-[#1B3D69] h-10 rounded flex items-center text-white justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#366A00] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium transition-colors  hover:text-white">{item}</span>
+                    <span className="text-white font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
@@ -376,9 +376,9 @@ With all units connected in a single, unified system, site managers gain actiona
                 ].map((item, index) => (
                   <div 
                     key={`integration-1-dup-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
+                    className="bg-[#1B3D69] h-10 rounded flex items-center text-white justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#366A00] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium transition-colors  hover:text-white">{item}</span>
+                    <span className="text-white font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -414,9 +414,9 @@ With all units connected in a single, unified system, site managers gain actiona
                 ].map((item, index) => (
                   <div 
                     key={`integration-2-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
+                    className="bg-[#1B3D69] h-10 rounded flex items-center text-white justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#366A00] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium transition-colors duration-300 hover:text-white">{item}</span>
+                    <span className="text-white font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
@@ -434,16 +434,16 @@ With all units connected in a single, unified system, site managers gain actiona
                 ].map((item, index) => (
                   <div 
                     key={`integration-2-dup-${index}`} 
-                    className="bg-white h-10 rounded flex items-center justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#1B3D69] hover:text-white cursor-pointer"
+                    className="bg-[#1B3D69] h-10 rounded flex items-center text-white justify-center px-6 whitespace-nowrap transition-colors duration-300 hover:bg-[#366A00] hover:text-white cursor-pointer"
                   >
-                    <span className="text-gray-700 font-medium transition-colors duration-300 hover:text-white">{item}</span>
+                    <span className="text-white font-medium transition-colors  hover:text-white">{item}</span>
                   </div>
                 ))}
               </div>
             </motion.div>
           </div>
         </section>
-        <h3 className="text-2xl text-center pt-14 md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
+        <h3 className="text-2xl text-center pt-6 md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
         One Platform - One Sign-on
               </h3>
       </motion.div>
