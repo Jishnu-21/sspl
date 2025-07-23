@@ -77,9 +77,7 @@ const CareerGallery = () => {
 
           {/* Right: Testimonials Section */}
           <div className="flex flex-col items-center w-full h-full justify-center">
-            <h3 className="text-[#366A00] uppercase font-medium mb-3 text-center text-lg tracking-widest relative">
-              Testimonials
-            </h3>
+         
             <motion.div
               className="flex flex-col items-center gap-6 w-full"
               initial="hidden"

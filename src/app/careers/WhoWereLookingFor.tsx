@@ -6,6 +6,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaChartBar, FaDatabase, FaUserShield, FaCode, FaHeadset, FaBullhorn } from "react-icons/fa";
 
+
+interface FormData {
+    name: string;
+    email: string;
+    phone: string;
+    position: string;
+    message: string;
+    experience?: string;
+    portfolios?: string;
+    projects?: string;
+  }
+  
 const roles = [
   {
     title: "Data Analysts & Scientists",
@@ -38,6 +50,8 @@ const WhoWereLookingFor = () => {
     AOS.init({ once: true, duration: 800 });
   }, []);
 
+
+
   return (
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
@@ -68,8 +82,15 @@ const WhoWereLookingFor = () => {
             </motion.div>
           ))}
         </div>
-        <p className="mt-8 text-gray-700 text-base text-left ">If you have a curious mind, a strong analytical approach, and a desire to make a difference through technology, SSPL is the place for you.</p>
+        <p className="mt-8 text-gray-700 text-base text-left">
+  If you have a curious mind, a strong analytical approach, and a desire to make a difference through technology,<br />
+  <span className="font-bold">SSPL is the place for you.</span>
+</p>
+<p className="text-gray-600 mb-0">Ready to grow with us? <span className="text-[#366A00] cursor-pointer font-semibold hover:underline">Drop your CV.</span></p>
+ 
+
       </div>
+      
     </section>
   );
 };

@@ -211,13 +211,7 @@ const CareerOpenings = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
        <div className="flex items-center justify-start gap-2 flex-wrap">
-  <p className="text-gray-600 mb-0">Ready to grow with us?</p>
-  <button
-    onClick={() => setShowPopup(true)}
-    className="text-[#366A00] cursor-pointer font-semibold hover:underline"
-  >
-    Drop your CV.
-  </button>
+ 
 </div>
 
 
