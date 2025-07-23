@@ -1,8 +1,19 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaPuzzlePiece, FaShieldAlt, FaClipboardCheck, FaSearch } from 'react-icons/fa';
+import LogoMarquee from './LogoMarquee';
 
 const BarnOwlComponent = () => {
+  const logos = [
+    { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
+    { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+  ];
   return (
     <div>
       <motion.div 
@@ -19,6 +30,9 @@ const BarnOwlComponent = () => {
         >
           BARNOWL
         </motion.h2>
+        <h3 className="text-lg text-center font-medium text-[#1B3D69] mb-2">
+        GOVERNANCE, RISK, COMPLIANCE AND AUDIT SOFTWARE
+        </h3>
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
         <motion.p 
           className="text-gray-800 mb-6"
@@ -26,37 +40,8 @@ const BarnOwlComponent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          BarnOwl is a fully integrated governance, risk management, compliance and audit software solution which can be implemented in a modular fashion:
-        </motion.p>
-
-        <motion.ul 
-          className="list-disc pl-8 space-y-3 text-gray-700 mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <motion.li 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            BarnOwl Governance provides a well structured and systematic approach to risk management giving you an up to date view of your risk universe
-          </motion.li>
-          <motion.li 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            BarnOwl Compliance facilitates and simplifies regulatory compliance allowing you to identify, monitor and report on compliance to acts, regulations and provisions at every level of the organisation
-          </motion.li>
-          <motion.li 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            BarnOwl Audit supports the full audit life-cycle enabling you to streamline and standardise your internal audit processes
-          </motion.li>
-        </motion.ul>
+BarnOwl is a fully integrated governance, risk, compliance, and audit software solution. BarnOwl provides a holistic and system-driven approach to GRC and assurance through its comprehensive GRC framework.
+</motion.p>
       </motion.div>
 
       <motion.div 
@@ -67,89 +52,107 @@ const BarnOwlComponent = () => {
         transition={{ duration: 0.6 }}
       >
         <motion.h3 
-          className="text-3xl font-semibold text-[#366A00] mb-4"
+          className="text-2xl text-center font-semibold text-[#366A00] mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          BarnOwl Software:
-        </motion.h3>
-        <motion.ul 
-          className="list-disc pl-8 space-y-2 text-gray-700 mb-8"
-          initial={{ opacity: 0, y: 30 }}
+          POWERFUL ALONE. BETTER TOGETHER
+        </motion.h3>       
+      </motion.div>
+
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+        {/* GRC Card */}
+        <motion.div
+          className="bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 cursor-pointer transform transition-transform hover:scale-105"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.07 }}
+        >
+          <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">
+            <FaPuzzlePiece className="text-4xl text-white" />
+          </span>
+          <h4 className="text-xl font-bold mb-3 mt-1 text-white">GRC</h4>
+          <p className="font-medium text-sm leading-relaxed">
+            BarnOwl software provides an integrated, holistic and system-driven approach to GRC and assurance. BarnOwl streamlines your processes on a centralised platform, standardises risk and control taxonomies and offers the flexibility and scalability required for a changing business environment. For every industry, no matter the size of the business, BarnOwl is the ultimate integrated GRC software solution.
+          </p>
+        </motion.div>
+        {/* Risk Management Card */}
+        <motion.div
+          className="bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 cursor-pointer transform transition-transform hover:scale-105"
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          whileHover={{ scale: 1.07 }}
         >
-          {[
-            "Enables effective strategic and operational planning",
-            "Facilitates good corporate governance and regulatory compliance",
-            "Drives combined assurance and integrated reporting",
-            "Embeds accountability and ownership for risk management",
-            "Provides an integrated strategic early warning system"
-          ].map((item, index) => (
-            <motion.li 
-              key={index}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
-            >
-              {item}
-            </motion.li>
-          ))}
-        </motion.ul>
-      </motion.div>
+          <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">
+            <FaShieldAlt className="text-4xl text-white" />
+          </span>
+          <h4 className="text-xl font-bold mb-3 mt-1 text-white">RISK MANAGEMENT</h4>
+          <p className="font-medium text-sm leading-relaxed">
+            BarnOwl Risk Management software helps you achieve your strategic objectives and enables a culture of risk planning and control with accountability and ownership throughout your organisation. Continual monitoring of your risk universe gives you comfort and confidence in managing your business.
+          </p>
+        </motion.div>
+        {/* Compliance Card */}
+        <motion.div
+          className="bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 cursor-pointer transform transition-transform hover:scale-105"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ scale: 1.07 }}
+        >
+          <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">
+            <FaClipboardCheck className="text-4xl text-white" />
+          </span>
+          <h4 className="text-xl font-bold mb-3 mt-1 text-white">COMPLIANCE</h4>
+          <p className="font-medium text-sm leading-relaxed">
+            BarnOwl Compliance software allows you to import various acts, legislation, policies and procedures, link these to associated risks and monitor compliance and policy management. This facilitates regulatory compliance and director protection.
+          </p>
+        </motion.div>
+        {/* Audit Card */}
+        <motion.div
+          className="bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 cursor-pointer transform transition-transform hover:scale-105"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          whileHover={{ scale: 1.07 }}
+        >
+          <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">
+            <FaSearch className="text-4xl text-white" />
+          </span>
+          <h4 className="text-xl font-bold mb-3 mt-1 text-white">AUDIT</h4>
+          <p className="font-medium text-sm leading-relaxed">
+            BarnOwl Audit software supports any type of audit methodology including risk and control based auditing in support of best practice standards, ensuring that the key risks in your organisation are audited. BarnOwl facilitates all phases of auditing from planning through to reporting with advanced online and offline execution.
+          </p>
+        </motion.div>
+      </div>
 
       <motion.div 
-        className=""
+        className="pt-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
         <motion.h3 
-          className="text-3xl font-semibold text-[#366A00] mb-4"
+          className="text-2xl text-center font-semibold text-[#366A00] mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          Why BarnOwl:
-        </motion.h3>
-        <motion.ul 
-          className="list-disc pl-8 space-y-2 text-gray-700"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          {[
-            "Fully integrated risk, compliance and audit software that supports best practice frameworks such as KING IV, COSO, ISO31000, National Treasury Framework, GACP, IPPF",
-            "Established GRC solution with extensive functionality and 20 year track record",
-            "User friendly with a Windows desktop and device independent web app",
-            "Configurable and parameter driven including flexible rating models, audit programs, and user defined fields",
-            "Supports a common risk and audit taxonomy having libraries for transversal risks, processes, and audit programs",
-            "Extensive reporting capability with drill-down business intelligence dashboards, heat maps, bar charts, pie charts, line charts (trends), compliance survey analysis, and final audit reports in Word",
-            "Cost effective bundled modules",
-            "Tried and tested guaranteeing success",
-            "Leading edge technology which supports working online and offline",
-            "Developed and supported in South Africa",
-            "Total peace of mind"
-          ].map((item, index) => (
-            <motion.li 
-              key={index}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
-            >
-              {item}
-            </motion.li>
-          ))}
-        </motion.ul>
-      </motion.div>
+          BARNOWL PARTNERS
+        </motion.h3>     
+        <LogoMarquee clients={logos} />
+        </motion.div>
+    
     </div>
   );
 };
