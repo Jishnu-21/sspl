@@ -57,10 +57,10 @@ const CareerGallery = () => {
   return (
     <section className="py-4 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center min-h-[600px]">
           {/* Left Content */}
           <motion.div 
-            className="max-w-lg"
+            className="max-w-2xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -76,7 +76,7 @@ const CareerGallery = () => {
           </motion.div>
 
           {/* Right: Testimonials Section */}
-          <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center w-full h-full justify-center">
             <h3 className="text-[#366A00] uppercase font-medium mb-3 text-center text-lg tracking-widest relative">
               Testimonials
             </h3>
