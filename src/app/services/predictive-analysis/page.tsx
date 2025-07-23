@@ -5,7 +5,8 @@ import Footer from '@/app/Footer'
 import Header from '@/app/Header'
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import { FaUmbrella, FaBroadcastTower, FaWind } from 'react-icons/fa'
+import { FaUmbrella, FaBroadcastTower, FaWind, FaShieldAlt, FaNetworkWired, FaUniversity, FaShoppingCart, FaHeartbeat, FaIndustry, FaTruck, FaBolt, FaFutbol, FaLandmark } from 'react-icons/fa'
+import { GiWindmill } from 'react-icons/gi'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import DownloadBrochureButton from '@/app/components/DownloadBrochureButton'
@@ -106,72 +107,70 @@ const predictiveanalysis= () => {
 export default predictiveanalysis;
 
 const predictiveAreas = [
-  // Original custom cards
   {
     sector: 'Insurance',
     application: 'Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.',
-    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />, 
+    icon: <FaShieldAlt className="text-[#1B3D69] text-3xl" />, 
     color: '#1B3D69',
   },
   {
     sector: 'Telecom',
     application: 'Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.',
-    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />, 
+    icon: <FaNetworkWired className="text-[#1B3D69] text-3xl" />, 
     color: '#1B3D69',
   },
   {
     sector: 'Wind-Mill',
     application: 'Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.',
-    icon: <FaWind className="text-[#1B3D69] text-3xl" />, 
+    icon: <GiWindmill className="text-[#1B3D69] text-3xl" />, 
     color: '#1B3D69',
   },
-  // Table-based cards
   {
     sector: 'Banking & Financial Services',
     application: 'Predict loan defaults, detect fraudulent transactions, and forecast customer churn and investment behavior.',
-    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    icon: <FaUniversity className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Retail & E-commerce',
     application: 'Recommend products, forecast demand, manage inventory, and apply dynamic pricing based on customer behavior.',
-    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    icon: <FaShoppingCart className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Healthcare',
     application: 'Forecast disease risk, hospital readmissions, treatment outcomes, and optimize resource allocation.',
-    icon: <FaWind className="text-[#1B3D69] text-3xl" />,
+    icon: <FaHeartbeat className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Manufacturing',
     application: 'Predict machine failures, identify quality issues, and streamline production and supply chain operations.',
-    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    icon: <FaIndustry className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Transportation & Logistics',
     application: 'Forecast demand, optimize delivery routes, and improve arrival time estimates and fleet management.',
-    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    icon: <FaTruck className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Energy & Utilities',
     application: 'Predict energy demand, prevent outages, and analyze usage patterns for operational efficiency and customer insight.',
-    icon: <FaWind className="text-[#1B3D69] text-3xl" />,
+    icon: <FaBolt className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Sports & Entertainment',
     application: 'Forecast match outcomes, personalize fan experiences, and optimize ticket sales and event marketing.',
-    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    icon: <FaFutbol className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
   {
     sector: 'Government & Public Services',
     application: 'Predict crime trends, manage disaster responses, and detect tax fraud or benefit misuse.',
-    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    icon: <FaLandmark className="text-[#1B3D69] text-3xl" />,
     color: '#1B3D69',
   },
 ];
