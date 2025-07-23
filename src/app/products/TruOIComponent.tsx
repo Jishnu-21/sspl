@@ -320,7 +320,7 @@ With all units connected in a single, unified system, site managers gain actiona
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#1B3D69] mb-2">
+              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] mb-2">
                 Integrates All Corporate / Unit Software
               </h3>
               <p className="text-gray-600 text-sm">ANY DATA, ANY DEVICE, USING POWERFUL AI TECHNOLOGY</p>
