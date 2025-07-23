@@ -27,11 +27,11 @@ const PerkCard: React.FC<PerkCardProps> = ({ icon, title, delay }) => {
         data-aos="fade-up"
         data-aos-delay={Math.round(delay * 1000)}
         className="flex flex-col items-center justify-center w-full h-full"
-      >
-        <div className="mb-3 text-white">
-          {icon}
-        </div>
-        <p className="text-center text-sm md:text-base font-medium text-white">{title}</p>
+    >
+      <div className="mb-3 text-white">
+        {icon}
+      </div>
+      <p className="text-center text-sm md:text-base font-medium text-white">{title}</p>
       </div>
     </motion.div>
   );

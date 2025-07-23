@@ -9,7 +9,7 @@ const CareerBanner = () => {
       bannerKey="careers"
       backgroundImage="/images/careers/banner.jpg"
       title="Careers"
-      subtitle="Learn more about job & career opportunities at SSPL."
+      subtitle="Join Us in Shaping the Future of Data & Analytic."
      
     />
   );

@@ -144,7 +144,7 @@ const CareerOpenings = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#3b7c0b] mb-2">
-              Our all open positions ({openPositions.length.toString().padStart(2, '0')})
+              Explore Oppurtunities ({openPositions.length.toString().padStart(2, '0')})
             </h2>
           </motion.div>
           {loading ? (
@@ -211,7 +211,7 @@ const CareerOpenings = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
        <div className="flex items-center justify-start gap-2 flex-wrap">
-  <p className="text-gray-600 mb-0">Work with us</p>
+  <p className="text-gray-600 mb-0">Ready to grow with us?</p>
   <button
     onClick={() => setShowPopup(true)}
     className="text-[#366A00] cursor-pointer font-semibold hover:underline"

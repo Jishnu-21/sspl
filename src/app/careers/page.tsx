@@ -3,9 +3,10 @@ import Header from '../Header'
 import Footer from '../Footer'
 import CareerBanner from './CareerBanner'
 import CareerGallery from './CareerGallery'
-import CareerPerks from './CareerPerks'
-import CareerClients from './CareerClients'
+
 import CareerOpenings from './CareerOpenings'
+import WhyWorkWithUs from './WhyWorkWithUs'
+import WhoWereLookingFor from './WhoWereLookingFor'
 
 const Careers = () => {
   return (
@@ -14,6 +15,8 @@ const Careers = () => {
         <Header/>
         <CareerBanner/>
         <CareerGallery/>
+        <WhyWorkWithUs/>
+        <WhoWereLookingFor/>
         <CareerOpenings/>
         <Footer/>
       </main>

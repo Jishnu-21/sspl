@@ -44,7 +44,10 @@ const CareerGallery = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">We've been here for more than 35 years</h2>
             <p className="text-gray-600 text-justify mb-8">
-              At SSPL, we've built a collaborative and innovative workspace where talented professionals come together to solve complex data challenges. Our team has been delivering cutting-edge analytics solutions for nearly two decades, helping businesses across industries transform their data into actionable insights.
+            At SSPL, we believe that people are the driving force behind every great innovation. For over 35 years, we've nurtured a collaborative and forward-thinking environment where talented professionals come together to solve some of the most complex data challenges faced by modern businesses.
+            </p>
+            <p className="text-gray-600 text-justify mb-8">
+            As a pioneer in data analytics and automation, our team has been delivering cutting-edge solutions for nearly two decades. From streamlining audits to building custom analytics platforms, we empower organizations across industries to turn their data into real, actionable insights.
             </p>
           </motion.div>
 
