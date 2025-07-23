@@ -87,66 +87,12 @@ const predictiveanalysis= () => {
           </div>
         </section>
 
-        {/* Applied Areas Section */}
+        {/* Applied Areas Section - Carousel */}
         <section className="px-2 mt-8 sm:px-4 md:px-8 " data-aos="fade-up">
-        <div className="text-left mb-4">
-            <h2 className="text-2xl font-semibold text-[#366A00]  text-center">Some of the applied areas of the Predictive Analytics are:</h2>
+          <div className="text-left mb-4">
+            <h2 className="text-2xl font-semibold text-[#366A00] text-center">Applications of Predictive Analytics by Sector</h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 w-full pt-4 sm:pt-6 pb-2 sm:pb-4" >
-            {/* Insurance Card */}
-            <div
-              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
-              data-aos="zoom-in"
-              onClick={() => setModal('Insurance')}
-            >
-              <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                  <FaUmbrella className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Insurance</h3>
-              <p className="text-white text-center group-hover:text-white transition-colors duration-300">
-                Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.
-              </p>
-            </div>
-            
-            {/* Telecom Card */}
-            <div
-              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-              onClick={() => setModal('Telecom')}
-            >
-              <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                  <FaBroadcastTower className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Telecom</h3>
-              <p className="text-white group-hover:text-white text-center transition-colors duration-300">
-                Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.
-              </p>
-            </div>
-            
-            {/* Wind-Mill Card */}
-            <div
-              className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#366A00] group"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-              onClick={() => setModal('Wind-Mill')}
-            >
-              <div className="mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white">
-                  <FaWind className="text-[#1B3D69] text-3xl transition-colors duration-300 group-hover:text-[#366A00]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-medium text-white mb-2 group-hover:text-white transition-colors duration-300 text-center">Wind-Mill</h3>
-              <p className="text-white text-center justify-center  group-hover:text-white transition-colors duration-300">
-                Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.
-              </p>
-            </div>
-          </div>
+          <PredictiveAreasCarousel />
         </section>
         
         <ServiceInquiryModal open={!!modal} onClose={() => setModal(null)} title={modal || ''} />
@@ -158,3 +104,117 @@ const predictiveanalysis= () => {
 }
 
 export default predictiveanalysis;
+
+const predictiveAreas = [
+  // Original custom cards
+  {
+    sector: 'Insurance',
+    application: 'Predictive analytics for risk assessment, fraud detection, and personalized policy recommendations.',
+    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />, 
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Telecom',
+    application: 'Network optimization, customer churn prediction, and targeted service offerings based on usage patterns.',
+    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />, 
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Wind-Mill',
+    application: 'Energy output forecasting, maintenance scheduling, and efficiency optimization for renewable energy sources.',
+    icon: <FaWind className="text-[#1B3D69] text-3xl" />, 
+    color: '#1B3D69',
+  },
+  // Table-based cards
+  {
+    sector: 'Banking & Financial Services',
+    application: 'Predict loan defaults, detect fraudulent transactions, and forecast customer churn and investment behavior.',
+    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Retail & E-commerce',
+    application: 'Recommend products, forecast demand, manage inventory, and apply dynamic pricing based on customer behavior.',
+    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Healthcare',
+    application: 'Forecast disease risk, hospital readmissions, treatment outcomes, and optimize resource allocation.',
+    icon: <FaWind className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Manufacturing',
+    application: 'Predict machine failures, identify quality issues, and streamline production and supply chain operations.',
+    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Transportation & Logistics',
+    application: 'Forecast demand, optimize delivery routes, and improve arrival time estimates and fleet management.',
+    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Energy & Utilities',
+    application: 'Predict energy demand, prevent outages, and analyze usage patterns for operational efficiency and customer insight.',
+    icon: <FaWind className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Sports & Entertainment',
+    application: 'Forecast match outcomes, personalize fan experiences, and optimize ticket sales and event marketing.',
+    icon: <FaUmbrella className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+  {
+    sector: 'Government & Public Services',
+    application: 'Predict crime trends, manage disaster responses, and detect tax fraud or benefit misuse.',
+    icon: <FaBroadcastTower className="text-[#1B3D69] text-3xl" />,
+    color: '#1B3D69',
+  },
+];
+
+function PredictiveAreasCarousel() {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+
+  return (
+    <div className="w-full overflow-x-auto pb-6  pt-6 hide-scrollbar relative">
+      <div
+        ref={scrollRef}
+        className="flex gap-6 sm:gap-10 px-2 md:px-8 min-w-max cursor-grab active:cursor-grabbing"
+        style={{ scrollSnapType: 'x mandatory' }}
+      >
+        {predictiveAreas.map((item, idx) => (
+          <div
+            key={item.sector}
+            className="bg-[#1B3D69] p-4 sm:p-8 rounded-md shadow-md flex flex-col items-center justify-center min-w-[280px] max-w-[340px] w-[80vw] sm:w-[320px] md:w-[340px] transition-all duration-300 group cursor-pointer hover:bg-[#366A00] hover:scale-105"
+            style={{ scrollSnapAlign: 'start' }}
+          >
+            <div className="mb-4 sm:mb-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center">
+                {item.icon}
+              </div>
+            </div>
+            <h3 className="text-xl font-medium text-white mb-2 text-center">{item.sector}</h3>
+            <p className="text-white text-center">{item.application}</p>
+          </div>
+        ))}
+      </div>
+      <style jsx>{`
+        .group:hover {
+          background: #366A00 !important;
+          transform: scale(1.05);
+        }
+        @keyframes bounce-right {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(10px); }
+        }
+        .animate-bounce-right {
+          animation: bounce-right 1.2s infinite;
+        }
+      `}</style>
+    </div>
+  );
+}
