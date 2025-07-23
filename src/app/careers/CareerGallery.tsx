@@ -105,7 +105,7 @@ const CareerGallery = () => {
             </motion.div>
             <div className="w-full flex justify-center mt-6">
               <button
-                className="px-6 py-2 rounded-full bg-white hover:bg-[#366A00] text-[#366A00] border border-[#366A00] hover:text-white cursor-pointer font-semibold shadow transition-colors duration-300"
+                className="px-6 py-2 rounded-md bg-white hover:bg-[#366A00] text-[#366A00] border border-[#366A00] hover:text-white cursor-pointer font-semibold shadow transition-colors duration-300"
                 onClick={() => router.push('/testimonials')}
               >
                 Read More
