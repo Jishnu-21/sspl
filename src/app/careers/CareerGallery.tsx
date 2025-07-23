@@ -71,7 +71,7 @@ const CareerGallery = () => {
             At SSPL, we believe that people are the driving force behind every great innovation. For over 35 years, we've nurtured a collaborative and forward-thinking environment where talented professionals come together to solve some of the most complex data challenges faced by modern businesses.
             </p>
             <p className="text-gray-600 text-justify mb-8">
-            As a pioneer in data analytics and automation, our team has been delivering cutting-edge solutions for nearly two decades. From streamlining audits to building custom analytics platforms, we empower organizations across industries to turn their data into real, actionable insights.
+            As a pioneer in data analytics and automation, our team has been delivering cutting-edge solutions for nearly four decades. From streamlining audits to building custom analytics platforms, we empower organizations across industries to turn their data into real, actionable insights.
             </p>
           </motion.div>
 
