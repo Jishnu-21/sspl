@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaDatabase, FaSearch, FaCheckCircle, FaChartBar, FaComments, FaCogs } from 'react-icons/fa';
 
 const ArbutusAnalyticsSection = () => {
   // Sample case studies data
@@ -25,23 +26,21 @@ const ArbutusAnalyticsSection = () => {
     }
   ];
 
-  // "Your Need" cards data
+  // "Your Need" cards data (updated)
   const yourNeedCards = [
-    { text: "Better teamwork when it comes to analytics?" },
-    { text: "An alternative to ACL Desktop™?" },
-    { text: "Better backend analytics and data quality to feed Tableau™ or Qlik™?" },
-    { text: "Subject Matter Expertise in Audit Analytics?" },
-    { text: "Simpler, more usable alternative to ACL Analytics Exchange™?" },
-    { text: "Help for your team with skills and tools that go beyond Excel™?" },
-    { text: "Bringing you pertinent data for your perusal" },
-    { text: "Analytics that work & enhance Audit Management Technology" },
+    { icon: FaDatabase, text: "Access All Data", description: "Access your Data: Big, Small, Complex, Disparate. Systems: Financial, Operational, IT. Platforms: On Premise, Cloud, PC, Mainframe." },
+    { icon: FaSearch, text: "Explore", description: "Discover what data you have before you get started. Unlock new analytic opportunities based on what you find." },
+    { icon: FaCheckCircle, text: "Verify & Prep", description: "Ensure your data is accurate and complete. Consolidate, Normalize, Cleanse, Discover." },
+    { icon: FaChartBar, text: "Analyze", description: "Engineered for Analysis. Unlock the Power to ask any question of all your data and process at millions of records per second." },
+    { icon: FaComments, text: "Communicate & Remediate", description: "Systematically Manage Your Results. Share Your Findings across your organization within Arbutus or within your Data Visualization or other Applications." },
+    { icon: FaCogs, text: "Automate", description: "Automate Your Analytics. Scheduled, Centralized, Continuous. Focus your efforts where they're needed the most." },
   ];
 
  
   return (
     <div className="w-full">
-      <section className="py-8 pt-12 bg-white w-full">
-        <div className="px-4 sm:px-6 lg:px-8">
+      <section className=" bg-white w-full">
+        <div className="">
           {/* Top heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,10 +49,10 @@ const ArbutusAnalyticsSection = () => {
             transition={{ duration: 0.6 }}
             className="pb-4 mb-0"
           >
-            <h2 className="text-3xl md:text-3xl text-center font-bold text-[#366A00] mb-8">Why Arbutus for Analytics?</h2>
+            <h2 className="text-3xl md:text-3xl text-center font-bold text-[#366A00] ">Why Arbutus for Analytics?</h2>
           </motion.div>
 
-          {/* Introductory paragraphs */}
+          {/* Introductory paragraphs 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,6 +72,7 @@ const ArbutusAnalyticsSection = () => {
             Arbutus has proven that we can make it easier and more cost effective to implement and use analytics within your team and audit processes.
             The immense capabilities of Arbutus simplify and support your path to analytics at every stage.
           </motion.p>
+          */}
 
           {/* "Your Need" Cards Grid */}
           {/* Mobile Carousel */}
@@ -85,16 +85,17 @@ const ArbutusAnalyticsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`bg-[#1B3D69] p-3 min-h-[120px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 snap-center flex-shrink-0 w-56 transform transition-transform hover:scale-105`}
+                  className={`bg-[#1B3D69] p-3 min-h-[180px] rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 snap-center flex-shrink-0 w-64 transform transition-transform hover:scale-105`}
                 >
-                  <span className="bg-white text-gray-800 text-xs font-bold px-2 py-0.5 rounded-full mb-2">YOUR NEED :</span>
-                  <p className="font-medium text-xs leading-relaxed">{card.text}</p>
+                  <span className="mb-2 flex items-center justify-center w-12 h-12 rounded-full bg-[#23486b]">{React.createElement(card.icon, { className: "text-3xl text-white" })}</span>
+                  <h3 className="text-lg font-bold mb-2 mt-1 text-white">{card.text}</h3>
+                  <p className="font-medium text-xs leading-relaxed">{card.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
           {/* Grid for larger screens */}
-          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {yourNeedCards.map((card, index) => (
               <motion.div
                 key={index}
@@ -102,13 +103,32 @@ const ArbutusAnalyticsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[180px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 transform transition-transform hover:scale-105`}
+                className={`bg-[#1B3D69] p-6 rounded-lg shadow-md text-white text-center flex flex-col items-center justify-center min-h-[220px] hover:shadow-xl hover:bg-[#366A00] transition-all duration-300 transform transition-transform hover:scale-105`}
               >
-                <span className="bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded-full mb-4">YOUR NEED :</span>
-                <p className="font-medium text-sm leading-relaxed">{card.text}</p>
+                <span className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-[#23486b]">{React.createElement(card.icon, { className: "text-4xl text-white" })}</span>
+                <h3 className="text-xl font-bold mb-3 mt-1 text-white">{card.text}</h3>
+                <p className="font-medium text-sm leading-relaxed">{card.description}</p>
               </motion.div>
             ))}
           </div>
+          {/* Custom analytics paragraph */}
+          <div className="w-full flex justify-center mt-8">
+            <p className=" text-base md:text-lg text-gray-800">
+              Develop complex, custom analytics using scripts, workflows or menu-driven functionality. Integrate with executables in R, Python, and DOS, enabling the development of efficient, unified analytics.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Arbutus Powering Data Analytics Section */}
+      <section className="w-full py-6">
+        <div className="mx-auto flex flex-col items-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#366A00] mb-4">
+            Arbutus is Powering data analytics for over 1,000 growth-focused firms
+          </h2>
+          <p className="text-base md:text-lg text-gray-800">
+            Whether it’s streamlining the tax administration of an entire nation or accelerating the audit transformation of a major energy sector leader, Arbutus empowers change at scale.<br/>
+            Discover with us  “Why top organizations across the globe trust Arbutus technology to drive their Audit, Fraud Detection, Risk Management, Compliance, and IT initiatives?”.
+          </p>
         </div>
       </section>
     </div>
