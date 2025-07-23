@@ -68,6 +68,7 @@ const WhoWereLookingFor = () => {
             </motion.div>
           ))}
         </div>
+        <p className="mt-8 text-gray-700 text-base text-left ">If you have a curious mind, a strong analytical approach, and a desire to make a difference through technology, SSPL is the place for you.</p>
       </div>
     </section>
   );
