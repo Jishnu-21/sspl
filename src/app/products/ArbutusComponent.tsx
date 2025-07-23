@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import ArbutusAnalyticsSection from './ArbutusAnalyticsSection';
+import LogoMarquee from './LogoMarquee';
 
 const ArbutusComponent = () => {
   // Testimonials data
@@ -20,6 +20,19 @@ const ArbutusComponent = () => {
       company: "Birla Sun Life Insurance",
       logo: '/images/testimonials/birla.gif',
     },
+  ];
+
+  const logos = [
+    { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
+    { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
   ];
 
   // State for current testimonial
@@ -60,6 +73,7 @@ const ArbutusComponent = () => {
       <div >
         <ArbutusAnalyticsSection />
       </div>
+      <LogoMarquee clients={logos} />
     </div>
   );
 };
