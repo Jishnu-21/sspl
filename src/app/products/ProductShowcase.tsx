@@ -145,10 +145,10 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
   }, []);
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-white">
+    <section className="py-6 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-8xl">
         {/* Product logos with full width spread */}
-        <div className="pl-1 md:pl-4 lg:pl-6 mb-2 overflow-x-auto">
+        <div className="pl-1 md:pl-4 lg:pl-6 overflow-x-auto">
           <div className="w-full relative min-w-[768px] md:min-w-0">
             {/* Horizontal line with selection indicator */}
             <div className="relative mb-10">

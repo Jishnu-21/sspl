@@ -443,9 +443,14 @@ With all units connected in a single, unified system, site managers gain actiona
             </motion.div>
           </div>
         </section>
-        <h3 className="text-2xl text-center pt-6 md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
-        One Platform - One Sign-on
-              </h3>
+        <div className="text-center pt-6">
+  <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] border border-[#1b3d69] rounded-full px-4 py-1 inline-block">
+    One Platform - One Sign-on
+  </h3>
+</div>
+
+
+
       </motion.div>
       
       <style jsx>{`
