@@ -203,7 +203,7 @@ const AssureBIComponent = () => {
         </div>
       </motion.div>
       
-      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">assureBi has served 2000+ Clients</h3>
+      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">assureBi has served 1000+ Clients</h3>
       <motion.div 
         className="pt-10"
         initial={{ opacity: 0, y: 50 }}

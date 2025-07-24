@@ -128,7 +128,7 @@ const Footer = ({ className = '' }: FooterProps) => {
             </ul>
           </div>
           {/* Company */}
-          <div className="space-y-4 sm:space-y-5 md:space-y-5 lg:w-32 min-w-0">
+          <div className="space-y-4 sm:space-y-5 md:space-y-5 min-w-0">
             <h3 className="font-semibold text-[#1B3D69] text-base sm:text-lg md:text-lg">Company</h3>
             <ul className="space-y-3 sm:space-y-3 md:space-y-4">
               <li>
@@ -241,8 +241,8 @@ const Footer = ({ className = '' }: FooterProps) => {
               </div>
             </div>
             {/* Product */}
-            <div className="space-y-4 sm:space-y-5 md:space-y-6 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg md:text-lg">Product</h3>
+            <div className="space-y-4 sm:space-y-5  md:space-y-6 lg:col-span-1 lg:-ml-6 min-w-0">
+            <h3 className="font-semibold text-gray-900 text-base sm:text-lg md:text-lg">Product</h3>
               <ul className="space-y-3 sm:space-y-3 md:space-y-4">
                 <li>
                   <Link 
