@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import LogoMarquee from './LogoMarquee';
 
 interface AnimatedCardProps {
   imageSrc: string;
@@ -11,7 +12,10 @@ interface AnimatedCardProps {
   hoverBgColor?: string;
 }
 
+
 const AnimatedCard: React.FC<AnimatedCardProps> = ({ imageSrc, title, bgColor, hoverBgColor }) => {
+ 
+
   return (
     <motion.div 
       className={`p-4 rounded shadow-sm flex flex-col items-center justify-center text-center h-[140px] cursor-pointer ${bgColor ? '' : 'bg-gray-100'}`}
@@ -57,6 +61,27 @@ const AssureBIComponent = () => {
     document.body.removeChild(link);
   };
 
+  const logos = [
+    { name: 'Godrej', logo: '/images/logos/Asset-7.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-8.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-9.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-10.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-11.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-12.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-13.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-14.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-15.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-16.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-17.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-18.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-19.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-20.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-21.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-22.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-23.svg' },
+    { name: 'Godrej', logo: '/images/logos/Asset-24.svg' },
+  ];
+  
   return (
     <div>
              <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">assureBi</h2>
@@ -124,6 +149,15 @@ const AssureBIComponent = () => {
           <AnimatedCard imageSrc="/images/products/assurebi/logistics.png" title="Logistics and Hospitality" bgColor="#1B3D69" hoverBgColor="#366A00" />
         </div>
       </div>
+      <motion.div 
+        className="pt-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <LogoMarquee clients={logos} />
+      </motion.div>
     </div>
   );
 };
