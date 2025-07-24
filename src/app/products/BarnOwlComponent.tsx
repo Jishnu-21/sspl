@@ -7,7 +7,7 @@ import LogoMarquee from './LogoMarquee';
 const BarnOwlComponent = () => {
   const logos = [
     { name: 'Premium', logo: '/images/products/barnowl/1.png' },
-    { name: 'Burger', logo: '/images/products/barnowl/2.png' },
+    { name: 'Burger', logo: '/images/products/barnowl/2.jpg' },
     { name: 'JSC', logo: '/images/products/barnowl/3.png' },
     { name: 'JSC', logo: '/images/products/barnowl/4.png' },
     { name: 'JSC', logo: '/images/products/barnowl/5.png' },
