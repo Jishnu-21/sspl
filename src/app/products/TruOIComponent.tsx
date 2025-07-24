@@ -331,7 +331,7 @@ With all units connected in a single, unified system, site managers gain actiona
         transition={{ duration: 0.6 }}
       >
         <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden">
-          <div className="max-w-[95%] mx-auto">
+          <div className=" mx-auto">
             <motion.div 
               className="text-center mb-4 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
