@@ -81,7 +81,7 @@ const AssureBIComponent = () => {
     { name: 'Godrej', logo: '/images/logos/Asset-23.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-24.svg' },
   ];
-  
+
   return (
     <div>
              <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">assureBi</h2>
@@ -100,7 +100,7 @@ const AssureBIComponent = () => {
   
       {/* Why assureBI makes more sense section */}
       <div className="mt-8 mb-12 w-full" data-aos="fade-up">
-        <h3 className="text-2xl font-semibold text-center text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
+        <h3 className="text-3xl font-semibold text-center text-[#366A00] mb-4">Why assureBI makes more sense to business users and for analytics.</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         {/* Mobile Carousel */}
         <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
@@ -126,7 +126,7 @@ const AssureBIComponent = () => {
       
       {/* Industries section */}
       <div className="mb-8 w-full" data-aos="fade-up">
-        <h3 className="text-2xl font-semibold text-center text-[#366A00] mb-4">Industries</h3>
+        <h3 className="text-3xl font-semibold text-center text-[#366A00] mb-4">Industries</h3>
         <div className="h-[1px] bg-gray-400 w-full border-t border-gray-300 mb-6"></div>
         {/* Mobile Carousel */}
         <div className="flex flex-nowrap overflow-x-auto snap-x sm:hidden gap-4 w-full pb-2">
@@ -149,6 +149,7 @@ const AssureBIComponent = () => {
           <AnimatedCard imageSrc="/images/products/assurebi/logistics.png" title="Logistics and Hospitality" bgColor="#1B3D69" hoverBgColor="#366A00" />
         </div>
       </div>
+      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">assureBi has served 200+ clients</h3>
       <motion.div 
         className="pt-10"
         initial={{ opacity: 0, y: 50 }}
