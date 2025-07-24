@@ -175,39 +175,7 @@ With all units connected in a single, unified system, site managers gain actiona
       </motion.div>
 
       {/* Partners Section */}
-      <motion.div 
-        className="-mx-4 md:-mx-6 lg:-mx-8 mb-6 sm:mb-10"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
-      >
-        <section className=" bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
-          <div className="max-w-[95%] mx-auto">
-            <motion.div 
-              className="text-center mb-6 sm:mb-10"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
-                TruOI is partnered with 3k+ fastest<br />
-                growing companies
-              </h3>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <PartnerMarquee />
-            </motion.div>
-          </div>
-        </section>
-      </motion.div>
+     
 
 {/* About TruOI Section */}
 <motion.div 
@@ -443,11 +411,41 @@ With all units connected in a single, unified system, site managers gain actiona
             </motion.div>
           </div>
         </section>
-        <div className="text-center pt-6">
-  <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] border border-[#1b3d69] rounded-full px-4 py-1 inline-block">
-    One Platform - One Sign-on
-  </h3>
-</div>
+   
+
+  <motion.div 
+        className=" pt-6 mx-4 md:-mx-6 lg:-mx-8 mb-6 sm:mb-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <section className=" bg-white overflow-hidden w-screen relative" style={{ left: "50%", right: "50%", marginLeft: "-51.2vw", marginRight: "-50vw", maxWidth: "100vw" }}>
+          <div className="max-w-[95%] mx-auto">
+            <motion.div 
+              className="text-center mb-6 sm:mb-10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#366a00] ">
+                TruOI is partnered with 3k+ fastest<br />
+                growing companies
+              </h3>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <PartnerMarquee />
+            </motion.div>
+          </div>
+        </section>
+      </motion.div>
 
 
 

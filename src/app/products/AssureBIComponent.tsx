@@ -203,7 +203,7 @@ const AssureBIComponent = () => {
         </div>
       </motion.div>
       
-      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">Trusted by over 1000 organizations across industries </h3>
+      <h3 className="text-3xl font-semibold text-center text-[#366A00] ">Trusted by over 1000 organizations across industries </h3>
       <motion.div 
         className="pt-10"
         initial={{ opacity: 0, y: 50 }}
