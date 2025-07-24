@@ -329,7 +329,7 @@ const TruOIComponent = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden w-screen relative">
+        <section className="py-6 sm:py-10 bg-gray-100 overflow-hidden ">
           <div className="max-w-[95%] mx-auto px-4">
             <motion.div 
               className="text-center mb-6 sm:mb-10"
@@ -471,7 +471,7 @@ const TruOIComponent = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="pt-6 sm:pt-10 bg-white overflow-hidden w-screen relative">
+        <section className="pt-6 sm:pt-10 bg-white overflow-hidden">
           <div className="max-w-[95%] mx-auto px-4">
             <motion.div 
               className="text-center mb-6 sm:mb-10"
