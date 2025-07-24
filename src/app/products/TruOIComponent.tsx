@@ -2,13 +2,34 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import PartnerMarquee from './PartnerMarquee';
 import { MdShowChart, MdInventory, MdPeople, MdTrendingUp, MdSentimentSatisfiedAlt, MdAccessTime, MdStorage, MdCodeOff } from 'react-icons/md';
+import LogoMarquee from './LogoMarquee';
 
 const TruOIComponent = () => {
-  const firstRowRef = useRef<HTMLDivElement>(null);
-  const secondRowRef = useRef<HTMLDivElement>(null);
-  
+
+  const logos = [
+    { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
+    { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
+    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'CoxHealth', logo: '/images/products/tru-oi/logo/Asset-5.png' },
+    { name: 'NASA', logo: '/images/products/tru-oi/logo/Asset-6.png' },
+    { name: 'Senior Helper', logo: '/images/products/tru-oi/logo/Asset-7.png' },
+    { name: 'Lockheed Martin', logo: '/images/products/tru-oi/logo/Asset-8.png' },
+    { name: 'Splash', logo: '/images/products/tru-oi/logo/Asset-9.png' },
+    { name: 'Signal88', logo: '/images/products/tru-oi/logo/Asset-10.png' },
+    { name: 'Honest-1', logo: '/images/products/tru-oi/logo/Asset-11.png' },
+    { name: 'Right at Home', logo: '/images/products/tru-oi/logo/Asset-12.png' },
+    { name: 'Sonic', logo: '/images/products/tru-oi/logo/Asset-13.png' },
+    { name: 'Honeywell', logo: '/images/products/tru-oi/logo/Asset-15.png' },
+    { name: 'Trijicon', logo: '/images/products/tru-oi/logo/Asset-16.png' },
+    { name: 'MAG', logo: '/images/products/tru-oi/logo/11.png' },
+    { name: 'Pacmore', logo: '/images/products/tru-oi/logo/21.png' },
+    { name: 'Pioneer', logo: '/images/products/tru-oi/logo/5.png' },
+    { name: 'DWIHN', logo: '/images/products/tru-oi/logo/Asset-21.png' },
+    { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-22.png' },
+    { name: 'Cornell', logo: '/images/products/tru-oi/logo/Asset-25.png' },
+
+  ]
   // Feature items for the marquee
   const firstRowItems = [
     {
@@ -441,7 +462,7 @@ With all units connected in a single, unified system, site managers gain actiona
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <PartnerMarquee />
+              <LogoMarquee clients={logos} />
             </motion.div>
           </div>
         </section>

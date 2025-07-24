@@ -210,10 +210,10 @@ const ServicesList = () => {
     
     return (
       <>
-        <h4 className="text-green-100 font-bold text-sm md:text-base mb-2 leading-tight">
+        <h4 className="text-[#366a00] font-bold text-sm md:text-base mb-2 leading-tight">
           {heading}
         </h4>
-        <p className="text-green-50 text-xs md:text-sm leading-relaxed mb-4 overflow-y-auto">
+        <p className="text-gray-700 text-xs md:text-sm leading-relaxed mb-4 overflow-y-auto">
           {content}
         </p>
       </>
@@ -292,7 +292,7 @@ const ServicesList = () => {
                           absolute inset-0
                           backface-hidden
                           flex flex-col
-                          bg-[#1b3d69]
+                          bg-white
                           rounded-2xl
                           border border-gray-100
                           transition-all duration-300
@@ -305,8 +305,8 @@ const ServicesList = () => {
                               className="object-cover"
                             />
                           </div>
-                          <div className="p-4 bg-[#1b3d69]/90 backdrop-blur-sm">
-                            <h3 className="text-white font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-200">
+                          <div className="p-4 bg-white/90 backdrop-blur-sm">
+                            <h3 className="text-black font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-900">
                               {service.title}
                             </h3>
                           </div>
@@ -319,12 +319,12 @@ const ServicesList = () => {
                           rotate-y-180
                           p-6 md:p-6
                           flex flex-col
-                          bg-[#366a00]
+                          bg-gradient-to-br from-blue-50 to-white
                           rounded-2xl
-                          border border-green-100
+                          border border-blue-100
                           shadow-inner
                         `}>
-                          <h3 className="text-white font-bold text-xl md:text-2xl text-left mb-3 transition-colors duration-300">
+                          <h3 className="text-black font-bold text-xl md:text-2xl text-left mb-3 transition-colors duration-300 group-hover:text-blue-900">
                             {service.title}
                           </h3> 
                           <div className="flex-1 flex flex-col justify-between">
@@ -333,10 +333,10 @@ const ServicesList = () => {
                             </div>
                             
                             <div className="flex items-center justify-between mt-auto">
-                              <span className="text-green-100 text-sm font-semibold">
+                              <span className="text-blue-900 text-sm font-semibold">
                                 Learn More
                               </span>
-                              <div className="text-green-100 text-2xl transform transition-transform duration-300 hover:translate-x-2">
+                              <div className="text-blue-900 text-2xl transform transition-transform duration-300 hover:translate-x-2">
                                 →
                               </div>
                             </div>
@@ -413,7 +413,7 @@ const ServicesList = () => {
                               absolute inset-0
                               backface-hidden
                               flex flex-col
-                              bg-[#1b3d69]
+                              bg-white
                               rounded-xl
                               border border-gray-100
                             `}>
@@ -425,8 +425,8 @@ const ServicesList = () => {
                                   className="object-cover"
                                 />
                               </div>
-                              <div className="p-3 xs:p-4 bg-[#1b3d69]/90 backdrop-blur-sm flex-1 flex items-center justify-center">
-                                <h3 className="text-white font-bold text-base xs:text-lg text-center transition-colors duration-300 group-hover:text-blue-200 leading-tight">
+                              <div className="p-3 xs:p-4 bg-white/90 backdrop-blur-sm flex-1 flex items-center justify-center">
+                                <h3 className="text-black font-bold text-base xs:text-lg text-center transition-colors duration-300 group-hover:text-blue-900 leading-tight">
                                   {service.title}
                                 </h3>
                               </div>
@@ -439,11 +439,11 @@ const ServicesList = () => {
                               rotate-y-180
                               pt-2 pb-3 px-3 xs:pt-2 xs:pb-4 xs:px-4
                               flex flex-col
-                              bg-[#366a00]
+                              bg-gradient-to-br from-blue-50 to-white
                               rounded-xl
-                              border border-green-100
+                              border border-blue-100
                             `}>
-                              <h3 className="text-white font-bold text-base xs:text-lg mb-2 leading-tight mt-0">
+                              <h3 className="text-blue-900 font-bold text-base xs:text-lg mb-2 leading-tight mt-0">
                                 {service.title}
                               </h3>
                               
@@ -453,10 +453,10 @@ const ServicesList = () => {
                                 </div>
                                 
                                 <div className="flex items-center justify-between mt-auto">
-                                  <span className="text-green-100 text-xs xs:text-sm font-semibold">
+                                  <span className="text-blue-900 text-xs xs:text-sm font-semibold">
                                     Learn More
                                   </span>
-                                  <div className="text-green-100 text-lg transform transition-transform duration-300 hover:translate-x-1">
+                                  <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
                                     →
                                   </div>
                                 </div>
