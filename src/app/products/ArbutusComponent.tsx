@@ -23,16 +23,17 @@ const ArbutusComponent = () => {
   ];
 
   const logos = [
-    { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
-    { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'Premium', logo: '/images/products/arbutus/partners/1.png' },
+    { name: 'Burger', logo: '/images/products/arbutus/partners/2.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/3.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/4.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/5.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/6.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/7.png' },
+    { name: 'JSC', logo: '/images/products/arbutus/partners/8.png' },
+
+    
+    
   ];
 
   // State for current testimonial

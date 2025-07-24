@@ -6,13 +6,14 @@ import LogoMarquee from './LogoMarquee';
 
 const BarnOwlComponent = () => {
   const logos = [
-    { name: 'Premium', logo: '/images/products/tru-oi/logo/Asset-2.png' },
-    { name: 'Burger', logo: '/images/products/tru-oi/logo/Asset-3.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
-    { name: 'JSC', logo: '/images/products/tru-oi/logo/Asset-4.png' },
+    { name: 'Premium', logo: '/images/products/barnowl/1.png' },
+    { name: 'Burger', logo: '/images/products/barnowl/2.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/3.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/4.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/5.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/6.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/7.png' },
+    { name: 'JSC', logo: '/images/products/barnowl/8.png' },
   ];
   return (
     <div>
