@@ -139,7 +139,7 @@ With all units connected in a single, unified system, site managers gain actiona
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#366A00] mb-3 sm:mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#366A00] mb-3 sm:mb-4">
                 Here's How TruOI Can Help You
               </h3>
               <p className="text-gray-600 text-sm sm:text-base">Turn Your Data Into Actionable Business Decisions</p>
@@ -246,7 +246,7 @@ With all units connected in a single, unified system, site managers gain actiona
   >
              
 
-    <h3  className="text-2xl md:text-3xl lg:text-3xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6">About TruOI</h3>
+    <h3  className=" md:text-3xl lg:text-3xl font-semibold text-center text-[#366A00] mb-4 sm:mb-6">About TruOI</h3>
     <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent w-full mb-6"></div>
   </motion.div>
 
