@@ -61,7 +61,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
           >
             {duplicatedClients.map((client, index) => (
               <div key={index} className="flex-shrink-0 mx-8">
-                <div className="relative h-34 w-34">
+                <div className="relative h-44 w-34">
                   <Image
                     src={client.logo}
                     alt={client.name}
