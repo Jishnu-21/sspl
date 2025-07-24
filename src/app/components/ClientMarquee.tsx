@@ -60,8 +60,8 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
             onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedClients.map((client, index) => (
-              <div key={index} className="flex-shrink-0 mx-8">
-                <div className="relative h-44 w-34">
+              <div key={index} className="flex-shrink-0 mx-6">
+                <div className="relative h-34 w-54">
                   <Image
                     src={client.logo}
                     alt={client.name}
