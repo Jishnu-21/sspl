@@ -496,9 +496,69 @@ const TruOIComponent = () => {
             </motion.div>
           </div>
         </section>
-      </motion.div>    
+      </motion.div>
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        @keyframes marquee-reverse {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes partner-marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        @keyframes integration-marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        @keyframes integration-marquee-reverse {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        
+        .partner-marquee {
+          animation: partner-marquee 20s linear infinite;
+          display: flex;
+          will-change: transform;
+        }
+        
+        .overflow-hidden:hover .partner-marquee {
+          animation-play-state: paused;
+        }
+      `}</style>    
     </div>
+
+    
   );
 };
+
+
 
 export default TruOIComponent;
