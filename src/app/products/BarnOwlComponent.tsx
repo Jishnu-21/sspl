@@ -52,7 +52,7 @@ BarnOwl is a fully integrated governance, risk, compliance, and audit software s
         transition={{ duration: 0.6 }}
       >
         <motion.h3 
-          className="text-2xl text-center font-semibold text-[#366A00] mb-4"
+          className="text-3xl text-center font-semibold text-[#366A00] mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -150,7 +150,7 @@ BarnOwl is a fully integrated governance, risk, compliance, and audit software s
         transition={{ duration: 0.6 }}
       >
         <motion.h3 
-          className="text-2xl text-center font-semibold text-[#366A00] mb-4"
+          className="text-3xl text-center font-semibold text-[#366A00] mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
