@@ -103,10 +103,10 @@ const Footer = ({ className = '' }: FooterProps) => {
               </li>
               <li>
                 <Link 
-                  href="/partner" 
+                  href="/webinar" 
                   className="text-gray-600 hover:text-indigo-600 text-sm sm:text-base md:text-base transition-colors duration-200 hover:translate-x-1 transform inline-block"
                 >
-                  Become a Partner
+                  Webinar
                 </Link>
               </li>
               <li>
@@ -149,18 +149,18 @@ const Footer = ({ className = '' }: FooterProps) => {
               </li>
               <li>
                 <Link 
-                  href="/testimonials" 
+                  href="/partner" 
                   className="text-gray-600 hover:text-indigo-600 text-sm sm:text-base md:text-base transition-colors duration-200 hover:translate-x-1 transform inline-block"
                 >
-                  Testimonials
+                  Become a Partner
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="/webinar" 
+                  href="/testimonials" 
                   className="text-gray-600 hover:text-indigo-600 text-sm sm:text-base md:text-base transition-colors duration-200 hover:translate-x-1 transform inline-block"
                 >
-                  Webinars
+                  Testimonials
                 </Link>
               </li>
               <li>

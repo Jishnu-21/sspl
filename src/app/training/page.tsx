@@ -157,29 +157,52 @@ const Training = () => {
       </div>
 
       {/* Testimonials Heading */}
-      <div className="w-full bg-[#1b3d69]  border-t border-gray-300 mt-6 md:mt-8" data-aos="fade-up">
+      <div className="w-full bg-[#1b3d69] border-t border-gray-300 mt-6 md:mt-8" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-8 pb-2">
           <h2 className="text-3xl font-bold text-[#366A00] mb-6 text-center">Testimonials</h2>
         </div>
-        <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pb-6">
-          {/* Logo/Image Section */}
-          <div className="w-full md:w-1/5 flex items-center justify-center md:justify-start mb-4 md:mb-0 md:pr-6">
-            <Image
-              src="/images/training/toyota.jpg"
-              alt="Toyota U.K. Logo"
-              width={100}
-              height={50}
-              className="object-contain w-24 sm:w-28 md:w-32"
-              data-aos="fade-up"
-            />
-          </div>
-          {/* Testimonial Text */}
-          <div className="w-full md:w-4/5">
-            <p className="text-xs text-white sm:text-sm text-gray-700 leading-relaxed">
-              "SSPL Middle East - conducted a hands-on-training program on data analytics for Toyota Motors U.K. and other subsidiaries. It comprised of practical sessions on how to deploy analytics using excel and Power BI. The learners were thrilled to be a part of this course, as it allowed them to grasp a vast array of technical know-how embedded via a simplistic approach. The course received phenomenal positive responses from the learners, who clearly stated their insights on how \"Data\" was better read and understood, after attending the training sessions. In fact, the participants in the training sessions who did not seem to have any particular use of analytics in their day-2-day job profile, found this course to be immensely helpful and informative as well. The sessions were well-tailored & subsequently addressed the real case studies at the end of each training module. The proficiency that was acquired via the training sessions, promised the participants to adapt and implement the objectives with respect to data analytics. PowerBI sessions successfully equipped the learners with the essential skills to create a dashboard themselves using different themes, maps and data transformations. On the whole, participants thoroughly enjoyed the course and learned many new concepts related to data analytics and data in general. The mean score based on the feedback received by the participants was a high value notched at 4.5 out of 5."
+        {/* Testimonials as horizontal cards, full width */}
+        <div className="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pb-6">
+          {/* Aviva Testimonial Card (replaces Toyota) */}
+          <div className="bg-[#22406a] rounded-lg shadow-lg flex flex-col items-center md:items-start p-6 w-full md:w-1/2">
+            <div className="flex items-center justify-center mb-4 w-full">
+              <Image
+                src="/images/testimonials/aviva.gif"
+                alt="Aviva Logo"
+                width={100}
+                height={50}
+                className="object-contain w-24 sm:w-28 md:w-32"
+                data-aos="fade-up"
+              />
+            </div>
+            <p className="text-xs text-white sm:text-sm text-gray-100 leading-relaxed mb-4">
+              Aviva Life Insurance Company India Limited has been dealing with SSPL for quite some time. SSPL has provided us licenses, conducted training programme and provided support relating to assureBI software. The services of SSPL have been found to be excellent and the quality of services in delivering support and training is experienced to be as per our requirement and standards. All the people with whom we have been interacting have handled the matters in very professional manner and to our satisfaction. We are pleased to state that Aviva Life Insurance Company India Limited continues its relationship with SSPL in future also.
             </p>
-            <div className="mt-2 text-right text-sm font-semibold text-[#366A00]">- Toyota U.K.</div>
+            <div className="mt-auto w-full text-right text-sm font-semibold text-[#b6e27b]">- Mr. Rajeev Arora, Director, Aviva Life Insurance Company India Limited</div>
           </div>
+          {/* HSBC Testimonial Card */}
+          <div className="bg-[#22406a] rounded-lg shadow-lg flex flex-col items-center md:items-start p-6 w-full md:w-1/2">
+            <div className="flex items-center justify-center mb-4 w-full">
+              <Image
+                src="/images/testimonials/hsbc.gif"
+                alt="HSBC Logo"
+                width={100}
+                height={50}
+                className="object-contain w-24 sm:w-28 md:w-32"
+                data-aos="fade-up"
+              />
+            </div>
+            <p className="text-xs text-white sm:text-sm text-gray-100 leading-relaxed mb-4">
+              "We have utilised the services of SSPL in assureBI training and project implementation. We have taken the assureBI training courses from SSPL and found the same to be very interactive, informative and useful. The Trainers have in depth knowledge not just about assureBI but also have extremely good domain knowledge which makes SSPL unique in assureBI Training. One of the HSBC units made use of SSPL support services and found the same to be very proactive and user-friendly. Another unit within HSBC had availed SSPL’s support, when they decided to use assureBI software for converting the system generated exception reports (notepad reports) into Excel. With the installation of the software, they have been able to save lot of time and manual intervention involved in the accurate conversion of these reports in an Excel format. Feedback from this unit is that SSPL team has been a great support in this project. Overall, it has always been a pleasure interacting and working with SSPL."
+            </p>
+            <div className="mt-auto w-full text-right text-sm font-semibold text-[#b6e27b]">- Ms. Devyani Ghosh, Asia Pacific Risk VP, ORC</div>
+          </div>
+        </div>
+        {/* Read More Button */}
+        <div className="flex justify-center pb-8">
+          <a href="/testimonials" className="inline-block bg-[#366A00] hover:bg-[#285200] text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-colors duration-200">
+            Read More
+          </a>
         </div>
       </div>
 
