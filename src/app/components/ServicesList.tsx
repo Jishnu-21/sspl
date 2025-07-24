@@ -14,55 +14,55 @@ interface Service {
 const services: Service[] = [
   {
     title: 'Predictive & Big Data Analytics',
-    description: 'Our big data analytics solutions help businesses harness the power of data to make strategic decisions. We provide comprehensive analytics tools that transform raw data into actionable insights, enabling you to predict trends, optimize operations, and drive growth.',
+    description: 'Unlock the Power of Data for Smarter Decisions\n\nWe help businesses harness vast volumes of data to forecast trends, improve decision-making, and gain competitive advantage. Our solutions combine predictive models, machine learning, and data visualization to drive strategy and growth.',
     color: 'from-blue-900/20',
     image: '/images/home/bigdata.png'
   },
   {
     title: 'GRC Solutions & Services',
-    description: 'Our Governance, Risk, and Compliance solutions help organizations meet regulatory requirements while optimizing business performance. We provide integrated frameworks to manage compliance, mitigate risks, and ensure proper governance across all operations.',
+    description: 'Integrated Governance, Risk & Compliance Frameworks\n\nWe deliver comprehensive GRC solutions that help organizations streamline compliance, manage enterprise risk, and ensure robust governance. Our frameworks align with industry standards, enabling proactive decision-making and regulatory adherence.',
     color: 'from-blue-900/20',
     image: '/images/home/grc.png'
   },
   {
     title: 'Media Analytics',
-    description: 'Our Media Analytics services help organizations monitor, analyze, and gain insights from media data to optimize campaigns and measure brand impact.',
+    description: 'Measure and Maximize Media Impact\n\nOur media analytics solutions track and evaluate media content across digital and traditional channels. We provide insights on audience behavior, campaign performance, and brand sentiment to help optimize your communication and marketing strategies.',
     color: 'from-blue-900/20',
     image: '/images/home/media analytics.jpg'
   },
   {
     title: 'Revenue Assurance',
-    description: 'Our Revenue Assurance services help businesses identify and prevent revenue leakage. We implement comprehensive systems to monitor, detect, and correct issues that impact your bottom line, ensuring maximum revenue capture and financial integrity.',
+    description: 'Safeguard and Maximize Your Revenue Streams\n\nOur revenue assurance services detect and eliminate leakages across billing, operations, and customer lifecycles. We design control systems that ensure accurate revenue recognition and reduce financial discrepancies.',
     color: 'from-blue-900/20',
     image: '/images/home/assurance.png'
   },
   {
     title: 'Risk Management Audit Analytics',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    description: 'Enhancing Assurance Through Smart Analytics\n\nWe offer data-driven tools tailored for audit and risk management functions. Our solutions help identify anomalies, assess control effectiveness, and mitigate risks, ensuring operational integrity and compliance across the organization.',
     color: 'from-blue-900/20',
     image: '/images/home/Risk Management Audit Analytics.jpg'
   },
   {
     title: 'Operations & Finance Analytics',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    description: 'Optimize Performance and Drive Financial Health\n\nDesigned for operations and finance leaders, our analytics tools streamline workflows, enhance cost-efficiency, and improve cash flow management. Gain actionable insights to support strategic planning and performance tracking.',
     color: 'from-blue-900/20',
     image: '/images/home/global-analytics.png'
   },
   {
     title: 'Fraud Management & Detection',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    description: 'Proactive Fraud Prevention Powered by Analytics\n\nWe provide intelligent fraud detection systems that monitor financial transactions, identify suspicious patterns, and prevent potential losses. Our tools support real-time alerts and forensic analysis for regulatory and internal fraud risk mitigation.',
     color: 'from-blue-900/20',
     image: '/images/home/fraud management.jpg'
   },
   {
     title: 'Data Migration',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    description: 'Seamless, Secure, and Structured Data Transition\n\nWe offer end-to-end data migration services that ensure safe transfer of information between systems, platforms, or formats. Our processes ensure data integrity, minimal downtime, and full compatibility with your business applications.',
     color: 'from-blue-900/20',
     image: '/images/home/data migration.jpg'
   },
   {
     title: 'Algorithm Auditing',
-    description: 'We provide advanced analytics solutions specifically designed for operations and finance departments. Our tools help optimize processes, reduce costs, improve cash flow management, and enhance overall financial performance.',
+    description: 'Ensure Fairness, Accuracy & Transparency in AI\n\nWe conduct thorough audits of algorithmic systems to evaluate compliance, performance, and ethical alignment. Our services help detect bias, validate model behavior, and ensure your algorithms operate within legal and operational guidelines.',
     color: 'from-blue-900/20',
     image: '/images/home/Algorithm Auditing.jpg'
   },
@@ -202,6 +202,24 @@ const ServicesList = () => {
     setTranslateX(0);
   };
 
+  // Function to render formatted description
+  const renderDescription = (description: string) => {
+    const parts = description.split('\n\n');
+    const heading = parts[0];
+    const content = parts[1] || '';
+    
+    return (
+      <>
+        <h4 className="text-green-100 font-bold text-sm md:text-base mb-2 leading-tight">
+          {heading}
+        </h4>
+        <p className="text-green-50 text-xs md:text-sm leading-relaxed mb-4 overflow-y-auto">
+          {content}
+        </p>
+      </>
+    );
+  };
+
   return (
     <div className={`
       py-2 sm:py-4
@@ -274,7 +292,7 @@ const ServicesList = () => {
                           absolute inset-0
                           backface-hidden
                           flex flex-col
-                          bg-white
+                          bg-[#1b3d69]
                           rounded-2xl
                           border border-gray-100
                           transition-all duration-300
@@ -287,11 +305,10 @@ const ServicesList = () => {
                               className="object-cover"
                             />
                           </div>
-                          <div className="p-4 bg-white/90 backdrop-blur-sm">
-                          <h3 className="text-black font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-900">
-  {service.title}
-</h3>
-
+                          <div className="p-4 bg-[#1b3d69]/90 backdrop-blur-sm">
+                            <h3 className="text-white font-bold text-xl md:text-2xl text-center transition-colors duration-300 group-hover:text-blue-200">
+                              {service.title}
+                            </h3>
                           </div>
                         </div>
 
@@ -302,24 +319,24 @@ const ServicesList = () => {
                           rotate-y-180
                           p-6 md:p-6
                           flex flex-col
-                          bg-gradient-to-br from-blue-50 to-white
+                          bg-[#366a00]
                           rounded-2xl
-                          border border-blue-100
+                          border border-green-100
                           shadow-inner
                         `}>
-                          <h3 className="text-black font-bold text-xl md:text-2xl text-left transition-colors duration-300 group-hover:text-blue-900">
+                          <h3 className="text-white font-bold text-xl md:text-2xl text-left mb-3 transition-colors duration-300">
                             {service.title}
                           </h3> 
                           <div className="flex-1 flex flex-col justify-between">
-                            <p className="text-gray-700 text-sm leading-relaxed mb-4 overflow-y-auto">
-                              {service.description}
-                            </p>
+                            <div className="mb-4 overflow-y-auto">
+                              {renderDescription(service.description)}
+                            </div>
                             
                             <div className="flex items-center justify-between mt-auto">
-                              <span className="text-blue-900 text-sm font-semibold">
+                              <span className="text-green-100 text-sm font-semibold">
                                 Learn More
                               </span>
-                              <div className="text-blue-900 text-2xl transform transition-transform duration-300 hover:translate-x-2">
+                              <div className="text-green-100 text-2xl transform transition-transform duration-300 hover:translate-x-2">
                                 →
                               </div>
                             </div>
@@ -396,7 +413,7 @@ const ServicesList = () => {
                               absolute inset-0
                               backface-hidden
                               flex flex-col
-                              bg-white
+                              bg-[#1b3d69]
                               rounded-xl
                               border border-gray-100
                             `}>
@@ -408,8 +425,8 @@ const ServicesList = () => {
                                   className="object-cover"
                                 />
                               </div>
-                              <div className="p-3 xs:p-4 bg-white/90 backdrop-blur-sm flex-1 flex items-center justify-center">
-                                <h3 className="text-black font-bold text-base xs:text-lg text-center transition-colors duration-300 group-hover:text-blue-900 leading-tight">
+                              <div className="p-3 xs:p-4 bg-[#1b3d69]/90 backdrop-blur-sm flex-1 flex items-center justify-center">
+                                <h3 className="text-white font-bold text-base xs:text-lg text-center transition-colors duration-300 group-hover:text-blue-200 leading-tight">
                                   {service.title}
                                 </h3>
                               </div>
@@ -422,25 +439,24 @@ const ServicesList = () => {
                               rotate-y-180
                               pt-2 pb-3 px-3 xs:pt-2 xs:pb-4 xs:px-4
                               flex flex-col
-                              bg-gradient-to-br from-blue-50 to-white
+                              bg-[#366a00]
                               rounded-xl
-                              border border-blue-100
-                            
+                              border border-green-100
                             `}>
-                              <h3 className="text-blue-900 font-bold  text-base xs:text-lg mb-2 leading-tight mt-0">
+                              <h3 className="text-white font-bold text-base xs:text-lg mb-2 leading-tight mt-0">
                                 {service.title}
                               </h3>
                               
                               <div className="flex-1 flex flex-col justify-between">
-                                <p className="text-gray-700 text-xs xs:text-sm leading-relaxed mb-3 overflow-y-auto line-clamp-6">
-                                  {service.description}
-                                </p>
+                                <div className="mb-3 overflow-y-auto line-clamp-6">
+                                  {renderDescription(service.description)}
+                                </div>
                                 
                                 <div className="flex items-center justify-between mt-auto">
-                                  <span className="text-blue-900 text-xs xs:text-sm font-semibold">
+                                  <span className="text-green-100 text-xs xs:text-sm font-semibold">
                                     Learn More
                                   </span>
-                                  <div className="text-blue-900 text-lg transform transition-transform duration-300 hover:translate-x-1">
+                                  <div className="text-green-100 text-lg transform transition-transform duration-300 hover:translate-x-1">
                                     →
                                   </div>
                                 </div>
