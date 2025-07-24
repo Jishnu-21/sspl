@@ -324,7 +324,7 @@ const ServicesList = () => {
                           border border-blue-100
                           shadow-inner
                         `}>
-                          <h3 className="text-black font-bold text-xl md:text-2xl text-left mb-3 transition-colors duration-300 group-hover:text-blue-900">
+                          <h3 className="text-[#1b3d69] font-bold text-xl md:text-2xl text-left mb-3 transition-colors duration-300 group-hover:text-blue-900">
                             {service.title}
                           </h3> 
                           <div className="flex-1 flex flex-col justify-between">
