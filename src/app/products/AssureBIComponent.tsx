@@ -149,7 +149,7 @@ const AssureBIComponent = () => {
           <AnimatedCard imageSrc="/images/products/assurebi/logistics.png" title="Logistics and Hospitality" bgColor="#1B3D69" hoverBgColor="#366A00" />
         </div>
       </div>
-      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">assureBi has served 200+ clients</h3>
+      <h3 className="text-2xl font-semibold text-center text-[#366A00] ">assureBi has served 2000+ Clients</h3>
       <motion.div 
         className="pt-10"
         initial={{ opacity: 0, y: 50 }}
