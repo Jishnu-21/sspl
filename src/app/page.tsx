@@ -19,6 +19,7 @@ export default function Home() {
         <ServicesList/>
           <WhyChooseSection/>
           <StatsSection/>
+          <h2 className="block text-3xl sm:text-4xl text-center md:text-5xl font-bold text-black mt-0 sm:-mt-6 md:-mt-8  leading-none">Our Clients</h2>
           <ClientMarquee/>
           <CaseStudiesSection/>
           <RecognitionSection/>

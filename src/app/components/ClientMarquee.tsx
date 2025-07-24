@@ -1,15 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
-interface ClientMarqueeProps {
-  className?: string;
-}
-
-const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
-  const clients = [
-    { name: 'Reliance Life Insurance', logo: '/images/logos/Asset-4.svg' },
+const clientsRow1 = [
+  { name: 'Reliance Life Insurance', logo: '/images/logos/Asset-4.svg' },
     { name: 'Indian Police', logo: '/images/logos/Asset-5.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-6.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-7.svg' },
@@ -20,62 +14,84 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ className = '' }) => {
     { name: 'Godrej', logo: '/images/logos/Asset-12.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-13.svg' },
     { name: 'Godrej', logo: '/images/logos/Asset-14.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-15.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-16.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-17.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-18.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-19.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-20.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-21.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-22.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-23.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-24.svg' },
-    { name: 'Godrej', logo: '/images/logos/Asset-25.svg' },
- 
-  ];
+];
 
-  // Duplicate the clients array to create a seamless loop
-  const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
-  
-  const [isPaused, setIsPaused] = useState(false);
+const clientsRow2 = [
+  { name: 'Godrej', logo: '/images/logos/Asset-15.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-16.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-17.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-18.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-19.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-20.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-21.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-22.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-23.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-24.svg' },
+  { name: 'Godrej', logo: '/images/logos/Asset-25.svg' },
+];
 
+const ClientsMarquee = () => {
   return (
-    <>
-      <div className="w-full text-center ">
-        <h2 className="block text-3xl sm:text-4xl md:text-5xl font-bold text-black mt-0 sm:-mt-6 md:-mt-8  leading-none">Our Clients</h2>
-      </div>
-      <div className={`w-full  sm:py-8 overflow-hidden ${className}`}>
-        <div className="relative w-full">
-          <motion.div
-            className="flex items-center"
-            animate={isPaused ? {} : { x: '-50%' }}
-            transition={{
-              duration: 70,
-              repeat: Infinity,
-              ease: 'linear',
-              repeatType: 'loop',
-            }}
-            style={{ width: 'fit-content' }}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            {duplicatedClients.map((client, index) => (
-              <div key={index} className="flex-shrink-0 mx-6">
-                <div className="relative h-34 w-54">
-                  <Image
-                    src={client.logo}
-                    alt={client.name}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
+    <div className="relative">
+      <div className="overflow-hidden relative">
+        <div className="marquee-container">
+          {[clientsRow1, clientsRow2].map((rowClients, rowIndex) => (
+            <div key={rowIndex} className="marquee-row">
+              {[...Array(2)].map((_, dupIndex) => (
+                <div key={dupIndex} className="marquee-content">
+                  {rowClients.map((client, index) => (
+                    <div key={index} className="client-logo mx-4 flex items-center justify-center opacity-90 mb-2">
+                      <div className="relative w-[140px] h-[140px]">
+                        <Image
+                          src={client.logo}
+                          alt={client.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </motion.div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
-    </>
+
+      <style jsx>{`
+        .marquee-container {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .marquee-row {
+          display: flex;
+          position: relative;
+        }
+
+        .marquee-content {
+          display: flex;
+          animation: marquee 35s linear infinite;
+        }
+
+        .marquee-row:nth-child(2) .marquee-content {
+          animation-direction: reverse;
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
-export default ClientMarquee;
+export default ClientsMarquee;
