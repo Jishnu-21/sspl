@@ -8,11 +8,11 @@ const EnInvoiceComponent = () => {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">enInvoice</h2>
-        <h3 className="text-lg text-center font-medium text-[#1B3D69] mb-2">for Finance, Accounts, Procurement, Compliance, and Operations Teams</h3>
+        <h2 className="text-4xl text-center font-semibold text-[#366A00] mb-4">enInvoice by Taxilla</h2>
         <div className="h-[1px] bg-gray-300 w-full mb-4"></div>
+        <h2 className="text-3xl md:text-3xl text-center font-bold text-[#366A00] mt-6">One Platform for Global e-Invoicing Compliance</h2>
         <p className="text-gray-800 mb-6">
-          EnInvoice is a comprehensive invoicing solution designed to streamline your billing processes. Our platform offers automated invoice generation and delivery, seamless integration with accounting systems, and detailed reporting and analytics for financial oversight.
+        A robust and scalable solution that automates multi-source input. It ensures e-Invoice exchange complies with multi-country regulations and connects seamlessly with business partners and government tax authorities. enInvoice by Taxilla offers end-to-end automation for multi-source input to multi-country compliant Electronic Invoices.
         </p>
       </div>
       {/* Regulatory Invoicing Essentials */}

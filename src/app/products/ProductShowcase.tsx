@@ -183,7 +183,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onProductChange }) =>
                       )}
                       {product.id === 'enInvoice' && (
                         <div className="flex items-center">
-                          <Image src="/images/products/logos/logo4.png" alt="EnInvoice Logo" width={150} height={150} />
+                          <Image src="/images/products/logos/taxilla.png" alt="EnInvoice Logo" width={150} height={150} />
                         </div>
                       )}
                       {product.id === 'barnowl' && (
