@@ -83,7 +83,7 @@ const Footer = ({ className = '' }: FooterProps) => {
           </div>
           {/* Product */}
           <div className="space-y-4 sm:space-y-5 md:space-y-6 min-w-0">
-            <h3 className="font-semibold text-[#1B3D69] text-base sm:text-lg md:text-lg">Product</h3>
+            <h3 className="font-semibold text-[#1B3D69] text-base sm:text-lg md:text-lg">Explore</h3>
             <ul className="space-y-3 sm:space-y-3 md:space-y-4">
               <li>
                 <Link 
